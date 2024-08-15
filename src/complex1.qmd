@@ -15,7 +15,7 @@ crossref:
 
 #### 복소수와 복소함수의 다양한 정의들
 
-$x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. 이 때 $z$ 에 대한 **conjugate** 를 $z^\ast$ 라고 표기하며 $z^\ast :=x-iy$ 로 정의된다. 복소수 $z$ 를 $r,\, \theta\in \mathbb{R}$ 에 대해 극좌표계에서 $z=re^{i\theta}$ 로 표현 할 수 있으며 $r$ 을 **modulus** 라고 하고 $\theta$ 를 **argument** 라고 한다. 
+$x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. 이 때 $z$ 에 대한 **conjugate** 를 $z^\ast$ 라고 표기하며 $z^\ast :=x-iy$ 로 정의된다. 복소수 $z$ 를 $r,\, \theta\in \mathbb{R}$ 에 대해 극좌표계에서 $z=re^{i\theta}$ 로 표현 할 수 있으며 $r$ 을 **modulus** 라고 하고 $\theta$ 를 **argument** 혹은 **phase** 라고 한다. 
 
 :::
 
@@ -24,7 +24,201 @@ $x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. �
 
 </br>
 
-어떤 함수 $f$ 가 실수에서 급수로 표현된다고 하자. $f(x)= \sum_{j=0}^\infty c_j x^k$ 이고 $x$ 의 수렴반경이 $R$ 이라고 하면 $|z|<R$ 인 복소수 $z$ 에 대해 $f(z)$ 를 정의 할 수 있다. 
+### 복소 함수
+
+어떤 함수 $f$ 가 실수에서 급수로 표현된다고 하자. $f(x)= \sum_{j=0}^\infty c_j x^j$ 이고 $x$ 의 수렴반경이 $R$ 이라고 하면 $|z|<R$ 인 복소수 $z$ 에 대해 $f(z)=\sum_{j=0}^\infty c_j z^j$ 라고 정의 할 수 있다. 예를 들어 $\exp (x)$ 는 모든 $x\in \mathbb{R}$ 에 대해 수렴하므로 모든 $z\in \mathbb{C}$ 에 대해 
+
+$$
+f(z) = 1+z+\dfrac{z^2}{2!} + \dfrac{z^3}{3!} + \cdots
+$$
+
+라고 $f:\mathbb{C} \to \mathbb{C}$ 를 정의 할 수 있다. $f:\mathbb{C}\to \mathbb{C}$ 인 경우 함수의 실수부와 허수부를 다음과 같이 나눈다.
+
+$$
+f(z) = u(z) + iv(z) \qquad \text{or}\qquad f(x,\,y) = u(x,\,y) + i v(x,\,y)
+$$
+
+이 때 $u,\, v$ 는 $\mathbb{C}\mapsto \mathbb{R}$ 함수이다.
+
+</br>
+
+### 복소수의 지수와 로그
+
+$z=x+iy$ 를 극좌표계에서 $z=re^{i\theta}$ 로 표현하는 것은 1-1 대응을 이룬다. 정확히 말하면 1-1 대응을 이루도록 하기 위해 $\theta$ 의 범위를 $[0,\, 2\pi)$ 로 제한한다. 정수 $n$ 에 대해 
+
+$$
+z^n = (x+iy)^n = r^n e^{in\theta}
+$$
+
+이며 정해진 $n\in \mathbb{Z}$ 에 대해 $x+iy$ 와 $r^n e^{i n \theta}$ 는 1-1 대응을 이룬다. 그러나 $1/n$ 승의 경우는 그렇지 못한데 이는 양의 정수 $n$ 과 $n$ 보다 작은 음이 아닌 정수 $k$ 에 대해 
+
+$$
+0\le \dfrac{\theta + 2k \pi}{n} < 2\pi, \qquad \left[e^{i(\theta + 2k\pi )/n} \right]^n = e^{i\theta}
+$$
+
+가 성립하기 때문이다. 즉 $z=i = e^{i\pi/2}$ 에 대해 $e^{i\pi/4}$ 와 $e^{5i\pi/4}$ 가 제곱했을 때 $z=i$ 가 된다. 즉 복소수 $z$ 와 정수 $n$ 에 대해 $z^{1/n}$ 은 $n$ 개의 값을 가질 수 있다.
+
+$\ln (z)$ 역시 여러 값을 가진다. $z=re^{i\theta}$ 와 정수 $k$ 에 대해 
+
+$$
+\ln (re^{i(\theta + 2k\pi)}) = \ln r +i (2k\pi +\theta) = \ln r + i\theta = \ln z
+$$
+
+이므로 $z$ 에 대한 로그함수 값은 무한개의 값을 가질 수 있다. 이렇게 어떤 함수가 여려개의 값을 가질 때 이를 **다가 함수(multivalued function)** 라고 한다. 다가함수는 엄밀한 의미에서의 함수는 아니지만 여기서는 이 용어를 사용하기로 한다.
+
+
+</br>
+
+
+## 코시-리만 조건 과 해석 함수
+
+### 코시-리만 조건
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-differentiability_of_complex_valued_function}
+
+#### 복소함수의 미분
+
+$f:Z\subset \mathbb{C}\to \mathbb{C}$ 에 대해 $z\in Z$ 로 접근하는 경로와 상관 없이 아래의 극한이 존재한다면 $f$ 는 $z$ 에서 미분가능하다고 한다.
+
+$$
+\lim_{\delta z \to 0} \dfrac{f(z+\delta z)-f(z)}{\delta z}
+$$
+
+이 때 위 극한값을 $f'(z)$ 라고 표기한다.
+
+:::
+
+:::
+
+
+$z=x+iy$ 에 대해 $x,\,y$ 의 변화량 $\delta x,\, \delta y$ 를 생각 할 수 있다. 이 때
+
+$$
+\delta z = \delta x + i \delta y
+$$
+
+이다. $f=u+iv$ 일 때 
+
+$$
+\delta f = \delta u + i \delta v
+$$
+
+라고 쓰면
+
+$$
+\dfrac{\delta f}{\delta z} = \dfrac{\delta u + i\delta v}{\delta x + i \delta y}
+$$ {#eq-complex_variation_of_function}
+
+@eq-complex_variation_of_function 을 두가지 경로에서 생각해보자. 우선  $\delta y=0$ 인 경로에서 생각하면
+
+$$
+\lim_{\delta z \to 0} \dfrac{\delta f}{\delta z} = \lim_{\delta x\to 0} \left(\dfrac{\delta u}{\delta x} + i \dfrac{\delta v}{\delta x}\right) = \dfrac{\partial u}{\partial x} + i\dfrac{\partial v}{\partial x}
+$$
+
+이며, $\delta x = 0$ 인 경로에서 생각하면 
+
+$$
+\lim_{\delta z \to 0} \dfrac{\delta f}{\delta z} = \lim_{\delta y\to 0} \left(-i\dfrac{\delta u}{\delta y} +  \dfrac{\delta v}{\delta y}\right) = -i\dfrac{\partial u}{\partial y} + \dfrac{\partial v}{\partial y}
+$$
+
+이다. $f$ 가 $z$ 에서 미분가능하다면 
+
+$$
+\dfrac{\partial u}{\partial x} = \dfrac{\partial v}{\partial y},\qquad \dfrac{\partial v}{\partial x} = -\dfrac{\partial u}{\partial y}
+$$ {#eq-complex_cauchy_riemann_condition}
+
+이어야 한다. @eq-complex_cauchy_riemann_condition 의 조건을 **코시-리만 조건 (Cauchy-Riemann condition)** 이라고 하며 코시 리만 조건은 도함수가 존재하기 위한 필요조건이다.
+
+이제 코시 리만 조건을 만족하면 도함수가 존재하며 여기에 각각의 편도함수가 $z$ 에서 연속이라고 하자. 그렇다면 $f(x,\,y)$ 에 대해
+
+$$
+\delta f = \left(\dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x}\right)\delta x + \left(\dfrac{\partial u}{\partial y} + i \dfrac{\partial v}{\partial y}\right)\delta y
+$$
+
+이며 여기에 코시-리만 조건을 적용하면
+
+$$
+\begin{aligned}
+\delta f &= \left(\dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x}\right)\delta x + \left(- \dfrac{\partial v}{\partial x} + i \dfrac{\partial u}{\partial x}\right)\delta y \\
+&= \left(\dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x}\right)(\delta x +i\delta y) 
+\end{aligned}
+$$
+
+이므로
+
+$$
+\dfrac{\delta f}{\delta z} = \dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x} = \dfrac{\partial v}{\partial y} - i\dfrac{\partial u}{\partial y}
+$$ {#eq-complex_derivative_of_complex_function}
+
+이다. @eq-complex_derivative_of_complex_function 은 $\delta x$ 와 $\delta y$ 의 상대적인 값에 무관하며 따라서 경로에 무관하다. 즉 $f$ 에 대한 $z$ 에서의 미분값이 존재한다.
+
+</br>
+
+### 해석 함수
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-complex_analytic_function}
+
+#### 해석 함수, 전해석 함수, 특이점
+
+복소평면의 어떤 부분집합 $Z$ 에서 정의된 함수 $f:Z\subset \mathbb{C} \to \mathbb{C}$ 가 $Z$ 에서 미분가능하며, 다가 함수(multivalued function) 이 아닐 때 이 함수를 **해석 함수(analytic function)** 라고 한다. $Z=\mathbb{C}$ 일 때 이 함수를 **전해석 함수(entire function)** 이라고 한다. $z_0\in Z$ 에서 도함수가 존재하지 않을 경우 이 $z_0$ 를 **특이점 (singular point)** 라고 한다.
+
+:::
+
+:::
+
+
+</br>
+
+다가 함수의 경우 range 를 제한하여 단일값을 가지도록 하고 그 제한에서 해석 함수로 사용하기도 한다. 
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex_zsq}
+
+$f(z) = z^2$ 가 해석함수임을 보이자. $z=x+iy$ 라고 하면 $f(x,\,y) = (x^2-y^2)+2ixy$ 이며 
+
+$$
+\dfrac{\partial u}{\partial x}=2x = \dfrac{\partial v}{\partial y},\qquad \dfrac{\partial u}{\partial y} = -2y = -\dfrac{\partial v}{\partial x}
+$$
+
+이므로 코시-리만 조건을 만족한다. 또한 각 편미분이 연속이므로 $f(z)=z^2$ 은 전해석 함수이다.
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex_conjugate_z}
+
+$f(z) = z^\ast = x-iy$ 에 대해
+
+$$
+\dfrac{\partial u}{\partial x} = 1 \ne \dfrac{\partial v}{\partial y} = -1
+$$
+
+
+이므로 $f(z)$ 는 해석 함수가 아니다.
+
+:::
+
+</div></br>
+
+
+### 해석함수와 라플라스 방정식
+
+$f(x,\,y) = u(x,\,y) + iv(x,\,y)$ 가 $Z\subset \mathbb{C}$ 에서 해석함수라면 
+
+코시 리만 조건으로부터
+
+$$
+\dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2}=\dfrac{\partial^2 v}{\partial x^2} + \dfrac{\partial^2 v}{\partial y^2} = 0
+$$
 
 
 
