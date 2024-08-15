@@ -1,0 +1,30 @@
+---
+title: "복소 변수 이론 1"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+
+## 복소변수와 복소함수
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-complex_start}
+
+#### 복소수와 복소함수의 다양한 정의들
+
+$x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. 이 때 $z$ 에 대한 **conjugate** 를 $z^\ast$ 라고 표기하며 $z^\ast :=x-iy$ 로 정의된다. 복소수 $z$ 를 $r,\, \theta\in \mathbb{R}$ 에 대해 극좌표계에서 $z=re^{i\theta}$ 로 표현 할 수 있으며 $r$ 을 **modulus** 라고 하고 $\theta$ 를 **argument** 라고 한다. 
+
+:::
+
+:::
+
+
+</br>
+
+어떤 함수 $f$ 가 실수에서 급수로 표현된다고 하자. $f(x)= \sum_{j=0}^\infty c_j x^k$ 이고 $x$ 의 수렴반경이 $R$ 이라고 하면 $|z|<R$ 인 복소수 $z$ 에 대해 $f(z)$ 를 정의 할 수 있다. 
+
+
+

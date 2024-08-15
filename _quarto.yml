@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "양자 역학"
+  title: "수리물리학"
   author: "Norah Jones"
   date: "2/11/2024"
   page-navigation: true
@@ -10,33 +10,8 @@ book:
   
   chapters:
     - index.qmd
-    - part: src/part1/part1.qmd
-      chapters:
-      - src/part1/mathematical_foundation.qmd
-      - src/part1/quantum_state.qmd
-      - src/part1/entanglement.qmd
-    - part: src/part2/part2.qmd
-      chapters:
-      - src/part2/part2_foundation_of_quantum_theory.qmd
-      - src/part2/part2_1d_bound_state.qmd
-      - src/part2/part2_classical_limit.qmd
-      - src/part2/part2_harmonic_oscillator.qmd
-      - src/part2/part2_1d_scattering.qmd
-      - src/part2/part2_path_integral_1.qmd
-      - src/part2/part2_N_DoF_system.qmd
-      - src/part2/part2_symmetry.qmd
-      - src/part2/part2_angular_momentum.qmd
-    - part : src/part3/part3.qmd
-      chapters:
-      - src/part3/some_proofs.qmd
-      - src/part3/symmetry_in_classical_mechanics.qmd
-      - src/part3/historical_note.qmd
-    - part: src/figure/figure.qmd
-      chapters:
-      - src/figure/figure_part1_1.qmd
-      - src/figure/figure_part2_1.qmd
-      - src/figure/figure_test_01.qmd
-    - src/references.qmd
+    - src/complex1.qmd
+    
 
 bibliography: references.bib
 
@@ -56,7 +31,7 @@ format:
     # css: styles.css
     number-sections: true
   
-filters:
-  - diagram
+# filters:
+#   - diagram
 
 
