@@ -414,7 +414,7 @@ $w_1$ 의 코시-리만 조건으로부터 $\partial_x u = - \partial_y v$ 이�
 
 #### Arfken 11.2.5
 
-$f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함수 임을 보여라. 이를 이용하여 $n\in \mathbb{Z}_+$ 에 대해 $z^n$ 가 $z=0$ 을 제외한 영역에서 
+$f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함수 임을 보여라. 이를 이용하여 $n\in \mathbb{Z}_+$ 에 대해 $z^{-n}$ 가 $z=0$ 을 제외한 영역에서의 해석함수 여부까지 확장하라.
 
 
 :::
@@ -424,8 +424,129 @@ $f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함�
 $f(z) = \dfrac{x}{x^2+y^2} - i \dfrac{y}{x^2+y^2}$ 이며,
 
 $$
-\dfrac{\partial u}{\partial x} = 
+\dfrac{\partial u}{\partial x} = \dfrac{-x^2+y^2}{(x^2+y^2)^2},\, \dfrac{\partial u}{\partial y} =  -\dfrac{2xy}{(x^2+y^2)^2},\, \dfrac{\partial v}{\partial x} = \dfrac{2xy}{(x^2+y^2)^2},\, \dfrac{\partial v}{\partial y} = \dfrac{-x^2+y^2}{(x^2+y^2)^2} 
 $$
+
+이므로 $z=0$ 을 제외한 영역에서 코시-리만 조건을 만족하며, 모든 편도함수가 연속임을 알 수 있다. $f'=\partial_xu + i \partial_y u$ 므로
+
+$$
+\dfrac{d}{dz}\left(\dfrac{1}{z}\right) = \dfrac{-x^2+y^2 + i2xy}{(x^2+y^2)^2}= - \dfrac{(x-iy)^2}{(x^2+y^2)} = - \dfrac{1}{z^2}
+$$
+
+이다. 즉 $(z^{-1})' = -1/z^2$ 임을 알 수 있다. 이제 양의 정수 $n$ 에 대해 $(z^{-n})'  = -nz^{-(n+1)}$ 임을 induction 을 이용하여 보이자. $n=1$ 일 때 성립하며
+
+$$
+(z^{-(n+1)})' = \dfrac{d}{dz}\left(\dfrac{1}{z} z^{-n}\right)  = - \dfrac{1}{z^2} z^{{-n}} - \dfrac{1}{z}nz^{-(n+1)}= -(n+1) z^{-(n+2)}
+$$
+
+이다. 
+
+이제 $f(z) = z^{-n}$ 함수의 해석 함수 여부를 따져 보자. 
+
+$$
+f(z) = \dfrac{1}{(x+iy)^n} = \dfrac{(x-iy)^n}{(x^2+y^2)^n}
+$$
+
+이며 $n=1$ 일 때와 마찬가지로 $z\ne 0$ 에서 해석함수 임을 보일 수 있다.
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_7}
+
+#### Arfken 11.2.7
+
+$f(re^{i\theta})= R(r,\,\theta) e^{i\Theta(r,\,\theta)}$ 를 생각한다. 여기서 $R(r,\,\theta),\,\Theta(r,\,\theta)$ 미분 가능한 실함수이다. 이 때 극좌표계에서의 코시 리만 조건은 다음과 같음을 보여라.
+
+$$
+\dfrac{\partial R}{\partial r}= \dfrac{R}{r} \dfrac{\partial \Theta}{\partial \theta},\qquad \dfrac{1}{r} \dfrac{\partial R}{\partial \theta} = - R\dfrac{\partial \Theta}{\partial r}
+$$ {#eq-complex1_cauchy_riemann_condition_in_polar_coordinate}
+
+:::
+
+::: {.solution}
+ 
+$$
+\begin{aligned}
+\dfrac{\partial u}{\partial r} &= \dfrac{\partial u}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial u}{\partial y}\dfrac{\partial y}{\partial r} = \cos \theta \dfrac{\partial u}{\partial x} + \sin \theta \dfrac{\partial u}{\partial y}, \\
+\dfrac{\partial v}{\partial \theta} &= \dfrac{\partial v}{\partial x}\dfrac{\partial x}{\partial \theta} + \dfrac{\partial v}{\partial y}\dfrac{\partial y}{\partial \theta} = -r \sin \theta \dfrac{\partial v}{\partial x} + r \cos \theta \dfrac{\partial v}{\partial y}  \\
+&= r\sin \theta \dfrac{\partial u}{\partial y } + r\cos\theta \dfrac{\partial u}{\partial x} = r \dfrac{\partial u}{\partial r}, \\
+\dfrac{\partial v}{\partial r} &= \dfrac{\partial v}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial v}{\partial y}\dfrac{\partial y}{\partial r} = \cos \theta \dfrac{\partial v}{\partial x} + \sin \theta \dfrac{\partial v}{\partial y} \\
+\dfrac{\partial u}{\partial \theta} &= \dfrac{\partial u}{\partial x}\dfrac{\partial x}{\partial \theta} + \dfrac{\partial u}{\partial y}\dfrac{\partial y}{\partial \theta} = -r \sin \theta \dfrac{\partial u}{\partial x} + r \cos \theta \dfrac{\partial u}{\partial y}  \\
+&= -r\sin \theta \dfrac{\partial v}{\partial y } - r\cos\theta \dfrac{\partial v}{\partial y} = -r \dfrac{\partial v}{\partial r}, \\
+\end{aligned}
+$$
+
+즉, 
+
+$$
+\dfrac{\partial u}{\partial r} = \dfrac{1}{r}\dfrac{\partial v}{\partial \theta},\qquad \dfrac{\partial v}{\partial r} = - \dfrac{1}{r} \dfrac{\partial u}{\partial \theta}
+$$
+
+이다. $u=R\cos \Theta,\, v = R \sin \Theta$ 이므로, 
+
+$$
+\begin{aligned}
+\dfrac{\partial R}{\partial r} \cos \Theta - R \sin \Theta \dfrac{\partial \Theta}{\partial r} &= \dfrac{1}{r} \dfrac{\partial R}{\partial \theta} \sin \Theta + \dfrac{R}{r} \cos \Theta \dfrac{\partial\Theta}{\partial \theta}, \\
+\dfrac{\partial R}{\partial r} \sin \Theta + R \cos \Theta \dfrac{\partial \Theta}{\partial r} &= -\dfrac{1}{r} \dfrac{\partial R}{\partial \theta} \cos \Theta + \dfrac{R}{r} \sin \Theta \dfrac{\partial\Theta}{\partial \theta}.
+\end{aligned}
+$$
+
+이다. 이로부터,
+
+$$
+\dfrac{\partial R}{\partial r} = \dfrac{R}{r}\dfrac{\partial \Theta}{\partial \theta},\qquad \dfrac{1}{r}\dfrac{\partial R}{\partial \theta} = - R \dfrac{\partial \Theta}{\partial r}
+$$
+
+을 얻는다. 
+
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_8}
+
+#### Arfken 11.2.8
+
+@exr-Arfken7_11_2_7 의 $\Theta (r,\,\theta)$ 는 극좌표계에서의 라플라스 방정식
+
+$$
+\dfrac{\partial^2 \Theta}{\partial r^2} + \dfrac{1}{r} \dfrac{\partial \Theta}{\partial r} + \dfrac{1}{r^2} \dfrac{\partial^2 \Theta}{\partial \theta^2} = 0
+$$
+
+을 만족함을 보여라.
+
+:::
+
+::: {.solution}
+ 
+$$
+\begin{aligned}
+\dfrac{\partial^2 \Theta}{\partial r^2} &= \dfrac{\partial}{\partial r}\left(- \dfrac{1}{rR} \dfrac{\partial R}{\partial \theta}\right)  = \dfrac{1}{r^2R}\dfrac{\partial R}{\partial\theta} + \dfrac{1}{rR^2}\dfrac{\partial R}{\partial r} \dfrac{\partial R}{\partial \theta} - \dfrac{1}{rR}\dfrac{\partial^2 R}{\partial r \partial \theta} \\
+&= - \dfrac{1}{r} \dfrac{\partial \Theta}{\partial r}  - \dfrac{1}{r} \dfrac{\partial \Theta}{\partial \theta}\dfrac{\partial \Theta}{\partial r} - \dfrac{1}{rR}\dfrac{\partial^2 R}{\partial r \partial \theta} 
+\end{aligned}
+$$
+
+이며 여기서
+
+$$
+\begin{aligned}
+\dfrac{\partial^2 R}{\partial r \partial \theta} &= \dfrac{\partial}{\partial \theta}\left(\dfrac{R}{r} \dfrac{\partial \Theta}{\partial \theta}\right) = \dfrac{1}{r} \dfrac{\partial R}{\partial \theta}\dfrac{\partial \Theta}{\partial \theta} + \dfrac{R}{r} \dfrac{\partial^2 \Theta}{\partial \theta^2} \\
+&= -R \dfrac{\partial \Theta}{\partial r} \dfrac{\partial \Theta}{\partial \theta} + \dfrac{R}{r}\dfrac{\partial^2 \Theta}{\partial^2 \theta} 
+\end{aligned}
+$$
+
+이므로, 
+
+$$
+\dfrac{\partial^2 \Theta}{\partial r^2} = - \dfrac{1}{r}\dfrac{\partial \Theta}{\partial r} -\dfrac{1}{r}\dfrac{\partial \Theta}{\partial \theta} \dfrac{\partial \Theta}{\partial r} + \dfrac{1}{r}\dfrac{\partial \Theta}{\partial \theta} \dfrac{\partial \Theta}{\partial r}- \dfrac{1}{r^2} \dfrac{\partial^2 \Theta}{\partial \theta^2} =  - \dfrac{1}{r}\dfrac{\partial \Theta}{\partial r} - \dfrac{1}{r^2} \dfrac{\partial^2 \Theta}{\partial \theta^2} 
+$$
+
+이다. 주어진 식을 만족한다.
 
 :::
 </div></br>
