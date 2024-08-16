@@ -149,7 +149,7 @@ $$
 이므로
 
 $$
-\dfrac{\delta f}{\delta z} = \dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x} = \dfrac{\partial v}{\partial y} - i\dfrac{\partial u}{\partial y}
+\dfrac{d f}{d z} = \dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x} = \dfrac{\partial v}{\partial y} - i\dfrac{\partial u}{\partial y}
 $$ {#eq-complex_derivative_of_complex_function}
 
 이다. @eq-complex_derivative_of_complex_function 은 $\delta x$ 와 $\delta y$ 의 상대적인 값에 무관하며 따라서 경로에 무관하다. 즉 $f$ 에 대한 $z$ 에서의 미분값이 존재한다.
@@ -164,10 +164,27 @@ $$ {#eq-complex_derivative_of_complex_function}
 
 #### 해석 함수, 전해석 함수, 특이점
 
-복소평면의 어떤 부분집합 $Z$ 에서 정의된 함수 $f:Z\subset \mathbb{C} \to \mathbb{C}$ 가 $Z$ 에서 미분가능하며, 다가 함수(multivalued function) 이 아닐 때 이 함수를 **해석 함수(analytic function)** 라고 한다. $Z=\mathbb{C}$ 일 때 이 함수를 **전해석 함수(entire function)** 이라고 한다. $z_0\in Z$ 에서 도함수가 존재하지 않을 경우 이 $z_0$ 를 **특이점 (singular point)** 라고 한다.
+복소평면의 어떤 열린 부분집합 $U \subset \mathbb{C}$ 에서 정의된 함수 $f:U \to \mathbb{C}$ 가 각각의 $z\in U$ 에서 미분가능하며, 다가 함수(multivalued function) 가 아닐 때 이 함수를 **해석 함수(analytic function)** 라고 한다. $U=\mathbb{C}$ 일 때 이 함수를 **전해석 함수(entire function)** 이라고 한다. $z_0\in Z$ 에서 도함수가 존재하지 않을 경우 이 $z_0$ 를 **특이점 (singular point)** 라고 한다.
 
 :::
 
+:::
+
+
+</br>
+
+실함수와 구별되는 복소함수의 가장 큰 특징을 나열하고자 한다. 여기에 대한 증명은 복소해석학의 다양한 교과서를 참고하라. 
+
+
+::: {#prp-complex_properties_of_analytic_function}
+
+복소평면의 열린 부분집합 $U\subset C$ 에서 정의된 $f:U \to \mathbb{C}$ 에 대해 다음은 동치이다.
+
+&emsp;($1$) $f$ 는 해석함수이다.
+
+&emsp;($2$) 모든 $z\in U$ 에서 $f$ 는 무한번 미분 가능하다.
+
+&emsp;($3$) 모든 $z\in U$ 에서의 $f$ 의 테일러 급수는 $f(z)$ 로 수렴한다.
 :::
 
 
@@ -212,13 +229,199 @@ $$
 
 ### 해석함수와 라플라스 방정식
 
-$f(x,\,y) = u(x,\,y) + iv(x,\,y)$ 가 $Z\subset \mathbb{C}$ 에서 해석함수라면 
-
-코시 리만 조건으로부터
+$f(x,\,y) = u(x,\,y) + iv(x,\,y)$ 가 $Z\subset \mathbb{C}$ 에서 해석함수라면 코시 리만 조건으로부터
 
 $$
 \dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2}=\dfrac{\partial^2 v}{\partial x^2} + \dfrac{\partial^2 v}{\partial y^2} = 0
 $$
 
+을 만족한다. 우리는 $n$ 차원 유클리드 공간에서 라플라스 방정식
+
+$$
+\nabla^2 f = \sum_{i=1}^n \dfrac{\partial^2 f}{\partial x_i^2} =  0
+$$ {#eq-complex_laplace_equation}
+
+을 만족하는 함수 $f$ 를 **조화 함수(harmonic function)** 이라고 부른다(구면 조화 함수(spherical harmonic function) 과는 완전히 다른 종류이다). 즉 해석함수의 실수부와 허수부는 2차원 조화함수이다.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_orthoginality_of_real_and_complex_function}
+
+$u(x,\,y)=c$ 를 만족하는 곡선 $C_u$을 생각하자. 
+
+$$
+0 = du(x,\,y) = \dfrac{\partial u}{\partial x}dx + \dfrac{\partial u}{\partial y}dy
+$$
+
+이므로 $(x_0,\,y_0) \in C_u$ 에서의 $C_u$ 의 기울기는
+
+$$
+\left(\dfrac{dy}{dx}\right)_{u} = -\dfrac{\partial u/\partial x}{\partial u/\partial y}
+$$
+
+이다. 이 $(x_0,\,y_0)$ 에 대해 $v(x_0,\,y_0) = d$ 일 때 $v(x,\,y)=d$ 를 만족하는 곡선 $C_v$ 에 대해 $(x_0,\,y_0) \in C_v$ 에서의 기울기는
+
+$$
+\left(\dfrac{dy}{dx}\right)_v = -\dfrac{\partial v/\partial x}{\partial v/\partial y} = \dfrac{\partial u/\partial y}{\partial u/\partial x} = -\left[\left(\dfrac{dy}{dx}\right)_{u}\right]^{-1}
+$$
+
+이다. 즉 $x_0,\,y_0$ 에서의 $u(x,\,y) = u(x_0,\,y_0)$ 와 $v(x,\,y) = v(x_0,\,y_0)$ 의 두 곡선은 항상 직교한다.
 
 
+:::
+
+</div></br>
+
+### 해석함수의 미분
+
+@eq-complex_derivative_of_complex_function 로부터
+
+$$
+f'(z) = \dfrac{df}{dz} = \dfrac{\partial f}{\partial x}
+$$
+
+임을 안다. $f(z) = z$ 일 때
+
+$$
+\dfrac{dz}{dz} = \dfrac{\partial (x+iy)}{\partial x}  = 1
+$$
+
+임을 알 수 있다. 또한 두 복소함수의 곱의 미분을 계산 할 수 있다. 
+
+$$
+\begin{aligned}
+\dfrac{d}{dz}[f(z)g(z)] = \dfrac{\partial}{\partial x}[f(z)g(z)] = (\partial_x f) g + f (\partial_x g)= f'(z)g(z) +f(z)g'(z)
+\end{aligned}
+$$ {#eq-complex1_derivative_of_product_of_functions}
+
+즉 실함수에서의 두 함수의 곱의 미분과 동일하다.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_derivative_of_power}
+
+@eq-complex1_derivative_of_product_of_functions 를 이용하여 양의 정수 $n$ 에 대해 $(z^n)' = nz^{n-1}$ 임을 보일 수 있다. Induction 을 사용한다. $n=1$ 일 경우는 이미 보였다. $(z^n)'=nz^{n-1}$ 임을 가정하면
+
+$$
+(z^{n+1})' = (z z^n)' = z^n + z(nz^{n-1})= z^{n} + nz^{n} = (n+1)z^{n+1}
+$$
+
+이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_derivative_of_logarithm}
+
+$\ln z = \ln r+i(\theta +2n\pi) = u+iv$ 라고 놓으면, 
+
+$$
+\dfrac{\partial u}{\partial x} = \dfrac{x}{r^2}, \qquad \dfrac{\partial u}{\partial y} = \dfrac{y}{r^2},\qquad \dfrac{\partial v}{\partial x} = - \dfrac{y}{r^2}, \qquad \dfrac{\partial v}{\partial y} = \dfrac{x}{r^2}
+$$
+
+이며 $r=0$ 을 제외하고는 코시-리만 조건을 만족한다. 따라서
+
+$$
+\dfrac{d(\ln z)}{dz} = \dfrac{\partial \ln z}{\partial x} = \dfrac{x}{r^2} - i \dfrac{y}{r^2} = \dfrac{1}{x+iy} = \dfrac{1}{z}
+$$ {#eq-complex1_derivative_of_ln_z}
+
+이다. 주의해야 할 것은 $\ln z$ 는 다가함수(multivalued function) 이므로 함수의 영역을 제한해야 해석함수가 된다. 여기에 대해서는 이후 다루기로 한다.
+
+:::
+
+</div></br>
+
+
+### 무한원점 (Point at infinity)
+
+복소수를 다룰 때 무한대는 하나의 점으로 다루게 되며 이 점을 무한원점이라고 한다. 무한원점의 근방(neighborhood) 를 다룰 때는 $w=1/z$ 로 변환시킨 후 $w = 0$ 근방을 다룬다. 이렇게 되면 큰 양의 실수 $R$ 에 대해 $z=-R$ 을 다룰 때 $w=1/z$ 근처의 미분을 다루게 되면 $z=R$ 이 모두 $w=1/z$ 근처에 있기 때문에 영향을 끼치게 된다. 이외의 특이한 사항에 대해서는 차후 다루기로 한다.
+
+
+</br>
+
+### 연습문제
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_1}
+
+#### Arfken 11.2.1
+
+$f(z) = \text{Re}(z)= x$ 가 해석함수인지 여부를 확인하라.
+
+:::
+
+::: {.solution}
+
+$$
+\partial_x u = 1 \ne \partial_y v = 0
+$$
+
+이므로 해석함수가 아니다.
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_2}
+
+#### Arfken 11.2.2
+
+해석함수 $w(z)$ 의 실수부 $u(x,\,y)$ 와 허수부 $v(x,\,y)$ 가 복소평면의 열린 부분집합 $U$ 에서 라플라스 방정식을 만족한다고 하자. 그렇다면 $u,\,v$ 모두 $U$ 의 내부에서 최대값 혹은 최소값을 갖지 않는다는 것을 보여라.
+
+:::
+
+::: {.solution}
+
+$u$ 와 $v$ 에 대한 헤세 행렬(Hessian matrix) $H_u=\begin{bmatrix} \partial_x^2 u & \partial_x\partial_y u\\ \partial_x\partial_y u & \partial_y^2 u\end{bmatrix}$,  $H_v=\begin{bmatrix} \partial_x^2 v & \partial_x\partial_y v\\ \partial_x\partial_y v & \partial_y^2 v\end{bmatrix}$ 를 생각하자. $\det(H_u) < 0$, $\det(H_v) \le 0$ 이면 $u,\,v$ 모두 영역에서 극값을 가지 않는다. 코시-리만 조건과 라플라스 방정식을 이용하면 다음을 보일 수 있다.
+
+$$
+\begin{aligned}
+\det(H_u) = (\partial_x^2u) (\partial_y^2 u)- (\partial_x \partial_y u )^2 &= - (\partial_x^2 u)^2 - (\partial_x^2 v)^2  \le 0
+\end{aligned}
+$$
+
+
+이며 $\det(H_v) \le 0$ 도 같은 방법으로 보일 수 있다.
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_4}
+
+#### Arfken 11.2.4
+
+$w_1 = u(x,\,y) + i v(x,\,y)$, $w_2= w_1^\ast = u(x,\,y) - iv(x,\,y)$ 가 공통으로 해석함수가 되는 영역을 가진다면 $u(x,\,y)$ 와 $v(x,\,y)$ 는 상수임을 보여라.
+
+
+:::
+
+::: {.solution}
+
+$w_1$ 의 코시-리만 조건으로부터 $\partial_x u = - \partial_y v$ 이며 $w_1^\ast$ 의 코시 리만 조건으로 부터 $\partial_x u = \partial_yv$ 이므로 $\partial_x u = 0$ 이다. 즉 $u=u(x)$ 이다. $w_1$ 의 코시-리만 조건으로부터 $\partial_x v =  -\partial_y u$ 이며  $w_1^\ast$ 의 코시-리만 조건으로부터 $\partial_x v = \partial_y u$ 이므로 $\partial_y u=0$ 이다. 즉 $u$ 는 상수이다. 마찬가지로 $v$ 가 상수 임을 보일 수 있다.
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_2_5}
+
+#### Arfken 11.2.5
+
+$f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함수 임을 보여라. 이를 이용하여 $n\in \mathbb{Z}_+$ 에 대해 $z^n$ 가 $z=0$ 을 제외한 영역에서 
+
+
+:::
+
+::: {.solution}
+
+$f(z) = \dfrac{x}{x^2+y^2} - i \dfrac{y}{x^2+y^2}$ 
+
+:::
+</div></br>
