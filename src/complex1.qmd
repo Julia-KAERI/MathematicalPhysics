@@ -421,7 +421,11 @@ $f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함�
 
 ::: {.solution}
 
-$f(z) = \dfrac{x}{x^2+y^2} - i \dfrac{y}{x^2+y^2}$ 
+$f(z) = \dfrac{x}{x^2+y^2} - i \dfrac{y}{x^2+y^2}$ 이며,
+
+$$
+\dfrac{\partial u}{\partial x} = 
+$$
 
 :::
 </div></br>
