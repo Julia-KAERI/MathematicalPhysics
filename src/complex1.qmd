@@ -24,7 +24,7 @@ $x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. �
 
 </br>
 
-### 복소 함수
+### 복소 함수 {#sec-complex1_complex_function}
 
 어떤 함수 $f$ 가 실수에서 급수로 표현된다고 하자. $f(x)= \sum_{j=0}^\infty c_j x^j$ 이고 $x$ 의 수렴반경이 $R$ 이라고 하면 $|z|<R$ 인 복소수 $z$ 에 대해 $f(z)=\sum_{j=0}^\infty c_j z^j$ 라고 정의 할 수 있다. 예를 들어 $\exp (x)$ 는 모든 $x\in \mathbb{R}$ 에 대해 수렴하므로 모든 $z\in \mathbb{C}$ 에 대해 
 
@@ -42,7 +42,7 @@ $$
 
 </br>
 
-### 복소수의 지수와 로그
+### 복소수의 지수와 로그 {#sec-complex1_exponential_and_log}
 
 $z=x+iy$ 를 극좌표계에서 $z=re^{i\theta}$ 로 표현하는 것은 1-1 대응을 이룬다. 정확히 말하면 1-1 대응을 이루도록 하기 위해 $\theta$ 의 범위를 $[0,\, 2\pi)$ 로 제한한다. 정수 $n$ 에 대해 
 
@@ -72,7 +72,7 @@ $$
 
 ## 코시-리만 조건 과 해석 함수
 
-### 코시-리만 조건
+### 코시-리만 조건 {#sec-complex1_cauchy_riemann_condition}
 
 ::: {.callout-note appearance="minimal"}
 
@@ -156,7 +156,7 @@ $$ {#eq-complex_derivative_of_complex_function}
 
 </br>
 
-### 해석 함수
+### 해석 함수 {#sec-compex1_analytic_function}
 
 ::: {.callout-note appearance="minimal"}
 
@@ -227,7 +227,7 @@ $$
 </div></br>
 
 
-### 해석함수와 라플라스 방정식
+### 해석함수와 라플라스 방정식 {#sec-complex1_analytic_function_and_laplace_equation}
 
 $f(x,\,y) = u(x,\,y) + iv(x,\,y)$ 가 $Z\subset \mathbb{C}$ 에서 해석함수라면 코시 리만 조건으로부터
 
@@ -272,7 +272,7 @@ $$
 
 </div></br>
 
-### 해석함수의 미분
+### 해석함수의 미분 {#sec-complex1_derivative_of_analytic_function}
 
 @eq-complex_derivative_of_complex_function 로부터
 
@@ -335,7 +335,7 @@ $$ {#eq-complex1_derivative_of_ln_z}
 </div></br>
 
 
-### 무한원점 (Point at infinity)
+### 무한원점 (Point at infinity) {#sec-complex1_point_at_infinity}
 
 복소수를 다룰 때 무한대는 하나의 점으로 다루게 되며 이 점을 무한원점이라고 한다. 무한원점의 근방(neighborhood) 를 다룰 때는 $w=1/z$ 로 변환시킨 후 $w = 0$ 근방을 다룬다. 이렇게 되면 큰 양의 실수 $R$ 에 대해 $z=-R$ 을 다룰 때 $w=1/z$ 근처의 미분을 다루게 되면 $z=R$ 이 모두 $w=1/z$ 근처에 있기 때문에 영향을 끼치게 된다. 이외의 특이한 사항에 대해서는 차후 다루기로 한다.
 
@@ -549,4 +549,591 @@ $$
 이다. 주어진 식을 만족한다.
 
 :::
+</div></br>
+
+
+## 코시의 적분 정리
+
+### Contour 적분 {#sec-complex_contour_integral}
+
+복소평면에서 특정 경로에 대해 적분할 때 이 경로를 **contour** 라고 한다. 보통 countour 는 $C$ 로 표기한다. 경로의 시작점과 끝점을 각각 $z_0,\,z_n$ 이라고 하고 경로 중간에 점 $z_1,\ldots,\,z_{n-1}$ 을 위치시켰다고 하자(@fig-complex1_contour). 이 때 $z_{j}$ 와 $z_{j+1}$ 사이의 어떤 점을 선택하여 $\xi_j$ 라고 하고 다음의 합을 생각한다.
+
+$$
+S_n = \sum_{j=0}^{n-1} f(\xi_j) (z_{j+1}-z_j).
+$$ {#eq-complex1_summation_before_integration}
+
+이 때 $n\to \infty$ 극한에서 $|z_{j+1}-z_j|\to 0$ 이며 $S_n \to \int_C f(z)\,dz$ 가 된다. 
+
+![적분 경로](images/fig-compex_contour.png){#fig-complex1_contour width=400}
+
+혹은 $z_0 = x_0+iy_0,\, z_n = x_n +iy_n$ 에 대해
+
+$$
+\begin{aligned}
+\int_{z_0}^{z_n} f(z)\,dz &= \int_{(x_0,\,y_0)}^{(x_n,\,y_n)} \left[u(x,\,y)+iv(x,\,y)\right] \, (dx+idy) \\
+&= \int_{(x_0,\,y_0)}^{(x_n,\,y_n)} [u(x,\,y)\,dx - v(x,\,y)\, dy] + i \int_{(x_0,\,y_0)}^{(x_n,\,y_n)} [u(x,\,y)\,dy + v(x,\,y)\, dx] 
+\end{aligned}
+$$
+
+라고 볼 수도 있다. 위의 식은 복소 경로에서의 복소함수의 적분을 2차원 유클리드 공간에서의 실함수의 적분으로 바꾼다. 
+
+많은 경우 우리는 경로가 닫혀 있는, 즉 $z_0=z_n$ 인 contour 에 대해 다룬다. 
+
+
+</br>
+
+### 코시 정리 {#sec-complex1_cauthy_theorem}
+
+코시 정리는 단순연결영역(simply connected region) 이라는 특별한 성질을 가진 복소평면 $\mathbb{C}$ 의 부분집합 위에서 성립한다. 일단 **영역(region)** 은 공집합이 아니며(non-empty), 연결되어 있는 위상공간의 열린 집합을 의미한다$^1$.[$^1$ https://en.wikipedia.org/wiki/Domain_(mathematical_analysis)]{.aside} 영역 $U \subset C$ 의 내부에 구명이 없다면, 즉 $U$ 에서 정의된 임의의 닫힌 곡선 $C'$ 에 대해 $C'$ 의 내부가 모두 $U$ 에 포함된다며 $U$ 는 단순연결영역이다. 뒤에 보겠지만 이는 스토크스 정리(Stokes' theorem) 이 성립하는 영역과 같은데 코시 정리의 증명에 스토크스 정리가 사용되기 때문이다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex1_cauthy}
+
+$C$ 가 복소평면에서의 닫힌 경로이며 $f$ 가 $C$ 를 포함하는 어떤 단순 연결 영역에서 해석 함수 일 때 다음이 성립한다.
+
+$$
+\oint_C f(z)\, dz = 0
+$$ {#eq-complex1_cauthy_theorem}
+:::
+
+</div></br>
+
+::: {.proof}
+
+$z=x+iy$ 에 대해 $f(z) = u(x,\,y) +i v(x,\,y)$ 라고 하자. $dz=dx+idy$ 이므로
+
+$$
+\oint_C f(z)\, dz = \oint_C (u+iv)(dx+idy) = \oint_C (u\,dx -v \,dy) +i \oint_C (u\,dy+v\,dx)
+$$
+
+이다. 닫힌 경로 $C$ 에 의해 구별되는 면적을 $A$ 라고 하자. 스토크스 정리와 코시-리만 조건에 의해
+
+$$
+\begin{aligned}
+\oint_C (u \,dx -v dy) &= -\int \left(\dfrac{\partial u}{\partial y} + \dfrac{\partial v}{\partial x} \right)\, dx\,dy = 0, \\
+\oint_C (u\,dy + v\,dx) &= \int \left(\dfrac{\partial u}{\partial x} - \dfrac{\partial v}{\partial y} \right)\, dx\,dy = 0,
+\end{aligned}
+$$
+
+이다. $\square$
+
+:::
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_integration_of_zn_in_circular_contour}
+
+$\oint z^n\, dz$ 를 원점을 중심으로 반지름 $r$ 인 원을 contour 로 잡아 계산해보자. 경로는 반시계방향으로 한다. $z=re^{i\theta}$ 라고 하면 $dz = ire^{i\theta}d\theta$ 이며, 
+
+$$
+\oint_C z^n\,, dz = i\int_0^{2\pi} r^{n+1}e^{i(n+1)\theta}\, d\theta
+$$
+
+이다. $n\ne -1$ 인 경우
+
+$$
+\oint_C z^n\, dz = \dfrac{r^{n+1}}{n+1}\left[e^{i(n+1)}\right]_0^{2\pi} = 0
+$$
+
+이며, $n=-1$ 인 경우
+
+$$
+\oint_C z^{-1}\,dz = i\int_0^{2\pi} 1\, d\theta = 2\pi i
+$$
+
+이다. $n\ge 0$ 인 경우 $z^n$ 은 유한한 $z$ 에 대해 해석 함수이므로 코시-정리에 따라 적분이 $0$ 이 되는 것이 당연하다. $n<0$ 인 경우 $z=0$ 에서 특이점이며 따라서 원점을 포함하는 영역에서는 코시 정리를 사용 할 수 없다. 
+
+:::
+
+</div></br>
+
+</br>
+
+### 다중 연결 영역 {#sec-complex1_multiply_connected_regions}
+
+단일 연결 영역이 아닌 영역을  다중 연결 영역(multiply connected region) 이라고 한다. @fig-complex1_multiply_connected_reigon 의 (A) 는 단순연결영역이 아니므로 다중연결영역이다.
+
+![다중 연결 영역](images/fig-multply_connected_region.png){#fig-complex1_multiply_connected_reigon width=500}
+
+함수 $f$ 가 하얀 부분($R$) 에서 해석함수라고 하자. 코시 정리는 contour $C$ 에 대한 적분에 사용 될 수 없다. 그러나 그림 (B) 의 $C'$ 과 같이 경로를 잡는다면 코시 적분을 수행할 수 있다. (B) 에서와 같이 $R$ 내부에 얇은 틈을 만들어 $R'$ 을 외부의 영역과 연결한다. 그렇다면 새로운 영역에 어떤 폐곡선을 그리더라도 폐곡선의 내부에 영역이 아닌 점을 포함하지 않는다. 즉 틈을 통해 단순연결영역이 된다. 그리고 $ABDEFGA$ 를 연결하는 새로운 경로 $C'$ 을 생각하자. 이 경로는 단순 연결 영역 내의 경로이므로 코시 정리가 성립한다. 또한 $f(z)$ 가 원래의 영역에서 연속이기 때문에 $C'$ 의 부분경로 $AG$ 와 $DE$ 에 대한 적분은 서로 상쇄한다는 것을 알 수 있다. 즉
+
+$$
+\int_G^A f(z)\,dz = -\int_D^E f(z)\, dz
+$$
+
+이다. 그렇다면 코시 정리에 따라 
+
+$$
+\oint_{C'} f(z)\, dz = \int_{ABD}\, f(z)\, dz + \int_{EFG} \, f(z)\, dz = 0
+$$
+
+이다. $\int_{GE} f(z) \, dz =0$. $\int_{AD} f(z)\, dz = 0$ 이므로 다중연결영역에서 같은 방향으로의 두 경로에 대한 적분은 항상 같다는 것을 의미한다. 즉 $C'_1 = ABDA$, $C'_2 = GFEG$ 경로로 잡으면
+
+$$
+\oint_{C'_1}f(z)\, dz = \oint_{C'_2} f(z)\, dz
+$$
+
+이다. 
+
+이제 @exm-complex1_integration_of_zn_in_circular_contour 을 다시 한번 보자. 그렇다면 우리는 다음을 알 수 있다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-complex1_countour_integral_of_zn}
+
+$z_0$ 를 내부에 포함하는 반시계방향의 닫힌 경로 $C$ 에 대해 다음이 성립한다.
+
+$$
+\oint_{C} (z-z_0)^n \, dz = \left\{ \begin{array}{ll} 0, & n \ne -1,\\ 2\pi i, \qquad & n = -1. \end{array}\right.
+$$
+
+:::
+
+</div></br> 
+
+### 연습 문제
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_3_2}
+
+#### Arfken 11.3.2
+
+Contour $C$ 의 길이가 $L$ 이며 함수 $M = \max \{|f(z)| : z\in C\}$ 일 때 다음을 보여라.
+
+$$
+\left| \int_C f(z)\, dz \right| \le M\cdot L
+$$
+
+:::
+
+::: {.solution}
+
+@eq-complex1_summation_before_integration 의 개념을 그대로 사용하자. 또한 우리는 $|\sum a_n| \le \sum |a_n|$ 임을 안다. 
+
+$$
+\begin{aligned}
+\left|\int_C f(z) \, dz\right| &= \lim_{n\to \infty} \left|\sum_{j=0}^{n-1} f(\xi_j) (x_{j+1}-x_j) \right| \\ 
+&\le \lim_{n \to \infty} \sum_{j=0}^{n-1} |f(\xi_j)| | x_{j+1}-x_j| \\
+&\le \lim_{n \to \infty} \sum_{j=0}^{n-1} M |x_{j+1}-x_j| \\
+&\le M \left(\lim_{n \to \infty}\sum_{j=0}^{n-1}|x_{j+1}-x_j|\right) = ML
+\end{aligned}
+$$
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_3_4}
+
+#### Arfken 11.3.4
+
+$F(z) = \displaystyle \int_{\pi (1+i)}^z \cos 2\zeta \, d\zeta$ 에 대해 $F(z)$ 가 적분 경로에 무관하게 그 값이 정해진다는 것을 보이고 $F(\pi i)$ 값을 구하라.
+
+:::
+
+::: {.solution}
+
+$\cos 2\zeta = \displaystyle \sum_{j=0}^\infty \dfrac{(-1)^j(2\zeta)^{2j}}{(2j)!}$ 는 해석 함수이므로 적분경로에 무관하게 $F(z)$ 값이 정해진다. 경로를 $\zeta = \pi (t+i)$, $t:1 \to 0$ 으로 잡으면, $d\zeta=\pi dt$ 이며 
+
+$$
+\begin{aligned}
+F(\pi i) &= \int_{\pi(1+i)}^{i \pi} \dfrac{e^{2i\zeta} + e^{-2i\zeta}}{2} \, d\zeta = \int_{1}^0 \pi\dfrac{e^{2i\pi(t+i)} + e^{-2i\pi (t+i)}}{2}\, dt \\
+&= \dfrac{\pi}{2} \left[\dfrac{e^{-2\pi} e^{2i\pi t}}{2i \pi }\right]_{1}^0 -\dfrac{\pi}{2} \left[\dfrac{e^{2\pi} e^{-2i\pi t}}{2i \pi }\right]_{1}^0 = 0.
+\end{aligned}
+$$
+
+:::
+</div></br>
+
+## 코시 적분 공식 {#sec-complex1_cauthy_integral_formular}
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex1_cauthy_integral_formula}
+
+#### 코시 적분 공식
+
+$z_0$ 가 복소평면상의 반시계 방향의 닫힌 contour $C$ 의 내부에 위치하며 $f(z)$ 가 $C$ 를 포함하는 영역에서 해석적이면 다음이 성립한다.
+
+$$
+\dfrac{1}{2\pi i} \oint_C \dfrac{f(z)}{z-z_0} \, dz = f(z_0)
+$$ {#eq-complex1_cauchy_integral_formula}
+
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-compex_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
+
+![$z_0$ 주위의 두 coutour](images/fig-compex_contour_z0.png){#fig-complex1_contour_z0 width=350}
+
+우리느 $C$ 경로로의 적분과 $C'$ 경로로의 적분값이 같다는 것을 안다. $C'$ 경로에 대해 적분하고자 한다. $z=z_0 +re^{i\theta}$ 이며 $dz=ire^{i\theta}\,d\theta$ 이므로
+
+$$
+\oint_{C'} \dfrac{f(z)}{z-z_0}\,dz = \int_{0}^{2\pi} \dfrac{f(re^{i\theta})}{re^{i\theta}} ire^{i\theta}\,d\theta = i\int_0^{2\pi} f(re^{i\theta})\, d\theta
+$$
+
+이다. $r\to \infty$ 극한에 대해서도 성립해야 하므로
+
+$$
+\oint_{C'} \dfrac{f(z)}{z-z_0}\,dz = 2\pi i f(z_0)
+$$
+
+이다. $\square$
+
+:::
+
+</br>
+
+@thm-complex1_cauthy_integral_formula 의 조건에서 $z_0$ 가 contour 외부에 위치한다면 어떨까? $f(z)/(z-z_0)$ 는 $C$ 내부에서 해석적이며 따라서 적분은 $0$ 이 된다.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_integrztion_z_z1}
+
+단위원의 경로 $C$ 에 대해 $1/z(z+2)$ 를 적분한 값을 $I$ 라고 하자. 
+
+$$
+\dfrac{1}{z(z+1)}=\dfrac{1}{2} \left(\dfrac{1}{z} - \dfrac{1}{z+2}\right)
+$$
+
+이며 $C$ 안에 포함된 $1/z(z+1)$ 의 특이점은 $z=0$ 뿐이다. 따라서, 
+
+$$
+I = \oint_C \dfrac{1}{z(z+1)}\, dz = \dfrac{1}{2}\oint_C \dfrac{1}{z}\,dz - \dfrac{1}{2}\oint_C \dfrac{1}{z+2}\, dz = \dfrac{1}{2}(2\pi i) = \pi i
+$$
+
+
+이다. 
+:::
+
+</div></br>
+
+## 미분 {#sec-complex1_derivatives_of_Cauchy_integral}
+
+@eq-complex1_cauchy_integral_formula 을 $z_0$ 에 대해 미분하면
+
+
+$$
+f'(z_0) = \dfrac{1}{2\pi i} \oint \dfrac{f(z)}{(z-z_0)^2}\, dz
+$$ {#eq-complex1_derivative_of_cauchy_integral_1}
+
+를 얻는다. 이를 반복하면 다음을 얻는다. 
+
+$$
+f^{(n)}(z_0) = \dfrac{n!}{2\pi i} \oint \dfrac{f(z)}{(z-z_0)^{n+1}}\, dz.
+$$ {#eq-complex1_derivative_of_cauchy_integral}
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_derivative_of_cauchy_integral_1}
+
+$z=a$ 를 포함하는 경로 $C$ 에 대해 다음의 적분을 생각하자
+
+$$
+I = \oint_C \dfrac{\sin^2 z}{(z-a)^4}\, dz.
+$$
+
+@eq-complex1_derivative_of_cauchy_integral 를 생각하면 다음과 같이 계산 할 수 있다.
+
+$$
+I = \dfrac{2\pi i}{3!} \left[\dfrac{d^3}{dz^3} \sin z^2\right]_{z=a} = - \dfrac{8\pi i}{3} \sin a. \cos a
+$$
+:::
+
+</div></br>
+
+
+### 모레라의 정리 {#sec-complex1_Morera_theorem}
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex1_morera_theorem}
+
+#### 모레라의 정리
+
+$f(z)$ 가 단순 연결 영역 $R$ 에서 연속이며 $R$ 에서의 모든 닫힌 contour $C$ 에서 $\oint_C f(z)\,dz=0$ 이면 $f(z)$ 는 $R$ 에서 해석적이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$z_0 \in R$ 을 하나 선택하자. 조건에 의해 $F:R \to \mathbb{C}$ 인 $F(z)$ 를 다음과 같이 정의 할 수 있다.
+
+$$
+F(z) := \int_{z_0}^z f(z)\,dz
+$$ {#eq-complex1_morera_0} 
+
+임의의 $z_1,\,z_2\in R$ 에 대해
+
+$$
+F(z_2)-F(z_1) = \int_{z_1}^{z_2} f(z)\, dz
+$$ {#eq-complex1_morera_1}
+
+이다. 그렇다면 복소 변수 $t$ 에 대한 적분으로 다음과 같이 쓸 수 있다.
+
+$$
+\dfrac{F(z_2)-F(z_1)}{z_2-z_1} - f(z_1) = \dfrac{1}{z_2-z_1} \int_{z_1}^{z_2} {\large [ }f(t) - f(z_1){\large ]}\, dt
+$$ {#eq-complex1_morera_2}
+
+$f$ 가 연속이므로 $\varepsilon > 0$ 에 대해 어떤 $\delta>0$ 이 존재하여 
+
+$$
+|z_2-z_1|<\delta \implies |f(z_2)-f(z_1)|<\varepsilon
+$$
+
+이 성립한다. $z_2 \to z_1$ 극한을 생각하면  $|t-z_2|<|z_2-z_1| <\delta$ 이며 
+
+$$
+\begin{aligned}
+\left| \dfrac{F(z_2)-F(z_1)}{z_2-z_1} - f(z_1)\right| &= \left|\dfrac{1}{z_2-z_1} \int_{z_1}^{z_2} {\large [ }f(t) - f(z_1){\large ]}\, dt\right| \\
+&\le \dfrac{1}{|z_2-z_1|} \int_{z_1}^{z_2} \left| f(t)-f(z_1) \right| |dt|, \\
+&\le \dfrac{1}{|z_2-z_1|} \int_{z_1}^{z_2} \varepsilon \, |dt| = \varepsilon
+\end{aligned}
+$$
+
+이므로 
+
+$$
+f(z_1) = F'(z_1)
+$$ {#eq-complex1_morera_3}
+
+
+이다. 즉 $F$ 가 $R$ 에서 해석적이므로 $F'(z) = f(z)$ 역시 $R$ 에서 해석적이다. $\square$
+:::
+
+
+</br>
+
+모레라의 정리는 다중 연결 영역까지 확장되지 않는다는 것에 유의해야 한다. 단순 연결 영역이 아닐 경우 @eq-complex1_morera_1 가 경로에 무관하게 정의된다는 보장이 없기 때문이다. 종합적으로 보면 다중 연결 영역에서 해석적인 함수는 모든 $n$-계 도함수가 존재하지만 그 적분이 경로-독립적으로 존재한다는 보장이 없다. 이 문제는 이후 다시 다루기로 한다. 
+
+어쨌든 모레라의 정리는 우리에게 복소함수에 대한 부정적분을 생각할 수 있도록 해 준다. 즉 함수 $f(z)$ 에 대한 경로-독립적인 적분을 생각 할 수 있다면 이 적분 함수의 미분이 $f(z)$ 라는 것이다.
+
+</br>
+
+### 코시부등식과 리우빌 정리
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-complex1_cauchy_inequality}
+
+#### 코시 부등식
+
+$f(z) = \sum a_n z^n$ 이 해석적이며 반경 $r$ 인 원에서 $|f(z)|\le M$ 이면 
+
+$$
+|a_n|r^n \le M
+$$
+
+이 성립한다.
+
+:::
+</div></br>
+
+::: {.proof}
+
+코시 적분 공식을 이용하면
+
+$$
+a_n = \dfrac{1}{2\pi} \oint_{|z|=r} \dfrac{f(z)}{z^{n+1}}\, dz
+$$ {#eq-complex1_cauchy_inequality}
+
+이며 따라서
+
+$$
+|a_n| = \dfrac{1}{2\pi} \left|\oint_{|z|=r} \dfrac{f(z)}{z^{n+1}}\, dz\right| \le \dfrac{1}{2\pi} \oint_{|z|=r} \left|\dfrac{f(z)}{z^{n+1}} \right|\, |dz| \le \dfrac{1}{2\pi} \dfrac{M}{r^{n+1}}2\pi r= \dfrac{M}{r^{n+1}}
+$$
+
+이다. 즉 @eq-complex1_cauchy_inequality 이 성립한다. $\square$
+
+:::
+
+</br>
+
+우리는 이로부터 아주 중요한 결과를 얻을 수 있다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex1_liouville}
+
+#### 리우빌 정리
+
+$f(z)$ 가 유계이며 전해석함수이면 $f(z)$ 는 상수함수이다.
+
+
+:::
+</div></br>
+
+::: {.proof}
+
+$f(z)$ 가 유계, 즉 $z\in \mathbb{C}$ 에 대해 $|f(z)|\le M$ 인 $M>0$ 이 존재한다 하자. $n\ge 1$ 이고 아주 큰 $r$ 에 대해 $|a_n| \le Mr^{-n}$ 이어야 하므로 $a_n=0$ 이다. 즉 $f(z) = a_0$ 인 상수함수이다. $\square$
+
+:::
+
+</br>
+
+@thm-complex1_liouville 로부터 $f(z)$ 가 상수함수가 아니라면 $f(z)$ 가 유계가 아니거나 전해석 함수가 아니어야 한다. 우리는 이로부터 놀라운 증명을 할 수 있다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex1_fundamental_theorem_of_algebra}
+
+#### 대수학의 기본정리
+
+$n$ 차 다항식 $p_n(z)= \sum_{k=0}^n a_k z^k$ 는 $n$ 개의 근을 갖는다.
+
+:::
+</div></br>
+
+::: {.solution}
+
+$n$ 차 다항식이므로 $a_n \ne 0$ 이다. $p_n(z)$ 의 근이 없다고 하자. $1/p_n(z)$ 는 유계인 전해석함수이며 따라서 리우빌의 정리에 따라 상수함수인데 이는 가정에 모순된다. 따라서 $p_n(z)$ 는 근을 가지며 이를 $z_1$ 이라고 하자. $p_{n-1}(z) = p_n(z)/(z-1)$ 역시 다항식이며 앞의 논리를 그대로 사용 할 수 있다. 이를 $n$ 번 계속 할 수 있으며 이는 $p_n(z)$ 가 $n$ 개의 해를 갖는다는 의미이다. $\square$
+
+:::
+
+</br>
+
+### 연습문제
+
+*명시적으로 달리 언급하지 않는다면 여기서의 닫힌 contour 는 반시계방향의 경로이다.*
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_4_1}
+
+#### Arfken 11.4.1
+
+크로네커 델타 $\delta_{mn}$ 과 정수 $m,\,n$ 에 대해 다음이 성립함을 보여라.
+
+$$
+\dfrac{1}{2\pi i} \oint z^{m-n-1}\, dz = \delta_{mn}
+$$
+
+:::
+
+::: {.solution}
+
+@exm-complex1_integration_of_zn_in_circular_contour 에 따라 $m-n-1 = -1$ 일 경우, 즉 $m=n$ 인 경우를 제외하면 $0$ 이며 $m=n$ 일 경우 우변이 $1$ 이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_4_2}
+
+#### Arfken 11.4.2
+
+$C$ 가 $|z-1|=1$ 인 원 일 때 $\displaystyle \oint_C \dfrac{dz}{z^2-1}\,dz$ 를 계산하라.
+
+:::
+
+::: {.solution}
+
+$\dfrac{1}{z^2-1}= \dfrac{1}{2}\left(\dfrac{1}{z-1}- \dfrac{1}{z+1}\right)$ 이며 $\dfrac{1}{z+1}$ 은 $C$ 를 포함하는 어떤 영역에서 해석적이므로 적분하면 $0$ 이 된다. $z=1+e^{i\theta}$ 라고 놓으면 $dz = ie^{i\theta}$ 이며,
+
+$$
+\oint \dfrac{dz}{z^2-1}\,dz = \dfrac{1}{2} \int_0^{2\pi} \dfrac{1}{e^{i\theta}} ie^{i\theta}\, d\theta = i\pi
+$$
+
+이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_4_3}
+
+#### Arfken 11.4.3
+
+$f(z)$ 가 닫히 countour $C$ 안에서 해석적이며 $z_i$ 가 $C$ 의 내부에 있다고 할 때 다음이 성립한다는 것을 보여라.
+
+$$
+\oint_C \dfrac{f'(z)}{z-z_0}\, dz = \oint_{C}\dfrac{f(z)}{(z-z_0)^2}\, dz.
+$$
+
+:::
+
+::: {.solution}
+
+$f(z)$ 를 $C$ 안에서 $z_0$ 를 중심으로 테일러 전개하면 
+
+$$
+f(z) = \sum_{j=0^\infty} a_j (z-z_0)^j
+$$
+
+이며 따라서 위의 적분값은 좌우변 모두 $2\pi i a_2$ 이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_4_4}
+
+#### Arfken 11.4.4
+
+$f(z)$ 가 닫힌 countour $C$ 내부에서 해석적이라고 하자. Induction 을 이용하여
+
+$$
+f^{(n)} (z_0) = \dfrac{n!}{2\pi i} \oint_C \dfrac{f(z)}{(z-z_0)^{n+1}}\,dz
+$$
+
+임을 보여라.
+
+:::
+
+::: {.solution}
+
+$n=0$ 일 경우가 코시 적분 공식이다. $n$ 에 대해 성립함을 가정하자.
+
+$$
+f^{(n+1)}(z_0) = \dfrac{d}{dz_0}f^{(n)}(z_0) = \dfrac{(n+1)!}{2\pi i} \oint \dfrac{f(z)}{(z-z_0)^{n+2}}\, dz 
+$$
+
+이다.
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_4_5}
+
+#### Arfken 11.4.5
+
+($a$) $f(z)$ 가 닫힌 contour $C$ 내에서 해석적이며 $C$ 에서 연속이다. $C$ 내부에서 $f(z)\ne 0$ 이며 $C$ 에서 $|f(z)|\le M$ 이라면 $C$ 내부에서 $|f(z)|\le M$ 임을 보여라.
+
+($b$) 
+:::
+
+::: {.solution}
+
+($a$)  $C$ 의 내부를 $U$ 라고 하자. $z_0\in U$ 와 $z_0$ 를 중심으로 $U$ 안에 포함된 반지름 $r$ 인 작은 원 경로 $C_0$ 를 생각하자. $M_1 = \max\{ |f(z)| :|z-z_0|<r\}$ 이라고 하면
+
+
+$$
+|f(z_0)| = \left|\dfrac{1}{2\pi i} \oint_{C_0} \dfrac{f(z)}{(z-z_0)}\,dz\right| \le \dfrac{1}{2\pi} \dfrac{M_1}{r}2\pi r  = M_1
+$$
+
+이다. 이제 $f(z_0) > M$ 이라면 $|w(z_0)| < 1/M$ 
+
+:::
+
 </div></br>
