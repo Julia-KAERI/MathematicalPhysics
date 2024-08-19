@@ -1162,7 +1162,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_minimum_modulus_theorem}
+::: {#thm-complex1_maximum_modulus_theorem}
 
 #### 최대 절대값 원리
 
@@ -1442,7 +1442,49 @@ $$
 
 ::: {.solution}
 
+테일러 전개를 이용한다. $f(z) = (1+z)^m$ 이라고 하면 induction 을 통해 다음을 보일 수 있다.
 
+$$
+f^{(k)}(0)=\dfrac{m(m-1)\cdots (m-k+1)}{k!}
+$$
+
+이를 이용하면 위의 식이 성립함을 보일 수 있다. $m<0$ 일 때 $z=-1$ 이 $z=0$ 에서 가장 가까운 singular point 이며 따라서 $|z|=1$ 이 수렴반경이다.
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_5_3}
+
+#### Arfken 11.5.3 (슈바르츠 정리)
+
+$f(z)$ 가 단위원 과 그 내부에서 해석적이라고 하자. 또한 $|z|\le 1$ 에서 $|f(z)|<1$ 이며 $f(0)=0$ 이라고 하자. 모든 $|z|\le 1$ 에 대해 $|f(z)|< |z|$ 임을 보여라.
+:::
+
+::: {.solution}
+
+$f(z) = \sum_{k=1}^\infty a_k z^k$ 이므로 $g(z) = f(z)/z$ 역시 단위원과 그 내부에서 해석적이다. 앞서 최대 절대값 원리(@thm-complex1_maximum_modulus_theorem) 에서 보았듯이 최대값은 단위원에서 존재하며 단위원에서
+
+$$
+|g(z)| = |f(z)|<1
+$$
+
+이므로 $|f(z)|/|z|<1$ 이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_5_4}
+
+#### Arfken 11.5.4 
+
+$f$ 는 $\mathbb{C}\mapsto \mathbb{R}$ 함수이며, 따라서 $f^\ast(z) =f(z)$ 이다. 또한 $f(z)$ 의 원점에 대한 로랑 전개 $f(z) = \sum a_n z^n$ 에서 어떤 자연수 $N$ 에 대해 $n<-N$ 이면 $a_n = 0$ 이라고 하자. 이 때 모든 계수 $a_n$ 이 실수임을 보여라. 
 :::
 
 </div></br>
