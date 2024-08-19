@@ -12,6 +12,7 @@ book:
     - index.qmd
     - src/complex1.qmd
     - src/figure/figure1.qmd
+    - src/figure/figure-test.qmd
     
 
 bibliography: references.bib

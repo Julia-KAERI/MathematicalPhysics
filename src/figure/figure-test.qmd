@@ -1,0 +1,87 @@
+---
+title: "Fig-complex-test"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+```{r, engine = 'tikz'}
+#| label: fig-complex_tayler_expansion
+#| code-fold: true
+#| output: asis
+#| fig-width: 5
+#| fig-align: center
+#| fig-cap: "적분 경로"
+
+
+\begin{tikzpicture}[scale=1.8]
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+
+\coordinate (z0) at (1, 1.0);
+\coordinate (z1) at (2.5, 2.5);
+\coordinate (zp) at (2.201, 1.497);
+\draw [-latex] (-1, 0) -- (4, 0) node[below] {Re$(z)$};
+\draw [-latex] (0, -1) -- (0, 4) node[left] {Im$(z)$};
+
+\filldraw [] (z0) circle (1pt) node [left] {$z_0$} ;
+\filldraw [] (z1) circle (1pt) node [right] {$z_1$};
+\filldraw [] (zp) circle (1pt) node [right] {$z^\prime$};
+\draw [thick] (1, 1.0) circle (1.3) ;
+\draw [thick] (1, 1.0) circle (2.121) ;
+
+\draw[violet, thick, -latex] (z0) -- (2.052, 0.236);
+\draw[teal, thick, -latex] (z0) -- (1.655, 3.017);
+
+\node[below] at (1.4, 0.5) {$|z^\prime-z_0|$};
+\node[below] at (1.1, 2.75) {$|z_1-z_0|$};
+
+
+\end{tikzpicture}
+```
+
+</br>
+
+```{r, engine = 'tikz'}
+#| label: fig-complex_lauranrt_expansion
+#| code-fold: true
+#| output: asis
+#| fig-width: 5
+#| fig-align: center
+#| fig-cap: "적분 경로"
+
+
+\begin{tikzpicture}[scale=1.8]
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+
+\coordinate (p1) at (0.9987502603949663, 0.04997916927067833);
+\coordinate (p2) at (1.6978754426714426, 0.04997916927067833);
+\coordinate (q1) at (0.9987502603949663, -0.04997916927067833);
+\coordinate (q2) at (1.6978754426714426, -0.04997916927067833);
+
+
+
+\draw [thick] (0, 0) circle (0.7) ;
+\draw [thick] (0, 0) circle (2.0);
+\filldraw [] (0,0) circle (1pt) node [left] {$z_0$} ;
+\draw[teal, very thick] (p1) -- (p2);
+\draw[teal, very thick] (q1) -- (q2);
+\draw[teal, very thick, -latex] (p1) arc (2.865:90:1) node [above] {$C_2$};
+\draw[teal, very thick] (0, 1.0) arc (90:357.135:1);
+\draw[teal, very thick, -latex] (p2) arc (1.686:90:1.7) node[above] {$C_1$};
+\draw[teal, very thick] (0, 1.7) arc (90:358.314:1.7);
+
+\draw[red, thick, -latex] (0, 0) -- ({0.7*cos(310)}, {0.7*sin(310)});
+\node[left] at ({0.35*cos(310)}, {0.35*sin(310)}) {$r$};
+
+\draw[red, thick, -latex] (0, 0) -- ({2*cos(105)}, {2*sin(105)});
+\node[left] at ({1.3*cos(105)}, {1.3*sin(105)}) {$R$};
+
+\draw[dashed, blue] (0, 0) -- (2.5, 0) node[below] {$\begin{array}{cc}\text{Contour}\\ \text{line} \end{array}$};
+\filldraw[] ({1.4*cos(60)}, {1.4*sin(60)}) circle(1pt) node[right] {$z$};
+
+
+\end{tikzpicture}
+```
