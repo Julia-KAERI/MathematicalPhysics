@@ -1484,7 +1484,37 @@ $$
 
 #### Arfken 11.5.4 
 
-$f$ 는 $\mathbb{C}\mapsto \mathbb{R}$ 함수이며, 따라서 $f^\ast(z) =f(z)$ 이다. 또한 $f(z)$ 의 원점에 대한 로랑 전개 $f(z) = \sum a_n z^n$ 에서 어떤 자연수 $N$ 에 대해 $n<-N$ 이면 $a_n = 0$ 이라고 하자. 이 때 모든 계수 $a_n$ 이 실수임을 보여라. 
+$f$ 는 real function of complex variable 함수이다. 즉 $f^\ast(x) =f(x)$ 이다. 또한 $f(z)$ 의 원점에 대한 로랑 전개 $f(z) = \sum a_n z^n$ 에서 어떤 자연수 $N$ 에 대해 $n<-N$ 이면 $a_n = 0$ 이라고 하자. 이 때 모든 계수 $a_n$ 이 실수임을 보여라. 
+:::
+
+::: {.solution}
+
+$f(z) = a_{-N}z^{-N} + a_{-N+1} z^{-N+1} + \cdots$ 에 대해 $g(z) = z^{N}f(z)$ 을 생각하자. $g(z)$ 는 해석적이며 $g^\ast(z) = (z^{N}f(z))^\ast = z^N f^\ast(z) = z^N f(z) = g(z)$ 이다. $0 = g(x) - g^\ast(x) = \sum_{k=0}^\infty (a_{-N+k} - \overline{a_{-N+k}})x^k$ 이므로 $a_n$ 은 실수이다. 
+
+:::
+</div></br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_5_5}
+
+#### Arfken 11.5.5
+
+주어진 점에 대한 로랑급수가 유일함을 보여라. 즉
+
+$$
+f(z) = \sum_{k=-N}^\infty a_k (z-z_0)^k = \sum_{k=-N}^\infty b_k (z-z_0)^k
+$$
+
+일 때 모든 $k$ 에 대해 $a_k = b_k$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$f(z) (z-z_0)^{N} = \sum_{k=0}^\infty a_{-N+k} (z-z_0)^k =  \sum_{k=0}^\infty b_{-N+k} (z-z_0)^k$ 는 해석적이므로 $a_n=b_n$ 이다.
+
 :::
 
 </div></br>

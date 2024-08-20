@@ -1,0 +1,321 @@
+---
+title: "복소 변수 이론 2"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+
+## 특이점
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-complex2_isolated_point}
+
+#### 고립점, 극점, 본질적 특이점
+
+$f(z)$ 가 $z_0$ 를 포함하는 어떤 근방에서 $z_0$ 에서는 해석적이지 않지만 나머지에서는 해석적일 때 $z_0$ 를 **고립점(isolated point)** 라고 한다. 따라서 $f(z)$ 를 $z_0$ 에 대해 로랑 전개 할 때 $f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k$ 라고 하자. 
+
+1. $k<0$ 에 대해 어떤 $N\in \mathbb{Z}_+$ 에 대해 $a_{-N} \ne 0$ 이고 $k<-N \implies a_k = 0$ 이면 $z_0$ 를 $N$ 계 극점 **극점(pole)** 이라고 하며 $1$ 계 극점을 **단순 극점(simple pole)** 이라고 한다.
+
+2. 1 에 속하지 않는 특이점을 **본질적 특이점(essential singularity)** 라고 한다.
+
+:::
+:::
+
+
+</br>
+
+$e^{1/z}$ 는 본질적 특이점을 가진 대적인 함수이다. $0$ 부근에서 다음과 같기 때문이다. 
+
+$$
+e^{1/z} = \sum_{k=0}^\infty\dfrac{1}{k!}\dfrac{1}{z^k}
+$$
+
+본질적 특이점은 매우 다루기 까다롭다. 많은 경우 본질적 특이점의 작은 근방에서 함수가 심하게 요동처서 거의 모든 $\mathbb{C}$ 의 값을 가질 수 있다. 따라서 여기서 다루는 대부분의 특이점은 극점이다. 
+
+</br>
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-complex2_meromorphic}
+
+#### Meromorphic
+
+어떤 고립된 극점을 제외하고 해석적인 함수를 **meromorphic** 이라고 한다. 예를 들면 다항식 $p(z),\,q(z)$ 에 대해 $p(z)/q(z)$ 가 meromorphic 이다. 
+
+
+:::
+:::
+
+</br>
+
+## 분지점(Branch point)
+
+분지점(Branch point) 는 다가함수(multivalued function) 을 다룰 때 매우 중요하다. 
+
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-complex2_open_closed_path}
+
+#### open path 와 closed loop
+
+복소 평면상의 경로에 교차점이 없을 때, 즉 출발한 뒤에 단 한번도 이전의 경로와 만나지 않을 때 이 경로를 **open** 이라고 한다. $z_0$ 로 부터 시작한 경로가 다시 $z_0$ 로 돌아올 때 이 경로를 **closed loop** 라고 한다.
+
+:::
+:::
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex2_z_12_on_closed_loop}
+
+![원점 주위의 $z^{1/2}$ 값을 계산하기 위한 경로](images/fig-complex_branch_1.png){#fig-complex2_branch_1 width=300}
+
+단위원을 반시계방향으로 회전하는 경로에서의 $f(z) = z^{1/2}$ 를 생각하자. $z=re^{i\theta}$ 라고 하면 $z^{1/2}=r^{1/2}e^{i\theta/2}$ 일 수도 있고 $z^{1/2} = r^{1/2}e^{i(\theta/2 + \pi)}$ 일 수도 있다. 각각의 경우 $f(1)=1,\,-1$ 이다.
+
+위의 그림과 같이 단위원상에 $A,\,B,\,C,\,D$ 점을 잡자. $A(z=1)$ 로부터 경로가 시작하며 $f(1) = 1$ 이 라고 할 경우
+
+$$
+f(B) = \dfrac{1+i}{\sqrt{2}},\, f(C) = i,\, f(D) = \dfrac{-1+i}{\sqrt{2}}
+$$
+
+이다. $\theta$ 가 증가하는 방향으로 생각하며 $C$ 에 $\theta = -\pi$ 와 같은 값을 넣을 수 없다. $ABCDA$ 순으로 경로를 진행할 때 마지막의 $A$ 에서는 $\theta =0$ 이 아닌 $\theta =2 \pi$ 가 되어야 한다. 최종의 $A$ 를 $A'$ 이라고 써서 구분하면 $f(A') = -1 \ne f(A)$ 이다. 이제 $\theta$ 를 한바퀴 이상 더 진행하면 그리고 이 경우 $B,\,C,\,D,\,A$ 를 $B',\,C',\,D',\,A''$ 이라고 쓴다면
+
+$$
+f(B') = \dfrac{-1-i}{\sqrt{2}},\, f(C') = -i,\, f(D') = \dfrac{1-i}{\sqrt{2}},\, f(A'')= 1
+$$
+
+이다. 
+
+:::
+
+</div></br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex2_z_12_on_closed_loop_2}
+
+![원점 주위가 아닌, $z^{1/2}$ 값을 계산하기 위한 경로](images/fig-complex_branch_2.png){#fig-complex2_branch_2 width=350}
+
+$z=2$ 을 중심으로 반지름이 1 인 원 경로를 생각하자(@fig-complex2_branch_2). $A$ 점, 즉 $z=3$ 에 대해 $f(3) = \pm \sqrt{3}$ 값을 가질 수 있다. $z=2+e^{i\theta}$ 의 경로를 생각하면 $\text{Re}(z) > 0$ 이며 따라서 $ABCDA$ 순으로 순회하여 다시 $A'=A$ 로 갔을 때의 값은 역시 $\sqrt{3}$ 임을 알 수 있다. 즉 @exm-complex2_z_12_on_closed_loop 의 경우와 달리 closed loop 를 순회하고 다시 돌아왔을 때 그 함수값이 바뀌지 않는다.
+
+:::
+
+</div></br>
+
+@exm-complex2_z_12_on_closed_loop 와 @exm-complex2_z_12_on_closed_loop_2  의 차이는 경로 내부에 특이점 $z$ 를 포함하는지 여부이다. 여기서 $z=0$ 이 왜 특별한가? $f(z) = z^{1/2}$ 는 $z=0$ 에서 미분이 정의되지 않은 특이점이며 이 특이점 주변의 경로에 따라 함수값을 계산할 경우 여려 값을 가질 수 있다. 이런 점을 **branch point** 라고 하며, branch point 의 계수(order)는 함수가 원래의 값으로 돌아오기 위해 거쳐야 하는 경로의 수를 말한다. @exm-complex2_z_12_on_closed_loop 의 경우 $z=0$ 은 $f(z) = z^{1/2}$ 에 대해 계수가 $2$ 인 branch point 이다. 
+
+
+다가 함수를 단일값 함수로 제한하기 위해서 해야 할 일은 branch point 를 포함하지 않는 경로를 잡아서 함수값을 정하는 것이다. 보통 **branch line** 혹은 **branch cut** 이라고 부르는 선을 긋는데 branch point 에서 시작하여 무한대 까지 가거나 아니면 다른 유한한 계수의 branch point 까지 가는 직선을 그으며 이 직선을 가로지르는 경로를 잡지 않는다. Branch cut 은 자유롭게 선택할 수 있으며 중요한 것은 Branch cut 의 양 끝이다.
+
+일단 적당한 branch cut 을 정했다면 원래의 다가 함수는 branch cut 에 의해 한정되는 영역에서는 단일값 함수로 제한 될 수 있으며, 이렇게 단일값으로 제한된 함수를 원래 함수의 **branch** 라고 한다. 우리는 원래의 다가 함수의 시작점에서의 함수값을 자유롭게 정할 수 있기 때문에 다가 함수의 branch 는 여러 개가 될 수 있다. $f(z)=z^{1/2}$ 에서 $z=0$ 을 중심으로 하는 원에서의 branch 는 2개이다.
+
+Branch point 를 가지는, 즉 여러개의 branch 를 가지는 함수는 branch cut 을 가로질러서는 연속이 아니며, 따라서 branch 컷에 매우 가까운 반대방향의 두 선적분은 서로 상쇄하지 않는다. 따라서 Branch cut 은 해석적 영역을 가르는 실제 경계가 된다. 다중연결영역을 단일 연결영역으로 만들기 위한 벽은 실제로는 해석적 영역을 가르지 않았지만 branch point 는 실제 해석적 영역을 가른다.
+
+근본적으로 모든 branch 들은 동등하지만 많은 경우 실제 사용될 branch 들이 정해져 있다. 이 branch 를 principal branch 라고 하며 principal branch 에 대한 함수값을 principal value 라고 한다. $z^{1/2}$ 에 대해서는 양의 실수값을 branch cut 으로 잡은 것이 principal branch 가 된다.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex2_branches_of_log_Z}
+
+$f(z) = \ln z$ 를 생각하자. 앞서 @sec-complex1_exponential_and_log 에서 보았듯이 $\ln z$ 는 다가함수이며, 극좌표 표현에서
+
+$$
+\ln z = \ln r + i(\theta + 2n \pi),\qquad n\in \mathbb{Z}
+$$
+
+이다. $z=0$ 은 특이점이며 branch point 이다. $z=0$ 주위의 반경 $r>0$ 인 원형 경로를 생각한다. $z=re^{i\theta}$, $\theta=0$ 에서 시작하자. $\theta$ 가 증가할수록 $\ln z$ 의 값은 변하며 $k$ 번 돌 때 마다 $z=r$ 에서의 값은 $ln(z) = \ln r+ 2ik\pi$ 가 되고 원래값으로 돌아가지 않는다. 즉 $\ln z$ 에서 $z=0$ 은 무한대의 계수를 갖는 branch point 이다. 
+
+$\ln z$ 를 단일값 함수로 제한하기 위해서 branch cut 을 정할 때 $z=0$ 에서 시작하여 $z=\infty$ 로 가는 어떤 직선을 그어도 상관 없지만 principla branch cut 은 $z=0$ 에서 양의 실수 값을 포함하는 직선이 된다. 
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex2_branches_of_power_of_z}
+
+$f(z) = z^p$ 꼴의 함수를 생각하자. 여기서 $p\in \mathbb{C}$ 이다. $z^p = e^{p \ln z}$ 를 생각하면 $p$ 가 정수이면 $f(z)$ 는 단일값 함수이며 $p$ 가 $s/t$ 꼴의 유리수($\gcd (s,\,t)=1$) 라면 $t$ 개의 값을 갖는다. 그 외의 경우라면 무한대의 값을 갖는 다가 함수이다.
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex2_multiple_branch_point}
+
+$f(z) = (z^2-1)^{1/2}= (z+1)^{1/2}(z-1)^{1/2}$ 를 생각하자. $(z+1)^{1/2}$ 는 $z=-1$ 에서 branch point 를 가지며 $(z-1)^{1/2}$ 는 $z=1$ 에서 branch point 를 가진다. $z\to \infty$ 에서의 경항을 알기 위해 $w=1/z$ 로 치환해보자.
+
+$$
+(z^2-1)^{1/2} = \dfrac{1}{w} (1-w^2)^{1/2} = \dfrac{1}{w} - \dfrac{w}{2} - \dfrac{w^3}{8} + \cdots
+$$
+
+이므로 $z\to \infty$ 에서 단순 극점을 가진다. 이제 적절한 branch cut 을 구성하여 $f(z)$ 를 단일값 함수로 제한해보자. 방법은 많지만 @fig-complex2_branch_3 에 나온 branch cut 을 이용해 보기로 하자. 
+
+![가능한 브랜치중의 하나](images/fig-complex_branch_3.png){#fig-complex2_branch_3  width=300}
+
+
+점 $P$ 를 $+1$ 과 $-1$ 에 대해 극좌표로 표현해보자. $+1$ 에 대해 $z= 1+ \rho e^{i\varphi}$, $-1$ 에 대해 $z=-1+re^{i\theta}$ 로 표현하면
+
+$$
+f(z) = r^{1/2}\rho^{1/2}e^{i(\theta+\varphi)/2}
+$$
+
+이다. 이제 @fig-complex2_branch_4 의 closed path 를 생각하자. $A$ 로 부터 시작하여 $B,C,D,E,F$ 를 거쳐 다시 $A$ 로 돌아오는 경로(이때의 $A$ 를 $A'$ 이라고 표기하고 구분하도록 하자)를 생각한다. $A$ 에 대해 $\theta = \varphi = 0$ 으로 놓으면 $f(2) = \sqrt{3}$ 이 된다. 
+
+![Branch cut 주위의 경로](images/fig-complex_branch_4.png){#fig-complex2_branch_4 width=350}
+
+
+| 점 | $\theta$ | $\varphi$ | $(\theta+\varphi)/2$ |
+|:----:|:----:|:----:|:----:|
+| $A$ | $0$ | $0$ | $0$ |
+| $B$ | $0$ | $\pi$ | $\pi/2$| 
+| $C$ | $0$ | $\pi$ | $\pi/2$ |
+| $D$ | $\pi$ | $\pi$ | $\pi$ |
+| $E$ | $2\pi$ |$\pi$ | $3/2\pi$ |
+| $F$ | $2\pi$ |$\pi$ | $3/2\pi$ |
+| $A'$ | $2\pi$ |$2\pi$ | $2\pi$ |
+: Phase angles {#tbl-complex2_phase_angle}
+
+
+점 $ABCDEF$ 를 거쳐 $A'$ 으로 돌아왔을 때의 $f(3)= \sqrt{3}$ 이며 따라서 $f(z)$ 는 단일값 함수가 된다. 결과적으로는 두 branch cut 으로부터의 기여가 서로 상쇄하여 closed loop 를 순회한 후에도 같은 값을 같도록 한 것이다. 이 이외의 다른 branch cuts 를 선택하는 방법은 연습문제에서 다루도록 한다.
+
+
+:::
+
+
+</div></br>
+
+### 해석적 연속 {#sec-complex2_analytic_continuation}
+
+어떤 영역에서 해석적인 함수는 영역 내의 $z_0$ 를 중심으로 한 테일러 전개가 가능하며, 유일하다. 이 테일러 전개의 수렴반경 내에서 이 테일러 전개는 수렴
+
+
+-- to be filled
+
+</br>
+
+## 유수 계산
+
+### 유수 정리 {#sec-complex2_residue_theorem}
+
+함수의 로랑 전개
+
+$$
+f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k
+$$
+
+를 생각하자. 각 항을 고립점 $z_0$ 를 에워싼 반시계방향의 닫힌 원형 경로로 적분하면
+
+$$
+a_k\oint (z-z_0)^k\, dz = 2 \pi i a_{-1} \delta_{k,-1}
+$$
+
+이므로,
+
+$$
+\oint f(z)\, dz = 2i \pi a_{-1}
+$$
+
+이다. 이 때 로랑 전개에의 $(z-z_0)^{-1}$ 의 계수를 **유수 (留數, residue)** 라고 하고 $\text{Res}(f,\,x_0)$ 라고 표기한다. 이제 고립점 $z_1,\,z_2,\ldots,\,z_n$ 를 가진 함수 $f(z)$ 에 대해 닫힌 contour 에서 적분한다고 생각하자. 우리는 이 contour 를 @fig-complex2_residue_1 와 같이 변형하여 적분할 수 있으며, 
+
+$$
+\oint_C f(z)\,dz+ \oint_{C_1} f(z)\,dz+ \oint_{C_2} f(z)\,dz + \cdots + \oint_{C_n} f(z) = 0
+$$
+
+을 이용 할 수 있다. 여기서 $C$ 는 반시계방향이며 $C_1,\,C_2,\ldots$ 는 시계방향이다. 그렇다면
+
+$$
+\oint_C f(z)\,dz= - \sum_{j=1}^n \oint_{C_j} f(z)\, dz =  2\pi i \sum_{j=1}^n Res(f,\,z_j)
+$$
+
+이다. 여기서 $C_j$ 는 시계방향이지만 유수를 계산하기 위한 contour 는 시계방향이므로 부호가 반대가 되서 마지막에서 $-$ 가 사리짐에 유의하라. 
+
+![고립점을 제외한 경로 잡기](images/fig-complex_residue_1.png){#fig-complex2_residue_1 width=300}
+
+
+위의 결과를 정리한것이 유수 정리 (Residue theorem)이다.
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex2_residual_theorem}
+
+#### 유수 정리
+
+함수 $f(z)$ 가 단일 닫힌곡선 $C$ 의 내부에 있는 유한개의 고립특이점 $z_1,\,z_2,\ldots,\, z_n$ 을 제외하고 $C$ 의 내부와 위에서 해석적이라고 하자. 또한 $z_j$ 에서의 유수를 $\text{Res}(f,\,z_j)$ 라고 쓰면
+
+$$
+\oint_C f(z)\, dz = 2 \pi i \sum_{j=1}^n \text{Res}(f,\,z_j)
+$$
+:::
+
+</div></br>
+
+많은 경우 residue 를 계산하기 위해 함수의 전체 로랑 전개를 알아야 할 필요는 없다. $f(z)$ 가 $z​_0$ 에서 단순 극점을 갖는다면
+
+$$
+(z-z_0)f(z) = a_{-1} + a_0(z-z_0) + a_1 (z-z_0)^2 + \cdots
+$$
+
+이며 따라서
+
+$$
+a_{-1} = \lim_{z\to z_0} (z-z_0)f(z)
+$$ {#eq-complex2_residual_1}
+
+이다. 만약 $f(z)$ 에 계수 $n>1$ 이상의 극점 $z_0$ 가 존재한다면
+
+$$
+(z-z_0)^n f(z) = a_{-n} + a_{-n+1}(z-z_0) + a_{-n+2} (z-z_0)^2 + \cdots + a_{-1}(z-z_0)^{n-1}+  a_0 (z-z_0)^n + \cdots
+$$
+
+이므로 $a_{-1}$ 은 $(z-z_0)^{n-1}$ 의 계수가 되며 따라서
+
+$$
+a_{-1} = \dfrac{1}{(n-1)!} \lim_{z \to z_0} \left[\dfrac{d^{n-1}}{dz^{n-1}} {\Large (}(z-z_0)^n f(z){\Large )}\right]
+$$ {#eq-complex2_residual_2}
+
+이다.
+
+</br>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex1_laurant_expansion_1}
+
+여러 함수의 residue 를 구해보자.
+
+($1$) $f_1(z) = \dfrac{1}{4z+1}$ 은 $z=-\frac{1}{4}$ 에서 단순 극점을 가지므로 $\displaystyle \text{Res}\left(f_1,\, -\frac{1}{4}\right) = \lim_{z\to -1/4} \dfrac{z+1/4}{4z+1} = \dfrac{1}{4}$ 이다.
+
+($2$) $f_2(z) = \dfrac{1}{\sin z}$ 의 $z=0$ 에서의 residue 는 $\displaystyle \lim_{z\to 0}\dfrac{z}{\sin z} = 1$ 이다.
+
+($3$) $f_3(z) = \dfrac{\ln z}{z^2+4}$ 의 $z=2e^{i \pi}$ 에서의 residue 는 $\displaystyle \lim_{z\to e^{i\pi}} \left[\dfrac{(z-2e^{i\pi}) \ln z}{z^2+4}\right] =-\dfrac{\ln 2 + i\pi}{4}$ 이다. 
+
+($4$) $f_4(z)=\dfrac{z}{\sin^2 z }$ 의 $z=\pi$ 에서의 residue 를 계산해 보자. 극점의 계수가 2 이므로 residue 는 @eq-complex2_residual_2 에 따라
+
+$$
+\text{Res}(f_4,\, \pi) = \lim_{z\to \pi} \dfrac{d}{dz}  \left[\dfrac{(z-\pi) z}{\sin^2 z}\right] 
+$$
+
+를 계산 할 수 도 있지만 $w=z-\pi$ 에 대해 $w=0$ 에 대한 residue 를 계산 해도 된다. 
+
+$$
+f_4(w) = \dfrac{w-\pi}{\sin^2 w} = \dfrac{w-\pi}{(w - w^3/6 + \cdots)^2} \approx \dfrac{w-\pi}{w^2} +   
+$$
+
+이므로 $\text{Res}(f_4,\, \pi) = 1$ 이다.
+
+($5$) $f_5(z) = \dfrac{\cot \pi z}{z(z+2)}$ 에 대한 $z=0$ 에서의 residue 를 구해보자. $\cot (\pi z) = \dfrac{1}{\pi z} + O(z)$ 이므로 $f_5$ 의 극점 $z_0$ 의 계수는 $2$ 이다. 
+
+$$
+f_5(z) \approx \dfrac{1}{2\pi z^2} \left(1- \dfrac{z}{2} + \dfrac{z^2}{2^2}+ \cdots \right) 
+$$
+
+이므로 $\text{Res}(f_5,\, 0) = - \dfrac{1}{4\pi}$ 이다. 
+
+:::
