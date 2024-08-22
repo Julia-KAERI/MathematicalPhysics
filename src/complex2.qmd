@@ -231,7 +231,7 @@ $$
 을 이용 할 수 있다. 여기서 $C$ 는 반시계방향이며 $C_1,\,C_2,\ldots$ 는 시계방향이다. 그렇다면
 
 $$
-\oint_C f(z)\,dz= - \sum_{j=1}^n \oint_{C_j} f(z)\, dz =  2\pi i \sum_{j=1}^n Res(f,\,z_j)
+\oint_C f(z)\,dz= - \sum_{j=1}^n \oint_{C_j} f(z)\, dz =  2\pi i \sum_{j=1}^n \text{Res}(f,\,z_j)
 $$
 
 이다. 여기서 $C_j$ 는 시계방향이지만 유수를 계산하기 위한 contour 는 시계방향이므로 부호가 반대가 되서 마지막에서 $-$ 가 사리짐에 유의하라. 
@@ -715,6 +715,71 @@ $\sin z$ 의 유도는 다소 단계가 필요한데 @exr-Arfken7_11_7_5 를 확
 
 
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_1}
+
+#### Arfken 11.7.1
+
+아래 함수 각각의 특이점의 성질을 정하고 residue 를 계산하라. 단 $a>0$ 이다.
+
+$$
+\begin{array}{l l}
+(a)\, \dfrac{1}{z^2+a^2}. \qquad \qquad & (b) \,\dfrac{1}{(z^2+a^2)^2}\\ \\
+(c)\,\dfrac{z^2}{(z^2+a^2)^2}. & (d)\, \dfrac{\sin 1/z}{z^2+a^2}. \\
+(e)\, \dfrac{ze^{iz}}{z^2+a^2}. & (f)\,\dfrac{ze^{iz}}{z^2-a^2}. \\
+(g)\, \dfrac{e^{iz}}{z^2-a^2}. & (h)\, \dfrac{z^{-k}}{z+1}, \; 0<k<1
+\end{array} 
+$$
+:::
+
+::: {.solution}
+
+($a$) $\dfrac{1}{z^2+a^2} = \dfrac{1}{2ai}\left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right)$ 이므로 $\pm ia$ 가 계수 1 인 단순 극점이며 residue 는 $\pm 1/2ai$ 이다. 
+
+($b$) $\dfrac{1}{(z^2+a^2)^2} = \dfrac{1}{4ia^2} \left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right) - \dfrac{1}{4a^2}\left(\dfrac{1}{(z-ia)^2} + \dfrac{1}{(z+ia)^2}\right)$ 이므로 $\pm ia$ 는 각각 계수 2인 극점이며 residue 는 $\pm 1/4ia^2$ 이다.
+
+($c$) $\dfrac{z^2}{(z^2+a^2)^2} = \dfrac{1}{4ia} \left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right) - \dfrac{1}{4}\left(\dfrac{1}{(z-ia)^2} + \dfrac{1}{(z+ia)^2}\right)$ 이므로 $\pm ia$ 는 계수 2인 극점이며 residue 는 $\pm 1/4ia$ 이다.
+
+($d$) $\dfrac{\sin 1/z}{z^2+a^2}= \dfrac{\sin 1/z}{2ia} \left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right)$. $z=0$ 은 본질적 특이점이며 $\pm ia$ 는 계수가 $1$ 인 단순 극점이고 $\pm ia$ 에서의 residue 는 $-\sinh (1/a)/(2a)$ 이다.
+
+이제 $z=0$ 에서의 residue 를 생각해보자.
+
+$$
+\sin \left(\dfrac{1}{z}\right) = \sum_{k=0}^\infty \dfrac{(-1)^k}{(2k+1)!}\dfrac{1}{z^{2k+1}}
+$$
+
+이며, $|z|<a$ 일 경우만 생각하면 
+
+$$
+\dfrac{1}{z^2+a^2} = \dfrac{1}{a^2}\sum_{n=0}^\infty (-1)^n \left(\dfrac{z^2}{a^2}\right)^n
+$$
+
+이므로
+
+$$
+\dfrac{\sin 1/z}{z^2+a^2} = \sum_{k,\,n=0}^\infty \dfrac{(-1)^{k+n}}{(2k+1)! a^{2n+2}} z^{2n-2k-1}
+$$
+
+이다. 따라서 residue 는 $n=k$ 때이며
+
+$$
+\sum_{k=0}^\infty \dfrac{1}{(2k+1)! a^{2k+2}} = \dfrac{1}{a} \sum_{k=0}^\infty \dfrac{1}{(2k+1)!} \left(\dfrac{1}{a}\right)^{2k+1} = \dfrac{\sinh (1/a)}{a}
+$$
+
+이다. 
+
+($e$) $\dfrac{ze^{iz}}{z^2+a^2}=\dfrac{e^{iz}}{2} \left(\dfrac{1}{z-ia}+ \dfrac{1}{z+ia}\right)$ 이므로 $z=\pm ia$ 에서 단순극점을 가지며 residue 는 $e^{-a}/2$, $e^{a}/2$ 이다.
+
+($f$) $\dfrac{ze^{iz}}{z^2-a^2}= \dfrac{e^{iz}}{2} \left(\dfrac{1}{z-a} +\dfrac{1}{z+a}\right)$ 이므로 $z=\pm a$ 에서 단순극점을 가지며 residue 는 $e^{ia}/2$ 와 $e^{-ia}/2$ 이다.
+
+($g$) $\dfrac{e^{iz}}{z^2-a^2} = \dfrac{e^{iz}}{2a} \left(\dfrac{1}{z-a}- \dfrac{1}{z+a}\right)$ 이므로 $z=\pm a$ 에서 단순극점을 가지며 residue 는 $e^{ia} /2a$ 와 $-e^{-ia}/2a$ 이다.
+
+($h$) $z=-1$ 에서 단순극점을 가지며 residue $\displaystyle \lim_{z\to -1}\left((z+1) \dfrac{z^{-k}}{z+1}\right) = e^{-ik\pi}$ 이다. 
+
+:::
+
+</div></br>
 
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
