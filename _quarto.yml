@@ -10,12 +10,15 @@ book:
   
   chapters:
     - index.qmd
-    
-    - src/ode.qmd
-    - src/pde.qmd
+    - part: src/differential equation/differential equation.qmd
+      chapters :
+      - src/differential equation/ode.qmd
+      - src/differential equation/pde.qmd
 
-    - src/complex1.qmd
-    - src/complex2.qmd
+    - part: src/complex/complex.qmd
+      chapters :
+      - src/complex/complex1.qmd
+      - src/complex/complex2.qmd
 
     - src/figure/figure1.qmd
     - src/figure/figure-test.qmd

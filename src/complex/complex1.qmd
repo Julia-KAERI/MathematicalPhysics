@@ -1,5 +1,5 @@
 ---
-title: "복소 변수 이론 1"
+title: "복소 함수의 기초"
 number-sections: true
 number-depth: 3
 crossref:

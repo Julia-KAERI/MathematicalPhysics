@@ -1,14 +1,16 @@
 ---
-title: "복소 변수 이론 2"
+title: " 특이점과 유수 정리"
 number-sections: true
 number-depth: 3
 crossref:
   chapters: true
 --- 
 
-{{< include latexmacros.qmd >}}
+{{< include ../latexmacros.qmd >}}
 
-## 특이점
+## 특이점과 분지점
+
+### 특이점 {#sec-complex2_singulariity}
 
 ::: {.callout-note appearance="minimal"}
 
@@ -52,7 +54,7 @@ $$
 
 </br>
 
-## 분지점(Branch point)
+### 분지점(Branch point) {#sec-complex2_branch_points}
 
 분지점(Branch point) 는 다가함수(multivalued function) 을 다룰 때 매우 중요하다. 
 
@@ -474,7 +476,7 @@ $f(z)$ 가 다음의 조건을 만족한다고 하자.
 
 $$
 f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \dfrac{1}{z_k}\right).
-$$ {#eq-complex2_mittag_leffler}
+$$ {#eq-complex2_mittag_leffler_1}
 
 :::
 
@@ -482,7 +484,7 @@ $$ {#eq-complex2_mittag_leffler}
 
 ::: {.proof}
 
-$b_n = \text{Res}(f,\,z_n)$ 라고 하자. @eq-complex2_mittag_leffler 의 $\sum$ 부분은 $\dfrac{zb_n}{z_n (z_n-z)}$ 이다. 이제 $z_1,\ldots,\,z_n$ 만을 포함하는 반지름 $R_n$ 인 원형 contour $C_n$ 를 생각하고
+$b_n = \text{Res}(f,\,z_n)$ 라고 하자. @eq-complex2_mittag_leffler_1 의 $\sum$ 부분은 $\dfrac{zb_n}{z_n (z_n-z)}$ 이다. 이제 $z_1,\ldots,\,z_n$ 만을 포함하는 반지름 $R_n$ 인 원형 contour $C_n$ 를 생각하고
 
 $$
 I_n := \oint_{C_n} \dfrac{f(w)\, dw}{w(w-z)}
@@ -518,7 +520,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_mittag_leffler_1}
+::: {#exm-complex2_mittag_leffler_1}
 
 #### $\tan z$ 의 극점 전개
 
@@ -539,10 +541,15 @@ $$
 \tan z &= -\sum_{k=0}^\infty \left(\dfrac{1}{z-(2k+1)\pi/2} + \dfrac{1}{(2k+1)\pi/2}\right)  \\
 &\qquad - \sum_{k=0}^\infty \left(\dfrac{1}{z+(2k+1)\pi/2} - \dfrac{1}{(2k+1)\pi/2}\right) \\
 & = -\sum_{k=0}^\infty\left(\dfrac{1}{z-(2k+1)\pi/2} + \dfrac{1}{z+(2k+1)\pi/2}\right) \\
-&= \sum_{k=0}^\infty \left[\dfrac{2z}{((2k+1) \pi/2)^2 - z^2}\right] \\
-&= 2z \left[\dfrac{1}{(\pi/2)^2-z^2} + \dfrac{1}{(3\pi/2)^2-z^2} + \dfrac{1}{(5\pi/2)^2-z^2}+ \cdots\right]
+&= \sum_{k=0}^\infty \left[\dfrac{2z}{((2k+1) \pi/2)^2 - z^2}\right] 
 \end{aligned}
+$$ 
+
+이므로
+
 $$
+\tan z =2z \left[\dfrac{1}{(\pi/2)^2-z^2} + \dfrac{1}{(3\pi/2)^2-z^2} + \dfrac{1}{(5\pi/2)^2-z^2}+ \cdots\right]
+$$ {#eq-complex2_mittag_leffler_2}
 
 이다.
 
@@ -552,7 +559,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_mittag_leffler_1}
+::: {#exm-complex2_mittag_leffler_2}
 
 #### $\cot z$ 의 극점 전개
 
@@ -580,13 +587,25 @@ $$
 
 $$
 \cot z = \dfrac{1}{z} + 2z \left[\dfrac{1}{z^2-\pi^2} + \dfrac{1}{z^2 - (2\pi)^2} + \cdots\right]
-$$
+$$ {#eq-complex2_mittag_leffler_3}
 
 이다.
 
 :::
 
 </div></br>
+
+연습문제 @Arfken7_11_7_8 에서 다음 극점 전개를 보일것이다.
+
+$$
+\begin{aligned}
+\sec z &= \pi \left[\dfrac{1}{(\pi/2)^2-z^2} - \dfrac{3}{(3\pi)^2-z^2} + \dfrac{5}{(5\pi)^2-z^2} + \cdots \right], \\
+\csc z &=  \dfrac{1}{z} - 2z \left[\dfrac{1}{z^2-\pi^2}- \dfrac{1}{z^2-(2\pi)^2} + \dfrac{1}{z^2-(3\pi)^2} + \cdots \right].
+\end{aligned}
+$$ {#eq-complex2_mittag_leffler_4}
+
+
+</br>
 
 ### 극점과 영점의 갯수 {#sec-complex2_number_of_zeros_and_poles}
 
@@ -712,9 +731,6 @@ $\sin z$ 의 유도는 다소 단계가 필요한데 @exr-Arfken7_11_7_5 를 확
 
 ### 연습문제
 
-
-
-
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_7_1}
@@ -784,13 +800,421 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-Arfken7_11_7_5}
+::: {#exr-Arfken7_11_7_2}
 
-#### Arfken 11.7.5
+#### Arfken 11.7.3
+
+$\dfrac{\pi \cot (\pi z)}{z(z+1)}$ 에 대해 $z=0,\, -1$ 에서의 residue 를 구하라.
 
 :::
 
 ::: {.solution}
+
+
+@exm-complex2_mittag_leffler_2 에 의해
+
+$$
+\begin{aligned}
+\pi \cot (\pi z) &= \dfrac{1}{z} + 2z\left[\dfrac{1}{z^2-1^2} + \dfrac{1}{z^2-2^2} + \cdots \right] \\
+&= \dfrac{1}{z} + \dfrac{1}{z-1}+ \dfrac{1}{z+1} + \dfrac{1}{z+2} + \dfrac{1}{z-2} + \cdots 
+\end{aligned}
+$$
+
+이므로
+$$
+\begin{aligned}
+\dfrac{\pi \cot (\pi z)}{z(z+1)} &= \left(\dfrac{1}{z} + \dfrac{1}{z-1}+ \dfrac{1}{z+1} + \dfrac{1}{z+2} + \dfrac{1}{z-2} + \cdots \right) \left(\dfrac{1}{z} - \dfrac{1}{z+1}\right) \\
+\end{aligned}
+$$
+
+이다. 따라서 $1/z$ 과 $-1/(z+1)$ 의 계수를 생각하면 
+
+$$
+\begin{aligned}
+\text{Res}\left(\dfrac{\pi \cot (\pi z)}{z(z+1)},\,0\right) &= -1,    \\
+\text{Res}\left(\dfrac{\pi \cot (\pi z)}{z(z+1)},\,-1\right) &= -1.
+\end{aligned}
+$$
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_3}
+
+#### Arfken 11.7.3
+
+$x>0$ 에서의 지수 적분 함수 $\text{Ei}(x)$ 에 대한 고전적인 정의는 코시 주요값 적분을 사용한 아래와 같은 정의이다.
+
+$$
+\text{Ei}(x) := PV\int_{-\infty}^x \dfrac{e^t}{t}\, dt.
+$$
+
+이 때 적분은 $x=0$ 에서 잘린다. 이 적분이 $x>0$ 에서 수렴함을 보여라.
+
+
+:::
+
+::: {.solution}
+
+$\varepsilon > 0$ 에 대해 
+$$
+\begin{aligned}
+\text{Ei}(x) &= \lim_{\varepsilon \to 0} \left[\int_{-\infty}^{-x} \dfrac{e^t}{t}\, dt + \int_{-x}^{-\varepsilon} \dfrac{e^t}{t}\, dt + \int_{\varepsilon}^x\dfrac{e^t}{t}\, dt\right] \\
+&= \int_{-\infty}^{-x} \dfrac{e^t}{t}\, dt + \lim_{\varepsilon \to 0} \int_{\varepsilon}^x \dfrac{e^t-e{-t}}{t}\, dt
+\end{aligned}
+$$
+
+이다. 첫번째 적분이 definite 한 값을 갖는다는 것은 알 수 있다. 두번째는 역시 $\int_\varepsilon^x 2\sinh (t)/t\, dt$ 이며 definite 한 값을 가지므로 어떤 $\varepsilon$ 에 대해서도 값이 잘 정의된다. 
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_4}
+
+#### Arfken 11.7.4
+
+$0<p<1$ 에 대해
+
+$$
+PV\int_{0}^\infty \dfrac{x^{-p}}{x-1}\, dx = \pi \cot p\pi
+$$
+
+임을 보여라.
+
+
+:::
+
+::: {.solution}
+
+$x=1$ 의 cut 에 대해 표현하면
+$$
+\begin{aligned}
+PV\int_{0}^\infty \dfrac{x^{-p}}{x-1}\, dx = \lim_{\varepsilon \to 0} \left[\int_0^{1-\varepsilon} \dfrac{x^{-p}}{x-1}\, dx + \int_{1+\varepsilon}^\infty \dfrac{x^{-p}}{x-1}\, dx\right]
+\end{aligned}
+$$
+
+이다. 
+
+$|x|<1$ 인 경우
+
+$$
+\dfrac{x^{-p}}{x-1} = -\sum_{k=0}^\infty x^{k-p}  
+$$
+
+이므로 
+
+$$
+\int_{0}^{1-\varepsilon} \dfrac{x^{-p}}{x-1}\, dx = - \int_{0}^{1-\varepsilon} \sum_{k=0}^\infty x^{k-p}  \, dx = -\sum_{k=0}^\infty \dfrac{1}{k-p+1} (1-\varepsilon)^{k-p+1}
+$$
+
+이다. 
+$|x|>1$ 인 경우
+
+$$
+\dfrac{x^{-p}}{x-1} = x^{-p-1} \sum_{k=0}^\infty \left(\dfrac{1}{x}\right)^k = \sum_{k=0}^\infty x^{-k-p-1}
+$$
+
+이므로
+
+$$
+\int_{1+\varepsilon}^{\infty} \dfrac{x^{-p}}{x-1}\, dx = \int_{1+\varepsilon}^\infty \sum_{k=0}^\infty x^{-k-p-1}\, dx = \sum_{k=0}^\infty \dfrac{1}{k+p} (1+\varepsilon)^{-k-p}
+$$
+
+이다. $\varepsilon \to 0$ 극한에서 @exm-complex2_mittag_leffler_2 를 참고하면
+
+$$
+\begin{aligned}
+PV\int_{0}^\infty \dfrac{x^{-p}}{x-1} &= \left(\dfrac{1}{p} + \dfrac{1}{p+1} + \cdots \right) - \left(\dfrac{1}{-p+1} + \dfrac{1}{-p+2} + \cdots\right) \\
+&= \dfrac{1}{p} + \sum_{m=0}^\infty \dfrac{2p}{p^2 - m^2} = \pi \cot p \pi
+\end{aligned}
+$$
+
+이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_5}
+
+#### Arfken 11.7.5
+
+@eq-complex2_product_expansion_of_entire_function_1 는 @eq-complex2_product_expansion_of_entire_function_2 의 $\sin z$ 식으로 직접적으로 유도 될 수 없다는 것을 설명하고 $\sin z/z$ 를 전개하여 얻을 수 있다는 것을 보여라.
+
+:::
+
+::: {.solution}
+
+
+우선 $\sin 0 = 0$ 이므로 @eq-complex2_product_expansion_of_entire_function_1 의 우변의 맨 앞의 $f(0) \exp [zf'(0)/f(0) ]$ 를 제대로 계산 할 수 없다. $g(z) = \sin z/z$ 라고 하면 $\lim_{z\to 0} g(z) = 1$ 이며, 
+
+$$
+\lim_{z\to 0} \dfrac{zg'(z)}{g(z)}= \lim_{z\to 0}\dfrac{\cos z - \sin z/z}{\sin z/z} = 0
+$$
+
+이므로
+
+$$
+\dfrac{\sin z}{z} = \left[\prod_{k=1}^\infty \left(1- \dfrac{z}{k\pi}\right)e^{z/k\pi}\right] \left[\prod_{k=1}^\infty \left(1+ \dfrac{z}{k\pi}\right)e^{-z/k\pi}\right] = \prod_{\begin{array}{c} k = -\infty \\ k \ne 0\end{array}}^\infty \left(1-\dfrac{z^2}{k^2\pi^2}\right)
+$$
+
+이다.
+
+:::
+
+</div></br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_6}
+
+#### Arfken 11.7.6 (루셰의 정리를 이용한 대수학의 기본정리 증명)
+
+
+루셰의 정리를 이용하여 대수학의 기본정리를 증명한다. 우리는 다음을 안다.
+
+&emsp; ($1$) $a z^n$ 은 $n$ 개의 영점을 갖는다.
+
+&emsp; ($2$) 충분히 큰 $|R|$ 에 대해 $|a_n R|^n > \left|\sum_{m=0}^{n-1} a_m R^m\right|$ 이다.
+
+
+위 사실과 루셰의 정리를 이용하여 대수학의 기본정리를 증명하라.
+
+:::
+
+::: {.solution}
+
+$p(z) = a_0 + a_1z + \cdots + a_nz^n$ 에 대해 $f(z)= a_n z^n$, $g(z) = a_0 + \cdots + a_{n-1}z^{n-1}$ 이라고 하자. 반경 $|R|$ 인 복소평면상의 원점을 중심으로 하는 원 $C$ 를 을생각하자. $R$ 은 $C$ 상의 복소수이다. $|f(R)| > |g(R)|$ 이므로 루셰의 정리에 의해 $f(z)$ 와 $p(z) = f(z)+g(z)$ 는 $C$ 의 내부에서 같은 수의 영점을 갖는다. $f(z)$ 의 $n$ 개의 원점을 포함하며 ($2$) 의 부등식이 만족하도록 충분히 큰 $|R|$ 을 잡으면 된다.
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_7}
+
+#### Arfken 11.7.7
+
+루셰의 정리를 이용하여 $F(z) = z^6-4z^3+10$ 의 모든 영점이 $|z|=1$ 과 $|z|=2$ 에 대한 원 사이에 있음을 보여라.
+
+:::
+
+::: {.solution}
+
+$f(z) = z^6-4z^3$, $g(z)=10$ 이라고 하면 $F(z) = f(g)+g(z)$ 이다. $|z|=1$ 인 원에서 생각하면 $|f(z)| = |z^6-4z^3| 
+\le |z^6|+4|z^3| = 5 < g(z)$ 이며 $g(z)$ 는 $|z|=1$ 인 원 안에 영점을 갖지 않으므로 $F(z)$ 는 $|z|=1$ 인 원 안에 영점이 없다.
+
+$f(z)=z^6$, $g(z)=-4z^3+10$ 이라고 하자. 역시 $F(z) = f(z)+g(z)$ 이다. $|z|=2$ 인 원에서 생각하면 $|f(z)| = |z|^6 = 64$ 이며 $|g(z)| \le 4|z|^3 + 10 = 42 < |f(z)|$ 이므로 $F(z)$ 와 $f(z)$ 는 $|z|=2$ 원 안에서의 영점의 갯수가 같다. 그런데 $f(z)$ 의 영점은 모두 $0$ 이므로 $|z|=2$ 인 원 안에 존재한다. 따라서 $F(z)$ 의 모든 영점은 $|z|=1$ 과 $|z|=2$ 사이의 원에 존재한다.
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_8}
+
+#### Arfken 11.7.8
+
+$\sec z$ 와 $\csc z$ 에 대한 곱전개 @eq-complex2_mittag_leffler_4 유도하라.
+
+:::
+
+::: {.solution}
+
+$\sec z$ 의 pole 은 $k=1,\,2,\ldots$ 에 대해 $z_k = \pm (2k-1)\pi/2$ 이며
+
+$$
+b_k = \lim_{z\to z_k} \left[(z-z_k) \sec z\right] = \lim_{z\to z_k} \left[\dfrac{z-z_k}{\cos z}\right] = \lim_{z\to z_k} \left[\dfrac{1}{-\sin z}\right] = \pm (-1)^k
+$$
+
+이므로
+
+$$
+\begin{aligned}
+\sec z &= 1 + \sum_{k=1}^\infty (-1)^k\left(\dfrac{1}{z-(2k-1)\pi/2} + \dfrac{1}{(2k-1)\pi/2}\right) \\
+& - \sum_{k=1}^\infty  (-1)^k\left(\dfrac{1}{z+(2k-1)\pi/2} - \dfrac{1}{(2k-1)\pi/2}\right) \\
+&= \sum_{k=1}^\infty(-1)^k \left[\dfrac{(2k-1)\pi}{z^2-((2k-1)\pi/2)^2}\right] + \left(1 - \dfrac{2}{\pi/2} + \dfrac{2}{3\pi/2} + \cdots \right)
+\end{aligned}
+$$ {#eq-arfken7_11_8_1}
+
+이다. 여기서 $\arctan'(x) = \dfrac{1}{1+x^2}$ 임을 안다. $|x|<1$ 일 때
+
+$$
+\dfrac{1}{1+x^2} = \sum_{k=0}^\infty (-x^2)^{k}
+$$
+
+이며 양 변에 대해 $\int_0^1$ 을 취하면
+
+$$
+\dfrac{\pi}{4} = \sum_{k=0}^\infty \dfrac{(-1)^k}{2k+1} = \left(1-\dfrac{1}{3} - \dfrac{1}{5} + \cdots\right)
+$$
+
+이다. @eq-arfken7_11_8_1 의 마지막 $(1-\cdots)$ 부분이 $0$ 이 된다는 것을 알 수 있다. 따라서,
+
+$$
+\sec z = \sum_{k=1}^\infty(-1)^k \left[\dfrac{(2k-1)\pi}{z^2-((2k-1)\pi/2)^2}\right]
+$${#eq-arfken7_11_8_2}
+
+이다. 
+
+$f(z) = \csc z- \dfrac{1}{z}$ 라고 하자. $z_k = \pm k\pi, \, k=1,\,2,\ldots$ 에서 극점을 가지며
+
+$$
+b_k = \lim_{z\to z_k} \left[(z-z_k)\csc z\right] = \lim_{z \to z_k} \dfrac{z-z_k}{\sin z} = \lim_{z\to z_k} \dfrac{1}{\cos z}= (-1)^{k}
+$$
+
+
+이다. $\lim_{z\to 0}f(z) = 0$ 이므로
+$$
+\begin{aligned}
+\csc z &= \dfrac{1}{z} + \sum_{k=1}(-1)^{k}\left(\dfrac{1}{z-k\pi} + \dfrac{1}{k\pi} + \dfrac{1}{z+k\pi}-\dfrac{1}{k\pi} \right) \\
+&= \dfrac{1}{z} + \sum_{k=1}^\infty \dfrac{(-1)^k 2z}{z^2-k^2\pi^2}
+\end{aligned}
+$$
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_9}
+
+#### Arfken 11.7.9
+
+$f(z) = \dfrac{z^2-3z+2}{z}$ 일 때 부분분수 전개를 이용하여 $\oint_C f'(z)/f(z)\, dz = 2\pi i (N_f - P_f)$ 임을 보여라. 여기서 $N_f,\, P_f$ 는  $C$ 내부의 영점과 극의 (multiplicity 를 포함한) 갯수이다.
+:::
+
+::: {.solution}
+
+영점은 $z=1,\,2$ 이며 극점은 $z=0$ 에서 단순극점을 가진다는 것을 안다. 
+
+$$
+\dfrac{f'(z)}{f(z)}= \dfrac{z^2-2}{z(z-1)(z-2)}= \dfrac{z^2-3z+2}{z} = - \dfrac{1}{z} + \dfrac{1}{z-1} + \dfrac{1}{z-2}
+$$
+
+이므로 반지름 $R$ 이 $2$ 보다 큰 원형 contour $C_R$ 에 대해
+
+$$
+\oint_{C_R} \dfrac{f'(z)}{f(z)}\, dz = 2 \pi i
+$$
+
+이므로 $N_f-P_f = 1$ 이다. 실제로 $N_f=2,\, P_f=1$ 이므로 일치한다.
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_10}
+
+#### Arfken 11.7.10
+
+특이점 주위의 반원에 대한 적분값이 원에 대한 적분값으 반인 것은 단순 극점 대해서만 성립한다. 즉 아래의 식은 단순 극점에 대해서만 성립한다.
+
+$$
+\int_{\text{semicirclr}} f(z)\, dz = \dfrac{1}{2} \oint_{\text{circle}} f(z)\, dz.
+$$
+
+계수가 1 이상인 극점에 대해 성립하지 않는것을 예를 들어 보여라.
+
+:::
+
+::: {.solution}
+
+$f(z) = z^{-2}$ 에 대해 $z=e^{i\theta}$ 로 놓고 적분해보자.
+
+$$
+\begin{aligned}
+\int_{\text{semicircle}} f(z)\, dz &= \int_0^\pi \dfrac{1}{e^{2i\theta}} ie^{i\theta}\,d\theta = \int_0^\pi ie^{-i\theta}\, d\theta = \left.-e^{-i\theta}\right|_{0}^{\pi} =  2, \\
+\int_{\text{circle}} f(z),\, dz &=  0.
+\end{aligned}
+$$
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_11}
+
+#### Arfken 11.7.11
+
+함수 $f(z)$ 는 실수축을 따라서는 계수 3인 $z=x_0$ 에서의 극점을 제외하고는 해석적이라고 하자. 즉, 로랑 전개는 아래의 형태이다.
+
+$$
+f(z) = \dfrac{a_{-3}}{(z-x_0)^3} + \dfrac{a_{-1}}{z-x_0} + g(z).
+$$
+
+여기서 $g(z)$ 는 $z=x_0$ 에서 해석적이다. 코시 주요값 테크닉이 아래와 같은 의미에서 사용될 수 있음을 보여라.
+
+&emsp; ($1$) $\displaystyle \lim_{\delta \to 0} \left[\int_{-\infty}^{x_0-\delta} f(x)\, dx + \int_{x_0+\delta}^\infty f(x)\, dx\right]$ 는 유한값을 가진다.
+
+&emsp; ($2$) $\displaystyle \int_{C_{x_0}} f(z)\, dz = \pm \pi a_{-1}$ 이다.
+
+
+여기서 $C_{x_0}$ 는 $z=x_0$ 를 중심으로 하는 반경이 작은 원형 경로이다.
+
+:::
+
+::: {.solution}
+
+($1$) 우선 $g(z)$ 는 해석적이므로 ($1$) 의 적분의 유한값 여부를 판단할 때 제외해도 된다. 또한 $\int_{-\infty}^{x_0-\delta}$ 와 $\int_{x_0+\delta}^\infty$ 가 서로 상쇄되므로 남는 것은 $g(x)$ 의 적분 밖에 없다. 따라서 위의 적분은 유한 값을 가진다.
+
+($2$)  
+
+
+
+
+:::
+
+</div></br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_7_12}
+
+#### Arfken 11.7.12
+
+단위 계단 함수(unit step function) 은 아래와 같이 정의된다.
+
+$$
+u(s-a) = \left\{\begin{array}{ll} 0, \qquad & s<a \\ 1, & s> a\end{array}\right.
+$$
+
+$u(s)$ 가 아래와 같은 두가지 적분 표현을 가진다는 것을 보여라.
+
+($a$) $\displaystyle u(s) = \lim_{\varepsilon \to 0^+} \dfrac{1}{2\pi i} PV \int_{-\infty}^\infty \dfrac{e^{ixs}}{x-i\varepsilon}\, dx$ 
+
+($2$) $\displaystyle u(s) = \dfrac{1}{2} + \lim_{\varepsilon \to 0^+} \dfrac{1}{2\pi i} PV \int_{-\infty}^\infty \dfrac{e^{ixs}}{x}\, dx$ 
+
+:::
+
+::: {.solution}
+
+$$
+\begin{aligned}
+PV \int_{-\infty}^\infty \dfrac{e^{ixs}}{x-i\varepsilon}\, dx &= \int_{-\infty}^{-\delta} \dfrac{e^{ixs}}{x-i\varepsilon} \,dx +  \int_{\delta}^{\infty} \dfrac{e^{ixs}}{x-i\varepsilon} \, dx \\
+&= \int_{\delta}^\infty \left(-\dfrac{e^{-ixs}}{x+i\varepsilon} + \dfrac{e^{ixs}}{x-i\varepsilon}\right) \, dx \\
+&\int_{\delta}^\infty  
+\end{aligned}
+$$
+
 
 
 :::
