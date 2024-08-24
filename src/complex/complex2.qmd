@@ -390,7 +390,7 @@ $\displaystyle I = \int_0^\infty \dfrac{\sin x}{x}\,dx$ 을 생각하자 $\sin x
 $$
 \begin{aligned}
 I &= \int_0^\infty \dfrac{e^{ix}-e^{-ix}}{2ix}\, dx = \int_0^\infty \dfrac{e^{ix}}{2ix} \,dx-\int_{0}^{\infty} \dfrac{e^{-ix}}{2ix} \,dx \\
-& = \int_0^\infty \dfrac{e^{ix}}{2ix} \,dx + \int_-\infty^0 \dfrac{e^{ix}}{2ix}\, dx \\
+& = \int_0^\infty \dfrac{e^{ix}}{2ix} \,dx + \int_{-\infty}^0 \dfrac{e^{ix}}{2ix}\, dx \\
 &= \int_{-\infty}^\infty \dfrac{e^{ix}}{2ix} \,dx 
 \end{aligned}
 $$
@@ -447,7 +447,9 @@ $$
 PV\int f(z)\,dz + I_{\overline{C}_1} + \int_{C_2} f(z)\, dz = 2\pi i \sum_{j} \text{Res}(f,\,z_j) + 2\pi i \text{Res}(f,\,z_0)
 $$ {#eq-complex2_cahchy_principal_value_3}
 
-을 얻는다. $2 \pi i \text{Res}(f,\,z_0) = 2\pi i a_{-1}$ 이므로 두 식은 기본적으로 같은 식이다.  
+을 얻는다. $2 \pi i \text{Res}(f,\,z_0) = 2\pi i a_{-1}$ 이므로 두 식은 기본적으로 같은 식이다. $C_2$ 에 대한 적분은 $R\to \infty$ 극한에서 $0$ 에 되는데 이는 @sec-complex3_integrals_with_complex_exponent 에서 다루며 위 적분값은 @exm-complex3_integral_including_exponential_2 에서 구한다. 
+
+
 
 
 </br>
@@ -595,7 +597,7 @@ $$ {#eq-complex2_mittag_leffler_3}
 
 </div></br>
 
-연습문제 @Arfken7_11_7_8 에서 다음 극점 전개를 보일것이다.
+연습문제 @exr-Arfken7_11_7_8 에서 다음 극점 전개를 보일것이다.
 
 $$
 \begin{aligned}
@@ -1207,15 +1209,27 @@ $u(s)$ 가 아래와 같은 두가지 적분 표현을 가진다는 것을 보�
 
 ::: {.solution}
 
+@sec-complex3_integrals_with_complex_exponent 의 [복소 지수함수가 포함된 적분](complex3.qmd#sec-complex3_integrals_with_complex_exponent) 를 이용한다.
+
+($a$) 아래 그림 @fig-complex_cauchy_principal_value_3 와 같은 경로를 생각하자. 
+
+![단위 계단 함수의 복소 적분 표현 1](images/fig-complex_cauchy_principal_value_3.png){#fig-complex_cauchy_principal_value_3 width=600}
+
+$s>0$ 일 경우는 ($A$) 의 경로를 $s<0$ 일 경우는 ($B$) 의 경로를 생각한다. $s>0$ 에 대해
+
 $$
-\begin{aligned}
-PV \int_{-\infty}^\infty \dfrac{e^{ixs}}{x-i\varepsilon}\, dx &= \int_{-\infty}^{-\delta} \dfrac{e^{ixs}}{x-i\varepsilon} \,dx +  \int_{\delta}^{\infty} \dfrac{e^{ixs}}{x-i\varepsilon} \, dx \\
-&= \int_{\delta}^\infty \left(-\dfrac{e^{-ixs}}{x+i\varepsilon} + \dfrac{e^{ixs}}{x-i\varepsilon}\right) \, dx \\
-&\int_{\delta}^\infty  
-\end{aligned}
+I_{+} = \int_{-\infty}^\infty \dfrac{e^{ixs}}{x-i\varepsilon} =  2\pi i e^{-\varepsilon s}\\
 $$
 
+이며 $\varepsilon \to 0^+$ 극한에서 $I_+ = 2\pi i$ 이다. $s<0$ 에 대해서는 $I_-=0$ 이다. 따라서 ($a$) 는 성립한다. 
 
+($b$) 의 경우는 @fig-complex2_cauchy_principal_value_2 의 경로를 생각하자. $s>0$ 일 때 
+
+$$
+\int_{C_r} \dfrac{e^{izs}}{z}\, dz = \pi i
+$$
+
+이며 $s<0$ 일 경우에는 아래쪽 반평면 에서 생각해야 하므로 적분값이 $-\pi i$ 이다. 따라서 ($b$) 가 성립한다.
 
 :::
 

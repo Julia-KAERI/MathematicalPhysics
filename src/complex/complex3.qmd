@@ -1,0 +1,338 @@
+---
+title: "복소함수의 적분과 합"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+{{< include ../latexmacros.qmd >}}
+
+
+## 복소함수의 적분 I.
+
+### 삼각함수의 적분 {#sec-complex3_trigonometric_integral}
+
+아래와 같은 꼴의 적분을 생각하자.
+
+$$
+I = \int_0^{2\pi} f(\sin \theta,\, \cos\theta)\, d\theta.
+$$ {#eq-complex3_trigonometric_form_1}
+
+여기서 $f$ 는 모든 $\theta$ 에 대해 유한하며 $\sin \theta,\ \cos\theta$ 에 대해 meromorphic 이라고 하자. 즉 단일값 함수이다. 변수를 $z=e^{i\theta},\, dz=ie^{i\theta}$ 로 바꾼다면  @eq-complex3_trigonometric_form_1 는 복소평면상의 단위원 $C_1$ 에 대한 경로적분으로 아래와 같이 바꿀 수 있다.
+
+$$
+I = -i \oint_{C_1} f\left(\dfrac{z-z^{-1}}{2i},\, \dfrac{z+z^{-1}}{2} \right) \, \dfrac{dz}{z}.
+$${#eq-complex3_trigonometric_form_2}
+
+$f$ 가 merohorphi 이므로 유수정리를 이용할 수 있으며 $\{z_j\}$ 가 단위원 내에서의 단순 고립점이라고 하면
+
+$$
+I = (-i) 2\pi i \sum_j \text{Res}(f,\, z_i)
+$${#eq-complex3_trigonometric_form_3}
+
+
+을 얻는다.
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex3_trigonomeetric_1}
+
+다음 적분을 계산한다고 하자.
+
+$$
+I = \int_{0}^{2\pi} \dfrac{d\theta}{1+a\cos \theta},\qquad |a|<1
+$$
+
+복소평면상의 단위원 경로 $C_1$ 에 대한 적분으로 바꾸면
+
+$$
+\begin{aligned}
+I &= -i \oint_{C_1} \dfrac{dz}{z(1+(a/2)(z+z^{-1}))}= - \dfrac{2i}{a} \oint_{C_1}\dfrac{dz}{z^2+(2/a) z + 1} \\
+&= - \dfrac{2i}{a}\oint_{C_1} \dfrac{dz}{(z-z_1)(z-z_2)}
+\end{aligned}
+$$
+
+이며, 이 때 $z_{1,\,2} = -\dfrac{1 \pm \sqrt{1-a^2}}{a}$ 이다. $|z_1| = \dfrac{1+\sqrt{1-a^2}}{a} > \dfrac{1}{a} > 1$ 이므로 단위원 안에 있지 않다. $z_1z_2=1$ 이므로 $|z_2|<1$ 이다. 즉 $z_2$ 만이 단위원 안의 단순 고립점이다. 그렇다면, 
+
+$$
+I = 2\pi i \left(-\dfrac{2i}{a}\right) \dfrac{1}{z_2-z_1} =  \dfrac{2\pi}{\sqrt{1-a^2}}
+$$
+
+이다. 
+
+:::
+
+</div></br>
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex3_trigonomeetric_2}
+
+다음 적분을 계산한다고 하자.
+
+$$
+I = \int_{0}^{2\pi} \dfrac{\cos 2\theta\, d\theta}{5-4\cos \theta}
+$$
+
+복소평면상의 단위원 경로 $C_1$ 에 대한 적분으로 바꾸자. $\cos 2\theta = 2\cos^2 \theta -1$ 이므로 $\frac{1}{2}(z+z^{-1})^2-1 = \frac{1}{2}(z^2+z^{-2})$ 이다. 
+
+$$
+\begin{aligned}
+I &= -i \oint_{C_1} \dfrac{\frac{1}{2}(z^2+z^{-2})}{5-2 (z+z^{-1})} \dfrac{dz}{z} = \dfrac{i}{4} \oint_{C_1} \dfrac{(z^4+1)\,dz}{z^2(z-1/2)(z-2)}
+\end{aligned}
+$$
+
+이다. $z=2$ 는 단위원 밖에 있으므로, $z=0$ 일 때와 $z=1/2$ 일 경우만 생각하면 된다.
+
+$$
+\begin{aligned}
+\text{Res}(f,\, 0) &= \lim_{z\to 0} \dfrac{d}{dz}(z^2f(z)) = \dfrac{5}{2}, \\
+\text{Res}\left(f,\, \dfrac{1}{2}\right) &= - \dfrac{17}{6}
+\end{aligned}
+$$
+
+이므로 다음의 결과를 얻는다.
+
+$$
+I = (2\pi i)\dfrac{i}{4} \left(\dfrac{5}{2} - \dfrac{17}{6}\right) = \dfrac{\pi}{6}
+$$
+
+
+:::
+
+</div></br>
+
+### $-\infty$ 에서 $\infty$ 로의 적분 {#sec-complex3_integral_infinite}
+
+아래와 같은 형태의 적분을 구해야 한다고 하자.
+
+$$
+I = \int_{-\infty}^\infty f(x)\, dx
+$$ {#eq-complex3_infinity_integral}
+
+이 때 $f(x)$ 가 복소평면의 위쪽 반평면($\text{Im}(z) \ge 0$) 이나 아래쪽 반평면 ($\text{Im}(z) \le 0$) 에서 다음을 만족한다고 하자. 
+
+&emsp; ($1$) $f$ 는 유한한 극점을 제외하고는 해석적이며, 실수축에는 극점이 없다. 
+
+&emsp; ($2$) $\displaystyle \lim_{|z|\to \infty} zf(z) = 0$ 이다. 즉 원점으로부터 충분히 먼 거리에서 $f(z)$ 는 $1/z$ 보다 빨리 감소한다.  
+
+보통 @eq-complex3_infinity_integral 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 @fig-complex_infinite_integral 와 같은 contour 를 생각한다. $z_1,\,z_2,\ldots$ 는 극점이며 contour $C$ 는 $C_R+C_I$ 라고 하자. 
+
+![큰 반원으로 둘러쌓인 위쪽 반평면에서의 contour](images/fig-complex_infinite_integral.png){#fig-complex_infinite_integral width=400}
+
+$$
+\oint_C f(z)\, dz = \int_{C_R} f(z)\, dz + \int_{C_I}f(z)\, dz
+$$
+
+인데 많은 경우 $\displaystyle \lim_{R \to \infty} \int_{C_R}f(z)\,dz = 0$ 이며, $z_1,\,z_2,\ldots,\,z_n$ 이 위쪽 반평면에서의 극점이라면 
+
+$$
+I = \int_{C_I}f(z)\,dz = \oint_C f(z)\, dz = 2\pi i \sum_j \text{Res}(f,\,z_j)
+$$
+
+가 된다. 이제 조거 ($2$) 를 만족할 경우 $\lim_{R\to \infty}\int_{C_R} f(z)\, dz=0$ 임을 보이자. $z=Re^{i\theta}$ 경로에서 $\theta \in (\theta_1,\, \theta_2)$ 범위에서 적분한다면
+
+$$
+\lim_{R\to \infty} \left|\int_{C_R} f(z)\, dz\right| \le  \int_{\theta_1}^{\theta_2} \lim_{R\to \infty}\left| f(Re^{i\theta}) R \right|\, d\theta = 0
+$$
+
+이 된다. 
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex3_infinite_integral_2}
+
+다음 적분을 계산한다고 하자.
+
+$$
+I = \int_0^\infty \dfrac{1}{1+x^2}\, dx.
+$$
+
+$|I|<\infty$ 라면 우리는 다음을 쉽게 보일 수 있다.
+
+$$
+I = \dfrac{1}{2} \int_{-\infty}^\infty \dfrac{1}{1+x^2}\, dx
+$$
+
+
+$f(z) = \dfrac{1}{1+z^2}$ 은 $z = \pm i$ 를 제외하면 해석적이므로 meromorphic 이다. 또한 $\displaystyle \lim_{|z|\to \infty} zf(z) = 0$ 이므로 위쪽 반평면을 생각하면 
+
+$$
+I = \dfrac{1}{2} 2\pi i \dfrac{1}{2i} = \dfrac{\pi}{2}.
+$$
+
+:::
+
+</div></br>
+
+
+### 복소 지수함수가 포함된 적분 {#sec-complex3_integrals_with_complex_exponent}
+
+실수 $a$ 에 대해 아래와 같은 형태의 적분을 생각하자.
+$$
+I = \int_{-\infty}^\infty f(x) e^{iax}\, dx
+$$ {#eq-complex3_integral_including_exponential_1}
+
+
+다음의 조건을 생각하자.
+
+&emsp; ($1$) $a>0$ 이며 복소평면의 위쪽 반평면에서 유한개의 극점을 제외하고는 해석적이다.
+
+&emsp; ($2$) 위쪽 반평면에서 $\displaystyle \lim_{|z|\to\infty} f(z) = 0$ 이다. 
+
+우리는 @fig-complex_infinite_integral 에서의 위쪽 반평면에서의 $C_R,\,C_I$ 로 이루어진 contour 를 생각하자. $C_R$ 에서의 적분을 $I_R$ 이라고 하고 $z=Re^{i\theta}$ 로 잡자.
+
+$$
+I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta -aR\sin \theta} \, iRe^{i\theta}\, d\theta
+$$
+
+이며
+
+$$
+|I_R| \le \int_0^\pi |f(Re^{i\theta})| e^{-aR\sin\theta} R\, d\theta
+$$
+
+이다.  $R\to \infty$ 일 때 $f(Re^{i\theta})\to 0$ 이므로 충분히 큰 $R$ 에 대해 $|f(Re^{i\theta})|<\varepsilon_R$ 인 $\varepsilon_R>0$ 을 생각 할 수 있다. 또한 $\pi/2\le \theta\le \theta$ 에 대해 $\sin (\theta) = \sin (\pi - \theta)$ 임을 이용하면
+
+$$
+|I_R| \le \varepsilon_R \int_0^\pi e^{-aR\sin \theta}\, d\theta = 2\varepsilon_R \int_0^{\pi/2} e^{-aR\sin \theta}\, d\theta
+$$
+
+이다. $\theta \in [0,\, \pi/2]$ 에서
+
+$$
+\dfrac{2}{\pi} \theta \le \sin \theta
+$$
+
+이므로
+
+$$
+|I_R| \le 2\varepsilon_R \int_0^{\pi/2} e^{-2aR\theta/\pi}\, d\theta = 2\varepsilon_R \dfrac{R(1-e^{-aR})}{2aR/\pi} < \dfrac{\pi}{a}\varepsilon_R
+$$
+
+이므로 $\displaystyle \lim_{R\to \infty} I_R = 0$ 이다. 이것을 요르당의 따름정리라고 한다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-complex3_jordan_lemma}
+#### 조르당의 따름정리
+
+복소 함수 $f(z)$ 가 복소평면의 위쪽 반평면에서 정의된 반지름 $R$ 의 반원형 $C_R$ 에서 $\displaystyle \lim_{|R|\to \infty} f(z) = 0$ 를 만족한다면 $a>0$ 에 대해 
+
+$$
+\lim_{R\to \infty} \int_{C_R} e^{iaz} f(z) \, dz = 0
+$$ {#eq-complex3_integral_including_exponential_2}
+
+이다. 
+
+:::
+
+</div></br>
+
+만약 $a<0$ 에 대해 $\int_{-\infty}^\infty f(x)e^{iax}\, dx$ 를 계산해야 한다고 하자. $a$ 값이 중요한 것은 반원 경로 적분에서 적분값이 $0$ 이 되어야 하는 것인데 $[0,\, \pi]$ 구간에서는 $\sin \theta$ 가 양수이므로 $a>0$ 에서 적분값이 사라진다. 따라서 $a<0$ 이라면 $\sin \theta$ 를 음수로 하는 $[\pi,\, 2\pi]$ 구간, 즉 아래쪽 반평면에서 적분하면 된다. 
+
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-complex3_jordan_lemma}
+#### 조르당의 따름정리의 따름정리
+
+복소 함수 $f(z)$ 가 복소평면의 아래쪽 반평면에서 정의된 반지름 $R$ 의 반원형 $C_\overline{R}$ 에서 $\displaystyle \lim_{|R|\to \infty} f(z) = 0$ 를 만족한다면 $a<0$ 에 대해 
+
+$$
+\lim_{R\to \infty} \int_{C_\overline{R}} e^{iaz} f(z) \, dz = 0
+$$ {#eq-complex3_integral_including_exponential_3}
+
+이다. 
+
+:::
+
+</div></br>
+
+결론적으로 조르당의 정리를 만족하는 함수 $f(x)$ 에 대해 $a>0$ 일 경우는 위쪽 평면에서, $a<0$ 일 경우는 아래쪽 평면에서의 $f(z)$ 의 특이점 $z_1,\,z_2,\ldots,\,z_n$ 에 대해
+
+$$
+\int_{-\infty}^\infty f(x)\, e^{iax}\, dx = 2\pi i \sum_j \text{Res}(e^{iaz}f(z),\,z_j)
+$$ {#eq-complex3_integral_including_exponential_4}
+
+이다. 
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex3_integral_including_exponential_1}
+
+다음 적분을 계산한다고 하자.
+
+$$
+I = \int_{0}^\infty \dfrac{\cos x}{x^2+1}\, dx
+$$
+
+$\cos x = (e^{ix}+e^{-ix})/2$ 이므로
+
+$$
+\begin{aligned}
+I &= \dfrac{1}{2}\int_{0}^\infty \dfrac{e^{ix}}{x^2+1} \, dx + \dfrac{1}{2}\int_{0}^\infty \dfrac{e^{-ix}}{x^2+1} \, dx \\
+&= \dfrac{1}{2}\int_{0}^\infty \dfrac{e^{ix}}{x^2+1} \, dx + \dfrac{1}{2} \int_{-\infty}^0 \dfrac{e^{ix}}{x^2+1}\, dx = \dfrac{1}{2} \int_{-\infty}^\infty \dfrac{e^{ix}}{x^2+1}\, dx
+\end{aligned}
+$$
+
+이다. 위쪽 반평면에서 생각하면 특이점은 $x=+i$ 이므로, 
+
+$$
+I = \dfrac{1}{2} (2\pi i) \dfrac{e^{-1}}{2i} = \dfrac{\pi}{2e}
+$$
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-complex3_integral_including_exponential_2}
+
+다음 적분을 계산한다고 하자.
+
+$$
+I = \int_{0}^\infty \dfrac{\sin x}{x}\, dx
+$$
+
+$\displaystyle \lim_{x\to 0} \dfrac{\sin x}{x} = 1$ 이며 $f(x) = \dfrac{\sin x}{x}$ 를 $x=0$ 에서 연속이 되도록 $f(0) = 1$ 로 정의하면 
+
+$$
+I = \lim_{\varepsilon \to 0^+} \int_{-\epsilon}^\infty \dfrac{\sin x}{x}\, dx
+$$
+
+로 생각 할 수 있다. $\sin x = (e^{ix}-e^{-ix})/(2i)$ 이므로
+
+$$
+\begin{aligned}
+I &= \lim_{\varepsilon \to 0^+} \left[\dfrac{1}{2i} \int_{\varepsilon}^\infty \dfrac{e^{ix}}{x}\, dx- \dfrac{1}{2i} \int_{\varepsilon}^\infty \dfrac{e^{-ix}}{x}\, dx\right] \\
+&= \lim_{\varepsilon \to 0^+} \left[\dfrac{1}{2i} \int_{\varepsilon}^\infty \dfrac{e^{ix}}{x}\, dx+ \dfrac{1}{2i} \int_{-\infty}^{-\varepsilon} \dfrac{e^{ix}}{x}\, dx \right] \\
+&= \dfrac{1}{2i} P.V\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\, dx
+\end{aligned}
+$$
+
+이다. 이제 @fig-complex2_cauchy_principal_value_2 에서의 경로대로 적분을 구해보자. 
+
+$$
+\oint \dfrac{e^{2iz}}{iz}\, dz = I + \int_{C_r} \dfrac{e^{iz}}{2iz}\, dz + \int_{C_R}\dfrac{e^{iz}}{2iz}\, dz
+$$
+
+이며 $C_R$ 에 대한 적분은 $0$ 이며, $C_r$ 에 대한 적분은 $-\pi/2$ 이다. 따라서
+
+$$
+I = \int_{0}^\infty \dfrac{\sin x}{x}\, dx = \dfrac{\pi}{2}
+$$
+
+이다.
+
+:::
+
+</div></br>
+
