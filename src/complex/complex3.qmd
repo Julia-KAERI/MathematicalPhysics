@@ -569,6 +569,159 @@ $$
 
 ::: {#exm-complex3_exploiting_periodicity_1}
 
+다음의 적분을 생각하자. 
+
+$$
+I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
+$$
+
+$\sinh(iy) = i \sin(y)$ 임을 안다. 이제 @fig-complex3_exploiting_periodicity_1 의 contour 에서의 적분
+
+$$
+\oint \dfrac{z \, dz}{\sinh z}
+$$
+
+를 생각하자. 또한
+
+$$
+\sinh (x+iy) = \sinh (x) \cos(y) +i \cosh(x) \sin(y)
+$$
+
+임을 안다. 이제 극점에 대해 생각해보자. 
+
+($1$) 로피탈의 정리를 이용하면 $\displaystyle \lim_{z\to 0}\dfrac{z}{\sinh z}=1$ 임을 안다. 따라서 $z=0$ 은 극점이 아니다.
+
+($2$) $\sinh (z) = 0 \iff z=in\pi,\, n\in \mathbb{Z}$ 이다. 따라서 $z= \pm i\pi,\, \pm 2\pi,\ldots$ 가 극점이다.
+
+위로부터 @fig-complex3_exploiting_periodicity_1 의 contour 에서의 극점은 $z=i\pi$ 뿐임을 안다. 그렇다면, 
+
+$$
+\oint_{C} \dfrac{z\,dz}{\sinh z} = 2\pi i \text{Res}\left(\dfrac{z}{\sinh z},\, i\pi \right) = (2\pi i)(-i\pi) = 2\pi^2 
+$$
+
+이다. 
+
+
+</br>
+
+![Contour](images/fig-complex_exploiting_periodicity_1.png){#fig-complex3_exploiting_periodicity_1 width=400}
+
+
+($1$) $C_1$ 경로를 따르는 적분은 $2I$ 이다. $x/\sinh x$ 가 우함수 임을 생각하면 자명하다.
+
+($2$) $C_2$ 경로를 따르는 적분을 생각하자. $z=R+it,\, t\in [0,\, \pi]$ 경로에서 생각하면, 
+
+$$
+\left|\int_{R}^{i\pi + R}\dfrac{z\,dz}{\sinh z} \right| \le \int_{0}^{\pi} \left|\dfrac{i(R+it)\,dt}{\sinh(R+it)}\right|\,dt 
+$$
+
+이다. 충분히 큰 $R$ 에 대해 $|e^{-R-it}|= |e^{-R}|<1$ 이므로
+
+$$
+\sinh(R+it) = \dfrac{\left|e^{R+it} - e^{-R-it}\right|}{2} \ge \dfrac{1}{2}\left(\left|e^{R+it}\right| - \left|e^{-R-it}\right|\right) \ge \dfrac{e^R-1}{2}
+$$
+
+이며, $|R+it| < \sqrt{R^2+\pi^2}$ 임을 이용하면  
+
+$$
+\left|\int_{R}^{i\pi + R}\dfrac{z\,dz}{\sinh z} \right| \le \int_{0}^{\pi} \dfrac{\sqrt{R^2+\pi^2}}{e^R-1}\, dt = \dfrac{\pi \sqrt{R^2+\pi^2}}{e^R-1}
+$$
+
+이다. $\displaystyle \lim_{R\to \infty}\dfrac{\pi \sqrt{R^2+\pi^2}}{e^R-1}=0$ 이므로 $C_2$ 에 의한 적분 기여는 $0$ 이다.
+
+($3$) $C_5$ 경로의 적분도 $C_2$ 와 같이 $R\to \infty$ 극한에서 $0$ 임을 보일 수 있다.
+
+($4$) $C_3$, $C_4$ 적분을 생각하자. $\sinh (x + i\pi)= - \sinh (x)$ 이므로
+
+$$
+\begin{aligned}
+\int_{C_3} \dfrac{z\,dz}{\sinh z} + \int_{C_4}\dfrac{z\,dz}{\sinh z} &= - \int_{R}^\varepsilon \dfrac{(x+i\pi)\,dx}{\sinh x} -\int_{-\varepsilon}^{-R} \dfrac{(x+i\pi)\,dx}{\sinh x} \\
+&= \int_{\varepsilon}^R \dfrac{(x+i\pi)\,dx}{\sinh x} + \int_{\varepsilon}^{R} \dfrac{(x-i\pi)\,dx}{\sinh x} \\
+&= 2\int_{\varepsilon}^R \dfrac{x\,dx}{\sinh x} 
+\end{aligned}
+$$
+
+이므로 $\varepsilon \to 0,\, R\to \infty$ 극한에서 적분값은 $2I$ 이다.
+
+($5$) $C_\varepsilon$ 경로에서의 적분을 생각하자. 앞서 계산한 전체 경로 $C$ 에서의 적분의 반이므로 $\pi^2$ 이다. 그렇다면 경로의 총 적분은 $4I + \pi^2$ 이며, residue 로 계산한 적분값은 $2\pi^2$ 이므로
+
+$$
+4I + \pi^2 = 2\pi^2 \implies I = \dfrac{\pi^2}{4}
+$$
+
+이다.
+
+:::
+
+</div></br>
+
+### 연습문제
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_1}
+
+#### Arfken 11.8.1
+
+@exm-complex3_trigonomeetric_1 의 적분을 일반화 한 아래의 식이 성립함을 보여라.
+
+$$
+\int_{0}^{2\pi} \dfrac{d\theta}{a\pm b \cos \theta} = \int_{0}^{2\pi} \dfrac{d\theta}{a\pm b \sin \theta} = \dfrac{2\pi}{\sqrt{a^2-b^2}}, \qquad \text{for } a>|b|.
+$$
+
+
+$|b|>|a|$ 인 경우는 어떻게 되는가?
+
+:::
+
+::: {.solution}
+
+$a>0$ 이며 $b$ 는 부호를 정하지 않으면 $a+b\cos\theta$ 에 대해서반 생각해도 된다. 복소평면상의 단위원의 경로 $C_U$ 에 대해 $z=e^{i\theta}$ 로 놓으면, $dz = ie^{i\theta}\,d\theta$ 이므로
+
+$$
+\begin{aligned}
+\int_0^{2\pi} \dfrac{d\theta}{a + b \cos \theta} &= -2i\oint_{C_U} \dfrac{dz}{(2az + b(z^2+1))}
+\end{aligned}
+$$
+
+이며 극점은 $-\dfrac{a}{b} \pm \sqrt{\dfrac{a^2}{b^2}-1}$ 이다. $a^2>b^2$ 이므로 극점은 실수축에 있고 $-\dfrac{a}{|b|} + \sqrt{\dfrac{a^2}{b^2}-1}$ 만 단위원 내부에 있으므로
+
+$$
+\oint_{C_U} \dfrac{dz}{(2az + b(z^2+1))} = 2\pi i \dfrac{1}{2\sqrt{(a/b)^2-1}} 
+$$
+
+이다. 따라서 
+$$
+\begin{aligned}
+\int_0^{2\pi} \dfrac{d\theta}{a + b \cos \theta} &= \dfrac{2\pi}{\sqrt{a^2-b^2}}
+\end{aligned}
+$$
+
+이다. $1/(a+b\sin \theta)$ 에 대한 적분도 같은 방식으로 계산 할 수 있다. 
+
+
+$|b|>|a|$ 이면 극점이 단위원 경로상에 존재한다. 
+
+:::
+
+</div></br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_2}
+
+#### Arfken 11.8.2
+
+$a>1$ 에 대해 $\displaystyle \int_0^{\pi} \dfrac{d\theta}{(a+\cos \theta)^2} = \dfrac{\pi a}{(a^2-1)^{3/2}}$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+단위원 경로 $C_U$ 를 생각하자. 
+
+$$
+
+$$
 
 :::
 
