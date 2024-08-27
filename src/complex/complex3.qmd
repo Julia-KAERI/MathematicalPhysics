@@ -121,7 +121,7 @@ $$ {#eq-complex3_infinity_integral}
 
 보통 @eq-complex3_infinity_integral 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 @fig-complex_infinite_integral 와 같은 contour 를 생각한다. $z_1,\,z_2,\ldots$ 는 극점이며 contour $C$ 는 $C_R+C_I$ 라고 하자. 
 
-![큰 반원으로 둘러쌓인 위쪽 반평면에서의 contour](images/fig-complex_infinite_integral.png){#fig-complex_infinite_integral width=400}
+![큰 반원으로 둘러쌓인 위쪽 반평면에서의 contour](images/fig-complex_infinite_integral.png){#fig-complex3_infinite_integral width=400}
 
 $$
 \oint_C f(z)\, dz = \int_{C_R} f(z)\, dz + \int_{C_I}f(z)\, dz
@@ -479,7 +479,7 @@ $$
 
 ![Contour](images/fig-complex_exploiting_branch_cuts.png){#fig-complex3_exploiting_branch_cuts width=350}
 
-$z=0$ 이 branch point 이며 양의 실수축을 branch cut 으로 잡닸다. $z^p$ 는 다가함수 이지만 코시 주요값으로 branch cuts 의 바로 윗부분 ($C_1$) 으로 정했다. 짐작하듯이 $\varepsilon \to 0$ 극한과 $R \to \infty$ 극한을 취할 것이다. $C_R$ 에 대한 적분은 이미 알고 있듯이 $R\to \infty$ 적분에서 $0$ 이며, $C_\varepsilon$ 적분도 $\varepsilon\to 0$ 극한에서 $0$ 이다.  $C_1$ 적분이 $I$ 이며, $C_2$ 적분 $I_2$ 는 $z=re^{i2\pi}$ 에 대해
+$z=0$ 이 branch point 이며 양의 실수축을 branch cut 으로 잡닸다. $z^p$ 는 다가함수 이지만 코시 주요값으로 branch cuts 의 바로 윗부분 ($C_1$) 으로 정했다. 짐작하듯이 $\varepsilon \to 0$ 극한과 $R \to \infty$ 극한을 취할 것이다. $C_R$ 에 대한 적분은 이미 알고 있듯이 $R\to \infty$ 적분에서 $0$ 이며, $C_\varepsilon$ 적분도 $\varepsilon\to 0$ 극한에서 $0$ 이다(@exr-Arfken7_11_8_7).  $C_1$ 적분이 $I$ 이며, $C_2$ 적분 $I_2$ 는 $z=re^{i2\pi}$ 에 대해
 
 $$
 I_2 = \int_{C_2} \dfrac{z^p}{z^2+1}\,dz = \int_{R}^\varepsilon \dfrac{e^{i2p\pi}\,dr}{r^2+1}= -e^{2ip\pi} I
@@ -560,7 +560,7 @@ $$
 
 </div></br>
 
-### 주기를 이용한 적분 {#sec-exploiting_periodicity}
+### 주기함수의 적분 {#sec-exploiting_periodicity}
 
 삼각함수, 즉 복소평면에서의 hyperbolic 함수에 대한 적분의 경우를 다룬다.
 
@@ -814,4 +814,411 @@ $$
 
 :::
 
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_5}
+
+#### Arfken 11.8.5
+
+유수에 대한 계산을 이용하여 다음을 보여라.
+
+$$
+\int_{0}^\pi \cos^{2k} \theta \, d\theta = \pi \dfrac{(2k)!}{2^{2k}(k!)^2} = \pi\dfrac{(2k-1)!!}{(2k)!!} ,\qquad k=0,\,1,\,2,\ldots.
+$$
+
+:::
+
+::: {.solution}
+
+단위원에 대한 경로 $C_U$ 를 따르는 적분을 생각한다. $z=e^{i\theta},\, dz = (iz)d\theta$ 이다. 또한 $\cos(2\pi - \theta) = \cos \theta$ 이므로, 
+
+$$
+\int_0^{\pi} \cos^{2k}\theta\, d\theta = \dfrac{1}{2} \int_0^{2\pi} \cos^{2k}\theta\,d\theta 
+$$
+
+이다. $\cos \theta = (z+z^{-1})/2$ 이므로
+
+$$
+\begin{aligned}
+\int_{0}^{2\pi} \cos^{2k}\theta \, d\theta &=  \dfrac{-i}{2^{2k}} \int_{C_U} \dfrac{1}{z}\left(z+z^{-1}\right)^{2k} \, dz = \dfrac{-i}{2^{2k}} \oint_{C_U} \dfrac{(z^2+1)^{2k}}{z^{2k+1}}\, dz
+\end{aligned}
+$$
+
+극점은 $z=0$ 뿐이며 여기서의 residue $\displaystyle R_0 = \text{Res}\left(\dfrac{(z^2+1)^{2k}}{z^{2k+1}},\, 0\right)$ 를 계산해 보자.
+
+$$
+R_0 = \dfrac{1}{(2k)!} \lim_{z\to 0}\dfrac{d^{2k}}{dz^{2k}} (z^2+1)^{2k} = \dfrac{1}{(2k)!} \lim_{z\to 0} \sum_{m=0}^{2k} \begin{pmatrix}2k \\ m\end{pmatrix} \dfrac{d^{2k}}{dz^{2k}}z^{2m}
+$$
+
+이며 
+
+$$
+\lim_{z\to 0}\dfrac{d^{2k} z^{2m}}{dz^{2k}} = (2m)! \delta_{k,m}
+$$
+
+이므로, 
+
+$$
+R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
+$$
+
+이다. 따라서
+
+$$
+\int_0^{\pi} \cos^{2k}\theta\, d\theta = \dfrac{1}{2} \int_{0}^{2\pi} \cos^{2k}\theta \, d\theta = \dfrac{-i}{2^{2k+1}} \cdot (2\pi i) \cdot R_0 = \pi\dfrac{(2k)!}{2^{2k} (k!)^2}
+$$
+
+또한
+
+$$
+\dfrac{(2k)!}{2^k(k!)} = \dfrac{(2k)(2k-1)(2k-2)\cdots 3\cdot 2 }{(2k)(2k-2)(2k-4) \cdots 4 \cdot 2 }= (2k-1)!!
+$$
+
+이며,
+
+$$
+2^k(k!) = (2k) (2(k-1))(2(k-2)) \cdots 4 \cdot 2 = (2k)(2k-2)(2k-4) \cdots 4 \cdot 2 = (2k)!!
+$$
+
+이므로
+
+$$
+\int_0^{\pi} \cos^{2k}\theta\, d\theta =\pi\dfrac{(2k)!}{2^{2k} (k!)^2} = \pi \dfrac{(2k)!}{2^k(k!)}\dfrac{1}{2^k (k!)}= \pi \dfrac{(2k-1)!!}{(2k)!!}
+$$
+
+이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_7}
+
+#### Arfken 11.8.7
+
+@exm-complex3_exploiting_branch_cuts_1 에서 $R\to \infty$ 일 때의 $C_R$ 경로에서의 적분과 $\varepsilon \to 0$ 에서의 $C_\varepsilon$ 경로에서의 적분값이 모두 $0$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$0<p<1$ 에 대해 $f(z) = \dfrac{z^p}{z^2+1}$ 이라고 하자. @sec-complex3_integral_infinite 의 두가지 조건을 $f$ 가 만족하기 때문에 $C_R$ 경로에서의 적분은 $R\to \infty$ 극한에서 $0$ 이다. $C_\varepsilon$ 경로에서의 적문을 생각하자. $z=\varepsilon e^{i\theta},\, dz=i\varepsilon e^{i\theta}\,d\theta$ 이므로
+
+$$
+\left|\oint_{C_\varepsilon}f(z)\,dz \right| = \int_{0}^{2\pi}  \left|\dfrac{\varepsilon^p e^{i{(p+1)\theta}}}{\varepsilon^2e^{i2\theta} +1}\right| d\theta \le \int_0^{2\pi} \dfrac{\varepsilon^p}{|\varepsilon^2 e^{i2\theta}+1|}\, d\theta 
+$$
+
+$\varepsilon \to 0$ 극한에서 생각하므로 $\varepsilon<1/\sqrt{2}$ 라고 할 수 있다. 그렇다면 $|1+\varepsilon^2e^{i2\theta}| \ge 1 - \varepsilon^2 > 1/2$ 이며, 따라서
+
+$$
+\left|\oint_{C_\varepsilon}f(z)\,dz \right| < 2\int_0^{2\pi}\varepsilon^p\,d\theta = 4\pi \varepsilon^p
+$$
+
+이다. $0<p<1$ 이므로 $\varepsilon \to 0$ 극한에서 $C_\varepsilon$ 경로의 적분은 $0$ 이다.
+
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_8}
+
+#### Arfken 11.8.8
+
+$a>b>0$ 에서 $\displaystyle \int_{-\infty}^\infty \dfrac{\cos bx - \cos ax}{x^2}\, dx$ 값을 구하라.
+
+:::
+
+
+::: {.solution}
+
+ @exm-complex3_integral_including_exponential_2 로부터 $\displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t} \, dt = \pi$ 임을 안다. 앞의 적분에서 $s>0$ 에 대해 $t=sx$ 로 환하면 $\displaystyle \int_{-\infty}^\infty \dfrac{\sin (sx)}{x}\, dx= \pi$ 이다. 
+ 
+ $$
+ \dfrac{d}{ds}\left(\dfrac{\cos sx}{x^2}\right) = -\dfrac{\sin s x}{x}
+ $$ 
+
+이므로
+
+$$
+\dfrac{\cos bx- \cos ax}{x^2} = \int_b^a \dfrac{\sin sx}{x}\,ds
+$$ {#eq-exr_Arfken7_11_8_8_1}
+
+$$
+\begin{aligned}
+\int_{-\infty}^\infty \dfrac{\cos bx - \cos ax}{x^2}\, dx &= \int_{-\infty}^\infty \int_{b}^a \dfrac{\sin sx}{x}\,ds \,dx= \int_{b}^a \int_{-\infty}^\infty \dfrac{\sin sx}{x}\, dx \,ds \\
+&= \int_b^a \pi \, dx = \pi (a-b) 
+\end{aligned}
+$$
+이다. 
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_9}
+
+#### Arfken 11.8.9
+
+$\displaystyle \int_{-\infty}^\infty \dfrac{\sin^2 x}{x^2}\, dx = \pi$ 임을 보여라.
+:::
+
+
+::: {.solution}
+
+$\sin^2 x = (1-\cos 2x)/2$ 임을 이용한다. @eq-exr_Arfken7_11_8_8_1 을 이용하면
+
+$$
+\begin{aligned}
+\int_{-\infty}^\infty \dfrac{\sin^2 x}{x^2}\, dx &= \int_{-\infty}^\infty \dfrac{1-\cos 2x}{2x^2}\,dx = \dfrac{1}{2} \int_{-\infty}^\infty \int_0^2 \dfrac{\sin sx}{x}\,ds\,dx \\
+&= \dfrac{1}{2} \int_0^2 \int_{-\infty}^\infty \dfrac{\sin sx}{x}\, dx\,ds = \dfrac{1}{2}\int_0^2 \pi\,ds = \pi .
+\end{aligned}
+$$
+
+
+:::
+</div></br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_10}
+
+#### Arfken 11.8.10
+
+$\displaystyle \int_{0}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx = \dfrac{\pi}{2e}$ 임을 보여라.
+:::
+
+
+::: {.solution}
+
+$\dfrac{x \sin2 x}{x^2+1}$ 가 우함수 이므로 $\displaystyle \int_{0}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx = \dfrac{1}{2}\int_{-\infty}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx$ 이다. 복소함수 $f(z) = \dfrac{ze^{2iz}}{z^2+1}$ 에 대해 $\dfrac{f(z)+f(-z)}{2i}= \dfrac{z \sin 2z}{z^2+1}$ 임을 이용하여 문제의 적분을 계산 할 수 있다.
+
+우선 @fig-complex3_infinite_integral 의 경로대로 위쪽 반평면에서 $\oint_C f(z)\,dz$ 를 계산해 보자. $C_R$ 에 대한 경로적분은 $0$ 이며 경로상의 고립점은 $z=i$ 이므로
+
+$$
+\lim_{R\to \infty}\int_{C_I} \dfrac{ze^{iz}}{z^2+1}\, dz = (2\pi i) \text{Res}(f, i)= 2\pi i \dfrac{1}{2e} = \dfrac{i\pi}{e}
+$$
+
+또한
+
+$$
+\int_{-\infty}^\infty f(-x)\, dx \overset{t = -x}{=} \int_{-\infty}^\infty f(t)\,dt = \dfrac{i\pi}{2} = \int_{-\infty}^\infty f(t)\, dt = \dfrac{i\pi}{e}
+$$
+
+
+이므로,
+
+$$
+\int_0^\infty \dfrac{x\sin 2x}{x^2+1}\,dx = \dfrac{1}{2} \dfrac{1}{2i} \dfrac{2i\pi}{e}= \dfrac{\pi}{2e}.
+$$
+
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_11}
+
+#### Arfken 11.8.11
+
+양자역학에서의 전이확률을 계산할 때 $f(t,\,\omega)= \dfrac{2(1-\cos \omega t)}{\omega^2}$ 가 등장한다. 다음을 보여라.
+
+$$
+\int_{-\infty}^\infty f(t,\,\omega)\, d\omega = 2\pi t
+$$
+:::
+
+
+::: {.solution}
+
+@exr-Arfken7_11_8_9 의 결과를 사용한다.
+$$
+\begin{aligned}
+\int_{-\infty}^\infty f(t,\,\omega)\, d\omega &= \int_{-\infty}^\infty \dfrac{2(1-\cos \omega t)}{\omega^2}\,d\omega = \int_{\infty}^\infty \dfrac{4\sin^2(\omega t/2)}{\omega^2}\, d\omega \\
+&\overset{s=\omega t/2}{=} 2t \int_{-\infty}^\infty \dfrac{\sin^2 s}{s^2}\,ds = 2\pi t
+\end{aligned}
+$$
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_12}
+
+#### Arfken 11.8.12
+$a>0$ 에 대해 다음을 보여라.
+
+&emsp; ($a$) $\displaystyle \int_{-\infty}^\infty \dfrac{\cos x}{x^2+a^2}\,dx = \dfrac{\pi}{a}e^{-a}$. $\cos x$ 가 $\cos kx$ 가 되면 어떻게 바뀌는가?
+
+&emsp; ($b$) $\displaystyle \int_{-\infty}^\infty \dfrac{x\sin x}{x^2+a^2} \,dx = \pi a^{-a}$. $\sin x$ 가 $\sin kx$ 로 바뀌면 어떻게 되는가?
+:::
+
+
+::: {.solution}
+
+($a$) $f(z) = \dfrac{e^{iz}}{z^2+a^2}$ 이라고 하면 $\displaystyle \dfrac{\cos x}{x^2+a^2} = \dfrac{f(x)+f(-x)}{2}$ 이다. 위쪽 반평면에 대해 @fig-complex3_infinite_integral 경로의 적분을 생각하자. $C_R$ 경로 적분값은 $0$ 이며, 경로 내부의 고립점은 $ia$ 이므로
+
+$$
+\int_{-\infty}^\infty \dfrac{e^{iz}}{z^2+a^2} \,dz = 2\pi i \text{Res}(f, ia) = 2\pi i \dfrac{e^{-a}}{2ia} = \dfrac{\pi}{a}e^{-a} 
+$$
+
+이다. 또한 $\int_{-\infty}^\infty f(-x)\, dx \overset{t=-x}{=} = \int_{-\infty}^\infty f(t)\, dt$ 이므로 
+
+$$
+\int_{-\infty}^\infty \dfrac{\cos x}{x^2+a^2}\,dx = \int_{-\infty}^\infty f(z) = \dfrac{\pi}{a}e^{-a}
+$$
+
+이다. $\cos x$ 가 $\cos kx$ 로 바뀌는 경우를 보자. $k>0$ 라고 하자. 
+
+$$
+\int_{-\infty}^\infty  \dfrac{\cos kx}{x^2+a^2}\,dx \overset{t=kx}{=} \dfrac{1}{k}\int_{-\infty}^\infty \dfrac{\cos t\, dt}{t^2/k^2+a^2} = k\int_{-\infty}^\infty \dfrac{\cos t\, dt}{t^2+a^2k^2} = \dfrac{\pi}{a}e^{-ak}. 
+$$
+
+
+($b$) $f(z) = \dfrac{ze^{iz}}{z^2+a^2}$ 라고 하면 $\dfrac{x\sin x}{x^2+a^2} = \dfrac{f(z)+f(-z)}{2i}$ 이다. @fig-complex3_infinite_integral 의 경로를 생각하면 $C_R$ 경로의 적분은 $R\to \infty$ 극한에서 $0$ 이며 contour 내의 고립점은 $ia$ 이다. 따라서, 
+
+$$
+\int_{-\infty}^\infty \dfrac{ze^{iz}\, dz}{z^2+a^2} = 2\pi i \text{Res}(f,\, ia)= 2\pi i \dfrac{iae^{-a}}{2ai}= i\pi e^{-a}
+$$
+
+이므로
+
+$$
+\int_{-\infty}^\infty \dfrac{x\sin x}{x^2+a^2} \,dx = \dfrac{1}{2i} 2i\pi e^{-a} = \pi e^{-a}
+$$
+ 
+이다. $\sin x$ 가 $\sin kx$ 로 바뀌는 경우를 보자. $k>0$ 라고 하자. 
+
+$$
+\int_{-\infty}^\infty \dfrac{x\sin kx}{x^2+a^2} \,dx\overset{t=kx}{=} \int_{-\infty}^\infty \dfrac{t \sin t}{t^2+a^2k^2} = \pi e^{-ak}
+$$
+
+이다.
+
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-Arfken7_11_8_13}
+
+#### Arfken 11.8.13
+
+아래 그림의 contour 에서 $R\to \infty$ 극한을 이용하여 $\displaystyle \int_{-\infty}^\infty \dfrac{\sin x}{x}\,dx = \pi$ 임을 보여라.
+
+![Contour](images/fig-complex_contour_Arfken_11_8_13.png){#fig-complex3_contour_Arfket_11_8_13 width=350}
+
+:::
+
+
+::: {.solution}
+
+$f(z) = \dfrac{e^{iz}}{z}$ 라고 하면 $\dfrac{\sin x}{x} = \dfrac{f(x) + f(-x)}{2i}$ 이다. 이 contour 내부에 고립점이 없으므로
+
+$$
+\begin{aligned}
+\oint_C \dfrac{e^{iz}}{z} & = PV\int_{-R}^R \dfrac{e^{ix}}{x}\,dx + \int_{C_\varepsilon} \dfrac{e^{iz}}{z}\,dz + \int_0^R \dfrac{ i e^{iR-t} \, dt}{R+it} \\
+&\qquad + \int_{R}^{-R} \dfrac{e^{it-R}\,dt}{t+iR} + \int_{R}^0 \dfrac{ie^{-iR-t}}{-R+it}\, dt = 0
+\end{aligned}
+$${#eq-exr-Arfken7_11_8_13}
+
+이다. 여기서 작은 반원에 대한 시계방향 경로 적분 $C_\varepsilon$ 은
+
+$$
+\int_{C_\varepsilon} \dfrac{e^{iz}}{z}\,dz = - i\pi
+$$
+
+이며, 위쪽 수평선에 대한 적분은
+$$
+\left|\int_{R}^{-R} \dfrac{e^{it-R}\,dt}{t+iR}\right| \le \int_{-R}^R \dfrac{e^{-R}}{R}\, dt = \dfrac{2}{e^R}
+$$
+
+이므로 $R\to \infty$ 극한에서 $0$ 이다.  오른쪽 수직선에 대한 적분과 왼쪽 수직선에 대한 적분의 합은 
+
+$$
+\begin{aligned}
+\int_0^R \left[\dfrac{ i e^{iR-t} \, dt}{R+it} - \dfrac{ie^{-iR-t}}{-R+it}\right] \, dt & = \int_0^R ie^{-t}\dfrac{2R\cos R + 2t \sin R}{R^2+t^2}\, dt \\
+&=\int_0^R 2ie^{-t}\dfrac{\sin (R+\phi)}{\sqrt{R^2+t^2}}\, dt
+\end{aligned}
+$$
+
+이다. 여기서 $\phi = \arctan(R/t)$ 이다. 이로부터
+
+$$
+\begin{aligned}
+\left|\int_0^R \left[\dfrac{ i e^{iR-t} \, dt}{R+it} - \dfrac{ie^{-iR-t}}{-R+it}\right] \, dt\right| 
+&\le \int_0^R \dfrac{2e^{-t}\,dt}{\sqrt{R^2+t^2}} \\
+&\le \int_0^R \dfrac{2e^{-t}}{R}\, dt = \dfrac{2(1-e^{-R})}{R} \le \dfrac{2}{R}
+\end{aligned}
+$$
+
+이므로 $R\to \infty$ 극한에서 $0$ 이다. 따라서 @eq-exr-Arfken7_11_8_13 은
+
+$$
+PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
+$$
+
+이므로 $\int_{-\infty}^\infty f(-x)\,dx = \int_{-\infty}^\infty f(x)\, dx$ 를 이용하면
+
+$$
+\int_{-\infty}^\infty \dfrac{\sin x}{x}\, dx = \dfrac{2i\pi}{2i} = \pi
+$$
+
+이다. 
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_8_14}
+
+#### Arfken 11.8.14
+
+원자 충돌에 대한 양자 이론에서 $p\in \mathbb{R}$ 일 때의 적분 $I = \displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t}e^{ipt}\,dt$ 가 등장한다. $|p|>1$ 이면 $I=0$ 이며 $|p|<1$ 이면 $I=\pi$ 임을 보여라. 그리고 $p=\pm 1$ 이면 어떻게 되는가?
+
+:::
+
+
+::: {.solution}
+
+$f(z) = \dfrac{\sin t}{t}e^{ipt} = \dfrac{e^{i(p+1)t}-e^{i(p-1)t}}{2it}$ 라고 하자. 이것을 계산 하기 위해 $\int_{-\infty}^\infty e^{iat}/t\,dt$ 를 계산해 보자.
+
+![Contour](images/fig-complex_contour_Arfken_11_8_14.png){#fig-complex3_contour_Arfken_11_8_14.png}
+
+우선 $a>0$ 일 경우 ($A$) 의 경로에 대한 적분을 수행하면,
+
+$$
+\oint_A \dfrac{e^{iat}}{t}\,dz = PV\int_{-R}^R \dfrac{e^{iat}}{t}\,dt + \int_{C_R}\dfrac{e^{iat}}{t}\, dt + \int_{C_\varepsilon}\dfrac{e^{iat}}{t}\,dt = 0
+$$
+
+이며 $R\to \infty$ 극한에서 $C_R$ 에 대한 적분은 $0$, $\varepsilon \to 0$ 극한에서 $C_\varepsilon$ 에 대한 적분은 $-i\pi$ 이므로
+
+$$
+\int_{-\infty}^\infty \dfrac{e^{iat}}{t}\, dt = i\pi,\qquad a>0
+$$
+
+이다. $a<0$ 일 때 $(B)$ 의 경로에 대해 적분을 수행하면
+
+$$
+\int_{-\infty}^\infty \dfrac{e^{iat}}{t}\, dt = -i\pi,\qquad a<0
+$$
+
+이다. $a=0$ 일 때는 정의되지 않는다. 
+
+
+이제 $f(z)$ 에 대한 적분을 생각해보자. 
+
+
+($1$) $p>1$ 이면 $p+1 > p-1 > 0$ 이므로 $I = \dfrac{i \pi - (i\pi)}{2i} = 0$ 이다. 
+
+($2$) $p<-1$ 이면 $p-1 < p+1 < 0$ 이므로 $I = \dfrac{-i\pi - (-i\pi)}{2i} = 0$ 이다.
+
+($3$) $|p|<1$ 이면 $p-1<0<p+1$ 이므로 $I = \dfrac{i\pi - (-i\pi)}{2i} = \pi$ 이다. 
+
+
+:::
 </div></br>

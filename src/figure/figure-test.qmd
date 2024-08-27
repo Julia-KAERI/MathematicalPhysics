@@ -44,3 +44,84 @@ crossref:
 
 \end{tikzpicture}
 ```
+
+</br>
+
+```{r, engine = 'tikz'}
+#| label: fig-complex_contour_Arfken_11_8_13
+#| code-fold: true
+#| output: asis
+#| fig-width: 5
+#| fig-align: center
+#| fig-cap: "적분 경로"
+
+
+\begin{tikzpicture}[scale=2]
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+
+
+\draw[teal, very thick, ] (0.2, 0) arc (0:180:0.2);
+\filldraw[blue, thick] (0, 0) circle (1pt);
+\draw[teal, very thick] (0.2, 0) -- (3, 0) -- (3, 3) -- (-3, 3) -- (-3, 0) -- (-0.2, 0);
+\node[below] at (1.5, 0) {$R$};
+\node[below] at (-1.5, 0) {$R$};
+\node[left] at (-3, 1.5) {$R$};
+\node[right] at (3, 1.5) {$R$};
+\end{tikzpicture}
+```
+
+
+
+```{r, engine = 'tikz'}
+#| label: fig-complex_contour_Arfken_11_8_14
+#| code-fold: true
+#| output: asis
+#| fig-width: 8
+#| fig-align: center
+#| fig-cap: "적분 경로"
+
+
+\begin{tikzpicture}[scale=1.0]
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+
+
+\node[above] at (-4, 5) {$(A)$};
+\draw [thick,-latex] (-5, 0) -- (5, 0) node[below, scale=1.3] {Re$(z)$};
+\draw [thick, -latex] (0, -0.5) -- (0, 5);
+
+\draw[teal, very thick, -latex,] (3, 0) arc (0:25:3) node[black,right, scale=1.3] {$C_R$};
+\draw[teal, very thick, -latex,] ({3*cos(25)}, {3*sin(25)}) arc (25:180:3);
+\draw[teal, very thick, -latex] (-3, 0) -- (-1.5, 0);
+\draw[teal, very thick] (-3, 0) -- (-0.5, 0) ;
+\node[above, scale=1.3 ] at (-0.2, 0.5) {$C_\varepsilon$};
+\draw[teal, very thick, -latex] (-0.5, 0) arc (180:0:0.5);
+\draw[teal, very thick, -latex] (0.5, 0) -- (1.5, 0);
+\draw[teal, very thick, ] (1.5, 0) -- (3, 0);
+\draw[red, thick, dashed, -latex] (0, 0) -- ({0.5*cos(40)}, {0.5*sin(40)}) node [black, scale=1.3, right, xshift=2] {$\varepsilon$};
+
+\node[black, scale=1.3, below right] at (0, 0) {$O$};
+
+
+\begin{scope}[shift={(10,4)}]
+\node[above] at (-4, 1) {$(B)$};
+\draw [thick,-latex] (-5, 0) -- (5, 0) node[below, scale=1.3] {Re$(z)$};
+\draw [thick, -latex] (0, -5) -- (0, 1);
+
+\draw[teal, very thick, -latex,] (3, 0) arc (0:-25:3) node[black,right, scale=1.3] {$C_R$};
+\draw[teal, very thick, -latex,] ({3*cos(-25)}, {3*sin(-25)}) arc (-25:-180:3);
+\draw[teal, very thick, -latex] (-3, 0) -- (-1.5, 0);
+\draw[teal, very thick] (-3, 0) -- (-0.5, 0) ;
+\node[below, scale=1.3 ] at (-0.2, -0.5) {$C_\varepsilon$};
+\draw[teal, very thick, -latex] (-0.5, 0) arc (180:360:0.5);
+\draw[teal, very thick, -latex] (0.5, 0) -- (1.5, 0);
+\draw[teal, very thick, ] (1.5, 0) -- (3, 0);
+\draw[red, thick, dashed, -latex] (0, 0) -- ({0.5*cos(-40)}, {0.5*sin(-40)}) node [black, scale=1.3, right, xshift=2] {$\varepsilon$};
+
+\node[black, scale=1.3, above right] at (0, 0) {$O$};
+
+
+\end{scope}
+\end{tikzpicture}
+```
