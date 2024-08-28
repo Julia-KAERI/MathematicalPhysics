@@ -1222,3 +1222,177 @@ $$
 
 :::
 </div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_8_15}
+
+#### Arfken 11.8.15
+
+$a>0$ 에 대해 $\displaystyle \int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{\pi}{4a^3}$ 임을 보여라.
+
+:::
+
+
+::: {.solution}
+
+$f(z) = \dfrac{1}{(z^2+a^2)^2}$ 가 우함수이므로
+
+$$
+\int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2}\int_\infty^\infty \dfrac{dx}{(x^2+a^2)^2}
+$$
+
+이다. @fig-complex3_infinite_integral 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. $f(z)$ 은 @sec-complex3_integral_infinite 에서의 조건을 만족하며, 따라서 $R\to \infty$ 극한에서 $\int_{C_R}f(z)\,dz = 0$ 이다. 즉
+
+$$
+\oint_C f(z) \,dz = \int_{-\infty}^\infty f(x)\,dx = 2\pi i \text{Res}(f,\, ia)
+$$
+
+이다. 
+
+$$
+\text{Res}(f,\, ia) =\lim_{z\to ia} \dfrac{d}{dz}\left[(z-ia)^2 f(z)\right] = \lim_{z\to ia}\dfrac{d}{dz}\dfrac{1}{(z+ia)^2} = \dfrac{1}{4ia^3}
+$$
+
+이므로
+
+$$
+\int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2}\int_\infty^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2} (2\pi i)\dfrac{1}{4ia^3}=\dfrac{\pi}{4a^3}
+$$
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_8_16}
+
+#### Arfken 11.8.16
+
+$\displaystyle \int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1}$ 를 구하라.
+
+:::
+
+
+::: {.solution}
+
+$f(z) = \dfrac{z^2}{z^4+1}$ 의 극점은 $z_1=\dfrac{1+i}{\sqrt{2}}$, $z_2=\dfrac{-1+i}{\sqrt{2}}$, $z_3= \dfrac{-1-i}{\sqrt{2}}$, $z_4= \dfrac{1-i}{\sqrt{2}}$ 이다. @fig-complex3_infinite_integral 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. $f(z)$ 은 @sec-complex3_integral_infinite 에서의 조건을 만족하며, 따라서 $R\to \infty$ 극한에서 $\int_{C_R}f(z)\,dz = 0$ 이다. 네개의 극점중 위쪽 반평면에 위치하는 것은 $z_1,\,z_2$ 이므로
+
+$$
+\oint_C f(z) \, dz= \int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1} = 2\pi i \left(\text{Res}(f,\, z_1) + \text{Res}(f,\,z_2)\right)
+$$
+
+이다. 
+
+$$
+\begin{aligned}
+\text{Res}(f,\,z_1) &=\dfrac{z_1^2}{(z_1-z_2)(z_1-z_3) (z_1-z_4)} =  \dfrac{i}{\sqrt{2}\cdot \sqrt{2}(1+i) \cdot \sqrt{2}i} = \dfrac{1-i}{4\sqrt{2}}\\
+\text{Res}(f,\,z_2) &= \dfrac{z_2^2}{(z_2-z_1)(z_2-z_3)(z_2-z_4)} = \dfrac{-i}{(-\sqrt{2}) \cdot (\sqrt{2}i) \cdot (-\sqrt{2}(1-i))} = -\dfrac{1+i}{4\sqrt{2}}
+\end{aligned}
+$$
+
+
+이므로,
+
+$$
+\int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1} = 2\pi i \left(\dfrac{-2i}{4\sqrt{2}}\right) = \dfrac{\pi}{\sqrt{2}}.
+$$
+
+:::
+</div></br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken7_11_8_17}
+
+#### Arfken 11.8.17
+
+$0<p<1$ 에 대해 $\displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx$ 를 구하라
+
+:::
+
+
+::: {.solution}
+
+$I = \displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx$ 라고 하고 @fig-complex3_exploiting_branch_cuts 의 contour 를 생각하자. $f(z) = \dfrac{z^p\ln z}{z^2+1}$ 은 $z_1=e^{\pi i/2},\, z_2=e^{i3\pi/2}$ 에서 극점을 가진다. 따라서, 
+
+$$
+\begin{aligned}
+\oint_{C} f(z) \, dz &= \int_{C_1} f(z)\,dz + \int_{C_R} f(z)\, dz + \int_{C_2}f(z)\, dz + \int_{C_\varepsilon} f(z)\,dz \\
+&= 2\pi i\left(\text{Res}(f,\,z_1) + \text{Res}(f,\,z_2)\right)
+\end{aligned}
+$$ {#eq-exr-Arfke7_11_8_17_1}
+
+이다. $C_R$ 경로 적분에서 $\lim_{x\to \infty}xf(x) = 0$ 이므로 $C_R$ 경로상의 적분의 기여는 $0$ 이다. $C_2$ 경로의 적분은 $z=xe^{2i\pi}$ 에 대한 적분이며 @exm-complex3_exploiting_branch_cuts_1 의 결과를 사용하면
+
+$$
+\begin{aligned}
+\int_{C_2} f(z)\, dz &= \int_{R}^\varepsilon \dfrac{x^pe^{i2p\pi}(\ln x + i2\pi) }{x^2+1} dx \\
+&= -e^{i2p\pi} \int_{\varepsilon}^R \dfrac{x^p \ln x}{x^2+1} - (2i\pi)e^{i2p\pi} \int_{\varepsilon}^R \dfrac{x^p}{x^2+1}\,dx \\
+&= -e^{i2p \pi} I - \dfrac{i\pi^2  e^{i2p\pi}}{ \cos (p\pi/2)}
+\end{aligned}
+$$
+
+
+이다. 이제 $C_\varepsilon$ 경로의 적분을 계산해보자. $z=\varepsilon e^{i\theta},\, dz = i\varepsilon e^{i\theta}\,d\theta$ 로 잡으면
+
+$$
+\int_{C_\varepsilon} f(z)\,dz = \int_{2\pi}^0 \dfrac{\varepsilon^p (\ln \varepsilon + i\theta)}{\varepsilon^2e^{2i\theta}+1} i\varepsilon e^{i\theta}\,d\theta
+$$ 
+
+이며
+
+$$
+\left| \int_{C_\varepsilon} f(z)\,dz\right| \le \int_0^{2\pi} \dfrac{\varepsilon^p |\ln \varepsilon+i\theta|}{|\varepsilon^2 e^{2i\theta} +1|}\,d\theta
+$$
+
+이다. $\varepsilon \to 0$ 극한을 생각하기 위해 계산하므로 $0<\varepsilon \le 1/\sqrt{2}$ 범위에서만 생각해도 된다. 그렇다면, $|\varepsilon^2 e^{i\theta} + 1| > |1|-|\varepsilon|^2 =1/2$ 이므로   
+
+$$
+\left| \int_{C_\varepsilon} f(z)\,dz\right| \le 2\int_0^{2\pi} \varepsilon^p |\ln \varepsilon +i\theta|\, d\theta \le 4\pi \varepsilon^p(\ln \varepsilon + 2\pi)
+$$
+
+이며 $\lim_{\varepsilon \to 0} \varepsilon^p(\ln \varepsilon + 2\pi) = 0$ 이므로 $C_\varepsilon$ 경로에서의 적분의 기여는 $0$ 이다. 그렇다면  @eq-exr-Arfke7_11_8_17_1 로부터 아래의 결과를 얻는다.
+
+$$
+\begin{aligned}
+\oint_{C} f(z) \, dz &= (1-e^{i2p\pi}) I - \dfrac{i\pi^2  e^{i2p\pi}}{ \cos (p\pi/2)} = 2\pi i\left(\text{Res}(f,\,z_1) + \text{Res}(f,\,z_2)\right)
+\end{aligned}
+$$ {#eq-exr-Arfke7_11_8_17_2}
+
+이제 residue 를 계산한다.
+
+$$
+\begin{aligned}
+\text{Res}(f,\,z_1=e^{i\pi/2}) &= \dfrac{e^{ip\pi/2} \cdot i\pi/2}{2e^{i\pi/2}}=\dfrac{\pi e^{ip\pi/2}}{4}, \\
+\text{Res}(f,\,z_2=e^{i3\pi/2}) &= \dfrac{e^{i3p\pi/2} \cdot 3i\pi/2}{2e^{i3\pi/2}}=-\dfrac{3\pi e^{i3p\pi/2}}{4}
+\end{aligned}
+$${#eq-exr-Arfke7_11_8_17_3}
+
+이제 @eq-exr-Arfke7_11_8_17_2, @eq-exr-Arfke7_11_8_17_3 으로부터,
+
+$$
+\begin{aligned}
+(1-e^{i2p\pi}) I &= \dfrac{i\pi^2  e^{i2p\pi}}{ \cos (p\pi/2)} + 2\pi i \left(\dfrac{\pi e^{ip\pi/2}}{4} -\dfrac{3\pi e^{i3p\pi/2}}{4}\right) \\
+&= \dfrac{i\pi^2  e^{i2p\pi}}{ \cos (p\pi/2)} + \dfrac{i\pi^2}{2} (e^{ip\pi/2} - 3e^{3ip\pi/2}) \\
+&= \dfrac{i\pi^2}{2\cos(p\pi/2)} \left[2e^{2ip\pi} + \cos (p\pi/2) (e^{ip\pi/2} - 3e^{3ip\pi/2})\right] \\
+&=\dfrac{i\pi^2}{4\cos(p\pi/2)} \left[ 4e^{2ip\pi} + e^{ip\pi} - 3e^{2ip\pi} +1 - 3 e^{ip\pi}  \right] \\
+&=\dfrac{i\pi^2}{4\cos(p\pi/2)} \left[ e^{2ip\pi} -2 e^{ip\pi} +1  \right] \\
+&=\dfrac{i\pi^2 e^{ip\pi}(e^{ip\pi/2} - e^{-ip\pi/2})^2}{4\cos(p\pi/2)}  \\
+&= \dfrac{-i\pi^2 e^{ip\pi} \sin^2(p\pi/2)}{\cos(p\pi/2)}
+\end{aligned}
+$$
+
+이다. 좌변이 
+
+$$
+(1-e^{i2p\pi}) I = -e^{ip \pi}(e^{ip \pi} -e^{-ip\pi})I = -2ie^{ip\pi} \sin (p\pi) I
+$$
+
+이므로
+
+$$
+I = \dfrac{\pi^2 \sin^2(p\pi/2)}{2\sin (p\pi) \cos(p\pi/2)} = \dfrac{\pi^2 \sin (p\pi/2)}{4 \cos^2 (p\pi/2)}.
+$$
+
+:::
+</div></br>
