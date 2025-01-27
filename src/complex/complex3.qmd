@@ -120,7 +120,7 @@ $$ {#eq-complex3_infinity_integral}
 
 &emsp; ($2$) $\displaystyle \lim_{|z|\to \infty} zf(z) = 0$ 이다. 즉 원점으로부터 충분히 먼 거리에서 $f(z)$ 는 $1/z$ 보다 빨리 감소한다.  
 
-보통 @eq-complex3_infinity_integral 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 @fig-complex_infinite_integral 와 같은 contour 를 생각한다. $z_1,\,z_2,\ldots$ 는 극점이며 contour $C$ 는 $C_R+C_I$ 라고 하자. 
+보통 @eq-complex3_infinity_integral 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 @fig-complex3_infinite_integral 와 같은 contour 를 생각한다. $z_1,\,z_2,\ldots$ 는 극점이며 contour $C$ 는 $C_R+C_I$ 라고 하자. 
 
 ![큰 반원으로 둘러쌓인 위쪽 반평면에서의 contour](figures/fig-complex_infinite_integral.png){#fig-complex3_infinite_integral width=400}
 
@@ -185,7 +185,7 @@ $$ {#eq-complex3_integral_including_exponential_1}
 
 &emsp;($2$) 위쪽 반평면에서 $\displaystyle \lim_{|z|\to\infty} f(z) = 0$ 이다. 
 
-우리는 @fig-complex_infinite_integral 에서의 위쪽 반평면에서의 $C_R,\,C_I$ 로 이루어진 contour 를 생각하자. $C_R$ 에서의 적분을 $I_R$ 이라고 하고 $z=Re^{i\theta}$ 로 잡자.
+우리는 @fig-complex3_infinite_integral 에서의 위쪽 반평면에서의 $C_R,\,C_I$ 로 이루어진 contour 를 생각하자. $C_R$ 에서의 적분을 $I_R$ 이라고 하고 $z=Re^{i\theta}$ 로 잡자.
 
 $$
 I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta -aR\sin \theta} \, iRe^{i\theta}\, d\theta

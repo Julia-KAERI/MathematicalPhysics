@@ -21,8 +21,8 @@ book:
       - src/complex/complex2.qmd
       - src/complex/complex3.qmd
 
-    - src/figure/figure1.qmd
-    - src/figure/figure-test.qmd
+    # - src/figure/figure1.qmd
+    # - src/figure/figure-test.qmd
     
 
 bibliography: references.bib

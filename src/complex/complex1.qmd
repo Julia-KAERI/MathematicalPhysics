@@ -780,7 +780,7 @@ $$ {#eq-complex1_cauchy_integral_formula}
 
 ::: {.proof}
 
-$z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-compex_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
+$z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-complex1_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
 
 ![$z_0$ 주위의 두 coutour](figures/fig-complex_contour_z0.png){#fig-complex1_contour_z0 width=350}
 
