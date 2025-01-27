@@ -176,6 +176,11 @@ $$ {#eq-complex_derivative_of_complex_function}
 실함수와 구별되는 복소함수의 가장 큰 특징을 나열하고자 한다. 여기에 대한 증명은 복소해석학의 다양한 교과서를 참고하라. 
 
 
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+
 ::: {#prp-complex_properties_of_analytic_function}
 
 복소평면의 열린 부분집합 $U\subset C$ 에서 정의된 $f:U \to \mathbb{C}$ 에 대해 다음은 동치이다.
@@ -187,6 +192,7 @@ $$ {#eq-complex_derivative_of_complex_function}
 &emsp;($3$) 모든 $z\in U$ 에서의 $f$ 의 테일러 급수는 $f(z)$ 로 수렴한다.
 :::
 
+</div>
 
 </br>
 
@@ -564,7 +570,7 @@ $$ {#eq-complex1_summation_before_integration}
 
 이 때 $n\to \infty$ 극한에서 $|z_{j+1}-z_j|\to 0$ 이며 $S_n \to \int_C f(z)\,dz$ 가 된다. 
 
-![적분 경로](images/fig-compex_contour.png){#fig-complex1_contour width=400}
+![적분 경로](figures/fig-complex_contour.png){#fig-complex1_contour width=400}
 
 혹은 $z_0 = x_0+iy_0,\, z_n = x_n +iy_n$ 에 대해
 
@@ -622,8 +628,9 @@ $$
 
 :::
 
+</br>
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-complex1_integration_of_zn_in_circular_contour}
 
@@ -657,7 +664,7 @@ $$
 
 단일 연결 영역이 아닌 영역을  다중 연결 영역(multiply connected region) 이라고 한다. @fig-complex1_multiply_connected_reigon 의 (A) 는 단순연결영역이 아니므로 다중연결영역이다.
 
-![다중 연결 영역](images/fig-multply_connected_region.png){#fig-complex1_multiply_connected_reigon width=500}
+![다중 연결 영역](figures/fig-multply_connected_region.png){#fig-complex1_multiply_connected_reigon width=500}
 
 함수 $f$ 가 하얀 부분($R$) 에서 해석함수라고 하자. 코시 정리는 contour $C$ 에 대한 적분에 사용 될 수 없다. 그러나 그림 (B) 의 $C'$ 과 같이 경로를 잡는다면 코시 적분을 수행할 수 있다. (B) 에서와 같이 $R$ 내부에 얇은 틈을 만들어 $R'$ 을 외부의 영역과 연결한다. 그렇다면 새로운 영역에 어떤 폐곡선을 그리더라도 폐곡선의 내부에 영역이 아닌 점을 포함하지 않는다. 즉 틈을 통해 단순연결영역이 된다. 그리고 $ABDEFGA$ 를 연결하는 새로운 경로 $C'$ 을 생각하자. 이 경로는 단순 연결 영역 내의 경로이므로 코시 정리가 성립한다. 또한 $f(z)$ 가 원래의 영역에서 연속이기 때문에 $C'$ 의 부분경로 $AG$ 와 $DE$ 에 대한 적분은 서로 상쇄한다는 것을 알 수 있다. 즉
 
@@ -775,7 +782,7 @@ $$ {#eq-complex1_cauchy_integral_formula}
 
 $z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-compex_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
 
-![$z_0$ 주위의 두 coutour](images/fig-compex_contour_z0.png){#fig-complex1_contour_z0 width=350}
+![$z_0$ 주위의 두 coutour](figures/fig-complex_contour_z0.png){#fig-complex1_contour_z0 width=350}
 
 우리느 $C$ 경로로의 적분과 $C'$ 경로로의 적분값이 같다는 것을 안다. $C'$ 경로에 대해 적분하고자 한다. $z=z_0 +re^{i\theta}$ 이며 $dz=ire^{i\theta}\,d\theta$ 이므로
 
@@ -1285,7 +1292,7 @@ $$
 
 ### 테일러 전개 {#sec-complex1_tayler_expansion}
 
-![테일러 전개를 위한 원형 도메인](images/fig-complex_taylor_expansion.png){#fig-complex_tayler_expansion width=350}
+![테일러 전개를 위한 원형 도메인](figures/fig-complex_taylor_expansion.png){#fig-complex_tayler_expansion width=350}
 
 $f(z)$ 를 $z_0$ 를 중심으로 테일러 전개하고자 한다. $z_1$ 이 $z_0$ 에서 가장 가까운 특이점이라고 하자. 즉 $f(z)$ 는 $z_0$ 주위에서 해석적이다. $z_0$ 를 중심으로 반지름이 $z_1$ 까지의 거리보다 짧도록 원형 contour $C$ 를 잡을 수 있으며 $C$ 내부에서 $f$ 는 해석적이다. $z$ 가 $C$ 내부의 점일 때 코시 적분 공식(@eq-complex1_cauchy_integral_formula)  으로부터
 
@@ -1326,7 +1333,7 @@ $$ {#eq-complex1_tayler_expansion4}
 
 ### 로랑 급수 {#sec-complex1_laurent_series}
 
-![로랑 급수를 위한 영역](images/fig-complex_lauranrt_expansion.png){#fig-complex_laurant_expansion width=350}
+![로랑 급수를 위한 영역](figures/fig-complex_laurant_expansion.png){#fig-complex_laurant_expansion width=350}
 
 
 많은 경우 $z_0$ 를 중심으로 내경 $r$, 외경 $R$ 인 두 원의 사이에서 해석적인 함수를 생각해야 한다(@fig-complex_laurant_expansion). 이 영역은 다중 연결 영역이며 가상의 아주 얇은 벽을 만들어 단순연결 영역으로 간주할 수 있으며 단순연결영역에 대해서는 코시 적분 정리(@thm-complex1_cauthy_integral_theorem) 를 사용 할 수 있다. 이제 @fig-complex_laurant_expansion 에서와 같이 원형 경로 $C_1$ 과 $C_2$ 를 잡고 각각의 반지름을 각각 $r_1,\,r_2$ 라고 하자. Contour line 위아래의 얇은 직선 경로는 서로 상쇄하므로 다음이 성립한다.

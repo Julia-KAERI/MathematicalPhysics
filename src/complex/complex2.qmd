@@ -74,7 +74,7 @@ $$
 
 ::: {#exm-complex2_z_12_on_closed_loop}
 
-![원점 주위의 $z^{1/2}$ 값을 계산하기 위한 경로](images/fig-complex_branch_1.png){#fig-complex2_branch_1 width=300}
+![원점 주위의 $z^{1/2}$ 값을 계산하기 위한 경로](figures/fig-complex_branch_1.png){#fig-complex2_branch_1 width=300}
 
 단위원을 반시계방향으로 회전하는 경로에서의 $f(z) = z^{1/2}$ 를 생각하자. $z=re^{i\theta}$ 라고 하면 $z^{1/2}=r^{1/2}e^{i\theta/2}$ 일 수도 있고 $z^{1/2} = r^{1/2}e^{i(\theta/2 + \pi)}$ 일 수도 있다. 각각의 경우 $f(1)=1,\,-1$ 이다.
 
@@ -99,7 +99,7 @@ $$
 
 ::: {#exm-complex2_z_12_on_closed_loop_2}
 
-![원점 주위가 아닌, $z^{1/2}$ 값을 계산하기 위한 경로](images/fig-complex_branch_2.png){#fig-complex2_branch_2 width=350}
+![원점 주위가 아닌, $z^{1/2}$ 값을 계산하기 위한 경로](figures/fig-complex_branch_2.png){#fig-complex2_branch_2 width=350}
 
 $z=2$ 을 중심으로 반지름이 1 인 원 경로를 생각하자(@fig-complex2_branch_2). $A$ 점, 즉 $z=3$ 에 대해 $f(3) = \pm \sqrt{3}$ 값을 가질 수 있다. $z=2+e^{i\theta}$ 의 경로를 생각하면 $\text{Re}(z) > 0$ 이며 따라서 $ABCDA$ 순으로 순회하여 다시 $A'=A$ 로 갔을 때의 값은 역시 $\sqrt{3}$ 임을 알 수 있다. 즉 @exm-complex2_z_12_on_closed_loop 의 경우와 달리 closed loop 를 순회하고 다시 돌아왔을 때 그 함수값이 바뀌지 않는다.
 
@@ -159,7 +159,7 @@ $$
 
 이므로 $z\to \infty$ 에서 단순 극점을 가진다. 이제 적절한 branch cut 을 구성하여 $f(z)$ 를 단일값 함수로 제한해보자. 방법은 많지만 @fig-complex2_branch_3 에 나온 branch cut 을 이용해 보기로 하자. 
 
-![가능한 브랜치중의 하나](images/fig-complex_branch_3.png){#fig-complex2_branch_3  width=300}
+![가능한 브랜치중의 하나](figures/fig-complex_branch_3.png){#fig-complex2_branch_3  width=300}
 
 
 점 $P$ 를 $+1$ 과 $-1$ 에 대해 극좌표로 표현해보자. $+1$ 에 대해 $z= 1+ \rho e^{i\varphi}$, $-1$ 에 대해 $z=-1+re^{i\theta}$ 로 표현하면
@@ -170,7 +170,7 @@ $$
 
 이다. 이제 @fig-complex2_branch_4 의 closed path 를 생각하자. $A$ 로 부터 시작하여 $B,C,D,E,F$ 를 거쳐 다시 $A$ 로 돌아오는 경로(이때의 $A$ 를 $A'$ 이라고 표기하고 구분하도록 하자)를 생각한다. $A$ 에 대해 $\theta = \varphi = 0$ 으로 놓으면 $f(2) = \sqrt{3}$ 이 된다. 
 
-![Branch cut 주위의 경로](images/fig-complex_branch_4.png){#fig-complex2_branch_4 width=350}
+![Branch cut 주위의 경로](figures/fig-complex_branch_4.png){#fig-complex2_branch_4 width=450}
 
 
 | 점 | $\theta$ | $\varphi$ | $(\theta+\varphi)/2$ |
@@ -238,8 +238,7 @@ $$
 
 이다. 여기서 $C_j$ 는 시계방향이지만 유수를 계산하기 위한 contour 는 시계방향이므로 부호가 반대가 되서 마지막에서 $-$ 가 사리짐에 유의하라. 
 
-![고립점을 제외한 경로 잡기](images/fig-complex_residue_1.png){#fig-complex2_residue_1 width=300}
-
+![고립점을 제외한 경로 잡기](figures/fig-complex_residue_1.png){#fig-complex2_residue_1 width=300}
 
 위의 결과를 정리한것이 유수 정리 (Residue theorem)이다.
 
@@ -358,8 +357,7 @@ $$
 
 가 되어 $\delta_2=\delta_1$ 일 경우와 다르다. 즉 적분이 정의되지 않는다.
 
-
-![$1/z$ 적분에 있어서의 코시 주요값 소거](images/fig-complex_cauchy_principal_value_1.png){#fig-complex2_cauchy_principal_value width=400}
+![$1/z$ 적분에 있어서의 코시 주요값 소거](figures/fig-complex_cauchy_principal_value_1.png){#fig-complex2_cauchy_principal_value width=400}
 
 
 위의 예를 일반화 하기 위해 코시 주요값을 아래와 같이 정의한다.
@@ -407,7 +405,7 @@ $$
 
 앞서 언급했듯이 코시 주요값은 적분으로 정의되긴 하지만 적분의 일반적인 정의를 벗어난다. 그렇다면 이게 무슨 의미가 있을까? $x_0$ 를 제외하고 실수축에서 적분하는 대신 @fig-complex2_cauchy_principal_value_2 와 같은 복소평면상에서의 적분을 생각하자. 고립특이점 $x_0$ 근처에서 반지름이 $r$ 인 작은 시계방향의 반원 contour $C_1$ 을 생각하자. 여기서는 $x_0$ 가 단순 극점(simple pole) 이라고 하자.(일반적인 계수 $n$ 의 극점에 대해서는 이후에 다룬다.)
 
-![코시 주요값 적분을 포함하는 contour](images/fig-complex_cauchy_principal_value_2.png){#fig-complex2_cauchy_principal_value_2 width=400}
+![코시 주요값 적분을 포함하는 contour](figures/fig-complex_cauchy_principal_value_2.png){#fig-complex2_cauchy_principal_value_2 width=400}
 
 적분하고자 하는 함수 $f(x)$ 를 복소평면상으로 확장시켜 $f(z)$ 라고 하자. $z_0$ 가 단순 극점이므로 $f(z)$ 의 로랑 전개는 다음과 같은 형태이다.
 
@@ -731,7 +729,7 @@ $\sin z$ 의 유도는 다소 단계가 필요한데 @exr-Arfken7_11_7_5 를 확
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -750,6 +748,8 @@ $$
 \end{array} 
 $$
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -797,8 +797,7 @@ $$
 
 :::
 
-</div></br>
-
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -809,6 +808,8 @@ $$
 $\dfrac{\pi \cot (\pi z)}{z(z+1)}$ 에 대해 $z=0,\, -1$ 에서의 residue 를 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -841,7 +842,7 @@ $$
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -857,8 +858,10 @@ $$
 
 이 때 적분은 $x=0$ 에서 잘린다. 이 적분이 $x>0$ 에서 수렴함을 보여라.
 
-
 :::
+
+</div>
+</br>
 
 ::: {.solution}
 
@@ -875,7 +878,7 @@ $$
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -890,9 +893,10 @@ PV\int_{0}^\infty \dfrac{x^{-p}}{x-1}\, dx = \pi \cot p\pi
 $$
 
 임을 보여라.
-
-
 :::
+
+</div>
+</br>
 
 ::: {.solution}
 
@@ -943,7 +947,7 @@ $$
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -954,6 +958,8 @@ $$
 @eq-complex2_product_expansion_of_entire_function_1 는 @eq-complex2_product_expansion_of_entire_function_2 의 $\sin z$ 식으로 직접적으로 유도 될 수 없다는 것을 설명하고 $\sin z/z$ 를 전개하여 얻을 수 있다는 것을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -974,8 +980,7 @@ $$
 
 :::
 
-</div></br>
-
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -995,6 +1000,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $p(z) = a_0 + a_1z + \cdots + a_nz^n$ 에 대해 $f(z)= a_n z^n$, $g(z) = a_0 + \cdots + a_{n-1}z^{n-1}$ 이라고 하자. 반경 $|R|$ 인 복소평면상의 원점을 중심으로 하는 원 $C$ 를 을생각하자. $R$ 은 $C$ 상의 복소수이다. $|f(R)| > |g(R)|$ 이므로 루셰의 정리에 의해 $f(z)$ 와 $p(z) = f(z)+g(z)$ 는 $C$ 의 내부에서 같은 수의 영점을 갖는다. $f(z)$ 의 $n$ 개의 원점을 포함하며 ($2$) 의 부등식이 만족하도록 충분히 큰 $|R|$ 을 잡으면 된다.
@@ -1002,7 +1009,7 @@ $p(z) = a_0 + a_1z + \cdots + a_nz^n$ 에 대해 $f(z)= a_n z^n$, $g(z) = a_0 + 
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1014,6 +1021,8 @@ $p(z) = a_0 + a_1z + \cdots + a_nz^n$ 에 대해 $f(z)= a_n z^n$, $g(z) = a_0 + 
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $f(z) = z^6-4z^3$, $g(z)=10$ 이라고 하면 $F(z) = f(g)+g(z)$ 이다. $|z|=1$ 인 원에서 생각하면 $|f(z)| = |z^6-4z^3| 
@@ -1023,7 +1032,7 @@ $f(z)=z^6$, $g(z)=-4z^3+10$ 이라고 하자. 역시 $F(z) = f(z)+g(z)$ 이다. 
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1034,6 +1043,9 @@ $f(z)=z^6$, $g(z)=-4z^3+10$ 이라고 하자. 역시 $F(z) = f(z)+g(z)$ 이다. 
 $\sec z$ 와 $\csc z$ 에 대한 곱전개 @eq-complex2_mittag_leffler_4 유도하라.
 
 :::
+
+</div>
+</br>
 
 ::: {.solution}
 
@@ -1090,7 +1102,7 @@ $$
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1100,6 +1112,8 @@ $$
 
 $f(z) = \dfrac{z^2-3z+2}{z}$ 일 때 부분분수 전개를 이용하여 $\oint_C f'(z)/f(z)\, dz = 2\pi i (N_f - P_f)$ 임을 보여라. 여기서 $N_f,\, P_f$ 는  $C$ 내부의 영점과 극의 (multiplicity 를 포함한) 갯수이다.
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1120,7 +1134,7 @@ $$
 
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1138,6 +1152,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $f(z) = z^{-2}$ 에 대해 $z=e^{i\theta}$ 로 놓고 적분해보자.
@@ -1150,7 +1166,7 @@ $$
 $$
 :::
 
-</div></br>
+</br>
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1175,18 +1191,17 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) 우선 $g(z)$ 는 해석적이므로 ($1$) 의 적분의 유한값 여부를 판단할 때 제외해도 된다. 또한 $\int_{-\infty}^{x_0-\delta}$ 와 $\int_{x_0+\delta}^\infty$ 가 서로 상쇄되므로 남는 것은 $g(x)$ 의 적분 밖에 없다. 따라서 위의 적분은 유한 값을 가진다.
 
 ($2$)  
 
-
-
-
 :::
 
-</div></br>
+</br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_7_12}
@@ -1207,13 +1222,17 @@ $u(s)$ 가 아래와 같은 두가지 적분 표현을 가진다는 것을 보�
 
 :::
 
+</div>
+
+</br>
+
 ::: {.solution}
 
 @sec-complex3_integrals_with_complex_exponent 의 [복소 지수함수가 포함된 적분](complex3.qmd#sec-complex3_integrals_with_complex_exponent) 를 이용한다.
 
 ($a$) 아래 그림 @fig-complex_cauchy_principal_value_3 와 같은 경로를 생각하자. 
 
-![단위 계단 함수의 복소 적분 표현 1](images/fig-complex_cauchy_principal_value_3.png){#fig-complex_cauchy_principal_value_3 width=600}
+![단위 계단 함수의 복소 적분 표현 1](figures/fig-complex_cauchy_principal_value_3.png){#fig-complex_cauchy_principal_value_3 width=600}
 
 $s>0$ 일 경우는 ($A$) 의 경로를 $s<0$ 일 경우는 ($B$) 의 경로를 생각한다. $s>0$ 에 대해
 
@@ -1233,4 +1252,3 @@ $$
 
 :::
 
-</div></br>
