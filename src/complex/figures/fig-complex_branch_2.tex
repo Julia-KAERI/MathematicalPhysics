@@ -1,0 +1,29 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \usetikzlibrary {arrows.meta}
+    \usetikzlibrary {calc}
+    
+    \coordinate (z0) at (2, 0);
+    \coordinate (z1) at ({cos(50)}, {sin(50)});
+    \coordinate (zp) at (2.201, 1.497);
+    \draw [-latex] (-0.3, 0) -- (3.7, 0) node[below] {Re$(z)$};
+    \draw [-latex] (0, -1.7) -- (0, 1.7) node[left] {Im$(z)$};
+    
+    
+    \draw[red, very thick, -latex,] ({2+cos(25)}, {sin(25)}) arc (25:385:1);
+    \draw[thick, ] (0.4, 0) arc (0:20.5:0.4);
+    \node [right] at (0.4, 0.1) {$\theta$};
+    
+    \draw[] (0, 0) -- ({2+ cos(65)}, {sin(65)});
+    \draw[dashed] (2, -1) -- (2, 1);
+    \filldraw [] (3.01,0) circle (1pt) node [above right] {$A$} ;
+    \filldraw [] (2,1) circle (1pt) node [above] {$B$} ;
+    \filldraw [] (1,0) circle (1pt) node [below left] {$C$} ;
+    \filldraw [] (2,-1) circle (1pt) node [below left] {$D$} ;
+    \filldraw [] (2,0) circle (1pt) ;
+    \end{tikzpicture}
+\end{document}
