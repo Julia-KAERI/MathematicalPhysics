@@ -10,12 +10,17 @@ book:
   
   chapters:
     - index.qmd
-    - part: src/differential equation/differential equation.qmd
+
+    - part : "텐서 해석"
+      chapters :
+      - src/tensor/tensor01.qmd
+
+    - part: "미분방정식"
       chapters :
       - src/differential equation/ode.qmd
       - src/differential equation/pde.qmd
 
-    - part: src/complex/complex.qmd
+    - part: "복소함수"
       chapters :
       - src/complex/complex1.qmd
       - src/complex/complex2.qmd

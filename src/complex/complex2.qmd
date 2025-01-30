@@ -8,6 +8,8 @@ crossref:
 
 {{< include ../latexmacros.qmd >}}
 
+</br>
+
 ## 특이점과 분지점
 
 ### 특이점 {#sec-complex2_singulariity}

@@ -6,6 +6,9 @@ crossref:
   chapters: true
 --- 
 
+{{< include ../latexmacros.qmd >}}
+
+</br>
 
 ## 복소변수와 복소함수
 
