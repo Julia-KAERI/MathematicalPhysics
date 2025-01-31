@@ -373,7 +373,7 @@ $$
 
 ::: {.solution}
 
-첫번째 관성계의 벡터 $(A^0,\, A^1,\,A^2,\,A^3)$ 와 두번째 관성계의 좌표 $(A'^0,\,A'^1,\,A'^2,\,A'^3)$ 에서 $A^1=A^2=A^3=A'^1=A'^2=A'^3=0$ 이라고 하자. $(A')^0$ 에 대해
+4차원 벡터 $\bf{A}$ 가 첫번째 좌표계에서 $(A^0,\, A^1,\,A^2,\,A^3)$ 이며 두번째 좌표계에서 $(A'^0,\,A'^1,\,A'^2,\,A'^3)$ 이고 $A^1=A^2=A^3=A'^1=A'^2=A'^3=0$ 이다. $(A')^0$ 에 대해
 
 $$
 (A')^0 = \dfrac{\partial (x')^0}{\partial x^\alpha}A^{\alpha} =  \dfrac{\partial (x')^0}{\partial x^0}A^{0}
@@ -395,53 +395,393 @@ $$
 ::: {#exr-Arfken_4_1_4}
 #### Arfken 4.1.4
 
-좌표축에 관하나 $90^\circ$, $180^\circ$ 회전을 생각하여 3차원 공간에서의 2차 텐서 가운데 등방 텐서인 것은 $\delta^i_j$ 의 스칼라 곱 밖에 없음을 보여라.
+좌표축에 대한 $90^\circ$, $180^\circ$ 회전을 생각하여 3차원 공간에서의 rank 2 텐서 가운데 등방 텐서인 것은 $\delta^i_j$ 의 스칼라 곱 밖에 없음을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+.. to be done..
+
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_1_5}
+#### Arfken 4.1.5
+
+일반상대성 이론에서 사용되는 4 차원 랭크 4 텐서 리만-크리스토펠 곡률 텐서 $R_{iklm}$ 은 다음과 같은 대칭 관계를 만족한다.
+
+$$
+R_{iklm} = - R_{ikml} =  - R_{kilm}
+$$ {#eq-Tensor_Arfket_4_1_5_1}
+
+$0$ 부터 $3$ 까지의 인덱스를 사용하여 전체 256 성분중에 독립적인 성분이 36 개임을 보이고 또한
+
+$$
+R_{iklm} = R_{lmik}
+$${#eq-Tensor_Arfket_4_1_5_2}
+
+를 사용하면 독립적인 생분의 갯수를 21 개 로 줄일 수 있음을 보여라. 마지막으로 성분이
+
+$$
+R_{iklm} + R_{ilmk} + R_{imkl} = 0
+$${#eq-Tensor_Arfket_4_1_5_3}
+
+을 만족한다면 독립적인 성분의 갯수는 20개로 줄게 됨을 보여라. 단 마지막 식은 사용된 4개의 인덱스가 모두 다를 경우에만 성립한다.
+
 :::
 
 </div></br>
 
 ::: {.solution}
 
-첫번째 축에 대한 90도 회전을 생각하면
+4 차원 rank 4 텐서이므로 $4^4=256$ 개의 성분을 가진다. 
+
+($1$) @eq-Tensor_Arfket_4_1_5_1 : 첫번째 인덱스는 두번째 인덱스와 달라야 하며, 세번째 인덱스는 네번째 인덱스와 달라야 한다. 또한 반대칭 성질이 있으므로 첫 두개의 인덱스 에서 6가지 경우, 마지막 두 인덱스의 6가지 경우, 총 36가지의 독립적인 성분이 존재한다. $R_{iklm}$ 에서 $i<k$, $l<m$ 인 경우. 
+
+($2$) @eq-Tensor_Arfket_4_1_5_2 : 36 가지중 첫 두 인덱스와 마지막 두 인덱스가 같은 경우는 6가지 이며 이것을 제외한 30개에 대해 대칭성이 존재하므로 30/2+6=21 개의 독립적인 성분이 존재한다.
+
+($3$) @eq-Tensor_Arfket_4_1_5_3 : 4개의 인덱스가 모두 다른 경우에 하나의 제한조건이 포함되므로 하나의 독립 변수를 줄인다. 따라서 총 20개의 독립 성분이존재한다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_1_6}
+#### Arfken 4.1.6
+
+3차원 반대칭 랭크 4 텐서 $T_{iklm}$ 는 몇개의 독립적인 성분을 가지는가?
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$i,\,k,\,l,\,m$ 가운데 최소한 2개는 같으므로 성분이 모두 $0$ 이다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_1_7}
+#### Arfken 4.1.7
+
+$T_{...i}$ 는 랭크 $n$ 텐서이다. $\partial T_{...i}/\partial x^j$ 는 랭크 $n+1$ 텐서 임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
 
 $$
-A'^{22}= \dfrac{\partial x'^2}{\partial x_i}\dfrac{\partial x'^2}{\partial x_j}A^{ij} = A^{33}
+T'_{...k} = [n \text{ 개의 좌표 편미분의 곱}] T'_{...i}
 $$
-
-이다. 등방 텐서이므로 $A'^{22} = A^{22}$ 이어야 한다. 두번째, 세번째 축에 대한 90 도 회전을 생각하면
-
-$$
-A^{ii} = (A')^{ii},\;i=1,\,2,\,3
-$$
-
-임을 안다. 또한
+이므로
 
 $$
-A'^{12} = \dfrac{\partial x'^1}{\partial x_i}\dfrac{\partial x'^2}{\partial x_j}A^{ij}= A^{13}
+\dfrac{\partial T'_{...i}}{\partial x'^j} = \dfrac{\partial x_k}{\partial x'^j}[n \text{ 개의 좌표 편미분의 곱}]\dfrac{\partial T_{...i} }{\partial x_k}
 $$
 
-이다. 등방 텐서이므로 $A'^{13}=A^{13}$ 이며
+이다. 따라서 랭크 $n+1$ 텐서이다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_1_8}
+#### Arfken 4.1.8
+
+$T_{ijk...}$ 는 랭크 $n$ 텐서이다. $\sum_j \partial T_{ijk...}/\partial x^j$ 는 랭크 $n-1$ 텐서 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+contraction 에 의해 랭크 $n-1$ 텐서가 된다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_1_9}
+#### Arfken 4.1.9
+
+이중 합 $K_{ij}A^iB^j$ 가 어떤 벡터 $A^i,\,B^j$ 에 대해서도 불변이라면 $K_{ij}$ 가 랭크 2 텐서 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+몫 규칙에 의해 자명하지만 일단 연습삼아...
+$$
+K_{ij}A^iB^j = K'_{lm}A'^lB'^m = K'_{lm}\left[\dfrac{\partial x'^l}{\partial x^i}A^i\right] \left[\dfrac{\partial x'^m}{\partial x^j}B^j\right]
+$$
+
+이므로 
 
 $$
-A'^{13} = \dfrac{\partial x'^1}{\partial x_i}\dfrac{\partial x'^3}{\partial x_j}A^{ij} = -A^{12}
+\left[K_{ij} -\dfrac{\partial x'^l}{\partial x^i} \dfrac{\partial x'^m}{\partial x^j}K'_{lm} \right] A^iB^j=0
+$$
+
+이다. 임의의 $A^iB^j$ 에 대해 성립해야 하므로 $[\cdots ]=0$ 이어야 한다. 따라서 $K_{ij}$ 는 랭크 2 텐서이다.
+
+:::
+
+</br>
+
+## Pseudotensor 와 Dual Tensor
+
+### Pseudovector 와 pseudotensor {#sec-Tensor_}
+
+지금까지 우리는 좌표의 회전에 대해서만 양의 변화를 보았다. 이제 반사(reflection) 이나 반전(inversion) 과 같은 변화를 살펴보자(이를 improper rotation 이라고 한다)
+
+벡터 $A$ 는 회전, 혹은 그 행렬식이 $1$ 인 변환 $R$ 에 대해 $A'=RA$ 와 같이 변환된다. 반전과 같이 행렬식이 $-1$ 인 변환 $R^-$ 에 대해서는 상황이 다르다. 반전(Inversion) 을 생각하자. 위치나 속도와 같은 벡터들은 반전에 대해 $A'=R^- A$ 와 같이 변환된다. 그러나 각운동량, 토크, 각속도와 같은 벡터 물리량은 $A'=\det (R^-) R^- A$ 와 같이 변환된다. 이렇게 좌표와 다른 방식의 대칭성을 가지고 변화하는 벡터를 **pseudovectors**(의사 벡터, 혹은 axial vectors) 라고 한다. 
+
+이런 pseudovector 의 개념은 임의의 rank 를 가진 텐서로 확장 될 수 있다. 어떤 직교 변환 $R$ 에 대해 일반적인 텐서 변환식에 $\det(R)$ 을 곱한 것으로 변화하는 텐서를 pseudotensor 라고 한다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Tensor_levi_civita}
+
+#### 레비-시비타(Levi-Civita) 기호
+
+인덱스가 3개인 레비-시비타 기호 $\varepsilon_{ijk}$ 의 정의는 다음과 같다.
+
+$$
+\begin{aligned}
+\varepsilon_{123}=\varepsilon_{231}=\varepsilon_{312} &= +1, \\
+\varepsilon_{132} = \varepsilon_{213} = \varepsilon_{321} &= -1,\\
+\text{모든 다른 }\varepsilon_{ijk}&= 0.
+\end{aligned}
+$$ {#eq-Tensor_levi-civita}
+
+</br>
+
+$3\times 3$ 행렬 $A$ 에 대해
+$$
+\sum_{i,j,k}\varepsilon_{ijk} A_{1i}A_{2j}A_{3k} = \det (A)
+$$
+
+임을 알 수 있다. 
+
+
+랭크 3 pseudotensor $\eta_{ijk}$ 가 어떤 데카르트 좌표계에서 $\varepsilon_{ijk}$ 와 같다고 하자. 그리고 $S$ 를 $\R^3$ 에서의 어떤 직교변환 행렬이라고 하자. Pseudotensor 의 정의에 의해
+
+$$
+\eta'_{ijk} = \det(S) \sum_{p,q,r} a_{ip}a_{jq}a_{kr} \varepsilon_{pqr}
+$$
+
+이다. 행렬식을 생각하면
+
+$$
+\eta'_{ijk} = \left(\det{S}\right)^2 \varepsilon_{ijk}
+$$
+
+임을 알 수 있다. 직교변환 행렬 $S$ 에 대해 $\det (S)= \pm 1$ 이므로 $\eta'_{ijk}= \varepsilon_{ijk}$ 이다. 
+
+이로부터 우리는 $\varepsilon_{ijk}$ 가 rank 3 pseudotensor 이며 isotropic 함을 알 수 있다. 즉 회전 변환에 대해 불변이며, improper rotation 에 대해 서는 $-1$ 을 곱한 것과 같다.
+
+:::
+</div>
+
+</br>
+
+### 쌍대 텐서 {#sec-Tensor_dual_tensor}
+
+3차원 공간에서의 임의의 2차 반대칭 텐서 $C$ 는 다음과 같이 표현 할 수 있다.
+
+$$
+C=\begin{bmatrix} 0 & C^{12}& -C^{31} \\ - C^{12} & 0 & C^{23} \\ C^{31} & -C^{23} & 0\end{bmatrix}
+$$
+
+$C$ 에 대해 아래와 같은 벡터 $\overline{C}$ 를 $C$ 에 대한 **쌍대 텐서(dual tensor)** 라고 한다.
+
+$$
+\overline{C} := (C_1,\,C_2,\,C_3) = (C^{23},\, C^{31},\, C^{12}).
+$$
+
+즉
+
+$$
+\overline{C}_i = \dfrac{1}{2} \varepsilon_{ijk} C^{jk}
 $$
 
 이다. 
 
+</br>
 
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_2_2}
+#### Arfken 4.2.2
+
+반대칭 랭크 2 텐서와 벡터와의 1-1 대응은 3차원 공간에서만 가능하다는 것을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$n$ 차원 공간에서의 반대칭 랭크 $2$ 텐서 $A$ 의 독립적인 성분의 갯수는 $\dfrac{n^2-n}{2}$ 이며 $n$ 차원 공간의 벡터의 성분의 갯수는 $n$ 개이므로 1-1 대응이 성립하려면
+
+$$
+\dfrac{n^2-n}{2}=n
+$$
+
+이어야 한다. 즉 $n=3$ 뿐이다. ($n=0$ 은 무의미하다.)
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_2_3}
+#### Arfken 4.2.3
+
+$\nabla \bf{\cdot}\nabla \times \bf{A}$ 와 $\nabla \times \nabla \phi$ 를 $\R^3$ 에서의 텐서 표기법으로 쓰고 각각 $0$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$$
+\begin{aligned}
+\nabla \bf{\cdot}\nabla \times \bf{A} &= \varepsilon_{ijk}\dfrac{\partial }{\partial x^i}\dfrac{\partial A_k}{\partial x^j} = 0 \\[0.3em]
+\left(\nabla \times \nabla \phi\right)_k &= \epsilon_{ijk}\dfrac{\partial^2 \phi}{\partial x^i\partial x^j}=0
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_2_4}
+#### Arfken 4.2.4
+
+아래의 랭크 4 텐서는 등방임을 보여라. 즉 좌표의 회전에 독립적인 값이다.
+
+($a$) $A^{ik}_{jl} = \delta^i_j \delta^k_l$,
+
+($b$) $B^{ij}_{kl} = \delta^{i}_k \delta^j_l + \delta^i_l \delta^j_k$,
+
+($c$) $C^{ij}_{kl} = \delta^{i}_k \delta^j_l - \delta^i_l \delta^j_k$.
+:::
+
+</div></br>
+
+::: {.solution}
+($a$)
+
+$$
+\begin{aligned}
+A'^{pq}_{rs} &= \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}A^{ik}_{jl} = \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}  \delta^i_j \delta^k_l \\[0.3em]
+&= \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^i}{\partial x'^r}\dfrac{\partial x^k}{\partial x'^s} = \dfrac{\partial x'^p}{\partial x'^r}\dfrac{\partial x'^q}{\partial x'^s} = \delta^p_r \delta^q_s = A^{pq}_{rs}
+\end{aligned}
+$$
+
+($b$)
+$$
+\begin{aligned}
+B'^{pq}_{rs} &= \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^k}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}B^{ij}_{kl} = \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^k}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}\left( \delta^{i}_k \delta^j_l + \delta^i_l \delta^j_k\right) \\[0.3em]
+&=  \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^i}{\partial x'^r}\dfrac{\partial x^j}{\partial x'^s} +  \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^i}{\partial x'^s} \\[0.3em]
+&= \delta^p_q \delta^q_s + \delta^p_s \delta^q_r = B^{pq}_{rs}
+\end{aligned}
+$$
+
+($c$) ($b$) 로부터 $C'^{pq}_{rs} = \delta^{p}_r \delta^q_s - \delta^p_s \delta^q_r=C^{pq}_{rs}$.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_2_5}
+#### Arfken 4.2.5
+
+두개의 인덱스를 가진 레비-시비타 기호 $\varepsilon_{ij}$ 는 2차원에서 랭크 2 슈도텐서임을 보여라. 이것은 @exr-Arfken_4_1_4 에서 보인 $\delta^i_j$ 의 유일성에 위배되는가?
+
+:::
+
+</div></br>
+
+::: {.solution}
+@exm-Tensor_levi_civita 의 2차원 버젼이다. $\delta^{i}_j$ 는 3차원서 등방 텐서이며 $\epsilon_{ij}$ 는 2차원에서 등방 텐서이다. 
 
 
 :::
 
+</br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
+::: {#exr-Arfken_4_2_7}
+#### Arfken 4.2.7
 
+반대칭 2차 텐서 $B^{ij}$ 에 대해 $A_k = \dfrac{1}{2}\varepsilon_{ijk}B^{ij}$ 라고 하자. 다음이 성립함을 보여라.
 
+$$
+B^{mn} = \varepsilon^{mnk}A_k.
+$$
 
+:::
 
+</div></br>
 
+::: {.solution}
 
+$\varepsilon^{mnk}\varepsilon_{ijk} =\delta^m_i \delta^n_j - \delta^m_j\delta^n_i$ 임을 이용한다. 
+$$
+\begin{aligned}
+\varepsilon^{mnk}A_k = \dfrac{1}{2}\varepsilon^{mnk}\varepsilon_{ijk}B^{ij} = \dfrac{1}{2}(\delta^m_i \delta^n_j - \delta^m_j\delta^n_i)B^{ij} =\dfrac{1}{2} (B^{mn} -B^{nm}) = B^{mn}
+\end{aligned}
+$$
 
+:::
+
+</br>
+
+## 일반화된 좌표계에서의 텐서
+
+### 메트릭 텐서 {#sec-Tensor_metric_tensor}
+
+이제 일반적인 거리 공간(metric space) 에서 생각하자. 일단은 3차원 공간에 한정한다. 일반화된 좌표를 $q^i$ 라고 표기하기로 하자. 공변 기저 벡터(covariant basis vector) $\bf{\varepsilon}_i$ 를 다음과 같이 정의한다.
+
+$$
+\bf{\varepsilon}_i := \dfrac{\partial x}{\partial q^i} \hat{\bf{e}}_x + \dfrac{\partial y}{\partial q^i}\hat{\bf{e}}_y + \dfrac{\partial z}{\partial q^i}\hat{\bf{e}}_z
+$$ {#eq-Tensor_covariaint_basis_vector}
+
+이제 임의의 벡터 $\bf{A}$ 는 공변 기저 벡터에 대해 다음과 같이 쓸 수 있다.
+
+$$
+\bf{A} := A^1 \bf{\varepsilon}_1 + A^2 \bf{\varepsilon}_2 + A^3 \bf{\varepsilon}_3.
+$$
 
 
