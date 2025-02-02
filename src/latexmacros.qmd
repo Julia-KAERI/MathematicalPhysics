@@ -18,7 +18,6 @@ format: html
 \newcommand{\rank}{\operatorname{rank}}
 
 
-
 \def\Xint#1{\mathchoice
    {\XXint\displaystyle\textstyle{#1}}%
    {\XXint\textstyle\scriptstyle{#1}}%

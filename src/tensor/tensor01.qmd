@@ -778,10 +778,587 @@ $$
 \bf{\varepsilon}_i := \dfrac{\partial x}{\partial q^i} \hat{\bf{e}}_x + \dfrac{\partial y}{\partial q^i}\hat{\bf{e}}_y + \dfrac{\partial z}{\partial q^i}\hat{\bf{e}}_z
 $$ {#eq-Tensor_covariaint_basis_vector}
 
-이제 임의의 벡터 $\bf{A}$ 는 공변 기저 벡터에 대해 다음과 같이 쓸 수 있다.
+3차원 공간에서는 $\bf{\varepsilon}_1,\,\bf{\varepsilon}_2, \, \bf{\varepsilon}_3$ 로 기저를 구성 할 수 있다. 이 세 벡터는 서로 단위 벡터가 아닐 수도 있으며, 서로 직교하지 않을 수도 있다. 이제 임의의 벡터 $\bf{A}$ 는 공변 기저 벡터에 대해 다음과 같이 쓸 수 있다.
 
 $$
 \bf{A} := A^1 \bf{\varepsilon}_1 + A^2 \bf{\varepsilon}_2 + A^3 \bf{\varepsilon}_3.
+$$ {#eq-Tensor_representation_of_vector_using_covariant_basis}
+
+여기서 주의해야 할 것인 벡터 $\bf{A}$ 는 좌표 변환에 대해 고정되어 있으며 변하는 것은 기저와 좌표값 $A^1,\,A^2,\,A^3$ 라는 것, 그리고 기저와 좌표값은 서로 반대 방향으로 변환된다는 것이다. 또한 공변 기저 벡터는 위치에 따라 달라진다는 것이다. 이제 미소 변위 $(ds)^2$ 를 생각하면
+
+$$
+(ds)^2 = \sum_{i, j} (\bf{\varepsilon}_i dq^i) \bf{\cdot} (\bf{\varepsilon}_j dq^j)  = \left(\bf{\varepsilon}_i \bf{\cdot \varepsilon}_j \right) dq^i dq^j 
 $$
 
+와 같이 쓸 수 있다. **공변 메트릭 텐서(covariant metric tensor)** $g_{ij}$ 를 아래와 같이 정의한다.
+
+$$
+g_{ij}:= \left(\bf{\varepsilon}_i \bf{\cdot \varepsilon}_j \right) .
+$$ {#eq-Tensor_covariant_metric_tensor}
+
+그렇다면 
+
+$$
+(ds)^2 = g_{ij}dq^i dq^j
+$${#eq-Tensor_dispacement_and_metric_tensor}
+
+이다. $(ds)^2$ 은 회전 및 반사에 대해 불변이며 몫 규칙에 다라 $g_{ij}$ 는 공변 랭크 2 텐서이다. 또한 @eq-Tensor_covariant_metric_tensor 로부터 $g_{ij}$ 가 대칭 텐서라는 것을 알 수 있다. 
+
+공변 메트릭 텐서 $g_{ij}$ 에 대해 반변 메트릭 텐서 $g^{ij}$ 가
+
+$$
+g^{ik}g_{kj}= g_{jk}g^{ki} = \delta^i_j
+$$ {#eq-Tensor_covariant_and_contravariant_metric_tensor}
+
+가 되도록 정한다. 또한 메트릭 텐서는 공변벡터와 반변벡터간의 변환을 위해 사용 될 수 있다. 즉
+
+$$
+g_{ij}F^j = F_i, \qquad \text{and}\qquad g^{ij}F_j = F^i
+$$ {#eq-Tensor_conversion_using_metric_tensor}
+
+이제 @eq-Tensor_representation_of_vector_using_covariant_basis 과 @eq-Tensor_conversion_using_metric_tensor 로부터 다음을 알 수 있다.
+
+$$
+\bf{A} = A^i\bf{\varepsilon}_i = A^i \delta^{k}_i \bf{\varepsilon}_k = \left(A^i g_{ij}\right)\left(g^{jk} \bf{\varepsilon}_k\right) = A_j \bf{\varepsilon}^j
+$$ {#eq-Tensor_two_representation_of_a_vector}
+
+즉 벡터는 반변기저에 대해 공변 성분으로, 혹은 공변 기저에 대해 반변 성분으로 표현 할 수 있다.
+
+</br>
+
+### 공변기저와 반변기저 {#sec-Tensor_covariant_and_contravariant_basis}
+
+공변 기저 벡터 $\bf{\varepsilon}_i$ (@eq-Tensor_covariaint_basis_vector) 에 대해 반변 기저 벡터는 다음과 같이 정의된다.
+
+$$
+\bf{\varepsilon}^i :=\dfrac{\partial q^i}{\partial x}\hat{\bf{e}}_x + \dfrac{\partial q^i}{\partial y}\hat{\bf{e}}_y + \dfrac{\partial q^i}{\partial z}\hat{\bf{e}}_z.
+$$ {#eq-Tensor_contravariant_basis_vector}
+
+그렇다면
+
+$$
+\bf{\varepsilon}^i \bf{\cdot \varepsilon}_j = \dfrac{\partial q^i}{\partial x}\dfrac{\partial x}{\partial q^j} + \dfrac{\partial q^i}{\partial y}\dfrac{\partial y}{\partial q^j} + \dfrac{\partial q^i}{\partial z}\dfrac{\partial z}{\partial q^j} = \dfrac{\partial q^i}{\partial q^j} = \delta^i_j
+$$ {#eq-Tensor_inner_product_of_two_basis_vector}
+
+이다. 또한 다음이 성립함을 보일 수 있다.(@exr-Arfken_4_3_3)
+
+$$
+(\bf{\varepsilon}^i\bf{\cdot \varepsilon}^j)(\bf{\varepsilon}_j\bf{\cdot \varepsilon}_k) = \delta^i_k
+$$ {#eq-Tensor_equality_of_product_of_two_innerproduct_of_basis}
+
+@eq-Tensor_covariant_metric_tensor, @eq-Tensor_covariant_and_contravariant_metric_tensor 와 위 식으로부터 반변 메트릭 텐서를 알 수 있다. 
+
+$$
+g^{ij} = \bf{\varepsilon}^i\bf{\cdot \varepsilon}^j.
+$${#eq-Tensor_contravariant_metric_tensor}
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Tensor_some_metric_tensor}
+
+#### 구면좌표계에서의 메트릭 텐서
+</br>
+
+$(r,\,\theta,\, \varphi)$ 로 기술되는 원통좌표계를 생각하자. @eq-Tensor_covariaint_basis_vector 로부터
+
+$$
+\begin{aligned}
+\bf{\varepsilon}_r &= \sin \theta \cos \varphi \hat{\bf{e}}_x + \sin \theta \sin \varphi \hat{\bf{e}}_y + \cos\theta \hat{\bf{e}}_z, \\[0.3em] 
+\bf{\varepsilon}_\theta &= r \cos \theta \cos \varphi  \hat{\bf{e}}_x + r \cos \theta \sin \varphi  \hat{\bf{e}}_y - r \sin \theta  \hat{\bf{e}}_z, \\[0.3em]
+\bf{\varepsilon}_\varphi &= - r\sin \theta \sin \varphi \hat{\bf{e}}_x + r \sin \theta \cos \varphi \hat{\bf{e}}_y.
+\end{aligned}
+$$
+
+이며 @eq-Tensor_contravariant_basis_vector 로부터
+
+$$
+\begin{aligned}
+\bf{\varepsilon}^r &= \sin \theta \cos \varphi \hat{\bf{e}}_x + \sin \theta \sin \varphi \hat{\bf{e}}_y + \cos\theta \hat{\bf{e}}_z, \\[0.3em] 
+\bf{\varepsilon}^\theta &= \dfrac{\cos \theta \cos \varphi}{r}  \hat{\bf{e}}_x + \dfrac{\cos \theta \sin \varphi}{r}  \hat{\bf{e}}_y - \dfrac{\sin \theta}{r}  \hat{\bf{e}}_z, \\[0.3em]
+\bf{\varepsilon}_\varphi &= - \dfrac{\sin \varphi}{r\sin \theta} \hat{\bf{e}}_x + \dfrac{\cos \varphi}{r \sin \theta} \hat{\bf{e}}_y.
+\end{aligned}
+$$
+
+이다. 즉
+
+$$
+\begin{aligned}
+g_{11} &= \bf{\varepsilon}_r \bf{\cdot \varepsilon}_r = 1, \\[0.3em]
+g_{22} &=  \bf{\varepsilon}_\theta \bf{\cdot \varepsilon}_\theta = r^2, \\[0.3em]
+g_{33} &=  \bf{\varepsilon}_\varphi \bf{\cdot \varepsilon}_\varphi = r^2 \sin^2 \theta.
+\end{aligned}
+$$
+
+이며 다른 $g_{ij}=0$ 이다. 이를 행렬로 표현하면 아래와 같다. 
+
+$$
+[g_{ij}] = \begin{bmatrix} 1 & 0 & 0 \\ 0 & r^2 & 0 \\ 0 & 0 & r^2 \sin^2\theta\end{bmatrix},\qquad [g^{ij}] = \begin{bmatrix} 1 & 0 & 0 \\ 0 & r^{-2} & 0 \\ 0 & 0 & (r \sin\theta)^{-2}\end{bmatrix}
+$$
+
+:::
+</div>
+
+</br>
+
+### 그래디언트의 공변 표현 {#sec-Tensor_covariant_representation_of_gradient}
+
+일반화된 좌표 $\{q^i\}$ 에 대한 스칼라 함수 $\psi$ 의 그래디언트는
+
+$$
+(\nabla \psi)_j = \dfrac{\partial \psi}{\partial q^i}\dfrac{\partial q^i}{\partial x^j}
+$$
+
+이다. @eq-Tensor_contravariant_basis_vector 을 이용하면
+
+$$
+\nabla \psi = \dfrac{\partial \psi}{\partial q^i}\dfrac{\partial q^i}{\partial x^j}\hat{\bf{e}}_j = \dfrac{\partial \psi }{\partial q^i}\bf{\varepsilon}^i
+$$ {#eq-Tensor_grandient_in_general_coordinate}
+
+이다.
+
+</br>
+
+### 공변 미분 {#sec-Tensor_covariant_derivatives}
+
+데카르트 좌표계의 표준 기저 벡터와는 다르게 공변/반변 기저 벡터 $\bf{\varepsilon}_i$/$\bf{\varepsilon}^j$ 는 모든곳에서 일정한 양이 아니다. 일단 반변 벡터의 변환에서 시작하자. 
+
+$$
+(V')^i = \dfrac{\partial x^i}{\partial q^k} V^k
+$$
+
+이며, 양변을 $q^j$ 로 미분해주면
+
+$$
+\dfrac{\partial (V')^i}{\partial q^j} = \dfrac{\partial x^i}{\partial q^k} \dfrac{\partial V^k}{\partial q^j} + \dfrac{\partial^2 x^i}{\partial q^j \partial q^k} V^k
+$$
+
+이다. @eq-Tensor_covariaint_basis_vector 로 부터
+
+$$
+\dfrac{\partial (\bf{V}')^i}{\partial q^j} = \dfrac{\partial V^k}{\partial q^j}\bf{\varepsilon}_k + V^k \dfrac{\partial \bf{\varepsilon}_k}{\partial q^j}
+$$ {#eq-Tensor_covariant_derivative_1}
+
+임을 안다.
+
+여기서 $\partial \bf{\varepsilon}_k/\partial q^j$ 를 $\{\bf{e}_{\mu}\}$ 기저에 대해 전개한다면 **2종 크리스토펠 기호(Christoffel symbols of the second kind)** $\Gamma^\mu_{jl}$ 를 도입하여 
+$$
+\boxed{
+\dfrac{\partial \bf{\varepsilon}_k}{\partial q^j} = \Gamma^\mu_{jk}\bf{\varepsilon}_{\mu}
+}
+$$ {#eq-Tensor_christoffel_symbol_of_2nd_kind}
+
+와 같이 쓸 수 있다. 공변기저와 반변기저의 직교성(@eq-Tensor_inner_product_of_two_basis_vector) 을 생각하면
+
+$$
+\boxed{
+    \Gamma^m_{jk} := \bf{\varepsilon}^m \bf{\cdot} \dfrac{\partial \bf{\varepsilon}_k}{\partial q^j}
+}
+$$ {#eq-Tensor_christoffel_symbol_of_2nd_kind_2}
+
+임을 안다. 또한
+
+$$
+\boxed{
+\Gamma^m_{jk} = \Gamma^m_{kj}}
+$$ {#eq-Tensor_christoffel_symbol_of_2nd_kind_3}
+
+임을 보일 수 있다. (@exr-Arfken_4_3_4)
+
+@eq-Tensor_covariant_derivative_1 에 @eq-Tensor_christoffel_symbol_of_2nd_kind 를 대입하면
+
+$$
+\dfrac{\partial \bf{V}'}{\partial q^j} = \dfrac{\partial V^k}{\partial q^j}\bf{\varepsilon}_k + V^k \Gamma^m_{jk}\bf{\varepsilon}_m 
+$$
+
+이며 우변의 두번째 항의 더미 인덱스 $k,\, m$ 을 서로 바꾸면
+
+$$
+\dfrac{\partial \bf{V}'}{\partial q^j} = \left(\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm}\right) \bf{\varepsilon}_k
+$$ {#eq-Tensor_covariant_derivative_2}
+
+위 식 @eq-Tensor_covariant_derivative_2 의 $(\cdots)$ 을 $\bf{V}$ 에 대한 **공변 미분(covariant derivative)** 이라고 한다. 공변 미분에 대해 아래와 같은(아프켄의 표현을 빌자면 어색한(awkward)) 표기법이 표준적으로 널리 사용된다고 한다.
+
+$$
+V^k_{;j} := \dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm},\qquad \text{so }\quad \dfrac{\partial \bf{V}'}{\partial q^j} = V^k_{;j}\bf{\varepsilon}_k.
+$$ {#eq-Tensor_covariant_derivative_3}
+
+위의 표현은 반변 벡터에 대한 공변 미분이다. 공변 벡터에 대한 공변 미분은 연습문제(@exr-Arfken_4_3_6) 로 넘긴다.
+
+</br>
+
+::: {.callout-note icon="false"}
+
+#### 주의
+
+@eq-Tensor_covariant_derivative_3 에서 $\dfrac{\partial V^k}{\partial q^j}$ 와 $\Gamma^k_{jm}$ 의 인덱스 모양을 보면 텐서 같지만 텐서가 가져야 할 변환 규칙을 따르지 않기 때문에 텐서가 아니다. 오직 @eq-Tensor_covariant_derivative_3 형태의 값만이 탠서이다. 
+
+
+:::
+
+
+</br>
+
+### 크리스토펠 기호의 계산
+
+메트릭 텐서를 이용해 크리스토펠 기호 값을 편하게 계산할 수 있다. 우선 1종 크리스토펠 기호를 다음과 같이 정의한다.
+
+$$
+\boxed{
+[ij,\,k] := g_{mk}\Gamma^m_{ij}
+}
+$$ {#eq-Tensor_definition_of_christoffel_symbol_of_first_kind}
+
+@eq-Tensor_christoffel_symbol_of_2nd_kind_3 로부터 $[ij,k] = [ji,k]$ 임을 안다. <u>참고로 2종 크리소토펠 기호와 마찬가지로 1종 크리스토펠 기호도 텐서가 아니다.</u>
+
+우선
+$$
+[ij, k]  = g_{mk}\Gamma^{m}_{ij} = g_{mk} \bf{\varepsilon}^m \bf\cdot \dfrac{\partial \bf{\varepsilon}_i}{\partial q^j} = \bf{\varepsilon}_k \bf{\cdot}  \dfrac{\partial \bf{\varepsilon}_i}{\partial q^j}
+$$ {#eq-Tensor_1st_kind_christoffel_symbol}
+
+임을 안다. 또한 $g_{ij}= \bf{\varepsilon}_i \bf{\cdot \varepsilon}_j$ 이므로
+
+$$
+\dfrac{\partial g_{ij}}{\partial q^k} = \dfrac{\partial \bf{\varepsilon}_i}{\partial q^k} \bf{\cdot \varepsilon}_j + \bf\varepsilon_i \bf{\cdot}\dfrac{\partial \bf{\varepsilon}_j}{\partial q^k} = [ik, j] + [jk, i]
+$$ {#eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol}
+
+임을 안다. 이로부터
+
+$$
+\begin{aligned}
+\dfrac{1}{2}\left[\dfrac{\partial g_{ik}}{\partial q^j} + \dfrac{\partial g_{jk}}{\partial q^i} - \dfrac{\partial g_{ij}}{\partial q^k}\right] = [ij, k]
+\end{aligned}
+$$ {#eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol_2}
+
+을 얻는다. 이제 @eq-Tensor_definition_of_christoffel_symbol_of_first_kind 의 양 변에 $g^{nk}$ 를 곱하고 $k$ 에 대해 더해보자. 좌변에 대해서는 $\sum_k [ij, k]g^{nk}$ 이며 우변에 대해서는
+
+$$
+g^{nk}g_{mk}\Gamma^m_{ij} = \delta^n_m \Gamma^m_{ij} =  \Gamma^n_{ij}
+$$
+
+이므로 $\Gamma^n_{ij} = \sum_k g^{nk}[ij,k]$ 을 얻는다. @eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol_2 를 사용하고, 아인슈타인 합 규칙을 사용해 $\sum_k$ 를 제거하면
+
+$$
+\boxed{
+\Gamma^n_{ij} = \dfrac{1}{2}g^{nk}\left[\dfrac{\partial g_{ik}}{\partial q^j} + \dfrac{\partial g_{jk}}{\partial q^i} - \dfrac{\partial g_{ij}}{\partial q^k}\right] }
+$$ {#eq-Tensor_1st_and_2nd_christoffel_symbol}
+
+이다. 이제 우리는 메트릭 텐서와 메트릭 텐서의 미분으로 부터 크리스토펠 기호의 값을 구할 수 있게 되었다. 
+
+</br>
+
+### 텐서 미분 연산자 {#sec-Tensor_tensor_derivative_operator}
+
+
+... to be done ...
+
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_1}
+#### Arfken 4.3.1
+
+3차원 공간에서 $\bf{\varepsilon}_1,\, \bf\varepsilon_2,\, \bf\varepsilon_3$ 가 right-handed 시스템을 이루며 수직이라고 하자. 
+
+$$
+\bf\varepsilon^i = \dfrac{\bf\varepsilon_j \times \bf{\varepsilon}_k}{\bf{\varepsilon}_j \times \bf\varepsilon_k \cdot \bf\varepsilon_i},\qquad i,\,j,\,k=1,\,2,\,3 \text{ and cyclic permutation}
+$$
+
+임을 보여라.
+
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$\bf\varepsilon_m\bf{\cdot \varepsilon}^i =\delta^i_m$ 이다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_2}
+#### Arfken 4.3.2
+
+공변 벡터 $\bf\varepsilon_i$ 가 서로 직교할 때 다음을 보여라
+
+&emsp;($1$) $g_{ij}$ 는 diagonal.
+
+&emsp;($2$) $g^{ii}=1/g_{ii}$.
+
+&emsp;($3$) $\|\bf\varepsilon^i\| = 1/\|\bf\varepsilon_i\|$. 
+
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($1$) $g_{ij}=\bf\varepsilon_i \bf{\cdot \varepsilon}_j$ 이므로 $g_{i\ne j}=0$.
+
+($2$) $g^{ij}g_{jk}=\delta^i_k$.
+
+($3$) ($2$) 로부터 $\|\bf\varepsilon^i\|^2 = 1/\|\bf\varepsilon_i\|^2$. 
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_3}
+#### Arfken 4.3.3
+
+@eq-Tensor_equality_of_product_of_two_innerproduct_of_basis 이 성립함을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$x,\,y,\,z$ 를 $x^1,\,x^2,\,x^3$ 로 표기하자. 
+$$
+\begin{aligned}
+(\bf{\varepsilon}^i\bf{\cdot \varepsilon}^j)(\bf{\varepsilon}_j\bf{\cdot \varepsilon}_k) &= \sum_{j=1}^3\left[\sum_{m=1,2,3}\dfrac{\partial q^i}{\partial x^m} \dfrac{\partial q^j}{\partial x^m}\right]\left[\sum_{n=1,2,3}\dfrac{\partial x^n}{\partial q^j} \dfrac{\partial x^n}{\partial q^k}\right] \\[0.3em]
+&= \sum_{m, n}\dfrac{\partial q^i}{\partial x^m} \underbrace{\left[\sum_j\dfrac{\partial q^j}{\partial x^m}\dfrac{\partial x^n}{\partial q^j} \right]}_{\large{=\delta^n_m}}\dfrac{\partial x^n}{\partial q^k} \\[0.3em]
+&= \sum_m \dfrac{\partial q^i}{\partial x^m}\dfrac{\partial x^m}{\partial q^k}  = \dfrac{\partial q^i}{\partial q^k} = \delta^i_k
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_4}
+#### Arfken 4.3.4
+
+$\Gamma^m_{jk} = \Gamma^m_{kj}$ (@eq-Tensor_christoffel_symbol_of_2nd_kind_3) 이 성립함을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+@eq-Tensor_covariaint_basis_vector, @eq-Tensor_contravariant_basis_vector 으로부터 
+$$
+\Gamma^m_{jk} = \bf{\varepsilon}^m \bf{\cdot} \dfrac{\partial \bf{\varepsilon}_k}{\partial q^j} = \dfrac{\partial^2 x^i}{\partial q^j\partial q^k}(\bf{\varepsilon}^m \cdot {\hat{\bf{e}}}_i) =\dfrac{\partial^2 x^i}{\partial q^j\partial q^k} \dfrac{\partial q^m}{\partial x^i}
+$$
+
+이며 $j,\,k$ 를 교환해도 그 값이 바뀌지 않으므로 $\Gamma^m_{jk} = \Gamma^m_{kj}$ 임을 알 수 있다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_5}
+#### Arfken 4.3.5
+
+원통 좌표계에서의 공변 메트릭 텐서와 반변 메트릭 텐서를 구하라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+원통 좌표계를 $(\rho,\,\theta,\,z)$ 로 표기한다. @eq-Tensor_covariaint_basis_vector 로 부터 
+
+$$
+\begin{aligned}
+\bf{\varepsilon}_\rho &= \cos\theta \hat{\bf{e}}_x + \sin \theta \hat{\bf{e}}_y, \\[0.3em]
+\bf{\varepsilon}_\theta &= -\rho \sin \theta \hat{\bf{e}}_x + \rho \cos \theta \hat{\bf{e}}_y,\\[0.3em]
+\bf{\varepsilon}_z &= \hat{\bf{e}}_z
+\end{aligned}
+$$
+
+이다. @eq-Tensor_contravariant_basis_vector 로부터
+
+$$
+\begin{aligned}
+\bf{\varepsilon}^\rho &= \cos\theta \hat{\bf{e}}_x + \sin \theta \hat{\bf{e}}_y, \\[0.3em]
+\bf{\varepsilon}^\theta &= -\rho^{-1} \sin \theta \hat{\bf{e}}_x + \rho^{-1} \cos \theta \hat{\bf{e}}_y,\\[0.3em]
+\bf{\varepsilon}^z &= \hat{\bf{e}}_z
+\end{aligned}
+$$
+
+$$
+[g_{ij}] = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \rho^2 & 0 \\ 0 & 0 & 1\end{bmatrix} ,\qquad [g^{ij}] =  \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1/\rho^2 & 0 \\ 0 & 0 & 1\end{bmatrix}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_6}
+#### Arfken 4.3.6
+
+공변 벡터의 공변 미분은 아래와 같다는 것을 보여라.
+
+$$
+V_{i;j} := \dfrac{\partial V_i}{\partial q^j} - V_k \Gamma^k _{ij}
+$$ {#eq-Tensor_covariant_derivative_4}
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+우선 $\bf{\varepsilon}^i \bf{\cdot \varepsilon}_j = \delta^i_j$ 의 양변을 미분하면 다음을 얻는다.
+
+$$
+\dfrac{\partial \bf{\varepsilon}^i}{\partial q^k} \bf{\cdot \varepsilon}_j + \bf{\varepsilon}^i \bf{\cdot}\dfrac{\partial \bf{\varepsilon}_j}{\partial q^k} = 0.
+$$ {#eq-exr_Arfken_4_3_6_1}
+
+이로부터 @eq-Tensor_christoffel_symbol_of_2nd_kind_2 은
+
+$$
+\Gamma^m_{jk} =  \bf{\varepsilon}^m \bf{\cdot} \dfrac{\partial \bf{\varepsilon}_k}{\partial q^j} = - \bf{\varepsilon}_k \bf{\cdot} \dfrac{\partial \bf{\varepsilon}^m}{\partial q^j}
+$$ {#eq-exr_Arfken_4_3_6_1}
+
+임을 안다. @eq-Tensor_inner_product_of_two_basis_vector 을 이용하면 다음을 얻는다. 
+
+$$
+\dfrac{\partial \bf{\varepsilon}^m}{\partial q^j} = - \Gamma^m_{jk} \bf{\varepsilon}^k
+$${#eq-exr_Arfken_4_3_6_3}
+또한
+
+$$
+(V')_i = \dfrac{\partial q^k}{\partial x^i}V_k
+$$
+
+이며
+
+$$
+\dfrac{\partial (V')_i}{\partial q^j} = \dfrac{\partial q^k}{\partial x^i}\dfrac{\partial V_k}{\partial q^j} + \dfrac{\partial^2 q^k}{\partial q^j \partial x^i}V_k
+$$
+
+이므로 @eq-Tensor_contravariant_basis_vector 로부터, 그리고 @eq-exr_Arfken_4_3_6_3 을 이용하면 
+
+$$
+\begin{aligned}
+\dfrac{\partial \bf{V}'}{\partial q^j} &= \dfrac{\partial V_k}{\partial q^j}\bf{\varepsilon}^k + V_k \dfrac{\partial \bf{\varepsilon}^k}{\partial q^j} =  \dfrac{\partial V_k}{\partial q^j}\bf{\varepsilon}^k - V_k \Gamma^k_{j\mu}\bf{\varepsilon}^\mu \\[0.3em]
+&= \dfrac{\partial V_i}{\partial q^j}\bf{\varepsilon}^i- V_k \Gamma^k_{ji}\bf{\varepsilon}^i = \left(\dfrac{\partial V_i}{\partial q^j}- V_k \Gamma^k_{ij}\right)\bf{\varepsilon}^i
+\end{aligned}
+$$ {#eq-exr_Arfken_4_3_6_4}
+이다. 위 식에서 $\Gamma^k_{ji}=\Gamma^k_{ij}$ 와 dummy index 부호 변경을 사용하였다.. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_7}
+#### Arfken 4.3.7
+
+$V_{i;j}=g_{ik}V^k_{;j}$ 임을 보여라. 이를 위해
+
+$$
+\dfrac{\partial V_{i}}{\partial q^j} - V_k \Gamma^k_{ij} = g_{ik}\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right]
+$$ {#eq-exr-Arfken_4_3_7_1}
+
+임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+@eq-Tensor_covariant_derivative_2 와 @eq-exr_Arfken_4_3_6_4 로 부터 
+
+$$
+\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right]\bf\varepsilon_k = \left[\dfrac{\partial V_{k}}{\partial q^j} - V_m \Gamma^m_{kj}\right] \bf{\varepsilon}^k
+$$
+
+이며 양변에 $\bf\varepsilon_i$ 와의 내적을 취하면, 
+
+$$
+\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right](\bf\varepsilon_k \bf{\cdot \varepsilon}_i) = \left[\dfrac{\partial V_{k}}{\partial q^j} - V_m \Gamma^m_{kj}\right] (\bf{\varepsilon}^k\bf{\cdot \varepsilon}_i)
+$$
+
+이다. $g_{ik}= (\bf\varepsilon_k \bf{\cdot \varepsilon}_i)$ 이며 $(\bf{\varepsilon}^k\bf{\cdot \varepsilon}_i) = \delta^k_i$ 이므로 @eq-exr-Arfken_4_3_7_1 을 얻는다. 이 식의 우변은 $V_{i;j}$ 이며 좌변은 $g_{ik}V^k_{:j}$ 이다. 
+
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_8}
+#### Arfken 4.3.8
+
+원통 좌표계의 메트릭 텐서 $g_{ij}$ 로부터 $\Gamma^k_{ij}$ 를 구하라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+@eq-Tensor_1st_and_2nd_christoffel_symbol, @exr-Arfken_4_3_5 를 참고한다. $g^{ij}$ 가운데 편미분이 $0$ 이 아닌 것은 $g^{22}$ 뿐이므로 @eq-Tensor_1st_and_2nd_christoffel_symbol 에서 $i,\,j$ 중 하나는 무조건 $2$ 이어야 한다. 
+
+$$
+\begin{aligned}
+\Gamma^\rho_{\theta \theta}&= -\dfrac{1}{2}g^{\rho \rho} \dfrac{\partial \rho^2}{\partial \rho} = -\rho \\
+\Gamma^\theta_{\rho \theta}&= \Gamma^\theta_{\theta \rho} = \dfrac{1}{2}{g^{\theta \theta}} \dfrac{\partial \rho^2}{\partial \rho} = \dfrac{1}{\rho}
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_3_9}
+#### Arfken 4.3.9
+
+@exr-Arfken_4_3_8 의 $\Gamma^k_{ij}$ 을 이용하여 벡터 $\bf{V}$ 의 원통좌표계에서의 공변 미분 $V^i_{:j}$ 를 계산하라.
+
+:::
+
+</div></br>
+
+::: {.soution}
+
+$$
+V^k_{;j} := \dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm},\qquad \text{so }\quad \dfrac{\partial \bf{V}'}{\partial q^j} = V^k_{;j}\bf{\varepsilon}_k.
+$$ 
+
+$V=V^\rho\hat{\bf{e}}_\rho + V^\theta \hat{\bf{e}}_\theta +V^z \hat{\bf{e}}_z$ 이다. 
+@eq-Tensor_covariant_derivative_3 을 보라.
+
+$$
+\begin{aligned}
+V^\rho_{;\rho} &= \dfrac{\partial V^\rho}{\partial \rho}, \\
+V^\rho_{;\theta} &= \dfrac{\partial V^\rho}{\partial \theta} + V^\theta \Gamma^\rho_{\theta \theta} =  \dfrac{\partial V^\rho}{\partial \theta} -V^\theta \rho, \\
+V^\rho_{;z} &= \dfrac{\partial V^\rho}{\partial z},\\
+V^\theta_{;\rho} &= \dfrac{\partial V^\theta}{\partial \rho} + V^\theta \Gamma^\theta_{\theta \rho} = \dfrac{\partial V^\theta}{\partial \rho} + \dfrac{V^\theta}{\rho},\\
+V^\theta_{;\theta} &= \dfrac{\partial V^\theta}{\partial \theta} + V^\rho \Gamma^\theta_{\rho \theta}= \dfrac{\partial V^\theta}{\partial \theta} + \dfrac{V^\rho}{\rho},\\
+V^\theta_{;z} &= \dfrac{V^z}{\partial z}
+\end{aligned}
+$$
+
+이며 $V^z_{:i} = \dfrac{\partial V^z}{\partial q^i}$ 꼴이다. 
+
+:::
 
