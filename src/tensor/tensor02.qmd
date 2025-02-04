@@ -193,9 +193,349 @@ $$
 
 ## 형식의 미분
 
+### 외미분 {#sec-Tensor_exterior_derivatives}
+
+외대수와 이에 따른 외적에 대한 미분, 즉 외미분이 존재한다. $\omega,\,\omega'$ 이 각각 $p$-, $p'$-형식이라고 하자. 그리고 $f$ 는 일반적인 함수, 즉 $0$-형식 이라고 하자. 이 때 다음이 성립한다.
+
+$$
+\boxed{
+  \begin{gather}
+  d(\omega + \omega') = d\omega + d\omega', \quad(p=p')\tag{1}\\[0.3em]
+  d(f\omega) = (df)\wedge \omega + fd\omega, \tag{2}\\[0.3em]
+  \quad d(\omega \wedge \omega') = d\omega \wedge \omega' + (-1)^p \omega \wedge d\omega',\quad \tag{3}\\[0.3em]
+  d(d\omega) = 0, \tag{4}\\[0.3em]
+  df = \sum_j \dfrac{\partial f}{\partial x_j}\tag{5}\, dx_j.
+\end{gather}
+}
+$$ {#eq-Tensor_exteror_derivative}
+
+위 식은 외미분에 대한 공리(axiom) 이다. 따라서 일관성을 요구할 뿐 증명을 필요로 하지 않는다. 
 
 
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Tensor_exterior_derivative}
+
+#### 외미분
+</br>
+
+@eq-Tensor_exteror_derivative 의 ($3$) 은 $(-1)^p$ 때문에 약간 의아 할 수 있다. 이것을 우선 이것을 확인해 보자. $\omega = a\,dx_1 \wedge \cdots \wedge dx_p$, $\omega' = b\, dx_1 \wedge \cdots \wedge dx_{p'}$ 라고 해 보자. 
+
+$$
+\omega \wedge \omega' = ab\, [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}].
+$$
+
+이제 $d(\omega \wedge \omega')$ 을 생각해 보자.
+
+$$
+\begin{aligned}
+d(\omega \wedge \omega') &= d(ab)\, [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}] \\[0.3em]
+&= \sum_\mu \left[\dfrac{\partial a}{\partial x_\mu} b + a\dfrac{\partial b}{\partial x^\mu}\right] \,dx_\mu \wedge [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}] \\[0.3em]
+&= \left[\sum_\mu \left(\dfrac{\partial a}{\partial x_\mu} \right) dx_\mu \wedge [dx_1 \wedge \cdots \wedge dx_p] \right]\wedge \left(b\, [dx_1 \wedge \cdots \wedge dx_{p'}] \right)  \\[0.3em]
+&\qquad + (-1)^p\left(a\,[dx_1 \wedge \cdots \wedge dx_{p'}]\right)\left[\sum_{\mu} \left(\dfrac{\partial b}{\partial x_\mu}\right)  dx_\mu \wedge[dx_1 \wedge \cdots \wedge dx_{p'}] \right] \\[0.3em]
+&=d\omega \wedge \omega' + (-1)^p \omega \wedge d\omega'
+\end{aligned}
+$$
+
+이다. 여기서 $dx_\mu \wedge[dx_1 \wedge \cdots \wedge dx_p]= (-1)^p[dx_1 \wedge \cdots \wedge dx_p]\wedge dx_\mu$ 를 사용하였다. 
+
+($4$) 의 $d(d\omega)=0$ 은 때때로 푸앙카레 소정리(Poincaré lemma) 라고도 한다. 이 공리는 필요하며, 다른것과 일관된다. 일단 이것이 없다면 $d(dx_i)$ 를 형식으로 만들 수 없다. 다른 공리와의 일관성을 보기 위해 $\R^2$ 에서의 예를 들어 보자. ($5$) 로 부터
+
+$$
+df = \dfrac{\partial f}{\partial x}dx + \dfrac{\partial f}{\partial y}dy
+$$
+
+이며 ($2$) 와 외적의 반대칭성으로부터
+
+$$
+\begin{aligned}
+d(df) = \dfrac{\partial}{\partial x}\dfrac{\partial f}{\partial x} dx \wedge dx + \dfrac{\partial}{\partial y}\dfrac{\partial f}{\partial x} dy\wedge dx + \dfrac{\partial }{\partial x}\dfrac{\partial f}{\partial y}  dx \wedge dy + \dfrac{\partial }{\partial y}\dfrac{\partial f}{\partial y}  dy \wedge dy = 0
+\end{aligned}
+$$
+
+임을 알 수 있다. 푸앙카레 소정리는 전미분 함수는 불변량임을 의미한다. 
+
+:::
+</div>
+
+</br>
+
+### 3차원 공간에서의 외미분 {#sec-Tensor_exterior_derivatives_in_3d}
+
+3차원 공간에서의 스칼라 함수 $f=f(x,\,y,\,z)$ 에 대해
+
+$$
+df = \dfrac{\partial f}{\partial x}\,dx + \dfrac{\partial f}{\partial y}\,dy + \dfrac{\partial f}{\partial z}\,dz
+$$ {#eq-Tensor_exterior_derivative_1}
+
+이다. 여기서 1-형식 $\omega = A_x\,dx + A_y \,dy + A_z\,dz$ 에 대해
+
+$$
+\begin{aligned}
+d\omega &= \sum_{r=x,y,z} \sum_{s=x,\,y,\,z}\dfrac{\partial A_s}{\partial r}\, dr \wedge ds  \\[0.3em]
+&= \left[\dfrac{\partial A_z}{\partial y} - \dfrac{\partial A_y}{\partial z}\right] (dy \wedge dz) + \left[\dfrac{\partial A_x}{\partial z} - \dfrac{\partial A_z}{\partial x}\right] (dz \wedge dx) + \left[\dfrac{\partial A_y}{\partial x} - \dfrac{\partial A_x}{\partial y}\right] (dx \wedge dy)
+\end{aligned}
+$$ {#eq-Tensor_exterior_derivative_2}
+
+이며, 
+
+$$
+\ast(d(A_x\,dx + A_y \,dy + A_z\,dz)) = (\nabla \times \bf{A})_x\, dx + (\nabla \times \bf{A})_y\, dy + (\nabla \times \bf{A})_z\, dz
+$$ {#eq-Tensor_exterior_derivative_of_1-form_in_3dim}
+
+임을 알 수 있다. 
+
+이제 2 형식 $B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)$ 에 대한 외미분을 생각해 보자.
+
+$$
+\begin{aligned}
+d(B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)) &= \left[\dfrac{\partial B_x}{\partial x} + \dfrac{\partial B_y}{\partial y} + \dfrac{\partial B_z}{\partial z}\right]( dx \wedge dy \wedge dz) \\[0.3em]
+&= (\nabla \bf{\cdot B})(dx \wedge dy \wedge dz)
+\end{aligned}
+$$
+
+이며, 따라서
+
+$$
+\ast d(B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)) = (\nabla \bf{\cdot B})
+$$ {#eq-Tensor_exterior_derivative_of_2-form_in_3dim}
 
 
+이다. 
 
+이제 @eq-Tensor_exterior_derivative_1 을 다시 보자 $df$ 는 1-형식 이므로 @eq-Tensor_exterior_derivative_2 과 푸앙카레 소정리를 생각하면 
+
+$$
+0=d(df)= (\nabla \times (\nabla f))_x (dy\wedge dz) + (\nabla \times (\nabla f))_y (dz\wedge dx) + (\nabla \times (\nabla f))_z (dx\wedge dy) 
+$$
+
+이다. 즉 위 식은 우리가 잘 아는 항등식 $\nabla \times (\nabla f)=0$ 과 동치이다. 우리가 아는 다른 하나의 항등식 $\nabla \bf{\cdot} (\nabla \times \bf{A})=0$ 역시 
+
+$$
+0 = d(d(A_x\,dx + A_y\,dy + A_z\,dz))= (\nabla \bf{\cdot} (\nabla \times \bf{A}))(dx \wedge dy \wedge dz)
+$$
+
+과 동치임을 알 수 있다. 
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Tensor_maxwell_equation}
+
+#### 멕스웰 방정식
+</br>
+
+멕스웰 방정식은 형식의 미분 형식으로 표현할 때 메우 우아하고 간결하게 표현 될 수 있다. 이 표기법에서 전자기장 텐서의 독립적인 성분은 $(cdt,\,dx,\,dy,\,dz) = (dx_0,\,dx_1,\,dx_2,\,dx_3)$ 기저에서의 2-형식으로 다음과 같이 쓸 수 있다.
+
+$$
+\boxed{
+\begin{aligned}
+\quad F & :=-\dfrac{E_x}{c} dx_0 \wedge dx_1- \dfrac{E_y}{c} dx_0 \wedge dx_2- \dfrac{E_z}{c} dx_0 \wedge dx_3 \\[0.3em]
+&\qquad\qquad  + B_x dx_2\wedge dx_3 + B_y dx_3 \wedge dx_1+ B_z dx_1\wedge dy. \quad
+\end{aligned}
+}
+$${#eq-Tensor_maxewll_equation}
+
+또한 장의 소스들은 아래와 같은 3-형식으로 쓸 수 있다.
+
+$$
+\boxed{
+\begin{aligned}
+\quad J &:= c\rho (dx_1\wedge dx_2\wedge dx_3) -  J_x (dx_0\wedge dx_2\wedge dx_3) \\[0.3em]
+&\qquad \qquad- J_y (dx_0\wedge dx_3 \wedge dx) - J_z (dx_0\wedge dx_1\wedge dy).
+\end{aligned}
+}
+$${#eq-Tensor_electromagnetic_source_equation}
+
+이제 멕스웰 방정식은 $dF=0$ 으로 부터 간단하게 얻어진다.
+
+$$
+\begin{aligned}
+dF =& -\left[\dfrac{\partial E_x/c}{\partial x_2}\,dx_2+ \dfrac{\partial E_x/c}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx)-\left[\dfrac{\partial E_y/c}{\partial x_1}\,dx_1+ \dfrac{\partial E_y/c}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx_2) \\[0.3em]
+& -\left[\dfrac{\partial E_z/c}{\partial x}\,dx_1+ \dfrac{\partial E_z/c}{\partial x_2}\,dx_2\right] \wedge (dx_0\wedge dx_3)  + \left[\dfrac{\partial B_x}{\partial x_0}\,dx_0+ \dfrac{\partial B_x}{\partial x_1}\,dx_1\right] \wedge (dx_2\wedge dx_3) \\[0.3em]
+& +\left[\dfrac{\partial B_y}{\partial x_0}\,dx_0+ \dfrac{\partial B_y}{\partial x_2}\,dx_2\right] \wedge (dx_3 \wedge dx_1) + \left[\dfrac{\partial B_z}{\partial x_0}\,dx_0+ \dfrac{\partial B_z}{\partial x_3}\,dx_3\right] \wedge (dx_1\wedge dx_2) \\[0.3em]
+=& \left[\dfrac{\partial E_z/c}{\partial x_2}-\dfrac{\partial E_y/c}{\partial x_3} + \dfrac{\partial B_x}{\partial x_0}   \right](dx_0\wedge dx_2\wedge dx_3) + \left[\dfrac{\partial E_x}{\partial x_3} - \dfrac{\partial E_z}{\partial x_1} + \dfrac{\partial B_y}{\partial x_0}\right](dx_0\wedge dx_3 \wedge dx_1) \\[0.3em]
+&+ \left[\dfrac{\partial E_y}{\partial x_1} - \dfrac{\partial E_x}{\partial x_2} + \dfrac{\partial B_z}{\partial x_0}\right](dx_0\wedge dx_1\wedge dx_2)  + \left[\dfrac{\partial B_x}{\partial x_1} + \dfrac{\partial B_y}{\partial x_2} + \dfrac{\partial B_z}{\partial x_3}\right](dx_1\wedge dx_2\wedge dx_3)
+\end{aligned}
+$$
+
+이므로 $dF=0$ 으로부터, 그리고 $(x_0,\,x_1,\,x_2,\,x_3) \to (ct,\,x,\,y,\,z)$ 변환을 수행하면 
+
+$$
+\nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t},\qquad \nabla \bf {\cdot B} = \bf{0}
+$$
+
+을 얻는다. 
+
+이제 $\ast F$ 를 보자
+
+$$
+\begin{aligned}
+\ast F = & \dfrac{E_x}{c} dx_2\wedge dx_3 + \dfrac{E_y}{c} dx_3 \wedge dx_1+ \dfrac{E_z}{c} dx_1\wedge dx_2+ B_x dx_0\wedge dx_1+ B_y dx_0\wedge dx_2+ B_z dt\wedge dx_3
+\end{aligned}
+$$
+
+이며,
+
+$$
+\begin{aligned}
+d(\ast F)=& \left[\dfrac{\partial E_x/c}{\partial x_1}\,dx_1+ \dfrac{\partial E_x/c}{\partial x_0}\,dx_0\right]\wedge (dx_2\wedge dx_3) + \left[\dfrac{\partial E_y}{\partial x_0}\,dx_0+ \dfrac{\partial E_y/c}{\partial x_2}\,dx_2 \right] \wedge (dx_3 \wedge dx_1) \\[0.3em]
+&+\left[\dfrac{\partial E_z/c}{\partial x_3} \, dx_3 + \dfrac{\partial E_z/c}{\partial x_0}\,dx_0\right]\wedge (dx_1\wedge dx_2) + \left[\dfrac{\partial B_x}{\partial x_2}\,dx_2+ \dfrac{\partial B_x}{\partial x_3}\,dx_3\right]\wedge (dx_0\wedge dx_1) \\[0.3em]
+&+ \left[\dfrac{\partial B_y}{\partial x_1}\,dx_1+ \dfrac{\partial B_y}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx_2) + \left[\dfrac{\partial B_z}{\partial x_1}\,dx_1+ \dfrac{\partial B_z}{\partial x_2}\,dx_2 \right]\wedge (dx_0\wedge dx_3) \\[0.3em]
+=& \left[\dfrac{\partial E_x/c}{\partial x_1} +\dfrac{\partial E_y/c}{\partial x_2} + \dfrac{\partial E_z/c}{\partial x_3}\right](dx_1\wedge dx_2\wedge dx_3) + \left[\dfrac{\partial E_x/c}{\partial x_0} -\dfrac{\partial B_z}{\partial x_2} + \dfrac{\partial B_y}{\partial x_3}\right](dx_0\wedge dx_2\wedge dx_3) \\[0.3em]
+=& \left[\dfrac{\partial E_y/c}{\partial x_0} - \dfrac{\partial B_x}{\partial x_3} + \dfrac{\partial B_z}{\partial x_1}\right](dx_0\wedge dx_3 \wedge dx_1) + \left[\dfrac{\partial E_z/c}{\partial x_0} - \dfrac{\partial B_y}{\partial x_1} + \dfrac{\partial B_x}{\partial x_2}\right](dx_0\wedge dx_1\wedge dx_2)
+\end{aligned}
+$$
+
+이며 $d(\ast F)=\mu_0J$ 로부터 (그리고 $\varepsilon_0 \mu_0 = 1/c^2$ 을 이용하면 )
+
+$$
+\nabla \bf{\cdot E} = \dfrac{\rho}{\epsilon_0},\qquad \nabla \times \bf{B} = \dfrac{1}{c^2} \dfrac{\partial \bf{E}}{\partial t} + \mu_0 \bf{J} 
+$$
+
+을 얻는다. 마지막으로 $dJ = \dfrac{1}{\mu_0} d(d(\ast F))=0$ 이므로 
+
+$$
+dJ = \left[\dfrac{\partial \rho}{\partial t} + \dfrac{\partial J_x}{\partial x} + \dfrac{\partial J_y}{\partial y} + \dfrac{\partial J_z}{\partial z}\right] (dt \wedge dx \wedge dy \wedge dz) 
+$$
+
+로 부터 전하에 대한 연속 방정식 (equation of continuity)
+
+$$
+\dfrac{\partial \rho}{\partial t} + \nabla \bf{\cdot J} = 0
+$$
+
+을 얻는다. 
+
+요약하자면, @eq-Tensor_maxewll_equation, @eq-Tensor_electromagnetic_source_equation 로 정의된 $F,\, J$ 에 대해 맥스웰 방정식은 아래의 간단한 두 식으로 정리된다.
+
+$$
+dF=0,\qquad d(\ast F)= J
+$$
+
+또한 연속 방정식은 위의 정의로부터 자연스럽게 유도된다.
+
+
+:::
+</div>
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_6_1}
+#### Arfken 4.6.1
+
+두 1-형식 $\omega_1 = xdy +ydx$ 와 $\omega_2 = xdy - ydx$ 에 대해 다음을 계산하라.
+
+($a$) $d\omega_1$,
+
+($b$) $d\omega_2$, 
+
+($c$) ($a$), ($b$) 가운데 $0$ 이 아닌 것에 대해 $d(d\omega_i)=0$ 임을 보여라.
+
+:::
+
+</div>
+
+</br>
+
+::: {.solution}
+
+($1$) $d\omega_1 = dx \wedge dy -  dx \wedge dy = 0$.
+
+($2$) $d\omega_2 = dx \wedge dy - dy \wedge dx = 2 dx \wedge dy$.
+
+($3$) $d(dx \wedge dy) =  0$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_6_2}
+#### Arfken 4.6.2
+
+$\omega_3 = xy\,dz +xz\, dy - yz\, dx$ 에 대해 $d(d\omega_3)=0$ 임을 보여라.
+
+:::
+
+</div>
+
+</br>
+
+::: {.solution}
+$$
+\begin{aligned}
+d\omega_3 &= ydx \wedge dz + x dy \wedge dz + z dx \wedge dy + x dz \wedge dy - z dy \wedge dx - y dz \wedge dx \\
+&= -2y dz \wedge dx + 2z dx \wedge dy
+\end{aligned}
+$$
+
+이며
+$$
+d(d\omega_3) = -2 dx \wedge dy \wedge dx + 2 dx \wedge dy \wedge dy = 0
+$$
+
+이다.
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_4_6_3}
+#### Arfken 4.6.3
+
+@exr-Arfken_4_6_1, @exr-Arfken_4_6_3 의 $\omega_2,\,\omega_3$ 에 대해 $d(\omega_2 \wedge \omega_3)$ 를 아래의 두 방식으로 계산하여 결과가 같음을 보여라.
+
+($a$)  외적을 계산하고 미분하라.
+
+($b$) 두 형식의 곱에 대한 미분 공식을 이용하라.
+:::
+
+</div>
+
+</br>
+
+::: {.solution}
+
+($a$) 
+
+$$\begin{aligned}
+\omega_2 \wedge \omega_3 &= (x dy - y dx) \wedge (xy\,dz +xz\, dy - yz\, dx) \\
+&= x^2 y dy \wedge dz  + xy^2 dz \wedge dx 
+\end{aligned}
+$$
+
+이므로
+
+$$
+\begin{aligned}
+d(\omega_2 \wedge \omega_3) = 4xy dx \wedge dy \wedge dz.
+\end{aligned}
+$$
+
+($b$) $d(\omega_2 \wedge \omega_3) = d \omega_2 \wedge \omega_3 + (-1)\omega_2 \wedge d\omega_3$ 임을 이용하면
+
+$$
+\begin{aligned}
+d(\omega_2 \wedge \omega_3) &= (2dx\wedge dy) \wedge (xy\,dz +xz\, dy - yz\, dx) - (xdy - ydx)\wedge (-2y dz \wedge dx + 2z dx \wedge dy) \\
+&= 4xy dx \wedge dy \wedge dz.
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+## 형식의 적분 
+
+2 차원 공간에서의 1-형식 $\omega = A_x \,dx + A_y\, dy$ 을 생각하자. $P$ 에서 시작해서 $Q$ 에서 끝나는 경로 $C$
 
