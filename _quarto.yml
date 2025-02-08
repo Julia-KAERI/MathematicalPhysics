@@ -10,7 +10,9 @@ book:
   
   chapters:
     - index.qmd
-
+    - part : "벡터해석"
+      chapters: 
+        - src/vector calculus/vectorcalculus.qmd
     - part : "텐서 해석과 군"
       chapters :
       - src/tensor/tensor01.qmd
