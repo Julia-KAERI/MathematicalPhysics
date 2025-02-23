@@ -23,31 +23,9 @@ crossref:
 
 </br>
 
-### 공변벡터와 반변 벡터
+### 공변 벡터와 반변 벡터
 
-![공변벡터와 반변벡터](figures/vectors.png){#fig-Tensor_vectors_01 width=800}
-
-우리가 다루는 벡터공간에서 벡터는 기저에 대한 성분으로 표현 할 수 있다. 우선 2차원에서 생각해보자. $\bf{\varepsilon}_1,\, \bf{\varepsilon}_2$ 기저에서 벡터 $A$ 는
-
-$$
-A=A^1\bf{\varepsilon}_1 +A^2\bf{\varepsilon}_2
-$$ {#eq-Tensor_contravariant_representation_of_vector}
-
-로 표현 할 수 있다. $A^1,\,A^2$ 는 반변 성분(contravariant components) 이라고 하고 $\bf{\varepsilon}_1,\,\bf{\varepsilon}_2$ 를 공변 기저(covariant basis) 라고 한다. 공변 기저 $\bf{\varepsilon}_1,\, \bf{\varepsilon}_2$ 에 대해 $\bf{\varepsilon}_i \bf{\cdot \varepsilon}^j = \delta_{ij}$ 가 되도록 하는 벡터 $\bf{\varepsilon}^1,\, \bf{\varepsilon}^2$ 찾을 수 있으며 선형 독립이고, 따라서 기저가 될 수 있다. 선형대수학에서는 이를 어떤 기저에 대한 쌍대 기저(dual basis) 라고 한다. 이 기저를 반변 기저(contravariant basis) 라 하며 이 기저에 대해
-
-$$
-A=A_1 \bf{\varepsilon}^1  + A_2 \bf{\varepsilon}^2
-$$ {#eq-Tensor_covariant_representation_of_vector}
-
-
-로 표현 할 수 있다. 이 때 $A_1,\,A_2$ 를 공변 성분(covariant components) 라고 한다. 반변 기저에 대한 공변 성분을 $(A_1 ,\, A_2)$ 와 같이 표현한 것을 공변 벡터라고 하고 공변기저에 대한 반변 성분을 $(A^1,\, A^2)$ 와 같이 표현한 것을 반변 벡터 라고 한다. 그리고 공변/반변 벡터/성분을 각각 위첨자, 아래첨자로 위와같이 구별하는 것을 **아인슈타인 표기법 (Einstein notation)** 이라고 한다. 즉 위첨자는 반변 벡터나 반변 성분을 의미하며 아래첨자는 공변벡터나 공변 성분을 의미한다. 그리고 여기서는 2차원에서 표현했지만 실제로는 $n$ 차원으로 확장 할 수 있다.  
-
-
-</br>
-
-### 벡터의 변환과 아인슈타인 표기법
-
-$\R^3$ 에서의 선형 변환 $\bf{R}$ 에 의해 변위 벡터 $\bf{x}$ 의 좌표가 $\begin{bmatrix} x_1 & x_2 & x_3\end{bmatrix}^T$ 에서 $\bf{x}'=\begin{bmatrix} x_1' & x_2' & x_3' \end{bmatrix}^T$ 로 변환된다고 하자. 즉 $\bf{x}'=\bf{Rx}$ 라고 하자. 이로부터 
+$\R^3$ 에서의 가역변환 $\bf{R}$ 에 의해 변위 벡터 $\bf{x}$ 의 좌표가 $\begin{bmatrix} x_1 & x_2 & x_3\end{bmatrix}^T$ 에서 $\bf{x}'=\begin{bmatrix} x_1' & x_2' & x_3' \end{bmatrix}^T$ 로 변환된다고 하자. 즉 $\bf{x}'=\bf{Rx}$ 라고 하자. 이로부터 
 
 $$
 R_{ij}= \dfrac{\partial x'_i}{\partial x_j}

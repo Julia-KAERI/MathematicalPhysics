@@ -17,6 +17,7 @@ book:
       chapters :
       - src/tensor/tensor01.qmd
       - src/tensor/tensor02.qmd
+      - src/tensor/group01.qmd
 
     - part: "미분방정식"
       chapters :
