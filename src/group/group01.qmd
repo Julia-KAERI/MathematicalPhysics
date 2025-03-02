@@ -1,0 +1,703 @@
+---
+title: "군에 대한 첫번째 접근"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+{{< include ../latexmacros.qmd >}}
+
+</br>
+
+## 군 (Group)
+
+### 군의 정의 {#sec-Group_group}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_groups}
+#### 군 (Groups)
+
+집합 $G$ 에 이항연산 $\cdot$ 이 정의되어 있으며, 
+
+1. $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
+
+2. $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
+
+3. $\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e$
+
+일 때 집합 $G$ 를 **군** 이라 하고 $(G,\cdot)$ 이라고 쓴다. 이 때 2. 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. $a\cdot a'=a'\cdot a=e$ 인 $a'$ 을 $a$ 의 역원 이라고 한다. $a$ 의 역원은 $a^{-1}$ 이라 쓴다.
+:::
+:::
+
+</br> 
+
+군에서의 연산 기호는 $a\circ b$, $a \cdot b$, $ab$, $a+b$ 처럼 다양한 기호가 사용 될 수 있다. 기호를 생략하는 $ab$ 와 같은 표기법도 많이 사용된다. 군을 정의할 때 집합과 연산을 묶어 $(G,\, \circ)$ 와 같은 표기법도 흔히 사용된다. 
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_properties}
+
+$G$ 가 군이다.
+
+1. $G$ 의 원소의 갯수가 유한개일 때 **유한군(finite group or discrete group)** 이라고 하고, 유한군이 아닐 때 **무한군 (infinite group)** 이라고 한다.
+
+2. 어떤 대칭 연산의 경우 군을 이루며 성분의 개수가 무한개 이지만 유한개의 연속인 변수로 기술 될 수 있다. 이런 군을 **연속군 (continuous group)** 이라고 한다.
+
+2. $G$ 가 유한군일 때 원소의 갯수를 $G$ 의 **차수(order)** 라고 하며 $|G|$ 로 표기한다. $G$ 가 연속군일 경우 연속인 변수의 개수를 **차수(order)** 라고 한다.
+
+3. $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
+
+4. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 또한 $G$ 는 $g$ 에 의해 생성되는 군이라고 표현하기도 한다.
+   
+5. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
+
+:::
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_homomorphism}
+
+#### 동형사상과 준동형사상
+
+두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
+
+$$
+\forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
+$$
+
+일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다.
+
+
+:::
+:::
+
+</br>
+
+### 중요한 군 {#sec-Group_important_groups}
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_d3}
+
+#### $D_3$, 정삼각형에 대한 대칭 연산
+</br>
+
+정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 $I$, 삼각형의 중심에 대한 $\pi/3$ 만큼의 반시계 방향 회전 $C_3$ 와 $C_3^2$($C_3$ 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 $\pi/2$ 회전 $C_2,\,C_2',\,C_2''$ (아래 그림을 참고하라.)
+
+![정삼각형에 대한 대칭 연산](figures/d3.png){#fig-Group_d3 width=350}
+
+</br>
+
+정삼각형의 꼭지점 $1$, $2$, $3$ 에 $D_3$ 의 연산을 수행했을 때의 결과는 아래 그림 @fig-Group_d3_2 과 같다. 
+
+
+![$D_3$ 연산 수행 결과. 음영이 있는 삼각형은 축에 대한 회전 연산으로 인해 위아래가 바뀐 것이다.](figures/d3_2.png){#fig-Group_d3_2 width=600}
+
+이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 하며 $C_3$ 행과 $C_2$ 열에는 $C_3C_2 = C_2''$ 가 표현된다.
+
+
+| | $I$ | $C_3$ | $C_3^2$ | $C_2$ | $C_2'$ | $C_2''$ |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| $I$ |  $I$ | $C_3$ | $C_3^2$ | $C_2$ | $C_2'$ | $C_2''$ |
+| $C_3$ |  $C_3$ | $C_3^2$ | $I$ | $C_2''$ | $C_2$ | $C_2'$ |
+| $C_3^2$ |  $C_3^2$ | $I$ | $C_3$ | $C_2'$ | $C_2''$ | $C_2$ |
+| $C_2$ |  $C_2$ | $C_2'$ | $C_2''$ | $I$ | $C_3$ | $C_3^2$ |
+| $C_2'$ |  $C_2'$ | $C_2''$ | $C_2$ | $C_3^2$ | $I$ | $C_3$ |
+| $C_2''$ |  $C_2''$ | $C_2$ | $C_2'$ | $C_3$ | $C_3^2$ | $I$ |
+: {#tbl-Group_d3, tbl-colwidths="[30,30,30,30,30,30,30]"}
+
+</br>
+
+이 군은 여러가지 이름으로 불리지만 대표적으로 $D_3$ 라고 불린다. $D$ 는 **dihedral** 의 두문자이며 보통 주 대칭축에 수직인 평면에 $\pi$ 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, $C_2,\,C_2',\,C_2''$ 축이 주 대칭축과 수직한 $\pi$ 회전 대칭축이다. .
+
+
+:::
+
+</div>
+</br>
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_rotation_of_plane_circle}
+
+#### 평면상의 원의 회전
+</br>
+
+평면상의 원은 원의 중심에 대한 임의의 각 회전에 대해 대칭이다. 이 연산은 반시계 방향 회전각을 나타내는 변수 $\varphi \in [0,\, 2\pi)$ 에 대해 $R(\varphi)$ 로 표현 할 수 있으므로 차수가 1인 연속군이다. 또한 $R(\varphi)$ 에 대한 역변환은 $R(2\pi - \varphi)$ 이다.
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_viergrouppe}
+
+#### Vierergrouppe
+</br>
+
+4 원소로 아래의 연산 규칙을 만족하는 군을 클라인 4원군(Keine 4 group) 혹은 **Vierergrouppe** 라고 한다. 아래 표현에서 $e$ 는 항등원이다.
+
+<table align="center" style="width:50%" >
+  <tr style="text-align:center ;background-color: #D8D8D8">
+    <th ></th>
+    <th>$e$</th text_align="center">
+    <th>$a$</th>
+    <th>$b$</th>
+    <th>$ab$</th>
+  </tr>
+  <tr style="text-align:center">
+    <td>$e$</td>
+    <td>$e$</td>
+    <td>$a$</td>
+    <td>$b$</td>
+    <td>$ab$</td>
+  </tr>
+  <tr style="text-align:center">
+    <td>$a$</td>
+    <td>$a$</td>
+    <td>$e$</td>
+    <td>$ab$</td>
+    <td>$b$</td>
+  </tr>
+  <tr style="text-align:center">
+    <td>$b$</td>
+    <td>$b$</td>
+    <td>$ab$</td>
+    <td>$e$</td>
+    <td>$a$</td>
+  </tr>
+  <tr style="text-align:center">
+    <td>$ab$</td>
+    <td>$ab$</td>
+    <td>$a$</td>
+    <td>$b$</td>
+    <td>$e$</td>
+  </tr>
+</table> 
+
+
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_C4}
+
+#### $C_4$ 군의 동형사상과 준동형사상.
+</br>
+
+정사각형의 중심에 대한 $0^\circ$, $90^\circ$, $180^\circ$, $270^\circ$ 회전은 군을 이루며 각각 $I,\,C_4,\,C_2,\,C_4'$ 라고 한다. 즉 $G_1=\{I,\,C_4,\,C_2,\,C_4'\}$ 이라고 하자. 또한 $G_2=\{1,\, i,\, -1,\, -i\}$ 는 곱에 대한 군을 이룬다. 이 두 군에 대한 함수 $\phi : G \to G'$ 를
+
+$$
+\phi(I)=1,\quad \phi(C_4)=i,\quad \phi(C_2)=-1,\quad \phi(C_4')=-i
+$$
+
+로 정의하면 $\phi$ 는 동형사상이다. 즉 $\phi \in \text{Iso}(G_1,\,G_2)$ 이다. 또한 이 군은 $C_4$ 혹은 $i$ 에 의해 생성되는 순환군이다.
+
+곱 연산으로 정외된 집합 $G_3=\{1,\,-1\}$ 은 역시 군이며 $\psi: G_1\to G_3$ 를
+
+$$
+\psi (I)= \psi(C_2)=1,\qquad \psi (C_4)=\psi (C_4')= -1
+$$
+
+로 정의하면 $\psi \in \text{Hom}(G_1,\,G_3)$ 이다. 
+
+:::
+
+</div>
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_1_1}
+#### Arfken 17.1.1
+
+@exm-Group_viergrouppe 의 vierergrouppe 가 순환군인지 아벨군인지 여부를 확인하라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$a^2=b^2 = (ab)^2 = e$ 이므로 순환군이 아니다.  $a(ab)=b,\, (ab)a = a$ 이므로 아벨군도 아니다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_1_3}
+#### Arfken 17.1.3 (Rearrangement theorem)
+</br>
+
+군 $\{e,\,a,\,b,\,\ldots,\,n\}$ 에 대해 $\{ae,\, aa,\, ab,\,ac,\,\ldots,\,an\}$ 은 군의 모든 원소를 각각 한번씩마나 포함한다는 것을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$ax=ay$ 이면 $a$ 의 역원 $a^{-1}$ 을 각 항의 오른쪽에 연산하면 $x=y$ 이다. 즉 $x\ne y \implies ax = ay$ 이다. 
+
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_1_4}
+#### Arfken 17.1.4
+</br>
+
+$H\le G$ 이다. $x\in G,\, x\not\in H$ 일 때 
+
+$$
+xHx^{-1} := \{xhx^{-1} : h\in H\}
+$$
+
+에 대해 $xHx^{-1} \le G$ 임을 보여라. ($xHx^{-1}$ 을 **conjugate subgroup** of $G$ 라고 한다.)
+
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$e\in H$ 이며 $xex^{-1}=e\in xHx^{-1}$ 이다. $h_1,\,h_2\in H$ 에 대해 $(xh_1x^{-1})(xh_2x^{-1})=x(h_1h_2)x^{-1} \in xHx^{-1}$ 이다. $xHx^{-1}\subset G$ 이므로 associativity 는 당연히 성립한다. 따라서 $xHx^{-1}\le G$ 이다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_1_6}
+#### Arfken 17.1.6
+
+$\bf{r}=(la,\,ma,\,na)$ 에 동일한 원자가 위치한 정육면체 결정을 생각하자. 여기서 $l,\,m,\,n$ 은 정수이다.
+
+($a$) 각각의 데카르트 축은 4중 대칭축(4-fold symmetric axis)임을 보여라.
+
+($b$) 정육면 점군(point group) 은 정육면체를 유지하며 $l=m=n=0$ 에 위치한 원자를 이동시키지 않는 모든 연산(rotation, reflection, inversion)으로 이루어져 있다. 양과 음의 좌표축의 permutation 을 생각하여 정육면 점군이 얼마나 많은 원소로 이루어졌는지 알아보라.
+
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) $0,\, \pi/2,\, \pi,\, 3\pi/2$ 회전에 대해 대칭이다.
+
+($b$) 결국은 $\bf{a}_1=(a,\,0,\,0),\, \bf{a}_2=(0,,a,\,0),\, \bf{a}_3=(0,\,a,\,0)$ 이 각각 $(\pm a,\, 0,\, 0)$, $(0,\, \pm a,\,0)$, $(0,\, 0,\, \pm a)$ 로 변환되는 변환의 갯수를 찾는 것이다. 단 이 변환을 $P$ 라고 하면 $P(\bf{a}_i)\bf{\cdot }P(\bf{a}_j) = \delta_{ij}a^2$ 가 되야 한다. 일종의 Permutation 으로 $6\times 4 \times 2= 48$ 이다. 
+
+:::
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_1_7}
+#### Arfken 17.1.7
+
+![정육각형으로 덮인 평면](figures/hexagons.png){#fig-Group-hexagon width=200}
+
+위의 그림과 같이 정육각형으로 덮인 평면을 생각하자.
+
+($a$) 세 정육면체가 만나는 점 ($A$) 를 통과하며 평면에 수직인 축에 대한 회전 대칭을 결정하라. 즉 이 축이 $n$-fold 대칭성을 갖는다면 $n$ 은 무엇인가?
+
+($b$) 정육면체의 중심 $(B)$ 를 수직으로 통과하는 축에 대해 ($a$) 를 반복하라.
+
+($c$) 정육면체의 평면에 포함되는 다른 종류의, 180$^\circ$ 회전 대칭을 가진 축을 모두 찾아라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) 3 fold
+
+($b$) 6 fold
+
+($c$) $B$ 를 중심으로 하는 정육면체에서 서로 마주보는 꼭지점을 잇는 직선을 축으로 180$^\circ$
+도 회전 대칭이 존재한다. 또한 서로 마주보는 모서리의 각각의 중심을 잇는 직선을 축으로 180$^\circ$ 회전 대칭이 존재한다. 또한 각 모서리를 중심으로 하는 180$^\circ$ 회전대칭도 존재한다.
+:::
+
+
+</br>
+
+## 군의 표현
+
+### 군의 표현과 유니타리 표현
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_general_linear_group}
+#### 일반선형군과 특수선형군
+
+$n\times n$ 행렬의 집합 $\mathbb{F}^{m \times m}$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
+
+:::
+:::
+
+체 $\F$ 에 대해 가역인 $n \times n$ 행렬의 집합 $GL_n(\F)$ 가 군을 이룬다는 것은 쉽게 보일 수 있다. 또한 $SL_n(\F)$ 가 군이라는 것도 쉽게 보일 수 있다.
+
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_representation}
+#### 군의 표현
+
+$U\in \text{Hom} (G,\, GL_n(\F))$ 일 때 $U$ 를 $G$ 의 표현이라고 한다. $U(G)$ 가 유니타리 행렬의 집합일 때 $U$ 를 $G$ 의 유니타리 표현이라고 한다. $U$ 가 단사일 때 이 표현이 **faithful** 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다. 
+
+:::
+:::
+
+</br>
+
+즉 $U$ 가 $G$ 의 표현이고 $a,\,b\in G$ 일 때 $U(ab) = U(a)U(b)$ 이다. 단 군에 대한 행렬 표현이 항상 유니타리 표현일 필요는 없다.
+
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_unitray_representation_of_D3}
+
+#### $D_3$ 에 대한 유니타리 표현
+</br>
+
+@fig-Group_d3_2 에서 보인 $D_3$ 군에 대한 유니타리 표현은 다음과 같다.
+
+$$
+\begin{aligned}
+U(I)&= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix},  & 
+U(C_3) &= \begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix},  &
+U(C_3^2) &= \begin{bmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}\\
+U(C_2) &= \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix},  & 
+U(C_2') &= \begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & \frac{1}{2}\end{bmatrix},&
+U(C_2''') &= \begin{bmatrix} -\frac{1}{2} & \frac{-\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & \frac{1}{2}\end{bmatrix}
+\end{aligned}
+$${#eq-Group_unitray_representation_of_D3_1}
+
+
+이 $U$ 가 준동형사상이라는 것은 쉽게 보일 수 있다. 준동형사상의 성질로부터 자연스럽게 알 수 있는 것이기도 하지만 위의 행렬 표현은 다음과 같은 특징을 가진다.
+
+- 항등 연산은 항등행렬로 표현된다. 즉 $U(e) = I$.
+- 연산의 역원은 역행렬로 표현된다. 즉 $U(a^{-1}) = (U(a))^{-1}$.
+
+어떤 군의 표현은 faithful 하지 않은데 $D_3$ 에 대해
+
+- $\forall g\in D_3,\quad U(g)=I$,
+- $U(I)=U(C_3)=U(C_3^2)=I$, $U(C_2)=U(C_2')= U(C_2')= -I$ 
+
+인 두가지 경우가 그러하다.
+
+
+:::
+
+</div>
+</br>
+
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_equivalent_representation}
+
+
+$U\in \text{Hom}(G,\,GL_n(\F))$ 라고 하자. $V\in GL_n(\F)$ 가 유니타리 행렬일 때 $U':G \to GL_n(\F)$ 가 
+
+$$
+U'(g):= VU(g)V^{-1}
+$$
+
+이라면 $U'$ 역시 $G$ 의 표현이다.
+
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+$U'\in \text{Hom}(G,\, GL_n(\F))$ 임을 보이면 된다. 
+
+$$
+U'(g_1g_2) = VU(g_1)U(g_2)V^{-1} = (VU(g_1)V^{-1}) (VU(g_2)V^{-1}) =U'(g_1)U'(g_2)
+$$
+
+이므로 증명 끝. $\square$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_equivalent_representation}
+#### 동등한 표현
+
+@thm-Group_equivalent_representation 에서의 $U$ 와 $U'$ 의 관계가 성립한다면 이 두 표현은 **동등하다(be equivalent)** 라고 한다.
+
+:::
+:::
+
+</br>
+
+### 대각화와 기약 표현
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_irreducible_representation}
+#### 기약 표현
+
+군의 전체 성분의 행렬 표현이 어떤 유니타리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 **reducible** 하다고 한다. reducible 하지 않은 표현으르 **기약표현 (irreducible representation)** 이라고 한다.
+
+:::
+:::
+
+</br>
+
+군 $G$ 의 어떤 표현 $U^K\in \text{Hom}(G,\, GL_n(\F))$ 를 생각하자. 어떤 유니타리 변환에 의해 군의 모든 성분에 대한 행렬 표현이 동시에 같은 형태, 즉 같은 크기의 부분행렬들로 분해된다면 이 행렬표현은 reducible 하다. 
+
+이 블록 대각 행렬이 각각 $n_1 \times n_1, \ldots,\, n_m \times m_n$ 형태의 정사각 행렬이라고 하자. 그리고 $U^{K_i}(g)$ 가 $U^K (g)$ 의 $i$ 번째 블록대각행렬 즉 $n_i \times n_i$ 행렬을 취한다고 하자. 
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_equivalent_representation}
+
+위의 $U^{K_i}$ 역시 $G$ 의 표현이다.  
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+$U^K$ 가 블럭대각행렬화 표현이라고 하자. $g,\,g'\in G$ 에 대해 $U^{K_i}(g) U^{K_i}(g') = U^{K_i}(gg')$ 임은 쉽게 보일 수 있다. 따라서 $U^{K_i}$ 역시 $G$ 의 표현이다. $\square$
+
+
+:::
+
+
+
+이 때 행렬의 direct sum $\oplus$ 를 이용하면 모든 $g\in G$ 에 대해
+
+$$
+U^K(g) = U^{K_1}(g) \oplus U^{K_2}(g) \oplus \cdots \oplus U^{K_n}(g) = \bigoplus_{i=1}^N U^{K_i}(g)
+$$
+
+임을 알 수 있다. 
+
+
+다음은 일단 증명 없이다룬다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_representation_of_abelian}
+
+$G$ 가 아벨군이면 $G$ 의 기약표현은 $1\times 1$ 행렬이다.
+
+:::
+
+</div>
+
+
+
+
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_unitray_representation_of_D3_2}
+
+#### $D_3$ 에 대안 reducible representation
+</br>
+
+$D_3$ 를 아래와 같이 $3\times 3$ 행렬로 표현 할 수 있다.
+
+$$
+\begin{aligned}
+U(I)&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \qquad & 
+U(C_3) &= \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}, \quad &
+U(C_3^2) &=  \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}\\
+U(C_2) &= \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}, \qquad & 
+U(C_2') &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix},&
+U(C_2''') &= \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}.
+\end{aligned}
+$$ {#eq-Group_unitray_representation_of_D3_2}
+
+유니타리 행렬 $V$ 를 아래와 같이 정하자.
+
+$$
+V = \begin{bmatrix} \frac{1}{\sqrt{3}} &  \frac{1}{\sqrt{3}} &  \frac{1}{\sqrt{3}} \\  \frac{1}{\sqrt{6}} &  -\sqrt{\frac{2}{3}} &  \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}} \end{bmatrix}.
+$$
+
+
+$U'(g) = VU(g)V^{-1}$ 라고 하면,
+
+$$
+\begin{aligned}
+U'('I)&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, & 
+U'(C_3) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ 0 & -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{bmatrix},  &
+U(C_3^2) &=  \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ 0 & \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}\\
+U'(C_2) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{bmatrix},  & 
+U'(C_2') &=\begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ 0 & \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix},&
+U'(C_2''') &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ 0 & -\frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}.
+\end{aligned}
+$${#eq-Group_block_diagonalized_unitray_representation_of_D3_2}
+
+이며 모든 군의 성분에 대한 행렬표현이 블럭 대각화 되었다. 
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_unitray_representation_of_D3_2}
+
+#### 연속군에 대한 표현
+</br>
+
+@exm-Group_rotation_of_plane_circle 에서 차수가 1인 연속군을 보였다. 이 연속군은 
+
+$$
+U(\varphi) = \begin{bmatrix} \cos \varphi & \sin \varphi \\ - \sin \varphi & \cos \varphi \end{bmatrix}
+$$
+
+로 표현 할 수 있다. 이 군은 아벨군이므로 @prp-Group_representation_of_abelian 에 따라 위의 표현은 reducible 하다. 유니타리 행렬 $V$ 
+
+$$
+V= \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 & -i \\ 1 & i\end{bmatrix}
+$$
+
+에 대해 $U'(g) = VU(g)V$ 라고 하면
+
+$$
+U'(\varphi ) = \begin{bmatrix} e^{i\varphi} & 0 \\ 0 & e^{-i\varphi}\end{bmatrix}
+$$
+
+이므로 $U_1(\varphi) = e^{i\varphi},\, U_{-1} (\varphi) = e^{-i\varphi}$ 에 대해 $U = U_1 \oplus U_2$ 이다. 
+
+
+:::
+
+</div>
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_1}
+#### Arfken 17.2.1
+
+$U$ 가 $G$ 의 표현일 때 $a\in G$ 에 대해 $\left[U(a)\right]^{-1}= U\left(a^{-1}\right)$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$U$ 는 동형사상이므로 $G$ 의 항등원 $e$ 에 대해 $U(e) = I$ 이다. $I=U(e)=U(aa^{-1})=U(a)U(a^{-1})$ 이므로 $U(a^{-1})= \left[U(a)\right]^{-1}$ 이다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_2}
+#### Arfken 17.2.2
+
+아래의 행렬 $I,\,A,\, B$ 는 @exm-Group_viergrouppe 의 표현임을 보여라.
+
+$$
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix},\qquad A=\left[\begin{array}{rr} -1 & 0 \\ 0 & -1\end{array}\right], \qquad B=\begin{bmatrix} 0 & 1 \\1 & 0 \end{bmatrix} 
+$$
+:::
+
+</div></br>
+
+::: {.solution}
+
+trivial
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_3}
+#### Arfken 17.2.3
+@exr-Arfken_17_2_2 의 viergrouppe 표현은 reducible 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$V = \dfrac{1}{\sqrt{2}}\left[\begin{array}{rr}  1 & 1 \\ 1 & -1 \end{array}\right]$ 에 대해
+
+$$
+VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 & 0 \\ 0 & -1\end{array}\right]
+$$
+
+이다. 
+
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_4}
+#### Arfken 17.2.4
+</br>
+($a$) 어떤 군에 대한 행렬표현을 얻었다면 이 행렬들에 대한 행렬식으로 1차원 표현을 구성 할 수 있다는 것을 보여라.
+
+($b$) @eq-Group_unitray_representation_of_D3_1 과 행렬식을 이용하여  $D_3$ 의 1차원 표현을 구하라
+
+:::
+
+</div></br>
+
+::: {.solution}
+trivial
+:::
+

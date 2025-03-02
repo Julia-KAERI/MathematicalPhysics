@@ -13,12 +13,13 @@ book:
     - part : "벡터해석"
       chapters: 
         - src/vector calculus/vectorcalculus.qmd
-    - part : "텐서 해석과 군"
+    - part : "텐서 해석"
       chapters :
       - src/tensor/tensor01.qmd
       - src/tensor/tensor02.qmd
-      - src/tensor/group01.qmd
-
+    - part : "군"
+      chapters :
+      - src/group/group01.qmd
     - part: "미분방정식"
       chapters :
       - src/differential equation/ode.qmd

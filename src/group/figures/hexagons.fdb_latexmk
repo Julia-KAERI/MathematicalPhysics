@@ -1,13 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1740281282 "/Users/jiyongso/Documents/Projects/MathematicalPhysics/src/tensor/figures/d3_2.tex" "d3_2.pdf" "d3_2" 1740281283 0
-  "/Users/jiyongso/Documents/Projects/MathematicalPhysics/src/tensor/figures/d3_2.tex" 1740281282 2512 5bab1b1aa91dc5efa70e4316e95f2aba ""
-  "/dev/null" 1740281273 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1740899098 "/Users/jiyongso/Documents/Projects/MathematicalPhysics/src/group/figures/hexagons.tex" "hexagons.pdf" "hexagons" 1740899099 0
+  "/Users/jiyongso/Documents/Projects/MathematicalPhysics/src/group/figures/hexagons.tex" 1740807930 1438 24818e9151ec177de183b6e4fd7fc0b8 ""
+  "/dev/null" 1740899098 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -114,10 +111,10 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1688180853 7883464 d57d5cc84d616d37fd126c42e853bbc9 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "/usr/local/texlive/texmf-local/web2c/texmf.cnf" 1654406346 73 d7d431d574bcc3da163525eacf5f12b1 ""
-  "d3_2.aux" 1740281283 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "d3_2.tex" 1740281282 2512 5bab1b1aa91dc5efa70e4316e95f2aba ""
+  "hexagons.aux" 1740899099 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "hexagons.tex" 1740807930 1438 24818e9151ec177de183b6e4fd7fc0b8 ""
   (generated)
-  "d3_2.aux"
-  "d3_2.log"
-  "d3_2.pdf"
+  "hexagons.aux"
+  "hexagons.log"
+  "hexagons.pdf"
   (rewritten before read)
