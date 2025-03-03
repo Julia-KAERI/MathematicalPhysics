@@ -6,7 +6,7 @@ crossref:
   chapters: true
 --- 
 
-{{< include ../latexmacros.qmd >}}
+{{< include ../../latexmacros.qmd >}}
 
 </br>
 
@@ -20,19 +20,38 @@ crossref:
 
 집합 $G$ 에 이항연산 $\cdot$ 이 정의되어 있으며, 
 
-1. $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
+&emsp;($1$) $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
 
-2. $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
+&emsp;($2$) $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
 
-3. $\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e$
+&emsp;($3$) $\forall a\in G,\, \exists a^{-1}\in G,\, a\cdot a^{-1} = a^{-1}\cdot a = e$
 
-일 때 집합 $G$ 를 **군** 이라 하고 $(G,\cdot)$ 이라고 쓴다. 이 때 2. 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. $a\cdot a'=a'\cdot a=e$ 인 $a'$ 을 $a$ 의 역원 이라고 한다. $a$ 의 역원은 $a^{-1}$ 이라 쓴다.
+일 때 집합 $G$ 를 **군** 이라 하고 $(G,\cdot)$ 이라고 쓴다. 이 때 ($2$) 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. ($3$) 의 $a^{-1}$ 을 $a$ 의 역원 이라고 한다.
 :::
 :::
 
 </br> 
 
-군에서의 연산 기호는 $a\circ b$, $a \cdot b$, $ab$, $a+b$ 처럼 다양한 기호가 사용 될 수 있다. 기호를 생략하는 $ab$ 와 같은 표기법도 많이 사용된다. 군을 정의할 때 집합과 연산을 묶어 $(G,\, \circ)$ 와 같은 표기법도 흔히 사용된다. 
+군에서의 연산 기호는 $a\circ b$, $a \cdot b$, $ab$, $a+b$ 처럼 다양한 기호가 사용 될 수 있다. 기호를 생략하는 $ab$ 와 같은 표기법도 많이 사용된다. 군을 정의할 때 집합과 연산을 묶어 $(G,\, \cdot)$ 와 같은 표기법도 흔히 사용된다. 
+
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_left_and_right_inverse}
+
+$g\in G$ 에 대해 $xg=gy=1_G$ 이면 $x=y$ 이다. 
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+$x=x1_G =x(gy)= (xg)y = 1_Gy = y$. $\square$
+:::
+
 
 </br>
 
@@ -45,13 +64,13 @@ $G$ 가 군이다.
 
 2. 어떤 대칭 연산의 경우 군을 이루며 성분의 개수가 무한개 이지만 유한개의 연속인 변수로 기술 될 수 있다. 이런 군을 **연속군 (continuous group)** 이라고 한다.
 
-2. $G$ 가 유한군일 때 원소의 갯수를 $G$ 의 **차수(order)** 라고 하며 $|G|$ 로 표기한다. $G$ 가 연속군일 경우 연속인 변수의 개수를 **차수(order)** 라고 한다.
+3. $G$ 가 유한군일 때 원소의 갯수를 $G$ 의 **차수(order)** 라고 하며 $|G|$ 로 표기한다. $G$ 가 연속군일 경우 연속인 변수의 개수를 **차수(order)** 라고 한다.
 
-3. $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
+4. 일반적으로 $ab\ne ba$ 이다. 그러나 $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
 
-4. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 또한 $G$ 는 $g$ 에 의해 생성되는 군이라고 표현하기도 한다.
+5. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 또한 $G$ 는 $g$ 에 의해 생성되는 군이라고 표현하기도 한다.
    
-5. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
+6. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
 
 :::
 :::
@@ -73,6 +92,74 @@ $$
 
 
 :::
+:::
+
+</br>
+
+### 잉여류와 라그랑쥬 정리
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_coset}
+
+#### 잉여류
+
+군 $G$ 와 부분군 $H$ 를 생각하자. $g\in G$ 에 대해 $gH = \{gh:h\in H\}$ 를 $g$ 가 속하는 $H$ 의 **왼쪽 잉여류(left coset)** 이라고 한다. 마찬가지로 $g$ 가 속하는 $H$ 의 **오른쪽 잉여류(right coset)** $Hg=\{hg:h\in H\}$ 를 정의 할 수 있다.
+
+:::
+:::
+
+</br>
+
+잉여류로 여려가지를 증명하는데 왼쪽 잉여류를 쓰든 오른쪽 잉여류를 쓰든 상관 없지만 보통 왼쪽 잉여류를 많이 사용한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-Group_coset_and_equivalence_relation}
+
+$H\le G$ 일 때 
+
+&emsp;($1$) $G$ 가 유한군이면 $H$ 에 의한 잉여류가 포함하는 원소의 수는 모두 같다.
+
+&emsp;($2$) $H$ 에 의한 두 잉여류는 같거나 서로소이다.
+
+&emsp;($3$) $G$ 의 모든 원소는 단 하나의 $H$ 에 의한 잉여류에 포함된다.
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+($1$) $H$ 자체도 잉여류이다. $gH$ 에 대해 $gh_1 = gh_2$ 이면 $h_1=h_2$ 이다. 따라서 모든 잉여류가 포함하는 원소의 갯수는 $H$ 의 원소의 갯수와 같다.
+
+($2$) $g_1H$ 와 $g_2H$ 를 생각하자. $x\in g_1H \cap g_2H$ 라고 하자. $x=g_1h_1=g_2h_2$ 인 $h_1,\,h_2\in H$ 가 존재하며 따라서 $g_1 = g_2h_2h_1^{-1}$ 이다. 즉 $h\in H$ 에 대해 $g_1h=g_2h_2h_1^{-1}h \in g_2H$ 이므로 $g_1H \subset g_2H$ 이다. 같은 논리로 $g_2H \subset g_1H$ 임을 보일 수 있다. 즉 $g_1H\cap g_2H \ne \varnothing$ 이면 $g_1H=g_2H$ 이다. 
+
+($3$) $g\in G$ 이면 $g\in gH$ 이다. ($2$) 에 의해 모든 잉여류는 같거나 서로소이므로 $g$ 는 단 하나의 잉여류에만 포함된다. $\square$
+
+:::
+
+</br>
+
+이로부터 자연스럽게 다음의 결론이 나온다.
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_Lagrange_theorem}
+
+#### 라그랑쥬 정리
+
+$G$ 가 유한군이고 $H\le G$ 이면 $|H|$ 는 $|G|$ 를 나눈다.
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+$G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉여류는 같거나 서로소이다. 따라서 $H$ 에 의한 잉여류가 $m$ 개라면 $m|H| = |G|$ 이다. $\square$
+
 :::
 
 </br>
@@ -110,7 +197,7 @@ $$
 | $C_2$ |  $C_2$ | $C_2'$ | $C_2''$ | $I$ | $C_3$ | $C_3^2$ |
 | $C_2'$ |  $C_2'$ | $C_2''$ | $C_2$ | $C_3^2$ | $I$ | $C_3$ |
 | $C_2''$ |  $C_2''$ | $C_2$ | $C_2'$ | $C_3$ | $C_3^2$ | $I$ |
-: {#tbl-Group_d3, tbl-colwidths="[30,30,30,30,30,30,30]"}
+: {#tbl-Group_d3 tbl-colwidths="[30,30,30,30,30,30,30]" .striped .hover}
 
 </br>
 
@@ -356,7 +443,7 @@ $\bf{r}=(la,\,ma,\,na)$ 에 동일한 원자가 위치한 정육면체 결정을
 ::: {#def-Group_general_linear_group}
 #### 일반선형군과 특수선형군
 
-$n\times n$ 행렬의 집합 $\mathbb{F}^{m \times m}$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
+체 $\F$ 위에서 정의된 $n\times n$ 행렬의 집합 $\mathbb{F}^{n \times n}$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
 
 :::
 :::
@@ -420,8 +507,6 @@ $${#eq-Group_unitray_representation_of_D3_1}
 </div>
 </br>
 
-
-
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_equivalent_representation}
@@ -474,7 +559,7 @@ $$
 ::: {#def-Group_irreducible_representation}
 #### 기약 표현
 
-군의 전체 성분의 행렬 표현이 어떤 유니타리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 **reducible** 하다고 한다. reducible 하지 않은 표현으르 **기약표현 (irreducible representation)** 이라고 한다.
+군의 전체 성분에 대한 행렬 표현 각각이 어떤 유니타리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 **reducible** 하다고 한다. reducible 하지 않은 표현을 **기약표현 (irreducible representation)** 이라고 한다.
 
 :::
 :::
@@ -516,7 +601,7 @@ $$
 임을 알 수 있다. 
 
 
-다음은 일단 증명 없이다룬다.
+다음은 일단 증명 없이 다룬다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -681,9 +766,7 @@ $$
 
 :::
 
-
 </br>
-
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_17_2_4}
@@ -701,3 +784,317 @@ $$
 trivial
 :::
 
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_5}
+#### Arfken 17.2.5
+
+$n$ 개의 성분을 가진 순환군 $C_n$ 은 $\{\exp(2\pi is/n): s=1,\ldots,\, n\}$ 으로 표현 될 수 있음을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+tiviial
+:::
+
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Arfken_17_2_6}
+#### Arfken 17.2.6
+
+아래 그림과 같이 정사각형을 자기 자신으로 변환시키는 아래 그림과 같은 회전 변환으로 이루어진 군($D_4$) 에 대해 $2 \times 2$ 행렬 표현을 구하라. 또한 Cayley table 을 만들라.
+
+![$D_4$ 대칭군, 출처 : @arfken2013mathematical](figures/D4.png){#fig-Group-D4 width=250}
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$x$ 축에 대한 $\pi$ 회전을 $\sigma_x$ 라고 하고, $y$ 축에 대한 $\pi$ 회전을 $\sigma_y$ 라고 하면
+
+$$
+\sigma_x = \left[\begin{array}{rr} -1 & 0 \\ 0 & 1 \end{array}\right],\qquad \sigma_y = \left[\begin{array}{rr} 1 & 0 \\ 0 & -1 \end{array}\right].
+$$
+
+이며 $\sigma_x^2 = \sigma_y^2 = I,\, \sigma_x \sigma_y = \sigma_y \sigma_x -I$ 이다. 
+
+$x=y$ 직선 에 대한 $\pi$ 회전을 $\sigma_d$,\, $x=-y$ 에 대한 $\pi$ 회전을 $\sigma_{d2}$ 라고 하면,
+
+$$
+\sigma_d = \left[\begin{array}{rr} 0 & 1 \\ 1 & 0 \end{array}\right],\qquad \sigma_{d2} = \left[\begin{array}{rr} 0 & -1 \\ -1 & 0 \end{array}\right].
+$$
+
+이며 $\sigma_d^2=\sigma_{d2}^2 = I$ 이고 $\sigma_d \sigma_{d2}= \sigma_{d2}\sigma = -I$ 이다.
+
+$C_4$ 는 $z$ 축에 대한 반시계방향 $\pi/4$ 회전이며
+
+$$
+C_4 =\left[\begin{array}{rr} 0 & 1 \\ -1 & 0 \end{array}\right]
+$$
+
+이고, $C_4^2 = -I$ 이며, $C_4^3 = -C_4$ 이다. Cayley 테이블은 나중에.
+
+:::
+
+</br>
+
+## 대칭과 물리
+
+해밀토니안 $H = T+V$ 인 양자역학 시스템을 생각하자 그리고 해밀토니안 $H$ 에 어떤 기하학적인 대칭이 존재한다고 하자. 운동 에너지 $T$ 는 회전과 병진에 대해 자체로 불변이기 때문이기 때문에 해밀토니안 $H$ 에 어떤 공간대칭성이 있다면 포텐셜 에너지 $V$ 의 대칭성이다.
+
+해밀토니안 $H$ 의 대칭성이라는 것은 어떤 symmetry group 에 대해 $H$ 가 불변임을 의미한다. 이 symmetry group 을 $S_H$ 라고 하면 $\forall \mathcal{R}\in S_H$ 에 대해 $\mathcal{R}(H) = H$ 임을 의미한다. $H$ 에 대해 $E$ 의 고유값을 갖는 고유상태 $\phi$ 를 생각하자. 가 $H$ 의 고유상태이고 고유값 $E$ 를 가질 때 $\mathcal{R}(\phi)$ 도 그러하다는 것을 의미한다. 즉
+
+$$
+H\phi = E\phi \iff H\mathcal{R}(\phi) = E\mathcal{R}(\phi).
+$$ {#eq-Group_transformation_and_hamiltonian_eigenstate}
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_even_hamiltonian}
+@eq-Group_transformation_and_hamiltonian_eigenstate 를 보자. 양자역학에서 대칭 변환 $\mathcal{R}$ 은 유니타리 연산자로 표현되며 이를 $R$ 이라고 하자. 그렇다면
+
+$$
+\mathcal{R}(H)= R^\dagger HR,\qquad \mathcal{R}(\phi)=R\phi
+$$
+
+이다. 해밀토니안이 $\mathcal{R}$ 에 대해 불변이라면
+
+$$
+R^\dagger H R = H \iff HR = RH
+$$
+
+임을 의미한다. 따라서
+
+$$
+H\mathcal{R}(\phi) = HR\phi = R(R^\dagger HR)\phi = R(H\phi)= RE\phi = ER\phi = E\mathcal{R}(\phi)
+$$
+
+이다. 
+
+:::
+</div>
+
+</br>
+
+
+이 symmetry group $S_H$ 의 성분을 차례로 적용함으로서 $H$ 에 대해 같은 고유값 $E$ 를 갖는 고유상태의 집합을 구성 할 수 있다. 즉 
+
+$$
+\{\mathcal{R}(\phi) : \mathcal{R}\in S_H\}
+$$ {#eq-Group_degenerated_states}
+
+가 그것이다. 만약 모든 $\mathcal{R} \in S_H$ 에 대해 $\mathcal{R}(\phi) = \phi$ 라면 $\phi$ 가 $H$ 의 전체 대칭성을 가진다고 표현하며 고유값 $E$ 에 대한 고유벡터는 $\phi$ 하나 뿐이다. 그렇지 않다면 $E$ 에 대한 고유벡터의 집합은 $\phi$ 이외의 파동함수를 포함며 각각의 고유벡터는 부분적인 $H$ 의 대칭성 가운데 일부를 표현하고, 전체 고유벡터의 집합은 전체 대칭성을 표현한다. 예를 들어 수소원자의 $p$ 상태는 3개의 벡터로 이루어진 집합이다. $p$ 파동함수 각각은 수소 원자의 구면 대칭을 표현하지 못하지만 이 세 $p$ 파동함수의 선형결합은 임의의 방향성을 표현 할 수 있다.
+
+
+이제 @eq-Group_degenerated_states 로 부터 얻은 벡터의 집합을 이용하여 정규직교 기저 $\mathcal{B}=\{\phi_i:i=1,\ldots,\,N\}$ 를 얻었다고 하자. 그렇다면 $\mathcal{R}(\phi_i)$ 를 $\{\phi_i\}$ 의 선형결합으로 표현 할 수 있으며, 따라서 
+
+$$
+\mathcal{R}(\phi_i) = \sum_j R_{ji} \phi_j
+$$ {#eq-Group_symm_1}
+
+라고 쓸 수 있다. 또한 $\mathcal{T}\in S_H$ 에 대해
+
+$$
+\mathcal{T}(\phi_j) = \sum_j T_{kj} \phi_k
+$$ {#eq-Group_symm_2}
+
+라면
+$$
+\mathcal{T}(\mathcal{R}(\phi_i)) = \sum_j R_{ji}\mathcal{T}(\phi_j) = \sum_{kj} T_{kj}R_{ji}\phi_k = (TR)_{ki}\phi_k
+$$ {#eq-Group_symm_3}
+
+로 쓸 수 있다. 이제 우리는 $\mathcal{T},\,\mathcal{R}$ 변환은 $T,\, R$ 로 표현되는 행렬 형태가 됨을 알 수 있다. 
+
+
+지금까지는 이 행렬 표현이 reducible 인지 irreducible 인지 알지 하며 기약 표현 여부는 해밀토니안의 구체적 형태와 처음의 파동함수 $\phi$ 에 의해 결정된다. 만약 이 표현이 reducible 이라면 $\{\phi_i\}$ 에 의한 벡터공간은 $S_H$ 의 irreducible reprensentation 을 이루는 부분공간의 직합으로 표현 할 수 있다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_even_hamiltonian}
+
+1차원 해밀토니안 $H=H(x)$ 가 $H(-x)=H(x)$ 이며 다른 대칭은 없다고 하자. $\sigma$ 를 반전(reflection) 연산자라고 하자. 즉 $\sigma (f)(x) = f(-x)$ 이다(반전에 $\sigma$ 기호를 관습적으로 많이 사용한다). 이 때의 symmetry group 을 $C_s$ 라고 표현하며 따라서 $C_s = \{I,\, \sigma\}$ 이다. 그렇다면 이 군에 대한 연산은 다음과 같이 정리된다.
+
+$$
+I = I^2 = \sigma^2,\qquad, I\sigma = \sigma I.
+$$
+
+따라서 $C_s$ 는 아벨군이며, @prp-Group_representation_of_abelian 에 따라 두개의 1차원 기약표표현을 갖는다. 
+
+&emsp;($1$) $A_1$ : $U(I)=U(\sigma)=1$,
+
+&emsp;($2$) $A_2$ : $U(I)=1,\, U(\sigma)=-1$.
+
+따라서 $H$ 의 고유함수는 우함수(even) 이거나 기함수(odd) 이다. 다른 대칭성이 없으므로 이 두 even/odd 고유함수는 degenerated 되어 있다. 
+
+우함수인 $\phi(x)$ 부터 시작했다고 하자. $I\phi = \sigma \phi = \phi$ 이므로 이 부분공간의 기저는 $\phi$ 뿐이다. 이 기저로 구성된 표현은 $A_1$ 표현이며, 따라서 이 기저를 $A_1$ 기저라고 이름붙일 수 있다. 이제 기함수인 $\psi(x)$ 부터 시작한다면 $I\psi = \psi,\, \sigma \psi = - \psi$ 이므로 이 부분공간의 기저는 $\psi$ 뿐이다. $A_1$ 기저라는 이름을 붙일 때와 마찬가지로 $\psi$ 를 $A_2$ 기저라고 이름 붙일 수 있다.
+
+만약 우함수도 기함수도 아닌 $\chi$ 로부터 시작한다고 하자. 그렇다면 $I\chi = \chi,\, \sigma \chi (x)= \chi(-x)$ 이다. $\chi$ 가 우함수도, 기함수도 아니므로 $\chi(x)$ 와 $\chi(-x)$ 는 선형 독립이며 따라서 기저는 2개의 벡터 $\chi(x)$ 와 $\chi(-x)$ 로 이루어진다. 이 때
+
+$$
+\chi_e (x)= \dfrac{\chi(x) + \chi(-x)}{\sqrt{2}},\qquad \chi_o (x)= \dfrac{\chi(x) - \chi(-x)}{\sqrt{2}}
+$$
+
+라고 하면 $\chi_e(-x) = \chi_e(-x)$, $\chi_o(-x) = - \chi_o(x)$ 이며 $\chi_e(x)$ 와 $\chi_o$ 는 선형독립이며, 따라서 $\chi_e$ 는 $A_1$ 기저, $\chi_o$ 는 $A_2$ 기저라고 부를 수 있다.
+
+이렇게 해밀토니안의 대칭성을 이용하면 해밀토니안의 해에 대한 중요한 성질을 알 수 있으며, 해를 찾는 데 도움이 된다.
+
+:::
+
+</div>
+</br>
+
+해밀토니안이 기하학적으로 대단히 대칭적이더라도 해밀토니안의 해는 이 대칭성을 따르는 해 뿐만 아니라 덜 대칭적인 해도 가질수 있다는 것을 알게 되었다. @exm-Group_unitray_representation_of_D3_2 에서 보았듯이 $D_3$ 대칭을 가진 해밀토니안은 완전히 대칭적인 $A_1$ 고유함수와 부호과 교대되는 $A_2$ 고유함수들을 가질 수 있다. 
+
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_hamiltonian_with_d3_symmetry}
+
+#### $D_3$ 대칭성을 가진 해밀토니안
+
+기하학적으로 $D_3$ 대칭성을 가진 해밀토니안을 생각하자. 그리고 우리의 해는 근사적으로 정삼각형 각각의 꼭지점 $\bf{R}_i$ 근처에 분포하는 전자 오비탈의 선형 결합으로 표현된다고 하자. 즉, $\bf{r}_i = \bf{r}-\bf{R}_i$, $r_i = \|\bf{r}_i\|$ 이고 $\phi$ 가 구면 대칭 오비탈 함수일 때,
+
+$$
+\psi(\bf{r}) = a_1 \phi(r_1)  + a_2 \phi(r_2) + a_3 \phi(r_3)
+$$
+
+로 기술된다고 하자. 
+
+$$
+\psi_0 = \dfrac{\phi(r_1) + \phi(r_2) + \phi(r_3)}{\sqrt{3}}
+$$
+
+는 $D_3$ 군의 $A_1$ 표현에 대한 기저이다. 3개의 오비탈이 있으므로 $\psi_0$ 와 선형 독립인 다른 두 벡터를 구성해야 한다. 다음과 같이 하자.
+
+$$
+\psi_1 = \dfrac{-\phi(r_1) + 2\phi(r_2) - \phi(r_3)}{\sqrt{6}},\qquad \psi_2 = \dfrac{\phi(r_1) - \phi(r_3)}{\sqrt{2}}.
+$$
+
+이 둘중 어느것도 $A_1$ 이나 $A_2$ 와 같은 뚜렷한 대칭성을 보여주지 않으며, 따라서 $D_3$ 의 $2\times 2$ 기약표현에 대한 기저가 되어야 한다. 이를 $E$ 라고 부른다. 
+
+$$
+\mathcal{R}\psi(\bf{r}) = \langle \bf{r}|\mathcal{R}\psi\rangle = \langle \mathcal{R}^\dagger \bf{r}|\psi\rangle = \psi(R^{-1}\bf{r})
+$$
+
+임을 생각하자. @fig-Group_d3 로부터 $C_3 \psi_2 = \dfrac{-\phi(r_2)+\phi(r_3)}{\sqrt{2}}$ 임을 안다. 또한 
+
+$$
+C_3 \psi_1 = -\dfrac{-\psi_1 + \sqrt{3}\psi_2}{2} = \dfrac{-\phi(r_1) + \phi(r_2) }{\sqrt{2}}
+$$
+
+
+$$
+$$
+
+
+
+:::
+
+</div>
+</br>
+
+
+</br>
+
+## 이산군
+
+### Classes
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_conjugate}
+#### Conjugate, Conjugate Class
+
+군 $G$ 에서 $a,\,b\in G$ 에 대해 $\exists g\in G,\, gag^{-1}=b$ 일 때 $a$ 와 $b$ 는 서로 conjugate 라고 한다. 어떤 $a\in G$ 에 대해 $\{gag^{-1}:g\in G\}$ 를 $a$ 에 의한 **conjugate class** 라고 한다.
+:::
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_conjugate_and_equivalent_class}
+
+군 $G$ 를 생각하자. 그리고 $a$ 와 $b$ 가 conjugate 이면 $a\sim b$ 라고 표기하자.
+
+&emsp;($1$) $a,\,b,\,c\in G$ 에 대해 $c\sim a,\, c \sim b$ 이면 $a \sim b$ 이다.
+
+&emsp;($2$) 모든 $G$ 의 원소는 최소한 하나의 conjugate class 에 포함된다.
+
+&emsp;($3$) $a,\,b\in G$ 가 같은 conjuggate class 에 된다는 것과 서로 conjugate 인 것은 동치이다.
+
+&emsp;($4$) $G$ 의 두 conjugate class 는 동일하거나 서로소이다.
+
+&emsp;($5$) $G$ 는 conjugate class 들로 분할된다.
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+($1$) $c=g_1ag_1^{-1}$, $c=g_2bg_2^{-1}$ 이면 $a=(g_1^{-1}g_2)b(g_1^{-1}g_2)^{-1}$ 이므로 $a\sim b$ 이다.
+
+($2$) $G$ 의 항등원 $e$ 에 대해 $g= ege^{-1}$ 이므로 $g$ 는 $g$ 에 의해 생성되는 conjugate class 에 포함된다.
+
+($3$) $a,\,b$ 가 $x$ 에 의한 conjugate class 에 포함된다면 $a\sim x,\, b \sim x$ 이므로 ($1$) 에 의해 $a \sim b$ 이다. $a \sim b$ 이고 $a$ 가 $x$ 에 의한 conjugate class 에 포함된다면 $b\sim x$ 이므로 $b$ 역시 포함된다. $b$ 가 $x$ 에 의한 conjugate class 에 포함된다면 같은 이유로 $a$ 역시 포함된다. 
+
+
+($4$) $A = \{gag^{-1}:g\in G\},\,B=\{gbg^{-1}:g\in G\}$ 이며 $x\in A \cap B$ 라고 하자. $x\sim a,\, x\sim b$ 이므로 $a\sim b$ 이다. 즉 $A=B$ 이다.
+
+
+($4$) ($2$), ($3$) 에 따라 자명하다. $\square$
+:::
+
+</br>
+
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_trace_of_representation}
+
+군 $G$ 의 $a,\,b$ 가 같은 class 에 포함된다면 $a,\,b$ 의 행렬표현에서의 trace 는 같다.
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+정사각 행렬 $M$ 에 대한 trace 를 $\tr (M)$ 이라고 하자. $g$ 에 대한 행렬표현 $U$ 를 생각하자. $b=gag^{-1}$ 일 때 $A=U(a),\, B=U(b),\, G=U(g)$ 라고 하자. $B=GAG^{-1}$ 이며 임의의 정사각 행렬 $XY$ 에 대해 $\text{tr}(XY)= \text{tr}(YX)$ 이므로
+
+$$
+\text{tr}(B) = \tr (GAG^{-1})= \tr (G^{-1}GA)= \tr (A)
+$$
+
+이다. $\square$
+
+:::
+
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_character}
+#### Character
+
+군 $G$ 과 그 표현 $K$ 가 주어졌다. $g\in G$ 에 대해 $\tr(U^K(g))$ 를 $g$ 의 $K$ 에서의 **character** 라고 하고 $\Gamma^K(g)$ 라고 쓴다. 
+
+:::
+:::
