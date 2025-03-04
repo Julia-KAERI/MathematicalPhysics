@@ -77,24 +77,30 @@ $G$ 가 군이다.
 
 </br>
 
+
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_homomorphism}
+::: {#def-Group_product_group}
+#### 곱군 
 
-#### 동형사상과 준동형사상
-
-두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
+$G,\,F$ 가 군일 때 
 
 $$
-\forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
+G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 $$
 
-일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다.
+에 대한 연산을 
 
+$$
+(g_1,\,f_1)(g_2,\,f_2) = (g_1g_2,\,f_1f_2)
+$$
+
+로 정의하면 $G\otimes F$ 역시 군이 되며 $G \otimes F$ 를 $G$ 와 $F$ 에 의한 **곱군(direct product group)** 이라고 한다.
 
 :::
 :::
 
 </br>
+
 
 ### 잉여류와 라그랑쥬 정리
 
@@ -308,6 +314,30 @@ $$
 </div>
 
 </br>
+
+### 동형사상과 준동형 사상
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_homomorphism}
+
+#### 동형사상과 준동형사상
+
+두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
+
+$$
+\forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
+$$
+
+일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다.
+
+
+:::
+:::
+
+</br>
+
+
 
 ### 연습문제 {.unnumbered}
 
