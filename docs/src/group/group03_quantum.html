@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>수리물리학 - 8&nbsp; 편미분 방정식의 이론적 배경</title>
+<title>수리물리학 - 6&nbsp; 군과 양자역학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/complex/complex1.html" rel="next">
-<link href="../../src/differential equation/ode.html" rel="prev">
+<link href="../../src/differential equation/ode.html" rel="next">
+<link href="../../src/group/group02_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential equation/ode.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential equation/pde.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group03_quantum.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -211,7 +211,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group03_quantum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/group/group03_quantum.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
   </div>
 </li>
@@ -234,7 +234,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
@@ -279,30 +279,16 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#대표적인-편미분방정식" id="toc-대표적인-편미분방정식" class="nav-link active" data-scroll-target="#대표적인-편미분방정식"><span class="header-section-number">1</span> 대표적인 편미분방정식</a></li>
-  <li><a href="#계-편미분-방정식" id="toc-계-편미분-방정식" class="nav-link" data-scroll-target="#계-편미분-방정식"><span class="header-section-number">2</span> 1계 편미분 방정식</a>
-  <ul class="collapse">
-  <li><a href="#특성곡선법" id="toc-특성곡선법" class="nav-link" data-scroll-target="#특성곡선법"><span class="header-section-number">2.1</span> 특성곡선법</a></li>
-  </ul></li>
-  <li><a href="#계-pde" id="toc-계-pde" class="nav-link" data-scroll-target="#계-pde"><span class="header-section-number">3</span> 2계 PDE</a>
-  <ul class="collapse">
-  <li><a href="#계-pde-의-분류" id="toc-계-pde-의-분류" class="nav-link" data-scroll-target="#계-pde-의-분류"><span class="header-section-number">3.1</span> 2계 PDE 의 분류</a></li>
-  <li><a href="#경계조건" id="toc-경계조건" class="nav-link" data-scroll-target="#경계조건"><span class="header-section-number">3.2</span> 경계조건</a></li>
-  </ul></li>
-  <li><a href="#변수분리법" id="toc-변수분리법" class="nav-link" data-scroll-target="#변수분리법"><span class="header-section-number">4</span> 변수분리법</a>
-  <ul class="collapse">
-  <li><a href="#데카르트-좌표계에서" id="toc-데카르트-좌표계에서" class="nav-link" data-scroll-target="#데카르트-좌표계에서"><span class="header-section-number">4.1</span> 데카르트 좌표계에서</a></li>
-  <li><a href="#원통좌표계에서" id="toc-원통좌표계에서" class="nav-link" data-scroll-target="#원통좌표계에서"><span class="header-section-number">4.2</span> 원통좌표계에서</a></li>
-  </ul></li>
+  <li><a href="#대칭과-물리" id="toc-대칭과-물리" class="nav-link active" data-scroll-target="#대칭과-물리"><span class="header-section-number">6.1</span> 대칭과 물리</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential equation/ode.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential equation/pde.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group03_quantum.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></h1>
 </div>
 
 
@@ -319,238 +305,113 @@ window.Quarto = {
 </header>
 
 
-<section id="대표적인-편미분방정식" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="대표적인-편미분방정식"><span class="header-section-number">1</span> 대표적인 편미분방정식</h2>
-<table class="table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 38%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">이름</th>
-<th style="text-align: center;">방정식</th>
-<th style="text-align: left;">비고</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">라플라스 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\nabla^2 \psi = 0\)</span></td>
-<td style="text-align: left;">전기자기학, 유체역학, 열전달, 중력</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">포아송 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\nabla^2 \psi = -\rho/\varepsilon_0\)</span></td>
-<td style="text-align: left;">source term 이 있는 전기/자기 현상</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">헬름홀츠 방정식, 시간 독립적인 확산 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\nabla^2 \psi \pm k^2 \psi  = 0\)</span></td>
-<td style="text-align: left;">고체의 탄성파와 음파, 전자기파, 원자력 발전</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">시간 의존적인 확산방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\nabla^2 \psi = \dfrac{1}{a^2}\dfrac{\partial \psi}{\partial t}\)</span></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">시간 의존적인 고전 파동 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{c^2}\dfrac{\partial^2 \psi}{\partial t^2} = \nabla^2 \psi\)</span></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">클라인-고든 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(\partial^2 \psi = -\mu^2 \psi\)</span></td>
-<td style="text-align: left;">상대론적 양자 역학</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">시간 독립적인 슈레딩거 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(i\hbar \dfrac{\partial \psi}{\partial t} =  -\dfrac{\hbar^2}{2m}\nabla^2 \psi + V\psi\)</span></td>
-<td style="text-align: left;">양자역학</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">시간 의존적인 슈레딩거 방정식</td>
-<td style="text-align: center;"><span class="math inline">\(-\dfrac{\hbar^2}{2m}\nabla^2 \psi + V\psi = E\psi\)</span></td>
-<td style="text-align: left;">양자역학</td>
-</tr>
-</tbody>
-</table>
+<div class="hidden">
+<p>% %</p>
+%
+<!-- \newcommand{\hom}{\text{Hom}}
+\newcommand{\iso}{\text{Iso}}
+\newcommand{\aut}{\text{Aut}} -->
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
 <p><br></p>
-</section>
-<section id="계-편미분-방정식" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="계-편미분-방정식"><span class="header-section-number">2</span> 1계 편미분 방정식</h2>
-<section id="특성곡선법" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="특성곡선법"><span class="header-section-number">2.1</span> 특성곡선법</h3>
-<p>상미분방정식과 같이 선형 편미분 연산자를 <span class="math inline">\(\mathcal{L}\)</span> 이라고 하자. 다음과 같이 주어진 편미분 방정식을 생각하자.</p>
-<p><span id="eq-pde_1st_example"><span class="math display">\[
-\mathcal{L}\varphi = a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} = 0.
-\tag{1}\]</span></span></p>
-<p>이 경우 <span class="math inline">\(s=ax+by,\, t= bx-ay\)</span> 로 선형 변환을 해 주면,</p>
-<p><span id="eq-pde_1st_example_2"><span class="math display">\[
-\begin{aligned}
-0 &amp;= a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} = a \left(\dfrac{\partial \varphi}{\partial s}\dfrac{\partial s}{\partial x}+\dfrac{\partial \varphi}{\partial t}\dfrac{\partial t}{\partial x}\right) + b\left(\dfrac{\partial \varphi}{\partial s}\dfrac{\partial s}{\partial y}+\dfrac{\partial \varphi}{\partial t}\dfrac{\partial t}{\partial y}\right) \\
-&amp;= (a^2+b^2)\dfrac{\partial \varphi}{\partial s}
-\end{aligned}
-\tag{2}\]</span></span></p>
-<p>이 되며, 따라서 <span class="math inline">\(\varphi\)</span> 는 <span class="math inline">\(t\)</span> 의 함수이다. 즉, 임의의 <span class="math inline">\(C^1\)</span> 함수 <span class="math inline">\(f\)</span> 에 대해 <span class="math inline">\(\varphi(x,\,y) = f(bx - ay)\)</span> 이며 다른 조건은 더이상 찾을 수 없다. 즉 <a href="#eq-pde_1st_example" class="quarto-xref">식&nbsp;<span>1</span></a> 에서와 같은 편미분 방정식이 <span class="math inline">\(\dfrac{d\varphi}{ds}=0\)</span> 인 1계 상미분방정식으로 변한다. 이렇게 편미분 방정식을 하나 혹은 그 이상의 상미분 방정식으로 변환하는 것을 <strong>특성곡선법(method of characteristics)</strong> 이라고 하며 변화된 상미분 방정식 <strong>특성 곡선 (characteristic curve)</strong> 혹은 <strong>특성 곡면(characteristic curve)</strong> 라고 한다.</p>
-<p>이제 <a href="#eq-pde_1st_example" class="quarto-xref">식&nbsp;<span>1</span></a> 을 다시 보자. <span class="math inline">\(\mathbb{R}^2\)</span> 에서 생각하면 <span class="math inline">\(\boldsymbol{a} = (a,\,b)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{a} \cdot \nabla \varphi (x,\,y)=0\)</span> 인 함수 <span class="math inline">\(\varphi (x,\,y)\)</span> 를 찾는 것이다. <span class="math inline">\(\nabla \varphi (x,\,y)\)</span> 는 <span class="math inline">\(x,\,y\)</span> 에서 <span class="math inline">\(\varphi\)</span> 가 최대로 증가하는 벡터를 의미하며 <span class="math inline">\(\boldsymbol{a} \cdot \nabla \varphi = 0\)</span> 이므로 <span class="math inline">\(\boldsymbol{a}\)</span> 는 <span class="math inline">\(\varphi (x, y)=c\)</span> 인 방향을 의미한다. 즉 <span class="math inline">\(t=bx-ay\)</span> 를 상수로 놓으면 <span class="math inline">\(\varphi (x,\,y)\)</span> 도 상수이다. <em>– to be extended–</em></p>
-<p>이제 좀 더 일반적인 경우를 살펴보자. 아래와 같이 선형 미분 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대한 inhomogeneouse 미분방정식</p>
-<p><span id="eq-pde_2nd_example"><span class="math display">\[
-\mathcal{L}\varphi = a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} +q(x,\,y)\varphi = F(x, y)\,.
-\tag{3}\]</span></span></p>
-<p>를 앞에서와 같이 <span class="math inline">\(s=ax+by,\, t=bx-ay\)</span> 로 변수를 변환시키면,</p>
-<p><span id="eq-pde_2nd_example_2"><span class="math display">\[
-(a^2+b^2) \left(\dfrac{\partial \varphi}{\partial s}\right)+ \overline{q}(s, t) \varphi = \overline{F}(s, t)
-\tag{4}\]</span></span></p>
-<p>이다. 여기서 <span class="math inline">\(\overline{q},\,\overline{F}\)</span> 는 <span class="math inline">\(q(x,\,y),\, F(x,\,y)\)</span> 를 <span class="math inline">\(x=\dfrac{as}{a^2+b^2} + \dfrac{bt}{a^2+b^2}\)</span>, <span class="math inline">\(y=\dfrac{bs}{a^2+b^2}s - \dfrac{at}{a^2+b^2}\)</span> 로 변환시킨 함수이다. 이 경우 <a href="#eq-pde_2nd_example_2" class="quarto-xref">식&nbsp;<span>4</span></a> 는 <span class="math inline">\(\varphi\)</span> 의 <span class="math inline">\(s\)</span> 에 대한 1계 ODE 이며 <span class="math inline">\(t\)</span>-constant function 이 특성곡선이 된다.</p>
+<section id="대칭과-물리" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="대칭과-물리"><span class="header-section-number">6.1</span> 대칭과 물리</h2>
+<p>해밀토니안 <span class="math inline">\(H = T+V\)</span> 인 양자역학 시스템을 생각하자 그리고 해밀토니안 <span class="math inline">\(H\)</span> 에 어떤 기하학적인 대칭이 존재한다고 하자. 운동 에너지 <span class="math inline">\(T\)</span> 는 회전과 병진에 대해 자체로 불변이기 때문이기 때문에 해밀토니안 <span class="math inline">\(H\)</span> 에 어떤 공간대칭성이 있다면 포텐셜 에너지 <span class="math inline">\(V\)</span> 의 대칭성이다.</p>
+<p>해밀토니안 <span class="math inline">\(H\)</span> 의 대칭성이라는 것은 어떤 symmetry group 에 대해 <span class="math inline">\(H\)</span> 가 불변임을 의미한다. 이 symmetry group 을 <span class="math inline">\(S_H\)</span> 라고 하면 <span class="math inline">\(\forall \mathcal{R}\in S_H\)</span> 에 대해 <span class="math inline">\(\mathcal{R}(H) = H\)</span> 임을 의미한다. <span class="math inline">\(H\)</span> 에 대해 <span class="math inline">\(E\)</span> 의 고유값을 갖는 고유상태 <span class="math inline">\(\phi\)</span> 를 생각하자. 가 <span class="math inline">\(H\)</span> 의 고유상태이고 고유값 <span class="math inline">\(E\)</span> 를 가질 때 <span class="math inline">\(\mathcal{R}(\phi)\)</span> 도 그러하다는 것을 의미한다. 즉</p>
+<p><span id="eq-Group_transformation_and_hamiltonian_eigenstate"><span class="math display">\[
+H\phi = E\phi \iff H\mathcal{R}(\phi) = E\mathcal{R}(\phi).
+\tag{6.1}\]</span></span></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_even_hamiltonian" class="theorem example">
+<p><span class="theorem-title"><strong>예제 6.1</strong></span> <a href="#eq-Group_transformation_and_hamiltonian_eigenstate" class="quarto-xref">식&nbsp;<span>6.1</span></a> 를 보자. 양자역학에서 대칭 변환 <span class="math inline">\(\mathcal{R}\)</span> 은 유니타리 연산자로 표현되며 이를 <span class="math inline">\(R\)</span> 이라고 하자. 그렇다면</p>
+<p><span class="math display">\[
+\mathcal{R}(H)= R^\dagger HR,\qquad \mathcal{R}(\phi)=R\phi
+\]</span></p>
+<p>이다. 해밀토니안이 <span class="math inline">\(\mathcal{R}\)</span> 에 대해 불변이라면</p>
+<p><span class="math display">\[
+R^\dagger H R = H \iff HR = RH
+\]</span></p>
+<p>임을 의미한다. 따라서</p>
+<p><span class="math display">\[
+H\mathcal{R}(\phi) = HR\phi = R(R^\dagger HR)\phi = R(H\phi)= RE\phi = ER\phi = E\mathcal{R}(\phi)
+\]</span></p>
+<p>이다.</p>
+</div>
+</div>
 <p><br></p>
-</section>
-</section>
-<section id="계-pde" class="level2 page-columns page-full" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="계-pde"><span class="header-section-number">3</span> 2계 PDE</h2>
-<p>이제 LHODE 와 같이 선형 제차 편미분방정식을 LHPDE 라고 쓰자. 그리고 함수 <span class="math inline">\(u(x, y)\)</span> 에 대해 <span class="math inline">\(u_{x} = \dfrac{\partial u}{\partial x}\)</span>, <span class="math inline">\(u_{xy}= \dfrac{\partial^2 u}{\partial x\partial y}\)</span> 라고 쓰기로 하자. 이것은 타이핑을 많이 줄여준다.</p>
-<section id="계-pde-의-분류" class="level3 page-columns page-full" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="계-pde-의-분류"><span class="header-section-number">3.1</span> 2계 PDE 의 분류</h3>
-<section id="차원의-경우" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="차원의-경우">2차원의 경우</h4>
-<p>2차원에서의 2계 LHPDE 는 다음과 같은 꼴을 갖는다.</p>
-<p><span class="math display">\[
-Au_{xx} + Bu_{xy} + Cu_{yy} + Du_x + Eu_y + Fu = 0
-\]</span></p>
-<div class="page-columns page-full"><p>이 때 <span class="math inline">\(B^2-4AC &lt; 0\)</span> 일 때 이 PDE 를 <strong>타원형(elliptical)</strong> 이라고 하며, <span class="math inline">\(B^2-4AC&gt;0\)</span> 일 때 <strong>쌍곡선형(hyperbollic)</strong> 이라고 한다. <span class="math inline">\(B^2-4AC=0\)</span> 일 때는 <strong>포물선형(parabolic)</strong> 이라고 한다<span class="math inline">\(^\ast\)</span>. </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\ast\)</span> 그 이유는 <span class="math inline">\(Ax^2 +B xy + Cy^2 + Dx + Eu + F = 0\)</span> 이 <span class="math inline">\(B^2-4AC &lt;0\)</span> 일 때 타원, <span class="math inline">\(B^2-4AC&gt;0\)</span> 일 때 쌍곡선, <span class="math inline">\(B^2-4AC=0\)</span> 일 때 포물선인 데서 유래한다.</span></div></div>
-<p>예를 들어 실수 <span class="math inline">\(a,\,c\)</span> 에 대해</p>
-<p><span class="math display">\[
-a^2 u_{xx} - c^2 u_{yy}=0
-\]</span></p>
-<p>의 경우는 쌍곡선형이다. 이 미분방정식은 <span class="math inline">\((a\partial_x+c\partial_y) (a\partial_x-c\partial_y)u=0\)</span> 를 만족하며 <span class="math inline">\((a\partial_x+c\partial_y) u=0\)</span> 이거나 <span class="math inline">\((a\partial_x-c\partial_y) u=0\)</span> 의 해 모두 해가 된다. 즉 2차원 LHPDE 가 1차원 LHPDE 로 변형되었다. 또한 <span class="math inline">\(s=ax+by,\, t= bx-ay\)</span> 가 특성곡선이 된다.</p>
-<p>비슷한 경우로</p>
-<p><span class="math display">\[
-a^2 u_{xx} + c^2 u_{yy}=0
-\]</span></p>
-<p>의 경우는 타원형이다. 이 미분방정식은 <span class="math inline">\((a\partial_x+ic\partial_y) (a\partial_x-ic\partial_y)u=0\)</span> 를 만족한다.</p>
-<p><span class="math display">\[
-a^2 u_{xx} - 2acu_{xy} + c^2u_{yy}=0
-\]</span></p>
-<p>의 경우 <span class="math inline">\((a\partial_x - c\partial_y)^2y=0\)</span> 이다. 혹은</p>
-<p><span class="math display">\[
-u_{xx} +au_t=0
-\]</span></p>
-<p>인 경우도 포물선형이다.</p>
+<p>이 symmetry group <span class="math inline">\(S_H\)</span> 의 성분을 차례로 적용함으로서 <span class="math inline">\(H\)</span> 에 대해 같은 고유값 <span class="math inline">\(E\)</span> 를 갖는 고유상태의 집합을 구성 할 수 있다. 즉</p>
+<p><span id="eq-Group_degenerated_states"><span class="math display">\[
+\{\mathcal{R}(\phi) : \mathcal{R}\in S_H\}
+\tag{6.2}\]</span></span></p>
+<p>가 그것이다. 만약 모든 <span class="math inline">\(\mathcal{R} \in S_H\)</span> 에 대해 <span class="math inline">\(\mathcal{R}(\phi) = \phi\)</span> 라면 <span class="math inline">\(\phi\)</span> 가 <span class="math inline">\(H\)</span> 의 전체 대칭성을 가진다고 표현하며 고유값 <span class="math inline">\(E\)</span> 에 대한 고유벡터는 <span class="math inline">\(\phi\)</span> 하나 뿐이다. 그렇지 않다면 <span class="math inline">\(E\)</span> 에 대한 고유벡터의 집합은 <span class="math inline">\(\phi\)</span> 이외의 파동함수를 포함며 각각의 고유벡터는 부분적인 <span class="math inline">\(H\)</span> 의 대칭성 가운데 일부를 표현하고, 전체 고유벡터의 집합은 전체 대칭성을 표현한다. 예를 들어 수소원자의 <span class="math inline">\(p\)</span> 상태는 3개의 벡터로 이루어진 집합이다. <span class="math inline">\(p\)</span> 파동함수 각각은 수소 원자의 구면 대칭을 표현하지 못하지만 이 세 <span class="math inline">\(p\)</span> 파동함수의 선형결합은 임의의 방향성을 표현 할 수 있다.</p>
+<p>이제 <a href="#eq-Group_degenerated_states" class="quarto-xref">식&nbsp;<span>6.2</span></a> 로 부터 얻은 벡터의 집합을 이용하여 정규직교 기저 <span class="math inline">\(\mathcal{B}=\{\phi_i:i=1,\ldots,\,N\}\)</span> 를 얻었다고 하자. 그렇다면 <span class="math inline">\(\mathcal{R}(\phi_i)\)</span> 를 <span class="math inline">\(\{\phi_i\}\)</span> 의 선형결합으로 표현 할 수 있으며, 따라서</p>
+<p><span id="eq-Group_symm_1"><span class="math display">\[
+\mathcal{R}(\phi_i) = \sum_j R_{ji} \phi_j
+\tag{6.3}\]</span></span></p>
+<p>라고 쓸 수 있다. 또한 <span class="math inline">\(\mathcal{T}\in S_H\)</span> 에 대해</p>
+<p><span id="eq-Group_symm_2"><span class="math display">\[
+\mathcal{T}(\phi_j) = \sum_j T_{kj} \phi_k
+\tag{6.4}\]</span></span></p>
+<p>라면 <span id="eq-Group_symm_3"><span class="math display">\[
+\mathcal{T}(\mathcal{R}(\phi_i)) = \sum_j R_{ji}\mathcal{T}(\phi_j) = \sum_{kj} T_{kj}R_{ji}\phi_k = (TR)_{ki}\phi_k
+\tag{6.5}\]</span></span></p>
+<p>로 쓸 수 있다. 이제 우리는 <span class="math inline">\(\mathcal{T},\,\mathcal{R}\)</span> 변환은 <span class="math inline">\(T,\, R\)</span> 로 표현되는 행렬 형태가 됨을 알 수 있다.</p>
+<p>지금까지는 이 행렬 표현이 reducible 인지 irreducible 인지 알지 하며 기약 표현 여부는 해밀토니안의 구체적 형태와 처음의 파동함수 <span class="math inline">\(\phi\)</span> 에 의해 결정된다. 만약 이 표현이 reducible 이라면 <span class="math inline">\(\{\phi_i\}\)</span> 에 의한 벡터공간은 <span class="math inline">\(S_H\)</span> 의 irreducible reprensentation 을 이루는 부분공간의 직합으로 표현 할 수 있다.</p>
 <p><br></p>
-</section>
-<section id="다차원의-경우" class="level4">
-<h4 class="anchored" data-anchor-id="다차원의-경우">다차원의 경우</h4>
-<p>주로 2차원 공간 + 시간, 3차원 공간, 3차원 공간+시간 의 경우이며 이보다 많은 차원의 경우도 생각 할 수 있다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_even_hamiltonian" class="theorem example">
+<p><span class="theorem-title"><strong>예제 6.2</strong></span> 1차원 해밀토니안 <span class="math inline">\(H=H(x)\)</span> 가 <span class="math inline">\(H(-x)=H(x)\)</span> 이며 다른 대칭은 없다고 하자. <span class="math inline">\(\sigma\)</span> 를 반전(reflection) 연산자라고 하자. 즉 <span class="math inline">\(\sigma (f)(x) = f(-x)\)</span> 이다(반전에 <span class="math inline">\(\sigma\)</span> 기호를 관습적으로 많이 사용한다). 이 때의 symmetry group 을 <span class="math inline">\(C_s\)</span> 라고 표현하며 따라서 <span class="math inline">\(C_s = \{I,\, \sigma\}\)</span> 이다. 그렇다면 이 군에 대한 연산은 다음과 같이 정리된다.</p>
+<p><span class="math display">\[
+I = I^2 = \sigma^2,\qquad, I\sigma = \sigma I.
+\]</span></p>
+<p>따라서 <span class="math inline">\(C_s\)</span> 는 아벨군이며, <a href="group02_representation.html#prp-Group_representation_of_abelian" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에 따라 두개의 1차원 기약표표현을 갖는다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(A_1\)</span> : <span class="math inline">\(U(I)=U(\sigma)=1\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(A_2\)</span> : <span class="math inline">\(U(I)=1,\, U(\sigma)=-1\)</span>.</p>
+<p>따라서 <span class="math inline">\(H\)</span> 의 고유함수는 우함수(even) 이거나 기함수(odd) 이다. 다른 대칭성이 없으므로 이 두 even/odd 고유함수는 degenerated 되어 있다.</p>
+<p>우함수인 <span class="math inline">\(\phi(x)\)</span> 부터 시작했다고 하자. <span class="math inline">\(I\phi = \sigma \phi = \phi\)</span> 이므로 이 부분공간의 기저는 <span class="math inline">\(\phi\)</span> 뿐이다. 이 기저로 구성된 표현은 <span class="math inline">\(A_1\)</span> 표현이며, 따라서 이 기저를 <span class="math inline">\(A_1\)</span> 기저라고 이름붙일 수 있다. 이제 기함수인 <span class="math inline">\(\psi(x)\)</span> 부터 시작한다면 <span class="math inline">\(I\psi = \psi,\, \sigma \psi = - \psi\)</span> 이므로 이 부분공간의 기저는 <span class="math inline">\(\psi\)</span> 뿐이다. <span class="math inline">\(A_1\)</span> 기저라는 이름을 붙일 때와 마찬가지로 <span class="math inline">\(\psi\)</span> 를 <span class="math inline">\(A_2\)</span> 기저라고 이름 붙일 수 있다.</p>
+<p>만약 우함수도 기함수도 아닌 <span class="math inline">\(\chi\)</span> 로부터 시작한다고 하자. 그렇다면 <span class="math inline">\(I\chi = \chi,\, \sigma \chi (x)= \chi(-x)\)</span> 이다. <span class="math inline">\(\chi\)</span> 가 우함수도, 기함수도 아니므로 <span class="math inline">\(\chi(x)\)</span> 와 <span class="math inline">\(\chi(-x)\)</span> 는 선형 독립이며 따라서 기저는 2개의 벡터 <span class="math inline">\(\chi(x)\)</span> 와 <span class="math inline">\(\chi(-x)\)</span> 로 이루어진다. 이 때</p>
+<p><span class="math display">\[
+\chi_e (x)= \dfrac{\chi(x) + \chi(-x)}{\sqrt{2}},\qquad \chi_o (x)= \dfrac{\chi(x) - \chi(-x)}{\sqrt{2}}
+\]</span></p>
+<p>라고 하면 <span class="math inline">\(\chi_e(-x) = \chi_e(-x)\)</span>, <span class="math inline">\(\chi_o(-x) = - \chi_o(x)\)</span> 이며 <span class="math inline">\(\chi_e(x)\)</span> 와 <span class="math inline">\(\chi_o\)</span> 는 선형독립이며, 따라서 <span class="math inline">\(\chi_e\)</span> 는 <span class="math inline">\(A_1\)</span> 기저, <span class="math inline">\(\chi_o\)</span> 는 <span class="math inline">\(A_2\)</span> 기저라고 부를 수 있다.</p>
+<p>이렇게 해밀토니안의 대칭성을 이용하면 해밀토니안의 해에 대한 중요한 성질을 알 수 있으며, 해를 찾는 데 도움이 된다.</p>
+</div>
+</div>
 <p><br></p>
-</section>
-</section>
-<section id="경계조건" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="경계조건"><span class="header-section-number">3.2</span> 경계조건</h3>
-<p>일반적으로 경계조건은 세가지 가운데 한가지이다.</p>
-<ol type="1">
-<li>디리클레 경계 조건 : 경계에서의 함수값이 정해져 있는 경우.</li>
-<li>노이만 경계 조건 : 경계에서의 normal derivative 가 정해져 있는 경우.</li>
-<li>코시 경계 조건 : 디리클레와 노이만 경계조건이 모두 다 정해져 있는 경우. 보통은 미분방정식의 해를 너무 제한하기 때문에 사용하지 않는다.</li>
-</ol>
+<p>해밀토니안이 기하학적으로 대단히 대칭적이더라도 해밀토니안의 해는 이 대칭성을 따르는 해 뿐만 아니라 덜 대칭적인 해도 가질수 있다는 것을 알게 되었다. <a href="group02_representation.html#exm-Group_unitray_representation_of_D3_2" class="quarto-xref">예제&nbsp;<span>5.3</span></a> 에서 보았듯이 <span class="math inline">\(D_3\)</span> 대칭을 가진 해밀토니안은 완전히 대칭적인 <span class="math inline">\(A_1\)</span> 고유함수와 부호과 교대되는 <span class="math inline">\(A_2\)</span> 고유함수들을 가질 수 있다.</p>
 <p><br></p>
-</section>
-</section>
-<section id="변수분리법" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="변수분리법"><span class="header-section-number">4</span> 변수분리법</h2>
-<p><span class="math inline">\(n\)</span> 개의 변수에 대한 PDE 를 <span class="math inline">\(n\)</span> 개의 ODE 로 변환시키는 방법이다.</p>
-<section id="데카르트-좌표계에서" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="데카르트-좌표계에서"><span class="header-section-number">4.1</span> 데카르트 좌표계에서</h3>
-<p>다음과 같이 주어지는 3차원에서의 헬름홀츠 방정식을 생각하자. <span id="eq-pde-helmholtz_3d"><span class="math display">\[
-\nabla^2 \psi + k^2 \psi = 0.
-\tag{5}\]</span></span></p>
-<p>3차원 <span class="math inline">\((x,\,y,\,z)\)</span> 에서 정의되는 함수 <span class="math inline">\(\psi\)</span> 를 각각 <span class="math inline">\(x,\,y,\,z\)</span> 에 대한 함수의 곱으로 표현하자. 즉,</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_hamiltonian_with_d3_symmetry" class="theorem example">
+<p><span class="theorem-title"><strong>예제 6.3 (<span class="math inline">\(D_3\)</span> 대칭성을 가진 해밀토니안)</strong></span> 기하학적으로 <span class="math inline">\(D_3\)</span> 대칭성을 가진 해밀토니안을 생각하자. 그리고 우리의 해는 근사적으로 정삼각형 각각의 꼭지점 <span class="math inline">\(\boldsymbol{R}_i\)</span> 근처에 분포하는 전자 오비탈의 선형 결합으로 표현된다고 하자. 즉, <span class="math inline">\(\boldsymbol{r}_i = \boldsymbol{r}-\boldsymbol{R}_i\)</span>, <span class="math inline">\(r_i = \|\boldsymbol{r}_i\|\)</span> 이고 <span class="math inline">\(\phi\)</span> 가 구면 대칭 오비탈 함수일 때,</p>
 <p><span class="math display">\[
-\psi(x,\,y,\,z) = X(x)Y(y)Z(z)
+\psi(\boldsymbol{r}) = a_1 \phi(r_1)  + a_2 \phi(r_2) + a_3 \phi(r_3)
 \]</span></p>
-<p>라고 하자. <a href="#eq-pde-helmholtz_3d" class="quarto-xref">식&nbsp;<span>5</span></a> 를 보면 모든 미분항이 하나의 변수에 대한 미분항이다. 즉 <span class="math inline">\(\partial_x\partial_y\)</span> 같은 것이 없으며, 이 경우 각 변수에 대한 함수의 곱으로 표현했을 때 유용한 경우가 많다. 이렇게 다차원 함수를 각 변수에 대한 함수의 곱으로 표현하여 방정식을 푸는 것을 <strong>변수분리법(separation of variables)</strong> 이라고 한다. 이 경우 <a href="#eq-pde-helmholtz_3d" class="quarto-xref">식&nbsp;<span>5</span></a> 는 다음과 같다.</p>
+<p>로 기술된다고 하자.</p>
 <p><span class="math display">\[
-\dfrac{d^2 X(x)}{dx^2} Y(y)Z(z) + X(x)\dfrac{d^2Y(y)}{d^2y}Z(z) + X(x)Y(y)\dfrac{d^2 Z(z)}{dz^2} + k^2 X(x)Y(y)Z(z)=0.
+\psi_0 = \dfrac{\phi(r_1) + \phi(r_2) + \phi(r_3)}{\sqrt{3}}
 \]</span></p>
-<p>그렇다면,</p>
+<p>는 <span class="math inline">\(D_3\)</span> 군의 <span class="math inline">\(A_1\)</span> 표현에 대한 기저이다. 3개의 오비탈이 있으므로 <span class="math inline">\(\psi_0\)</span> 와 선형 독립인 다른 두 벡터를 구성해야 한다. 다음과 같이 하자.</p>
 <p><span class="math display">\[
-\dfrac{1}{X}\dfrac{d^2 X}{dx^2}= -k^2 - \dfrac{1}{Y}\dfrac{d^2Y}{dy^2} - \dfrac{1}{Z} \dfrac{d^2Z}{dz^2}
+\psi_1 = \dfrac{-\phi(r_1) + 2\phi(r_2) - \phi(r_3)}{\sqrt{6}},\qquad \psi_2 = \dfrac{\phi(r_1) - \phi(r_3)}{\sqrt{2}}.
 \]</span></p>
-<p>이다. 그런데 좌변은 <span class="math inline">\(x\)</span> 에 대한 함수이고 우변은 <span class="math inline">\(y,\,z\)</span> 에 대한 함수여야 하므로 이 식은 상수일 수 밖에 없다. 상수를 <span class="math inline">\(-l^2\)</span> 라 놓으면,</p>
+<p>이 둘중 어느것도 <span class="math inline">\(A_1\)</span> 이나 <span class="math inline">\(A_2\)</span> 와 같은 뚜렷한 대칭성을 보여주지 않으며, 따라서 <span class="math inline">\(D_3\)</span> 의 <span class="math inline">\(2\times 2\)</span> 기약표현에 대한 기저가 되어야 한다. 이를 <span class="math inline">\(E\)</span> 라고 부른다.</p>
 <p><span class="math display">\[
-\begin{aligned}
-\dfrac{1}{X}\dfrac{d^2 X}{dx^2} &amp;= -l^2 , \\
--k^2 - \dfrac{1}{Y}\dfrac{d^2Y}{dy^2} - \dfrac{1}{Z} \dfrac{d^2Z}{dz^2} &amp;= -l^2.
-\end{aligned}
+\mathcal{R}\psi(\boldsymbol{r}) = \langle \boldsymbol{r}|\mathcal{R}\psi\rangle = \langle \mathcal{R}^\dagger \boldsymbol{r}|\psi\rangle = \psi(R^{-1}\boldsymbol{r})
 \]</span></p>
-<p>이며, 이 중 두번째 식은,</p>
+<p>임을 생각하자. <a href="group01_introduction.html#fig-Group_d3" class="quarto-xref">그림&nbsp;<span>4.1</span></a> 로부터 <span class="math inline">\(C_3 \psi_2 = \dfrac{-\phi(r_2)+\phi(r_3)}{\sqrt{2}}\)</span> 임을 안다. 또한</p>
 <p><span class="math display">\[
-\dfrac{1}{Y}\dfrac{d^2Y}{dy^2}= -k^2+l^2 - \dfrac{1}{Z}\dfrac{d^2Z}{dz^2}
+C_3 \psi_1 = -\dfrac{-\psi_1 + \sqrt{3}\psi_2}{2} = \dfrac{-\phi(r_1) + \phi(r_2) }{\sqrt{2}}
 \]</span></p>
-<p>가 된다. 역시 좌변은 <span class="math inline">\(y\)</span> 에 대한 함수이고 우변은 <span class="math inline">\(z\)</span> 에 대한 함수이므로,</p>
 <p><span class="math display">\[
-\begin{aligned}
-\dfrac{1}{Y}\dfrac{d^2Y}{dy^2} &amp;= -m^2 , \\
--k^2+l^2 - \dfrac{1}{Z}\dfrac{d^2Z}{dz^2} &amp;= -m^2.
-\end{aligned}
 \]</span></p>
-<p>로 놓을 수 있다. 이제</p>
-<p><span class="math display">\[
-\dfrac{1}{Z} \dfrac{d^2Z}{dz^2}=-n^2
-\]</span></p>
-<p>로 놓으면,</p>
-<p><span class="math display">\[
-\dfrac{1}{X}\dfrac{d^2X}{dx^2} = -l^2,\qquad \dfrac{1}{Y}\dfrac{d^2Y}{dy^2} = -m^2, \qquad\dfrac{1}{Z} \dfrac{d^2Z}{dz^2}=-n^2,\qquad l^2+m^2+n^2=k^2
-\]</span></p>
-<p>를 얻는다. 각각의 <span class="math inline">\(l,\,m,\,n\)</span> 에 대한 3개의 상미분방정식의 해를 <span class="math inline">\(X_l(x),\, Y_m(y),\, Z_n(z)\)</span> 라고 하자. 당연히 <span class="math inline">\(l^2+m^2+n^2=k^2\)</span> 를 만족해야 한다. 그리고 <span class="math inline">\(\psi_{lmn}(x,\,y,\,z) = X_l(x)Y_m(y)Z_n(z)\)</span> 라고 하자. 이제 <a href="#eq-pde-helmholtz_3d" class="quarto-xref">식&nbsp;<span>5</span></a> 의 일반해를 다음과 같이 기술할 수 있다.</p>
-<p><span class="math display">\[
-\psi = \sum_{l, m} a_{lm} \psi_{lmn}.
-\]</span></p>
-<p>인덱스에서 <span class="math inline">\(n\)</span> 을 뺀 이유는 <span class="math inline">\(n^2 = k^2-l^2-m^2\)</span> 로 정해지기 때문이다.</p>
+</div>
+</div>
 <p><br></p>
-</section>
-<section id="원통좌표계에서" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="원통좌표계에서"><span class="header-section-number">4.2</span> 원통좌표계에서</h3>
-<p><span class="math inline">\((\rho,\, \phi,\, z)\)</span> 를 변수로 하는 실린더 좌표계에서의 핼름홀즈 방정식(<a href="#eq-pde-helmholtz_3d" class="quarto-xref">식&nbsp;<span>5</span></a>) 은</p>
-<p><span id="eq-helimholtz_3d_cylindrical"><span class="math display">\[
-\dfrac{1}{\rho}\dfrac{\partial }{\partial \rho} \left(\rho\dfrac{\partial \psi}{\partial \rho}\right) + \dfrac{1}{\rho^2}\dfrac{\partial^2 \psi}{\partial \phi^2} + \dfrac{\partial^2 \psi}{\partial z^2} + k^2 \psi = 0
-\tag{6}\]</span></span></p>
-<p>이 된다. 이 경우 <span class="math inline">\(\partial_\rho \partial_\phi\)</span> 같은 변수가 섞인 편미분항이 없기 때문에 변수분리법을 시도해 볼 수 있다.</p>
-<p><span class="math display">\[
-\psi (\rho,\, \phi,\, z) = P(\rho)\Phi (\phi) Z(z)
-\]</span></p>
-<p>라고 하자. 이 경우 <a href="#eq-helimholtz_3d_cylindrical" class="quarto-xref">식&nbsp;<span>6</span></a> 은</p>
-<p><span class="math display">\[
-\dfrac{\Phi Z}{\rho} \dfrac{d}{d\rho} \left(\rho \dfrac{dP}{d\rho}\right) + \dfrac{PZ}{\rho^2} \dfrac{d^2\Phi}{d\phi^2} + P\Phi \dfrac{d^2Z}{dz^2} + k^2 P \Phi Z = 0
-\]</span></p>
-<p>이 된다. 이 식은 <span class="math display">\[
-\dfrac{1}{Z(z)} \dfrac{d^2Z(z)}{dz^2} = - \dfrac{1}{\rho P(\rho)} \dfrac{d}{d\rho} \left(\rho \dfrac{dP(\rho)}{d\rho}\right) - \dfrac{1}{\rho^2 \Phi(\phi)} \dfrac{d^2\Phi(\phi)}{d\phi^2} -k^2
-\]</span></p>
-<p>이며, 좌변은 <span class="math inline">\(z\)</span> 의 함수, 우변은 <span class="math inline">\(\rho,\, \phi\)</span> 의 함수이므로 상수 일 수 밖에 없다. 이 값을 <span class="math inline">\(l^2\)</span> 라고 하면,</p>
-<p><span id="eq-pde_spherical_coord_Z"><span class="math display">\[
-\dfrac{d^2Z}{dz^2}= l^2 Z(z)
-\tag{7}\]</span></span></p>
-<p>이다. 또한</p>
-<p><span class="math display">\[
-\dfrac{1}{\rho P(\rho)} \dfrac{d}{d\rho} \left(\rho \dfrac{dP(\rho)}{d\rho}\right) + \dfrac{1}{\rho^2 \Phi(\phi)} \dfrac{d^2\Phi(\phi)}{d\phi^2} +k^2 = -l^2
-\]</span></p>
-<p>로부터 <span class="math inline">\(n^2 = k^2+l^2\)</span> 로 놓고 <span class="math inline">\(\rho^2\)</span> 를 곱하면,</p>
-<p><span class="math display">\[
-\dfrac{\rho}{P(\rho)}\dfrac{d}{d\rho} \left(\rho \dfrac{dP(\rho)}{d\rho}\right) + n^2\rho^2 = - \dfrac{1}{\Phi (\phi)}\dfrac{d^2 \Phi (\phi)}{d\phi^2}
-\]</span></p>
-<p>이 되며, 역시 <span class="math inline">\(m^2\)</span> 로 놓으면,</p>
-<p><span id="eq-pde_spherical_coord_Phi"><span class="math display">\[
-\dfrac{d^2\Phi}{d\phi^2} = -m^2 \Phi (\phi)
-\tag{8}\]</span></span></p>
-<p>와</p>
-<p><span id="eq-pde_spherical_coord_Rho"><span class="math display">\[
-\rho\dfrac{d}{d\rho} \left(\rho \dfrac{dP(\rho)}{d\rho}\right) + (n^2\rho^2 - m^2) P(\rho) = 0
-\tag{9}\]</span></span></p>
-<p>을 얻는다. 이 때 각에 대한 <a href="#eq-pde_spherical_coord_Phi" class="quarto-xref">식&nbsp;<span>8</span></a> 의 해인 <span class="math inline">\(\Phi\)</span> 는 <span class="math inline">\(\sin m\phi\)</span> 와 <span class="math inline">\(\cos m\phi\)</span> 의 선형결합이며 <a href="#eq-pde_spherical_coord_Rho" class="quarto-xref">식&nbsp;<span>9</span></a> 를 만족하는 함수 <span class="math inline">\(P(\rho)\)</span> 는 베셀 함수</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -965,13 +826,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/differential equation/ode.html" class="pagination-link" aria-label="상미분 방정식">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span>
+      <a href="../../src/group/group02_representation.html" class="pagination-link" aria-label="군과 표현">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/complex/complex1.html" class="pagination-link" aria-label="복소 함수의 기초">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/differential equation/ode.html" class="pagination-link" aria-label="상미분 방정식">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
