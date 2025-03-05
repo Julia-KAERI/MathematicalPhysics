@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>수리물리학 - 2&nbsp; 탠서 해석</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/tensor/tensor02.html" rel="next">
+<link href="../../src/vector calculus/vectorcalculus.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html">텐서 해석</a></li><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html">텐서 해석</a></li><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></a></li></ol></nav>
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">수리물리학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">벡터해석</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/vector calculus/vectorcalculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">텐서 해석</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/tensor/tensor01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/tensor/tensor02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">군</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/group/group01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군에 대한 첫번째 접근</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">미분방정식</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">복소함수</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#텐서의-기초" id="toc-텐서의-기초" class="nav-link active" data-scroll-target="#텐서의-기초"><span class="header-section-number">2.1</span> 텐서의 기초</a>
+  <ul class="collapse">
+  <li><a href="#공변벡터와-반변-벡터" id="toc-공변벡터와-반변-벡터" class="nav-link" data-scroll-target="#공변벡터와-반변-벡터"><span class="header-section-number">2.1.1</span> 공변벡터와 반변 벡터</a></li>
+  <li><a href="#벡터의-변환과-아인슈타인-표기법" id="toc-벡터의-변환과-아인슈타인-표기법" class="nav-link" data-scroll-target="#벡터의-변환과-아인슈타인-표기법"><span class="header-section-number">2.1.2</span> 벡터의 변환과 아인슈타인 표기법</a></li>
+  <li><a href="#랭크-2-텐서" id="toc-랭크-2-텐서" class="nav-link" data-scroll-target="#랭크-2-텐서"><span class="header-section-number">2.1.3</span> 랭크 2 텐서</a></li>
+  <li><a href="#텐서-연산" id="toc-텐서-연산" class="nav-link" data-scroll-target="#텐서-연산"><span class="header-section-number">2.1.4</span> 텐서 연산</a></li>
+  <li><a href="#스피너" id="toc-스피너" class="nav-link" data-scroll-target="#스피너"><span class="header-section-number">2.1.5</span> 스피너</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  </ul></li>
+  <li><a href="#pseudotensor-와-dual-tensor" id="toc-pseudotensor-와-dual-tensor" class="nav-link" data-scroll-target="#pseudotensor-와-dual-tensor"><span class="header-section-number">2.2</span> Pseudotensor 와 Dual Tensor</a>
+  <ul class="collapse">
+  <li><a href="#sec-Tensor_" id="toc-sec-Tensor_" class="nav-link" data-scroll-target="#sec-Tensor_"><span class="header-section-number">2.2.1</span> Pseudovector 와 pseudotensor</a></li>
+  <li><a href="#sec-Tensor_dual_tensor" id="toc-sec-Tensor_dual_tensor" class="nav-link" data-scroll-target="#sec-Tensor_dual_tensor"><span class="header-section-number">2.2.2</span> 쌍대 텐서</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
+  </ul></li>
+  <li><a href="#일반화된-좌표계에서의-텐서" id="toc-일반화된-좌표계에서의-텐서" class="nav-link" data-scroll-target="#일반화된-좌표계에서의-텐서"><span class="header-section-number">2.3</span> 일반화된 좌표계에서의 텐서</a>
+  <ul class="collapse">
+  <li><a href="#sec-Tensor_metric_tensor" id="toc-sec-Tensor_metric_tensor" class="nav-link" data-scroll-target="#sec-Tensor_metric_tensor"><span class="header-section-number">2.3.1</span> 메트릭 텐서</a></li>
+  <li><a href="#sec-Tensor_covariant_and_contravariant_basis" id="toc-sec-Tensor_covariant_and_contravariant_basis" class="nav-link" data-scroll-target="#sec-Tensor_covariant_and_contravariant_basis"><span class="header-section-number">2.3.2</span> 공변기저와 반변기저</a></li>
+  <li><a href="#sec-Tensor_covariant_representation_of_gradient" id="toc-sec-Tensor_covariant_representation_of_gradient" class="nav-link" data-scroll-target="#sec-Tensor_covariant_representation_of_gradient"><span class="header-section-number">2.3.3</span> 그래디언트의 공변 표현</a></li>
+  <li><a href="#sec-Tensor_covariant_derivatives" id="toc-sec-Tensor_covariant_derivatives" class="nav-link" data-scroll-target="#sec-Tensor_covariant_derivatives"><span class="header-section-number">2.3.4</span> 공변 미분</a></li>
+  <li><a href="#크리스토펠-기호의-계산" id="toc-크리스토펠-기호의-계산" class="nav-link" data-scroll-target="#크리스토펠-기호의-계산"><span class="header-section-number">2.3.5</span> 크리스토펠 기호의 계산</a></li>
+  <li><a href="#sec-Tensor_tensor_derivative_operator" id="toc-sec-Tensor_tensor_derivative_operator" class="nav-link" data-scroll-target="#sec-Tensor_tensor_derivative_operator"><span class="header-section-number">2.3.6</span> 텐서 미분 연산자</a></li>
+  <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div class="hidden">
+<p>% %</p>
+%
+<!-- \newcommand{\hom}{\text{Hom}}
+\newcommand{\iso}{\text{Iso}}
+\newcommand{\aut}{\text{Aut}} -->
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
+<section id="텐서의-기초" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="텐서의-기초"><span class="header-section-number">2.1</span> 텐서의 기초</h2>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-tensor_def_tensor" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 2.1 (스칼라, 벡터, 텐서)</strong></span> 벡터 공간 <span class="math inline">\(\mathbb{R}^d\)</span> 를 생각하자. 좌표의 회전 변환에 대해 불변인 양을 <strong>스칼라(scalar)</strong> 라고 한다. 좌표의 회전 변환에 대해 좌표와 같이 변환되는 양를 <strong>벡터(vector)</strong> 라고 한다. 스칼라는 <span class="math inline">\(1\)</span> 개의 수로 표현 될 수 있으며 벡터는 <span class="math inline">\(d\)</span> 개의 수로 표현 될 수 있다. 랭크 <span class="math inline">\(n\)</span> 텐서는 <span class="math inline">\(d^n\)</span> 개의 성분으로 표현 될 수 있으며, 좌표 변환에 대해 특별한 형태를 따르는 양을 말한다. 스칼라는 랭크 <span class="math inline">\(0\)</span> 텐서이며, 벡터는 랭크 <span class="math inline">\(1\)</span> 텐서이다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<section id="공변벡터와-반변-벡터" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="공변벡터와-반변-벡터"><span class="header-section-number">2.1.1</span> 공변벡터와 반변 벡터</h3>
+<div id="fig-Tensor_vectors_01" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Tensor_vectors_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/vectors.png" class="img-fluid figure-img" width="800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Tensor_vectors_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.1: 공변벡터와 반변벡터
+</figcaption>
+</figure>
+</div>
+<p>우리가 다루는 벡터공간에서 벡터는 기저에 대한 성분으로 표현 할 수 있다. 우선 2차원에서 생각해보자. <span class="math inline">\(\boldsymbol{\varepsilon}_1,\, \boldsymbol{\varepsilon}_2\)</span> 기저에서 벡터 <span class="math inline">\(A\)</span> 는</p>
+<p><span id="eq-Tensor_contravariant_representation_of_vector"><span class="math display">\[
+A=A^1\boldsymbol{\varepsilon}_1 +A^2\boldsymbol{\varepsilon}_2
+\tag{2.1}\]</span></span></p>
+<p>로 표현 할 수 있다. <span class="math inline">\(A^1,\,A^2\)</span> 는 반변 성분(contravariant components) 이라고 하고 <span class="math inline">\(\boldsymbol{\varepsilon}_1,\,\boldsymbol{\varepsilon}_2\)</span> 를 공변 기저(covariant basis) 라고 한다. 공변 기저 <span class="math inline">\(\boldsymbol{\varepsilon}_1,\, \boldsymbol{\varepsilon}_2\)</span> 에 대해 <span class="math inline">\(\boldsymbol{\varepsilon}_i \boldsymbol{\cdot \varepsilon}^j = \delta_{ij}\)</span> 가 되도록 하는 벡터 <span class="math inline">\(\boldsymbol{\varepsilon}^1,\, \boldsymbol{\varepsilon}^2\)</span> 찾을 수 있으며 선형 독립이고, 따라서 기저가 될 수 있다. 선형대수학에서는 이를 어떤 기저에 대한 쌍대 기저(dual basis) 라고 한다. 이 기저를 반변 기저(contravariant basis) 라 하며 이 기저에 대해</p>
+<p><span id="eq-Tensor_covariant_representation_of_vector"><span class="math display">\[
+A=A_1 \boldsymbol{\varepsilon}^1  + A_2 \boldsymbol{\varepsilon}^2
+\tag{2.2}\]</span></span></p>
+<p>로 표현 할 수 있다. 이 때 <span class="math inline">\(A_1,\,A_2\)</span> 를 공변 성분(covariant components) 라고 한다. 반변 기저에 대한 공변 성분을 <span class="math inline">\((A_1 ,\, A_2)\)</span> 와 같이 표현한 것을 공변 벡터라고 하고 공변기저에 대한 반변 성분을 <span class="math inline">\((A^1,\, A^2)\)</span> 와 같이 표현한 것을 반변 벡터 라고 한다. 그리고 공변/반변 벡터/성분을 각각 위첨자, 아래첨자로 위와같이 구별하는 것을 <strong>아인슈타인 표기법 (Einstein notation)</strong> 이라고 한다. 즉 위첨자는 반변 벡터나 반변 성분을 의미하며 아래첨자는 공변벡터나 공변 성분을 의미한다. 그리고 여기서는 2차원에서 표현했지만 실제로는 <span class="math inline">\(n\)</span> 차원으로 확장 할 수 있다.</p>
+<p><br></p>
+</section>
+<section id="벡터의-변환과-아인슈타인-표기법" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="벡터의-변환과-아인슈타인-표기법"><span class="header-section-number">2.1.2</span> 벡터의 변환과 아인슈타인 표기법</h3>
+<p><span class="math inline">\(\mathbb{R}^3\)</span> 에서의 선형 변환 <span class="math inline">\(\boldsymbol{R}\)</span> 에 의해 변위 벡터 <span class="math inline">\(\boldsymbol{x}\)</span> 의 좌표가 <span class="math inline">\(\begin{bmatrix} x_1 &amp; x_2 &amp; x_3\end{bmatrix}^T\)</span> 에서 <span class="math inline">\(\boldsymbol{x}'=\begin{bmatrix} x_1' &amp; x_2' &amp; x_3' \end{bmatrix}^T\)</span> 로 변환된다고 하자. 즉 <span class="math inline">\(\boldsymbol{x}'=\boldsymbol{Rx}\)</span> 라고 하자. 이로부터</p>
+<p><span id="eq-Tensor_transform_matrix_1"><span class="math display">\[
+R_{ij}= \dfrac{\partial x'_i}{\partial x_j}
+\tag{2.3}\]</span></span></p>
+<p>이며, 따라서</p>
+<p><span id="eq-Tensor_transform_of_coordinate"><span class="math display">\[
+x'_i = \sum_{j}R_{ij}x_j = \sum_j \dfrac{\partial x'_i}{\partial x_j}x_j
+\tag{2.4}\]</span></span></p>
+<p>이다. 이제 기저의 변환을 보자. 기저 <span class="math inline">\(\boldsymbol{b}\)</span> 가 <span class="math inline">\(\boldsymbol{b'}\)</span> 으로 변화한다면,</p>
+<p><span id="eq-Tensor_transform_of_basis"><span class="math display">\[
+(\boldsymbol{b}')_j = \boldsymbol{R}^{-1}\boldsymbol{b}_j
+\tag{2.5}\]</span></span></p>
+<p>이다. 기저를 <span class="math inline">\((1, 0, 0), (0, 1, 0),\, (0, 0, 1)\)</span> 에서 <span class="math inline">\((1, 0, 0),\, (0, 2, 0),\, (0, 0, 3)\)</span> 으로 바꾸는 변환을 생각하자. 이 변환을 나타내는 행렬 <span class="math inline">\(\boldsymbol{R}_s\)</span> 은</p>
+<p><span class="math display">\[
+\boldsymbol{R}_s = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1/2 &amp; 0 \\ 0 &amp; 0 &amp; 1/3\end{bmatrix}
+\]</span></p>
+<p>이다.</p>
+<p>벡터 <span class="math inline">\(\boldsymbol{a}\)</span> 는 좌표 변환에 대해 좌표와 같은 형태로(<a href="#eq-Tensor_transform_of_coordinate" class="quarto-xref">식&nbsp;<span>2.4</span></a>), 혹은 기저와 같은 형태로(<a href="#eq-Tensor_transform_of_coordinate" class="quarto-xref">식&nbsp;<span>2.4</span></a>) 변환한다. 벡터 <span class="math inline">\(\boldsymbol{a}\)</span> 가 좌표와 같은 형태로</p>
+<p><span class="math display">\[
+(a')_i = \sum_{j}\dfrac{\partial x'_i}{\partial x_j}a_j
+\]</span></p>
+<p>와 같이 변화한다면 이런 벡터를 <strong>반변 벡터(contravariant vector)</strong> 라고 한다.</p>
+<p>반대로 <span class="math inline">\(\mathbb{R}^3\)</span> 에서 정의된 스칼라 함수의 그래디언트를 생각하자.</p>
+<p><span class="math display">\[
+\left(\nabla' \phi\right)_i := \dfrac{\partial \phi}{\partial x'_i} = \sum_j \dfrac{\partial x_j}{\partial x'_i}\dfrac{\partial \phi}{\partial x_j}
+\]</span></p>
+<p>이 벡터는 기저와 같이 변환된다. 이런 벡터를 <strong>공변 벡터(covariant vector)</strong> 라고 한다.</p>
+<p>데카르트 좌표계, 즉 정규직교기저를 사용하는 좌표계에서는 반변벡터와 공변벡터가 동일하지만 데카르트 좌표계가 아닌 경우는 반변벡터와 공변벡터가 다르다.</p>
+<p><br></p>
+<section id="아인슈타인-표기법" class="level4">
+<h4 class="anchored" data-anchor-id="아인슈타인-표기법"><strong>아인슈타인 표기법</strong></h4>
+<p>반변벡터와 공변벡터를 엄격하게 다루기 위해 반변벡터는 위첨자를, 공변벡터는 아래첨자를 사용하여 아래와 같이 표기한다.</p>
+<p><span id="eq-Tensor_notatioin_of_contravariant_and_covariant_vector"><span class="math display">\[
+\begin{aligned}
+(A')^i &amp;= \sum_j \dfrac{\partial (x')^i}{\partial x^j} A^j,\qquad &amp;&amp;\boldsymbol{A}, \text{ a contravariant vector,}\\[0.3em]
+A'_i &amp;= \sum_j \dfrac{\partial x^j}{\partial (x')^i}A_j &amp;&amp; \boldsymbol{A}, \text{ a covariant vector.}
+\end{aligned}
+\tag{2.6}\]</span></span></p>
+<p>또한 위첨자와와 아래첨자에 같은 인덱스가 있다면 <strong>free index</strong> 라고 하며 <span class="math inline">\(\sum\)</span> 과 같은 표기 없이 합으로 표기한다. 즉</p>
+<p><span class="math display">\[
+A^iA_i := \sum_i A^iA_i
+\]</span></p>
+<p>이다. 이것은 아인슈타인이 최초로 사용했기 때문에 <strong>아인슈타인 표기법(Einstein notation)</strong> 이라고 한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="랭크-2-텐서" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="랭크-2-텐서"><span class="header-section-number">2.1.3</span> 랭크 2 텐서</h3>
+<p>좌표 변환에 대해 다음과 같이 변하는 텐서를 <strong>랭크 2 탠서(tensor of rank 2)</strong> 라고 한다.</p>
+<p><span id="eq-Tensor_rank_2_tensor"><span class="math display">\[
+\begin{aligned}
+(A')^{ij} &amp;= \sum_{k, l} \dfrac{\partial (x')^i}{\partial x^k}\dfrac{\partial (x')^j}{\partial x_l}A^{kl}, \\[0.3em]
+(B')^i_j &amp;= \sum_{k,l}\dfrac{\partial (x')^i}{\partial x^k}\dfrac{\partial x^l}{\partial (x')_j}B^k_l, \\[0.3em]
+(C')_{ij} &amp;= \sum_{k,l}\dfrac{\partial x^k}{\partial (x')_i}\dfrac{\partial x^l}{\partial (x')_j}C_{kl}.
+\end{aligned}
+\tag{2.7}\]</span></span></p>
+<p><span class="math inline">\(A^{kl}\)</span> 은 두 인덱스에 대해 반변벡터와 같은 방식으로 변환되고 <span class="math inline">\(C_{kl}\)</span> 은 두 인덱스에 대해 공변벡터와 같은 방식으로 변환된다는 것을 알 수 있다. 이에 맞추어 <span class="math inline">\(A^{kl}\)</span> 과 같이 변환되는 텐서를 <strong>반변텐서</strong>, <span class="math inline">\(C_{kl}\)</span> 과 같이 변환되는 텐서를 <strong>공변텐서</strong> 라고 부른다. <span class="math inline">\(B^k_l\)</span> 은 공변벡터와 반변벡터의 변환방식이 섞여 있으며 <strong>혼합 텐서(mixed tensor)</strong> 라고 부른다.</p>
+<p>이렇게 번잡한 개념과 표기법을 도입하는 것은 좌표계와 무관한 물리량을 엄밀하게 사용하기 위해서이다. 실제로 텐서의 도입으로 이것이 어떻게 이루어지는지는 이후에 보기로 하자.</p>
+<p>랭크 2 텐서는 자주 행렬로 아래와 같이 표기된다. <span class="math display">\[
+\boldsymbol{A} = \begin{bmatrix} A^{11} &amp; A^{12} &amp; A^{13}\\ A^{21} &amp; A^{22} &amp; A^{23} \\ A^{31} &amp; A^{32} &amp; A^{33} \end{bmatrix}
+\]</span></p>
+<p>하지만 행렬이 모두 랭크 2 텐서는 아니다. 텐서는 <a href="#eq-Tensor_rank_2_tensor" class="quarto-xref">식&nbsp;<span>2.7</span></a> 와 같이 변환되는 양이라는 것을 다시 한번 상기하자.</p>
+<p><a href="#eq-Tensor_transform_matrix_1" class="quarto-xref">식&nbsp;<span>2.3</span></a> 을 첨자 표기법에 따라 표기하면 변환행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 은 다음과 같다.</p>
+<p><span id="eq-Tensor_transform_matrix_2"><span class="math display">\[
+R_{ij}= \dfrac{\partial (x')^i}{\partial x^j}.
+\tag{2.8}\]</span></span></p>
+<p>그렇다면</p>
+<p><span class="math display">\[
+(A')^{ij} = \sum_{k, l} R_{ik} R_{jl} A^{kl} = \sum_{k, l} R_{ik} A^{kl} (R^T)_{lj}\qquad \text{or}\qquad \boldsymbol{A}' = \boldsymbol{RAR}^T.
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+<section id="랭크-2-텐서의-연산" class="level4">
+<h4 class="anchored" data-anchor-id="랭크-2-텐서의-연산"><strong>랭크 2 텐서의 연산</strong></h4>
+<p>랭크 2 반변 텐서의 합을 다음과 같이 정하는 것은 자연스럽다.</p>
+<p><span class="math display">\[
+A^{ij} + B^{ij} = C^{ij}
+\]</span></p>
+<p>단 합이 정의가 되려면 텐서가 같은 랭크여야 하며 같은 공간에서 정의되어야 하고 같은 공변성 혹은 반변성을 가져야 한다.</p>
+<p><br></p>
+</section>
+<section id="랭크-2-텐서의-대칭성" class="level4">
+<h4 class="anchored" data-anchor-id="랭크-2-텐서의-대칭성"><strong>랭크 2 텐서의 대칭성</strong></h4>
+<p>행렬과 같은 방법으로 대칭 텐서와 반대칭 텐서를 정의한다. 즉</p>
+<p><span class="math display">\[
+A^{kl} = A^{lk}
+\]</span></p>
+<p>이면 <strong>대칭 텐서(symmetric tensor)</strong> 라고 하고,</p>
+<p><span class="math display">\[
+A^{kl} = - A^{lk}
+\]</span></p>
+<p>이면 <strong>반대칭 텐서(antisymmetric tensor)</strong> 라고 한다.</p>
+<p>또한 텐서는 다음과 같이 대칭 텐서와 반대칭 텐서의 합으로 나타 낼 수 있다.</p>
+<p><span class="math display">\[
+A^{kl} = \dfrac{A^{kl} + A^{lk}}{2} + \dfrac{A^{kl}- A^{kl}}{2}.
+\]</span></p>
+<p><br></p>
+</section>
+<section id="크로네커-delta" class="level4">
+<h4 class="anchored" data-anchor-id="크로네커-delta"><strong>크로네커 <span class="math inline">\(\delta\)</span></strong></h4>
+<p>좌표 변환에 대해 크로네커 델타 <span class="math inline">\(\delta_{kl}\)</span> 는 2차 텐서이며 공변과 반변이 섞인 혼합 텐서임을 보일 수 있다. Chain rule 에 의해 (일단 지금까지의 <span class="math inline">\(\delta_{ij}\)</span> 표기를 사용하면)</p>
+<p><span class="math display">\[
+\delta'_{ij} = \sum_{k,l} \dfrac{\partial (x')^i}{\partial x^k} \dfrac{\partial x^l}{\partial (x')_j} \delta_{kl}
+\]</span></p>
+<p>임을 안다. 이제 위의 식을 제대로 쓰면, 그리고 아인슈타인 표기법에 따라 <span class="math inline">\(\sum\)</span> 표기를 제거하면</p>
+<p><span id="eq-Tensor_croneker_delta"><span class="math display">\[
+(\delta')^i_j = \dfrac{\partial (x')^i}{\partial x^k} \dfrac{\partial x^l}{\partial (x')_j} \delta^k_{l}
+\tag{2.9}\]</span></span></p>
+<p>이다. 또한</p>
+<p><span id="eq-Tensor_croneker_delta_def"><span class="math display">\[
+\delta^k_l := \dfrac{\partial x^k}{\partial x^l},\qquad (\delta')^{i}_j := \dfrac{\partial (x')^i}{\partial (x')^j}
+\tag{2.10}\]</span></span></p>
+<p>로 정의 할 수 있다. 크로네커 델타는 좌표 변환에 대해서도 그 성분이 변하지 않는 <strong>등방 텐서(isotropic tensor)</strong> 이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="텐서-연산" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="텐서-연산"><span class="header-section-number">2.1.4</span> 텐서 연산</h3>
+<section id="축약" class="level4">
+<h4 class="anchored" data-anchor-id="축약"><strong>축약</strong></h4>
+<p>다음을 보자.</p>
+<p><span class="math display">\[
+(B')^{i}_i = \dfrac{\partial (x')^i}{\partial x^k}\dfrac{\partial x^l}{\partial (x')^i} B^k_{l}= \dfrac{\partial x^l}{\partial x^k}B_l^k = \delta^l_k B_{l}^k =  B_{k}^k
+\]</span></p>
+<p>혼합 텐서의 경우 chain rule 로 인해 식을 위와 같이 간단하게 줄일 수 있다. 이것을 <strong>축약(contraction)</strong> 이라고 한다.</p>
+<p><br></p>
+</section>
+<section id="텐서곱" class="level4">
+<h4 class="anchored" data-anchor-id="텐서곱"><strong>텐서곱</strong></h4>
+<p>텐서의 랭크가 어떻든, 공변성(즉 위첨자, 아래첨자)이 어떻든 간에 두 텐서의 성분을 곱하여 새로운 텐서를 만들 수 있다. 이 때 원래 있던 두 텐서의 위첨자, 아래첨자는 그대로 유지된다. 예를 들어</p>
+<p><span class="math display">\[
+A^i_k B^j_{lm} = C^{ij}_{klm},\qquad A^j B^{i}_{lk} = F^{ij}_{lk}
+\]</span></p>
+<p>와 같은 방식이다. 위의 식에서 왼쪽 식에 대한 좌표변환을 보면</p>
+<p><span class="math display">\[
+\begin{aligned}
+(F')^{ij}_{lk} &amp;= \dfrac{\partial (x')^i}{\partial x^p}\dfrac{\partial (x')^j}{\partial x^q}\dfrac{\partial x^s}{\partial (x')^l}\dfrac{\partial x^s}{\partial (x')^k}A^q B^{p}_{st} \\[0.3em]
+&amp;= \left[\dfrac{\partial (x')^j}{\partial x^q} A^p \right]\left[\dfrac{\partial (x')^i}{\partial x^p}\dfrac{\partial x^s}{\partial (x')^l}\dfrac{\partial x^s}{\partial (x')^k} B^{p}_{st}\right]\\[0.3em]
+&amp;= (A')^j (B')^{i}_{lk}
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="역변환" class="level4">
+<h4 class="anchored" data-anchor-id="역변환"><strong>역변환</strong></h4>
+<p><span class="math display">\[
+(A')^j = \dfrac{\partial (x')^j}{\partial x_i}A^i
+\]</span></p>
+<p>이다. 또한 그 역변환은</p>
+<p><span class="math display">\[
+A^i = \dfrac{\partial x^i}{\partial (x')^j} (A')^j
+\]</span></p>
+<p>이다. 여기서 당연히</p>
+<p><span class="math display">\[
+\left[\dfrac{\partial (x')^j}{\partial x_i}\right]^{-1} \ne \dfrac{\partial x^i}{\partial (x')^j}
+\]</span></p>
+<p>이 아니며, 등호가 성립하는 것은 데카르트 좌표계에서 뿐이다.</p>
+<p><br></p>
+</section>
+<section id="몫-규칙" class="level4">
+<h4 class="anchored" data-anchor-id="몫-규칙"><strong>몫 규칙</strong></h4>
+<p>정해진 벡터 <span class="math inline">\(A_j\)</span>, <span class="math inline">\(B_i\)</span> 에 대해</p>
+<p><span id="eq-Tensor_quotient_rule_1"><span class="math display">\[
+K^{j}_i A_j = B_i
+\tag{2.11}\]</span></span></p>
+<p>를 만족하는 <span class="math inline">\(K_i^j\)</span> 를 구한다고 하자. <span class="math inline">\(K^j_i\)</span> 가 rank 2 혼합 텐서로 표기되어 있지만 아직까지는 위의 식이 좌표와 무관하게 성립한다는 것 이외의 성질은 모른다고 하자. 우리는 여기서 <span class="math inline">\(K_i^j\)</span> 가 혼합 텐서가 되는 것을 보일 것이다. 이 방정식이 좌표변환에 대해 불변이므로</p>
+<p><span id="eq-Tensor_quotient_rule_2"><span class="math display">\[
+(K')^{j}_i (A')_j = (B')_i
+\tag{2.12}\]</span></span></p>
+<p>역시 만족해야 한다. <span class="math inline">\(B\)</span> 가 공변 벡터이므로</p>
+<p><span id="eq-Tensor_quotient_rule_3"><span class="math display">\[
+(B')_i = \dfrac{\partial x^m}{\partial x^i} B_m =\dfrac{\partial x^m}{\partial x^i} K^j_m A_j = \dfrac{\partial x^m}{\partial x^i}K^j_m \dfrac{\partial (x')^n}{\partial x^j}(A')_n
+\tag{2.13}\]</span></span></p>
+<p>이다. 이 식을 <a href="#eq-Tensor_quotient_rule_2" class="quarto-xref">식&nbsp;<span>2.12</span></a> 와 같이 쓰기 위해 마지막 식의 인덱스 가운데 <span class="math inline">\(n\)</span> 과 <span class="math inline">\(j\)</span> 를 교환하자.</p>
+<p><span id="eq-Tensor_quotient_rule_4"><span class="math display">\[
+(B')_i = \dfrac{\partial x^m}{\partial x^i}K^n_m \dfrac{\partial (x')^j}{\partial x^n}(A')_j.
+\tag{2.14}\]</span></span></p>
+<p>위 식과 <a href="#eq-Tensor_quotient_rule_2" class="quarto-xref">식&nbsp;<span>2.12</span></a> 를 생각하면</p>
+<p><span id="eq-Tensor_quotient_rule_5"><span class="math display">\[
+\left[(K')^j_i - \dfrac{\partial x^m}{\partial x^i}\dfrac{\partial (x')^j}{\partial x^n} K^n_m\right](A')_j = 0
+\tag{2.15}\]</span></span></p>
+<p>임의의 <span class="math inline">\(A'\)</span> 에 대해 성립해야 하므로</p>
+<p><span class="math display">\[
+(K')^j_i = \dfrac{\partial x^m}{\partial x^i}\dfrac{\partial (x')^j}{\partial x^n} K^n_m
+\]</span></p>
+<p>이다. 즉 우리는 <span class="math inline">\(K\)</span> 에 대해 아무 것도 모른 채로 <a href="#eq-Tensor_quotient_rule_2" class="quarto-xref">식&nbsp;<span>2.12</span></a> 가 좌표변환에 무관하게 성립한다는 가정만으로 <span class="math inline">\(K\)</span> 가 rank 2 혼합 텐서가 될 수 밖에 없다는 것을 보였다. 이것은 일반적인 텐서 방정식에 대해 모두 성립하며 예를 들어</p>
+<p><span class="math display">\[
+KA_{ij}=B_{kl}
+\]</span></p>
+<p>를 만족하는 <span class="math inline">\(K\)</span> 는 <span class="math inline">\(K^{ij}_{kl}\)</span> 의 변환을 따르는 4차 텐서 일 수 밖에 없다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="스피너" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="스피너"><span class="header-section-number">2.1.5</span> 스피너</h3>
+<p>양자역학 이전까지 스칼라, 벡터 와 랭크 <span class="math inline">\(n\)</span> 텐서로 물리량을 모두 기술 할 수 있다고 생각했다. 그러나 특히 반정수 스핀 입자의 발견으로 이것이 불가능하다는 것을 알게 되었다. 스핀 <span class="math inline">\(0\)</span> 입자는 스칼라로, 스핀 <span class="math inline">\(1\)</span> 입자는 벡터로 기술 할 수 있지만 전자, 양성자, 중성자와 같은 스핀 <span class="math inline">\(1/2\)</span> 입자는 좌표 변환에 대해 지금까지 알아온 방법으로는 기술 할 수 없었다. 스피너에 대해서는 이후 군론에서 다루기로 하자.</p>
+<p><br></p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.1 (Arfken 4.1.1)</strong></span> 어떤 텐서가 어떤 좌표계에서 모든 성분이 <span class="math inline">\(0\)</span> 이라면 이 텐서는 모든 좌표계에서 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+(A')^{ijk..}_{lmn...} = \dfrac{\partial (x')^i}{\partial x^{i'}} \cdots \dfrac{\partial x^{l'}}{\partial (x')^l}\cdots A^{i'j'k'}_{l'm'n'} = 0
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.2 (Arfken 4.1.2)</strong></span> 두 텐서 <span class="math inline">\(A_{ij}\)</span>, <span class="math inline">\(B_{kl}\)</span> 이 어떤 좌표계에서(위첨자 <span class="math inline">\(0\)</span> 으로 표시한다)</p>
+<p><span class="math display">\[
+A^0_{ij} = B^0_{ij}
+\]</span></p>
+<p>라면 이 두 텐서는 동일함을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+A_{ij}= \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}A^0_{kl} = \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}B^0_{kl} = B_{ij}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.3 (Arfken 4.1.3)</strong></span> (문제가 이상하다..)</p>
+<p>4 차원 벡터 가 두 관성계에서 마지막 세 성분이 <span class="math inline">\(0\)</span> 이 된다. 이중 두번째 관성계는 첫번째 관성계에서 <span class="math inline">\(x_0\)</span> 축을 중심으로 한 회전이 아니라고 하자. 즉 최소한 하나의 <span class="math inline">\(\partial (x')^i/\partial x^0,\, (i=1,\,2,\,3)\)</span> 는 <span class="math inline">\(0\)</span> 이 아니다. 이 때 <span class="math inline">\(0\)</span> 번째 성분은 모든 좌표계에서 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>4차원 벡터 <span class="math inline">\(\boldsymbol{A}\)</span> 가 첫번째 좌표계에서 <span class="math inline">\((A^0,\, A^1,\,A^2,\,A^3)\)</span> 이며 두번째 좌표계에서 <span class="math inline">\((A'^0,\,A'^1,\,A'^2,\,A'^3)\)</span> 이고 <span class="math inline">\(A^1=A^2=A^3=A'^1=A'^2=A'^3=0\)</span> 이다. <span class="math inline">\((A')^0\)</span> 에 대해</p>
+<p><span class="math display">\[
+(A')^0 = \dfrac{\partial (x')^0}{\partial x^\alpha}A^{\alpha} =  \dfrac{\partial (x')^0}{\partial x^0}A^{0}
+\]</span></p>
+<p>이다. <span class="math inline">\(\partial (x')^i/\partial x^0 \ne 0\)</span> 인 <span class="math inline">\(i\)</span> 에 대해<br>
+<span class="math display">\[
+0 = (A')^i = \dfrac{\partial x'^i}{\partial x^\alpha}A^\alpha = \dfrac{\partial x'^i}{\partial x^0}A^0
+\]</span></p>
+<p>이므로 <span class="math inline">\(A^0=0\)</span> 이며 따라서 <span class="math inline">\(A'^0 = 0\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.4 (Arfken 4.1.4)</strong></span> 좌표축에 대한 <span class="math inline">\(90^\circ\)</span>, <span class="math inline">\(180^\circ\)</span> 회전을 생각하여 3차원 공간에서의 rank 2 텐서 가운데 등방 텐서인 것은 <span class="math inline">\(\delta^i_j\)</span> 의 스칼라 곱 밖에 없음을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>.. to be done..</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.5 (Arfken 4.1.5)</strong></span> 일반상대성 이론에서 사용되는 4 차원 랭크 4 텐서 리만-크리스토펠 곡률 텐서 <span class="math inline">\(R_{iklm}\)</span> 은 다음과 같은 대칭 관계를 만족한다.</p>
+<p><span id="eq-Tensor_Arfket_4_1_5_1"><span class="math display">\[
+R_{iklm} = - R_{ikml} =  - R_{kilm}
+\tag{2.16}\]</span></span></p>
+<p><span class="math inline">\(0\)</span> 부터 <span class="math inline">\(3\)</span> 까지의 인덱스를 사용하여 전체 256 성분중에 독립적인 성분이 36 개임을 보이고 또한</p>
+<p><span id="eq-Tensor_Arfket_4_1_5_2"><span class="math display">\[
+R_{iklm} = R_{lmik}
+\tag{2.17}\]</span></span></p>
+<p>를 사용하면 독립적인 생분의 갯수를 21 개 로 줄일 수 있음을 보여라. 마지막으로 성분이</p>
+<p><span id="eq-Tensor_Arfket_4_1_5_3"><span class="math display">\[
+R_{iklm} + R_{ilmk} + R_{imkl} = 0
+\tag{2.18}\]</span></span></p>
+<p>을 만족한다면 독립적인 성분의 갯수는 20개로 줄게 됨을 보여라. 단 마지막 식은 사용된 4개의 인덱스가 모두 다를 경우에만 성립한다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>4 차원 rank 4 텐서이므로 <span class="math inline">\(4^4=256\)</span> 개의 성분을 가진다.</p>
+<p>(<span class="math inline">\(1\)</span>) <a href="#eq-Tensor_Arfket_4_1_5_1" class="quarto-xref">식&nbsp;<span>2.16</span></a> : 첫번째 인덱스는 두번째 인덱스와 달라야 하며, 세번째 인덱스는 네번째 인덱스와 달라야 한다. 또한 반대칭 성질이 있으므로 첫 두개의 인덱스 에서 6가지 경우, 마지막 두 인덱스의 6가지 경우, 총 36가지의 독립적인 성분이 존재한다. <span class="math inline">\(R_{iklm}\)</span> 에서 <span class="math inline">\(i&lt;k\)</span>, <span class="math inline">\(l&lt;m\)</span> 인 경우.</p>
+<p>(<span class="math inline">\(2\)</span>) <a href="#eq-Tensor_Arfket_4_1_5_2" class="quarto-xref">식&nbsp;<span>2.17</span></a> : 36 가지중 첫 두 인덱스와 마지막 두 인덱스가 같은 경우는 6가지 이며 이것을 제외한 30개에 대해 대칭성이 존재하므로 30/2+6=21 개의 독립적인 성분이 존재한다.</p>
+<p>(<span class="math inline">\(3\)</span>) <a href="#eq-Tensor_Arfket_4_1_5_3" class="quarto-xref">식&nbsp;<span>2.18</span></a> : 4개의 인덱스가 모두 다른 경우에 하나의 제한조건이 포함되므로 하나의 독립 변수를 줄인다. 따라서 총 20개의 독립 성분이존재한다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.6 (Arfken 4.1.6)</strong></span> 3차원 반대칭 랭크 4 텐서 <span class="math inline">\(T_{iklm}\)</span> 는 몇개의 독립적인 성분을 가지는가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(i,\,k,\,l,\,m\)</span> 가운데 최소한 2개는 같으므로 성분이 모두 <span class="math inline">\(0\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.7 (Arfken 4.1.7)</strong></span> <span class="math inline">\(T_{...i}\)</span> 는 랭크 <span class="math inline">\(n\)</span> 텐서이다. <span class="math inline">\(\partial T_{...i}/\partial x^j\)</span> 는 랭크 <span class="math inline">\(n+1\)</span> 텐서 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+T'_{...k} = [n \text{ 개의 좌표 편미분의 곱}] T'_{...i}
+\]</span> 이므로</p>
+<p><span class="math display">\[
+\dfrac{\partial T'_{...i}}{\partial x'^j} = \dfrac{\partial x_k}{\partial x'^j}[n \text{ 개의 좌표 편미분의 곱}]\dfrac{\partial T_{...i} }{\partial x_k}
+\]</span></p>
+<p>이다. 따라서 랭크 <span class="math inline">\(n+1\)</span> 텐서이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.8 (Arfken 4.1.8)</strong></span> <span class="math inline">\(T_{ijk...}\)</span> 는 랭크 <span class="math inline">\(n\)</span> 텐서이다. <span class="math inline">\(\sum_j \partial T_{ijk...}/\partial x^j\)</span> 는 랭크 <span class="math inline">\(n-1\)</span> 텐서 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>contraction 에 의해 랭크 <span class="math inline">\(n-1\)</span> 텐서가 된다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_1_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.9 (Arfken 4.1.9)</strong></span> 이중 합 <span class="math inline">\(K_{ij}A^iB^j\)</span> 가 어떤 벡터 <span class="math inline">\(A^i,\,B^j\)</span> 에 대해서도 불변이라면 <span class="math inline">\(K_{ij}\)</span> 가 랭크 2 텐서 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>몫 규칙에 의해 자명하지만 일단 연습삼아… <span class="math display">\[
+K_{ij}A^iB^j = K'_{lm}A'^lB'^m = K'_{lm}\left[\dfrac{\partial x'^l}{\partial x^i}A^i\right] \left[\dfrac{\partial x'^m}{\partial x^j}B^j\right]
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\left[K_{ij} -\dfrac{\partial x'^l}{\partial x^i} \dfrac{\partial x'^m}{\partial x^j}K'_{lm} \right] A^iB^j=0
+\]</span></p>
+<p>이다. 임의의 <span class="math inline">\(A^iB^j\)</span> 에 대해 성립해야 하므로 <span class="math inline">\([\cdots ]=0\)</span> 이어야 한다. 따라서 <span class="math inline">\(K_{ij}\)</span> 는 랭크 2 텐서이다.</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="pseudotensor-와-dual-tensor" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="pseudotensor-와-dual-tensor"><span class="header-section-number">2.2</span> Pseudotensor 와 Dual Tensor</h2>
+<section id="sec-Tensor_" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-Tensor_"><span class="header-section-number">2.2.1</span> Pseudovector 와 pseudotensor</h3>
+<p>지금까지 우리는 좌표의 회전에 대해서만 양의 변화를 보았다. 이제 반사(reflection) 이나 반전(inversion) 과 같은 변화를 살펴보자(이를 improper rotation 이라고 한다)</p>
+<p>벡터 <span class="math inline">\(A\)</span> 는 회전, 혹은 그 행렬식이 <span class="math inline">\(1\)</span> 인 변환 <span class="math inline">\(R\)</span> 에 대해 <span class="math inline">\(A'=RA\)</span> 와 같이 변환된다. 반전과 같이 행렬식이 <span class="math inline">\(-1\)</span> 인 변환 <span class="math inline">\(R^-\)</span> 에 대해서는 상황이 다르다. 반전(Inversion) 을 생각하자. 위치나 속도와 같은 벡터들은 반전에 대해 <span class="math inline">\(A'=R^- A\)</span> 와 같이 변환된다. 그러나 각운동량, 토크, 각속도와 같은 벡터 물리량은 <span class="math inline">\(A'=\det (R^-) R^- A\)</span> 와 같이 변환된다. 이렇게 좌표와 다른 방식의 대칭성을 가지고 변화하는 벡터를 <strong>pseudovectors</strong>(의사 벡터, 혹은 axial vectors) 라고 한다.</p>
+<p>이런 pseudovector 의 개념은 임의의 rank 를 가진 텐서로 확장 될 수 있다. 어떤 직교 변환 <span class="math inline">\(R\)</span> 에 대해 일반적인 텐서 변환식에 <span class="math inline">\(\det(R)\)</span> 을 곱한 것으로 변화하는 텐서를 pseudotensor 라고 한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_levi_civita" class="theorem example">
+<p><span class="theorem-title"><strong>예제 2.1 (레비-시비타(Levi-Civita) 기호)</strong></span> 인덱스가 3개인 레비-시비타 기호 <span class="math inline">\(\varepsilon_{ijk}\)</span> 의 정의는 다음과 같다.</p>
+<p><span id="eq-Tensor_levi-civita"><span class="math display">\[
+\begin{aligned}
+\varepsilon_{123}=\varepsilon_{231}=\varepsilon_{312} &amp;= +1, \\
+\varepsilon_{132} = \varepsilon_{213} = \varepsilon_{321} &amp;= -1,\\
+\text{모든 다른 }\varepsilon_{ijk}&amp;= 0.
+\end{aligned}
+\tag{2.19}\]</span></span></p>
+<p><br></p>
+<p><span class="math inline">\(3\times 3\)</span> 행렬 <span class="math inline">\(A\)</span> 에 대해 <span class="math display">\[
+\sum_{i,j,k}\varepsilon_{ijk} A_{1i}A_{2j}A_{3k} = \det (A)
+\]</span></p>
+<p>임을 알 수 있다.</p>
+<p>랭크 3 pseudotensor <span class="math inline">\(\eta_{ijk}\)</span> 가 어떤 데카르트 좌표계에서 <span class="math inline">\(\varepsilon_{ijk}\)</span> 와 같다고 하자. 그리고 <span class="math inline">\(S\)</span> 를 <span class="math inline">\(\mathbb{R}^3\)</span> 에서의 어떤 직교변환 행렬이라고 하자. Pseudotensor 의 정의에 의해</p>
+<p><span class="math display">\[
+\eta'_{ijk} = \det(S) \sum_{p,q,r} a_{ip}a_{jq}a_{kr} \varepsilon_{pqr}
+\]</span></p>
+<p>이다. 행렬식을 생각하면</p>
+<p><span class="math display">\[
+\eta'_{ijk} = \left(\det{S}\right)^2 \varepsilon_{ijk}
+\]</span></p>
+<p>임을 알 수 있다. 직교변환 행렬 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(\det (S)= \pm 1\)</span> 이므로 <span class="math inline">\(\eta'_{ijk}= \varepsilon_{ijk}\)</span> 이다.</p>
+<p>이로부터 우리는 <span class="math inline">\(\varepsilon_{ijk}\)</span> 가 rank 3 pseudotensor 이며 isotropic 함을 알 수 있다. 즉 회전 변환에 대해 불변이며, improper rotation 에 대해 서는 <span class="math inline">\(-1\)</span> 을 곱한 것과 같다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Tensor_dual_tensor" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-Tensor_dual_tensor"><span class="header-section-number">2.2.2</span> 쌍대 텐서</h3>
+<p>3차원 공간에서의 임의의 2차 반대칭 텐서 <span class="math inline">\(C\)</span> 는 다음과 같이 표현 할 수 있다.</p>
+<p><span class="math display">\[
+C=\begin{bmatrix} 0 &amp; C^{12}&amp; -C^{31} \\ - C^{12} &amp; 0 &amp; C^{23} \\ C^{31} &amp; -C^{23} &amp; 0\end{bmatrix}
+\]</span></p>
+<p><span class="math inline">\(C\)</span> 에 대해 아래와 같은 벡터 <span class="math inline">\(\overline{C}\)</span> 를 <span class="math inline">\(C\)</span> 에 대한 <strong>쌍대 텐서(dual tensor)</strong> 라고 한다.</p>
+<p><span class="math display">\[
+\overline{C} := (C_1,\,C_2,\,C_3) = (C^{23},\, C^{31},\, C^{12}).
+\]</span></p>
+<p>즉</p>
+<p><span class="math display">\[
+\overline{C}_i = \dfrac{1}{2} \varepsilon_{ijk} C^{jk}
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_2_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.10 (Arfken 4.2.2)</strong></span> 반대칭 랭크 2 텐서와 벡터와의 1-1 대응은 3차원 공간에서만 가능하다는 것을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(n\)</span> 차원 공간에서의 반대칭 랭크 <span class="math inline">\(2\)</span> 텐서 <span class="math inline">\(A\)</span> 의 독립적인 성분의 갯수는 <span class="math inline">\(\dfrac{n^2-n}{2}\)</span> 이며 <span class="math inline">\(n\)</span> 차원 공간의 벡터의 성분의 갯수는 <span class="math inline">\(n\)</span> 개이므로 1-1 대응이 성립하려면</p>
+<p><span class="math display">\[
+\dfrac{n^2-n}{2}=n
+\]</span></p>
+<p>이어야 한다. 즉 <span class="math inline">\(n=3\)</span> 뿐이다. (<span class="math inline">\(n=0\)</span> 은 무의미하다.)</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_2_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.11 (Arfken 4.2.3)</strong></span> <span class="math inline">\(\nabla \boldsymbol{\cdot}\nabla \times \boldsymbol{A}\)</span> 와 <span class="math inline">\(\nabla \times \nabla \phi\)</span> 를 <span class="math inline">\(\mathbb{R}^3\)</span> 에서의 텐서 표기법으로 쓰고 각각 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+\begin{aligned}
+\nabla \boldsymbol{\cdot}\nabla \times \boldsymbol{A} &amp;= \varepsilon_{ijk}\dfrac{\partial }{\partial x^i}\dfrac{\partial A_k}{\partial x^j} = 0 \\[0.3em]
+\left(\nabla \times \nabla \phi\right)_k &amp;= \epsilon_{ijk}\dfrac{\partial^2 \phi}{\partial x^i\partial x^j}=0
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_2_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.12 (Arfken 4.2.4)</strong></span> 아래의 랭크 4 텐서는 등방임을 보여라. 즉 좌표의 회전에 독립적인 값이다.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(A^{ik}_{jl} = \delta^i_j \delta^k_l\)</span>,</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(B^{ij}_{kl} = \delta^{i}_k \delta^j_l + \delta^i_l \delta^j_k\)</span>,</p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(C^{ij}_{kl} = \delta^{i}_k \delta^j_l - \delta^i_l \delta^j_k\)</span>.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>)</p>
+<p><span class="math display">\[
+\begin{aligned}
+A'^{pq}_{rs} &amp;= \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}A^{ik}_{jl} = \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}  \delta^i_j \delta^k_l \\[0.3em]
+&amp;= \dfrac{\partial x'^p}{\partial x_i}\dfrac{\partial x'^q}{\partial x^k}\dfrac{\partial x^i}{\partial x'^r}\dfrac{\partial x^k}{\partial x'^s} = \dfrac{\partial x'^p}{\partial x'^r}\dfrac{\partial x'^q}{\partial x'^s} = \delta^p_r \delta^q_s = A^{pq}_{rs}
+\end{aligned}
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math display">\[
+\begin{aligned}
+B'^{pq}_{rs} &amp;= \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^k}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}B^{ij}_{kl} = \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^k}{\partial x'^r}\dfrac{\partial x^l}{\partial x'^s}\left( \delta^{i}_k \delta^j_l + \delta^i_l \delta^j_k\right) \\[0.3em]
+&amp;=  \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^i}{\partial x'^r}\dfrac{\partial x^j}{\partial x'^s} +  \dfrac{\partial x'^p}{\partial x^i}\dfrac{\partial x'^q}{\partial x^j}\dfrac{\partial x^j}{\partial x'^r}\dfrac{\partial x^i}{\partial x'^s} \\[0.3em]
+&amp;= \delta^p_q \delta^q_s + \delta^p_s \delta^q_r = B^{pq}_{rs}
+\end{aligned}
+\]</span></p>
+<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 로부터 <span class="math inline">\(C'^{pq}_{rs} = \delta^{p}_r \delta^q_s - \delta^p_s \delta^q_r=C^{pq}_{rs}\)</span>.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_2_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.13 (Arfken 4.2.5)</strong></span> 두개의 인덱스를 가진 레비-시비타 기호 <span class="math inline">\(\varepsilon_{ij}\)</span> 는 2차원에서 랭크 2 슈도텐서임을 보여라. 이것은 <a href="#exr-Arfken_4_1_4" class="quarto-xref">연습문제&nbsp;<span>2.4</span></a> 에서 보인 <span class="math inline">\(\delta^i_j\)</span> 의 유일성에 위배되는가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-Tensor_levi_civita" class="quarto-xref">예제&nbsp;<span>2.1</span></a> 의 2차원 버젼이다. <span class="math inline">\(\delta^{i}_j\)</span> 는 3차원서 등방 텐서이며 <span class="math inline">\(\epsilon_{ij}\)</span> 는 2차원에서 등방 텐서이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_2_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.14 (Arfken 4.2.7)</strong></span> 반대칭 2차 텐서 <span class="math inline">\(B^{ij}\)</span> 에 대해 <span class="math inline">\(A_k = \dfrac{1}{2}\varepsilon_{ijk}B^{ij}\)</span> 라고 하자. 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+B^{mn} = \varepsilon^{mnk}A_k.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\varepsilon^{mnk}\varepsilon_{ijk} =\delta^m_i \delta^n_j - \delta^m_j\delta^n_i\)</span> 임을 이용한다. <span class="math display">\[
+\begin{aligned}
+\varepsilon^{mnk}A_k = \dfrac{1}{2}\varepsilon^{mnk}\varepsilon_{ijk}B^{ij} = \dfrac{1}{2}(\delta^m_i \delta^n_j - \delta^m_j\delta^n_i)B^{ij} =\dfrac{1}{2} (B^{mn} -B^{nm}) = B^{mn}
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="일반화된-좌표계에서의-텐서" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="일반화된-좌표계에서의-텐서"><span class="header-section-number">2.3</span> 일반화된 좌표계에서의 텐서</h2>
+<section id="sec-Tensor_metric_tensor" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-Tensor_metric_tensor"><span class="header-section-number">2.3.1</span> 메트릭 텐서</h3>
+<p>이제 일반적인 거리 공간(metric space) 에서 생각하자. 일단은 3차원 공간에 한정한다. 일반화된 좌표를 <span class="math inline">\(q^i\)</span> 라고 표기하기로 하자. 공변 기저 벡터(covariant basis vector) <span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span> 를 다음과 같이 정의한다.</p>
+<p><span id="eq-Tensor_covariaint_basis_vector"><span class="math display">\[
+\boldsymbol{\varepsilon}_i := \dfrac{\partial x}{\partial q^i} \hat{\boldsymbol{e}}_x + \dfrac{\partial y}{\partial q^i}\hat{\boldsymbol{e}}_y + \dfrac{\partial z}{\partial q^i}\hat{\boldsymbol{e}}_z
+\tag{2.20}\]</span></span></p>
+<p>3차원 공간에서는 <span class="math inline">\(\boldsymbol{\varepsilon}_1,\,\boldsymbol{\varepsilon}_2, \, \boldsymbol{\varepsilon}_3\)</span> 로 기저를 구성 할 수 있다. 이 세 벡터는 서로 단위 벡터가 아닐 수도 있으며, 서로 직교하지 않을 수도 있다. 이제 임의의 벡터 <span class="math inline">\(\boldsymbol{A}\)</span> 는 공변 기저 벡터에 대해 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-Tensor_representation_of_vector_using_covariant_basis"><span class="math display">\[
+\boldsymbol{A} := A^1 \boldsymbol{\varepsilon}_1 + A^2 \boldsymbol{\varepsilon}_2 + A^3 \boldsymbol{\varepsilon}_3.
+\tag{2.21}\]</span></span></p>
+<p>여기서 주의해야 할 것인 벡터 <span class="math inline">\(\boldsymbol{A}\)</span> 는 좌표 변환에 대해 고정되어 있으며 변하는 것은 기저와 좌표값 <span class="math inline">\(A^1,\,A^2,\,A^3\)</span> 라는 것, 그리고 기저와 좌표값은 서로 반대 방향으로 변환된다는 것이다. 또한 공변 기저 벡터는 위치에 따라 달라진다는 것이다. 이제 미소 변위 <span class="math inline">\((ds)^2\)</span> 를 생각하면</p>
+<p><span class="math display">\[
+(ds)^2 = \sum_{i, j} (\boldsymbol{\varepsilon}_i dq^i) \boldsymbol{\cdot} (\boldsymbol{\varepsilon}_j dq^j)  = \left(\boldsymbol{\varepsilon}_i \boldsymbol{\cdot \varepsilon}_j \right) dq^i dq^j
+\]</span></p>
+<p>와 같이 쓸 수 있다. <strong>공변 메트릭 텐서(covariant metric tensor)</strong> <span class="math inline">\(g_{ij}\)</span> 를 아래와 같이 정의한다.</p>
+<p><span id="eq-Tensor_covariant_metric_tensor"><span class="math display">\[
+g_{ij}:= \left(\boldsymbol{\varepsilon}_i \boldsymbol{\cdot \varepsilon}_j \right) .
+\tag{2.22}\]</span></span></p>
+<p>그렇다면</p>
+<p><span id="eq-Tensor_dispacement_and_metric_tensor"><span class="math display">\[
+(ds)^2 = g_{ij}dq^i dq^j
+\tag{2.23}\]</span></span></p>
+<p>이다. <span class="math inline">\((ds)^2\)</span> 은 회전 및 반사에 대해 불변이며 몫 규칙에 다라 <span class="math inline">\(g_{ij}\)</span> 는 공변 랭크 2 텐서이다. 또한 <a href="#eq-Tensor_covariant_metric_tensor" class="quarto-xref">식&nbsp;<span>2.22</span></a> 로부터 <span class="math inline">\(g_{ij}\)</span> 가 대칭 텐서라는 것을 알 수 있다.</p>
+<p>공변 메트릭 텐서 <span class="math inline">\(g_{ij}\)</span> 에 대해 반변 메트릭 텐서 <span class="math inline">\(g^{ij}\)</span> 가</p>
+<p><span id="eq-Tensor_covariant_and_contravariant_metric_tensor"><span class="math display">\[
+g^{ik}g_{kj}= g_{jk}g^{ki} = \delta^i_j
+\tag{2.24}\]</span></span></p>
+<p>가 되도록 정한다. 또한 메트릭 텐서는 공변벡터와 반변벡터간의 변환을 위해 사용 될 수 있다. 즉</p>
+<p><span id="eq-Tensor_conversion_using_metric_tensor"><span class="math display">\[
+g_{ij}F^j = F_i, \qquad \text{and}\qquad g^{ij}F_j = F^i
+\tag{2.25}\]</span></span></p>
+<p>이제 <a href="#eq-Tensor_representation_of_vector_using_covariant_basis" class="quarto-xref">식&nbsp;<span>2.21</span></a> 과 <a href="#eq-Tensor_conversion_using_metric_tensor" class="quarto-xref">식&nbsp;<span>2.25</span></a> 로부터 다음을 알 수 있다.</p>
+<p><span id="eq-Tensor_two_representation_of_a_vector"><span class="math display">\[
+\boldsymbol{A} = A^i\boldsymbol{\varepsilon}_i = A^i \delta^{k}_i \boldsymbol{\varepsilon}_k = \left(A^i g_{ij}\right)\left(g^{jk} \boldsymbol{\varepsilon}_k\right) = A_j \boldsymbol{\varepsilon}^j
+\tag{2.26}\]</span></span></p>
+<p>즉 벡터는 반변기저에 대해 공변 성분으로, 혹은 공변 기저에 대해 반변 성분으로 표현 할 수 있다.</p>
+<p><br></p>
+</section>
+<section id="sec-Tensor_covariant_and_contravariant_basis" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-Tensor_covariant_and_contravariant_basis"><span class="header-section-number">2.3.2</span> 공변기저와 반변기저</h3>
+<p>공변 기저 벡터 <span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span> (<a href="#eq-Tensor_covariaint_basis_vector" class="quarto-xref">식&nbsp;<span>2.20</span></a>) 에 대해 반변 기저 벡터는 다음과 같이 정의된다.</p>
+<p><span id="eq-Tensor_contravariant_basis_vector"><span class="math display">\[
+\boldsymbol{\varepsilon}^i :=\dfrac{\partial q^i}{\partial x}\hat{\boldsymbol{e}}_x + \dfrac{\partial q^i}{\partial y}\hat{\boldsymbol{e}}_y + \dfrac{\partial q^i}{\partial z}\hat{\boldsymbol{e}}_z.
+\tag{2.27}\]</span></span></p>
+<p>그렇다면</p>
+<p><span id="eq-Tensor_inner_product_of_two_basis_vector"><span class="math display">\[
+\boldsymbol{\varepsilon}^i \boldsymbol{\cdot \varepsilon}_j = \dfrac{\partial q^i}{\partial x}\dfrac{\partial x}{\partial q^j} + \dfrac{\partial q^i}{\partial y}\dfrac{\partial y}{\partial q^j} + \dfrac{\partial q^i}{\partial z}\dfrac{\partial z}{\partial q^j} = \dfrac{\partial q^i}{\partial q^j} = \delta^i_j
+\tag{2.28}\]</span></span></p>
+<p>이다. 또한 다음이 성립함을 보일 수 있다.(<a href="#exr-Arfken_4_3_3" class="quarto-xref">연습문제&nbsp;<span>2.17</span></a>)</p>
+<p><span id="eq-Tensor_equality_of_product_of_two_innerproduct_of_basis"><span class="math display">\[
+(\boldsymbol{\varepsilon}^i\boldsymbol{\cdot \varepsilon}^j)(\boldsymbol{\varepsilon}_j\boldsymbol{\cdot \varepsilon}_k) = \delta^i_k
+\tag{2.29}\]</span></span></p>
+<p><a href="#eq-Tensor_covariant_metric_tensor" class="quarto-xref">식&nbsp;<span>2.22</span></a>, <a href="#eq-Tensor_covariant_and_contravariant_metric_tensor" class="quarto-xref">식&nbsp;<span>2.24</span></a> 와 위 식으로부터 반변 메트릭 텐서를 알 수 있다.</p>
+<p><span id="eq-Tensor_contravariant_metric_tensor"><span class="math display">\[
+g^{ij} = \boldsymbol{\varepsilon}^i\boldsymbol{\cdot \varepsilon}^j.
+\tag{2.30}\]</span></span></p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_some_metric_tensor" class="theorem example">
+<p><span class="theorem-title"><strong>예제 2.2 (구면좌표계에서의 메트릭 텐서)</strong></span> <br></p>
+<p><span class="math inline">\((r,\,\theta,\, \varphi)\)</span> 로 기술되는 원통좌표계를 생각하자. <a href="#eq-Tensor_covariaint_basis_vector" class="quarto-xref">식&nbsp;<span>2.20</span></a> 로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{\varepsilon}_r &amp;= \sin \theta \cos \varphi \hat{\boldsymbol{e}}_x + \sin \theta \sin \varphi \hat{\boldsymbol{e}}_y + \cos\theta \hat{\boldsymbol{e}}_z, \\[0.3em]
+\boldsymbol{\varepsilon}_\theta &amp;= r \cos \theta \cos \varphi  \hat{\boldsymbol{e}}_x + r \cos \theta \sin \varphi  \hat{\boldsymbol{e}}_y - r \sin \theta  \hat{\boldsymbol{e}}_z, \\[0.3em]
+\boldsymbol{\varepsilon}_\varphi &amp;= - r\sin \theta \sin \varphi \hat{\boldsymbol{e}}_x + r \sin \theta \cos \varphi \hat{\boldsymbol{e}}_y.
+\end{aligned}
+\]</span></p>
+<p>이며 <a href="#eq-Tensor_contravariant_basis_vector" class="quarto-xref">식&nbsp;<span>2.27</span></a> 로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{\varepsilon}^r &amp;= \sin \theta \cos \varphi \hat{\boldsymbol{e}}_x + \sin \theta \sin \varphi \hat{\boldsymbol{e}}_y + \cos\theta \hat{\boldsymbol{e}}_z, \\[0.3em]
+\boldsymbol{\varepsilon}^\theta &amp;= \dfrac{\cos \theta \cos \varphi}{r}  \hat{\boldsymbol{e}}_x + \dfrac{\cos \theta \sin \varphi}{r}  \hat{\boldsymbol{e}}_y - \dfrac{\sin \theta}{r}  \hat{\boldsymbol{e}}_z, \\[0.3em]
+\boldsymbol{\varepsilon}_\varphi &amp;= - \dfrac{\sin \varphi}{r\sin \theta} \hat{\boldsymbol{e}}_x + \dfrac{\cos \varphi}{r \sin \theta} \hat{\boldsymbol{e}}_y.
+\end{aligned}
+\]</span></p>
+<p>이다. 즉</p>
+<p><span class="math display">\[
+\begin{aligned}
+g_{11} &amp;= \boldsymbol{\varepsilon}_r \boldsymbol{\cdot \varepsilon}_r = 1, \\[0.3em]
+g_{22} &amp;=  \boldsymbol{\varepsilon}_\theta \boldsymbol{\cdot \varepsilon}_\theta = r^2, \\[0.3em]
+g_{33} &amp;=  \boldsymbol{\varepsilon}_\varphi \boldsymbol{\cdot \varepsilon}_\varphi = r^2 \sin^2 \theta.
+\end{aligned}
+\]</span></p>
+<p>이며 다른 <span class="math inline">\(g_{ij}=0\)</span> 이다. 이를 행렬로 표현하면 아래와 같다.</p>
+<p><span class="math display">\[
+[g_{ij}] = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; r^2 &amp; 0 \\ 0 &amp; 0 &amp; r^2 \sin^2\theta\end{bmatrix},\qquad [g^{ij}] = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; r^{-2} &amp; 0 \\ 0 &amp; 0 &amp; (r \sin\theta)^{-2}\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Tensor_covariant_representation_of_gradient" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="sec-Tensor_covariant_representation_of_gradient"><span class="header-section-number">2.3.3</span> 그래디언트의 공변 표현</h3>
+<p>일반화된 좌표 <span class="math inline">\(\{q^i\}\)</span> 에 대한 스칼라 함수 <span class="math inline">\(\psi\)</span> 의 그래디언트는</p>
+<p><span class="math display">\[
+(\nabla \psi)_j = \dfrac{\partial \psi}{\partial q^i}\dfrac{\partial q^i}{\partial x^j}
+\]</span></p>
+<p>이다. <a href="#eq-Tensor_contravariant_basis_vector" class="quarto-xref">식&nbsp;<span>2.27</span></a> 을 이용하면</p>
+<p><span id="eq-Tensor_grandient_in_general_coordinate"><span class="math display">\[
+\nabla \psi = \dfrac{\partial \psi}{\partial q^i}\dfrac{\partial q^i}{\partial x^j}\hat{\boldsymbol{e}}_j = \dfrac{\partial \psi }{\partial q^i}\boldsymbol{\varepsilon}^i
+\tag{2.31}\]</span></span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Tensor_covariant_derivatives" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="sec-Tensor_covariant_derivatives"><span class="header-section-number">2.3.4</span> 공변 미분</h3>
+<p>데카르트 좌표계의 표준 기저 벡터와는 다르게 공변/반변 기저 벡터 <span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span>/<span class="math inline">\(\boldsymbol{\varepsilon}^j\)</span> 는 모든곳에서 일정한 양이 아니다. 일단 반변 벡터의 변환에서 시작하자.</p>
+<p><span class="math display">\[
+(V')^i = \dfrac{\partial x^i}{\partial q^k} V^k
+\]</span></p>
+<p>이며, 양변을 <span class="math inline">\(q^j\)</span> 로 미분해주면</p>
+<p><span class="math display">\[
+\dfrac{\partial (V')^i}{\partial q^j} = \dfrac{\partial x^i}{\partial q^k} \dfrac{\partial V^k}{\partial q^j} + \dfrac{\partial^2 x^i}{\partial q^j \partial q^k} V^k
+\]</span></p>
+<p>이다. <a href="#eq-Tensor_covariaint_basis_vector" class="quarto-xref">식&nbsp;<span>2.20</span></a> 로 부터</p>
+<p><span id="eq-Tensor_covariant_derivative_1"><span class="math display">\[
+\dfrac{\partial (\boldsymbol{V}')^i}{\partial q^j} = \dfrac{\partial V^k}{\partial q^j}\boldsymbol{\varepsilon}_k + V^k \dfrac{\partial \boldsymbol{\varepsilon}_k}{\partial q^j}
+\tag{2.32}\]</span></span></p>
+<p>임을 안다.</p>
+<p>여기서 <span class="math inline">\(\partial \boldsymbol{\varepsilon}_k/\partial q^j\)</span> 를 <span class="math inline">\(\{\boldsymbol{e}_{\mu}\}\)</span> 기저에 대해 전개한다면 <strong>2종 크리스토펠 기호(Christoffel symbols of the second kind)</strong> <span class="math inline">\(\Gamma^\mu_{jl}\)</span> 를 도입하여 <span id="eq-Tensor_christoffel_symbol_of_2nd_kind"><span class="math display">\[
+\boxed{
+\dfrac{\partial \boldsymbol{\varepsilon}_k}{\partial q^j} = \Gamma^\mu_{jk}\boldsymbol{\varepsilon}_{\mu}
+}
+\tag{2.33}\]</span></span></p>
+<p>와 같이 쓸 수 있다. 공변기저와 반변기저의 직교성(<a href="#eq-Tensor_inner_product_of_two_basis_vector" class="quarto-xref">식&nbsp;<span>2.28</span></a>) 을 생각하면</p>
+<p><span id="eq-Tensor_christoffel_symbol_of_2nd_kind_2"><span class="math display">\[
+\boxed{
+    \Gamma^m_{jk} := \boldsymbol{\varepsilon}^m \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{\varepsilon}_k}{\partial q^j}
+}
+\tag{2.34}\]</span></span></p>
+<p>임을 안다. 또한</p>
+<p><span id="eq-Tensor_christoffel_symbol_of_2nd_kind_3"><span class="math display">\[
+\boxed{
+\Gamma^m_{jk} = \Gamma^m_{kj}}
+\tag{2.35}\]</span></span></p>
+<p>임을 보일 수 있다. (<a href="#exr-Arfken_4_3_4" class="quarto-xref">연습문제&nbsp;<span>2.18</span></a>)</p>
+<p><a href="#eq-Tensor_covariant_derivative_1" class="quarto-xref">식&nbsp;<span>2.32</span></a> 에 <a href="#eq-Tensor_christoffel_symbol_of_2nd_kind" class="quarto-xref">식&nbsp;<span>2.33</span></a> 를 대입하면</p>
+<p><span class="math display">\[
+\dfrac{\partial \boldsymbol{V}'}{\partial q^j} = \dfrac{\partial V^k}{\partial q^j}\boldsymbol{\varepsilon}_k + V^k \Gamma^m_{jk}\boldsymbol{\varepsilon}_m
+\]</span></p>
+<p>이며 우변의 두번째 항의 더미 인덱스 <span class="math inline">\(k,\, m\)</span> 을 서로 바꾸면</p>
+<p><span id="eq-Tensor_covariant_derivative_2"><span class="math display">\[
+\dfrac{\partial \boldsymbol{V}'}{\partial q^j} = \left(\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm}\right) \boldsymbol{\varepsilon}_k
+\tag{2.36}\]</span></span></p>
+<p>위 식 <a href="#eq-Tensor_covariant_derivative_2" class="quarto-xref">식&nbsp;<span>2.36</span></a> 의 <span class="math inline">\((\cdots)\)</span> 을 <span class="math inline">\(\boldsymbol{V}\)</span> 에 대한 <strong>공변 미분(covariant derivative)</strong> 이라고 한다. 공변 미분에 대해 아래와 같은(아프켄의 표현을 빌자면 어색한(awkward)) 표기법이 표준적으로 널리 사용된다고 한다.</p>
+<p><span id="eq-Tensor_covariant_derivative_3"><span class="math display">\[
+V^k_{;j} := \dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm},\qquad \text{so }\quad \dfrac{\partial \boldsymbol{V}'}{\partial q^j} = V^k_{;j}\boldsymbol{\varepsilon}_k.
+\tag{2.37}\]</span></span></p>
+<p>위의 표현은 반변 벡터에 대한 공변 미분이다. 공변 벡터에 대한 공변 미분은 연습문제(<a href="#exr-Arfken_4_3_6" class="quarto-xref">연습문제&nbsp;<span>2.20</span></a>) 로 넘긴다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+주의
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="#eq-Tensor_covariant_derivative_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 에서 <span class="math inline">\(\dfrac{\partial V^k}{\partial q^j}\)</span> 와 <span class="math inline">\(\Gamma^k_{jm}\)</span> 의 인덱스 모양을 보면 텐서 같지만 텐서가 가져야 할 변환 규칙을 따르지 않기 때문에 텐서가 아니다. 오직 <a href="#eq-Tensor_covariant_derivative_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 형태의 값만이 탠서이다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="크리스토펠-기호의-계산" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="크리스토펠-기호의-계산"><span class="header-section-number">2.3.5</span> 크리스토펠 기호의 계산</h3>
+<p>메트릭 텐서를 이용해 크리스토펠 기호 값을 편하게 계산할 수 있다. 우선 1종 크리스토펠 기호를 다음과 같이 정의한다.</p>
+<p><span id="eq-Tensor_definition_of_christoffel_symbol_of_first_kind"><span class="math display">\[
+\boxed{
+[ij,\,k] := g_{mk}\Gamma^m_{ij}
+}
+\tag{2.38}\]</span></span></p>
+<p><a href="#eq-Tensor_christoffel_symbol_of_2nd_kind_3" class="quarto-xref">식&nbsp;<span>2.35</span></a> 로부터 <span class="math inline">\([ij,k] = [ji,k]\)</span> 임을 안다. <u>참고로 2종 크리소토펠 기호와 마찬가지로 1종 크리스토펠 기호도 텐서가 아니다.</u></p>
+<p>우선 <span id="eq-Tensor_1st_kind_christoffel_symbol"><span class="math display">\[
+[ij, k]  = g_{mk}\Gamma^{m}_{ij} = g_{mk} \boldsymbol{\varepsilon}^m \boldsymbol{\cdot }\dfrac{\partial \boldsymbol{\varepsilon}_i}{\partial q^j} = \boldsymbol{\varepsilon}_k \boldsymbol{\cdot}  \dfrac{\partial \boldsymbol{\varepsilon}_i}{\partial q^j}
+\tag{2.39}\]</span></span></p>
+<p>임을 안다. 또한 <span class="math inline">\(g_{ij}= \boldsymbol{\varepsilon}_i \boldsymbol{\cdot \varepsilon}_j\)</span> 이므로</p>
+<p><span id="eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol"><span class="math display">\[
+\dfrac{\partial g_{ij}}{\partial q^k} = \dfrac{\partial \boldsymbol{\varepsilon}_i}{\partial q^k} \boldsymbol{\cdot \varepsilon}_j + \boldsymbol{\varepsilon}_i \boldsymbol{\cdot}\dfrac{\partial \boldsymbol{\varepsilon}_j}{\partial q^k} = [ik, j] + [jk, i]
+\tag{2.40}\]</span></span></p>
+<p>임을 안다. 이로부터</p>
+<p><span id="eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol_2"><span class="math display">\[
+\begin{aligned}
+\dfrac{1}{2}\left[\dfrac{\partial g_{ik}}{\partial q^j} + \dfrac{\partial g_{jk}}{\partial q^i} - \dfrac{\partial g_{ij}}{\partial q^k}\right] = [ij, k]
+\end{aligned}
+\tag{2.41}\]</span></span></p>
+<p>을 얻는다. 이제 <a href="#eq-Tensor_definition_of_christoffel_symbol_of_first_kind" class="quarto-xref">식&nbsp;<span>2.38</span></a> 의 양 변에 <span class="math inline">\(g^{nk}\)</span> 를 곱하고 <span class="math inline">\(k\)</span> 에 대해 더해보자. 좌변에 대해서는 <span class="math inline">\(\sum_k [ij, k]g^{nk}\)</span> 이며 우변에 대해서는</p>
+<p><span class="math display">\[
+g^{nk}g_{mk}\Gamma^m_{ij} = \delta^n_m \Gamma^m_{ij} =  \Gamma^n_{ij}
+\]</span></p>
+<p>이므로 <span class="math inline">\(\Gamma^n_{ij} = \sum_k g^{nk}[ij,k]\)</span> 을 얻는다. <a href="#eq-Tensor_derivative_of_metric_tensor_and_1st_kind_christoffel_symbol_2" class="quarto-xref">식&nbsp;<span>2.41</span></a> 를 사용하고, 아인슈타인 합 규칙을 사용해 <span class="math inline">\(\sum_k\)</span> 를 제거하면</p>
+<p><span id="eq-Tensor_1st_and_2nd_christoffel_symbol"><span class="math display">\[
+\boxed{
+\Gamma^n_{ij} = \dfrac{1}{2}g^{nk}\left[\dfrac{\partial g_{ik}}{\partial q^j} + \dfrac{\partial g_{jk}}{\partial q^i} - \dfrac{\partial g_{ij}}{\partial q^k}\right] }
+\tag{2.42}\]</span></span></p>
+<p>이다. 이제 우리는 메트릭 텐서와 메트릭 텐서의 미분으로 부터 크리스토펠 기호의 값을 구할 수 있게 되었다.</p>
+<p><br></p>
+</section>
+<section id="sec-Tensor_tensor_derivative_operator" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="sec-Tensor_tensor_derivative_operator"><span class="header-section-number">2.3.6</span> 텐서 미분 연산자</h3>
+<p>… to be done …</p>
+<p><br></p>
+</section>
+<section id="연습문제-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.15 (Arfken 4.3.1)</strong></span> 3차원 공간에서 <span class="math inline">\(\boldsymbol{\varepsilon}_1,\, \boldsymbol{\varepsilon}_2,\, \boldsymbol{\varepsilon}_3\)</span> 가 right-handed 시스템을 이루며 수직이라고 하자.</p>
+<p><span class="math display">\[
+\boldsymbol{\varepsilon}^i = \dfrac{\boldsymbol{\varepsilon}_j \times \boldsymbol{\varepsilon}_k}{\boldsymbol{\varepsilon}_j \times \boldsymbol{\varepsilon}_k \cdot \boldsymbol{\varepsilon}_i},\qquad i,\,j,\,k=1,\,2,\,3 \text{ and cyclic permutation}
+\]</span></p>
+<p>임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{\varepsilon}_m\boldsymbol{\cdot \varepsilon}^i =\delta^i_m\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.16 (Arfken 4.3.2)</strong></span> 공변 벡터 <span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span> 가 서로 직교할 때 다음을 보여라</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(g_{ij}\)</span> 는 diagonal.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(g^{ii}=1/g_{ii}\)</span>.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\|\boldsymbol{\varepsilon}^i\| = 1/\|\boldsymbol{\varepsilon}_i\|\)</span>.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(g_{ij}=\boldsymbol{\varepsilon}_i \boldsymbol{\cdot \varepsilon}_j\)</span> 이므로 <span class="math inline">\(g_{i\ne j}=0\)</span>.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(g^{ij}g_{jk}=\delta^i_k\)</span>.</p>
+<p>(<span class="math inline">\(3\)</span>) (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\(\|\boldsymbol{\varepsilon}^i\|^2 = 1/\|\boldsymbol{\varepsilon}_i\|^2\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.17 (Arfken 4.3.3)</strong></span> <a href="#eq-Tensor_equality_of_product_of_two_innerproduct_of_basis" class="quarto-xref">식&nbsp;<span>2.29</span></a> 이 성립함을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x,\,y,\,z\)</span> 를 <span class="math inline">\(x^1,\,x^2,\,x^3\)</span> 로 표기하자. <span class="math display">\[
+\begin{aligned}
+(\boldsymbol{\varepsilon}^i\boldsymbol{\cdot \varepsilon}^j)(\boldsymbol{\varepsilon}_j\boldsymbol{\cdot \varepsilon}_k) &amp;= \sum_{j=1}^3\left[\sum_{m=1,2,3}\dfrac{\partial q^i}{\partial x^m} \dfrac{\partial q^j}{\partial x^m}\right]\left[\sum_{n=1,2,3}\dfrac{\partial x^n}{\partial q^j} \dfrac{\partial x^n}{\partial q^k}\right] \\[0.3em]
+&amp;= \sum_{m, n}\dfrac{\partial q^i}{\partial x^m} \underbrace{\left[\sum_j\dfrac{\partial q^j}{\partial x^m}\dfrac{\partial x^n}{\partial q^j} \right]}_{\large{=\delta^n_m}}\dfrac{\partial x^n}{\partial q^k} \\[0.3em]
+&amp;= \sum_m \dfrac{\partial q^i}{\partial x^m}\dfrac{\partial x^m}{\partial q^k}  = \dfrac{\partial q^i}{\partial q^k} = \delta^i_k
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.18 (Arfken 4.3.4)</strong></span> <span class="math inline">\(\Gamma^m_{jk} = \Gamma^m_{kj}\)</span> (<a href="#eq-Tensor_christoffel_symbol_of_2nd_kind_3" class="quarto-xref">식&nbsp;<span>2.35</span></a>) 이 성립함을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-Tensor_covariaint_basis_vector" class="quarto-xref">식&nbsp;<span>2.20</span></a>, <a href="#eq-Tensor_contravariant_basis_vector" class="quarto-xref">식&nbsp;<span>2.27</span></a> 으로부터 <span class="math display">\[
+\Gamma^m_{jk} = \boldsymbol{\varepsilon}^m \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{\varepsilon}_k}{\partial q^j} = \dfrac{\partial^2 x^i}{\partial q^j\partial q^k}(\boldsymbol{\varepsilon}^m \cdot {\hat{\boldsymbol{e}}}_i) =\dfrac{\partial^2 x^i}{\partial q^j\partial q^k} \dfrac{\partial q^m}{\partial x^i}
+\]</span></p>
+<p>이며 <span class="math inline">\(j,\,k\)</span> 를 교환해도 그 값이 바뀌지 않으므로 <span class="math inline">\(\Gamma^m_{jk} = \Gamma^m_{kj}\)</span> 임을 알 수 있다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.19 (Arfken 4.3.5)</strong></span> 원통 좌표계에서의 공변 메트릭 텐서와 반변 메트릭 텐서를 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>원통 좌표계를 <span class="math inline">\((\rho,\,\theta,\,z)\)</span> 로 표기한다. <a href="#eq-Tensor_covariaint_basis_vector" class="quarto-xref">식&nbsp;<span>2.20</span></a> 로 부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{\varepsilon}_\rho &amp;= \cos\theta \hat{\boldsymbol{e}}_x + \sin \theta \hat{\boldsymbol{e}}_y, \\[0.3em]
+\boldsymbol{\varepsilon}_\theta &amp;= -\rho \sin \theta \hat{\boldsymbol{e}}_x + \rho \cos \theta \hat{\boldsymbol{e}}_y,\\[0.3em]
+\boldsymbol{\varepsilon}_z &amp;= \hat{\boldsymbol{e}}_z
+\end{aligned}
+\]</span></p>
+<p>이다. <a href="#eq-Tensor_contravariant_basis_vector" class="quarto-xref">식&nbsp;<span>2.27</span></a> 로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{\varepsilon}^\rho &amp;= \cos\theta \hat{\boldsymbol{e}}_x + \sin \theta \hat{\boldsymbol{e}}_y, \\[0.3em]
+\boldsymbol{\varepsilon}^\theta &amp;= -\rho^{-1} \sin \theta \hat{\boldsymbol{e}}_x + \rho^{-1} \cos \theta \hat{\boldsymbol{e}}_y,\\[0.3em]
+\boldsymbol{\varepsilon}^z &amp;= \hat{\boldsymbol{e}}_z
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+[g_{ij}] = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; \rho^2 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} ,\qquad [g^{ij}] =  \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1/\rho^2 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.20 (Arfken 4.3.6)</strong></span> 공변 벡터의 공변 미분은 아래와 같다는 것을 보여라.</p>
+<p><span id="eq-Tensor_covariant_derivative_4"><span class="math display">\[
+V_{i;j} := \dfrac{\partial V_i}{\partial q^j} - V_k \Gamma^k _{ij}
+\tag{2.43}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\boldsymbol{\varepsilon}^i \boldsymbol{\cdot \varepsilon}_j = \delta^i_j\)</span> 의 양변을 미분하면 다음을 얻는다.</p>
+<p><span id="eq-exr_Arfken_4_3_6_1"><span class="math display">\[
+\dfrac{\partial \boldsymbol{\varepsilon}^i}{\partial q^k} \boldsymbol{\cdot \varepsilon}_j + \boldsymbol{\varepsilon}^i \boldsymbol{\cdot}\dfrac{\partial \boldsymbol{\varepsilon}_j}{\partial q^k} = 0.
+\tag{2.44}\]</span></span></p>
+<p>이로부터 <a href="#eq-Tensor_christoffel_symbol_of_2nd_kind_2" class="quarto-xref">식&nbsp;<span>2.34</span></a> 은</p>
+<p><span id="eq-exr_Arfken_4_3_6_1"><span class="math display">\[
+\Gamma^m_{jk} =  \boldsymbol{\varepsilon}^m \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{\varepsilon}_k}{\partial q^j} = - \boldsymbol{\varepsilon}_k \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{\varepsilon}^m}{\partial q^j}
+\tag{2.45}\]</span></span></p>
+<p>임을 안다. <a href="#eq-Tensor_inner_product_of_two_basis_vector" class="quarto-xref">식&nbsp;<span>2.28</span></a> 을 이용하면 다음을 얻는다.</p>
+<p><span id="eq-exr_Arfken_4_3_6_3"><span class="math display">\[
+\dfrac{\partial \boldsymbol{\varepsilon}^m}{\partial q^j} = - \Gamma^m_{jk} \boldsymbol{\varepsilon}^k
+\tag{2.46}\]</span></span> 또한</p>
+<p><span class="math display">\[
+(V')_i = \dfrac{\partial q^k}{\partial x^i}V_k
+\]</span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\dfrac{\partial (V')_i}{\partial q^j} = \dfrac{\partial q^k}{\partial x^i}\dfrac{\partial V_k}{\partial q^j} + \dfrac{\partial^2 q^k}{\partial q^j \partial x^i}V_k
+\]</span></p>
+<p>이므로 <a href="#eq-Tensor_contravariant_basis_vector" class="quarto-xref">식&nbsp;<span>2.27</span></a> 로부터, 그리고 <a href="#eq-exr_Arfken_4_3_6_3" class="quarto-xref">식&nbsp;<span>2.46</span></a> 을 이용하면</p>
+<p><span id="eq-exr_Arfken_4_3_6_4"><span class="math display">\[
+\begin{aligned}
+\dfrac{\partial \boldsymbol{V}'}{\partial q^j} &amp;= \dfrac{\partial V_k}{\partial q^j}\boldsymbol{\varepsilon}^k + V_k \dfrac{\partial \boldsymbol{\varepsilon}^k}{\partial q^j} =  \dfrac{\partial V_k}{\partial q^j}\boldsymbol{\varepsilon}^k - V_k \Gamma^k_{j\mu}\boldsymbol{\varepsilon}^\mu \\[0.3em]
+&amp;= \dfrac{\partial V_i}{\partial q^j}\boldsymbol{\varepsilon}^i- V_k \Gamma^k_{ji}\boldsymbol{\varepsilon}^i = \left(\dfrac{\partial V_i}{\partial q^j}- V_k \Gamma^k_{ij}\right)\boldsymbol{\varepsilon}^i
+\end{aligned}
+\tag{2.47}\]</span></span> 이다. 위 식에서 <span class="math inline">\(\Gamma^k_{ji}=\Gamma^k_{ij}\)</span> 와 dummy index 부호 변경을 사용하였다..</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.21 (Arfken 4.3.7)</strong></span> <span class="math inline">\(V_{i;j}=g_{ik}V^k_{;j}\)</span> 임을 보여라. 이를 위해</p>
+<p><span id="eq-exr-Arfken_4_3_7_1"><span class="math display">\[
+\dfrac{\partial V_{i}}{\partial q^j} - V_k \Gamma^k_{ij} = g_{ik}\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right]
+\tag{2.48}\]</span></span></p>
+<p>임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-Tensor_covariant_derivative_2" class="quarto-xref">식&nbsp;<span>2.36</span></a> 와 <a href="#eq-exr_Arfken_4_3_6_4" class="quarto-xref">식&nbsp;<span>2.47</span></a> 로 부터</p>
+<p><span class="math display">\[
+\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right]\boldsymbol{\varepsilon}_k = \left[\dfrac{\partial V_{k}}{\partial q^j} - V_m \Gamma^m_{kj}\right] \boldsymbol{\varepsilon}^k
+\]</span></p>
+<p>이며 양변에 <span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span> 와의 내적을 취하면,</p>
+<p><span class="math display">\[
+\left[\dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{mj}\right](\boldsymbol{\varepsilon}_k \boldsymbol{\cdot \varepsilon}_i) = \left[\dfrac{\partial V_{k}}{\partial q^j} - V_m \Gamma^m_{kj}\right] (\boldsymbol{\varepsilon}^k\boldsymbol{\cdot \varepsilon}_i)
+\]</span></p>
+<p>이다. <span class="math inline">\(g_{ik}= (\boldsymbol{\varepsilon}_k \boldsymbol{\cdot \varepsilon}_i)\)</span> 이며 <span class="math inline">\((\boldsymbol{\varepsilon}^k\boldsymbol{\cdot \varepsilon}_i) = \delta^k_i\)</span> 이므로 <a href="#eq-exr-Arfken_4_3_7_1" class="quarto-xref">식&nbsp;<span>2.48</span></a> 을 얻는다. 이 식의 우변은 <span class="math inline">\(V_{i;j}\)</span> 이며 좌변은 <span class="math inline">\(g_{ik}V^k_{:j}\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.22 (Arfken 4.3.8)</strong></span> 원통 좌표계의 메트릭 텐서 <span class="math inline">\(g_{ij}\)</span> 로부터 <span class="math inline">\(\Gamma^k_{ij}\)</span> 를 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-Tensor_1st_and_2nd_christoffel_symbol" class="quarto-xref">식&nbsp;<span>2.42</span></a>, <a href="#exr-Arfken_4_3_5" class="quarto-xref">연습문제&nbsp;<span>2.19</span></a> 를 참고한다. <span class="math inline">\(g^{ij}\)</span> 가운데 편미분이 <span class="math inline">\(0\)</span> 이 아닌 것은 <span class="math inline">\(g^{22}\)</span> 뿐이므로 <a href="#eq-Tensor_1st_and_2nd_christoffel_symbol" class="quarto-xref">식&nbsp;<span>2.42</span></a> 에서 <span class="math inline">\(i,\,j\)</span> 중 하나는 무조건 <span class="math inline">\(2\)</span> 이어야 한다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Gamma^\rho_{\theta \theta}&amp;= -\dfrac{1}{2}g^{\rho \rho} \dfrac{\partial \rho^2}{\partial \rho} = -\rho \\
+\Gamma^\theta_{\rho \theta}&amp;= \Gamma^\theta_{\theta \rho} = \dfrac{1}{2}{g^{\theta \theta}} \dfrac{\partial \rho^2}{\partial \rho} = \dfrac{1}{\rho}
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_3_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.23 (Arfken 4.3.9)</strong></span> <a href="#exr-Arfken_4_3_8" class="quarto-xref">연습문제&nbsp;<span>2.22</span></a> 의 <span class="math inline">\(\Gamma^k_{ij}\)</span> 을 이용하여 벡터 <span class="math inline">\(\boldsymbol{V}\)</span> 의 원통좌표계에서의 공변 미분 <span class="math inline">\(V^i_{:j}\)</span> 를 계산하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="soution">
+<p><span class="math display">\[
+V^k_{;j} := \dfrac{\partial V^k}{\partial q^j} + V^m \Gamma^k_{jm},\qquad \text{so }\quad \dfrac{\partial \boldsymbol{V}'}{\partial q^j} = V^k_{;j}\boldsymbol{\varepsilon}_k.
+\]</span></p>
+<p><span class="math inline">\(V=V^\rho\hat{\boldsymbol{e}}_\rho + V^\theta \hat{\boldsymbol{e}}_\theta +V^z \hat{\boldsymbol{e}}_z\)</span> 이다. <a href="#eq-Tensor_covariant_derivative_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 을 보라.</p>
+<p><span class="math display">\[
+\begin{aligned}
+V^\rho_{;\rho} &amp;= \dfrac{\partial V^\rho}{\partial \rho}, \\
+V^\rho_{;\theta} &amp;= \dfrac{\partial V^\rho}{\partial \theta} + V^\theta \Gamma^\rho_{\theta \theta} =  \dfrac{\partial V^\rho}{\partial \theta} -V^\theta \rho, \\
+V^\rho_{;z} &amp;= \dfrac{\partial V^\rho}{\partial z},\\
+V^\theta_{;\rho} &amp;= \dfrac{\partial V^\theta}{\partial \rho} + V^\theta \Gamma^\theta_{\theta \rho} = \dfrac{\partial V^\theta}{\partial \rho} + \dfrac{V^\theta}{\rho},\\
+V^\theta_{;\theta} &amp;= \dfrac{\partial V^\theta}{\partial \theta} + V^\rho \Gamma^\theta_{\rho \theta}= \dfrac{\partial V^\theta}{\partial \theta} + \dfrac{V^\rho}{\rho},\\
+V^\theta_{;z} &amp;= \dfrac{V^z}{\partial z}
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math inline">\(V^z_{:i} = \dfrac{\partial V^z}{\partial q^i}\)</span> 꼴이다.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/vector calculus/vectorcalculus.html" class="pagination-link" aria-label="벡터 해석의 주요 사항">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/tensor/tensor02.html" class="pagination-link" aria-label="미분형식과 적분형식">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

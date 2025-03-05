@@ -172,7 +172,72 @@ $G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉�
 
 ### 중요한 군 {#sec-Group_important_groups}
 
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_permutation_group}
+
+#### 대칭군과 치환군
+
+집합 $X$ 에 대해 $X \mapsto X$ 전단사 함수의 집합을 **대칭군(symmetric group)** 이라고 하고  $S_X$ 라고 표기한다. 특별히 $1$ 부터 $n$ 까지의 자연수의 집합에 대한 순환군은 $S_n$ 이라고 표기한다. $S_X$ 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 **순열군(permutation group)** 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.
+
+$S_n$ 의 부분군으로 **교대군(alternating group)** $A_n$ 이 있다. (...)
+
+:::
+
+</div>
 </br>
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exm-Group_linear_group}
+
+#### 일반선형군과 특수선형군
+
+체 $\F$ 위에서 정의된 $n\times n$ 행렬의 집합 $\mathbb{F}^{n \times n}$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
+:::
+
+</div>
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exm-Group_orthogonal_group}
+
+#### 직교군과 특수직교군
+
+실수체 $\R$ 위에서 정의된 직교행렬, 즉 $A^TA=AA^T=I$ 을 만족하는 $n\times n$ 정사각 행렬의 집합은 행렬의 곱 연산에 대해 군이다. 이를 **직교군 (orthogonal group)** 이라고 하고 $O(n)$ 으로 표기한다. 직교군의 행렬식은 $\pm 1$ 인데 이가운데 행렬식이 $+1$ 인 행렬의 집합은 $O(n)$ 의 부분군으로 **특수직교군 (special orthogonal group)** 이라고 하고 $SO(n)$ 으로 표기한다.
+
+:::
+
+</div>
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exm-Group_unitary_group}
+
+#### 유니터리군과 특수유니터리군
+
+복소수체 $\C$ 위에서 정의된 직교행렬, 즉 $A^\dagger A=AA^dagger=I$ 을 만족하는 $n\times n$ 정사각 행렬의 집합은 행렬의 곱 연산에 대해 군이다. 이를 **유니터리군 (unitary group)** 이라고 하고 $U(n)$ 으로 표기한다. 유니터리군의 행렬식은 $\pm 1$ 인데 이가운데 행렬식이 $+1$ 인 행렬의 집합은 $U(n)$ 의 부분군으로 **특수 유니터리군 (special unitary group)** 이라고 하고 $SU(n)$ 으로 표기한다.
+
+:::
+
+</div>
+</br>
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_rotation_and_orthogonal_group}
+
+#### 회전과 특수직교군
+
+$n$ 차원 유클리드 공간에서의 회전은 $SO(n)$ 과 같다. 
+
+:::
+
+</div>
+</br>
+
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -215,6 +280,26 @@ $G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉�
 </div>
 </br>
 
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_caylay_table_one_and_once}
+
+위에서 설명한 Caylay 테이블에서 제목행과 제목열을 제외한 테이블 내용에 대해 각 행과 각 열에서는 모든 군의 원소가 단 한번씩만 나온다.
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+이것은 $\forall g\in G$ 에 대해 $gx=gy\implies x=y$, $xg=yg \implies x=y$ 를 의미한다. $\square$ 
+
+
+:::
+</br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -315,13 +400,13 @@ $$
 
 </br>
 
-### 동형사상과 준동형 사상
+### 동형사상과 동치류
 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_homomorphism}
 
-#### 동형사상과 준동형사상
+#### 동형사상, 준동형사상, 자기동형사상
 
 두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
 
@@ -329,10 +414,58 @@ $$
 \forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
 $$
 
-일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다.
+일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다. 그리고 $G \to G$ 동형사상을 **자기동형사상 (automorphism)** 이라고 하며 $\text{Aut}(G)$ 로 표기한다.
+:::
+:::
 
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_equivalent_class}
+
+#### 동치관계와 동치류
+
+집합 $X$ 에 대해 정의된 어떤 함수 $f:X\times X \to \{0,\,1\}$ 를 생각하자. $f(x,\,y) = 1$ 일 때 $x \sim y$ 라고 표기하며 다음 세 조건을 만족할 때 함수 $f$ 에 대해 **동치관계(equivalent relation)** 라고 한다. 
+
+&emsp;($1$) $x \sim x$,
+
+&emsp;($2$) $x \sim y \implies y \sim x$,
+
+&emsp;($3$) $x \sim y,\, y \sim z \implies x \sim z$.
+
+$x\in X$ 에 대해 $[x]=\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equivalent class)** 라고 한다.
 
 :::
+:::
+
+</br>
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_equivalent_class}
+
+집합 $X$ 에 어떤 동치관계 $\sim$ 이 정의되면 집합 $X$ 는 성분의 동치류들로 분할된다. 즉,
+
+&emsp;($1$) 모든 $x\in X$ 는 어떤 동치류에 포함된다.
+
+&emsp;($2$) $x,\,y \in X$ 일 때 $[x]$ 와 $[y]$ 는 같거나 서로소이다.
+
+&emsp;($3$) 따라서 $X$ 는 서로소인 동치류들의 합집합과 같다.
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+($1$) 동치관계의 정의 ($1$) 의 해 $x\sim x$ 이므로 $x\in [x]$ 이다.
+
+($2$) $z\in [x]\cap [y]$ 이면 $x\sim z,\, y \sim z$ 이므로 $x \sim y$ 이다. 따라서 $[x]=[y]$ 이다.
+
+($3$) 모든 $x\in X$ 는 어떤 동치류에 포함되며, 각각의 동치류는 서로소이거나 동일하므로 $X$ 는 서로소인 동치류들의 합집합과 같다. $\square$
+
 :::
 
 </br>
@@ -469,19 +602,7 @@ $\bf{r}=(la,\,ma,\,na)$ 에 동일한 원자가 위치한 정육면체 결정을
 
 ### 군의 표현과 유니타리 표현
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_general_linear_group}
-#### 일반선형군과 특수선형군
 
-체 $\F$ 위에서 정의된 $n\times n$ 행렬의 집합 $\mathbb{F}^{n \times n}$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
-
-:::
-:::
-
-체 $\F$ 에 대해 가역인 $n \times n$ 행렬의 집합 $GL_n(\F)$ 가 군을 이룬다는 것은 쉽게 보일 수 있다. 또한 $SL_n(\F)$ 가 군이라는 것도 쉽게 보일 수 있다.
-
-
-</br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_representation}

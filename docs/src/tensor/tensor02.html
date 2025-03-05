@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>수리물리학 - 3&nbsp; 미분형식과 적분형식</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/group/group01.html" rel="next">
+<link href="../../src/tensor/tensor01.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html">텐서 해석</a></li><li class="breadcrumb-item"><a href="../../src/tensor/tensor02.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/tensor/tensor01.html">텐서 해석</a></li><li class="breadcrumb-item"><a href="../../src/tensor/tensor02.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></a></li></ol></nav>
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">수리물리학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">벡터해석</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/vector calculus/vectorcalculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">텐서 해석</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/tensor/tensor01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/tensor/tensor02.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">미분형식과 적분형식</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">군</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/group/group01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군에 대한 첫번째 접근</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">미분방정식</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">복소함수</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#미분-형식" id="toc-미분-형식" class="nav-link active" data-scroll-target="#미분-형식"><span class="header-section-number">3.1</span> 미분 형식</a>
+  <ul class="collapse">
+  <li><a href="#sec-Tensor_introduction_to_differential_form" id="toc-sec-Tensor_introduction_to_differential_form" class="nav-link" data-scroll-target="#sec-Tensor_introduction_to_differential_form"><span class="header-section-number">3.1.1</span> 들어가며</a></li>
+  <li><a href="#sec-Tensor_exterior_algebra" id="toc-sec-Tensor_exterior_algebra" class="nav-link" data-scroll-target="#sec-Tensor_exterior_algebra"><span class="header-section-number">3.1.2</span> 외대수 (Exterior algebra)</a></li>
+  <li><a href="#sec-Tensor_hodge_operator" id="toc-sec-Tensor_hodge_operator" class="nav-link" data-scroll-target="#sec-Tensor_hodge_operator"><span class="header-section-number">3.1.3</span> 호지 연산자</a></li>
+  </ul></li>
+  <li><a href="#형식의-미분" id="toc-형식의-미분" class="nav-link" data-scroll-target="#형식의-미분"><span class="header-section-number">3.2</span> 형식의 미분</a>
+  <ul class="collapse">
+  <li><a href="#sec-Tensor_exterior_derivatives" id="toc-sec-Tensor_exterior_derivatives" class="nav-link" data-scroll-target="#sec-Tensor_exterior_derivatives"><span class="header-section-number">3.2.1</span> 외미분</a></li>
+  <li><a href="#sec-Tensor_exterior_derivatives_in_3d" id="toc-sec-Tensor_exterior_derivatives_in_3d" class="nav-link" data-scroll-target="#sec-Tensor_exterior_derivatives_in_3d"><span class="header-section-number">3.2.2</span> 3차원 공간에서의 외미분</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  </ul></li>
+  <li><a href="#형식의-적분" id="toc-형식의-적분" class="nav-link" data-scroll-target="#형식의-적분"><span class="header-section-number">3.3</span> 형식의 적분</a>
+  <ul class="collapse">
+  <li><a href="#형식의-적분-1" id="toc-형식의-적분-1" class="nav-link" data-scroll-target="#형식의-적분-1"><span class="header-section-number">3.3.1</span> 1-형식의 적분</a></li>
+  <li><a href="#형식의-적분-2" id="toc-형식의-적분-2" class="nav-link" data-scroll-target="#형식의-적분-2"><span class="header-section-number">3.3.2</span> 2-형식의 적분</a></li>
+  <li><a href="#스토크스-정리" id="toc-스토크스-정리" class="nav-link" data-scroll-target="#스토크스-정리"><span class="header-section-number">3.3.3</span> 스토크스 정리</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1"><span class="header-section-number">3.3.4</span> 연습문제</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div class="hidden">
+<p>% %</p>
+%
+<!-- \newcommand{\hom}{\text{Hom}}
+\newcommand{\iso}{\text{Iso}}
+\newcommand{\aut}{\text{Aut}} -->
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
+<section id="미분-형식" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="미분-형식"><span class="header-section-number">3.1</span> 미분 형식</h2>
+<p>텐서를 공부해보면 직교좌표계를 벗어나는 경우 매우 복잡해 진다는 것을 알게 된다. 심지어 구면좌표나 원통좌표와 같은 전통적인 좌표계를 도입할 때조차도 그렇다. 이러한 어려움의 상당 부분은 좌표계로 표현된 메트릭이 위치에 의존하게 되고, 일정한 좌표값을 갖는 선이나 면이 곡선화된다는 사실에서 기인한다. 물리학에서 가장 중요한 상황들은 국소적으로 직교좌표계 기반의 단순하고 친숙한 조건과 유사해지기 때문에, 미소 변위(infinitesimal displacement)를 다루는 기하학을 적용하면 이러한 복잡한 문제 대부분을 피할 수 있다.</p>
+<p><strong>미분형식(differential forms)</strong>의 미적분학은 곡선좌표계를 다루는 자연스럽고 강력한 도구로 인정받고 있으며, 고전적 맥락과 현대의 굽은 시공간 연구 모두에서 널리 사용된다. 이 분야의 선구자인 엘리 카르탕(Élie Cartan)이 개발한 이 미적분학은 벡터 해석학의 개념과 정리를 놀라울 정도로 통합하여, 미분기하학과 이론 물리학에서 미분형식의 활용이 확산되는 결과를 가져왔다.</p>
+<p>미분형식은 물리학에서 기하학의 역할을 이해하는 중요한 접근법을 제공하며, 논의되는 공간의 연결성(위상수학적 특성)은 물리적 함의를 지닙니다. 단순한 예로, 원 위에서 정의된 좌표는 모든 각도에서 단일값(single-valued)이면서 연속적일 수 없다는 사실에서도 이를 확인할 수 있다. 한편 위상수학(topology)의 보다 복잡한 물리적 결과물에는 게이지 변환(gauge transformation), 플럭스 양자화(flux quantization), 보옴-아하로노프 효과(Bohm-Aharanov effect), 기본 입자 이론의 발전, 일반상대성이론 현상 등이 포함된다. (이 중 상당수는 본문의 범위를 벗어난다.)</p>
+<p><br></p>
+<section id="sec-Tensor_introduction_to_differential_form" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-Tensor_introduction_to_differential_form"><span class="header-section-number">3.1.1</span> 들어가며</h3>
+<p>우선 3차원 공간에서의 미분형식에서 시작한다. 여기서는 일단 3차원에서 다루지만 다차원이나 메트릭에 제한되지 않는다. 기본이 되는 양은 <strong>미분(differentials)</strong> 이라고 불리는 <span class="math inline">\(dx,\,dy,\,dz\)</span> 이다. 이 미분은 기존의 변화를 말한다기 보다는 일종의 연산자로 작용한다. 이 미분을 이용하면 다음과 같은 표현이 가능하다. (이를 <strong>1-형식(1-form)</strong> 이라고 한다.)</p>
+<p><span id="eq-Tensor_example_of_1_form"><span class="math display">\[
+\boldsymbol{\omega}= A(x,\,y,\,z)\,dx + B(x,\,y,\,z)\, dy + C(x,\,y,\,z)\,dz.
+\tag{3.1}\]</span></span></p>
+<p>이 1-형식은 선적분과 관련되어 있다.</p>
+<p><strong>2-형식(2-form)</strong> 은 다음과 같으며 표먼 적분과 관련되어 있다.</p>
+<p><span id="eq-Tensor_example_of_2_form"><span class="math display">\[
+\boldsymbol{\omega} = F(x,\,y,\,z) \, dx \wedge dy + G(x,\,y,\,z)\, dy \wedge dz + H(x,\,y,\,z)\, dz\wedge dx.
+\tag{3.2}\]</span></span></p>
+<p>위와 같이 두 외적을 <span class="math inline">\(\wedge\)</span> 를 이용해 곱하는 것을 <strong>외적(exterior product)</strong> 혹은 <strong>쐐기곱(wedge product)</strong> 라고 한다.</p>
+<p><strong>3-형식(3-form)</strong> 은 공간 적분과 관련되어 있으며 아래의 꼴이다.</p>
+<p><span id="eq-Tensor_example_of_3_form"><span class="math display">\[
+\boldsymbol{\omega} = K(x,\,y,\,z) \, dx \wedge dy \wedge dz.
+\tag{3.3}\]</span></span></p>
+<p>쐬기 혹은 wedge 라고 불리는 <span class="math inline">\(\wedge\)</span> 기호는 각각의 미분을 결함하여 좀 더 복잡한 무언가를 만드는데 사용되며, <strong>외대수(exterior algebra)</strong> 혹은 그라스만 대수(Grassmann algebra) 라고 불리는 규칙을 따른다. 일부 문서에서는 독자가 외대수에 익숙하다고 생각하고 <span class="math inline">\(\wedge\)</span> 기호를 빼버리기도 한다. 2차원 혹은 3차원으로 고정시키지 않기 위해 미분을 <span class="math inline">\(dx_i\)</span> 와 같이 사용하기도 하며 여러개의 미분을 외대수로 결합시킬 수 있다. <span class="math inline">\(p\)</span> 개의 미분을 결합시킨 것을 <strong><span class="math inline">\(p\)</span>-형식(<span class="math inline">\(p\)</span>-form)</strong> 이라고 한다.</p>
+<p>미분형식은 미분다양체에서의 미적분학을 체계화 하기 위해 발전했다. 미분다양체는 느슨하게 말하자면 국소적으로 무한번 미분 가능한 점들의 집합이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Tensor_exterior_algebra" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-Tensor_exterior_algebra"><span class="header-section-number">3.1.2</span> 외대수 (Exterior algebra)</h3>
+<p>외대수의 연산은 permutationally antisymmetic 하도록 정의된다. 기저가 되는 1-형식을 <span class="math inline">\(dx_i\)</span> 와 같이 표기하고 임의의 형식 <span class="math inline">\(\omega_j\)</span> 는 <span class="math inline">\(p_j\)</span>-형식이라고 하자. 이 때 다음 규칙을 따른다. 아래 식에서 <span class="math inline">\(a,\,b\)</span> 는 임의의 스칼라이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <strong>분배 규칙</strong>: <span class="math inline">\(p_1=p_2\)</span> 일 때 <span class="math inline">\((a\omega_1 + b\omega_2) \wedge \omega_3 = a \, \omega_1 \wedge \omega_3 + b\,  \omega_2 \wedge \omega_3\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <strong>Associativity</strong>: <span class="math inline">\((\omega_1 \wedge \omega_2) \wedge \omega_3 = \omega_1 \wedge (\omega_2 \wedge \omega3)\)</span>,</p>
+<p> (<span class="math inline">\(3\)</span>) <strong>스칼라곱</strong>: <span class="math inline">\(a(\omega_1 \wedge \omega_2) = (a\omega_1) \wedge \omega_2\)</span>,</p>
+<p> (<span class="math inline">\(4\)</span>) <strong>반대칭성</strong>: <span class="math inline">\(dx_i \wedge dx_j = - dx_j \wedge dx_i\)</span>.</p>
+<p><br></p>
+<p>위의 규칙으로부터 다음을 알 수 있다.</p>
+<ul>
+<li><p><span class="math inline">\(dx_i \wedge dx_i = 0\)</span></p></li>
+<li><p>외적의 순서가 중요하다.</p></li>
+<li><p>여러 미분을 결합한 외적에 대해서는 괄호를 할 필요가 없다.</p></li>
+</ul>
+<p><br></p>
+<p>위의 규칙중에서 가장 중요한 것은 반대칭성이다. <span class="math inline">\(p\)</span>-형식에서 외적이 구성되는 순서가 중요하다는 의미이며 또한 외적에 방향성(orientation) 이 존재한다는 의미이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Tensor_hodge_operator" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-Tensor_hodge_operator"><span class="header-section-number">3.1.3</span> 호지 연산자</h3>
+<p>호지 연산자(Hodge operator, 혹은 star operator) <span class="math inline">\(\ast\)</span> 는 미분형식의 dual form 으로 <span class="math inline">\(d\)</span> 차원의 <span class="math inline">\(p\)</span>-형식에 대해 <span class="math inline">\((d-p)\)</span>-형식을 반환한다. 이를 원래 형식에 대한 <strong>쌍대 형식(dual form)</strong> 이라고 한다. 즉 3 차원 1-형식 에 대해 호지 연산자를 적용하면 3차원 2-형식이 된다. 앞으로 보겠지만 미분형식으로 계산하는 것보다 호지 연산자를 이용하여 계산하는 것이쉬운 경우가 많이 있다. <u>원래의 기저가 직교 기저가 아닐 경우 연산이 매우 복잡해지므로 여기서는 원래의 기저가 서로 직교하는 직교 기저, 그중에서도 유클리드 메트릭과 민코프스키 메트릭을 갖는 공간에서만 생각하기로 하자.</u></p>
+<p><span class="math inline">\(p\)</span>-형식인 <span class="math inline">\(\omega\)</span> 의 쌍대 형식 <span class="math inline">\(\ast\omega\)</span> 를 구하는 것은 우선 <span class="math inline">\(\omega\)</span> 에 포함되지 않은 1-형식들의 외적 <span class="math inline">\(\omega'\)</span> 을 구하는 것으로부터 시작한다. 그리고 두 개의 절대값이 1인 수를 곱해준다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\omega\)</span> 의 인덱스와 <span class="math inline">\(\omega'\)</span> 의 인덱스를 <span class="math inline">\(\omega\)</span> 부터 나란히 적은 다음에 그것이 <span class="math inline">\((1,\,2,\,\ldots,\,p)\)</span> 의 짝수번의 호환으로 표현되는지, 홀수번이 호환으로 표현되는지(행렬식에서 많이 했던 짓) 에 따라 각각 <span class="math inline">\(+1,\, -1\)</span> .</p>
+<p>(<span class="math inline">\(2\)</span>) 유클리드 혹은 민코프스키 메트릭만 사용하므로 대각성분을 제외한 메트릭의 성분은 모두 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(\omega\)</span> 에 속한 기저중 <span class="math inline">\(-1\)</span> 을 메트릭의 대각 성분으로 갖는 기저의 갯수 <span class="math inline">\(\mu\)</span> 에 대해 <span class="math inline">\((-1)^\mu\)</span>.</p>
+<p>위의 (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 에 의해 결정되는 두 수를 각각 <span class="math inline">\(\omega'\)</span> 앞에 곱해준 것이 <span class="math inline">\(\ast \omega\)</span> 이다.</p>
+<p>예를 들어 4차원의 2-형식 <span class="math inline">\(\omega = dx_1 \wedge dx_3\)</span> 을 생각하자. <span class="math inline">\(\omega'=dx_2 \wedge dx_4\)</span> 에 대해 <span class="math inline">\((1, 3, 2, 4)\)</span> 는 <span class="math inline">\((2, 3)\)</span> 이므로 <span class="math inline">\(\ast \omega = -  dx_2 \wedge dx_4\)</span> 이다.</p>
+<p>유클리드 3차원 공간에서는 다음이 성립한다.</p>
+<p><span id="eq-Tensor_hodge_operator_for_3d_euclidean_space"><span class="math display">\[
+\boxed{
+\begin{gather}
+*1 = dx_1 \wedge dx_2 \wedge dx_3, \\[0.3em]
+*dx_1 = dx_2 \wedge dx^3,\qquad *dx_2 = dx_3 \wedge dx_1,\qquad dx_3 = dx_1 \wedge dx_2,\\[0.3em]
+*(dx_1 \wedge dx_2) = dx_3,\qquad (dx_2 \wedge dx_3) = dx_1, \qquad (dx_3 \wedge dx_1) = dx_2,\\[0.3em]
+*(dx_1 \wedge dx_2 \wedge dx_3) = 1.
+\end{gather}}
+\tag{3.4}\]</span></span></p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_hodge_operator_in_minkowski_space" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.1 (민코프스키 공간에서의 호지 연산자)</strong></span> <br> 1-형식 기저를 <span class="math inline">\((dt,\,dx_1,\,dx_2,\,dx_3)\)</span> 로 하고 메트릭 텐서가 아래와 같다고 하자.</p>
+<p><span class="math display">\[
+\left[\begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -1 \end{array}\right]
+\]</span></p>
+<p>여기서 <span class="math inline">\(i,\,j,\,k\)</span> 를 <span class="math inline">\(1,\,2,\,3\)</span> 의 cyclic permutation 이라고 하면</p>
+<p><span id="eq-Tensor_hodge_operator_for_minkowski_space"><span class="math display">\[
+\boxed{
+\begin{gather}
+\ast 1 = dt \wedge dx_1 \wedge dx_2 \wedge dx_3, \\[0.3em]
+\ast dt = dx_1 \wedge dx_2 \wedge dx_3,\qquad \ast dx_i = dt \wedge dx_j \wedge dx_k, \\[0.3em]
+\ast (dx_j \wedge dx_k) = dt \wedge dx_i,\qquad *(dt \wedge dx_i) = -(dx_j \wedge dx_k), \\[0.3em]
+\ast(dt \wedge dx_1 \wedge dx_2 \wedge dx_3) = -1
+\end{gather}}
+\tag{3.5}\]</span></span></p>
+<p>이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_miscellaneous_differential_forms" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.2 (여러가지 미분 형식)</strong></span> <br> <span class="math inline">\(\mathbb{R}^3\)</span> 에서 <span class="math inline">\(A=A_x\,dx + A_y \,dy+ A_z\,dz\)</span> 와 <span class="math inline">\(B=B_x\,dx+B_y\,dy+B_z\,dz\)</span> 라는 두 1-형식을 생각하자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+A\wedge B &amp;= (A_yB_z-A_zB_y) (dy \wedge dz) + (A_zB_x - A_xB_z)(dz \wedge dx) \\[0.3em]
+&amp;\qquad + (A_xB_y -A_yB_x)(dx \wedge dy)
+\end{aligned}
+\]</span></p>
+<p>이며,</p>
+<p><span class="math display">\[
+*(A\wedge B) = (A_yB_z-A_zB_y)\,dx + (A_zB_x - A_xB_z)\, dy + (A_xB_y -A_yB_x)\,dz
+\]</span></p>
+<p>이다. 이제 벡터 <span class="math inline">\(\boldsymbol{A}=(A_x,\,A_y,\,A_z),\, \boldsymbol{B}=(B_x,\,B_y,\,B_z)\)</span> 를 생각하면,</p>
+<p><span class="math display">\[
+*(A \wedge B) = (\boldsymbol{A}\times \boldsymbol{B})_x\,dx + (\boldsymbol{A}\times \boldsymbol{B})_y\,dy + (\boldsymbol{A}\times \boldsymbol{B})_z\,dz
+\]</span></p>
+<p>임을 알 수 있다.</p>
+<p>이제 다른 1-형식 <span class="math inline">\(C=C_x\,dx + C_y\,dy+C_z\,dz\)</span> 과 <span class="math inline">\(\boldsymbol{C}=(C_x,\,C_y,\,C_z)\)</span> 에 대해 <span class="math inline">\((A\wedge B \wedge C)\)</span> 를 계산해 보면 다음이 성립함을 알 수 있다.</p>
+<p><span class="math display">\[
+A \wedge B \wedge C = \det\left(\begin{bmatrix} A_x &amp; A_y &amp; A_z\\ B_x &amp; B_y &amp; B_z \\ C_x &amp; C_y &amp; C_z\end{bmatrix}\right)(dx \wedge dy \wedge dz) = \boldsymbol{A} \cdot (\boldsymbol{B}\times \boldsymbol{C})(dx \wedge dy \wedge dz)
+\]</span></p>
+<p>따라서</p>
+<p><span class="math display">\[
+*(A \wedge B \wedge C) = \boldsymbol{A} \cdot (\boldsymbol{B}\times \boldsymbol{C})
+\]</span></p>
+<p>이다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="형식의-미분" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="형식의-미분"><span class="header-section-number">3.2</span> 형식의 미분</h2>
+<section id="sec-Tensor_exterior_derivatives" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-Tensor_exterior_derivatives"><span class="header-section-number">3.2.1</span> 외미분</h3>
+<p>외대수와 이에 따른 외적에 대한 미분, 즉 외미분이 존재한다. <span class="math inline">\(\omega,\,\omega'\)</span> 이 각각 <span class="math inline">\(p\)</span>-, <span class="math inline">\(p'\)</span>-형식이라고 하자. 그리고 <span class="math inline">\(f\)</span> 는 일반적인 함수, 즉 <span class="math inline">\(0\)</span>-형식 이라고 하자. 이 때 다음이 성립한다.</p>
+<p><span id="eq-Tensor_exteror_derivative"><span class="math display">\[
+\boxed{
+  \begin{gather}
+  d(\omega + \omega') = d\omega + d\omega', \quad(p=p')\tag{1}\\[0.3em]
+  d(f\omega) = (df)\wedge \omega + fd\omega, \tag{2}\\[0.3em]
+  \quad d(\omega \wedge \omega') = d\omega \wedge \omega' + (-1)^p \omega \wedge d\omega',\quad \tag{3}\\[0.3em]
+  d(d\omega) = 0, \tag{4}\\[0.3em]
+  df = \sum_j \dfrac{\partial f}{\partial x_j}\tag{5}\, dx_j.
+\end{gather}
+}
+\tag{3.6}\]</span></span></p>
+<p>위 식은 외미분에 대한 공리(axiom) 이다. 따라서 일관성을 요구할 뿐 증명을 필요로 하지 않는다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_exterior_derivative" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.3 (외미분)</strong></span> <br></p>
+<p><a href="#eq-Tensor_exteror_derivative" class="quarto-xref">식&nbsp;<span>3.6</span></a> 의 (<span class="math inline">\(3\)</span>) 은 <span class="math inline">\((-1)^p\)</span> 때문에 약간 의아 할 수 있다. 이것을 우선 이것을 확인해 보자. <span class="math inline">\(\omega = a\,dx_1 \wedge \cdots \wedge dx_p\)</span>, <span class="math inline">\(\omega' = b\, dx_1 \wedge \cdots \wedge dx_{p'}\)</span> 라고 해 보자.</p>
+<p><span class="math display">\[
+\omega \wedge \omega' = ab\, [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}].
+\]</span></p>
+<p>이제 <span class="math inline">\(d(\omega \wedge \omega')\)</span> 을 생각해 보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(\omega \wedge \omega') &amp;= d(ab)\, [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}] \\[0.3em]
+&amp;= \sum_\mu \left[\dfrac{\partial a}{\partial x_\mu} b + a\dfrac{\partial b}{\partial x^\mu}\right] \,dx_\mu \wedge [dx_1 \wedge \cdots \wedge dx_p]\wedge [dx_1 \wedge \cdots \wedge dx_{p'}] \\[0.3em]
+&amp;= \left[\sum_\mu \left(\dfrac{\partial a}{\partial x_\mu} \right) dx_\mu \wedge [dx_1 \wedge \cdots \wedge dx_p] \right]\wedge \left(b\, [dx_1 \wedge \cdots \wedge dx_{p'}] \right)  \\[0.3em]
+&amp;\qquad + (-1)^p\left(a\,[dx_1 \wedge \cdots \wedge dx_{p'}]\right)\left[\sum_{\mu} \left(\dfrac{\partial b}{\partial x_\mu}\right)  dx_\mu \wedge[dx_1 \wedge \cdots \wedge dx_{p'}] \right] \\[0.3em]
+&amp;=d\omega \wedge \omega' + (-1)^p \omega \wedge d\omega'
+\end{aligned}
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(dx_\mu \wedge[dx_1 \wedge \cdots \wedge dx_p]= (-1)^p[dx_1 \wedge \cdots \wedge dx_p]\wedge dx_\mu\)</span> 를 사용하였다.</p>
+<p>(<span class="math inline">\(4\)</span>) 의 <span class="math inline">\(d(d\omega)=0\)</span> 은 때때로 푸앙카레 소정리(Poincaré lemma) 라고도 한다. 이 공리는 필요하며, 다른것과 일관된다. 일단 이것이 없다면 <span class="math inline">\(d(dx_i)\)</span> 를 형식으로 만들 수 없다. 다른 공리와의 일관성을 보기 위해 <span class="math inline">\(\mathbb{R}^2\)</span> 에서의 예를 들어 보자. (<span class="math inline">\(5\)</span>) 로 부터</p>
+<p><span class="math display">\[
+df = \dfrac{\partial f}{\partial x}dx + \dfrac{\partial f}{\partial y}dy
+\]</span></p>
+<p>이며 (<span class="math inline">\(2\)</span>) 와 외적의 반대칭성으로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(df) = \dfrac{\partial}{\partial x}\dfrac{\partial f}{\partial x} dx \wedge dx + \dfrac{\partial}{\partial y}\dfrac{\partial f}{\partial x} dy\wedge dx + \dfrac{\partial }{\partial x}\dfrac{\partial f}{\partial y}  dx \wedge dy + \dfrac{\partial }{\partial y}\dfrac{\partial f}{\partial y}  dy \wedge dy = 0
+\end{aligned}
+\]</span></p>
+<p>임을 알 수 있다. 푸앙카레 소정리는 전미분 함수는 불변량임을 의미한다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Tensor_exterior_derivatives_in_3d" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-Tensor_exterior_derivatives_in_3d"><span class="header-section-number">3.2.2</span> 3차원 공간에서의 외미분</h3>
+<p>3차원 공간에서의 스칼라 함수 <span class="math inline">\(f=f(x,\,y,\,z)\)</span> 에 대해</p>
+<p><span id="eq-Tensor_exterior_derivative_1"><span class="math display">\[
+df = \dfrac{\partial f}{\partial x}\,dx + \dfrac{\partial f}{\partial y}\,dy + \dfrac{\partial f}{\partial z}\,dz
+\tag{3.7}\]</span></span></p>
+<p>이다. 여기서 1-형식 <span class="math inline">\(\omega = A_x\,dx + A_y \,dy + A_z\,dz\)</span> 에 대해</p>
+<p><span id="eq-Tensor_exterior_derivative_2"><span class="math display">\[
+\begin{aligned}
+d\omega &amp;= \sum_{r=x,y,z} \sum_{s=x,\,y,\,z}\dfrac{\partial A_s}{\partial r}\, dr \wedge ds  \\[0.3em]
+&amp;= \left[\dfrac{\partial A_z}{\partial y} - \dfrac{\partial A_y}{\partial z}\right] (dy \wedge dz) + \left[\dfrac{\partial A_x}{\partial z} - \dfrac{\partial A_z}{\partial x}\right] (dz \wedge dx) + \left[\dfrac{\partial A_y}{\partial x} - \dfrac{\partial A_x}{\partial y}\right] (dx \wedge dy)
+\end{aligned}
+\tag{3.8}\]</span></span></p>
+<p>이며,</p>
+<p><span id="eq-Tensor_exterior_derivative_of_1-form_in_3dim"><span class="math display">\[
+\ast(d(A_x\,dx + A_y \,dy + A_z\,dz)) = (\nabla \times \boldsymbol{A})_x\, dx + (\nabla \times \boldsymbol{A})_y\, dy + (\nabla \times \boldsymbol{A})_z\, dz
+\tag{3.9}\]</span></span></p>
+<p>임을 알 수 있다.</p>
+<p>이제 2 형식 <span class="math inline">\(B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)\)</span> 에 대한 외미분을 생각해 보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)) &amp;= \left[\dfrac{\partial B_x}{\partial x} + \dfrac{\partial B_y}{\partial y} + \dfrac{\partial B_z}{\partial z}\right]( dx \wedge dy \wedge dz) \\[0.3em]
+&amp;= (\nabla \boldsymbol{\cdot B})(dx \wedge dy \wedge dz)
+\end{aligned}
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span id="eq-Tensor_exterior_derivative_of_2-form_in_3dim"><span class="math display">\[
+\ast d(B_x (dy \wedge dz) + B_y (dz \wedge dx) + B_z (dx \wedge dy)) = (\nabla \boldsymbol{\cdot B})
+\tag{3.10}\]</span></span></p>
+<p>이다.</p>
+<p>이제 <a href="#eq-Tensor_exterior_derivative_1" class="quarto-xref">식&nbsp;<span>3.7</span></a> 을 다시 보자 <span class="math inline">\(df\)</span> 는 1-형식 이므로 <a href="#eq-Tensor_exterior_derivative_2" class="quarto-xref">식&nbsp;<span>3.8</span></a> 과 푸앙카레 소정리를 생각하면</p>
+<p><span class="math display">\[
+0=d(df)= (\nabla \times (\nabla f))_x (dy\wedge dz) + (\nabla \times (\nabla f))_y (dz\wedge dx) + (\nabla \times (\nabla f))_z (dx\wedge dy)
+\]</span></p>
+<p>이다. 즉 위 식은 우리가 잘 아는 항등식 <span class="math inline">\(\nabla \times (\nabla f)=0\)</span> 과 동치이다. 우리가 아는 다른 하나의 항등식 <span class="math inline">\(\nabla \boldsymbol{\cdot} (\nabla \times \boldsymbol{A})=0\)</span> 역시</p>
+<p><span class="math display">\[
+0 = d(d(A_x\,dx + A_y\,dy + A_z\,dz))= (\nabla \boldsymbol{\cdot} (\nabla \times \boldsymbol{A}))(dx \wedge dy \wedge dz)
+\]</span></p>
+<p>과 동치임을 알 수 있다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Tensor_maxwell_equation" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.4 (멕스웰 방정식)</strong></span> <br></p>
+<p>멕스웰 방정식은 형식의 미분 형식으로 표현할 때 메우 우아하고 간결하게 표현 될 수 있다. 이 표기법에서 전자기장 텐서의 독립적인 성분은 <span class="math inline">\((cdt,\,dx,\,dy,\,dz) = (dx_0,\,dx_1,\,dx_2,\,dx_3)\)</span> 기저에서의 2-형식으로 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-Tensor_maxewll_equation"><span class="math display">\[
+\boxed{
+\begin{aligned}
+\quad F &amp; :=-\dfrac{E_x}{c} dx_0 \wedge dx_1- \dfrac{E_y}{c} dx_0 \wedge dx_2- \dfrac{E_z}{c} dx_0 \wedge dx_3 \\[0.3em]
+&amp;\qquad\qquad  + B_x dx_2\wedge dx_3 + B_y dx_3 \wedge dx_1+ B_z dx_1\wedge dy. \quad
+\end{aligned}
+}
+\tag{3.11}\]</span></span></p>
+<p>또한 장의 소스들은 아래와 같은 3-형식으로 쓸 수 있다.</p>
+<p><span id="eq-Tensor_electromagnetic_source_equation"><span class="math display">\[
+\boxed{
+\begin{aligned}
+\quad J &amp;:= c\rho (dx_1\wedge dx_2\wedge dx_3) -  J_x (dx_0\wedge dx_2\wedge dx_3) \\[0.3em]
+&amp;\qquad \qquad- J_y (dx_0\wedge dx_3 \wedge dx) - J_z (dx_0\wedge dx_1\wedge dy).
+\end{aligned}
+}
+\tag{3.12}\]</span></span></p>
+<p>이제 멕스웰 방정식은 <span class="math inline">\(dF=0\)</span> 으로 부터 간단하게 얻어진다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+dF =&amp; -\left[\dfrac{\partial E_x/c}{\partial x_2}\,dx_2+ \dfrac{\partial E_x/c}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx)-\left[\dfrac{\partial E_y/c}{\partial x_1}\,dx_1+ \dfrac{\partial E_y/c}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx_2) \\[0.3em]
+&amp; -\left[\dfrac{\partial E_z/c}{\partial x}\,dx_1+ \dfrac{\partial E_z/c}{\partial x_2}\,dx_2\right] \wedge (dx_0\wedge dx_3)  + \left[\dfrac{\partial B_x}{\partial x_0}\,dx_0+ \dfrac{\partial B_x}{\partial x_1}\,dx_1\right] \wedge (dx_2\wedge dx_3) \\[0.3em]
+&amp; +\left[\dfrac{\partial B_y}{\partial x_0}\,dx_0+ \dfrac{\partial B_y}{\partial x_2}\,dx_2\right] \wedge (dx_3 \wedge dx_1) + \left[\dfrac{\partial B_z}{\partial x_0}\,dx_0+ \dfrac{\partial B_z}{\partial x_3}\,dx_3\right] \wedge (dx_1\wedge dx_2) \\[0.3em]
+=&amp; \left[\dfrac{\partial E_z/c}{\partial x_2}-\dfrac{\partial E_y/c}{\partial x_3} + \dfrac{\partial B_x}{\partial x_0}   \right](dx_0\wedge dx_2\wedge dx_3) + \left[\dfrac{\partial E_x}{\partial x_3} - \dfrac{\partial E_z}{\partial x_1} + \dfrac{\partial B_y}{\partial x_0}\right](dx_0\wedge dx_3 \wedge dx_1) \\[0.3em]
+&amp;+ \left[\dfrac{\partial E_y}{\partial x_1} - \dfrac{\partial E_x}{\partial x_2} + \dfrac{\partial B_z}{\partial x_0}\right](dx_0\wedge dx_1\wedge dx_2)  + \left[\dfrac{\partial B_x}{\partial x_1} + \dfrac{\partial B_y}{\partial x_2} + \dfrac{\partial B_z}{\partial x_3}\right](dx_1\wedge dx_2\wedge dx_3)
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(dF=0\)</span> 으로부터, 그리고 <span class="math inline">\((x_0,\,x_1,\,x_2,\,x_3) \to (ct,\,x,\,y,\,z)\)</span> 변환을 수행하면</p>
+<p><span class="math display">\[
+\nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t},\qquad \nabla \boldsymbol{\cdot B} = \boldsymbol{0}
+\]</span></p>
+<p>을 얻는다.</p>
+<p>이제 <span class="math inline">\(\ast F\)</span> 를 보자</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ast F = &amp; \dfrac{E_x}{c} dx_2\wedge dx_3 + \dfrac{E_y}{c} dx_3 \wedge dx_1+ \dfrac{E_z}{c} dx_1\wedge dx_2+ B_x dx_0\wedge dx_1+ B_y dx_0\wedge dx_2+ B_z dt\wedge dx_3
+\end{aligned}
+\]</span></p>
+<p>이며,</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(\ast F)=&amp; \left[\dfrac{\partial E_x/c}{\partial x_1}\,dx_1+ \dfrac{\partial E_x/c}{\partial x_0}\,dx_0\right]\wedge (dx_2\wedge dx_3) + \left[\dfrac{\partial E_y}{\partial x_0}\,dx_0+ \dfrac{\partial E_y/c}{\partial x_2}\,dx_2 \right] \wedge (dx_3 \wedge dx_1) \\[0.3em]
+&amp;+\left[\dfrac{\partial E_z/c}{\partial x_3} \, dx_3 + \dfrac{\partial E_z/c}{\partial x_0}\,dx_0\right]\wedge (dx_1\wedge dx_2) + \left[\dfrac{\partial B_x}{\partial x_2}\,dx_2+ \dfrac{\partial B_x}{\partial x_3}\,dx_3\right]\wedge (dx_0\wedge dx_1) \\[0.3em]
+&amp;+ \left[\dfrac{\partial B_y}{\partial x_1}\,dx_1+ \dfrac{\partial B_y}{\partial x_3}\,dx_3\right] \wedge (dx_0\wedge dx_2) + \left[\dfrac{\partial B_z}{\partial x_1}\,dx_1+ \dfrac{\partial B_z}{\partial x_2}\,dx_2 \right]\wedge (dx_0\wedge dx_3) \\[0.3em]
+=&amp; \left[\dfrac{\partial E_x/c}{\partial x_1} +\dfrac{\partial E_y/c}{\partial x_2} + \dfrac{\partial E_z/c}{\partial x_3}\right](dx_1\wedge dx_2\wedge dx_3) + \left[\dfrac{\partial E_x/c}{\partial x_0} -\dfrac{\partial B_z}{\partial x_2} + \dfrac{\partial B_y}{\partial x_3}\right](dx_0\wedge dx_2\wedge dx_3) \\[0.3em]
+=&amp; \left[\dfrac{\partial E_y/c}{\partial x_0} - \dfrac{\partial B_x}{\partial x_3} + \dfrac{\partial B_z}{\partial x_1}\right](dx_0\wedge dx_3 \wedge dx_1) + \left[\dfrac{\partial E_z/c}{\partial x_0} - \dfrac{\partial B_y}{\partial x_1} + \dfrac{\partial B_x}{\partial x_2}\right](dx_0\wedge dx_1\wedge dx_2)
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math inline">\(d(\ast F)=\mu_0J\)</span> 로부터 (그리고 <span class="math inline">\(\varepsilon_0 \mu_0 = 1/c^2\)</span> 을 이용하면 )</p>
+<p><span class="math display">\[
+\nabla \boldsymbol{\cdot E} = \dfrac{\rho}{\epsilon_0},\qquad \nabla \times \boldsymbol{B} = \dfrac{1}{c^2} \dfrac{\partial \boldsymbol{E}}{\partial t} + \mu_0 \boldsymbol{J}
+\]</span></p>
+<p>을 얻는다. 마지막으로 <span class="math inline">\(dJ = \dfrac{1}{\mu_0} d(d(\ast F))=0\)</span> 이므로</p>
+<p><span class="math display">\[
+dJ = \left[\dfrac{\partial \rho}{\partial t} + \dfrac{\partial J_x}{\partial x} + \dfrac{\partial J_y}{\partial y} + \dfrac{\partial J_z}{\partial z}\right] (dt \wedge dx \wedge dy \wedge dz)
+\]</span></p>
+<p>로 부터 전하에 대한 연속 방정식 (equation of continuity)</p>
+<p><span class="math display">\[
+\dfrac{\partial \rho}{\partial t} + \nabla \boldsymbol{\cdot J} = 0
+\]</span></p>
+<p>을 얻는다.</p>
+<p>요약하자면, <a href="#eq-Tensor_maxewll_equation" class="quarto-xref">식&nbsp;<span>3.11</span></a>, <a href="#eq-Tensor_electromagnetic_source_equation" class="quarto-xref">식&nbsp;<span>3.12</span></a> 로 정의된 <span class="math inline">\(F,\, J\)</span> 에 대해 맥스웰 방정식은 아래의 간단한 두 식으로 정리된다.</p>
+<p><span class="math display">\[
+dF=0,\qquad d(\ast F)= J
+\]</span></p>
+<p>또한 연속 방정식은 위의 정의로부터 자연스럽게 유도된다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_6_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 3.1 (Arfken 4.6.1)</strong></span> 두 1-형식 <span class="math inline">\(\omega_1 = xdy +ydx\)</span> 와 <span class="math inline">\(\omega_2 = xdy - ydx\)</span> 에 대해 다음을 계산하라.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(d\omega_1\)</span>,</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(d\omega_2\)</span>,</p>
+<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(a\)</span>), (<span class="math inline">\(b\)</span>) 가운데 <span class="math inline">\(0\)</span> 이 아닌 것에 대해 <span class="math inline">\(d(d\omega_i)=0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(d\omega_1 = dx \wedge dy -  dx \wedge dy = 0\)</span>.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(d\omega_2 = dx \wedge dy - dy \wedge dx = 2 dx \wedge dy\)</span>.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(d(dx \wedge dy) =  0\)</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_6_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 3.2 (Arfken 4.6.2)</strong></span> <span class="math inline">\(\omega_3 = xy\,dz +xz\, dy - yz\, dx\)</span> 에 대해 <span class="math inline">\(d(d\omega_3)=0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+\begin{aligned}
+d\omega_3 &amp;= ydx \wedge dz + x dy \wedge dz + z dx \wedge dy + x dz \wedge dy - z dy \wedge dx - y dz \wedge dx \\
+&amp;= -2y dz \wedge dx + 2z dx \wedge dy
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math display">\[
+d(d\omega_3) = -2 dx \wedge dy \wedge dx + 2 dx \wedge dy \wedge dy = 0
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_6_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 3.3 (Arfken 4.6.3)</strong></span> <a href="#exr-Arfken_4_6_1" class="quarto-xref">연습문제&nbsp;<span>3.1</span></a>, <a href="#exr-Arfken_4_6_3" class="quarto-xref">연습문제&nbsp;<span>3.3</span></a> 의 <span class="math inline">\(\omega_2,\,\omega_3\)</span> 에 대해 <span class="math inline">\(d(\omega_2 \wedge \omega_3)\)</span> 를 아래의 두 방식으로 계산하여 결과가 같음을 보여라.</p>
+<p>(<span class="math inline">\(a\)</span>) 외적을 계산하고 미분하라.</p>
+<p>(<span class="math inline">\(b\)</span>) 두 형식의 곱에 대한 미분 공식을 이용하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>)</p>
+<p><span class="math display">\[\begin{aligned}
+\omega_2 \wedge \omega_3 &amp;= (x dy - y dx) \wedge (xy\,dz +xz\, dy - yz\, dx) \\
+&amp;= x^2 y dy \wedge dz  + xy^2 dz \wedge dx
+\end{aligned}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(\omega_2 \wedge \omega_3) = 4xy dx \wedge dy \wedge dz.
+\end{aligned}
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(d(\omega_2 \wedge \omega_3) = d \omega_2 \wedge \omega_3 + (-1)\omega_2 \wedge d\omega_3\)</span> 임을 이용하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(\omega_2 \wedge \omega_3) &amp;= (2dx\wedge dy) \wedge (xy\,dz +xz\, dy - yz\, dx) - (xdy - ydx)\wedge (-2y dz \wedge dx + 2z dx \wedge dy) \\
+&amp;= 4xy dx \wedge dy \wedge dz.
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="형식의-적분" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="형식의-적분"><span class="header-section-number">3.3</span> 형식의 적분</h2>
+<section id="형식의-적분-1" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="형식의-적분-1"><span class="header-section-number">3.3.1</span> 1-형식의 적분</h3>
+<p>2 차원 공간에서의 1-형식 <span class="math inline">\(\omega = A_x \,dx + A_y\, dy\)</span> 을 생각하자. <span class="math inline">\(P\)</span> 에서 시작해서 <span class="math inline">\(Q\)</span> 에서 끝나는 경로 <span class="math inline">\(C\)</span> 에 대해 형식을 적분한다고 하자. 즉</p>
+<p><span class="math display">\[
+\int_C \omega = \int_C {\Large [} A_x \,dx + A_y \, dy{\Large ]}.
+\]</span></p>
+<p>이 적분은 일반적인 선적분으로 해석한다. 이 경로 <span class="math inline">\(C\)</span> 를 <span class="math inline">\((x(t),\,y(t))\)</span> 로 매개화 한다고 하자. 여기서 <span class="math inline">\(t\)</span> 는 <span class="math inline">\(t_P\)</span> 에서 <span class="math inline">\(t_Q\)</span> 까지 단조증가한다. 그렇다면</p>
+<p><span class="math display">\[
+\int_C \omega = \int_{t_P}^{t_Q} \left[A_x \dfrac{dx}{dt} + A_y \dfrac{dy}{dt}\right]\, dt
+\]</span></p>
+<p>이며, 최소한 이론적으로 이 적분을 계산 할 수 있다.</p>
+<p>어떤 경우 이 적분은 경로와 무관하고 오직 시작점 <span class="math inline">\(P\)</span> 와 끝점 <span class="math inline">\(Q\)</span> 에만 의존할 때가 있다. 보존력(conservative force) 를 생각해보라. 형식 <span class="math inline">\(\omega\)</span> 가 어떤 함수 <span class="math inline">\(f\)</span> 의 미분일 때 즉,</p>
+<p><span class="math display">\[
+\omega = df
+\]</span></p>
+<p>일 때 <span class="math inline">\(\omega\)</span> 를 완전 형식(exact form) 이라고 한다. <span class="math inline">\(\mathbb{R}^2\)</span> 에서는</p>
+<p><span class="math display">\[
+d\omega = \dfrac{\partial f}{\partial x}{dx} + \dfrac{\partial f}{\partial y}dy
+\]</span></p>
+<p>이다. <span class="math inline">\(\omega\)</span> 가 <span class="math inline">\(\omega = df\)</span> 의 완전 형식이라면</p>
+<p><span class="math display">\[
+\int_P^Q \omega = f(Q) - f(P)
+\]</span></p>
+<p><br></p>
+</section>
+<section id="형식의-적분-2" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="형식의-적분-2"><span class="header-section-number">3.3.2</span> 2-형식의 적분</h3>
+<p>2차원 공간에서의 2 형식 <span class="math inline">\(\omega = B(x,\,y)\, dx \wedge dy\)</span> 의 아래와 같은 적분을 생각하자.</p>
+<p><span class="math display">\[
+\int_S \omega = \int_S B(x,\,y)\, dx \wedge dy.
+\]</span></p>
+<p>여기서 변수를 <span class="math inline">\(x,\,y\)</span> 에서 <span class="math inline">\(u,\,v\)</span> 로 변경시키는 것을 생각하자. <span class="math inline">\(x=au+bv,\, y = eu+fv\)</span> 라고 하면</p>
+<p><span class="math display">\[
+dx \wedge dy = (adu + bdv)\wedge (edu + fdv) = (af-be)du \wedge dv =\det \left(\begin{bmatrix} a &amp; b \\ e &amp; f \end{bmatrix}\right) du \wedge dv
+\]</span></p>
+<p>2 차원 2-형식에서 변수를 변경 시킬 때 자연스럽게 야코비 행렬이 나타났다. 이것은 단지 2차원 2-형식 에서의 상황이 아니라 모든 차원의 모든 형식에서 나타난다. 즉 우리가 일견 부자연스러운 <span class="math inline">\(k\)</span>-형식(<span class="math inline">\(k\)</span>-form)과 <span class="math inline">\(\wedge\)</span> 연산자를 도입한 것은 이러한 변환이 자연스럽게 나타나도록 하기 위한 것이다. 여기서 유의해야 할 것은 <span class="math inline">\(dx \wedge dy = - dy \wedge dx\)</span> 라는 것이다. 즉 형식에 방향(orientation) 이 있다는 것이다.</p>
+<p>즉 <span class="math inline">\((x_1,\,x_2,\ldots)\)</span> 에서 <span class="math inline">\((q_1,\,q_2,\ldots)\)</span> 로 좌표를 변환한다면 야코비 행렬 <span class="math inline">\(J\)</span> 에 대해</p>
+<p><span class="math display">\[
+dx_1 \wedge dx_2 \cdots = J dq_1 \wedge dq_e \wedge \cdots
+\]</span></p>
+<p>가 된다. 3차원의 경우 <a href="#exr-Arfken_4_7_1" class="quarto-xref">연습문제&nbsp;<span>3.4</span></a> 을 보라.</p>
+<p><br></p>
+</section>
+<section id="스토크스-정리" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="스토크스-정리"><span class="header-section-number">3.3.3</span> 스토크스 정리</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Tensor_stokes_theorem" class="theorem">
+<p><span class="theorem-title"><strong>정리 3.1</strong></span> <span class="math inline">\(n\)</span> 차원 공간의 단순 연결 영역 <span class="math inline">\(R\)</span> 에서 정의된 <span class="math inline">\(p\)</span>-차원 미분다양체를 생각하자. <span class="math inline">\(R\)</span> 의 경계를 <span class="math inline">\(\partial R\)</span> 로 표기하며 <span class="math inline">\(p-1\)</span> 차원이다. <span class="math inline">\(\omega\)</span> 가 <span class="math inline">\(R\)</span> 에서 정의된 <span class="math inline">\(p-1\)</span>-형식 <span class="math inline">\(\omega\)</span> 에 대해 그 미분을 <span class="math inline">\(d\omega\)</span> 라고 하면 다음이 성립한다.</p>
+<p><span id="eq-Tensor_stokes_theorem"><span class="math display">\[
+\int_R d\omega = \int_{\partial R}\omega .
+\tag{3.13}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<p>엄밀한 증명은 이곳의 범위를 넘어선다. 단순한 스케치만 하겠다. <span class="math inline">\(\omega\)</span> 가 다음과 같다고 하자.</p>
+<p><span class="math display">\[
+\omega = A(x_1,\dots,\,x_p)\, dx_2 \wedge \cdots \wedge dx_p
+\]</span></p>
+<p>그렇다면</p>
+<p><span class="math display">\[
+d\omega = \dfrac{\partial A}{\partial x_1}\,dx_1 \wedge \cdots \wedge dx_p
+\]</span></p>
+<p>이다. <span class="math inline">\(\int_R d\omega\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_R d\omega &amp;=
+\end{aligned}
+\]</span></p>
+<p><a href="../vector calculus/vectorcalculus.html#thm-VectorCalculus_hemlhomtz_1" class="quarto-xref">정리&nbsp;<span>1.1</span></a></p>
+<p><br></p>
+</section>
+<section id="연습문제-1" class="level3 unsigned" data-number="3.3.4">
+<h3 class="unsigned anchored" data-number="3.3.4" data-anchor-id="연습문제-1"><span class="header-section-number">3.3.4</span> 연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Arfken_4_7_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 3.4 (Arfken 4.7.1)</strong></span> <span class="math inline">\((x,\,y,\,z) \to (u,\,v,\,w)\)</span> 선형변환을 생각하자. <span class="math inline">\(A(x,\,y,\,z)\, dx \wedge dy \wedge dz\)</span> 에 대한 적분을 이와 동등한 <span class="math inline">\(du \wedge dv \wedge dw\)</span> 형태의 적분으로 바꾼다면 야코비 행렬과 동등한 행렬식이 도입됨을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>변환 행렬 <span class="math inline">\(\boldsymbol{A}=[a_{ij}]\)</span> 를 생각하자. <span class="math inline">\(\boldsymbol{x}=\begin{bmatrix} x &amp; y &amp; z\end{bmatrix}^T\)</span>, <span class="math inline">\(\boldsymbol{u}=\begin{bmatrix} u &amp; v &amp; w\end{bmatrix}^T\)</span> 에 대해 <span class="math inline">\(\boldsymbol{x}=\boldsymbol{Au}\)</span> 라고 하자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+dx \wedge dy \wedge dz &amp;= (a_{11} du + a_{12}dv + a_{13}dw)\wedge (a_{21} du + a_{22}dv + a_{23}dw) \\ &amp;\qquad  \wedge (a_{31} du + a_{32} dv + a_{33}dw) \\[0.3em]
+&amp;=(a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32} + a_{12}a_{23} a_{31}- a_{12}a_{21}a_{33} \\[0.3em]
+&amp;\qquad + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31}) (du \wedge dv \wedge dw)\\[0.3em]
+&amp;= \det(\boldsymbol{A})\, (du \wedge dv \wedge dw) = J (du \wedge dv \wedge dw)
+\end{aligned}
+\]</span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/tensor/tensor01.html" class="pagination-link" aria-label="탠서 해석">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">탠서 해석</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/group/group01.html" class="pagination-link" aria-label="군에 대한 첫번째 접근">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군에 대한 첫번째 접근</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
