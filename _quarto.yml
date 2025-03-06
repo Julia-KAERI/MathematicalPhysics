@@ -19,7 +19,7 @@ book:
       chapters :
       - src/tensor/tensor01.qmd
       - src/tensor/tensor02.qmd
-    - part : 군
+    - part : 군과 대칭
       chapters :
       - src/group/group01_introduction.qmd
       - src/group/group02_representation.qmd

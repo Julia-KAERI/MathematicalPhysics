@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group02_representation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group02_representation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -211,7 +211,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">군</span></a>
+ <span class="menu-text">군과 대칭</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -302,7 +302,10 @@ window.Quarto = {
   <li><a href="#군의-표현" id="toc-군의-표현" class="nav-link active" data-scroll-target="#군의-표현"><span class="header-section-number">5.1</span> 군의 표현</a>
   <ul class="collapse">
   <li><a href="#군의-표현과-유니타리-표현" id="toc-군의-표현과-유니타리-표현" class="nav-link" data-scroll-target="#군의-표현과-유니타리-표현"><span class="header-section-number">5.1.1</span> 군의 표현과 유니타리 표현</a></li>
-  <li><a href="#대각화와-기약-표현" id="toc-대각화와-기약-표현" class="nav-link" data-scroll-target="#대각화와-기약-표현"><span class="header-section-number">5.1.2</span> 대각화와 기약 표현</a></li>
+  <li><a href="#conjugate-class-의-character" id="toc-conjugate-class-의-character" class="nav-link" data-scroll-target="#conjugate-class-의-character"><span class="header-section-number">5.1.2</span> Conjugate class 의 character</a></li>
+  <li><a href="#대각화와-기약-표현" id="toc-대각화와-기약-표현" class="nav-link" data-scroll-target="#대각화와-기약-표현"><span class="header-section-number">5.1.3</span> 대각화와 기약 표현</a></li>
+  <li><a href="#부분군과-표현" id="toc-부분군과-표현" class="nav-link" data-scroll-target="#부분군과-표현"><span class="header-section-number">5.1.4</span> 부분군과 표현</a></li>
+  <li><a href="#unitary-theorem" id="toc-unitary-theorem" class="nav-link" data-scroll-target="#unitary-theorem"><span class="header-section-number">5.1.5</span> Unitary theorem</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   </ul>
@@ -311,7 +314,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group02_representation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group02_representation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></h1>
 </div>
@@ -353,17 +356,54 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-Group_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.1 (군의 표현)</strong></span> <span class="math inline">\(U\in \text{Hom} (G,\, GL_n(\mathbb{F}))\)</span> 일 때 <span class="math inline">\(U\)</span> 를 <span class="math inline">\(G\)</span> 의 표현이라고 한다. <span class="math inline">\(U(G)\)</span> 가 유니타리 행렬의 집합일 때 <span class="math inline">\(U\)</span> 를 <span class="math inline">\(G\)</span> 의 유니타리 표현이라고 한다. <span class="math inline">\(U\)</span> 가 단사일 때 이 표현이 <strong>faithful</strong> 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다.</p>
+<p><span class="theorem-title"><strong>정의 5.1 (군의 표현)</strong></span> <span class="math inline">\(D\in \text{Hom} (G,\, GL_n(\mathbb{F}))\)</span> 일 때 <span class="math inline">\(U\)</span> 를 <span class="math inline">\(G\)</span> 의 표현이라고 한다. <span class="math inline">\(D(G)\)</span> 가 유니타리 행렬의 집합일 때 <span class="math inline">\(D\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>유니타리 표현(unitary representation)</strong> 이라고 한다. <span class="math inline">\(D\)</span> 가 단사일 때 이 표현이 <strong>faithful</strong> 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
-<p>즉 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(G\)</span> 의 표현이고 <span class="math inline">\(a,\,b\in G\)</span> 일 때 <span class="math inline">\(U(ab) = U(a)U(b)\)</span> 이다. 단 군에 대한 행렬 표현이 항상 유니타리 표현일 필요는 없다.</p>
+<p>즉 <span class="math inline">\(D\)</span> 가 <span class="math inline">\(G\)</span> 의 표현이고 <span class="math inline">\(a,\,b\in G\)</span> 일 때 <span class="math inline">\(D(ab) = D(a)D(b)\)</span> 이다. 단 군에 대한 행렬 표현이 항상 유니타리 표현일 필요는 없다.</p>
+<br> <br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_basic_properties_of_representation" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.1</strong></span> <span class="math inline">\(D\)</span> 가 군 <span class="math inline">\(G\)</span> 의 표현일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(D(1_G) = I\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(D(g^{-1}) = (D(g))^{-1}\)</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(D(g) = D(g1_G)= D(g)D(1_G)\)</span> 이며 <span class="math inline">\(D(g)\)</span> 가 가역이므로 <span class="math inline">\(D(1_G)=I\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(I=D(1_G)=D(gg^{-1})=D(g)D(g^{-1})\)</span> 이므로 <span class="math inline">\(D(g^{-1})=(D(g))^{-1}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_trivial_representation" class="theorem example">
+<p><span class="theorem-title"><strong>예제 5.1 (Trivial representatino)</strong></span> 임의의 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(\phi_n : G \to GL(n)\)</span> 을 <span class="math inline">\(\phi_n(g) = I_n\)</span> 으로 정의하자. 여기서 <span class="math inline">\(I_n\)</span> 은 <span class="math inline">\(n \times n\)</span> 항등행렬이다. <span class="math inline">\(\phi_n\)</span> 은 <span class="math inline">\(G \mapsto GL(n)\)</span> 동형사상이며 따라서 <span class="math inline">\(G\)</span> 의 표현이다. 가장 단순한 표현이므로 <strong>trivial representation</strong> 이라고 한다.</p>
+</div>
+</div>
+<p><br></p>
+<p>즉 모든 군에 대해 최소한 하나의 표현은 존재한다.</p>
+<p><br></p>
+<p>이제 몇가지 질문이 자연스럽게 생겨난다. (1) 모든 군은 표현 가능한가? (2) 군의 표현은 몇가지나 (최소한 trivial representation 을 제외하고라도) 가능한가? (3) 다수의 표현이 존재한다면 이것을 어떤 특징에 따라 분류 할 수 있는가? (4) 표현에 대한 어떤 일반적인 성질이 존재하는가?</p>
+<p>일부분은 이미 대답 할 수 있다. 군론의 유명한 정리중의 하나는 모든 유한군은 대칭군 <span class="math inline">\(S_n\)</span> 의 어떤 부분군과 동형이라는 것이다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며, 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_matrix_representation_of_Rplus" class="theorem example">
+<p><span class="theorem-title"><strong>예제 5.2 (<span class="math inline">\(\mathbb{R}^+\)</span> 의 표현)</strong></span> 덧셈연산이 정의된 실수의 집합은 <span class="math inline">\(0\)</span> 을 항등원으로 하고 <span class="math inline">\(a\in\mathbb{R}^+\)</span> 에 대해 <span class="math inline">\(-a\)</span> 를 역원으로 갖는 연속군이다. <span class="math inline">\(D\in \text{Hom}(\mathbb{R}^+, GL(2))\)</span> 를 다음과 같이 정의하자.</p>
+<p><span class="math display">\[
+D(u):= \begin{bmatrix} 1 &amp; 0 \\ u &amp; 1 \end{bmatrix}
+\]</span></p>
+<p><span class="math inline">\(D\)</span> 는 단사함수이며 동형사상인 것과 <span class="math inline">\(D(u)D(v) = D(u+v)\)</span> 임을 보일 수 있다.</p>
+</div>
+</div>
+<p><br></p>
+<p>이제 유니타리 표현의 예를 보자.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitray_representation_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 5.1 (<span class="math inline">\(D_3\)</span> 에 대한 유니타리 표현)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>예제 5.3 (<span class="math inline">\(D_3\)</span> 에 대한 유니타리 표현)</strong></span> <br></p>
 <p><a href="group01_introduction.html#fig-Group_d3_2" class="quarto-xref">그림&nbsp;<span>4.2</span></a> 에서 보인 <span class="math inline">\(D_3\)</span> 군에 대한 유니타리 표현은 다음과 같다.</p>
 <p><span id="eq-Group_unitray_representation_of_D3_1"><span class="math display">\[
 \begin{aligned}
@@ -389,24 +429,76 @@ U(C_2''') &amp;= \begin{bmatrix} -\frac{1}{2} &amp; \frac{-\sqrt{3}}{2} \\ -\fra
 </div>
 </div>
 <p><br></p>
+</section>
+<section id="conjugate-class-의-character" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="conjugate-class-의-character"><span class="header-section-number">5.1.2</span> Conjugate class 의 character</h3>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+표현의 표기와 class 호칭에 대해
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>우리는 군의 표현이 여러 종류가 가능하다는 것을 안다. 따라서 그 표현을 구분하기 위해 <span class="math inline">\(D^{(r)}(g)\)</span> 와 같이 표기하기로 한다. <span class="math inline">\(r\)</span> 이 여러 표현을 구분하는 인덱스이다.</p></li>
+<li><p><a href="group01_introduction.html#def-Group_conjugate" class="quarto-xref">정의&nbsp;<span>4.8</span></a> 에서 우리는 conjugate class 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 conjugate class 를 의미한다.</p></li>
+</ul>
+</div>
+</div>
+<p><br></p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-Group_equivalent_representation" class="theorem">
-<p><span class="theorem-title"><strong>정리 5.1</strong></span> <span class="math inline">\(U\in \text{Hom}(G,\,GL_n(\mathbb{F}))\)</span> 라고 하자. <span class="math inline">\(V\in GL_n(\mathbb{F})\)</span> 가 유니타리 행렬일 때 <span class="math inline">\(U':G \to GL_n(\mathbb{F})\)</span> 가</p>
-<p><span class="math display">\[
-U'(g):= VU(g)V^{-1}
-\]</span></p>
-<p>이라면 <span class="math inline">\(U'\)</span> 역시 <span class="math inline">\(G\)</span> 의 표현이다.</p>
+<div id="prp-Group_character_of_class" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.2</strong></span> 군 <span class="math inline">\(G\)</span> 와 행렬표현 <span class="math inline">\(D^{(r)}\)</span> 에 대해 <span class="math inline">\(K\)</span> 하 <span class="math inline">\(G\)</span> 의 class 일 때 모든 <span class="math inline">\(k\in K\)</span> 에 대해 <span class="math inline">\(\text{tr}(D^{(r)}(k))\)</span> 는 같다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U'\in \text{Hom}(G,\, GL_n(\mathbb{F}))\)</span> 임을 보이면 된다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(K=[k]\)</span> 이며 <span class="math inline">\(\operatorname{tr}(AB)= \operatorname{tr}(BA)\)</span> 임을 이용한다.<br>
+<span class="math display">\[
+\text{tr}\left(D\left(gkg^{-1}\right)\right)=\text{tr}\left(D\left(g^{-1}gk\right)\right) = \text{tr}(D(k)). \square
+\]</span></p>
+</div>
+<p><br></p>
+<p>즉 같은 클래스에 속한다면 행렬 표현에 대한 trace 는 같다. 즉 어떤 행렬 표현에서의 클래스 원소의 trace 는 클래스의 특징이 될 수 있다. 따라서 아래의 정의가 가능하다.</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_character_of_class" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.2 (Character)</strong></span> 군 <span class="math inline">\(G\)</span> 에 주어진 행렬표현 <span class="math inline">\(D^{(r)}\)</span> 에 대해 클래스 <span class="math inline">\(K\)</span> 에 대한 행렬의 trace 를 이 클래스의 <strong>character</strong> 라고 하고 <span class="math inline">\(\chi^{(r)}(K)\)</span> 라고 쓴다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<section id="동등한-표현" class="level4">
+<h4 class="anchored" data-anchor-id="동등한-표현"><strong>동등한 표현</strong></h4>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_equivalent_representation" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.1</strong></span> 군 <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D\in \text{Hom}(G,\,GL_n(\mathbb{F}))\)</span> 를 생각하자. <span class="math inline">\(V\in GL_n(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
-U'(g_1g_2) = VU(g_1)U(g_2)V^{-1} = (VU(g_1)V^{-1}) (VU(g_2)V^{-1}) =U'(g_1)U'(g_2)
+D'(g):= VD(g)V^{-1}
+\]</span></p>
+<p>역시 <span class="math inline">\(G\)</span> 의 표현이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D'\in \text{Hom}(G,\, GL_n(\mathbb{F}))\)</span> 임을 보이면 된다.</p>
+<p><span class="math display">\[
+D'(g_1g_2) = VD(g_1)D(g_2)V^{-1} = (VD(g_1)V^{-1}) (VD(g_2)V^{-1}) =D'(g_1)D'(g_2)
 \]</span></p>
 <p>이므로 증명 끝. <span class="math inline">\(\square\)</span></p>
 </div>
+<p><br></p>
+<p>선형대수에서 행렬 <span class="math inline">\(M\)</span> 을 어떤 가역행렬 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(SMS^{-1}\)</span> 로 변환시키는 것을 <strong>닮을 변환(similarity transform)</strong> 이라고 하며 동일한 선형사상을 다른 기저에서 표현하는 것이라고 볼 수 있다. 마찬가지로 어떤 표현에 대한 닮음 변환은 두 변환이 본질적으로 같다는 의미이다. 따라서 두 표현에 동등하다는 이름을 붙일 수 있다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -415,15 +507,26 @@ U'(g_1g_2) = VU(g_1)U(g_2)V^{-1} = (VU(g_1)V^{-1}) (VU(g_2)V^{-1}) =U'(g_1)U'(g_
 </div>
 <div class="callout-body-container">
 <div id="def-Group_equivalent_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.2 (동등한 표현)</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span>5.1</span></a> 에서의 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(U'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 5.3 (동등한 표현)</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span>5.1</span></a> 에서의 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(U'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_equivalent_representation_and_character" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.3</strong></span> 군 <span class="math inline">\(G\)</span> 의 두 표현이 동등하면 두 표현에 의한 클래스의 character 는 같다. 즉, 두 표현에 의한 클래스의 character 가 다르면 두 표현은 동등하지 않다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>trivial</p>
+</div>
+<p><br></p>
 </section>
-<section id="대각화와-기약-표현" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="대각화와-기약-표현"><span class="header-section-number">5.1.2</span> 대각화와 기약 표현</h3>
+</section>
+<section id="대각화와-기약-표현" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="대각화와-기약-표현"><span class="header-section-number">5.1.3</span> 대각화와 기약 표현</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -431,40 +534,105 @@ U'(g_1g_2) = VU(g_1)U(g_2)V^{-1} = (VU(g_1)V^{-1}) (VU(g_2)V^{-1}) =U'(g_1)U'(g_
 </div>
 <div class="callout-body-container">
 <div id="def-Group_irreducible_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.3 (기약 표현)</strong></span> 군의 전체 성분에 대한 행렬 표현 각각이 어떤 유니타리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 <strong>reducible</strong> 하다고 한다. reducible 하지 않은 표현을 <strong>기약표현 (irreducible representation)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 5.4 (기약 표현)</strong></span> 군의 전체 성분에 대한 행렬 표현 각각이 어떤 유니타리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 <strong>reducible</strong> 하다고 한다. reducible 하지 않은 표현을 <strong>기약표현 (irreducible representation)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
-<p>군 <span class="math inline">\(G\)</span> 의 어떤 표현 <span class="math inline">\(U^K\in \text{Hom}(G,\, GL_n(\mathbb{F}))\)</span> 를 생각하자. 어떤 유니타리 변환에 의해 군의 모든 성분에 대한 행렬 표현이 동시에 같은 형태, 즉 같은 크기의 부분행렬들로 분해된다면 이 행렬표현은 reducible 하다.</p>
-<p>이 블록 대각 행렬이 각각 <span class="math inline">\(n_1 \times n_1, \ldots,\, n_m \times m_n\)</span> 형태의 정사각 행렬이라고 하자. 그리고 <span class="math inline">\(U^{K_i}(g)\)</span> 가 <span class="math inline">\(U^K (g)\)</span> 의 <span class="math inline">\(i\)</span> 번째 블록대각행렬 즉 <span class="math inline">\(n_i \times n_i\)</span> 행렬을 취한다고 하자.</p>
+<p>군 <span class="math inline">\(G\)</span> 의 어떤 표현 <span class="math inline">\(D^{(r)}\in \text{Hom}(G,\, GL_n(\mathbb{F}))\)</span> 를 생각하자. 어떤 유니타리 변환에 의해 군의 모든 성분에 대한 행렬 표현이 동시에 같은 형태, 즉 같은 크기의 부분행렬들로 분해된다면 이 행렬표현은 reducible 하다.</p>
+<p>이 블록 대각 행렬이 각각 <span class="math inline">\(n_1 \times n_1, \ldots,\, n_m \times n_m\)</span> 형태의 정사각 행렬이라고 하자. 그리고 <span class="math inline">\(D^{(r_i)}(g)\)</span> 가 <span class="math inline">\(U^{(r)} (g)\)</span> 의 <span class="math inline">\(i\)</span> 번째 블록대각행렬 즉 <span class="math inline">\(n_i \times n_i\)</span> 행렬을 취한다고 하자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_equivalent_representation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.1</strong></span> 위의 <span class="math inline">\(U^{K_i}\)</span> 역시 <span class="math inline">\(G\)</span> 의 표현이다.</p>
+<p><span class="theorem-title"><strong>명제 5.4</strong></span> 위의 <span class="math inline">\(D^{(r_i)}\)</span> 역시 <span class="math inline">\(G\)</span> 의 표현이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U^K\)</span> 가 블럭대각행렬화 표현이라고 하자. <span class="math inline">\(g,\,g'\in G\)</span> 에 대해 <span class="math inline">\(U^{K_i}(g) U^{K_i}(g') = U^{K_i}(gg')\)</span> 임은 쉽게 보일 수 있다. 따라서 <span class="math inline">\(U^{K_i}\)</span> 역시 <span class="math inline">\(G\)</span> 의 표현이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(r_i)}(g_1)D^{(r_i)}(g_2) = D^{(r_i)}(g_1g_2)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
+<p><br></p>
 <p>이 때 행렬의 direct sum <span class="math inline">\(\oplus\)</span> 를 이용하면 모든 <span class="math inline">\(g\in G\)</span> 에 대해</p>
 <p><span class="math display">\[
-U^K(g) = U^{K_1}(g) \oplus U^{K_2}(g) \oplus \cdots \oplus U^{K_n}(g) = \bigoplus_{i=1}^N U^{K_i}(g)
+D^{(r)}(g) = D^{(r_1)}(g) \oplus \cdots \oplus U^{(r_n)}(g) = \bigoplus_{i=1}^m D^{(r_i)}(g)
 \]</span></p>
 <p>임을 알 수 있다.</p>
+<p><br></p>
+</section>
+<section id="부분군과-표현" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="부분군과-표현"><span class="header-section-number">5.1.4</span> 부분군과 표현</h3>
+<p>군의 표현에서 중요한 것은 군에 대한 어떤 표현이 irreducible 인지 확인한 후 reducible 이면 분해하여 irreducible representation 을 찾는 것이다. <span class="math inline">\(H\le G\)</span> 이고 <span class="math inline">\(D\)</span> 가 <span class="math inline">\(G\)</span> 에 대한 기약표현이라고 하더라도 <span class="math inline">\(H\)</span> 에 대한 기약표현인지는 확인해야 한다. 즉 <span class="math inline">\(H\)</span> 에 대한 reducible representation 일 수 있다.</p>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="unitary-theorem" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="unitary-theorem"><span class="header-section-number">5.1.5</span> Unitary theorem</h3>
+<p>유니타리 행렬은 <span class="math inline">\(U^\dagger U = UU^\dagger = I\)</span>, 즉 <span class="math inline">\(U^{-1}=U^\dagger\)</span> 라는 아주 좋은 성질을 가지고 있다. 그리고 유한군의 모든 표현은 어떤 유니타리 표현과 동등하다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_unitary_theorem" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.2 (Unitary theorem)</strong></span> 유한군에 대한 모든 표현은 어떤 유니타리 표현과 동등하다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group01_introduction.html#thm-Group_rearrangement_theorem" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 생각하자. <span class="math inline">\(f\)</span> 가 <span class="math inline">\(G\)</span> 위에서 정의된 함수라면 아래 식을 만족한다.</p>
+<p><span class="math display">\[
+\sum_{g\in G}f(g) = \sum_{g\in G} f(g'g) = \sum_{g\in G}f(gg').
+\]</span></p>
+<p>이제 <span class="math inline">\(D\)</span> 가 <span class="math inline">\(G\)</span> 에 대한 unitary 표현이 아닌 표현이라고 하자. 이 때</p>
+<p><span id="eq-Group_unitary_theorem_1"><span class="math display">\[
+H:=\sum_{g\in G} (D(g))^\dagger D(g)
+\tag{5.2}\]</span></span></p>
+<p>라고 하면 임의의 <span class="math inline">\(g'\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{aligned}
+D(g')^\dagger HD(g') &amp;= \sum_{g\in G} D(g')^\dagger (D(g))^\dagger D(g) D(g') \\
+&amp;=\sum_{g\in G} (D(g)D(g'))^\dagger D(g)D(g')= \sum_{g\in G} D(gg')^\dagger D(gg') = H
+\end{aligned}
+\]</span></p>
+<p>이다. 또한 <a href="#eq-Group_unitary_theorem_1" class="quarto-xref">식&nbsp;<span>5.2</span></a> 으로부터 <span class="math inline">\(H\)</span> 가 에르미트 행렬임을 안다. 따라서 어떤 유니타리 행렬 <span class="math inline">\(V\)</span> 에 의해 대각 성분이 실수인 대각행렬이 되며 따라서 <span class="math inline">\(M^\dagger M = V^\dagger HV\)</span> 인 복소 대각행렬 <span class="math inline">\(M\)</span> 이 존재한다.</p>
+<p>이제 단위 열벡터 <span class="math inline">\(\boldsymbol{e}_j\)</span> 를 생각하자. 그렇다면</p>
+<p><span class="math display">\[
+\begin{aligned}
+(M^\dagger M)_{jj} &amp;= \boldsymbol{e}_j^\dagger M^\dagger M \boldsymbol{e}_j = \boldsymbol{e}_j^\dagger V^\dagger HV\boldsymbol{e}_j \\[0.3em]
+&amp;= \sum_{g\in G} \boldsymbol{e}_j^\dagger V^\dagger D(g)^\dagger D(g) V \boldsymbol{e}_j = \sum_{g\in G} \|D(g)V\boldsymbol{e}_j\|^2 &gt; 0
+\end{aligned}
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(M^\dagger M\)</span> 은 모든 대각성분이 양수인 대각행렬이며 따라서 <span class="math inline">\(M=M^\dagger\)</span>,, <span class="math inline">\(M_{ii} &gt; 0\)</span> 으로 놓을 수 있다. <span class="math inline">\(M\)</span> 은 가역행렬이므로 <span class="math inline">\(U:G \to GL_n(\mathbb{F})\)</span> 를 아래와 같이 정의한다.</p>
+<p><span class="math display">\[
+U(g): = MV^\dagger D(g)VM^{-1}.
+\]</span></p>
+<p>여기서 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(D\)</span> 와 동등한 표현이다. 이로부터</p>
+<p><span class="math display">\[
+(U(g))^\dagger = M^{-1}V^\dagger D(g)^\dagger V M
+\]</span></p>
+<p>이므로,</p>
+<p><span class="math display">\[
+\begin{aligned}
+U(g)^\dagger U(g) &amp;= M^{-1}V^\dagger D(g)^\dagger VM^2 V^\dagger D(g)VM^{-1} \\[0.3em]
+&amp;=M^{-1}V^\dagger D(g)^\dagger VV^\dagger HVV^\dagger D(g)VM^{-1} \\[0.3em]
+&amp;=M^{-1}V^\dagger D(g)^\dagger H D(g)VM^{-1} \\[0.3em]
+&amp;= M^{-1}V^\dagger HVM^{-1} = M^{-1}M^2M^{-1} = I
+\end{aligned}
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(D\)</span> 와 동등한 유니타리 표현이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>유한군에 대해서 중요한 것을 증명했다. 당연한 질문 연속군에 대해서는? 예를 들어 <span class="math inline">\(SO(n)\)</span> 은 자체로서 유니타리 표현이다. 그렇다면 로렌츠 군이나 <a href="#exm-Group_matrix_representation_of_Rplus" class="quarto-xref">예제&nbsp;<span>5.2</span></a> 에서 보인 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 <span class="math inline">\(2\times 2\)</span> 표현은 어떠한가? 나중에 보이겠지만 유니타리 표현이 존재하는 것은 연속 매개변수의 컴팩트성과 관련이 있다. 결론적으로 로렌츠 군이나 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 표현에 대한 유니타리 표현은 존재하지 않는다.</p>
+<p><br></p>
 <p>다음은 일단 증명 없이 다룬다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_representation_of_abelian" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.2</strong></span> <span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(G\)</span> 의 기약표현은 <span class="math inline">\(1\times 1\)</span> 행렬이다.</p>
+<p><span class="theorem-title"><strong>명제 5.5</strong></span> <span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(G\)</span> 의 기약표현은 <span class="math inline">\(1\times 1\)</span> 행렬이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitray_representation_of_D3_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 5.2 (<span class="math inline">\(D_3\)</span> 에 대안 reducible representation)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>예제 5.4 (<span class="math inline">\(D_3\)</span> 에 대안 reducible representation)</strong></span> <br></p>
 <p><span class="math inline">\(D_3\)</span> 를 아래와 같이 <span class="math inline">\(3\times 3\)</span> 행렬로 표현 할 수 있다.</p>
 <p><span id="eq-Group_unitray_representation_of_D3_2"><span class="math display">\[
 \begin{aligned}
@@ -475,7 +643,7 @@ U(C_2) &amp;= \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 
 U(C_2') &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{bmatrix},&amp;
 U(C_2''') &amp;= \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}.
 \end{aligned}
-\tag{5.2}\]</span></span></p>
+\tag{5.3}\]</span></span></p>
 <p>유니타리 행렬 <span class="math inline">\(V\)</span> 를 아래와 같이 정하자.</p>
 <p><span class="math display">\[
 V = \begin{bmatrix} \frac{1}{\sqrt{3}} &amp;  \frac{1}{\sqrt{3}} &amp;  \frac{1}{\sqrt{3}} \\  \frac{1}{\sqrt{6}} &amp;  -\sqrt{\frac{2}{3}} &amp;  \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \end{bmatrix}.
@@ -490,19 +658,19 @@ U'(C_2) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp;
 U'(C_2') &amp;=\begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; \frac{\sqrt{3}}{2} \\ 0 &amp; \frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix},&amp;
 U'(C_2''') &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; -\frac{\sqrt{3}}{2} \\ 0 &amp; -\frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix}.
 \end{aligned}
-\tag{5.3}\]</span></span></p>
+\tag{5.4}\]</span></span></p>
 <p>이며 모든 군의 성분에 대한 행렬표현이 블럭 대각화 되었다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitray_representation_of_D3_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 5.3 (연속군에 대한 표현)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>예제 5.5 (연속군에 대한 표현)</strong></span> <br></p>
 <p><a href="group01_introduction.html#exm-Group_rotation_of_plane_circle" class="quarto-xref">예제&nbsp;<span>4.7</span></a> 에서 차수가 1인 연속군을 보였다. 이 연속군은</p>
 <p><span class="math display">\[
 U(\varphi) = \begin{bmatrix} \cos \varphi &amp; \sin \varphi \\ - \sin \varphi &amp; \cos \varphi \end{bmatrix}
 \]</span></p>
-<p>로 표현 할 수 있다. 이 군은 아벨군이므로 <a href="#prp-Group_representation_of_abelian" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에 따라 위의 표현은 reducible 하다. 유니타리 행렬 <span class="math inline">\(V\)</span></p>
+<p>로 표현 할 수 있다. 이 군은 아벨군이므로 <a href="#prp-Group_representation_of_abelian" class="quarto-xref">명제&nbsp;<span>5.5</span></a> 에 따라 위의 표현은 reducible 하다. 유니타리 행렬 <span class="math inline">\(V\)</span></p>
 <p><span class="math display">\[
 V= \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 &amp; -i \\ 1 &amp; i\end{bmatrix}
 \]</span></p>
@@ -518,18 +686,8 @@ U'(\varphi ) = \begin{bmatrix} e^{i\varphi} &amp; 0 \\ 0 &amp; e^{-i\varphi}\end
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-Arfken_17_2_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.1 (Arfken 17.2.1)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(G\)</span> 의 표현일 때 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(\left[U(a)\right]^{-1}= U\left(a^{-1}\right)\)</span> 임을 보여라.</p>
-</div>
-</div>
-<p><br></p>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U\)</span> 는 동형사상이므로 <span class="math inline">\(G\)</span> 의 항등원 <span class="math inline">\(e\)</span> 에 대해 <span class="math inline">\(U(e) = I\)</span> 이다. <span class="math inline">\(I=U(e)=U(aa^{-1})=U(a)U(a^{-1})\)</span> 이므로 <span class="math inline">\(U(a^{-1})= \left[U(a)\right]^{-1}\)</span> 이다.</p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.2 (Arfken 17.2.2)</strong></span> 아래의 행렬 <span class="math inline">\(I,\,A,\, B\)</span> 는 <a href="group01_introduction.html#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span>4.8</span></a> 의 표현임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.1 (Arfken 17.2.2)</strong></span> 아래의 행렬 <span class="math inline">\(I,\,A,\, B\)</span> 는 <a href="group01_introduction.html#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span>4.8</span></a> 의 표현임을 보여라.</p>
 <p><span class="math display">\[
 I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\qquad A=\left[\begin{array}{rr} -1 &amp; 0 \\ 0 &amp; -1\end{array}\right], \qquad B=\begin{bmatrix} 0 &amp; 1 \\1 &amp; 0 \end{bmatrix}
 \]</span></p>
@@ -542,7 +700,7 @@ I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\qquad A=\left[\begin{ar
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.3 (Arfken 17.2.3)</strong></span> <a href="#exr-Arfken_17_2_2" class="quarto-xref">연습문제&nbsp;<span>5.2</span></a> 의 viergrouppe 표현은 reducible 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.2 (Arfken 17.2.3)</strong></span> <a href="#exr-Arfken_17_2_2" class="quarto-xref">연습문제&nbsp;<span>5.1</span></a> 의 viergrouppe 표현은 reducible 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -556,7 +714,7 @@ VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 &amp; 0 \\ 0 &
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.4 (Arfken 17.2.4)</strong></span> <br> (<span class="math inline">\(a\)</span>) 어떤 군에 대한 행렬표현을 얻었다면 이 행렬들에 대한 행렬식으로 1차원 표현을 구성 할 수 있다는 것을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.3 (Arfken 17.2.4)</strong></span> <br> (<span class="math inline">\(a\)</span>) 어떤 군에 대한 행렬표현을 얻었다면 이 행렬들에 대한 행렬식으로 1차원 표현을 구성 할 수 있다는 것을 보여라.</p>
 <p>(<span class="math inline">\(b\)</span>) <a href="#eq-Group_unitray_representation_of_D3_1" class="quarto-xref">식&nbsp;<span>5.1</span></a> 과 행렬식을 이용하여 <span class="math inline">\(D_3\)</span> 의 1차원 표현을 구하라</p>
 </div>
 </div>
@@ -567,7 +725,7 @@ VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 &amp; 0 \\ 0 &
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.5 (Arfken 17.2.5)</strong></span> <span class="math inline">\(n\)</span> 개의 성분을 가진 순환군 <span class="math inline">\(C_n\)</span> 은 <span class="math inline">\(\{\exp(2\pi is/n): s=1,\ldots,\, n\}\)</span> 으로 표현 될 수 있음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.4 (Arfken 17.2.5)</strong></span> <span class="math inline">\(n\)</span> 개의 성분을 가진 순환군 <span class="math inline">\(C_n\)</span> 은 <span class="math inline">\(\{\exp(2\pi is/n): s=1,\ldots,\, n\}\)</span> 으로 표현 될 수 있음을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -577,7 +735,7 @@ VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 &amp; 0 \\ 0 &
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.6 (Arfken 17.2.6)</strong></span> 아래 그림과 같이 정사각형을 자기 자신으로 변환시키는 아래 그림과 같은 회전 변환으로 이루어진 군(<span class="math inline">\(D_4\)</span>) 에 대해 <span class="math inline">\(2 \times 2\)</span> 행렬 표현을 구하라. 또한 Cayley table 을 만들라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.5 (Arfken 17.2.6)</strong></span> 아래 그림과 같이 정사각형을 자기 자신으로 변환시키는 아래 그림과 같은 회전 변환으로 이루어진 군(<span class="math inline">\(D_4\)</span>) 에 대해 <span class="math inline">\(2 \times 2\)</span> 행렬 표현을 구하라. 또한 Cayley table 을 만들라.</p>
 <div id="fig-Group-D4" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-D4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
