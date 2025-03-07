@@ -21,7 +21,7 @@ crossref:
 ::: {#def-Group_representation}
 #### 군의 표현
 
-$D\in \text{Hom} (G,\, GL_n(\F))$ 일 때 $U$ 를 $G$ 의 표현이라고 한다. $D(G)$ 가 유니타리 행렬의 집합일 때 $D$ 를 $G$ 의 **유니타리 표현(unitary representation)** 이라고 한다. $D$ 가 단사일 때 이 표현이 **faithful** 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다. 
+$D\in \text{Hom} (G,\, GL_n(\F))$ 일 때 $U$ 를 $G$ 의 표현이라고 한다. $D(G)$ 가 유니타리 행렬의 집합일 때 $D$ 를 $G$ 의 **유니타리 표현(unitary representation)** 이라고 한다. $D$ 가 단사일 때 이 표현이 **faithful** 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다. 군이 $n \times n$ 행렬로 표현되었을 때 $n$ 을 이 표현 $D$ 의 **차원(dimension)** 이라고 한다.
 
 :::
 :::
@@ -265,8 +265,7 @@ trivial
 </br>
 
 
-### 대각화와 기약 표현
-
+### 기약 표현과 유니타리 표현 {#sec-Group-irreducible_representation_and_unitary_representation}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_irreducible_representation}
@@ -309,31 +308,31 @@ $D^{(r_i)}(g_1)D^{(r_i)}(g_2) = D^{(r_i)}(g_1g_2)$ 이다.  $\square$
 
 $$
 D^{(r)}(g) = D^{(r_1)}(g) \oplus \cdots \oplus U^{(r_n)}(g) = \bigoplus_{i=1}^m D^{(r_i)}(g)
-$$
+$$ {#eq-Group-direct_sum_of_representation}
 
 임을 알 수 있다. 
 
 </br>
 
-### 부분군과 표현
+#### **부분군과 표현**
 
-군의 표현에서 중요한 것은 군에 대한 어떤 표현이 irreducible 인지 확인한 후 reducible 이면 분해하여 irreducible representation 을 찾는 것이다. $H\le G$ 이고 $D$ 가 $G$ 에 대한 기약표현이라고 하더라도 $H$ 에 대한 기약표현인지는 확인해야 한다. 즉 $H$ 에 대한 reducible representation 일 수 있다.
-
-</br>
-
+군의 표현에서 중요한 것은 군에 대한 어떤 표현이 irreducible 인지 확인한 후 reducible 이면 분해하여 irreducible representation 을 찾는 것이다. 여기서 한가지 짚고 넘어가야 할 것은 $H\le G$ 이고 $D$ 가 $G$ 에 대한 기약표현이라고 하더라도 $H$ 에 대한 기약표현인지는 확인해야 한다. 즉 $H$ 에 대한 reducible representation 일 수 있다.
 
 </br>
 
-### Unitary theorem
 
-유니타리 행렬은 $U^\dagger U = UU^\dagger = I$, 즉 $U^{-1}=U^\dagger$ 라는 아주 좋은 성질을 가지고 있다. 그리고 유한군의 모든 표현은 어떤 유니타리 표현과 동등하다. 
+</br>
+
+#### **유니타리 정리**
+
+유니타리 행렬은 $U^\dagger U = UU^\dagger = I$, 즉 $U^{-1}=U^\dagger$ 라는 아주 좋은 성질을 가지고 있다. 그리고 유한군의 표현은 어떤 유니타리 표현과 동등하다. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_unitary_theorem}
 #### Unitary theorem
-유한군에 대한 모든 표현은 어떤 유니타리 표현과 동등하다.
+유한군에 대한 표현은 어떤 유니타리 표현과 동등하다.
 
 :::
 
@@ -409,22 +408,97 @@ $$
 
 </br>
 
-다음은 일단 증명 없이 다룬다.
+### 직합표현과 직곱표현
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+$G$ 에 대한 두 표현 $D^{(1)}$ 과 $D^{(2)}$ 가 각각 $n_1$, $n_2$ 차원을 갖는다고 하자. 이 때 새로운 표현 $D^{(s)}$ 를
 
-::: {#prp-Group_representation_of_abelian}
+$$
+D^{(s)}(g) := D^{(1)}(g) \oplus D^{(2)}(g)
+$$ {#eq-Group-direct_sum_of_representation}
 
-$G$ 가 아벨군이면 $G$ 의 기약표현은 $1\times 1$ 행렬이다.
+로 표현 할 수 있다. 즉 $D^{(1)}$ 표현과 $D^{(2)}$ 표현의 행렬이 블록대각성분이 되는 $(n_1+n_2)\times (n_1+n_2)$ 행렬 표현이며 이것이 행렬 $G$ 의 표현인 것은 쉽게 알 수 있다. 이를 **직합 표현(direct sum representation)** 이라고 한다. 이보다 더 복잡하게
+
+$$
+D^{(p)}(g) := D^{(1)}(g) \otimes D^{(2)}(g) 
+$$ {#eq-Group-direct_product_of_representation}
+
+와 같은 표현을 생각 할 수 있다. 이 때 $D^{(p)}$ 를 **직곱 표현(direct product representation)** 이라고 하며 $n_1n_2 \times n_1n_2$ 행렬이다. 
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exm-Group_direct_product_of_matrix}
+
+#### 행렬의 직곱
+
+두 행렬 $A\in \F^{m \times m},\,B \in \F^{n \times n}$ 의 직곱은 다음과 같다.
+
+$$
+\begin{aligned}
+A\otimes B :=& \begin{bmatrix} A_{11}[B] &  \cdots &A_{1m} [B] \\ \vdots & \ddots & \vdots \\ A_{m1}[B] & \cdots & A_{mm}[B] \end{bmatrix} \\
+=&\begin{bmatrix} A_{11}B_{11} & A_{11}B_{12} & \cdots & A_{1m}B_{1(n-1)} & A_{1m}B_{1n} \\
+A_{11}B_{21} & A_{11}B_{22} &\cdots & A_{1m}B_{2(n-1)} & A_{1m}B_{2n} \\
+\vdots & \vdots &\ddots & \vdots & \vdots \\
+A_{m1}B_{n1} & A_{m1}B_{n2} & \cdots & A_{mm}B_{n(n-1)} & A_{mm}B_{nn}
+\end{bmatrix} 
+\end{aligned}.
+$$
+
+이다. 
+:::
+</div>
+</br>
+
+우리는 아직 이 직곱 표현이 군에 대한 표현이라는 것을 보이지 않았다. 
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_direct_product_representatin_is_a_group_representation}
+
+@eq-Group-direct_product_of_representation 에서와 같이 정의된 직곱표현은 군의 표현이다.
 
 :::
 
-</div>
+</div></br>
 
+::: {.proof}
 
+아래 식을 보이면 된다.
+$$
+D^{(p)}(g)D^{(p)}(g') =  D^{(p)}(gg') = \left(D^{(1)}(g) D^{(1)}(g')\right)\otimes \left(D^{(2)}(g) D^{(2)}(g')\right)
+$$
 
+여기에 대한 증명은 연습문제 (@exr-Group_proof_of_direct_product_mutiplication) 로 넘긴다. $\square$
+:::
 
 </br>
+
+
+우리는 이후 이 직곱표현이 기약 표현의 직합표현으로 변환될 수 있음을 보일 것이다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_character_of_direct_product_representatin}
+
+군 $G$ 의 두 표현 $D^{(1)},\, D^{(2)}$ 에 대해 $g\in G$ 의 character 를 $\chi^{(1)}(g),\, \chi^{(2)}(g)$ 라고 하자. $D=D^{(1)}\otimes D^{(2)}$ 에 대한 $g$ 의 character $\chi(g)=\chi^{(1)}(g)\chi^{(2)}(g)$ 이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$$
+\chi(g) = \sum_j \left(D(g)\right)_{jj} = \sum_i \left(D^{(1)}(g)\right)_{ii} \left(\sum_k \left(D^{(2)}(g)\right)_{kk}\right) =\chi^{(1)}(g) \chi^{(2)}(g). \; \square
+$$
+
+:::
+
+</br>
+
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_unitray_representation_of_D3_2}
@@ -509,6 +583,35 @@ $$
 
 ### 연습문제 {.unnumbered}
 
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_proof_of_direct_product_mutiplication}
+
+$m \times m$ 행렬 $A,\,B$ 와 $n \times n$ 행렬 $C,\,D$ 에 대해 $(A\otimes C)(B\otimes D)=(AB)\otimes (CD)$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$$
+\begin{aligned}
+(A\otimes C)(B\otimes D) &= \begin{bmatrix} A_{11}[C] &  \cdots &A_{1m} [C] \\ \vdots & \ddots & \vdots \\ A_{m1}[C] & \cdots & A_{mm}[C] \end{bmatrix} \begin{bmatrix} B_{11}[D] &  \cdots &B_{1m} [D] \\ \vdots & \ddots & \vdots \\ B_{m1}[D] & \cdots & B_{mm}[D] \end{bmatrix} \\[0.3em]
+&=\begin{bmatrix} \sum_{j} A_{1j}B_{j1}[C][D] & \cdots &\sum_j A_{1j}B_{jm}[C][D] \\
+\vdots & \ddots & \vdots \\
+\sum_{j}A_{mj}B_{j1}[C][D] &\cdots &\sum_{j}A_{mj}B_{jm} [C][D] \end{bmatrix} \\[0.3em]
+&=\begin{bmatrix} (AB)_{11}[C][D] & \cdots & (AB)_{1n}[C][D] \\
+\vdots & \ddots & \vdots \\
+(AB)_{m1}[C][D] &\cdots & (AB)_{mm} [C][D] \end{bmatrix} \\
+&= (AB)\otimes (CD)
+\end{aligned}
+$$
+
+:::
+
+</br>
 
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -634,3 +737,195 @@ $$
 :::
 
 </br>
+
+## 슈어 보조정리와 위대한 직교 정리
+
+### 슈어 보조정리
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-Group_schur_lemma_for_hermitian}
+
+$D$ 가 군 $G$ 의 기약표현이고 $H$ 가 에르미트 행렬일 때 모든 $g\in G$ 에 대해 $D(g)H = HD(g)$ 이면 $H$ 는 항등행렬의 스칼라곱이다.
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+$D$ 의 유니타리 표현 $U$ 에 대해 우선 생각하자(@thm-Group_unitary_theorem). $U$ 역시 당연히 기약 표현이다. $U(g)H=HU(g)$ 이며 $H$ 는 어떤 유니타리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 $X$ 라고 하고 $H=V^{-1}XV$ 이라고 하자. 
+
+$$
+\begin{aligned}
+U(g)H-HU(g) = 0 &\iff U(g)V^{-1}XV - V^{-1}XVU(g) = 0 \\
+&\iff V^{-1}[VU(g)V^{-1},\, X]V=0\\
+&\iff [VU(g)V^{-1},\, X]=0.
+\end{aligned}
+$$
+
+이제 $U'(g) = VU(g)V^{-1}$ 이라고 하자. 
+
+$$
+0=(U'(g)X-XU'(g))_{ij} = \sum_k U'(g)_{ik}X_{kj} - X_{ik}U'(g)_{kj} = U'(g)_{ij}X_{jj} - X_{ii}U'(g)_{ij}
+$$
+
+이므로 
+
+$$
+U'(g)_{ij}(X_{ii}-X_{jj}) = 0
+$$
+
+이어야 한다. 이로부터 $X_{ii} \ne X_{jj}$ 이면 $U'(g)_{ij}=0$ 이며 따라서 $U'(g)$ 는 reducible 한데 이는 $U$ 가 기약표현이라는 것에 모순이다. 따라서 $X$ 는 항등행렬의 스칼라곱이며, $H=V^{-1}XV$ 이므로 $H$ 도 항등행렬의 스칼라곱이다. 
+
+이제 유니타리 표현이 아닌 $D$ 에 대해 생각하자. $D$ 는 어떤 닮음 변환에 대해 유니타리 표현이 되므로 $D=SUS^{-1}$ 이라고 하자. 
+
+$$
+0=D(g)H-HD(g) = SU(g)S^{-1}H-HSU(g)S^{-1}= S[U(g),\, S^{-1}HS]S^{-1}
+$$
+
+이므로 $[U(g),\, S^{-1}HS]=0$ 이며 따라서 $S^{-1}HS$ 는 항등행렬의 스칼라곱이고 $H$ 역시 그러하다. 즉 유니타리 표현이 아닌 일반적인 기약표현에 대해서도 성립한다. $\square$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-Group_schur_lemma}
+#### 슈어 보조정리 (Schur's lemma)
+
+$D$ 가 군 $G$ 에 대한 기약표현이고 어떤 행렬 $A$ 가 모든 $g\in G$ 에 대해 $D(g)A=AD(g)$ 이면 $A$ 는 항등함수의 스칼라배이다.
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+우선 $D$ 와 동등한 유니타리 표현 $U$ 에 대해 증명한다. $U(g)A = AU(g)$ 이며 양 변에 에르미트 conjugate 를 취하면 $A^\dagger U^\dagger(g) = U^\dagger (g) A^\dagger$ 이다. 이 식의 앞과 뒤에 각각 $U(g)$ 를 곱하면 
+
+$$
+U(g)A^\dagger = A^\dagger U(g)
+$$
+
+를 얻는다. 즉 $U(g)$ 가 $A$ 와 commute 하면 $A^\dagger$ 와도 commute 하다. 이제 $H_1 = (A+A^\dagger)$, $H_2 = i(A-A^\dagger)$ 라고 하면 $H_1,\, H_2$ 는 에르미트 행렬이며 $H_1 D(g)=D(g)H_1$, $H_2D(g) = D(g)H_2$ 이다. @lem-Group_schur_lemma_for_hermitian 에 의해 $H_1,\,H_2$ 는 항등행렬의 스칼라곱이며 $A=\frac{1}{2}(H_1-iH_2)$ 도 그러하다. 
+
+$U$ 는 $D$ 와 동등한 표현이므로 $D=SUS^{-1}$ 인 가역행렬 $S$ 가 존재한다. 
+
+$$
+0 = D(g)A - AD(g) = S[U(g),\, S^{-1}AS]S^{-1}
+$$
+
+이므로 $[U(g),\, S^{-1}AS]=0$ 이며 따라서 $S^{-1}AS$ 는 항등행렬의 스칼라곱이고, $A$ 도 그러하다. $\square$
+
+
+:::
+
+</br>
+
+### 위대한 직교 정리
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-Group_for_GOT}
+
+유한군 $G$ 에 대한 두 가역표현 $D^{(1)},\, D^{(2)}$ 가 각각 $d_1,\,d_2$ 차원이라고 하자. 어떤 $d_2\times d_1$ 행렬 $M$ 에 대해
+
+$$
+\forall g\in G,\, MD^{(1)}(g) = D^{(2)}(g)M
+$$ {#eq-lem_Group_for_GOT_1}
+
+일 경우 ($1$) $d_1\ne d_2$ 이면 $M=0$ 이며, ($2$) $d_1=d_2$ 이면 $M=0$ 이거나 $M$ 은 가역행렬이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+일반성을 잃지 않고 $d_1\le d_2$ 라고 할 수 있다. 그리고 우선 $D^{(1)},\, D^{(2)}$ 와 동등한 유니타리 표현 $U^{(1)},\, U^{(2)}$ 에 대해 생각하자. 즉 
+$$
+\forall g\in G,\, MU^{(1)}(g) = U^{(2)}(g)M
+$$ {#eq-lem_Group_for_GOT_2}
+
+일 때 @eq-lem_Group_for_GOT_2 에 hermitian conjugate 를 취하면 
+
+$$
+\forall g\in G,\, U^{(1)}(g^{-1})M^\dagger = M^\dagger U^{(2)}(g^{-1})
+$${#eq-lem_Group_for_GOT_3}
+
+@eq-lem_Group_for_GOT_3 의 양변의 앞에 $M$ 을 곱하고 $g^{-1}$ 에 대해 @eq-lem_Group_for_GOT_2 를 사용하면
+
+$$
+\forall g\in G,\, MM^\dagger U^{(2)} (g^{-1}) = MU^{(1)}(g^{-1})M^\dagger = U^{(2)}(g^{-1}) M M^\dagger
+$$
+
+이며, 슈어 보조정리(@lem-Group_schur_lemma) 에 의해 $MM^\dagger =cI$ 이다. $d_1 < d_2$ 이면 $MM^\dagger =cI$ 인 것은 $c=0$ 뿐이다(@exr-Group_for_lem-Group_for_GOT). $d_1=d_2$ 이고 $c\ne 0$ 이면 $\det(MM^\dagger)=|\det(M)|^2 = c$ 이므로 $\det(M)\ne 0$ 이다. 즉 $M$ 은 가역행렬이다. 
+
+이제 일반적인 표현에 대해 생각하자. 유니타리 표현 $U^{(1)},\, U^{(2)}$ 에 대해 $D^{(1)}(g)=SU^{(1)}(g)S^{-1}$, $D^{(2)}(g) = PU^{(2)}(g)P^{-1}$ 이라고 하자. 
+
+$$
+\begin{aligned}
+MD^{(1)}(g) = D^{(2)}M &\implies MSU^{(1)}(g)S^{-1} = PU^{(2)}(g)P^{-1}M \\
+&\implies P^{-1}MS U^{(1)}(g) = U^{(2)}(g) P^{-1}MS
+\end{aligned}
+$$
+
+이므로 $d_1\ne d_2$ 이면 $P^{-1}MS=0$ 이고 따라서 $M=0$ 이다. $d_1=d_2$ 이면 $M=0$ 이거나 $P^{-1}MS$ 가 가역행렬이므로 $M$ 도 가역행렬이다. $\square$
+
+
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_great_orthogonality_theorem}
+#### 위대한 직교 정리
+
+유한군 $G$ 에 대한 기약 표현 $D$ 를 생각하자. 
+
+$$
+\sum_{g\in G} D^{(i)}(g)^\dagger_{\mu \nu} D^{(j)}_{\alpha\beta} = \dfrac{d}
+$$
+
+:::
+
+</div>
+
+</br>
+
+
+### 연습문제 {.unnumbered}
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_for_lem-Group_for_GOT}
+
+$m\times n (\text{where } m > n)$ 행렬 $M$ 에 대해 $MM^\dagger = cI_{m}$ 이면 $c=0,\, M=0$ 이다.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$\text{rank}(M^\dagger) \le n$ 이므로 $\text{rank}(MM^\dagger)\le n$ 이다. 그런데 $\text{rank}(cI_m)$ 은 $c\ne 0$ 일 경우 $m$ 이며 $m>n$ 이므로 $c=0$ 이다.
+
+$$
+0=(MM^\dagger)_{ii} = \sum_{j=1}^n|M_{ij}|^2
+$$
+
+이므로 $M=0$ 이다. $\square$
+
+:::
