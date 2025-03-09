@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>수리물리학 - 4&nbsp; 군의 기본적인 성질</title>
+<title>4&nbsp; 군의 기본적인 성질 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -150,9 +150,9 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">벡터해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -167,9 +167,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">텐서 해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -190,9 +190,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">군</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">군과 대칭</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -206,7 +206,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group02_representation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현 I.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -219,9 +219,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">미분방정식</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -242,9 +242,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">복소함수</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -286,9 +286,11 @@ window.Quarto = {
   </ul></li>
   <li><a href="#잉여류와-라그랑쥬-정리" id="toc-잉여류와-라그랑쥬-정리" class="nav-link" data-scroll-target="#잉여류와-라그랑쥬-정리"><span class="header-section-number">4.2</span> 잉여류와 라그랑쥬 정리</a></li>
   <li><a href="#sec-Group_important_groups" id="toc-sec-Group_important_groups" class="nav-link" data-scroll-target="#sec-Group_important_groups"><span class="header-section-number">4.3</span> 중요한 군</a></li>
-  <li><a href="#동형사상과-동치류" id="toc-동형사상과-동치류" class="nav-link" data-scroll-target="#동형사상과-동치류"><span class="header-section-number">4.4</span> 동형사상과 동치류</a>
+  <li><a href="#동형사상과-conjugate-class" id="toc-동형사상과-conjugate-class" class="nav-link" data-scroll-target="#동형사상과-conjugate-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugate Class</a>
   <ul class="collapse">
-  <li><a href="#몫군" id="toc-몫군" class="nav-link" data-scroll-target="#몫군"><span class="header-section-number">4.4.1</span> 몫군</a></li>
+  <li><a href="#동형사상" id="toc-동형사상" class="nav-link" data-scroll-target="#동형사상"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
+  <li><a href="#conjugate-class" id="toc-conjugate-class" class="nav-link" data-scroll-target="#conjugate-class"><span class="header-section-number">4.4.2</span> Conjugate Class</a></li>
+  <li><a href="#몫군" id="toc-몫군" class="nav-link" data-scroll-target="#몫군"><span class="header-section-number">4.4.3</span> 몫군</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#회전과-리-대수" id="toc-회전과-리-대수" class="nav-link" data-scroll-target="#회전과-리-대수"><span class="header-section-number">4.5</span> 회전과 리 대수</a>
@@ -305,7 +307,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군</a></li><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></h1>
 </div>
@@ -482,7 +484,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-Group_important_groups"><span class="header-section-number">4.3</span> 중요한 군</h2>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_permutation_group" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.1 (대칭군과 치환군)</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(X \mapsto X\)</span> 전단사 함수의 집합을 <strong>대칭군(symmetric group)</strong> 이라고 하고 <span class="math inline">\(S_X\)</span> 라고 표기한다. 특별히 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 자연수의 집합에 대한 순환군은 <span class="math inline">\(S_n\)</span> 이라고 표기한다. <span class="math inline">\(S_X\)</span> 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 <strong>순열군(permutation group)</strong> 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.</p>
+<p><span class="theorem-title"><strong>예제 4.1 (대칭군과 치환군)</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(X \mapsto X\)</span> 전단사 함수의 집합을 <strong>대칭군(symmetric group)</strong> 이라고 하고 <span class="math inline">\(S_X\)</span> 혹은 <span class="math inline">\(\text{Sym}(X)\)</span> 라고 표기한다. 특별히 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 자연수의 집합에 대한 순환군은 <span class="math inline">\(S_n\)</span> 이라고 표기한다. <span class="math inline">\(S_X\)</span> 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 <strong>순열군(permutation group)</strong> 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.</p>
 <p><span class="math inline">\(S_n\)</span> 의 부분군으로 <strong>교대군(alternating group)</strong> <span class="math inline">\(A_n\)</span> 이 있다. (…)</p>
 </div>
 </div>
@@ -515,7 +517,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <div id="exm-Group_d3" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.6 (<span class="math inline">\(D_3\)</span>, 정삼각형에 대한 대칭 연산)</strong></span> <br></p>
 <p>정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 <span class="math inline">\(I\)</span>, 삼각형의 중심에 대한 <span class="math inline">\(\pi/3\)</span> 만큼의 반시계 방향 회전 <span class="math inline">\(C_3\)</span> 와 <span class="math inline">\(C_3^2\)</span>(<span class="math inline">\(C_3\)</span> 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 <span class="math inline">\(\pi/2\)</span> 회전 <span class="math inline">\(C_2,\,C_2',\,C_2''\)</span> (아래 그림을 참고하라.)</p>
-<div id="fig-Group_d3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-Group_d3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/d3.png" class="img-fluid figure-img" width="350">
@@ -527,7 +529,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 <p><br></p>
 <p>정삼각형의 꼭지점 <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span> 에 <span class="math inline">\(D_3\)</span> 의 연산을 수행했을 때의 결과는 아래 그림 <a href="#fig-Group_d3_2" class="quarto-xref">그림&nbsp;<span>4.2</span></a> 과 같다.</p>
-<div id="fig-Group_d3_2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-Group_d3_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_d3_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/d3_2.png" class="img-fluid figure-img" width="600">
@@ -538,13 +540,13 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </figure>
 </div>
 <p>이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 하며 <span class="math inline">\(C_3\)</span> 행과 <span class="math inline">\(C_2\)</span> 열에는 <span class="math inline">\(C_3C_2 = C_2''\)</span> 가 표현된다.</p>
-<div id="tbl-Group_d3" class="striped hover quarto-float anchored">
+<div id="tbl-Group_d3" class="striped hover quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[30,30,30,30,30,30,30]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;4.1
 </figcaption>
 <div aria-describedby="tbl-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 14%">
@@ -741,25 +743,12 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 </div>
 <p><br></p>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-Group_C4" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.9 (<span class="math inline">\(C_4\)</span> 군의 동형사상과 준동형사상.)</strong></span> <br></p>
-<p>정사각형의 중심에 대한 <span class="math inline">\(0^\circ\)</span>, <span class="math inline">\(90^\circ\)</span>, <span class="math inline">\(180^\circ\)</span>, <span class="math inline">\(270^\circ\)</span> 회전은 군을 이루며 각각 <span class="math inline">\(I,\,C_4,\,C_2,\,C_4'\)</span> 라고 한다. 즉 <span class="math inline">\(G_1=\{I,\,C_4,\,C_2,\,C_4'\}\)</span> 이라고 하자. 또한 <span class="math inline">\(G_2=\{1,\, i,\, -1,\, -i\}\)</span> 는 곱에 대한 군을 이룬다. 이 두 군에 대한 함수 <span class="math inline">\(\phi : G \to G'\)</span> 를</p>
-<p><span class="math display">\[
-\phi(I)=1,\quad \phi(C_4)=i,\quad \phi(C_2)=-1,\quad \phi(C_4')=-i
-\]</span></p>
-<p>로 정의하면 <span class="math inline">\(\phi\)</span> 는 동형사상이다. 즉 <span class="math inline">\(\phi \in \text{Iso}(G_1,\,G_2)\)</span> 이다. 또한 이 군은 <span class="math inline">\(C_4\)</span> 혹은 <span class="math inline">\(i\)</span> 에 의해 생성되는 순환군이다.</p>
-<p>곱 연산으로 정외된 집합 <span class="math inline">\(G_3=\{1,\,-1\}\)</span> 은 역시 군이며 <span class="math inline">\(\psi: G_1\to G_3\)</span> 를</p>
-<p><span class="math display">\[
-\psi (I)= \psi(C_2)=1,\qquad \psi (C_4)=\psi (C_4')= -1
-\]</span></p>
-<p>로 정의하면 <span class="math inline">\(\psi \in \text{Hom}(G_1,\,G_3)\)</span> 이다.</p>
-</div>
-</div>
 <p><br></p>
 </section>
-<section id="동형사상과-동치류" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-동치류"><span class="header-section-number">4.4</span> 동형사상과 동치류</h2>
+<section id="동형사상과-conjugate-class" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugate-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugate Class</h2>
+<section id="동형사상" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="동형사상"><span class="header-section-number">4.4.1</span> 동형사상</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -774,6 +763,22 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p>일 때 <span class="math inline">\(\phi\)</span> 를 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 <strong>준동형사상(homomorphism)</strong> 이라고 한다. <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 준동형 사상의 집합을 <span class="math inline">\(\text{Hom}(G,\,G')\)</span> 이라고 쓴다. <span class="math inline">\(\phi\)</span> 가 전단사 함수 일 때 <span class="math inline">\(\phi\)</span> 를 <strong>동형 사상(isomorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 동형사상의 집합을 <span class="math inline">\(\text{Iso}(G,\,G')\)</span> 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 <strong>동형 (isomorphic)</strong> 이라고 하며 <span class="math inline">\(G \approx G'\)</span> 이라고 표기한다. 그리고 <span class="math inline">\(G \to G\)</span> 동형사상을 <strong>자기동형사상 (automorphism)</strong> 이라고 하며 <span class="math inline">\(\text{Aut}(G)\)</span> 로 표기한다.</p>
 </div>
 </div>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_C4" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.9 (<span class="math inline">\(C_4\)</span> 군의 동형사상과 준동형사상.)</strong></span> <br></p>
+<p>정사각형의 중심에 대한 <span class="math inline">\(0^\circ\)</span>, <span class="math inline">\(90^\circ\)</span>, <span class="math inline">\(180^\circ\)</span>, <span class="math inline">\(270^\circ\)</span> 회전은 군을 이루며 각각 <span class="math inline">\(I,\,C_4,\,C_2,\,C_4'\)</span> 라고 한다. 즉 <span class="math inline">\(G_1=\{I,\,C_4,\,C_2,\,C_4'\}\)</span> 이라고 하자. 또한 <span class="math inline">\(G_2=\{1,\, i,\, -1,\, -i\}\)</span> 는 곱에 대한 군을 이룬다. 이 두 군에 대한 함수 <span class="math inline">\(\phi : G \to G'\)</span> 를</p>
+<p><span class="math display">\[
+\phi(I)=1,\quad \phi(C_4)=i,\quad \phi(C_2)=-1,\quad \phi(C_4')=-i
+\]</span></p>
+<p>로 정의하면 <span class="math inline">\(\phi\)</span> 는 동형사상이다. 즉 <span class="math inline">\(\phi \in \text{Iso}(G_1,\,G_2)\)</span> 이다. 또한 이 군은 <span class="math inline">\(C_4\)</span> 혹은 <span class="math inline">\(i\)</span> 에 의해 생성되는 순환군이다.</p>
+<p>곱 연산으로 정외된 집합 <span class="math inline">\(G_3=\{1,\,-1\}\)</span> 은 역시 군이며 <span class="math inline">\(\psi: G_1\to G_3\)</span> 를</p>
+<p><span class="math display">\[
+\psi (I)= \psi(C_2)=1,\qquad \psi (C_4)=\psi (C_4')= -1
+\]</span></p>
+<p>로 정의하면 <span class="math inline">\(\psi \in \text{Hom}(G_1,\,G_3)\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -796,7 +801,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 </div>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group-kernel_of_homomorphism" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 4.3</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 다음이 성립한다.</p>
@@ -812,6 +817,32 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p>(<span class="math inline">\(3\)</span>) (<span class="math inline">\(1\)</span>) 에서 <span class="math inline">\(1_{G'}\in \phi(G')\)</span> 임을 보였다. <span class="math inline">\(a',\,b'\in G'\)</span> 이면 <span class="math inline">\(\phi(a)=a',\, \phi(b)=b'\)</span> 인 <span class="math inline">\(a,\,b\in G\)</span> 가 존재하며 <span class="math inline">\(a'b' = \phi(a)\phi(b) = \phi(ab) \in \operatorname{im}(\phi)\)</span> 이다. <span class="math inline">\(a'\in G'\)</span> 이라면 <span class="math inline">\(\phi(a)=a'\)</span> 인 <span class="math inline">\(a\in G\)</span> 가 존재하며 <span class="math inline">\(a^{-1} \in G\)</span> 이므로 <span class="math inline">\(\phi(a^{-1})\in G'\)</span> 이다. <span class="math inline">\(1_{G'}=\phi(aa^{-1}) = \phi(a)\phi(a^{-1})\)</span> 이므로 <span class="math inline">\(\phi(a^{-1}) = (\phi(a))^{-1} =a'^{-1}\in \operatorname{im}(G)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<p>유한군에 대해 중요한 정리 중의 하나가 케일리 정리(Caylay’s theorem) 이다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group-caylay_theorem" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.3 (Caylay 정리)</strong></span> 유한군 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(\text{Sym}(G)\)</span> 의 어떤 부분군과 동형이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\phi_g :G \to G\)</span> 를 <span class="math inline">\(\phi_g(x):= gx\)</span> 로 정의하자. <a href="#thm-Group_rearrangement_theorem" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 에 의해 <span class="math inline">\(\phi_g\)</span> 는 전단사이므로 <span class="math inline">\(\phi_g \in \text{Sym}(G)\)</span> 이다. <span class="math inline">\(\Phi_G = \{\phi_g: g\in G\}\)</span> 는 함수의 합성 연산에 대해 군이라는 것을 보이자. <span class="math inline">\(\phi_{i_G}\)</span> 는 <span class="math inline">\(\Phi_G\)</span> 에서의 항등원이며 <span class="math inline">\(\phi_{g^{-1}}\)</span> 은 <span class="math inline">\(\phi_g\)</span> 의 역원이다. 또한 함수의 합성의 정의에 의해 <span class="math inline">\(\phi_{g_1}\circ (\phi_{g_2}\circ \phi_{g_3})= (\phi_{g_1} \circ \phi_{g_2})\circ \phi_{g_3}\)</span> 이다. 따라서 <span class="math inline">\(\Phi_G \le \text{Sym}(G)\)</span> 이다.</p>
+<p>이제 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(\Phi(G)\)</span> 가 동형임을 보이자. <span class="math inline">\(\theta : G \to \Phi_G\)</span> 에 대해 <span class="math inline">\(\theta(g) := \phi_g\)</span> 라고 하자. 각각의 <span class="math inline">\(g\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\theta(x)\theta(y)(g) =\phi_x(\phi_y(g))= xyg = \phi_{xy}(g)= \theta(xy)(g)
+\]</span></p>
+<p>이므로 <span class="math inline">\(\theta\)</span> 는 준동형사상이다. <span class="math inline">\(\theta_x = \theta_y\)</span> 이면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(xg = yg\)</span> 이므로 <span class="math inline">\(x=y\)</span> 이다. 즉 <span class="math inline">\(\theta\)</span> 는 동형사상이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>다음 따름 정리는 자명하지만 일단 언급해둔다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="cor-Group-caylay_theorem" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(\text{Sym}(G)\)</span> 는 <span class="math inline">\(S_{|G|}\)</span> 와 동형이다. 따라서 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(S_{|G|}\)</span> 의 어떤 부분군과 동형이다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="conjugate-class" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="conjugate-class"><span class="header-section-number">4.4.2</span> Conjugate Class</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -831,7 +862,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_equivalent_class" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.3</strong></span> 집합 <span class="math inline">\(X\)</span> 에 어떤 동치관계 <span class="math inline">\(\sim\)</span> 이 정의되면 집합 <span class="math inline">\(X\)</span> 는 성분의 동치류들로 분할된다. 즉,</p>
+<p><span class="theorem-title"><strong>정리 4.4</strong></span> 집합 <span class="math inline">\(X\)</span> 에 어떤 동치관계 <span class="math inline">\(\sim\)</span> 이 정의되면 집합 <span class="math inline">\(X\)</span> 는 성분의 동치류들로 분할된다. 즉,</p>
 <p> (<span class="math inline">\(1\)</span>) 모든 <span class="math inline">\(x\in X\)</span> 는 어떤 동치류에 포함된다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x,\,y \in X\)</span> 일 때 <span class="math inline">\([x]\)</span> 와 <span class="math inline">\([y]\)</span> 는 같거나 서로소이다.</p>
 <p> (<span class="math inline">\(3\)</span>) 따라서 <span class="math inline">\(X\)</span> 는 서로소인 동치류들의 합집합과 같다.</p>
@@ -859,7 +890,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_conjugate_and_equivalent_class" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.4</strong></span> 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 conjugate 인 것은 동치관계이다.</p>
+<p><span class="theorem-title"><strong>정리 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 conjugate 인 것은 동치관계이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -870,7 +901,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p>이로부터 다음 결론은 자연스럽다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-Group_conjugate_and_equivalent_class" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> 군 <span class="math inline">\(G\)</span> 는 conjugate 관계에 의해 분할된다.</p>
+<p><span class="theorem-title"><strong>따름정리 4.2</strong></span> 군 <span class="math inline">\(G\)</span> 는 conjugate 관계에 의해 분할된다.</p>
 </div>
 </div>
 <p><br></p>
@@ -912,7 +943,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_kernel_of_homomorphism_is_invariant_subgroup" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.5</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 <span class="math inline">\(\ker (\phi) \trianglelefteq G\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>정리 4.6</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 <span class="math inline">\(\ker (\phi) \trianglelefteq G\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -920,8 +951,9 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(K = \ker(\phi)\)</span> 라고 하자. <span class="math inline">\(k\in K\)</span> 에 대해 <span class="math inline">\(\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g^{-1})=\phi(g)\phi(g^{-1})=1_{G'}\)</span> 이므로 <span class="math inline">\(gKg^{-1}=K\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<section id="몫군" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="몫군"><span class="header-section-number">4.4.1</span> 몫군</h3>
+</section>
+<section id="몫군" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="몫군"><span class="header-section-number">4.4.3</span> 몫군</h3>
 <p><span class="math inline">\(N\trianglelefteq G\)</span> 라고 하자. 그리고 <span class="math inline">\(N\)</span> 에 의한 왼쪽 잉여류의 집합 <span class="math inline">\(\{N,\,g_1N,\ldots,\, g_nN\}\)</span> 를 생각하자. 이 때 다음이 성립한다. 임의의 <span class="math inline">\(g_1,\,g_2\in G,\, n_1,\,n_2\in N\)</span> 에 대해 <span class="math inline">\(g_1n_1\in g_1N,\, g_2n_2\in g_2N\)</span> 이며</p>
 <p><span class="math display">\[
 g_1n_1g_2n_2 = g_1(g_2g_2^{-1})n_1g_2n_2=g_1g_2(g_2^{-1}n_1g_2)n_2
@@ -995,7 +1027,7 @@ g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.5 (Arfken 17.1.7)</strong></span> &nbsp;</p>
-<div id="fig-Group-hexagon" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-Group-hexagon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-hexagon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/hexagons.png" class="img-fluid figure-img" width="200">
@@ -1220,18 +1252,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1263,7 +1284,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1271,7 +1314,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1601,8 +1644,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/group/group02_representation.html" class="pagination-link" aria-label="군과 표현">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/group/group02_representation.html" class="pagination-link" aria-label="군과 표현 I.">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현 I.</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

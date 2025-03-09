@@ -1,5 +1,5 @@
 ---
-title: "군과 표현"
+title: "군과 표현 I."
 number-sections: true
 number-depth: 3
 crossref:
@@ -14,8 +14,6 @@ crossref:
 ## 군의 표현
 
 ### 군의 표현과 유니타리 표현
-
-
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_representation}
@@ -135,6 +133,37 @@ $${#eq-Group_unitray_representation_of_D3_1}
 
 인 두가지 경우가 그러하다.
 
+:::
+
+</div>
+</br>
+
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_representation_for_Sn}
+
+#### 대칭군 $S_n$ 의 표현
+</br>
+
+대칭군 $S_n$ 은 $n \times n$ 행렬로 표현 할 수 있다. $\bf{e}_j \in \R^n$ 을 $j$ 번째 성분만 $1$ 이며 나머지 성분은 $0$ 인 열벡터라고 하자. $\sigma\in S_n$ 에 대해 $D(\sigma)$ 를
+
+$$
+D(\sigma) = \begin{bmatrix} \bf{e}_{\sigma^{-1}(1)}^T \\ \vdots \\ \bf{e}_{\sigma^{-1}(n)}^T \end{bmatrix}
+$$
+
+로 정의하자. 여기서 $\bf{e}^T_k$ 는 $\bf{e}_k$ 가 transpose 된 행벡터이다. 그렇다면 $D(\sigma)\bf{e}_j$ 는 $\sigma^{-1}(k)=j$ 인 $k$ 번째 성분이 $1$ 이며 나머지는 $0$ 이므로 $D(\sigma)\bf{e}_j = \bf{e}_{\sigma(j)}$ 이다. 또한 $\pi,\, \sigma\in S_n$ 에 대해
+
+$$
+D(\pi)D(\sigma)\bf{e}_j = D(\pi)\bf{e}_{\sigma(j)}= \bf{e}_{(\pi\circ \sigma)(j)}
+$$
+
+이므로 $D(\pi)D(\sigma)= D(\pi \circ \sigma)$ 라고 할 수 있다. 즉 $D$ 는 $S_n$ 에 대한 표현이다.
+
+
+
+
 
 :::
 
@@ -162,7 +191,7 @@ $${#eq-Group_unitray_representation_of_D3_1}
 
 ::: {#prp-Group_character_of_class}
 
-군 $G$ 와 행렬표현 $D^{(r)}$ 에 대해 $K$ 하 $G$ 의 class 일 때 모든 $k\in K$ 에 대해 $\text{tr}(D^{(r)}(k))$ 는 같다. 
+군 $G$ 와 행렬표현 $D^{(r)}$ 에 대해 $K$ 가 $G$ 의 class 일 때 모든 $k\in K$ 에 대해 $\text{tr}(D^{(r)}(k))$ 는 같다. 
 
 
 :::
@@ -835,7 +864,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-Group_for_GOT}
+::: {#lem-Group_for_GOT_1}
 
 유한군 $G$ 에 대한 두 가역표현 $D^{(1)},\, D^{(2)}$ 가 각각 $d_1,\,d_2$ 차원이라고 하자. 어떤 $d_2\times d_1$ 행렬 $M$ 에 대해
 
@@ -884,6 +913,87 @@ $$
 
 :::
 
+</br>
+
+위 보조정리에서 ($2$) 번 조건, 즉 $d_1=d_2$ 이며 $M\ne 0$ 이 아니라면 모든 $g\in G$ 에 대해 $D^{(1)}(g) = M^{-1}D^{(2)}(g)M$ 이다. 이를 정리하면 다음과 같다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#cor-Group_for_GOT_1}
+
+
+유한군 $G$ 에 대한 두 가역표현 $D^{(1)},\, D^{(2)}$ 가 같은 $d$ 차원이며 어떤 $0$ 행렬이 아닌 $d \times d$ 행렬 $M$ 에 대해 
+
+$$
+\forall g\in G,\, MD^{(1)}(g) = D^{(2)}(g)M
+$$ {#eq-cor_Group_for_GOT_1}
+
+일 경우 $D^{(1)}$ 과 $D^{(2)}$ 는 동등하다. 
+
+:::
+</div>
+</br>
+
+
+이제 유한군에 대한 표현론에서 가장 중요한 위대한 직교정리를 증명한다. 위대한 직교정리는 유한군 $G$ 에 대한 서로 동등하지 않은 두 기약 표현 $D^{(i)},\ D^{(j)}$ 와 군의 성분의 개수 $|G|$ 에 대해 
+
+$$
+\sum_{g\in G} D^{(i)}(g^{-1})_{\mu \nu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
+$$ 
+
+이 항상 참임을 말한다. 증명은 몇개의 보조정리를 통해 증명하기로 한다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-Group_for_GOT_2}
+
+
+유한군 $G$ 에 대한 서로 동등하지 않은 두 기약표현 $D^{(1)},\ D^{(2)}$ 에 대해 다음이 성립한다.
+
+$$
+\sum_{g\in G} D^{(1)}(g^{-1})_{\nu\mu} D^{(2)}(g)_{\alpha\beta} = 0.
+$$ {#eq-lem_Group_GTO_2}
+
+:::
+
+</div></br>
+
+
+::: {.proof}
+
+우선 $\delta_{ij}$ 에 대해 증명한다. $D^{(1)}$ 가 $n_1$ 차원 표현이며 $D^{(2)}$ 가 $n_2$ 차원 표현이라고 하자. 이제 임의의 $n_2\times n_1$ 행렬 $X$ 에 대해
+
+$$
+M = \sum_{g\in G} D^{(2)}(g) X D^{(1)}(g^{-1})
+$$
+
+라고 할 때 $M$ 이 @eq-lem_Group_for_GOT_1 을 만족한다는 것을 보이자. 임의의 $a\in G$ 에 대해
+
+$$
+\begin{aligned}
+D^{(j)}(a)M &= \sum_{g\in G} D^{(2)}(a) D^{(2)}(g) X D^{(1)}(g^{-1}) \\[0.3em]
+&= \sum_{g\in G} D^{(j)}(a) D^{(j)}(g) X D^{(1)}(g^{-1}) D^{(1)}(a^{-1})D^{(1)}(a)\\[0.3em]
+&= \sum_{g\in G} D^{(j)}(ag) X D^{(1)}((ag)^{-1})D^{(1)}(a)&\text{;rearrangement theorem}\\[0.3em]
+&= \sum_{g\in G} D^{(j)}(g) X D^{(1)}((g)^{-1})D^{(1)}(a) = MD^{(1)}(a)\\[0.3em]
+\end{aligned}
+$$
+
+이며 @lem-Group_for_GOT_1 와 @cor-Group_for_GOT_1 에 두 표현이 동등하지 않을 경우 $M=0$ 이다. 즉
+
+$$
+M_{\alpha\mu} = 0 = \sum_{\chi,\, \lambda}\sum_{g\in G} D^{(2)}(g)_{\alpha \chi} X_{\chi \lambda}D^{(1)}(g^{-1})_{\lambda\mu}.
+$$
+
+여기서 $X$ 가 임의의 행렬이므로 $X_{\beta \nu}=1$ 이고 나머지 성분이 $0$ 이라고 하면
+
+$$
+0 = \sum_{g\in G} D^{(2)}(g)_{\alpha \beta} D^{(1)}(g^{-1})_{\nu\mu}
+$$
+
+이다. $\square$
+
+:::
 
 </br>
 
@@ -892,11 +1002,11 @@ $$
 ::: {#thm-Group_great_orthogonality_theorem}
 #### 위대한 직교 정리
 
-유한군 $G$ 에 대한 기약 표현 $D$ 를 생각하자. 
+유한군 $G$ 에 대한 기약 표현 $D$ 를 생각하자. $G$ 에 대한 모든 동등하지 않은 행렬 표현 $D^{(1)},\ D^{(2)}, \ldots$ 와 군의 성분의 개수 $|G|$, 그리고 $D^{(i)}$ 의 차원 $d_i$ 에 대해 다음이 성립한다.
 
 $$
-\sum_{g\in G} D^{(i)}(g)^\dagger_{\mu \nu} D^{(j)}_{\alpha\beta} = \dfrac{d}
-$$
+\sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
+$$ {#eq-Group_GTO}
 
 :::
 
@@ -904,6 +1014,282 @@ $$
 
 </br>
 
+::: {.proof}
+
+@lem-Group_for_GOT_2 서 보았듯이 $D^{(1)},\ldots$ 가 서로 동등하지 않은 행렬 표현일 때 $D^{(i)} \ne D^{(j)}$ 라면 
+
+$$
+\sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = 0
+$$ 
+
+이다. 따라서 우리는 $i=j$ 일 경우만 생각하면 된다. 이 표현을 $D$ 라고 하고 임의의 $d \times d$ 행렬 $X$ 에 대해 $M$ 을 다음과 같이 정한다.
+
+$$
+M = \sum_{g\in G} D(g) X D(g^{-1}).
+$$
+
+@lem-Group_for_GOT_2 의 증명 과정에서 보았듯이 임의의 $g\in G$ 에 대해 $D(g)M=MD(g)$ 이며 따라서 $M=cI$ 이다. 따라서
+
+$$
+\sum_{\chi, \lambda} \sum_{g\in G} D(g)_{\alpha \lambda}X_{\chi \nu}D(g^{-1})_{\lambda \mu}= c\delta_{\alpha \mu}
+$$ {#eq-thm-Group_great_orthogonality_theorem_1}
+
+이다. 정해진 $\beta,\, \nu$ 에 대해 $X_{\beta,\, \nu}=1$ 이고 나머지 $X$ 의 성분이 $0$ 이라면 
+
+$$
+\sum_{g\in G} D(g)_{\alpha \beta} D(g^{-1})_{\nu \mu} = c_{\beta\nu} \delta_{\alpha\mu}
+$$ {#eq-thm-Group_great_orthogonality_theorem_2}
+
+이다. @eq-thm-Group_great_orthogonality_theorem_1 에서 $c$ 는 특정 $X$ 의 선택에 의해 결정되는 값이며 이때문에 @eq-thm-Group_great_orthogonality_theorem_2 에 $c_{\beta\mu}$ 라는 인덱스가 붙었다.
+
+$\alpha=\mu$ 조건에서 $\mu$ 에 대해 더하면
+
+$$
+\sum_\mu\sum_{g\in G} D(g)_{\mu \beta} D(g^{-1})_{\nu \mu} = c_{\beta\nu}d
+$$
+
+이며 
+
+$$
+\sum_{\mu} D(g)_{\mu\beta}D(g^{-1})_{\nu\mu} = D(g^{-1}g)_{\nu\beta} = \delta_{\nu\beta}
+$$
+
+이므로,
+
+$$
+|G|\delta_{\nu\beta} = c_{\nu\beta}d
+$$
+
+이다. 따라서 @eq-thm-Group_great_orthogonality_theorem_2 는
+
+$$
+\sum_{g\in G} D(g)_{\alpha \beta} D(g^{-1})_{\nu \mu} = \dfrac{|G|}{d}\delta_{\mu\alpha}\delta_{\nu\beta}
+$$
+
+이고 @eq-Group_GTO 를 얻는다. $\square$
+
+:::
+
+</br>
+
+이제 서로 동등하지 않은 유니타리 기약 표현 $U^{(i)}$ 에 대해 생각해 보자. $U(g^{-1})=U^{-1}(g) = [U(g)]^\dagger$ 이므로 다음이 성립한다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-Group_great_orthogonality_theorem_for_unitary_representation}
+#### 유니타리 표현에서의 위대한 직교 정리
+
+유한군 $G$ 에 대한 유니타리 기약 표현 $U$ 를 생각하자. $G$ 에 대한 모든 동등하지 않은 유니타리 행렬 표현 $U^{(1)},\ U^{(2)}, \ldots$ 와 군의 성분의 개수 $|G|$, 그리고 $U^{(i)}$ 의 차원 $d_i$ 에 대해 다음이 성립한다.
+
+$$
+\sum_{g\in G} {\left[U^{(i)}(g)\right]^\dagger} _{\mu \nu}U^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
+$$ {#eq-Group_GTO_for_unitary_representation}
+
+:::
+
+</div>
+
+</br>
+
+#### **위대한 직교 정리의 기하학적인 해석**
+
+$G=\{g_1,\ldots,\,g_{|G|}\}$ 이라고 하자. $U^{(i)}$ 가 $d_i \times d_i$ 행렬로의 유니타리 기약표현이라고 하자. 정해진 $\alpha,\,\beta$ 에 대해
+
+$$
+Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} \\ \vdots \\ U^{(i)}(g_{|G|})_{\alpha\beta}\end{bmatrix}
+$$
+
+는 $\C^{|G|}$ 의 벡터이다. @eq-Group_GTO_for_unitary_representation 에 의해 $\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}$ 이다. 즉 직교하는 벡터의 갯수는 $\sum_{i}l_i^2$ 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 많을 수 없기 때문에 아래 부등식이 성립한다.
+
+$$
+\boxed{
+  \sum_i l_i^2 \le |G|.
+}
+$${#eq-Group_inequality_from_GTO}
+
+실제로는 등호가 성립하며 이것은 뒤에 보일것이다.
+
+</br>
+
+### Character 직교성
+
+@prp-Group_character_of_class, @prp-Group_equivalent_representation_and_character 를 다시 확인하자.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_orthogonality_of_character_1}
+
+군 $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 다음이 성립한다.
+
+$$
+\sum_{g\in G} \left(\chi^{(i)}(g)\right)^\ast\chi^{(j)}(g) = |G|\delta_{ij}
+$$ {#eq-Group_orthogonality_of_character_over_entries}
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+닮음 변환에 대해 character 는 불변이므로 유니타리 변환만 생각하면 된다. @eq-Group_GTO_for_unitary_representation 로부터,
+
+$$
+\begin{aligned}
+\sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) &= \sum_{g\in G} \sum_{\mu,\, \alpha}{\left[U^{(i)}(g)\right]^\dagger} _{\mu \mu}U^{(j)}(g)_{\alpha\alpha} = \sum_{\mu} \dfrac{|G|}{d_i}\delta_{ij} \sum_{\mu\mu} = |G|\delta_{ij}.\qquad\square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+우리는 군이 conjugate class 로 분할된다는 것을 안다. 또한 conjugate class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-Group_orthogonality_of_character_2}
+
+#### Character 의 직교 정리
+
+군 $G$ 를 분할하는 class $\mathcal{K}_G=\{K_i\}$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $n(K)$ 를 $K$ 에 속하는 $G$ 의 원소라고 하자. 이 때 다음이 성립한다.
+
+$$
+\sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}
+$$ {#eq-Group_orthogonality_of_character_2}
+
+:::
+
+</div>
+
+</br>
+
+이제 재미있는 것을 해 보자. 군 $G$ 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 $N_R$ 이라고 하고 conjugate class 의 갯수를 $N_C$ 라고 하자. $G$ 의 conjugate calss 를 $\{K_1,\ldots,K_{N_C}\}$ 라고 하고 $\C^{N_C}$ 에 속하는 벡터 $X_1,\ldots,\,X_{N_R}$ 을 다음과 같이 정의한다.
+
+$$
+X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\bf{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
+$$
+
+복소 벡터 공간의 내적의 정의와 @thm-Group_orthogonality_of_character_2 의해 $\langle X_j|X_i\rangle = \delta_{ij}$ 이다. 즉 $X_1,\ldots,\,X_{N_R}$ 은 서로 직교하는 단위벡터이다. 그런데 우리는 $C^{N_C}$ 에서 서로 직교하는 벡터의 갯수는 $N_C$ 보다 작거나 같아야 한다는 것을 안다. 즉
+
+$$
+\boxed{
+[\text{Number of iniequvalent irreducible representation}] \le [\text{Number of class}]
+}
+$$ {#eq-Group_inequality_from_orthogonality_of_character_theorem}
+
+임을 알 수 있다. 뒤에 보겠지만 실제로 두 값은 같다.
+
+</br>
+
+### Character 표
+
+Character 표는 군의 특성을 아는데 매우 중요하다. 이것을 어떻게 구성하는지 $S_3$ 군에 대한 예를 통해 알아보기로 하자. 
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_class_of_S3}
+
+#### $S_3$ 에 대한 conugate class
+
+$S_3$ 즉 $\{1,\,2,\,3\}$ 에 대한 permutation 을 생각해보자. 다 쓰기 복잡하므로 각 원소에 이름을 아래와 같이 붙인다.
+
+$$
+S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
+$$
+
+군의 conjugare class 가 군을 분할한다는 것을 이용하여 $S_3$ 의 conjugate class 를 구해보자.
+
+&emsp;($1$) 모든 $g\in S_3$ 에 대해 $gEg^{-1}=E$ 이므로 $\{E\}$ 는 conjugate class 이다. 즉 $[E]=\{E\}$ 이다.
+
+&emsp;($2$) $BAB^{-1}= C,\, CAC^{-1}=B,\, DAD^{-1}=C,\, FAF^{-1}=B$ 이므로 $[A]=\{A,\,B,\,C\}$ 이다.
+
+&emsp;($3$) $ADA^{-1}=F$ 이므로 $[D]=\{D,\,F\}$ 이다. 
+
+즉 $3$ 개의 $S_3$ 에 대해 conjugate class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자.
+
+:::
+
+</div>
+</br>
+
+위에서 보았듯이 $S_3$ 는 3개의 conjugate class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.
+
+![$S_3$ 에 대한 기약표현](figures/irreducible_rep_of_S3.png){#tbl-Group_irreducible_representation_of_S3 width=600}
+
+</br>
+
+Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. $S_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. $S_3$ 에 대한 character table 은 아래와 같다.
+
+
+![$S_3$ character table](figures/character_table_S3.png){#tbl-Group_character_table_of_S3 width=160}
+
+</br>
+
+### Reducibility 확인
+
+유한군 $G$ 에 대한 어떤 표현을 얻었다고 하자. 이 표현이 기약표현인지 안닌지 확인하는 것은 표현이 되는 행렬만 가지고 확인하는 것은 힘들다. 특히 행렬이 크고 군에 속한 원소가 많은 경우 그 원소마다의 행렬이 일관된 블럭 대각행렬을 이루는 지 확인하는 것은 쉽지 않은 일이다. 
+
+일단 reducible 표현 $D$ 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 이 표현에 대한 character $\chi$ 를 생각하자. Class 의 집합 $\mathcal{K}_G$ 가 $G$ 를 분할한다고 하자. 그리고 $D$ 에 포함되는 서로 동등하지 않은 기약 표현이 $D^{(i)},\, i=1,\,2,\ldots$ 이며 $D^{(i)}$ 가 $m_i$ 번 포함되었다고 하자. 그렇다면
+
+$$
+\chi(K) = \sum_{i} m_i \chi^{(i)}(K)
+$$
+
+이며, @eq-Group_orthogonality_of_character_2 에 따라
+
+$$
+\begin{aligned}
+\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = \sum_{K\in \mathcal{K}_G} n(K) \sum_{i,\,j} m_im_j \left(\chi^{(i)}(K)\right)^\ast \chi^{(j)}(K) = |G|\sum_{i}(m_i)^2
+\end{aligned}
+$$
+
+이다. 즉, 주어진 군 $G$ 와 표현 $D$ 에 대해,
+
+&emsp;($1$) 일단 군 $G$ 에 대한 클라스의 집합 $\mathcal{K}_G$ 를 구하고,
+
+&emsp;($2$) $\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K)$ 를 구하면,
+
+&emsp;($3$) 이 값은 군의 성분의 갯수에 $D$ 에 포함되는 기약 표현의 중복성의 제곱의 합과 같다.
+
+일단 $\dfrac{1}{|G|}\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K) =\sum_i (m_i)^2$ 가 $1$ 이면 $D$ 는 기약표현이며 $1$ 보다 크면 $D$ 는 reducible 이다. 만약 이 값이 $3$ 이라면 $D$ 는 서로 동등하지 않은 세 irreducible representatino 의 direct sum 이다.
+
+</br>
+
+### 정칙 표현
+
+군에 대한 케일리 정리(@thm-Group-caylay_theorem, @cor-Group-caylay_theorem) 는 유한군 $G$ 가 대칭군 $S_{|G|}$ 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 $S_n$ 은 $n \times n$ 행렬로 표현 할 수 이 있음을 안다(@exm-Group_representation_for_Sn). 즉 유한군 $G$ 는 $|G|$ 차원 표현을 가지며 이를 **정칙 표현 (regular representation)** 라고 한다.
+
+</br>
+
+$G=\{g_1,\ldots,\,g_{|G|}\}$ 라고 하자. $\theta: G \to \R^{|G|}$ 를 $\theta(g_i) := \bf{e}_i$ 로 정의하자. $\Phi : G \to \R^{|G|\times |G|}$ 를
+
+$$
+\Phi(g_i) := \begin{bmatrix} (\theta(g_i^{-1}g_1))^T \\ \vdots \\ (\theta(g_i^{-1} g_{|G|}))^T \end{bmatrix}
+$$
+
+로 정의하자. 
+
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_regular_representation}
+#### 정칙 표현
+
+유한군 $G$ 를 $S_n$ 의 $n \times n$ 행렬 표현을 이 
+
+:::
+:::
+
+
+</br>
 
 ### 연습문제 {.unnumbered}
 
@@ -921,11 +1307,5 @@ $m\times n (\text{where } m > n)$ 행렬 $M$ 에 대해 $MM^\dagger = cI_{m}$ �
 ::: {.solution}
 
 $\text{rank}(M^\dagger) \le n$ 이므로 $\text{rank}(MM^\dagger)\le n$ 이다. 그런데 $\text{rank}(cI_m)$ 은 $c\ne 0$ 일 경우 $m$ 이며 $m>n$ 이므로 $c=0$ 이다.
-
-$$
-0=(MM^\dagger)_{ii} = \sum_{j=1}^n|M_{ij}|^2
-$$
-
-이므로 $M=0$ 이다. $\square$
 
 :::

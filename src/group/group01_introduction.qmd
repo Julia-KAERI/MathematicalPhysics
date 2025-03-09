@@ -214,7 +214,7 @@ $G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉�
 
 #### 대칭군과 치환군
 
-집합 $X$ 에 대해 $X \mapsto X$ 전단사 함수의 집합을 **대칭군(symmetric group)** 이라고 하고  $S_X$ 라고 표기한다. 특별히 $1$ 부터 $n$ 까지의 자연수의 집합에 대한 순환군은 $S_n$ 이라고 표기한다. $S_X$ 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 **순열군(permutation group)** 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.
+집합 $X$ 에 대해 $X \mapsto X$ 전단사 함수의 집합을 **대칭군(symmetric group)** 이라고 하고  $S_X$ 혹은 $\text{Sym}(X)$ 라고 표기한다. 특별히 $1$ 부터 $n$ 까지의 자연수의 집합에 대한 순환군은 $S_n$ 이라고 표기한다. $S_X$ 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 **순열군(permutation group)** 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.
 
 $S_n$ 의 부분군으로 **교대군(alternating group)** $A_n$ 이 있다. (...)
 
@@ -399,11 +399,33 @@ see @exr-Arfken_17_1_3 $\square$
   </tr>
 </table> 
 
-
-
 :::
 
 </div>
+
+</br>
+
+
+</br>
+
+## 동형사상과 Conjugate Class
+
+### 동형사상
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_homomorphism}
+
+#### 동형사상, 준동형사상, 자기동형사상
+
+두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
+
+$$
+\forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
+$$
+
+일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다. 그리고 $G \to G$ 동형사상을 **자기동형사상 (automorphism)** 이라고 하며 $\text{Aut}(G)$ 로 표기한다.
+:::
+:::
 
 </br>
 
@@ -436,26 +458,6 @@ $$
 
 </br>
 
-## 동형사상과 동치류
-
-
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_homomorphism}
-
-#### 동형사상, 준동형사상, 자기동형사상
-
-두 군 $(G,\, \cdot),\, (G',\, \cdot)$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
-
-$$
-\forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
-$$
-
-일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다. 그리고 $G \to G$ 동형사상을 **자기동형사상 (automorphism)** 이라고 하며 $\text{Aut}(G)$ 로 표기한다.
-:::
-:::
-
-</br>
-
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_homomorphism_kernel}
 
@@ -476,6 +478,7 @@ $$
 :::
 
 </br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-Group-kernel_of_homomorphism}
@@ -502,6 +505,52 @@ $\phi \in \text{Hom}(G,\,G')$ 일 때 다음이 성립한다.
 :::
 
 </br>
+
+유한군에 대해 중요한 정리 중의 하나가 케일리 정리(Caylay's theorem) 이다. 
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group-caylay_theorem}
+
+#### Caylay 정리
+유한군 $G$ 는 $\text{Sym}(G)$ 의 어떤 부분군과 동형이다.
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+$\phi_g :G \to G$ 를 $\phi_g(x):= gx$ 로 정의하자. @thm-Group_rearrangement_theorem 에 의해 $\phi_g$ 는 전단사이므로 $\phi_g \in \text{Sym}(G)$ 이다. $\Phi_G = \{\phi_g: g\in G\}$ 는 함수의 합성 연산에 대해 군이라는 것을 보이자. $\phi_{i_G}$ 는 $\Phi_G$ 에서의 항등원이며 $\phi_{g^{-1}}$ 은 $\phi_g$ 의 역원이다. 또한 함수의 합성의 정의에 의해 $\phi_{g_1}\circ (\phi_{g_2}\circ \phi_{g_3})= (\phi_{g_1} \circ \phi_{g_2})\circ \phi_{g_3}$ 이다. 따라서 $\Phi_G \le \text{Sym}(G)$ 이다. 
+
+이제 $G$ 와 $\Phi(G)$ 가 동형임을 보이자. $\theta : G \to \Phi_G$ 에 대해 $\theta(g) := \phi_g$ 라고 하자. 각각의 $g\in G$ 에 대해
+
+$$
+\theta(x)\theta(y)(g) =\phi_x(\phi_y(g))= xyg = \phi_{xy}(g)= \theta(xy)(g)
+$$ 
+
+이므로 $\theta$ 는 준동형사상이다. $\theta_x = \theta_y$ 이면 모든 $g\in G$ 에 대해 $xg = yg$ 이므로 $x=y$ 이다. 즉 $\theta$ 는 동형사상이다. $\square$ 
+
+:::
+
+</br>
+
+다음 따름 정리는 자명하지만 일단 언급해둔다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-Group-caylay_theorem}
+
+
+유한군 $G$ 에 대해 $\text{Sym}(G)$ 는 $S_{|G|}$ 와 동형이다. 따라서 $G$ 는 $S_{|G|}$ 의 어떤 부분군과 동형이다.
+
+:::
+
+</div>
+</br>
+
+### Conjugate Class
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_equivalent_class}
