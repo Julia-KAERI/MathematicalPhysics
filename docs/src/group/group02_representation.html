@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; 군과 표현 I. – 수리물리학</title>
+<title>수리물리학 - 5&nbsp; 군과 표현 I.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/group/group03_quantum.html" rel="next">
+<link href="../../src/group/group02_representation_2.html" rel="next">
 <link href="../../src/group/group01_introduction.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -89,7 +89,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -127,13 +127,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group01_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group02_representation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현 I.</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -170,9 +170,9 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">벡터해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -187,9 +187,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">텐서 해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -210,9 +210,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">군과 대칭</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -231,17 +231,23 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/group/group02_representation_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/group/group03_quantum.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">미분방정식</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -249,22 +255,22 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">복소함수</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -272,19 +278,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -309,12 +315,16 @@ window.Quarto = {
   </ul></li>
   <li><a href="#슈어-보조정리와-위대한-직교-정리" id="toc-슈어-보조정리와-위대한-직교-정리" class="nav-link" data-scroll-target="#슈어-보조정리와-위대한-직교-정리"><span class="header-section-number">5.2</span> 슈어 보조정리와 위대한 직교 정리</a>
   <ul class="collapse">
-  <li><a href="#슈어-보조정리" id="toc-슈어-보조정리" class="nav-link" data-scroll-target="#슈어-보조정리"><span class="header-section-number">5.2.1</span> 슈어 보조정리</a></li>
+  <li><a href="#sec-Group_Schure_lemma" id="toc-sec-Group_Schure_lemma" class="nav-link" data-scroll-target="#sec-Group_Schure_lemma"><span class="header-section-number">5.2.1</span> 슈어 보조정리</a></li>
   <li><a href="#위대한-직교-정리" id="toc-위대한-직교-정리" class="nav-link" data-scroll-target="#위대한-직교-정리"><span class="header-section-number">5.2.2</span> 위대한 직교 정리</a></li>
   <li><a href="#character-직교성" id="toc-character-직교성" class="nav-link" data-scroll-target="#character-직교성"><span class="header-section-number">5.2.3</span> Character 직교성</a></li>
   <li><a href="#character-표" id="toc-character-표" class="nav-link" data-scroll-target="#character-표"><span class="header-section-number">5.2.4</span> Character 표</a></li>
   <li><a href="#reducibility-확인" id="toc-reducibility-확인" class="nav-link" data-scroll-target="#reducibility-확인"><span class="header-section-number">5.2.5</span> Reducibility 확인</a></li>
-  <li><a href="#정칙-표현" id="toc-정칙-표현" class="nav-link" data-scroll-target="#정칙-표현"><span class="header-section-number">5.2.6</span> 정칙 표현</a></li>
+  </ul></li>
+  <li><a href="#정칙-표현" id="toc-정칙-표현" class="nav-link" data-scroll-target="#정칙-표현"><span class="header-section-number">5.3</span> 정칙 표현</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group-regular_representation" id="toc-sec-Group-regular_representation" class="nav-link" data-scroll-target="#sec-Group-regular_representation"><span class="header-section-number">5.3.1</span> 정칙 표현</a></li>
+  <li><a href="#기약표현의-개수와-conjugate-class-의-개수는-같다." id="toc-기약표현의-개수와-conjugate-class-의-개수는-같다." class="nav-link" data-scroll-target="#기약표현의-개수와-conjugate-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugate Class 의 개수는 같다.</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   </ul>
@@ -532,7 +542,7 @@ D'(g_1g_2) = VD(g_1)D(g_2)V^{-1} = (VD(g_1)V^{-1}) (VD(g_2)V^{-1}) =D'(g_1)D'(g_
 </div>
 <div class="callout-body-container">
 <div id="def-Group_equivalent_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.3 (동등한 표현)</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span>5.1</span></a> 에서의 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(U'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 5.3 (동등한 표현)</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span>5.1</span></a> 에서의 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(D'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -833,7 +843,7 @@ VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 &amp; 0 \\ 0 &
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.6 (Arfken 17.2.6)</strong></span> 아래 그림과 같이 정사각형을 자기 자신으로 변환시키는 아래 그림과 같은 회전 변환으로 이루어진 군(<span class="math inline">\(D_4\)</span>) 에 대해 <span class="math inline">\(2 \times 2\)</span> 행렬 표현을 구하라. 또한 Cayley table 을 만들라.</p>
-<div id="fig-Group-D4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-Group-D4" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-D4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/D4.png" class="img-fluid figure-img" width="250">
@@ -868,8 +878,8 @@ C_4 =\left[\begin{array}{rr} 0 &amp; 1 \\ -1 &amp; 0 \end{array}\right]
 </section>
 <section id="슈어-보조정리와-위대한-직교-정리" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="슈어-보조정리와-위대한-직교-정리"><span class="header-section-number">5.2</span> 슈어 보조정리와 위대한 직교 정리</h2>
-<section id="슈어-보조정리" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="슈어-보조정리"><span class="header-section-number">5.2.1</span> 슈어 보조정리</h3>
+<section id="sec-Group_Schure_lemma" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-Group_Schure_lemma"><span class="header-section-number">5.2.1</span> 슈어 보조정리</h3>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_schur_lemma_for_hermitian" class="theorem lemma">
@@ -1073,10 +1083,10 @@ M = \sum_{g\in G} D(g) X D(g^{-1}).
 <p><span class="math display">\[
 Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} \\ \vdots \\ U^{(i)}(g_{|G|})_{\alpha\beta}\end{bmatrix}
 \]</span></p>
-<p>는 <span class="math inline">\(\mathbb{C}^{|G|}\)</span> 의 벡터이다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span>5.16</span></a> 에 의해 <span class="math inline">\(\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}\)</span> 이다. 즉 직교하는 벡터의 갯수는 <span class="math inline">\(\sum_{i}l_i^2\)</span> 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 많을 수 없기 때문에 아래 부등식이 성립한다.</p>
+<p>는 <span class="math inline">\(\mathbb{C}^{|G|}\)</span> 의 벡터이다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span>5.16</span></a> 에 의해 <span class="math inline">\(\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}\)</span> 이다. 즉 직교하는 벡터의 갯수는 <span class="math inline">\(\sum_{i}(d_i)^2\)</span> 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 많을 수 없기 때문에 아래 부등식이 성립한다.</p>
 <p><span id="eq-Group_inequality_from_GTO"><span class="math display">\[
 \boxed{
-  \sum_i l_i^2 \le |G|.
+  \sum_i (d_i)^2 \le |G|.
 }
 \tag{5.17}\]</span></span></p>
 <p>실제로는 등호가 성립하며 이것은 뒤에 보일것이다.</p>
@@ -1109,7 +1119,7 @@ Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} 
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_orthogonality_of_character_2" class="theorem">
-<p><span class="theorem-title"><strong>정리 5.6 (Character 의 직교 정리)</strong></span> 군 <span class="math inline">\(G\)</span> 를 분할하는 class <span class="math inline">\(\mathcal{K}_G=\{K_i\}\)</span> 를 생각하자. <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D^{(i)}\)</span> 에 대한 character <span class="math inline">\(\chi^{(i)}\)</span> 에 대해 <span class="math inline">\(\chi^{(i)}(K_i)\)</span> 를 정할 수 있다. <span class="math inline">\(K\in \mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(n(K)\)</span> 를 <span class="math inline">\(K\)</span> 에 속하는 <span class="math inline">\(G\)</span> 의 원소라고 하자. 이 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>정리 5.6 (Character 의 직교 정리)</strong></span> 군 <span class="math inline">\(G\)</span> 를 분할하는 class <span class="math inline">\(\mathcal{K}_G=\{K_i\}\)</span> 를 생각하자. <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D^{(i)}\)</span> 에 대한 character <span class="math inline">\(\chi^{(i)}\)</span> 에 대해 <span class="math inline">\(\chi^{(i)}(K_i)\)</span> 를 정할 수 있다. <span class="math inline">\(K\in \mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(n(K)\)</span> 를 <span class="math inline">\(K\)</span> 에 속하는 <span class="math inline">\(G\)</span> 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.</p>
 <p><span id="eq-Group_orthogonality_of_character_2"><span class="math display">\[
 \sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}
 \tag{5.19}\]</span></span></p>
@@ -1120,7 +1130,7 @@ Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} 
 <p><span class="math display">\[
 X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\boldsymbol{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
 \]</span></p>
-<p>복소 벡터 공간의 내적의 정의와 <a href="#thm-Group_orthogonality_of_character_2" class="quarto-xref">정리&nbsp;<span>5.6</span></a> 의해 <span class="math inline">\(\langle X_j|X_i\rangle = \delta_{ij}\)</span> 이다. 즉 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 은 서로 직교하는 단위벡터이다. 그런데 우리는 <span class="math inline">\(C^{N_C}\)</span> 에서 서로 직교하는 벡터의 갯수는 <span class="math inline">\(N_C\)</span> 보다 작거나 같아야 한다는 것을 안다. 즉</p>
+<p>복소 벡터 공간의 내적의 정의와 <a href="#thm-Group_orthogonality_of_character_2" class="quarto-xref">정리&nbsp;<span>5.6</span></a> 의해 <span class="math inline">\(\langle X_j|X_i\rangle = \delta_{ij}\)</span> 이다. 즉 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 은 서로 직교하는 단위벡터이다. 그런데 우리는 <span class="math inline">\(\mathbb{C}^{N_C}\)</span> 에서 서로 직교하는 벡터의 갯수는 <span class="math inline">\(N_C\)</span> 보다 작거나 같아야 한다는 것을 안다. 즉</p>
 <p><span id="eq-Group_inequality_from_orthogonality_of_character_theorem"><span class="math display">\[
 \boxed{
 [\text{Number of iniequvalent irreducible representation}] \le [\text{Number of class}]
@@ -1148,7 +1158,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <p><br></p>
 <p>위에서 보았듯이 <span class="math inline">\(S_3\)</span> 는 3개의 conjugate class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.</p>
-<div id="tbl-Group_irreducible_representation_of_S3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-Group_irreducible_representation_of_S3" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_irreducible_representation_of_S3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;5.1: <span class="math inline">\(S_3\)</span> 에 대한 기약표현
@@ -1160,7 +1170,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <p><br></p>
 <p>Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. <span class="math inline">\(S_3\)</span> 의 경우 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3\)</span> 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. <span class="math inline">\(S_3\)</span> 에 대한 character table 은 아래와 같다.</p>
-<div id="tbl-Group_character_table_of_S3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-Group_character_table_of_S3" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_of_S3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;5.2: <span class="math inline">\(S_3\)</span> character table
@@ -1175,32 +1185,73 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 <section id="reducibility-확인" class="level3" data-number="5.2.5">
 <h3 data-number="5.2.5" class="anchored" data-anchor-id="reducibility-확인"><span class="header-section-number">5.2.5</span> Reducibility 확인</h3>
 <p>유한군 <span class="math inline">\(G\)</span> 에 대한 어떤 표현을 얻었다고 하자. 이 표현이 기약표현인지 안닌지 확인하는 것은 표현이 되는 행렬만 가지고 확인하는 것은 힘들다. 특히 행렬이 크고 군에 속한 원소가 많은 경우 그 원소마다의 행렬이 일관된 블럭 대각행렬을 이루는 지 확인하는 것은 쉽지 않은 일이다.</p>
-<p>일단 reducible 표현 <span class="math inline">\(D\)</span> 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 이 표현에 대한 character <span class="math inline">\(\chi\)</span> 를 생각하자. Class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 가 <span class="math inline">\(G\)</span> 를 분할한다고 하자. 그리고 <span class="math inline">\(D\)</span> 에 포함되는 서로 동등하지 않은 기약 표현이 <span class="math inline">\(D^{(i)},\, i=1,\,2,\ldots\)</span> 이며 <span class="math inline">\(D^{(i)}\)</span> 가 <span class="math inline">\(m_i\)</span> 번 포함되었다고 하자. 그렇다면</p>
-<p><span class="math display">\[
+<p>일단 reducible 표현 <span class="math inline">\(D\)</span> 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_reducible_representation_and_multiplicity_1" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.6</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 reducible representaion <span class="math inline">\(D\)</span> 와 <span class="math inline">\(G\)</span> 를 분할하는 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. <span class="math inline">\(D\)</span> 에 포함되지 않은 서로 동등하지 않은 기약 표현 <span class="math inline">\(D^{(i)},\, i=1,\,2,\ldots\)</span> 에 대해 <span class="math inline">\(D^{(i)}\)</span> 가 <span class="math inline">\(m_i\)</span> 번 포함되었다고 하자. 그렇다면 <span class="math inline">\(D\)</span> 에 대한 character <span class="math inline">\(\chi\)</span> 는 다음과 같다. <span class="math display">\[
 \chi(K) = \sum_{i} m_i \chi^{(i)}(K)
 \]</span></p>
-<p>이며, <a href="#eq-Group_orthogonality_of_character_2" class="quarto-xref">식&nbsp;<span>5.19</span></a> 에 따라</p>
+<p>Conjugate class <span class="math inline">\(K\)</span> 에 포함되는 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(n(K)\)</span> 라고 하자. 이 때 다음이 성립한다. <span id="eq-Group_reducibility_check"><span class="math display">\[
+\begin{aligned}
+\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = |G|\sum_{i}(m_i)^2
+\end{aligned}
+\tag{5.21}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-Group_orthogonality_of_character_2" class="quarto-xref">식&nbsp;<span>5.19</span></a> 를 이용하면 다음을 얻는다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = \sum_{K\in \mathcal{K}_G} n(K) \sum_{i,\,j} m_im_j \left(\chi^{(i)}(K)\right)^\ast \chi^{(j)}(K) = |G|\sum_{i}(m_i)^2
+\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) &amp;= \sum_{K\in \mathcal{K}_G} n(K) \sum_{i,\,j} m_im_j \left(\chi^{(i)}(K)\right)^\ast \chi^{(j)}(K) \\[0.3em]
+&amp;= |G|\sum_{i}(m_i)^2 &amp; \square
 \end{aligned}
 \]</span></p>
-<p>이다. 즉, 주어진 군 <span class="math inline">\(G\)</span> 와 표현 <span class="math inline">\(D\)</span> 에 대해,</p>
-<p> (<span class="math inline">\(1\)</span>) 일단 군 <span class="math inline">\(G\)</span> 에 대한 클라스의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 구하고,</p>
+</div>
+<p><br></p>
+<p>즉, 주어진 군 <span class="math inline">\(G\)</span> 와 표현 <span class="math inline">\(D\)</span> 에 대해,</p>
+<p> (<span class="math inline">\(1\)</span>) 일단 군 <span class="math inline">\(G\)</span> 에 대한 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 구하고,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K)\)</span> 를 구하면,</p>
-<p> (<span class="math inline">\(3\)</span>) 이 값은 군의 성분의 갯수에 <span class="math inline">\(D\)</span> 에 포함되는 기약 표현의 중복성의 제곱의 합과 같다.</p>
+<p> (<span class="math inline">\(3\)</span>) 이 값은 군의 성분의 갯수에 <span class="math inline">\(D\)</span> 에 포함되는 기약 표현의 중복성 <span class="math inline">\(m_i\)</span> 의 제곱의 합과 같다.</p>
 <p>일단 <span class="math inline">\(\dfrac{1}{|G|}\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K) =\sum_i (m_i)^2\)</span> 가 <span class="math inline">\(1\)</span> 이면 <span class="math inline">\(D\)</span> 는 기약표현이며 <span class="math inline">\(1\)</span> 보다 크면 <span class="math inline">\(D\)</span> 는 reducible 이다. 만약 이 값이 <span class="math inline">\(3\)</span> 이라면 <span class="math inline">\(D\)</span> 는 서로 동등하지 않은 세 irreducible representatino 의 direct sum 이다.</p>
 <p><br></p>
+<p>이제 우리가 <span class="math inline">\(D\)</span> 에 포함되는 기약 표현 <span class="math inline">\(D^{(r)}\)</span> 을 얻었다고 하자. 다음 명제를 이용하여 <span class="math inline">\(D^{(r)}\)</span> 의 multiplicity <span class="math inline">\(m_r\)</span> 을 얻을 수 있다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_reducible_representation_and_multiplicity_2" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.7</strong></span> <a href="#prp-Group_reducible_representation_and_multiplicity_1" class="quarto-xref">명제&nbsp;<span>5.6</span></a> 과 같은 조건에서 <span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(D\)</span> 에 포함되는 기약표현이라고 하고 <span class="math inline">\(m_r\)</span> 번 포함되었다고 하자. 이 때 다음이 성립한다.</p>
+<p><span id="eq-Group_multiplicity_check_2"><span class="math display">\[
+\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(r)}(K)\right)^\ast \chi(K) = |G|m_r
+\tag{5.22}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\chi(K) = \sum_{i} m_i \chi^{(i)}(K)\)</span> 에 대해,</p>
+<p><span class="math display">\[
+\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(r)}(K)\right)^\ast \chi(K) = \sum_{K\in \mathcal{K}_G}n(K) \sum_i \left(\chi^{(r)}(K)\right)^\ast \chi^{(i)}(K) = |G|m_r. \qquad \square
+\]</span></p>
+</div>
+<p>이므로 우리는 <span class="math inline">\(m_r\)</span> 을 얻을 수 있다.</p>
+<p><br></p>
 </section>
-<section id="정칙-표현" class="level3" data-number="5.2.6">
-<h3 data-number="5.2.6" class="anchored" data-anchor-id="정칙-표현"><span class="header-section-number">5.2.6</span> 정칙 표현</h3>
+</section>
+<section id="정칙-표현" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="정칙-표현"><span class="header-section-number">5.3</span> 정칙 표현</h2>
+<section id="sec-Group-regular_representation" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="sec-Group-regular_representation"><span class="header-section-number">5.3.1</span> 정칙 표현</h3>
 <p>군에 대한 케일리 정리(<a href="group01_introduction.html#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span>4.3</span></a>, <a href="group01_introduction.html#cor-Group-caylay_theorem" class="quarto-xref">따름정리&nbsp;<span>4.1</span></a>) 는 유한군 <span class="math inline">\(G\)</span> 가 대칭군 <span class="math inline">\(S_{|G|}\)</span> 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 <span class="math inline">\(S_n\)</span> 은 <span class="math inline">\(n \times n\)</span> 행렬로 표현 할 수 이 있음을 안다(<a href="#exm-Group_representation_for_Sn" class="quarto-xref">예제&nbsp;<span>5.4</span></a>). 즉 유한군 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(|G|\)</span> 차원 표현을 가지며 이를 <strong>정칙 표현 (regular representation)</strong> 라고 한다.</p>
 <p><br></p>
-<p><span class="math inline">\(G=\{g_1,\ldots,\,g_{|G|}\}\)</span> 라고 하자. <span class="math inline">\(\theta: G \to \mathbb{R}^{|G|}\)</span> 를 <span class="math inline">\(\theta(g_i) := \boldsymbol{e}_i\)</span> 로 정의하자. <span class="math inline">\(\Phi : G \to \mathbb{R}^{|G|\times |G|}\)</span> 를</p>
+<p><span class="math inline">\(G=\{g_1,\ldots,\,g_{|G|}\}\)</span> 라고 하자. <span class="math inline">\(\theta: G \to \{\boldsymbol{e}_1,\ldots,\, \boldsymbol{e}_{|G|}\}\subset \mathbb{R}^{|G|}\)</span> 를 <span class="math inline">\(\theta(g_i) := \boldsymbol{e}_i\)</span> 로 정의하자. <span class="math inline">\(\Phi : G \to \mathbb{R}^{|G|\times |G|}\)</span> 를</p>
+<p><span id="eq-Group-regular_representation"><span class="math display">\[
+\Phi(g) := \begin{bmatrix} (\theta(g^{-1}g_1))^T \\ \vdots \\ (\theta(g^{-1} g_{|G|}))^T \end{bmatrix}
+\tag{5.23}\]</span></span></p>
+<p>로 정의하자. <span class="math inline">\(\Phi\)</span> 는 <span class="math inline">\(G \to \mathbb{R}^{|G| \times |G|}\)</span> 함수이며,</p>
 <p><span class="math display">\[
-\Phi(g_i) := \begin{bmatrix} (\theta(g_i^{-1}g_1))^T \\ \vdots \\ (\theta(g_i^{-1} g_{|G|}))^T \end{bmatrix}
+\Phi(g)\Phi(g') \boldsymbol{e}_j = \Phi(g)\boldsymbol{e}_{g'g_j}=\boldsymbol{e}_{gg'g_j} = \Phi(gg')\boldsymbol{e}_j
 \]</span></p>
-<p>로 정의하자.</p>
+<p>이므로 <span class="math inline">\(\Phi\)</span> 는 준동형사상이다. <span class="math inline">\(\Phi(g)=\Phi(g')\)</span> 일 때 <span class="math inline">\(\theta\)</span> 는 단사이므로 <span class="math inline">\(g^{-1}g= g'^{-1}g\)</span> 이어야 하며 이는 <span class="math inline">\(g=g'\)</span> 임을 의미한다. 즉 <span class="math inline">\(\Phi\)</span> 는 단사인 동형사상 이며 <span class="math inline">\(G\)</span> 에 대한 믿을수 있는 표현이다.</p>
+<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1208,13 +1259,77 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <div class="callout-body-container">
 <div id="def-Group_regular_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.5 (정칙 표현)</strong></span> 유한군 <span class="math inline">\(G\)</span> 를 <span class="math inline">\(S_n\)</span> 의 <span class="math inline">\(n \times n\)</span> 행렬 표현을 이</p>
+<p><span class="theorem-title"><strong>정의 5.5 (정칙 표현)</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <a href="#eq-Group-regular_representation" class="quarto-xref">식&nbsp;<span>5.23</span></a> 로 정의된 <span class="math inline">\(\Phi\in \text{Hom}(G,\, \mathbb{R}^{|G|\times |G|})\)</span> 는 <span class="math inline">\(G\)</span> 에 대한 <strong>정칙 표현 (regular representation)</strong> 이라고 하고 <span class="math inline">\(D^{(\text{reg})}\)</span> 라고 표기한다. 정칙 표현에서의 character 는 <span class="math inline">\(\chi^{(\text{reg})}\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_regular_representation_and_non_trivial_character" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.8</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대한 <span class="math inline">\(\chi^{(\text{reg})}(g)=0\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+\chi^{(\text{reg})}(g)=  \left\{\begin{array}{ll} |G|,\qquad &amp; g=i_G, \\ 0. &amp;\text{otherwise}.\end{array}\right.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(\text{reg})}(g)\)</span> 는 각 행, 각 열마다 하나의 <span class="math inline">\(1\)</span> 을 제외한 모든 성분이 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(i\)</span> 행의 대각성분이 <span class="math inline">\(1\)</span> 이려면 <span class="math inline">\(g^{-1}g_i = g_i\)</span> 이어야 하므로 <span class="math inline">\(g=i_G\)</span> 이어야 한다. 즉 <span class="math inline">\(g\ne i_G\)</span> 이면 <span class="math inline">\(D^{(\text{reg})}(g)\)</span> 의 어떤 대각 성분도 <span class="math inline">\(1\)</span> 이 아니다. 따라서 <span class="math inline">\(g\ne i_G\)</span> 이면 <span class="math inline">\(D^{(\text{reg})}(g)\)</span> 의 모든 대각 성분은 <span class="math inline">\(0\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_regular_representation_is_not_irreducible" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.9</strong></span> <span class="math inline">\(|G|&gt;1\)</span> 인 유한군 <span class="math inline">\(G\)</span> 의 정칙표현은 reducible 하다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sum_{K\in \mathcal{K}_G} n(K) \left(\chi(K)\right)^\ast\chi(K) = |G|^2\)</span> 이므로 <a href="#eq-Group_reducibility_check" class="quarto-xref">식&nbsp;<span>5.21</span></a> 로부터 <span class="math inline">\(|G|^2 = |G|\sum (m_r)^2\)</span> 이다. 즉 <span class="math inline">\(\sum(m_r)^2=|G| \ne 1\)</span> 이므로 정칙표현은 irreducible 하다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_regular_representation" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.7</strong></span> 군 <span class="math inline">\(G\)</span> 에 대한 정칙 표현 <span class="math inline">\(D^{(\text{reg})}\)</span> 은 <span class="math inline">\(G\)</span> 에 대한 모든 기약 표현을 포함하며 이 기약표현이 <span class="math inline">\(d_r \times d_r\)</span> 일 때 <span class="math inline">\(D^{(\text{reg})}\)</span> 에 <span class="math inline">\(d_r\)</span> 번 포함되어 있다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(d_r \times d_r\)</span> 행렬 이라고 하고 <span class="math inline">\(G\)</span> 의 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해</p>
+<p><span id="eq-prp-Group_regular_representation_is_not_irreducible_2_1"><span class="math display">\[
+\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi^{(\text{reg})}(K)
+\tag{5.24}\]</span></span></p>
+<p>을 생각하자. <span class="math inline">\(\chi^{(\text{reg})}(K)\)</span> 는 <span class="math inline">\(K=\{i_G\}\)</span> 를 제외하면 <span class="math inline">\(0\)</span> 이며 따라서, <span class="math display">\[
+\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi(K) = \left(\chi^{(r)}(\{i_G\}\right)\chi(\{i_G\}) = d_r |G| &gt; 0
+\]</span></p>
+<p>이다. 만약 <span class="math inline">\(D^{(r)}\)</span> 과 동등한 어떤 표현도 <span class="math inline">\(D^{(\text{reg})}\)</span> 에 포함되어 있지 않다고 하자. <a href="#thm-Group_orthogonality_of_character_2" class="quarto-xref">정리&nbsp;<span>5.6</span></a> 로부터 <a href="#eq-prp-Group_regular_representation_is_not_irreducible_2_1" class="quarto-xref">식&nbsp;<span>5.24</span></a> 는 <span class="math inline">\(0\)</span> 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. <a href="#eq-Group_multiplicity_check_2" class="quarto-xref">식&nbsp;<span>5.22</span></a> 로 부터 <span class="math inline">\(d_r|G|=m_r|G|\)</span> 이므로 <span class="math inline">\(d_r =m_r\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>이로부터 다음을 얻는다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_regular_representation_is_not_irreducible_3" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.10</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 정칙 표현 <span class="math inline">\(D^{(\text{reg})}\)</span> 에 서로 동등하지 않은 기약 표현 <span class="math inline">\(D^{(i)},\, i=1,\,2,\ldots\)</span> 이 포함되었고 <span class="math inline">\(D^{(i)}\)</span> 는 <span class="math inline">\(d_i \times d_i\)</span> 행렬표현이라고 하자. 이 때 다음이 성립한다.</p>
+<p><span id="eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation"><span class="math display">\[
+\sum_{i}(d_i)^2= |G|.
+\tag{5.25}\]</span></span></p>
+</div>
+</div>
+<p></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(\text{reg})}\)</span> 는 <span class="math inline">\(|G|\times |G|\)</span> 행렬이다. 여기에 포함되는 블럭 대각행렬이 <span class="math inline">\(d_i\times d_i\)</span> 꼴로 <span class="math inline">\(d_i\)</span> 번 포함되므로 <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span>5.25</span></a> 가 성립한다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
 </section>
+<section id="기약표현의-개수와-conjugate-class-의-개수는-같다." class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="기약표현의-개수와-conjugate-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugate Class 의 개수는 같다.</h3>
+<p>유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않은 기약표현의 개수를 <span class="math inline">\(N_R\)</span> 이라고 하고 Conjugate class 개수를 <span class="math inline">\(N_C\)</span> 라고 하자. 우리는 앞서 <a href="#eq-Group_inequality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>5.20</span></a> 를 통해 <span class="math inline">\(N_R\le N_C\)</span> 임을 보였다. 실제로는 <span class="math inline">\(N_R=N_C\)</span> 이며, 따라서 character table 은 정사각형이다. <span class="math inline">\(N_C=N_R\)</span> 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_number_of_irreducible_representation_and_class" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.8</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 기약 표현의 개수와 conjugate class 의 개수는 같다.</p>
+</div>
+<p><br></p>
+</div></section>
 <section id="연습문제-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <br>
@@ -1227,6 +1342,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\text{rank}(M^\dagger) \le n\)</span> 이므로 <span class="math inline">\(\text{rank}(MM^\dagger)\le n\)</span> 이다. 그런데 <span class="math inline">\(\text{rank}(cI_m)\)</span> 은 <span class="math inline">\(c\ne 0\)</span> 일 경우 <span class="math inline">\(m\)</span> 이며 <span class="math inline">\(m&gt;n\)</span> 이므로 <span class="math inline">\(c=0\)</span> 이다.</p>
 </div>
+<p><br></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -1273,7 +1389,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1305,29 +1432,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1335,7 +1440,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1665,8 +1770,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/group/group03_quantum.html" class="pagination-link" aria-label="군과 양자역학">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/group/group02_representation_2.html" class="pagination-link" aria-label="군과 표현 II.">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

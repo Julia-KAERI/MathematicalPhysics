@@ -23,6 +23,7 @@ book:
       chapters :
       - src/group/group01_introduction.qmd
       - src/group/group02_representation.qmd
+      - src/group/group02_representation_2.qmd
       - src/group/group03_quantum.qmd
     - part: 미분방정식
       chapters :

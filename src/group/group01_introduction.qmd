@@ -640,21 +640,36 @@ $x\in X$ 에 대해 $[x]=\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(e
 </div>
 </br>
 
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_conjugate_subgroup}
+::: {#prp-Group_properties_on_conjugate_class}
 
-$g\in G,\, H\le G$ 일 때 $gHg^{-1} = \{ghg^{-1}: h\in H\}$ 는 $G$ 의 부분군이다. $gHg^{-1}$ 을 $G$ 의 **conjugate subgroup** 이라고 한다.
+군 $G$ 에 대해 다음이 성립한다.
 
+&emsp;($1$) 항등원 $i_G$ 에 대해 $\{i_G\}$ 는 conjugate class 이다.
+
+&emsp;($2$) $G$ 가 아벨군이면 모든 $g\in G$ 에 대해 $\{g\}$ 는 conjugate class 이다.
+
+&emsp;($3$) $g\in G,\, H\le G$ 일 때 $gHg^{-1} = \{ghg^{-1}: h\in H\}$ 는 $G$ 의 부분군이다.
 :::
-
 </div>
+
 </br>
 
 ::: {.proof}
-@exr-Arfken_17_1_4
+($1$), ($2$) 는 자명하며 ($3$) 은 @exr-Arfken_17_1_4
 :::
 
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_conjugate_subgroup}
+#### Conjugate, Conjugate Class
+
+$g\in G,\, H\le G$ 일 때 $gHg^{-1}$ 는 $H$ 에 의한 **conjugate subgroup** 이라고 한다.
+:::
+:::
 
 </br>
 
@@ -781,7 +796,7 @@ $ax=ay$ 이면 $a$ 의 역원 $a^{-1}$ 을 각 항의 오른쪽에 연산하면 
 #### Arfken 17.1.4
 </br>
 
-@prp-Group_conjugate_subgroup 를 증명하라.
+@prp-Group_properties_on_conjugate_class ($3$) 를 증명하라.
 
 
 :::

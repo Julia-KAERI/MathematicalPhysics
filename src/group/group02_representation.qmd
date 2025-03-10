@@ -161,15 +161,10 @@ $$
 
 이므로 $D(\pi)D(\sigma)= D(\pi \circ \sigma)$ 라고 할 수 있다. 즉 $D$ 는 $S_n$ 에 대한 표현이다.
 
-
-
-
-
 :::
 
 </div>
 </br>
-
 
 ### Conjugate class 의 character
 
@@ -270,7 +265,7 @@ $$
 ::: {#def-Group_equivalent_representation}
 #### 동등한 표현
 
-@thm-Group_equivalent_representation 에서의 $U$ 와 $U'$ 의 관계가 성립한다면 이 두 표현은 **동등하다(be equivalent)** 라고 한다.
+@thm-Group_equivalent_representation 에서의 $D$ 와 $D'$ 의 관계가 성립한다면 이 두 표현은 **동등하다(be equivalent)** 라고 한다.
 
 :::
 :::
@@ -769,7 +764,7 @@ $$
 
 ## 슈어 보조정리와 위대한 직교 정리
 
-### 슈어 보조정리
+### 슈어 보조정리 {#sec-Group_Schure_lemma}
 
 </br>
 
@@ -876,7 +871,8 @@ $$ {#eq-lem_Group_for_GOT_1}
 
 :::
 
-</div></br>
+</div>
+</br>
 
 ::: {.proof}
 
@@ -1101,11 +1097,11 @@ $$
 Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} \\ \vdots \\ U^{(i)}(g_{|G|})_{\alpha\beta}\end{bmatrix}
 $$
 
-는 $\C^{|G|}$ 의 벡터이다. @eq-Group_GTO_for_unitary_representation 에 의해 $\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}$ 이다. 즉 직교하는 벡터의 갯수는 $\sum_{i}l_i^2$ 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 많을 수 없기 때문에 아래 부등식이 성립한다.
+는 $\C^{|G|}$ 의 벡터이다. @eq-Group_GTO_for_unitary_representation 에 의해 $\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}$ 이다. 즉 직교하는 벡터의 갯수는 $\sum_{i}(d_i)^2$ 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 많을 수 없기 때문에 아래 부등식이 성립한다.
 
 $$
 \boxed{
-  \sum_i l_i^2 \le |G|.
+  \sum_i (d_i)^2 \le |G|.
 }
 $${#eq-Group_inequality_from_GTO}
 
@@ -1157,7 +1153,7 @@ $$
 
 #### Character 의 직교 정리
 
-군 $G$ 를 분할하는 class $\mathcal{K}_G=\{K_i\}$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $n(K)$ 를 $K$ 에 속하는 $G$ 의 원소라고 하자. 이 때 다음이 성립한다.
+군 $G$ 를 분할하는 class $\mathcal{K}_G=\{K_i\}$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $n(K)$ 를 $K$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
 
 $$
 \sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}
@@ -1175,7 +1171,7 @@ $$
 X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\bf{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
 $$
 
-복소 벡터 공간의 내적의 정의와 @thm-Group_orthogonality_of_character_2 의해 $\langle X_j|X_i\rangle = \delta_{ij}$ 이다. 즉 $X_1,\ldots,\,X_{N_R}$ 은 서로 직교하는 단위벡터이다. 그런데 우리는 $C^{N_C}$ 에서 서로 직교하는 벡터의 갯수는 $N_C$ 보다 작거나 같아야 한다는 것을 안다. 즉
+복소 벡터 공간의 내적의 정의와 @thm-Group_orthogonality_of_character_2 의해 $\langle X_j|X_i\rangle = \delta_{ij}$ 이다. 즉 $X_1,\ldots,\,X_{N_R}$ 은 서로 직교하는 단위벡터이다. 그런데 우리는 $\C^{N_C}$ 에서 서로 직교하는 벡터의 갯수는 $N_C$ 보다 작거나 같아야 한다는 것을 안다. 즉
 
 $$
 \boxed{
@@ -1237,59 +1233,226 @@ Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이�
 
 유한군 $G$ 에 대한 어떤 표현을 얻었다고 하자. 이 표현이 기약표현인지 안닌지 확인하는 것은 표현이 되는 행렬만 가지고 확인하는 것은 힘들다. 특히 행렬이 크고 군에 속한 원소가 많은 경우 그 원소마다의 행렬이 일관된 블럭 대각행렬을 이루는 지 확인하는 것은 쉽지 않은 일이다. 
 
-일단 reducible 표현 $D$ 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 이 표현에 대한 character $\chi$ 를 생각하자. Class 의 집합 $\mathcal{K}_G$ 가 $G$ 를 분할한다고 하자. 그리고 $D$ 에 포함되는 서로 동등하지 않은 기약 표현이 $D^{(i)},\, i=1,\,2,\ldots$ 이며 $D^{(i)}$ 가 $m_i$ 번 포함되었다고 하자. 그렇다면
+일단 reducible 표현 $D$ 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 
 
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#prp-Group_reducible_representation_and_multiplicity_1}
+
+유한군 $G$ 의 reducible representaion $D$ 와 $G$ 를 분할하는 conjugate class 의 집합 $\mathcal{K}_G$ 를 생각하자. $D$ 에 포함되지 않은 서로 동등하지 않은 기약 표현 $D^{(i)},\, i=1,\,2,\ldots$ 에 대해 $D^{(i)}$ 가 $m_i$ 번 포함되었다고 하자. 그렇다면 $D$ 에 대한 character $\chi$ 는 다음과 같다. 
 $$
 \chi(K) = \sum_{i} m_i \chi^{(i)}(K)
 $$
 
-이며, @eq-Group_orthogonality_of_character_2 에 따라
+Conjugate class $K$ 에 포함되는 $G$ 의 원소의 갯수를 $n(K)$ 라고 하자. 이 때 다음이 성립한다.
+$$
+\begin{aligned}
+\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = |G|\sum_{i}(m_i)^2
+\end{aligned}
+$$ {#eq-Group_reducibility_check}
+:::
+</div>
+</br>
+
+::: {.proof}
+@eq-Group_orthogonality_of_character_2 를 이용하면 다음을 얻는다.
 
 $$
 \begin{aligned}
-\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = \sum_{K\in \mathcal{K}_G} n(K) \sum_{i,\,j} m_im_j \left(\chi^{(i)}(K)\right)^\ast \chi^{(j)}(K) = |G|\sum_{i}(m_i)^2
+\sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) &= \sum_{K\in \mathcal{K}_G} n(K) \sum_{i,\,j} m_im_j \left(\chi^{(i)}(K)\right)^\ast \chi^{(j)}(K) \\[0.3em]
+&= |G|\sum_{i}(m_i)^2 & \square
 \end{aligned}
-$$
+$$ 
 
-이다. 즉, 주어진 군 $G$ 와 표현 $D$ 에 대해,
+:::
 
-&emsp;($1$) 일단 군 $G$ 에 대한 클라스의 집합 $\mathcal{K}_G$ 를 구하고,
+</br>
+
+즉, 주어진 군 $G$ 와 표현 $D$ 에 대해,
+
+&emsp;($1$) 일단 군 $G$ 에 대한 conjugate class 의 집합 $\mathcal{K}_G$ 를 구하고,
 
 &emsp;($2$) $\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K)$ 를 구하면,
 
-&emsp;($3$) 이 값은 군의 성분의 갯수에 $D$ 에 포함되는 기약 표현의 중복성의 제곱의 합과 같다.
+&emsp;($3$) 이 값은 군의 성분의 갯수에 $D$ 에 포함되는 기약 표현의 중복성 $m_i$ 의 제곱의 합과 같다.
 
 일단 $\dfrac{1}{|G|}\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K) =\sum_i (m_i)^2$ 가 $1$ 이면 $D$ 는 기약표현이며 $1$ 보다 크면 $D$ 는 reducible 이다. 만약 이 값이 $3$ 이라면 $D$ 는 서로 동등하지 않은 세 irreducible representatino 의 direct sum 이다.
 
 </br>
 
-### 정칙 표현
+이제 우리가 $D$ 에 포함되는 기약 표현 $D^{(r)}$ 을 얻었다고 하자. 다음 명제를 이용하여 $D^{(r)}$ 의 multiplicity $m_r$ 을 얻을 수 있다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#prp-Group_reducible_representation_and_multiplicity_2}
+
+@prp-Group_reducible_representation_and_multiplicity_1 과 같은 조건에서 $D^{(r)}$ 이 $D$ 에 포함되는 기약표현이라고 하고 $m_r$ 번 포함되었다고 하자. 이 때 다음이 성립한다.
+
+$$
+\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(r)}(K)\right)^\ast \chi(K) = |G|m_r
+$$ {#eq-Group_multiplicity_check_2}
+:::
+
+</div></br>
+
+::: {.proof}
+$\chi(K) = \sum_{i} m_i \chi^{(i)}(K)$ 에 대해,
+
+$$
+\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(r)}(K)\right)^\ast \chi(K) = \sum_{K\in \mathcal{K}_G}n(K) \sum_i \left(\chi^{(r)}(K)\right)^\ast \chi^{(i)}(K) = |G|m_r. \qquad \square
+$$
+
+:::
+
+이므로 우리는 $m_r$ 을 얻을 수 있다. 
+
+</br>
+
+## 정칙 표현
+
+### 정칙 표현 {#sec-Group-regular_representation}
 
 군에 대한 케일리 정리(@thm-Group-caylay_theorem, @cor-Group-caylay_theorem) 는 유한군 $G$ 가 대칭군 $S_{|G|}$ 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 $S_n$ 은 $n \times n$ 행렬로 표현 할 수 이 있음을 안다(@exm-Group_representation_for_Sn). 즉 유한군 $G$ 는 $|G|$ 차원 표현을 가지며 이를 **정칙 표현 (regular representation)** 라고 한다.
 
 </br>
 
-$G=\{g_1,\ldots,\,g_{|G|}\}$ 라고 하자. $\theta: G \to \R^{|G|}$ 를 $\theta(g_i) := \bf{e}_i$ 로 정의하자. $\Phi : G \to \R^{|G|\times |G|}$ 를
+$G=\{g_1,\ldots,\,g_{|G|}\}$ 라고 하자. $\theta: G \to \{\bf{e}_1,\ldots,\, \bf{e}_{|G|}\}\subset \R^{|G|}$ 를 $\theta(g_i) := \bf{e}_i$ 로 정의하자. $\Phi : G \to \R^{|G|\times |G|}$ 를
 
 $$
-\Phi(g_i) := \begin{bmatrix} (\theta(g_i^{-1}g_1))^T \\ \vdots \\ (\theta(g_i^{-1} g_{|G|}))^T \end{bmatrix}
+\Phi(g) := \begin{bmatrix} (\theta(g^{-1}g_1))^T \\ \vdots \\ (\theta(g^{-1} g_{|G|}))^T \end{bmatrix}
+$$ {#eq-Group-regular_representation}
+
+로 정의하자. $\Phi$ 는 $G \to \R^{|G| \times |G|}$ 함수이며,
+
+$$
+\Phi(g)\Phi(g') \bf{e}_j = \Phi(g)\bf{e}_{g'g_j}=\bf{e}_{gg'g_j} = \Phi(gg')\bf{e}_j
 $$
 
-로 정의하자. 
+이므로 $\Phi$ 는 준동형사상이다. $\Phi(g)=\Phi(g')$ 일 때 $\theta$ 는 단사이므로 $g^{-1}g= g'^{-1}g$ 이어야 하며 이는 $g=g'$ 임을 의미한다. 즉 $\Phi$ 는 단사인 동형사상 이며 $G$ 에 대한 믿을수 있는 표현이다.
 
-
+<br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_regular_representation}
 #### 정칙 표현
 
-유한군 $G$ 를 $S_n$ 의 $n \times n$ 행렬 표현을 이 
+유한군 $G$ 에 대해 @eq-Group-regular_representation 로 정의된 $\Phi\in \text{Hom}(G,\, \R^{|G|\times |G|})$ 는 $G$ 에 대한 **정칙 표현 (regular representation)** 이라고 하고 $D^{(\text{reg})}$ 라고 표기한다. 정칙 표현에서의 character 는 $\chi^{(\text{reg})}$ 로 표기한다.
 
 :::
 :::
+
+</br>
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_regular_representation_and_non_trivial_character}
+
+유한군 $G$ 에 대한 $\chi^{(\text{reg})}(g)=0$ 는 다음과 같다.
+
+$$
+\chi^{(\text{reg})}(g)=  \left\{\begin{array}{ll} |G|,\qquad & g=i_G, \\ 0. &\text{otherwise}.\end{array}\right.
+$$
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$D^{(\text{reg})}(g)$ 는 각 행, 각 열마다 하나의 $1$ 을 제외한 모든 성분이 $0$ 이다. $i$ 행의 대각성분이 $1$ 이려면 $g^{-1}g_i = g_i$ 이어야 하므로 $g=i_G$ 이어야 한다. 즉 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 어떤 대각 성분도 $1$ 이 아니다. 따라서 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 모든 대각 성분은 $0$ 이다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#prp-Group_regular_representation_is_not_irreducible}
+
+$|G|>1$ 인 유한군 $G$ 의 정칙표현은 reducible 하다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$\sum_{K\in \mathcal{K}_G} n(K) \left(\chi(K)\right)^\ast\chi(K) = |G|^2$ 이므로 @eq-Group_reducibility_check 로부터 $|G|^2 = |G|\sum (m_r)^2$ 이다. 즉 $\sum(m_r)^2=|G| \ne 1$ 이므로 정칙표현은 irreducible 하다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-Group_regular_representation}
+
+군 $G$ 에 대한 정칙 표현 $D^{(\text{reg})}$ 은 $G$ 에 대한 모든 기약 표현을 포함하며 이 기약표현이 $d_r \times d_r$ 일 때 $D^{(\text{reg})}$ 에 $d_r$ 번 포함되어 있다.
+
+:::
+</div>
+
+</br>
+
+::: {.proof}
+
+$D^{(r)}$ 이 $d_r \times d_r$ 행렬 이라고 하고 $G$ 의 conjugate class 의 집합 $\mathcal{K}_G$ 에 대해
+
+$$
+\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi^{(\text{reg})}(K)
+$$ {#eq-prp-Group_regular_representation_is_not_irreducible_2_1}
+
+을 생각하자. $\chi^{(\text{reg})}(K)$ 는 $K=\{i_G\}$ 를 제외하면 $0$ 이며 따라서,
+$$
+\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi(K) = \left(\chi^{(r)}(\{i_G\}\right)\chi(\{i_G\}) = d_r |G| > 0
+$$
+
+이다. 만약 $D^{(r)}$ 과 동등한 어떤 표현도 $D^{(\text{reg})}$ 에 포함되어 있지 않다고 하자. @thm-Group_orthogonality_of_character_2 로부터 @eq-prp-Group_regular_representation_is_not_irreducible_2_1 는 $0$ 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. @eq-Group_multiplicity_check_2 로 부터 $d_r|G|=m_r|G|$ 이므로 $d_r =m_r$ 이다. $\square$
+
+:::
+
+</br>
+
+이로부터 다음을 얻는다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#prp-Group_regular_representation_is_not_irreducible_3}
+
+유한군 $G$ 의 정칙 표현 $D^{(\text{reg})}$ 에 서로 동등하지 않은 기약 표현 $D^{(i)},\, i=1,\,2,\ldots$ 이 포함되었고 $D^{(i)}$ 는 $d_i \times d_i$ 행렬표현이라고 하자. 이 때 다음이 성립한다.
+
+$$
+\sum_{i}(d_i)^2= |G|.
+$$ {#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation}
+
+:::
+</div>
+</brt>
+
+::: {.proof}
+
+$D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이다. 여기에 포함되는 블럭 대각행렬이 $d_i\times d_i$ 꼴로 $d_i$ 번 포함되므로 @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 가 성립한다. $\square$
+
+:::
+
+</br>
+
+### 기약표현의 개수와 Conjugate Class 의 개수는 같다.
+
+유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugate class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. $N_C=N_R$ 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-Group_number_of_irreducible_representation_and_class}
+
+유한군 $G$ 의 기약 표현의 개수와 conjugate class 의 개수는 같다.
+
+:::
+
 
 
 </br>
+
 
 ### 연습문제 {.unnumbered}
 
@@ -1309,3 +1472,6 @@ $m\times n (\text{where } m > n)$ 행렬 $M$ 에 대해 $MM^\dagger = cI_{m}$ �
 $\text{rank}(M^\dagger) \le n$ 이므로 $\text{rank}(MM^\dagger)\le n$ 이다. 그런데 $\text{rank}(cI_m)$ 은 $c\ne 0$ 일 경우 $m$ 이며 $m>n$ 이므로 $c=0$ 이다.
 
 :::
+
+</br>
+

@@ -1,0 +1,16 @@
+---
+title: "군과 표현 II."
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## 군의 표현
+
+
