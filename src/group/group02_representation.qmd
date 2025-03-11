@@ -166,7 +166,7 @@ $$
 </div>
 </br>
 
-### Conjugate class 의 character
+### Conjugacy class 의 character
 
 ::: {.callout-warning icon="false"}
 
@@ -175,7 +175,7 @@ $$
 
 - 우리는 군의 표현이 여러 종류가 가능하다는 것을 안다. 따라서 그 표현을 구분하기 위해 $D^{(r)}(g)$ 와 같이 표기하기로 한다. $r$ 이 여러 표현을 구분하는 인덱스이다.
 
-- @def-Group_conjugate 에서 우리는 conjugate class 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 conjugate class 를 의미한다.
+- @def-Group_conjugacy_class 에서 우리는 conjugacy class 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 conjugacy class 를 의미한다.
 
 :::
 
@@ -1145,7 +1145,7 @@ $$
 
 </br>
 
-우리는 군이 conjugate class 로 분할된다는 것을 안다. 또한 conjugate class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.
+우리는 군이 conjugacy class 로 분할된다는 것을 안다. 또한 conjugacy class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -1165,7 +1165,7 @@ $$ {#eq-Group_orthogonality_of_character_2}
 
 </br>
 
-이제 재미있는 것을 해 보자. 군 $G$ 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 $N_R$ 이라고 하고 conjugate class 의 갯수를 $N_C$ 라고 하자. $G$ 의 conjugate calss 를 $\{K_1,\ldots,K_{N_C}\}$ 라고 하고 $\C^{N_C}$ 에 속하는 벡터 $X_1,\ldots,\,X_{N_R}$ 을 다음과 같이 정의한다.
+이제 재미있는 것을 해 보자. 군 $G$ 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 $N_R$ 이라고 하고 conjugacy class 의 갯수를 $N_C$ 라고 하자. $G$ 의 conjugacy calss 를 $\{K_1,\ldots,K_{N_C}\}$ 라고 하고 $\C^{N_C}$ 에 속하는 벡터 $X_1,\ldots,\,X_{N_R}$ 을 다음과 같이 정의한다.
 
 $$
 X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\bf{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
@@ -1201,31 +1201,32 @@ $$
 S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 $$
 
-군의 conjugare class 가 군을 분할한다는 것을 이용하여 $S_3$ 의 conjugate class 를 구해보자.
+군의 conjugare class 가 군을 분할한다는 것을 이용하여 $S_3$ 의 conjugacy class 를 구해보자.
 
-&emsp;($1$) 모든 $g\in S_3$ 에 대해 $gEg^{-1}=E$ 이므로 $\{E\}$ 는 conjugate class 이다. 즉 $[E]=\{E\}$ 이다.
+&emsp;($1$) 모든 $g\in S_3$ 에 대해 $gEg^{-1}=E$ 이므로 $\{E\}$ 는 conjugacy class 이다. 즉 $[E]=\{E\}$ 이다.
 
 &emsp;($2$) $BAB^{-1}= C,\, CAC^{-1}=B,\, DAD^{-1}=C,\, FAF^{-1}=B$ 이므로 $[A]=\{A,\,B,\,C\}$ 이다.
 
 &emsp;($3$) $ADA^{-1}=F$ 이므로 $[D]=\{D,\,F\}$ 이다. 
 
-즉 $3$ 개의 $S_3$ 에 대해 conjugate class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자.
+즉 $3$ 개의 $S_3$ 에 대해 conjugacy class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자.
 
 :::
 
 </div>
 </br>
 
-위에서 보았듯이 $S_3$ 는 3개의 conjugate class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.
+위에서 보았듯이 $S_3$ 는 3개의 conjugacy class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.
 
 ![$S_3$ 에 대한 기약표현](figures/irreducible_rep_of_S3.png){#tbl-Group_irreducible_representation_of_S3 width=600}
 
 </br>
 
-Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. $S_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. $S_3$ 에 대한 character table 은 아래와 같다.
+Charater table 의 첫번째 행은 conjugacy class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. $S_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. $S_3$ 에 대한 character table 은 아래와 같다.
 
-
+<center>
 ![$S_3$ character table](figures/character_table_S3.png){#tbl-Group_character_table_of_S3 width=160}
+</center>
 
 </br>
 
@@ -1240,12 +1241,12 @@ Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이�
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-Group_reducible_representation_and_multiplicity_1}
 
-유한군 $G$ 의 reducible representaion $D$ 와 $G$ 를 분할하는 conjugate class 의 집합 $\mathcal{K}_G$ 를 생각하자. $D$ 에 포함되지 않은 서로 동등하지 않은 기약 표현 $D^{(i)},\, i=1,\,2,\ldots$ 에 대해 $D^{(i)}$ 가 $m_i$ 번 포함되었다고 하자. 그렇다면 $D$ 에 대한 character $\chi$ 는 다음과 같다. 
+유한군 $G$ 의 reducible representaion $D$ 와 $G$ 를 분할하는 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. $D$ 에 포함되지 않은 서로 동등하지 않은 기약 표현 $D^{(i)},\, i=1,\,2,\ldots$ 에 대해 $D^{(i)}$ 가 $m_i$ 번 포함되었다고 하자. 그렇다면 $D$ 에 대한 character $\chi$ 는 다음과 같다. 
 $$
 \chi(K) = \sum_{i} m_i \chi^{(i)}(K)
 $$
 
-Conjugate class $K$ 에 포함되는 $G$ 의 원소의 갯수를 $n(K)$ 라고 하자. 이 때 다음이 성립한다.
+Conjugacy class $K$ 에 포함되는 $G$ 의 원소의 갯수를 $n(K)$ 라고 하자. 이 때 다음이 성립한다.
 $$
 \begin{aligned}
 \sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = |G|\sum_{i}(m_i)^2
@@ -1271,7 +1272,7 @@ $$
 
 즉, 주어진 군 $G$ 와 표현 $D$ 에 대해,
 
-&emsp;($1$) 일단 군 $G$ 에 대한 conjugate class 의 집합 $\mathcal{K}_G$ 를 구하고,
+&emsp;($1$) 일단 군 $G$ 에 대한 conjugacy class 의 집합 $\mathcal{K}_G$ 를 구하고,
 
 &emsp;($2$) $\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K)$ 를 구하면,
 
@@ -1395,7 +1396,7 @@ $\sum_{K\in \mathcal{K}_G} n(K) \left(\chi(K)\right)^\ast\chi(K) = |G|^2$ 이므
 
 ::: {.proof}
 
-$D^{(r)}$ 이 $d_r \times d_r$ 행렬 이라고 하고 $G$ 의 conjugate class 의 집합 $\mathcal{K}_G$ 에 대해
+$D^{(r)}$ 이 $d_r \times d_r$ 행렬 이라고 하고 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해
 
 $$
 \sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi^{(\text{reg})}(K)
@@ -1437,17 +1438,232 @@ $D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이다. 여기에 포함되는 블�
 
 </br>
 
-### 기약표현의 개수와 Conjugate Class 의 개수는 같다.
+### 기약표현의 개수와 Conjugacy Class 의 개수는 같다.
 
-유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugate class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. $N_C=N_R$ 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.
+유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugacy class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. $N_C=N_R$ 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#thm-Group_number_of_irreducible_representation_and_class}
 
-유한군 $G$ 의 기약 표현의 개수와 conjugate class 의 개수는 같다.
+유한군 $G$ 의 기약 표현의 개수와 conjugacy class 의 개수는 같다.
 
 :::
+
+</div></br>
+
+#### **프로베니우스 대수**
+
+군의 연산은 일반적으로 곱이라고 생각하며 곱으로 정의된 연산에는 합이 정의되지 않는다. 그러나 수학자들은 군의 한계를 벗어나는 구조를 생각해냈다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_frobenius_algebra}
+#### 군의 프로베니우스 대수
+
+군 $(G,\,\cdot)$ 과 체 $\F$ 에 대해 $a_i,\, b_i\in \F,\, g_i\in G$ 일 때 다음의 두 조건을 만족하는 $\{\sum_i a_ig_i: a_i\in \F,\, g_i\in G\}$ 를 군 $G$ 에 대한 프로비니우스 대수라고 한다.
+
+&emsp;($1$) $\displaystyle \sum_i a_ig_i + \sum_j b_i g_i = (a_i+b_i)g_i$, 
+
+&emsp;($2$) $\displaystyle \left(\sum_i a_i g_i\right)\left(\sum_j b_j g_j\right) = \sum_{ij} a_ib_j g_ig_j$.
+
+
+:::
+:::
+
+</br>
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. 그렇다면 $K\in \mathcal{K}_G$ 에 대해
+
+$$
+k(K):= \dfrac{1}{|K|} \sum_{g_i\in K}g_i
+$$ {#eq-Group_frobenius_algebra_averate}
+
+는 $K\in \mathcal{K}_G$ 에 속하는 $G$ 의 원소들의 평균이라고 생각 할 수 있을 것이다. 우선 $I = \{i_G\}$ 는 conjugacy class 이므로 
+
+$$
+k(I)k(I) = I
+$$
+
+이다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_frobenius_algebra_1}
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $g\in G$, $K_1,\, K_2\in K$ 일 때 다음이 성립한다.
+
+$$
+g^{-1}k(K_1)k(K_2)g = k(K_1)k(K_2).
+$${#eq-Group_frobenius_algebra_invariance}
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+$k(K_1)k(K_2)$ 는 다음과 같다.
+
+$$
+k(K_1)k(K_2) = \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2.
+$$ {#eq-Group_frobenius_algebra_multiplication_of_average}
+
+$g\in G$ 에 대해
+
+$$
+\begin{aligned}
+g^{-1}\left[ k(K_1)k(K_2) \right]g &= \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g^{-1}g_1g_2g \\
+&=\dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} (g^{-1}g_1g)(g^{-1}g_2g) \\
+&=k(K_1)k(K_2)
+\end{aligned}
+$$
+
+이다. $\square$
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_frobenius_algebra_2}
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 일 때 다음이 성립한다.
+
+$$
+k(K_1)k(K_2) = k(K_2)k(K_1).
+$$ {#eq-Group_frobenius_algebra_abelian}
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+$\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1$ 임을 보이면 된다.
+$$
+\begin{aligned}
+\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 &= \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2g_1^{-1}g_1 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1. \quad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+
+@eq-Group_frobenius_algebra_multiplication_of_average 로 부터 우리는 $k(K_1)k(K_2)$ 를 $g\in G$ 들의 스칼라곱의 합으로 표현할 수 있다는 것을 안다.
+
+$$
+k(K_1)k(K_2) = \sum_{g_i\in G} a_i g_i
+$$
+
+
+
+$g_i,\, g_j$ 가 같은 클래스 $K$ 에 속해있으면 어떤 $x\in G$ 에 대해 $g_i=xg_jx^{-1}$ 이다. 
+
+$$
+xk(K_1)k(K_2)x^{-1} = \sum_{g_i\in G} a_i xg_ix^{-1}
+$$
+
+이므로 같은 클래스에 속한다면 $a_i$ 는 모두 같아야 한다. 
+
+
+
+또한 우리는 @prp-Group_properties_on_conjugacy_class 에서 conjugacy class $K$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 역시 conjugacy class 임을 보였다. 이를 이용하면
+
+$$
+k(K)k(\overline{K}) = \dfrac{1}{|K|}i_G + \cdots 
+$$
+
+임을 안다. 또한 $K'\ne \overline{K}$ 일 경우 $k(K)k(K')$ 은 $i_G$ 항을 갖지 않는다는 것을 안다. 우리는 이로부터 
+
+$$
+k(K_1)k(K_2) = \sum_{K_i \in \mathcal{K}_G} a_K \left(\sum_{g_j \in K_i} g_j\right) = \sum_{K_i\in \mathcal{K}_G}a_K|K| k(K)
+$$
+
+
+
+
+
+우리는 이로부터 다음 명제가 성립한다는 것을 안다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_frobenius_algebra_3}
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 와 @eq-Group_frobenius_algebra_averate 로 정의된 $k(K)$ 그리고 $K\in \mathcal{K}$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 라고 할 때 다음이 성립한다. 
+$$
+k(K_1)k(K_2) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)k(K) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; \overline{K})k(\overline{K})
+$$ {#eq-prp_Grouop_frobenius_algebra_3}
+
+
+:::
+
+</div>
+</br>
+
+여기서 $\Gamma (K_1,\,K_2;K)$ 는 주어진 군의 conjugacy class $K_1,\,K_2$ 와 전개하고자 하는 class $K$ 혹은 $\overline{K}$ 에 의해 정해지는 수로 **class 계수 (class coefficients)** 라고 부른다.
+
+</br>
+
+이제 군 $G$ 의 표현 $D$ 와 $K\in \mathcal{K}_G$ 에
+
+$$
+\mathcal{D}(K) := \dfrac{1}{|K|} \sum_{g\in K}D(g)
+$$
+
+라고 하자. 이 때 임의의 $x\in G$ 에 대해
+
+$$
+D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal{D}(K)
+$$
+
+이며, @lem-Group_schur_lemma 에 따라 $\mathcal{D}$ 는 항등행렬의 스칼라배이다. 곱해지는 스칼라값은 $K$ 에 따라 다를 수 있으므로
+
+$$
+\mathcal{D}(K) = c_K I
+$$
+
+라고 하자. 
+
+$$
+\text{tr}(\mathcal{D}(K))= \dfrac{1}{|K|} \sum_{g\in K}\chi(K) = \chi(K)
+$$
+
+이므로 $c_K\chi(I) = \chi(K)$ 이다. 이제 @eq-prp_Grouop_frobenius_algebra_3 으로 부터
+
+$$
+\mathcal{D}(K_1)\mathcal{D}(K_2) = \sum_{K\in \mathcal{K}_G}\Gamma(K_1,K_2;K) \mathcal{D}(K)
+$$
+
+임을 안다. $\mathcal{D}(K)= \chi(K)/\chi(I) I$ 이므로
+
+$$
+\chi(K_1)\chi(K_2) = \chi(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi(K)
+$$
+
+이다. 이제 $G$ 에 대한 표현 $D^{(i)}$ 와 이 $D^{(i)}$ 에서의 character $\chi^{(i)}$ 를 생각하면
+
+$$
+\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \chi^{(i)}(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi^{(i)}(K)
+$$
+
+이다. 위 식을 모든 기약표현에 대해 더하면
+
+$$
+\begin{aligned}
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) &= \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K) \sum_i  \chi^{(i)}(I)\chi^{(i)}(K) 
+\end{aligned}
+$$
+
+군에 대한 기약표현에 대해 $K\ne I$ 일 경우 $\chi^{(i)}(K)=0$ 임을 알았다. 따라서,
+
+$$
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; I) \chi^{(i)}(I)
+$$
+
+
 
 
 

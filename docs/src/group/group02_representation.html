@@ -308,7 +308,7 @@ window.Quarto = {
   <li><a href="#군의-표현" id="toc-군의-표현" class="nav-link active" data-scroll-target="#군의-표현"><span class="header-section-number">5.1</span> 군의 표현</a>
   <ul class="collapse">
   <li><a href="#군의-표현과-유니타리-표현" id="toc-군의-표현과-유니타리-표현" class="nav-link" data-scroll-target="#군의-표현과-유니타리-표현"><span class="header-section-number">5.1.1</span> 군의 표현과 유니타리 표현</a></li>
-  <li><a href="#conjugate-class-의-character" id="toc-conjugate-class-의-character" class="nav-link" data-scroll-target="#conjugate-class-의-character"><span class="header-section-number">5.1.2</span> Conjugate class 의 character</a></li>
+  <li><a href="#conjugacy-class-의-character" id="toc-conjugacy-class-의-character" class="nav-link" data-scroll-target="#conjugacy-class-의-character"><span class="header-section-number">5.1.2</span> Conjugacy class 의 character</a></li>
   <li><a href="#sec-Group-irreducible_representation_and_unitary_representation" id="toc-sec-Group-irreducible_representation_and_unitary_representation" class="nav-link" data-scroll-target="#sec-Group-irreducible_representation_and_unitary_representation"><span class="header-section-number">5.1.3</span> 기약 표현과 유니타리 표현</a></li>
   <li><a href="#직합표현과-직곱표현" id="toc-직합표현과-직곱표현" class="nav-link" data-scroll-target="#직합표현과-직곱표현"><span class="header-section-number">5.1.4</span> 직합표현과 직곱표현</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
@@ -324,7 +324,7 @@ window.Quarto = {
   <li><a href="#정칙-표현" id="toc-정칙-표현" class="nav-link" data-scroll-target="#정칙-표현"><span class="header-section-number">5.3</span> 정칙 표현</a>
   <ul class="collapse">
   <li><a href="#sec-Group-regular_representation" id="toc-sec-Group-regular_representation" class="nav-link" data-scroll-target="#sec-Group-regular_representation"><span class="header-section-number">5.3.1</span> 정칙 표현</a></li>
-  <li><a href="#기약표현의-개수와-conjugate-class-의-개수는-같다." id="toc-기약표현의-개수와-conjugate-class-의-개수는-같다." class="nav-link" data-scroll-target="#기약표현의-개수와-conjugate-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugate Class 의 개수는 같다.</a></li>
+  <li><a href="#기약표현의-개수와-conjugacy-class-의-개수는-같다." id="toc-기약표현의-개수와-conjugacy-class-의-개수는-같다." class="nav-link" data-scroll-target="#기약표현의-개수와-conjugacy-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugacy Class 의 개수는 같다.</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   </ul>
@@ -465,8 +465,8 @@ D(\pi)D(\sigma)\boldsymbol{e}_j = D(\pi)\boldsymbol{e}_{\sigma(j)}= \boldsymbol{
 </div>
 <p><br></p>
 </section>
-<section id="conjugate-class-의-character" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="conjugate-class-의-character"><span class="header-section-number">5.1.2</span> Conjugate class 의 character</h3>
+<section id="conjugacy-class-의-character" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="conjugacy-class-의-character"><span class="header-section-number">5.1.2</span> Conjugacy class 의 character</h3>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -479,7 +479,7 @@ D(\pi)D(\sigma)\boldsymbol{e}_j = D(\pi)\boldsymbol{e}_{\sigma(j)}= \boldsymbol{
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>우리는 군의 표현이 여러 종류가 가능하다는 것을 안다. 따라서 그 표현을 구분하기 위해 <span class="math inline">\(D^{(r)}(g)\)</span> 와 같이 표기하기로 한다. <span class="math inline">\(r\)</span> 이 여러 표현을 구분하는 인덱스이다.</p></li>
-<li><p><a href="group01_introduction.html#def-Group_conjugate" class="quarto-xref">정의&nbsp;<span>4.8</span></a> 에서 우리는 conjugate class 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 conjugate class 를 의미한다.</p></li>
+<li><p><a href="group01_introduction.html#def-Group_conjugacy_class" class="quarto-xref">정의&nbsp;<span>4.8</span></a> 에서 우리는 conjugacy class 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 conjugacy class 를 의미한다.</p></li>
 </ul>
 </div>
 </div>
@@ -1115,7 +1115,7 @@ Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} 
 \]</span></p>
 </div>
 <p><br></p>
-<p>우리는 군이 conjugate class 로 분할된다는 것을 안다. 또한 conjugate class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.</p>
+<p>우리는 군이 conjugacy class 로 분할된다는 것을 안다. 또한 conjugacy class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_orthogonality_of_character_2" class="theorem">
@@ -1126,7 +1126,7 @@ Y_{i\alpha\beta} := \dfrac{d_i}{|G|}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} 
 </div>
 </div>
 <p><br></p>
-<p>이제 재미있는 것을 해 보자. 군 <span class="math inline">\(G\)</span> 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 <span class="math inline">\(N_R\)</span> 이라고 하고 conjugate class 의 갯수를 <span class="math inline">\(N_C\)</span> 라고 하자. <span class="math inline">\(G\)</span> 의 conjugate calss 를 <span class="math inline">\(\{K_1,\ldots,K_{N_C}\}\)</span> 라고 하고 <span class="math inline">\(\mathbb{C}^{N_C}\)</span> 에 속하는 벡터 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 을 다음과 같이 정의한다.</p>
+<p>이제 재미있는 것을 해 보자. 군 <span class="math inline">\(G\)</span> 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 <span class="math inline">\(N_R\)</span> 이라고 하고 conjugacy class 의 갯수를 <span class="math inline">\(N_C\)</span> 라고 하자. <span class="math inline">\(G\)</span> 의 conjugacy calss 를 <span class="math inline">\(\{K_1,\ldots,K_{N_C}\}\)</span> 라고 하고 <span class="math inline">\(\mathbb{C}^{N_C}\)</span> 에 속하는 벡터 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 을 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\boldsymbol{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
 \]</span></p>
@@ -1149,15 +1149,15 @@ X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\boldsymbol{e}}_j = \beg
 <p><span class="math display">\[
 S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 \]</span></p>
-<p>군의 conjugare class 가 군을 분할한다는 것을 이용하여 <span class="math inline">\(S_3\)</span> 의 conjugate class 를 구해보자.</p>
-<p> (<span class="math inline">\(1\)</span>) 모든 <span class="math inline">\(g\in S_3\)</span> 에 대해 <span class="math inline">\(gEg^{-1}=E\)</span> 이므로 <span class="math inline">\(\{E\}\)</span> 는 conjugate class 이다. 즉 <span class="math inline">\([E]=\{E\}\)</span> 이다.</p>
+<p>군의 conjugare class 가 군을 분할한다는 것을 이용하여 <span class="math inline">\(S_3\)</span> 의 conjugacy class 를 구해보자.</p>
+<p> (<span class="math inline">\(1\)</span>) 모든 <span class="math inline">\(g\in S_3\)</span> 에 대해 <span class="math inline">\(gEg^{-1}=E\)</span> 이므로 <span class="math inline">\(\{E\}\)</span> 는 conjugacy class 이다. 즉 <span class="math inline">\([E]=\{E\}\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(BAB^{-1}= C,\, CAC^{-1}=B,\, DAD^{-1}=C,\, FAF^{-1}=B\)</span> 이므로 <span class="math inline">\([A]=\{A,\,B,\,C\}\)</span> 이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(ADA^{-1}=F\)</span> 이므로 <span class="math inline">\([D]=\{D,\,F\}\)</span> 이다.</p>
-<p>즉 <span class="math inline">\(3\)</span> 개의 <span class="math inline">\(S_3\)</span> 에 대해 conjugate class 가 존재한다. 이를 각각 <span class="math inline">\(\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3\)</span> 라고 하자.</p>
+<p>즉 <span class="math inline">\(3\)</span> 개의 <span class="math inline">\(S_3\)</span> 에 대해 conjugacy class 가 존재한다. 이를 각각 <span class="math inline">\(\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3\)</span> 라고 하자.</p>
 </div>
 </div>
 <p><br></p>
-<p>위에서 보았듯이 <span class="math inline">\(S_3\)</span> 는 3개의 conjugate class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.</p>
+<p>위에서 보았듯이 <span class="math inline">\(S_3\)</span> 는 3개의 conjugacy class 로 분할된다. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. (이것은 우연이 아니다!) 이 기약표현을 정리하면 아래와 같다.</p>
 <div id="tbl-Group_irreducible_representation_of_S3" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_irreducible_representation_of_S3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1169,7 +1169,8 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </figure>
 </div>
 <p><br></p>
-<p>Charater table 의 첫번째 행은 conjugate class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. <span class="math inline">\(S_3\)</span> 의 경우 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3\)</span> 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. <span class="math inline">\(S_3\)</span> 에 대한 character table 은 아래와 같다.</p>
+<p>Charater table 의 첫번째 행은 conjugacy class 를 나열한다. class 이름에 클래스에 속하는 원소의 갯수를 함께 표현한다. <span class="math inline">\(S_3\)</span> 의 경우 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3\)</span> 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 기호가 들어간다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열하낟. <span class="math inline">\(S_3\)</span> 에 대한 character table 은 아래와 같다.</p>
+<center>
 <div id="tbl-Group_character_table_of_S3" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_of_S3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1180,6 +1181,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 </figure>
 </div>
+</center>
 <p><br></p>
 </section>
 <section id="reducibility-확인" class="level3" data-number="5.2.5">
@@ -1189,10 +1191,10 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_reducible_representation_and_multiplicity_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.6</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 reducible representaion <span class="math inline">\(D\)</span> 와 <span class="math inline">\(G\)</span> 를 분할하는 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. <span class="math inline">\(D\)</span> 에 포함되지 않은 서로 동등하지 않은 기약 표현 <span class="math inline">\(D^{(i)},\, i=1,\,2,\ldots\)</span> 에 대해 <span class="math inline">\(D^{(i)}\)</span> 가 <span class="math inline">\(m_i\)</span> 번 포함되었다고 하자. 그렇다면 <span class="math inline">\(D\)</span> 에 대한 character <span class="math inline">\(\chi\)</span> 는 다음과 같다. <span class="math display">\[
+<p><span class="theorem-title"><strong>명제 5.6</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 reducible representaion <span class="math inline">\(D\)</span> 와 <span class="math inline">\(G\)</span> 를 분할하는 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. <span class="math inline">\(D\)</span> 에 포함되지 않은 서로 동등하지 않은 기약 표현 <span class="math inline">\(D^{(i)},\, i=1,\,2,\ldots\)</span> 에 대해 <span class="math inline">\(D^{(i)}\)</span> 가 <span class="math inline">\(m_i\)</span> 번 포함되었다고 하자. 그렇다면 <span class="math inline">\(D\)</span> 에 대한 character <span class="math inline">\(\chi\)</span> 는 다음과 같다. <span class="math display">\[
 \chi(K) = \sum_{i} m_i \chi^{(i)}(K)
 \]</span></p>
-<p>Conjugate class <span class="math inline">\(K\)</span> 에 포함되는 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(n(K)\)</span> 라고 하자. 이 때 다음이 성립한다. <span id="eq-Group_reducibility_check"><span class="math display">\[
+<p>Conjugacy class <span class="math inline">\(K\)</span> 에 포함되는 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(n(K)\)</span> 라고 하자. 이 때 다음이 성립한다. <span id="eq-Group_reducibility_check"><span class="math display">\[
 \begin{aligned}
 \sum_{K\in \mathcal{K}_G} n(K) \chi^\ast(K) \chi(K) = |G|\sum_{i}(m_i)^2
 \end{aligned}
@@ -1211,7 +1213,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <p><br></p>
 <p>즉, 주어진 군 <span class="math inline">\(G\)</span> 와 표현 <span class="math inline">\(D\)</span> 에 대해,</p>
-<p> (<span class="math inline">\(1\)</span>) 일단 군 <span class="math inline">\(G\)</span> 에 대한 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 구하고,</p>
+<p> (<span class="math inline">\(1\)</span>) 일단 군 <span class="math inline">\(G\)</span> 에 대한 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 구하고,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K)\)</span> 를 구하면,</p>
 <p> (<span class="math inline">\(3\)</span>) 이 값은 군의 성분의 갯수에 <span class="math inline">\(D\)</span> 에 포함되는 기약 표현의 중복성 <span class="math inline">\(m_i\)</span> 의 제곱의 합과 같다.</p>
 <p>일단 <span class="math inline">\(\dfrac{1}{|G|}\sum_{K\in \mathcal{K}_G} n(K)\chi^\ast(K)\chi(K) =\sum_i (m_i)^2\)</span> 가 <span class="math inline">\(1\)</span> 이면 <span class="math inline">\(D\)</span> 는 기약표현이며 <span class="math inline">\(1\)</span> 보다 크면 <span class="math inline">\(D\)</span> 는 reducible 이다. 만약 이 값이 <span class="math inline">\(3\)</span> 이라면 <span class="math inline">\(D\)</span> 는 서로 동등하지 않은 세 irreducible representatino 의 direct sum 이다.</p>
@@ -1295,7 +1297,7 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(d_r \times d_r\)</span> 행렬 이라고 하고 <span class="math inline">\(G\)</span> 의 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(d_r \times d_r\)</span> 행렬 이라고 하고 <span class="math inline">\(G\)</span> 의 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해</p>
 <p><span id="eq-prp-Group_regular_representation_is_not_irreducible_2_1"><span class="math display">\[
 \sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi^{(\text{reg})}(K)
 \tag{5.24}\]</span></span></p>
@@ -1321,15 +1323,154 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 </div>
 <p><br></p>
 </section>
-<section id="기약표현의-개수와-conjugate-class-의-개수는-같다." class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="기약표현의-개수와-conjugate-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugate Class 의 개수는 같다.</h3>
-<p>유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않은 기약표현의 개수를 <span class="math inline">\(N_R\)</span> 이라고 하고 Conjugate class 개수를 <span class="math inline">\(N_C\)</span> 라고 하자. 우리는 앞서 <a href="#eq-Group_inequality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>5.20</span></a> 를 통해 <span class="math inline">\(N_R\le N_C\)</span> 임을 보였다. 실제로는 <span class="math inline">\(N_R=N_C\)</span> 이며, 따라서 character table 은 정사각형이다. <span class="math inline">\(N_C=N_R\)</span> 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.</p>
+<section id="기약표현의-개수와-conjugacy-class-의-개수는-같다." class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="기약표현의-개수와-conjugacy-class-의-개수는-같다."><span class="header-section-number">5.3.2</span> 기약표현의 개수와 Conjugacy Class 의 개수는 같다.</h3>
+<p>유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않은 기약표현의 개수를 <span class="math inline">\(N_R\)</span> 이라고 하고 Conjugacy class 개수를 <span class="math inline">\(N_C\)</span> 라고 하자. 우리는 앞서 <a href="#eq-Group_inequality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>5.20</span></a> 를 통해 <span class="math inline">\(N_R\le N_C\)</span> 임을 보였다. 실제로는 <span class="math inline">\(N_R=N_C\)</span> 이며, 따라서 character table 은 정사각형이다. <span class="math inline">\(N_C=N_R\)</span> 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_number_of_irreducible_representation_and_class" class="theorem">
-<p><span class="theorem-title"><strong>정리 5.8</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 기약 표현의 개수와 conjugate class 의 개수는 같다.</p>
+<p><span class="theorem-title"><strong>정리 5.8</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 기약 표현의 개수와 conjugacy class 의 개수는 같다.</p>
+</div>
 </div>
 <p><br></p>
-</div></section>
+<section id="프로베니우스-대수" class="level4">
+<h4 class="anchored" data-anchor-id="프로베니우스-대수"><strong>프로베니우스 대수</strong></h4>
+<p>군의 연산은 일반적으로 곱이라고 생각하며 곱으로 정의된 연산에는 합이 정의되지 않는다. 그러나 수학자들은 군의 한계를 벗어나는 구조를 생각해냈다.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_frobenius_algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.6 (군의 프로베니우스 대수)</strong></span> 군 <span class="math inline">\((G,\,\cdot)\)</span> 과 체 <span class="math inline">\(\mathbb{F}\)</span> 에 대해 <span class="math inline">\(a_i,\, b_i\in \mathbb{F},\, g_i\in G\)</span> 일 때 다음의 두 조건을 만족하는 <span class="math inline">\(\{\sum_i a_ig_i: a_i\in \mathbb{F},\, g_i\in G\}\)</span> 를 군 <span class="math inline">\(G\)</span> 에 대한 프로비니우스 대수라고 한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\displaystyle \sum_i a_ig_i + \sum_j b_i g_i = (a_i+b_i)g_i\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle \left(\sum_i a_i g_i\right)\left(\sum_j b_j g_j\right) = \sum_{ij} a_ib_j g_ig_j\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>군 <span class="math inline">\(G\)</span> 의 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. 그렇다면 <span class="math inline">\(K\in \mathcal{K}_G\)</span> 에 대해</p>
+<p><span id="eq-Group_frobenius_algebra_averate"><span class="math display">\[
+k(K):= \dfrac{1}{|K|} \sum_{g_i\in K}g_i
+\tag{5.26}\]</span></span></p>
+<p>는 <span class="math inline">\(K\in \mathcal{K}_G\)</span> 에 속하는 <span class="math inline">\(G\)</span> 의 원소들의 평균이라고 생각 할 수 있을 것이다. 우선 <span class="math inline">\(I = \{i_G\}\)</span> 는 conjugacy class 이므로</p>
+<p><span class="math display">\[
+k(I)k(I) = I
+\]</span></p>
+<p>이다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_frobenius_algebra_1" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.11</strong></span> 군 <span class="math inline">\(G\)</span> 의 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(g\in G\)</span>, <span class="math inline">\(K_1,\, K_2\in K\)</span> 일 때 다음이 성립한다.</p>
+<p><span id="eq-Group_frobenius_algebra_invariance"><span class="math display">\[
+g^{-1}k(K_1)k(K_2)g = k(K_1)k(K_2).
+\tag{5.27}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(k(K_1)k(K_2)\)</span> 는 다음과 같다.</p>
+<p><span id="eq-Group_frobenius_algebra_multiplication_of_average"><span class="math display">\[
+k(K_1)k(K_2) = \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2.
+\tag{5.28}\]</span></span></p>
+<p><span class="math inline">\(g\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{aligned}
+g^{-1}\left[ k(K_1)k(K_2) \right]g &amp;= \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g^{-1}g_1g_2g \\
+&amp;=\dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} (g^{-1}g_1g)(g^{-1}g_2g) \\
+&amp;=k(K_1)k(K_2)
+\end{aligned}
+\]</span></p>
+<p>이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_frobenius_algebra_2" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.12</strong></span> 군 <span class="math inline">\(G\)</span> 의 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(K_1,\, K_2\in K\)</span> 일 때 다음이 성립한다.</p>
+<p><span id="eq-Group_frobenius_algebra_abelian"><span class="math display">\[
+k(K_1)k(K_2) = k(K_2)k(K_1).
+\tag{5.29}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1\)</span> 임을 보이면 된다. <span class="math display">\[
+\begin{aligned}
+\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 &amp;= \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2g_1^{-1}g_1 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1. \quad \square
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<p><a href="#eq-Group_frobenius_algebra_multiplication_of_average" class="quarto-xref">식&nbsp;<span>5.28</span></a> 로 부터 우리는 <span class="math inline">\(k(K_1)k(K_2)\)</span> 를 <span class="math inline">\(g\in G\)</span> 들의 스칼라곱의 합으로 표현할 수 있다는 것을 안다.</p>
+<p><span class="math display">\[
+k(K_1)k(K_2) = \sum_{g_i\in G} a_i g_i
+\]</span></p>
+<p><span class="math inline">\(g_i,\, g_j\)</span> 가 같은 클래스 <span class="math inline">\(K\)</span> 에 속해있으면 어떤 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(g_i=xg_jx^{-1}\)</span> 이다.</p>
+<p><span class="math display">\[
+xk(K_1)k(K_2)x^{-1} = \sum_{g_i\in G} a_i xg_ix^{-1}
+\]</span></p>
+<p>이므로 같은 클래스에 속한다면 <span class="math inline">\(a_i\)</span> 는 모두 같아야 한다.</p>
+<p>또한 우리는 <a href="group01_introduction.html#prp-Group_properties_on_conjugacy_class" class="quarto-xref">명제&nbsp;<span>4.4</span></a> 에서 conjugacy class <span class="math inline">\(K\)</span> 에 대해 <span class="math inline">\(\overline{K}:=\{g^{-1}:g\in K\}\)</span> 역시 conjugacy class 임을 보였다. 이를 이용하면</p>
+<p><span class="math display">\[
+k(K)k(\overline{K}) = \dfrac{1}{|K|}i_G + \cdots
+\]</span></p>
+<p>임을 안다. 또한 <span class="math inline">\(K'\ne \overline{K}\)</span> 일 경우 <span class="math inline">\(k(K)k(K')\)</span> 은 <span class="math inline">\(i_G\)</span> 항을 갖지 않는다는 것을 안다. 우리는 이로부터</p>
+<p><span class="math display">\[
+k(K_1)k(K_2) = \sum_{K_i \in \mathcal{K}_G} a_K \left(\sum_{g_j \in K_i} g_j\right) = \sum_{K_i\in \mathcal{K}_G}a_K|K| k(K)
+\]</span></p>
+<p>우리는 이로부터 다음 명제가 성립한다는 것을 안다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_frobenius_algebra_3" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.13</strong></span> 군 <span class="math inline">\(G\)</span> 의 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(K_1,\, K_2\in K\)</span> 와 <a href="#eq-Group_frobenius_algebra_averate" class="quarto-xref">식&nbsp;<span>5.26</span></a> 로 정의된 <span class="math inline">\(k(K)\)</span> 그리고 <span class="math inline">\(K\in \mathcal{K}\)</span> 에 대해 <span class="math inline">\(\overline{K}:=\{g^{-1}:g\in K\}\)</span> 라고 할 때 다음이 성립한다. <span id="eq-prp_Grouop_frobenius_algebra_3"><span class="math display">\[
+k(K_1)k(K_2) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)k(K) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; \overline{K})k(\overline{K})
+\tag{5.30}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<p>여기서 <span class="math inline">\(\Gamma (K_1,\,K_2;K)\)</span> 는 주어진 군의 conjugacy class <span class="math inline">\(K_1,\,K_2\)</span> 와 전개하고자 하는 class <span class="math inline">\(K\)</span> 혹은 <span class="math inline">\(\overline{K}\)</span> 에 의해 정해지는 수로 <strong>class 계수 (class coefficients)</strong> 라고 부른다.</p>
+<p><br></p>
+<p>이제 군 <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(K\in \mathcal{K}_G\)</span> 에</p>
+<p><span class="math display">\[
+\mathcal{D}(K) := \dfrac{1}{|K|} \sum_{g\in K}D(g)
+\]</span></p>
+<p>라고 하자. 이 때 임의의 <span class="math inline">\(x\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal{D}(K)
+\]</span></p>
+<p>이며, <a href="#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 에 따라 <span class="math inline">\(\mathcal{D}\)</span> 는 항등행렬의 스칼라배이다. 곱해지는 스칼라값은 <span class="math inline">\(K\)</span> 에 따라 다를 수 있으므로</p>
+<p><span class="math display">\[
+\mathcal{D}(K) = c_K I
+\]</span></p>
+<p>라고 하자.</p>
+<p><span class="math display">\[
+\text{tr}(\mathcal{D}(K))= \dfrac{1}{|K|} \sum_{g\in K}\chi(K) = \chi(K)
+\]</span></p>
+<p>이므로 <span class="math inline">\(c_K\chi(I) = \chi(K)\)</span> 이다. 이제 <a href="#eq-prp_Grouop_frobenius_algebra_3" class="quarto-xref">식&nbsp;<span>5.30</span></a> 으로 부터</p>
+<p><span class="math display">\[
+\mathcal{D}(K_1)\mathcal{D}(K_2) = \sum_{K\in \mathcal{K}_G}\Gamma(K_1,K_2;K) \mathcal{D}(K)
+\]</span></p>
+<p>임을 안다. <span class="math inline">\(\mathcal{D}(K)= \chi(K)/\chi(I) I\)</span> 이므로</p>
+<p><span class="math display">\[
+\chi(K_1)\chi(K_2) = \chi(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi(K)
+\]</span></p>
+<p>이다. 이제 <span class="math inline">\(G\)</span> 에 대한 표현 <span class="math inline">\(D^{(i)}\)</span> 와 이 <span class="math inline">\(D^{(i)}\)</span> 에서의 character <span class="math inline">\(\chi^{(i)}\)</span> 를 생각하면</p>
+<p><span class="math display">\[
+\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \chi^{(i)}(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi^{(i)}(K)
+\]</span></p>
+<p>이다. 위 식을 모든 기약표현에 대해 더하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) &amp;= \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K) \sum_i  \chi^{(i)}(I)\chi^{(i)}(K)
+\end{aligned}
+\]</span></p>
+<p>군에 대한 기약표현에 대해 <span class="math inline">\(K\ne I\)</span> 일 경우 <span class="math inline">\(\chi^{(i)}(K)=0\)</span> 임을 알았다. 따라서,</p>
+<p><span class="math display">\[
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; I) \chi^{(i)}(I)
+\]</span></p>
+<p><br></p>
+</section>
+</section>
 <section id="연습문제-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <br>

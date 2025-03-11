@@ -211,8 +211,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/group/group02_representation_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/group/group03_quantum.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
   </div>
 </li>
       </ul>
@@ -229,13 +235,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -252,19 +258,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -286,10 +292,10 @@ window.Quarto = {
   </ul></li>
   <li><a href="#잉여류와-라그랑쥬-정리" id="toc-잉여류와-라그랑쥬-정리" class="nav-link" data-scroll-target="#잉여류와-라그랑쥬-정리"><span class="header-section-number">4.2</span> 잉여류와 라그랑쥬 정리</a></li>
   <li><a href="#sec-Group_important_groups" id="toc-sec-Group_important_groups" class="nav-link" data-scroll-target="#sec-Group_important_groups"><span class="header-section-number">4.3</span> 중요한 군</a></li>
-  <li><a href="#동형사상과-conjugate-class" id="toc-동형사상과-conjugate-class" class="nav-link" data-scroll-target="#동형사상과-conjugate-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugate Class</a>
+  <li><a href="#동형사상과-conjugacy-class" id="toc-동형사상과-conjugacy-class" class="nav-link" data-scroll-target="#동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</a>
   <ul class="collapse">
   <li><a href="#동형사상" id="toc-동형사상" class="nav-link" data-scroll-target="#동형사상"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
-  <li><a href="#conjugate-class" id="toc-conjugate-class" class="nav-link" data-scroll-target="#conjugate-class"><span class="header-section-number">4.4.2</span> Conjugate Class</a></li>
+  <li><a href="#conjugacy-class" id="toc-conjugacy-class" class="nav-link" data-scroll-target="#conjugacy-class"><span class="header-section-number">4.4.2</span> Conjugacy Class</a></li>
   <li><a href="#몫군" id="toc-몫군" class="nav-link" data-scroll-target="#몫군"><span class="header-section-number">4.4.3</span> 몫군</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
@@ -540,99 +546,37 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </figure>
 </div>
 <p>이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 하며 <span class="math inline">\(C_3\)</span> 행과 <span class="math inline">\(C_2\)</span> 열에는 <span class="math inline">\(C_3C_2 = C_2''\)</span> 가 표현된다.</p>
-<div id="tbl-Group_d3" class="striped hover quarto-float anchored">
+<center>
+<!-- 
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ c|cccccc }
+\hline
+ & $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
+\hline
+$I$ &  $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
+$C_3$ &  $C_3$ & $C_3^2$ & $I$ & $C_2''$ & $C_2$ & $C_2'$ \\
+$C_3^2$ &  $C_3^2$ & $I$ & $C_3$ & $C_2'$ & $C_2''$ & $C_2$ \\
+$C_2$ &  $C_2$ & $C_2'$ & $C_2''$ & $I$ & $C_3$ & $C_3^2$ \\
+$C_2'$ &  $C_2'$ & $C_2''$ & $C_2$ & $C_3^2$ & $I$ & $C_3$ \\
+$C_2''$ &  $C_2''$ & $C_2$ & $C_2'$ & $C_3$ & $C_3^2$ & $I$ \\
+\end{tabular} 
+-->
+<div id="tbl-d3_caylay_table" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;4.1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d3_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.1: <span class="math inline">\(D_3\)</span> Caylay 표
 </figcaption>
-<div aria-describedby="tbl-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(I\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(C_3\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(C_3^2\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(C_2\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(C_2'\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(C_2''\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2''\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_2'\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(C_3^2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(I\)</span></td>
-</tr>
-</tbody>
-</table>
+<div aria-describedby="tbl-d3_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D3_multiplication_table.png" class="img-fluid figure-img" width="300">
 </div>
 </figure>
 </div>
+</center>
 <p><br></p>
 <p>이 군은 여러가지 이름으로 불리지만 대표적으로 <span class="math inline">\(D_3\)</span> 라고 불린다. <span class="math inline">\(D\)</span> 는 <strong>dihedral</strong> 의 두문자이며 보통 주 대칭축에 수직인 평면에 <span class="math inline">\(\pi\)</span> 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, <span class="math inline">\(C_2,\,C_2',\,C_2''\)</span> 축이 주 대칭축과 수직한 <span class="math inline">\(\pi\)</span> 회전 대칭축이다. .</p>
 </div>
 </div>
 <p><br></p>
-<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_rearrangement_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 4.2 (Group rearrangement theorem)</strong></span> 위에서 설명한 Caylay 테이블에서 제목행과 제목열을 제외한 테이블 내용에 대해 각 행과 각 열에서는 모든 군의 원소가 단 한번씩만 나온다.</p>
@@ -654,99 +598,38 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <div id="exm-Group_viergrouppe" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.8 (Vierergrouppe)</strong></span> <br></p>
 <p>4 원소로 아래의 연산 규칙을 만족하는 군을 클라인 4원군(Keine 4 group) 혹은 <strong>Vierergrouppe</strong> 라고 한다. 아래 표현에서 <span class="math inline">\(e\)</span> 는 항등원이다.</p>
-<table align="center" style="width:50%">
-<tbody><tr style="text-align:center ;background-color: #D8D8D8">
-<th>
-</th>
-<th>
-<span class="math inline">\(e\)</span>
-</th>
-<th>
-<span class="math inline">\(a\)</span>
-</th>
-<th>
-<span class="math inline">\(b\)</span>
-</th>
-<th>
-<span class="math inline">\(ab\)</span>
-</th>
-</tr>
-<tr style="text-align:center">
-<td>
-<span class="math inline">\(e\)</span>
-</td>
-<td>
-<span class="math inline">\(e\)</span>
-</td>
-<td>
-<span class="math inline">\(a\)</span>
-</td>
-<td>
-<span class="math inline">\(b\)</span>
-</td>
-<td>
-<span class="math inline">\(ab\)</span>
-</td>
-</tr>
-<tr style="text-align:center">
-<td>
-<span class="math inline">\(a\)</span>
-</td>
-<td>
-<span class="math inline">\(a\)</span>
-</td>
-<td>
-<span class="math inline">\(e\)</span>
-</td>
-<td>
-<span class="math inline">\(ab\)</span>
-</td>
-<td>
-<span class="math inline">\(b\)</span>
-</td>
-</tr>
-<tr style="text-align:center">
-<td>
-<span class="math inline">\(b\)</span>
-</td>
-<td>
-<span class="math inline">\(b\)</span>
-</td>
-<td>
-<span class="math inline">\(ab\)</span>
-</td>
-<td>
-<span class="math inline">\(e\)</span>
-</td>
-<td>
-<span class="math inline">\(a\)</span>
-</td>
-</tr>
-<tr style="text-align:center">
-<td>
-<span class="math inline">\(ab\)</span>
-</td>
-<td>
-<span class="math inline">\(ab\)</span>
-</td>
-<td>
-<span class="math inline">\(a\)</span>
-</td>
-<td>
-<span class="math inline">\(b\)</span>
-</td>
-<td>
-<span class="math inline">\(e\)</span>
-</td>
-</tr>
-</tbody></table>
+<center>
+<!-- 
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{ c|cccc }
+\hline
+ & $e$ & $a$ & $b$ & $ab$ \\
+\hline
+$e$ & $e$ & $a$ & $b$ & $ab$ \\
+$a$ & $a$ & $e$ & $ab$ & $b$ \\
+$b$ & $b$ & $ab$ & $e$ & $a$ \\
+$ab$ & $ab$ & $a$ & $b$ & $e$ \\
+\end{tabular} 
+-->
+<div id="tbl-viergrouppe_caylay_table" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-viergrouppe_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.2: Viergrouppe Caylay 표
+</figcaption>
+<div aria-describedby="tbl-viergrouppe_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/viergrouppe_caylay_table.png" class="img-fluid figure-img" width="200">
+</div>
+</figure>
+</div>
+</center>
 </div>
 </div>
 <p><br></p>
 <p><br></p>
 </section>
-<section id="동형사상과-conjugate-class" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugate-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugate Class</h2>
+<section id="동형사상과-conjugacy-class" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</h2>
 <section id="동형사상" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="동형사상"><span class="header-section-number">4.4.1</span> 동형사상</h3>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -841,8 +724,8 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 <p><br></p>
 </section>
-<section id="conjugate-class" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="conjugate-class"><span class="header-section-number">4.4.2</span> Conjugate Class</h3>
+<section id="conjugacy-class" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="conjugacy-class"><span class="header-section-number">4.4.2</span> Conjugacy Class</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -854,14 +737,14 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(x \sim x\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x \sim y \implies y \sim x\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(x \sim y,\, y \sim z \implies x \sim z\)</span>.</p>
-<p><span class="math inline">\(x\in X\)</span> 에 대해 <span class="math inline">\([x]=\{y\in X : y \sim x\}\)</span> 를 <span class="math inline">\(x\)</span> 에 대한 <strong>동치류(equivalent class)</strong> 라고 한다.</p>
+<p><span class="math inline">\(x\in X\)</span> 에 대해 <span class="math inline">\([x]=\{y\in X : y \sim x\}\)</span> 를 <span class="math inline">\(x\)</span> 에 대한 <strong>동치류(equivalece class)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-Group_equivalent_class" class="theorem">
+<div id="thm-Group_equivalency_class" class="theorem">
 <p><span class="theorem-title"><strong>정리 4.4</strong></span> 집합 <span class="math inline">\(X\)</span> 에 어떤 동치관계 <span class="math inline">\(\sim\)</span> 이 정의되면 집합 <span class="math inline">\(X\)</span> 는 성분의 동치류들로 분할된다. 즉,</p>
 <p> (<span class="math inline">\(1\)</span>) 모든 <span class="math inline">\(x\in X\)</span> 는 어떤 동치류에 포함된다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x,\,y \in X\)</span> 일 때 <span class="math inline">\([x]\)</span> 와 <span class="math inline">\([y]\)</span> 는 같거나 서로소이다.</p>
@@ -881,15 +764,15 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-Group_conjugate" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.8 (Conjugate, Conjugate Class)</strong></span> 군 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\(\exists g\in G,\, gag^{-1}=b\)</span> 일 때 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 는 서로 conjugate 라고 한다. 어떤 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(\{gag^{-1}:g\in G\}\)</span> 를 <span class="math inline">\(a\)</span> 에 의한 <strong>conjugate class</strong> 라고 한다.</p>
+<div id="def-Group_conjugacy_class" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.8 (Conjugate, Conjugacy Class)</strong></span> 군 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\(\exists g\in G,\, gag^{-1}=b\)</span> 일 때 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 는 서로 conjugate 라고 한다. 어떤 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(\{gag^{-1}:g\in G\}\)</span> 를 <span class="math inline">\(a\)</span> 에 의한 <strong>conjugacy class</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-Group_conjugate_and_equivalent_class" class="theorem">
+<div id="thm-Group_conjugacy_and_equivalence_class" class="theorem">
 <p><span class="theorem-title"><strong>정리 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 conjugate 인 것은 동치관계이다.</p>
 </div>
 </div>
@@ -900,22 +783,24 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p><br></p>
 <p>이로부터 다음 결론은 자연스럽다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="cor-Group_conjugate_and_equivalent_class" class="theorem corollary">
+<div id="cor-Group_conjugacy_and_equivalent_class" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 4.2</strong></span> 군 <span class="math inline">\(G\)</span> 는 conjugate 관계에 의해 분할된다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-Group_properties_on_conjugate_class" class="theorem proposition">
+<div id="prp-Group_properties_on_conjugacy_class" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 4.4</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 다음이 성립한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 항등원 <span class="math inline">\(i_G\)</span> 에 대해 <span class="math inline">\(\{i_G\}\)</span> 는 conjugate class 이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 가 아벨군이면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g\}\)</span> 는 conjugate class 이다.</p>
+<p> (<span class="math inline">\(1\)</span>) 항등원 <span class="math inline">\(i_G\)</span> 에 대해 <span class="math inline">\(\{i_G\}\)</span> 는 conjugacy class 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 가 아벨군이면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g\}\)</span> 는 conjugacy class 이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1} = \{ghg^{-1}: h\in H\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 conjugacy class 일 때 <span class="math inline">\(\overline{K} = \{g^{-1}: g\in K\}\)</span> 도 conjugacy class 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 자명하며 (<span class="math inline">\(3\)</span>) 은 <a href="#exr-Arfken_17_1_4" class="quarto-xref">연습문제&nbsp;<span>4.3</span></a></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 자명하며 (<span class="math inline">\(3\)</span>) 은 <a href="#exr-Arfken_17_1_4" class="quarto-xref">연습문제&nbsp;<span>4.3</span></a> 로 넘긴다.</p>
+<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(g\in K\)</span> 이면 <span class="math inline">\(g^{-1}\in \overline{K}\)</span> 이다. <span class="math inline">\((xgx^{-1})^{-1}=xg^{-1}x^{-1}\)</span> 이므로 <span class="math inline">\(g' \sim g \implies g'^{-1} \sim g^{-1}\)</span> 이다. 따라서 <span class="math inline">\(\overline{K}\)</span> 도 conjugacy class 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -925,7 +810,7 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 <div class="callout-body-container">
 <div id="def-Group_conjugate_subgroup" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.9 (Conjugate, Conjugate Class)</strong></span> <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1}\)</span> 는 <span class="math inline">\(H\)</span> 에 의한 <strong>conjugate subgroup</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.9 (Conjugate subgroup)</strong></span> <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1}\)</span> 는 <span class="math inline">\(H\)</span> 에 의한 <strong>conjugate subgroup</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1020,7 +905,7 @@ g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.3 (Arfken 17.1.4)</strong></span> <br></p>
-<p><a href="#prp-Group_properties_on_conjugate_class" class="quarto-xref">명제&nbsp;<span>4.4</span></a> (<span class="math inline">\(3\)</span>) 를 증명하라.</p>
+<p><a href="#prp-Group_properties_on_conjugacy_class" class="quarto-xref">명제&nbsp;<span>4.4</span></a> (<span class="math inline">\(3\)</span>) 를 증명하라.</p>
 </div>
 </div>
 <p><br></p>
