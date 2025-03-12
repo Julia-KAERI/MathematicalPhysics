@@ -633,7 +633,7 @@ $x\in X$ 에 대해 $[x]=\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(e
 
 군 $G$ 에 대해 다음이 성립한다.
 
-&emsp;($1$) 항등원 $i_G$ 에 대해 $\{i_G\}$ 는 conjugacy class 이다.
+&emsp;($1$) 항등원 $i_G$ 에 대해 $E=\{i_G\}$ 는 conjugacy class 이다.
 
 &emsp;($2$) $G$ 가 아벨군이면 모든 $g\in G$ 에 대해 $\{g\}$ 는 conjugacy class 이다.
 

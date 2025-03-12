@@ -11,6 +11,28 @@ crossref:
 
 </br>
 
-## 군의 표현
+앞서 우리는 군의 표현과 character 에 대해 많은 것을 증명했다. 이제 여기에 중요한 것을 요약하고자 한다.
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+유한군 $G$ 의 모든 동등하지 않은 기약표현 $D^{(1)},\ldots,\,D^{(N_R)}$ 와 conjugace class 의 집합 $\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}$ 를 생각하자. $D^{(i)}$ 에 대한 character 를 $\chi^{(i)}$ 라고 하고 $D^{(i)}$ 는 $d_i$ 차원 기약표현이라고 하자. $D^{(i)}$ 와 동등한 유니타리 표현을 $U^{(i)}$ 라고 하자. 이 때 다음이 성립한다.
+
+
+&emsp;($1$) $\displaystyle\sum_{i} {d_i}^2 = |G|$,
+
+&emsp;($2$) $N_C=N_R$,
+
+&emsp;($3$) **위대한 직교 정리** $\displaystyle \sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.$
+
+&emsp;($4$) **유니타리 표현에 대한 위대한 직교 정리** $\displaystyle \sum_{g\in G} {\left[U^{(i)}(g)\right]^\dagger} _{\mu \nu}U^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}$. 
+
+&emsp;($5$) **제 1 character 직교 정리** $\displaystyle \sum_{K\in \mathcal{K}_G} |K| \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}$
+
+&emsp;($6$) **제 2 character 직교 정리** $\displaystyle \sum_{i} (\chi^{(i)}(K_i))^\ast\chi^{(j)}(K_j) = \dfrac{|G|}{|K_i|}\delta_{K_i,K_j}$ 
+
+</div>
+
+</br>
+
+#### $A_3$
 

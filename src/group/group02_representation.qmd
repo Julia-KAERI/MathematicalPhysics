@@ -214,12 +214,23 @@ $$
 ::: {#def-Group_character_of_class}
 #### Character
 
-군 $G$ 에 주어진 행렬표현 $D^{(r)}$ 에 대해 클래스 $K$ 에 대한 행렬의 trace 를 이 클래스의 **character** 라고 하고 $\chi^{(r)}(K)$ 라고 쓴다. 
+군 $G$ 에 주어진 행렬표현 $D^{(r)}$ 에 대해 $g\in G$ 일 때 $\text{tr}(D^{(r)}(g))$ 를 $g$ 에 대한 표현 $r$ 에서의 **character** 라고 하고 $\chi^{(r)}(g)$ 라고 표기한다. 클래스 $K$ 에 대한 행렬의 trace 를 이 클래스의 **character** 라고 하고 $\chi^{(r)}(K)$ 라고 표기한다.
 
 :::
 :::
 
 </br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exm-Group_character_of_identity}
+
+$E=\{i_G\}$ 는 자체로 conjugacy class 이다. $d\times d$ 행렬 표현 $D$ 에 대한 character $\chi$ 에 대해 $\chi(i_G)= \chi(E)=d$ 이다.
+
+:::
+</div>
+</br>
+
 
 #### **동등한 표현**
 
@@ -257,7 +268,7 @@ $$
 
 </br>
 
-선형대수에서 행렬 $M$ 을 어떤 가역행렬 $S$ 에 대해 $SMS^{-1}$ 로 변환시키는 것을 **닮을 변환(similarity transform)** 이라고 하며 동일한 선형사상을 다른 기저에서 표현하는 것이라고 볼 수 있다. 마찬가지로 어떤 표현에 대한 닮음 변환은 두 변환이 본질적으로 같다는 의미이다. 따라서 두 표현에 동등하다는 이름을 붙일 수 있다.
+선형대수에서 행렬 $M$ 을 어떤 가역행렬 $S$ 에 대해 $SMS^{-1}$ 로 변환시키는 것을 **닮음 변환(similarity transform)** 이라고 하며 동일한 선형사상을 다른 기저에서 표현하는 것이라고 볼 수 있다. 마찬가지로 어떤 표현에 대한 닮음 변환은 두 변환이 본질적으로 같다는 의미이다. 따라서 두 표현에 동등하다는 이름을 붙일 수 있다.
 
 </br>
 
@@ -347,15 +358,15 @@ $$ {#eq-Group-direct_sum_of_representation}
 
 </br>
 
-#### **유니타리 정리**
+#### **유니타리 표현 정리**
 
 유니타리 행렬은 $U^\dagger U = UU^\dagger = I$, 즉 $U^{-1}=U^\dagger$ 라는 아주 좋은 성질을 가지고 있다. 그리고 유한군의 표현은 어떤 유니타리 표현과 동등하다. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-Group_unitary_theorem}
-#### Unitary theorem
+::: {#thm-Group_unitary_representation_theorem}
+#### 유니타리 표현 정리
 유한군에 대한 표현은 어떤 유니타리 표현과 동등하다.
 
 :::
@@ -427,8 +438,8 @@ $$
 
 </br>
 
-유한군에 대해서 중요한 것을 증명했다. 당연한 질문 연속군에 대해서는? 예를 들어 $SO(n)$ 은 자체로서 유니타리 표현이다. 그렇다면 로렌츠 군이나 @exm-Group_matrix_representation_of_Rplus 에서 보인 $\R^+$ 에 대한 $2\times 2$ 표현은 어떠한가? 나중에 보이겠지만 유니타리 표현이 존재하는 것은 연속 매개변수의 컴팩트성과 관련이 있다. 결론적으로 로렌츠 군이나 $\R^+$ 에 대한 표현에 대한 유니타리 표현은 존재하지 않는다.
 
+유한군에 대해서 중요한 것을 증명했다. 당연한 질문 연속군에 대해서는? 예를 들어 $SO(n)$ 은 자체로서 유니타리 표현이다. 그렇다면 로렌츠 군이나 @exm-Group_matrix_representation_of_Rplus 에서 보인 $\R^+$ 에 대한 $2\times 2$ 표현은 어떠한가? 나중에 보이겠지만 유니타리 표현이 존재하는 것은 연속 매개변수의 컴팩트성과 관련이 있다. 결론적으로 로렌츠 군이나 $\R^+$ 에 대한 표현에 대한 유니타리 표현은 존재하지 않는다.
 
 </br>
 
@@ -584,7 +595,7 @@ $$
 U(\varphi) = \begin{bmatrix} \cos \varphi & \sin \varphi \\ - \sin \varphi & \cos \varphi \end{bmatrix}
 $$
 
-로 표현 할 수 있다. 이 군은 아벨군이므로 @prp-Group_representation_of_abelian 에 따라 위의 표현은 reducible 하다. 유니타리 행렬 $V$ 
+로 표현 할 수 있다. 이 군은 아벨군이므로 @cor-Group_representation_of_abelian 에 따라 위의 표현은 reducible 하다. 유니타리 행렬 $V$ 
 
 $$
 V= \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 & -i \\ 1 & i\end{bmatrix}
@@ -781,7 +792,7 @@ $D$ 가 군 $G$ 의 기약표현이고 $H$ 가 에르미트 행렬일 때 모든
 
 ::: {.proof}
 
-$D$ 의 유니타리 표현 $U$ 에 대해 우선 생각하자(@thm-Group_unitary_theorem). $U$ 역시 당연히 기약 표현이다. $U(g)H=HU(g)$ 이며 $H$ 는 어떤 유니타리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 $X$ 라고 하고 $H=V^{-1}XV$ 이라고 하자. 
+$D$ 의 유니타리 표현 $U$ 에 대해 우선 생각하자(@thm-Group_unitary_representation_theorem). $U$ 역시 당연히 기약 표현이다. $U(g)H=HU(g)$ 이며 $H$ 는 어떤 유니타리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 $X$ 라고 하고 $H=V^{-1}XV$ 이라고 하자. 
 
 $$
 \begin{aligned}
@@ -1105,21 +1116,53 @@ $$
 }
 $${#eq-Group_inequality_from_GTO}
 
-실제로는 등호가 성립하며 이것은 뒤에 보일것이다.
+실제로는 등호가 성립하며 이것은 뒤에(@prp-Group_regular_representation_is_not_irreducible_3) 보일것이다.
 
 </br>
+
+## Character 의 제 1직교 정리
 
 ### Character 직교성
 
-@prp-Group_character_of_class, @prp-Group_equivalent_representation_and_character 를 다시 확인하자.
+@prp-Group_character_of_class, @prp-Group_equivalent_representation_and_character 를 다시 확인하자. 
 
-</br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-Group_orthogonality_of_character_1}
+::: {#prp-Group_basic_properties_of_character}
 
-군 $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 다음이 성립한다.
+유한군 $G$ 의 equivalency class 의 집합 $\mathcal{K}_G$, $G$ 에 대한 표현 $D$ 와 그 character $\chi$ 에 대해 다음이 성립한다.
+
+&emsp;($1$) $D'$ 이 $D$ 와 동등한 표현이고 $D'$ 표현에서의 character 를 $\chi'$ 이라고 할 때 $\chi(g) = \chi'(g)$, 
+
+&emsp;($2$) $\forall g\in G,\, \chi (g^{-1}) = \chi(g)^\ast$, 
+
+&emsp;($3$) $K\in \mathcal{K}_G$ 일 때 $\forall g_1,\, g_2\in K,\, \chi(g_1)= \chi(g_2)$, 
+
+&emsp;($4$) $D$ 가 $d \times d$ 행렬 표현일 때 $\chi(i_G) = d$.
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+
+($1$) 어떤 가역행렬 $P$ 에 대해 $D'(g) = P^{-1}D(g)P$ 이다.
+
+($2$) @thm-Group_unitary_representation_theorem 과 ($1$).
+
+($3$), ($4$) 는 trivial. $\square$
+
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_orthogonality_of_character_over_element}
+
+유한군 $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 다음이 성립한다.
 
 $$
 \sum_{g\in G} \left(\chi^{(i)}(g)\right)^\ast\chi^{(j)}(g) = |G|\delta_{ij}
@@ -1149,15 +1192,15 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-Group_orthogonality_of_character_2}
+::: {#thm-Group_first_orthogonality_of_character}
 
-#### Character 의 직교 정리
+#### Character 의 제1 직교 정리
 
-군 $G$ 를 분할하는 class $\mathcal{K}_G=\{K_i\}$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $n(K)$ 를 $K$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
+유한군 $G$ 에 대해 $G$ 를 분할하는 conjugacy class $\mathcal{K}_G$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $|K|$ 를 $K$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
 
 $$
-\sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K\in \mathcal{K}_G} n(K) \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}
-$$ {#eq-Group_orthogonality_of_character_2}
+\sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K\in \mathcal{K}_G} |K| \left(\chi^{(i)}(K)\right)^\ast\chi^{(j)}(K) = |G|\delta_{ij}
+$$ {#eq-Group_first_orthogonality_of_character}
 
 :::
 
@@ -1171,7 +1214,7 @@ $$
 X_i := \sum_{j=1}^{N_C} \dfrac{\sqrt{n(K_j)}}{|G|} \hat{\bf{e}}_j = \begin{bmatrix} \dfrac{\sqrt{n(K_1)}}{|G|} \chi^{(i)}(K_1) \\ \vdots \\ \dfrac{\sqrt{n(K_{N_C})}}{|G|} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
 $$
 
-복소 벡터 공간의 내적의 정의와 @thm-Group_orthogonality_of_character_2 의해 $\langle X_j|X_i\rangle = \delta_{ij}$ 이다. 즉 $X_1,\ldots,\,X_{N_R}$ 은 서로 직교하는 단위벡터이다. 그런데 우리는 $\C^{N_C}$ 에서 서로 직교하는 벡터의 갯수는 $N_C$ 보다 작거나 같아야 한다는 것을 안다. 즉
+복소 벡터 공간의 내적의 정의와 @thm-Group_first_orthogonality_of_character 의해 $\langle X_j|X_i\rangle = \delta_{ij}$ 이다. 즉 $X_1,\ldots,\,X_{N_R}$ 은 서로 직교하는 단위벡터이다. 그런데 우리는 $\C^{N_C}$ 에서 서로 직교하는 벡터의 갯수는 $N_C$ 보다 작거나 같아야 한다는 것을 안다. 즉
 
 $$
 \boxed{
@@ -1180,6 +1223,49 @@ $$
 $$ {#eq-Group_inequality_from_orthogonality_of_character_theorem}
 
 임을 알 수 있다. 뒤에 보겠지만 실제로 두 값은 같다.
+
+</br>
+<!-- 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_first_orthogonality_of_character}
+
+#### Character 의 제2 직교 정리
+
+유한군 $G$ 에 대해 $G$ 를 분할하는 conjugacy class $\mathcal{K}_G$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K\in \mathcal{K}_G$ 에 대해 $|K|$ 를 $K$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
+
+
+$$
+\sum_{i} (\chi^{(i)}(K_1))^\ast\chi^{(j)}(K_2) = \dfrac{|G|}{|K_1|}\delta_{K_1,K_2}
+$$ {#eq-Group_second_orthogonality_of_character}
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+군 $G$ 의 conjugacy class 의 개수 $N_C$ 와 기약표현의 개수 $N_R$ 에 대해 $N_R \times N_C$ 행렬 $Q$ 와 $N_C \times N_R$ 행렬 $Q'$ 를 다음과 같이 정의한다. 
+
+$$
+Q = \begin{bmatrix} \chi^{(1)}(K_1) & \cdots & \chi^{(1)}(K_{N_C}) \\ \vdots & \ddots & \vdots \\ \chi^{(N_R)}(K_1) & \cdots & \chi^{N_R}(K_{N_C}) \end{bmatrix},
+$$
+
+$$
+Q' = \dfrac{1}{|G|}\begin{bmatrix} |K_1| \left(\chi^{(1)}(K_1)\right)^\ast & \cdots & |K_1| \left(\chi^{(N_R)}(K_1)\right)^\ast  \\ \vdots & \ddots & \vdots \\ |K_{N_C}| \left(\chi^{(1)}(K_{N_C})\right)^\ast & \cdots & |K_1| \left(\chi^{(N_R)}(K_{N_C})\right)^\ast\end{bmatrix}.
+$$
+
+그렇다면
+
+$$
+(QQ')_{ij} = \sum_k \dfrac{|K_k|\chi^{i}(K_k)  \left(\chi^{(j)}(K_k)\right)^\ast}{|G|} = \delta_{ij}
+$$
+
+이다. 즉 $QQ'=I_{N_R}$ 이며, 
+
+
+::: -->
+
 
 </br>
 
@@ -1257,7 +1343,7 @@ $$ {#eq-Group_reducibility_check}
 </br>
 
 ::: {.proof}
-@eq-Group_orthogonality_of_character_2 를 이용하면 다음을 얻는다.
+@eq-Group_first_orthogonality_of_character 를 이용하면 다음을 얻는다.
 
 $$
 \begin{aligned}
@@ -1361,7 +1447,7 @@ $$
 
 ::: {.proof}
 
-$D^{(\text{reg})}(g)$ 는 각 행, 각 열마다 하나의 $1$ 을 제외한 모든 성분이 $0$ 이다. $i$ 행의 대각성분이 $1$ 이려면 $g^{-1}g_i = g_i$ 이어야 하므로 $g=i_G$ 이어야 한다. 즉 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 어떤 대각 성분도 $1$ 이 아니다. 따라서 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 모든 대각 성분은 $0$ 이다.
+$D^{(\text{reg})}(g)$ 는 각 행, 각 열마다 하나의 $1$ 을 제외한 모든 성분이 $0$ 이다. $i$ 행의 대각성분이 $1$ 이려면 $g^{-1}g_i = g_i$ 이어야 하므로 $g=i_G$ 이어야 한다. 즉 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 어떤 대각 성분도 $1$ 이 아니다. 따라서 $g\ne i_G$ 이면 $D^{(\text{reg})}(g)$ 의 모든 대각 성분은 $0$ 이다. $\square$
 
 :::
 
@@ -1378,7 +1464,7 @@ $|G|>1$ 인 유한군 $G$ 의 정칙표현은 reducible 하다.
 
 ::: {.proof}
 
-$\sum_{K\in \mathcal{K}_G} n(K) \left(\chi(K)\right)^\ast\chi(K) = |G|^2$ 이므로 @eq-Group_reducibility_check 로부터 $|G|^2 = |G|\sum (m_r)^2$ 이다. 즉 $\sum(m_r)^2=|G| \ne 1$ 이므로 정칙표현은 irreducible 하다.
+$\sum_{K\in \mathcal{K}_G} n(K) \left(\chi(K)\right)^\ast\chi(K) = |G|^2$ 이므로 @eq-Group_reducibility_check 로부터 $|G|^2 = |G|\sum (m_r)^2$ 이다. 즉 $\sum(m_r)^2=|G| \ne 1$ 이므로 정칙표현은 irreducible 하다. $\square$
 
 :::
 
@@ -1402,12 +1488,12 @@ $$
 \sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi^{(\text{reg})}(K)
 $$ {#eq-prp-Group_regular_representation_is_not_irreducible_2_1}
 
-을 생각하자. $\chi^{(\text{reg})}(K)$ 는 $K=\{i_G\}$ 를 제외하면 $0$ 이며 따라서,
+을 생각하자. $\chi^{(\text{reg})}(K)$ 는 $K=E:=\{i_G\}$ 를 제외하면 $0$ 이며 따라서,
 $$
-\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi(K) = \left(\chi^{(r)}(\{i_G\}\right)\chi(\{i_G\}) = d_r |G| > 0
+\sum_{K\in \mathcal{K}_G}n(K)\left(\chi^{(r)}(K)\right)^\ast \chi(K) = \left(\chi^{(r)}(E)\right)\chi(E) = d_r |G| > 0
 $$
 
-이다. 만약 $D^{(r)}$ 과 동등한 어떤 표현도 $D^{(\text{reg})}$ 에 포함되어 있지 않다고 하자. @thm-Group_orthogonality_of_character_2 로부터 @eq-prp-Group_regular_representation_is_not_irreducible_2_1 는 $0$ 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. @eq-Group_multiplicity_check_2 로 부터 $d_r|G|=m_r|G|$ 이므로 $d_r =m_r$ 이다. $\square$
+이다. 만약 $D^{(r)}$ 과 동등한 어떤 표현도 $D^{(\text{reg})}$ 에 포함되어 있지 않다고 하자. @thm-Group_first_orthogonality_of_character 로부터 @eq-prp-Group_regular_representation_is_not_irreducible_2_1 는 $0$ 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. @eq-Group_multiplicity_check_2 로 부터 $d_r|G|=m_r|G|$ 이므로 $d_r =m_r$ 이다. $\square$
 
 :::
 
@@ -1438,21 +1524,54 @@ $D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이다. 여기에 포함되는 블�
 
 </br>
 
-### 기약표현의 개수와 Conjugacy Class 의 개수는 같다.
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugacy class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. $N_C=N_R$ 을 보이는 것은 뒤로 넘기고 일단 사용하기로 하자.
+::: {#exr-Group_regular_expression_1}
+
+유한군 $G$ 에 대한 정칙 표현 $D^{(\text{reg})}$ 에서의 character $\chi^{(\text{reg})}$, 정칙 표현에 포함된 기약표현 $D^{(i)},\, i=1,2,\ldots$ 와 각 기약 표현에 대한 character $\chi^{(i)}$, 그리고 $E =\{i_G\}$ 에 대해 다음이 성립함을 보여라.
+
+$$
+|G|=\chi^{(\text{reg})}(E) = \sum_i (\chi^{(i)}(E))^2
+$$ {#eq-exr_Group_regular_expression_1}
+
+:::
+
+</div>
+
+</br>
+
+::: {.solution}
+
+정칙 표현은 $|G| \times |G|$ 행렬 표현이며 $D^{(\text{reg})}(I)$ 는 $|G|\times |G|$ 단위행렬이므로 $|G|=\chi^{(\text{reg})}(I)$ 이다. $D^{(i)}$ 가 $d_i$ 차원 일 때 $D^{(\text{reg})}$ 에는 $D^{(i)}$ 가 $d_i$ 번 포함되어 있으므로 $\chi^{(\text{reg})}(E)= \sum_i d_i \chi^{(i)}(E)$ 이며 $d_i = \chi^{(i)}(E)$ 이므로 두번째 등식이 성립한다.
+
+:::
+
+</br>
+
+## Character 의 제 2 직교 정리
+
+
+유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugacy class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. 이것을 증명하는 것은 다소 길고 다양한 개념들이 등장한다. 일단 아래의 character 의 제 2 직교 정리를 증명하고자 한다.
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-Group_number_of_irreducible_representation_and_class}
+::: {#thm-Group_second_orthogonality_of_character}
 
-유한군 $G$ 의 기약 표현의 개수와 conjugacy class 의 개수는 같다.
+#### Character 의 제 2 직교 정리
+
+군 $G$ 의 기약 표현 $D^{(i)}$ 과 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. $K_1,\,K_2$ 가 conjugacy class of $G$ 이고 $\chi^(i)$ 가 $D^{(i)}$ 에서의 character 일 때 다음이 성립한다.
+
+
+$$
+\sum_i \left(\chi^{(i)}(K_1)\right)^\ast\chi^{(i)}(K_2) = \dfrac{|G|}{|K_1|} \delta_{\overline{K_1},\, K_2}.
+$$ {#eq-thm_Group_second_orthogonality_of_character}
 
 :::
 
 </div></br>
 
-#### **프로베니우스 대수**
+### 프로베니우스 대수
 
 군의 연산은 일반적으로 곱이라고 생각하며 곱으로 정의된 연산에는 합이 정의되지 않는다. 그러나 수학자들은 군의 한계를 벗어나는 구조를 생각해냈다.
 
@@ -1460,7 +1579,7 @@ $D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이다. 여기에 포함되는 블�
 ::: {#def-Group_frobenius_algebra}
 #### 군의 프로베니우스 대수
 
-군 $(G,\,\cdot)$ 과 체 $\F$ 에 대해 $a_i,\, b_i\in \F,\, g_i\in G$ 일 때 다음의 두 조건을 만족하는 $\{\sum_i a_ig_i: a_i\in \F,\, g_i\in G\}$ 를 군 $G$ 에 대한 프로비니우스 대수라고 한다.
+군 $(G,\,\cdot)$ 과 체 $\F$ 에 대해 $a_i,\, b_i\in \F,\, g_i\in G$ 일 때 다음의 두 조건을 만족하는 $\left\{\sum_i a_ig_i: a_i\in \F,\, g_i\in G\right\}$ 를 군 $G$ 에 대한 프로비니우스 대수라고 한다.
 
 &emsp;($1$) $\displaystyle \sum_i a_ig_i + \sum_j b_i g_i = (a_i+b_i)g_i$, 
 
@@ -1472,17 +1591,17 @@ $D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이다. 여기에 포함되는 블�
 
 </br>
 
-군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. 그렇다면 $K\in \mathcal{K}_G$ 에 대해
+$\mathcal{K}_G$ 에서 정의된 함수 $k$ 를 다음과 같이 정의하자. 
 
 $$
-k(K):= \dfrac{1}{|K|} \sum_{g_i\in K}g_i
+k(K):= \dfrac{1}{|K|} \sum_{g_i\in K}g_i.
 $$ {#eq-Group_frobenius_algebra_averate}
 
-는 $K\in \mathcal{K}_G$ 에 속하는 $G$ 의 원소들의 평균이라고 생각 할 수 있을 것이다. 우선 $I = \{i_G\}$ 는 conjugacy class 이므로 
+$k(K)$ 는 $K$ 에 속하는 $G$ 의 원소들의 평균이라고 생각 할 수 있을 것이다. 우선 $E = \{i_G\}$ 는 conjugacy class 이므로 
 
 $$
-k(I)k(I) = I
-$$
+k(E)k(E) = i_G
+$$ {#eq-Group_frobenius_for_group_identity}
 
 이다.
 
@@ -1491,7 +1610,7 @@ $$
 
 ::: {#prp-Group_frobenius_algebra_1}
 
-군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $g\in G$, $K_1,\, K_2\in K$ 일 때 다음이 성립한다.
+$g\in G$, $K_1,\, K_2\in \mathcal{K}_G$ 일 때 다음이 성립한다.
 
 $$
 g^{-1}k(K_1)k(K_2)g = k(K_1)k(K_2).
@@ -1528,7 +1647,7 @@ $$
 
 ::: {#prp-Group_frobenius_algebra_2}
 
-군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 일 때 다음이 성립한다.
+$K_1,\, K_2\in K$ 일 때 다음이 성립한다.
 
 $$
 k(K_1)k(K_2) = k(K_2)k(K_1).
@@ -1552,13 +1671,11 @@ $$
 </br>
 
 
-@eq-Group_frobenius_algebra_multiplication_of_average 로 부터 우리는 $k(K_1)k(K_2)$ 를 $g\in G$ 들의 스칼라곱의 합으로 표현할 수 있다는 것을 안다.
+@eq-Group_frobenius_algebra_multiplication_of_average 로 부터 우리는 $k(K_1)k(K_2)$ 를 $g_i\in G$ 들의 스칼라곱의 합으로 표현할 수 있다는 것을 안다.
 
 $$
 k(K_1)k(K_2) = \sum_{g_i\in G} a_i g_i
 $$
-
-
 
 $g_i,\, g_j$ 가 같은 클래스 $K$ 에 속해있으면 어떤 $x\in G$ 에 대해 $g_i=xg_jx^{-1}$ 이다. 
 
@@ -1566,15 +1683,28 @@ $$
 xk(K_1)k(K_2)x^{-1} = \sum_{g_i\in G} a_i xg_ix^{-1}
 $$
 
-이므로 같은 클래스에 속한다면 $a_i$ 는 모두 같아야 한다. 
+이므로 $g_i\sim g_j$ 이면 $a_i = a_j$ 이어야 한다. 즉 $a_i$ 는 $K_1,\,K_2,\,K$ 에 의해 정해지는 스칼라이다. 이를 **class 계수 (class coefficients)** 라고 부르며 $\Gamma(K_1,K_2;K)$ 라고 표기하자. 이제 다음 명제가 성립한다는 것을 안다.
 
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
+::: {#prp-Group_frobenius_algebra_3}
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 와 @eq-Group_frobenius_algebra_averate 로 정의된 $k(K)$ 그리고 $K\in \mathcal{K}$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 라고 할 때 다음이 성립한다. 
+$$
+k(K_1)k(K_2) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)k(K)
+$$ {#eq-prp_Grouop_frobenius_algebra_3}
+
+:::
+
+</div>
+</br>
 
 또한 우리는 @prp-Group_properties_on_conjugacy_class 에서 conjugacy class $K$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 역시 conjugacy class 임을 보였다. 이를 이용하면
 
 $$
 k(K)k(\overline{K}) = \dfrac{1}{|K|}i_G + \cdots 
-$$
+$$ {#eq-prp_Grouop_frobenius_algebra_4}
 
 임을 안다. 또한 $K'\ne \overline{K}$ 일 경우 $k(K)k(K')$ 은 $i_G$ 항을 갖지 않는다는 것을 안다. 우리는 이로부터 
 
@@ -1583,37 +1713,30 @@ k(K_1)k(K_2) = \sum_{K_i \in \mathcal{K}_G} a_K \left(\sum_{g_j \in K_i} g_j\rig
 $$
 
 
-
-
-
-우리는 이로부터 다음 명제가 성립한다는 것을 안다.
-
+</br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_frobenius_algebra_3}
+::: {#prp-Group_frobenius_algebra_4}
 
-군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 와 @eq-Group_frobenius_algebra_averate 로 정의된 $k(K)$ 그리고 $K\in \mathcal{K}$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 라고 할 때 다음이 성립한다. 
+@prp-Group_frobenius_algebra_3 의 class 계수와 $E=\{i_G\}$ 에 대해 다음이 성립한다.
 $$
-k(K_1)k(K_2) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)k(K) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; \overline{K})k(\overline{K})
-$$ {#eq-prp_Grouop_frobenius_algebra_3}
-
+\begin{gather}
+K_2 \ne \overline{K_1} \implies \Gamma(K_1,\, K_2; E) = 0 . \\
+\end{gather}
+$$ {#eq-Group-class_coefficient_for_identity_class}
 
 :::
 
 </div>
 </br>
 
-여기서 $\Gamma (K_1,\,K_2;K)$ 는 주어진 군의 conjugacy class $K_1,\,K_2$ 와 전개하고자 하는 class $K$ 혹은 $\overline{K}$ 에 의해 정해지는 수로 **class 계수 (class coefficients)** 라고 부른다.
-
-</br>
-
-이제 군 $G$ 의 표현 $D$ 와 $K\in \mathcal{K}_G$ 에
+이제 군 $G$ 의 표현 $D$ 와 $K\in \mathcal{K}_G$ 에 대해 
 
 $$
 \mathcal{D}(K) := \dfrac{1}{|K|} \sum_{g\in K}D(g)
 $$
 
-라고 하자. 이 때 임의의 $x\in G$ 에 대해
+라고 하자. $\{D(g):g\in G\}$ 역시 군이므로 $\mathcal{D}(K) = k(D(g))$ 와 같다. 이 때 임의의 $x\in G$ 에 대해
 
 $$
 D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal{D}(K)
@@ -1631,44 +1754,112 @@ $$
 \text{tr}(\mathcal{D}(K))= \dfrac{1}{|K|} \sum_{g\in K}\chi(K) = \chi(K)
 $$
 
-이므로 $c_K\chi(I) = \chi(K)$ 이다. 이제 @eq-prp_Grouop_frobenius_algebra_3 으로 부터
+이므로 $c_K\chi(E) = \chi(K)$ 이다. 이제 @eq-prp_Grouop_frobenius_algebra_3 으로 부터
 
 $$
 \mathcal{D}(K_1)\mathcal{D}(K_2) = \sum_{K\in \mathcal{K}_G}\Gamma(K_1,K_2;K) \mathcal{D}(K)
 $$
 
-임을 안다. $\mathcal{D}(K)= \chi(K)/\chi(I) I$ 이므로
+임을 안다. $\mathcal{D}(K)= \chi(K)/\chi(E) I$ 이므로
 
 $$
-\chi(K_1)\chi(K_2) = \chi(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi(K)
+\chi(K_1)\chi(K_2) = \chi(E)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi(K)
 $$
 
 이다. 이제 $G$ 에 대한 표현 $D^{(i)}$ 와 이 $D^{(i)}$ 에서의 character $\chi^{(i)}$ 를 생각하면
 
 $$
-\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \chi^{(i)}(I)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi^{(i)}(K)
+\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \chi^{(i)}(E)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi^{(i)}(K)
 $$
 
 이다. 위 식을 모든 기약표현에 대해 더하면
 
 $$
 \begin{aligned}
-\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) &= \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K) \sum_i  \chi^{(i)}(I)\chi^{(i)}(K) 
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) &= \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K) \sum_i  \chi^{(i)}(E)\chi^{(i)}(K).
 \end{aligned}
 $$
 
-군에 대한 기약표현에 대해 $K\ne I$ 일 경우 $\chi^{(i)}(K)=0$ 임을 알았다. 따라서,
+정칙 표현을 다시 생각해보자. $K\ne E$ 일 때 $\chi^{(\text{reg})}=0$ 이며, $\chi^{(\text{reg})}(E) = |G|$ 이고 
 
 $$
-\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; I) \chi^{(i)}(I)
+\chi^{(\text{reg})}(K) = \sum_{i} d_i \chi^{(i)}(K) = \sum_i \chi^{(i)}(E) \chi^{(i)}(K)
+$$
+
+이므로 (@exr-Group_regular_expression_1 )
+
+$$
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \sum_{i}\Gamma (K_1,\, K_2; E) \left(\chi^{(i)}(E)\right)^2 = \Gamma (K_1,\, K_2; E) |G|
+$$
+
+이다. @prp-Group_frobenius_algebra_4 로부터 $K_1 \ne \overline{K_2}$ 이면 $\Gamma(K_1,\,K_2;E)=0$ 임을 안다. 따라서
+
+$$
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; E) |G|\delta_{K_1, \overline{K_2}}
 $$
 
 
+이다. 또한 @prp-Group_basic_properties_of_character 로부터 $\chi^{(i)}(K_1)=(\chi^{(i)}(\overline{K_1}))^\ast$, 즉 $\chi^{(i)}(\overline{K_1}) = (\chi^{(i)}(K_1))^\ast$ 임을 안다. 따라서 
 
+$$
+\sum_i \left(\chi^{(i)}(K_1)\right)^\ast \chi^{(i)}(K_2)= \Gamma (\overline{K_1},K_2;E)|G| \delta_{K_1,K_2}
+$$
 
+이다. @eq-prp_Grouop_frobenius_algebra_4 과 그 부근의 논의로 부터 $\Gamma(\overline{K},\, K'; E)= \dfrac{1}{|K|}\delta_{K,K'}$ 임을 안다. 따라서
+
+$$
+\sum_i \left(\chi^{(i)}(K_1)\right)^\ast\chi^{(i)}(K_2) = \dfrac{|G|}{|K_1|} \delta_{K_1,\, K_2}
+$$
+
+이다. 즉 우리는 Character 의 제 2 직교 정리(@thm-Group_second_orthogonality_of_character) 가 성립한다는 것을 보였다. 
 
 </br>
 
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-Group_equality_of_numbers_of_class_and_irreducible_representation}
+
+유한군 $G$ 의 conjugacy class 의 개수와 서로 동등하지 않은 기약표현의 개수는 같다.
+
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+@eq-thm_Group_second_orthogonality_of_character 를 보자. 기약표현의 개수 $N_R$ 과 conjugacy class 의 개수 $N_C$ 를 생각하자. $\C^{N_R}$ 에서의 벡터
+
+$$
+|Z_{K_j} \rangle =\sqrt{\dfrac{|K_j|}{|G|}}\begin{bmatrix} \chi^{(1)}(K_j) \\ \vdots \\ \chi^{(N_R)}(K_j)\end{bmatrix}
+$$
+
+을 생각하자. @eq-thm_Group_second_orthogonality_of_character 에 의해 $\langle Z_{K_i}| Z_{K_j}\rangle = \delta_{ij}$ 이므로 $|Z_{K_1}\rangle, \ldots,\, |Z_{K_{N_R}}\rangle$ 은 서로 직교하는 벡터이며, 따라서 $N_C \le N_R$ 이다. 우리는 이미 @thm-Group_first_orthogonality_of_character 로부터 $N_R\le N_C$ 임을 보았다. 따라서 $N_C=N_R$ 이다. $\square$
+
+:::
+
+</br>
+
+위의 정리를 이용하여 아벨군에 대해 다음을 보일 수 있다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#cor-Group_representation_of_abelian}
+
+아벨리안 유한군 $G$ 에 대해 가능한 기약 표현은 $1$ 차원 뿐이다.
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+$G$ 가 아벨리안이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 conjugace class 이다. $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
+
+:::
+
+</br>
 
 ### 연습문제 {.unnumbered}
 
@@ -1677,7 +1868,7 @@ $$
 
 ::: {#exr-Group_for_lem-Group_for_GOT}
 
-$m\times n (\text{where } m > n)$ 행렬 $M$ 에 대해 $MM^\dagger = cI_{m}$ 이면 $c=0,\, M=0$ 이다.
+$m\times n$ 행렬 $M$ 이 $MM^\dagger = cI_{m}$ 이라고 하자. $m>n$ 이면 $c=0,\, M=0$ 임을 보여라. $m\le n$ 이면 그렇지 않을 수 있음을 보여라.
 
 :::
 
@@ -1685,7 +1876,9 @@ $m\times n (\text{where } m > n)$ 행렬 $M$ 에 대해 $MM^\dagger = cI_{m}$ �
 
 ::: {.solution}
 
-$\text{rank}(M^\dagger) \le n$ 이므로 $\text{rank}(MM^\dagger)\le n$ 이다. 그런데 $\text{rank}(cI_m)$ 은 $c\ne 0$ 일 경우 $m$ 이며 $m>n$ 이므로 $c=0$ 이다.
+$\text{rank}(M^\dagger) \le n$ 이므로 $\text{rank}(MM^\dagger)\le n$ 이다. 그런데 $c\ne 0$ 에 대해 $\text{rank}(cI_m) = m > n$ 이므로 $c=0$ 이다. $MM^\dagger = 0$ 이므로 $0=(MM^\dagger)_{ii} = \sum_k M_{ik}(M_{ik})^\ast = \sum_k |M_{ik}|^2$ 이다. 즉 $M_{ik}=0$. 
+
+$m\le n$ 일 경우 $M=\begin{bmatrix}I_n & \bf{0}\end{bmatrix}$ 라고 놓으면 $MM^\dagger = I_n$ 이다. 
 
 :::
 
