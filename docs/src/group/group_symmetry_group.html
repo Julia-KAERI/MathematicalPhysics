@@ -314,6 +314,13 @@ window.Quarto = {
   <li><a href="#결정-대칭-연산" id="toc-결정-대칭-연산" class="nav-link active" data-scroll-target="#결정-대칭-연산"><span class="header-section-number">6.1</span> 결정 대칭 연산</a>
   <ul class="collapse">
   <li><a href="#결정학적-점군-구성" id="toc-결정학적-점군-구성" class="nav-link" data-scroll-target="#결정학적-점군-구성"><span class="header-section-number">6.1.1</span> 결정학적 점군 구성</a></li>
+  <li><a href="#schoenflies-표기법" id="toc-schoenflies-표기법" class="nav-link" data-scroll-target="#schoenflies-표기법"><span class="header-section-number">6.1.2</span> Schoenflies 표기법</a></li>
+  </ul></li>
+  <li><a href="#결정학적-점군" id="toc-결정학적-점군" class="nav-link" data-scroll-target="#결정학적-점군"><span class="header-section-number">6.2</span> 결정학적 점군</a>
+  <ul class="collapse">
+  <li><a href="#단순-회전군" id="toc-단순-회전군" class="nav-link" data-scroll-target="#단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</a></li>
+  <li><a href="#고대칭군" id="toc-고대칭군" class="nav-link" data-scroll-target="#고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -363,13 +370,146 @@ window.Quarto = {
 <section id="결정학적-점군-구성" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="결정학적-점군-구성"><span class="header-section-number">6.1.1</span> 결정학적 점군 구성</h3>
 <p>주어진 결정에 대한 점군을 구성하는 것은 보통 다음의 순서로 한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 원점을 지나는 축에 대한 회전 대칭을 파악한다</p>
-<p> (<span class="math inline">\(2\)</span>) 원점을 포함하는 평면에 대한 반사 대칭을 파악한다.</p>
-<p> (<span class="math inline">\(3\)</span>) 반전 대칭, 즉 <span class="math inline">\(\boldsymbol{r}\to- \boldsymbol{r}\)</span> 을 파악한다.</p>
+<p> (<span class="math inline">\(1\)</span>) 원점을 지나는 축에 대한 회전 대칭(rotational symmetry)을 파악한다</p>
+<p> (<span class="math inline">\(2\)</span>) 원점을 포함하는 평면에 대한 거울상 대칭(reflection symmetry)을 파악한다.</p>
+<p> (<span class="math inline">\(3\)</span>) 반전 대칭(inversion symmetry) 을 파악한다.</p>
 <p>반전대칭은 어떤 축에 대해 <span class="math inline">\(\pi\)</span> 만큼 회전시키고, 그 축에 수직인 평면에 대해 반사대칭을 수행한 것과 같다. 그러나 반전대칭이 많이 등장하므로 이 과정에 일단 넣었다.</p>
 <p><br></p>
+<p>이제 연산을 정의하자 <span class="math inline">\(\boldsymbol{n}\)</span> 을 축으로 하는 <span class="math inline">\(\theta\)</span> 만큼의 회전은 <span class="math inline">\(R_\boldsymbol{n}(\theta)\)</span> 라고 하자. <span class="math inline">\(\boldsymbol{n}\)</span> 에 수직이며 원점을 지나는 평면에 대한 반사 연산을 <span class="math inline">\(\sigma_{\boldsymbol{n}}\)</span> 이라고 하자. 반전 연산은 <span class="math inline">\(i\)</span> 라고 하자.</p>
 <p>모든 점군을 파악했다면 이제 Caylay table, 즉 group multiplication table 을 파악해야 한다. 여기에 대해 몇가지 사실이 있다.</p>
-<p>::: {#}</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_properties_of_covering_operations_in_crystal" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.1 (연속 연산 규칙)</strong></span> <br></p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(R_{\boldsymbol{n}_2}(\theta_2) R_{\boldsymbol{n}_1}(\theta_1)= R_{\boldsymbol{n}_3}(\theta_3)\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\sigma_{\boldsymbol{n}_2}\sigma_{\boldsymbol{n}_1}= R_{\boldsymbol{n}_3}(\theta_3)\)</span>. <span class="math inline">\(\boldsymbol{n}_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 과 <span class="math inline">\(\boldsymbol{n}_2\)</span> 에 의해 결정되는 원점을 지나는 평면에 공통되는 직선의 방향이며 <span class="math inline">\(\theta_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 과 <span class="math inline">\(\boldsymbol{n}_2\)</span> 가 이루는 각의 두배이다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\sigma_{\boldsymbol{n}_2}R_{\boldsymbol{n}_1}(\theta_1) = \sigma_{\boldsymbol{n}_3}\)</span>, <span class="math inline">\(\boldsymbol{n}_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 벡터를 포함하는 평면으로 <span class="math inline">\(\boldsymbol{n}_2\)</span> 와 <span class="math inline">\(\theta_2/2\)</span> 만큼의 각을 가진다.</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(R_{\boldsymbol{n}_2}(\pi)R_{\boldsymbol{n}_1}(\pi)= R_{\boldsymbol{n}_3}(\theta_3)\)</span>, <span class="math inline">\(\boldsymbol{n}_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1,\, \boldsymbol{n}_2\)</span> 각각에 수직인 방향이며 <span class="math inline">\(\theta_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1,\, \boldsymbol{n}_2\)</span> 가 이루는 각의 2배이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_commutating_properties_of_covering_operations_in_crystal" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.2 (서로 commute 한 연산)</strong></span> <br></p>
+<p> (<span class="math inline">\(1\)</span>) 같은 축에 대한 두 회전 연산,</p>
+<p> (<span class="math inline">\(2\)</span>) 서로 수직인 방향으로의 두 반사 연산,</p>
+<p> (<span class="math inline">\(3\)</span>) 서로 수직인 축에 대한 <span class="math inline">\(\pi\)</span> 회전,</p>
+<p> (<span class="math inline">\(4\)</span>) 회전연산과 회전축에 대해 수직인 평면으로의 반사 연산,</p>
+<p> (<span class="math inline">\(5\)</span>) 반전과 회전, 반전과 반사.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="schoenflies-표기법" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="schoenflies-표기법"><span class="header-section-number">6.1.2</span> Schoenflies 표기법</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_character_of_class" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 6.1 (Point group 에 대한 Schoenflies 표기법)</strong></span> 각 변환에 대해 대칭이 있을 때 아래와 같이 표기한다. 우선 <strong>주축 (principal axis)</strong> 을 정한다. 주축은 회전에 대해 대칭성이 가장 회전축이다.</p>
+<ul>
+<li><p><span class="math inline">\(E\)</span> : 항등 연산.</p></li>
+<li><p><span class="math inline">\(C_n\)</span> : <span class="math inline">\(2\pi/n\)</span> 회전 대칭.</p></li>
+<li><p><span class="math inline">\(\sigma\)</span> : 평면에 대한 거울상 대칭.</p></li>
+<li><p><span class="math inline">\(\sigma_h\)</span> : 주축에 대해 수직인 평면에 대한 거울상 대칭.</p></li>
+<li><p><span class="math inline">\(\sigma_v\)</span> : 주축을 포함하는 평면에 대한 거울상 대칭 중에 원자를 포함하는 평면</p></li>
+<li><p><span class="math inline">\(\sigma_d\)</span> : 주축을 포함하는 평면에 대한 거울상 대칭 중에 원자를 포함하지 않는 평면</p></li>
+<li><p><span class="math inline">\(S_n\)</span> : <strong>비정상 회전 (improper rotation)</strong>. <span class="math inline">\(2\pi/n\)</span> 회전 대칭 후 회전축에 수직인 평면에 대한 거울상 대칭이 있을 경우.</p></li>
+<li><p><span class="math inline">\(i\)</span> : 반전(invsersion). <span class="math inline">\(S_2\)</span> 와 같다.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_interrelations_of_symmetry_elements" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.3 (대칭축과 면의 성질)</strong></span> <br></p>
+<p><strong>1a</strong> : 두 거울상 대칭면의 교점은 대칭축이며, 두 대칭면 사이의 각이 <span class="math inline">\(\pi/n\)</span> 일 때 <span class="math inline">\(n\)</span>-회 대칭이다.</p>
+<p><strong>1b</strong> : 거울상 대칭면이 <span class="math inline">\(n\)</span>-회 대칭축을 포함한다면 <span class="math inline">\(\pi/n\)</span> 의 각마다 다른 거울상 대울상 대칭면이 존재한다.</p>
+<p><strong>2a</strong> : 두개의 2-회 대칭축이 <span class="math inline">\(\pi/n\)</span> 의 각도를 가진다면 이 두 축에 대해 수직인 직선은 <span class="math inline">\(n\)</span>-회 대칭축이다.</p>
+<p><strong>2b</strong> : 2-회 대칭축 <span class="math inline">\(X_1\)</span> 이 <span class="math inline">\(n\)</span>-회 대칭축 <span class="math inline">\(X_n\)</span> 과 수직이라면 <span class="math inline">\(X_n\)</span> 과 수직인 2회 대칭축이 <span class="math inline">\(n-1\)</span> 개 추가로 존재하며 이들은 <span class="math inline">\(\pi/n\)</span> 만큼의 각을 이룬다.</p>
+<p><strong>c</strong> : 짝수회 대칭축, 이 축에 수직인 거울상 대칭면, 그리고 반전의 중심 셋중에 둘이 존재하면 나머지 하나도 반드시 존재한다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="결정학적-점군" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="결정학적-점군"><span class="header-section-number">6.2</span> 결정학적 점군</h2>
+<p>주축이 하나만 존재하는 경우를 <strong>단순 회전군(simple rotation group)</strong>, 여러개인 경우를 <strong>고대칭군 (group of the higher symmetry)</strong>라고 한다.(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span> 에서 사용하지만 다른곳에선 사용하지 않는 것 같다.) 주축이 없는 경우, 즉 대칭이 전혀 없는 경우는 <span class="math inline">\(C_\infty\)</span> 군이라고 표기한다.</p>
+<p><br></p>
+<section id="단순-회전군" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</h3>
+<p><a href="https://en.wikipedia.org/wiki/Molecular_symmetry">Wikipedia 의 Molecular Symmetry</a> 을 참고하라.</p>
+<section id="c_n" class="level4">
+<h4 class="anchored" data-anchor-id="c_n"><span class="math inline">\(C_n\)</span></h4>
+<p>주축에 대해 <span class="math inline">\(n\)</span> 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 <span class="math inline">\(C_1,\,C_2,\,C_3,\,C_4,\,C_6\)</span> 뿐이다. (<a href="#exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>)</p>
+<p><br></p>
+</section>
+<section id="c_nv" class="level4">
+<h4 class="anchored" data-anchor-id="c_nv"><span class="math inline">\(C_{nv}\)</span></h4>
+<p>주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\sigma_v\)</span> 대칭도 존재하는 군.</p>
+<p><br></p>
+</section>
+<section id="c_nh" class="level4">
+<h4 class="anchored" data-anchor-id="c_nh"><span class="math inline">\(C_{nh}\)</span></h4>
+<p>주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(\sigma_h\)</span> 대칭도 존재하는 군.</p>
+<p><br></p>
+</section>
+<section id="s_n" class="level4">
+<h4 class="anchored" data-anchor-id="s_n"><span class="math inline">\(S_n\)</span></h4>
+<p>주축에 대해 <span class="math inline">\(S_n\)</span> 대칭을 가진 군.</p>
+<p><br></p>
+</section>
+<section id="d_n" class="level4">
+<h4 class="anchored" data-anchor-id="d_n"><span class="math inline">\(D_n\)</span></h4>
+<p>주축과 수직한 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축을 가진 군. <span class="math inline">\(D_2\)</span> 는 Viergrouppe 와 동형이다.</p>
+<p><br></p>
+</section>
+<section id="d_nd" class="level4">
+<h4 class="anchored" data-anchor-id="d_nd"><span class="math inline">\(D_{nd}\)</span></h4>
+<p><span class="math inline">\(D_n\)</span> 과 함께 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축 에서 인접하는 두 대축 사이에 <span class="math inline">\(\sigma_d\)</span> 거울상 대칭면이 존재하는 군.</p>
+<p><br></p>
+</section>
+<section id="d_nh" class="level4">
+<h4 class="anchored" data-anchor-id="d_nh"><span class="math inline">\(D_{nh}\)</span></h4>
+<p><span class="math inline">\(D_n\)</span> 과 함깨 <span class="math inline">\(\sigma_h\)</span> 대칭이 존재하는 군.</p>
+<p><br></p>
+<p><br></p>
+</section>
+</section>
+<section id="고대칭군" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</h3>
+<section id="t" class="level4">
+<h4 class="anchored" data-anchor-id="t"><span class="math inline">\(T\)</span></h4>
+</section>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.1</strong></span> 결정학적 점군에서 가능한 <span class="math inline">\(C_n\)</span> 군은 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 뿐임을 보이자.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>결정학에서의 병진 벡터 <span class="math inline">\(\boldsymbol{T}=n_1\boldsymbol{a}_1 + n_2\boldsymbol{a}_2+n_3\boldsymbol{a}_3\)</span> 를 생각하자.</p>
+<p><span class="math inline">\(C_n\)</span> 대칭축을 <span class="math inline">\(\hat{z}\)</span> 축으로 잡자. <span class="math inline">\(C_n\)</span> 회전에 대해 <span class="math inline">\(\boldsymbol{T}_1\)</span> 이 차례로 <span class="math inline">\(\boldsymbol{T}_2,\ldots,\, \boldsymbol{T}_n\)</span> 으로 변경된다고 하자. 그렇다면 <span class="math inline">\(\boldsymbol{t}_{ij}=\boldsymbol{T}_i-\boldsymbol{T}_j\)</span> 는 <span class="math inline">\(xy\)</span> 평면상에 존재하는 병진 벡터이야 한다. <span class="math inline">\(T=\{\boldsymbol{T}_{i}-\boldsymbol{T}_j : i\ne j\}\)</span> 가운데 <span class="math inline">\(0\)</span> 이 아닌 크기가 가장 작은 벡터를 <span class="math inline">\(\boldsymbol{t}\)</span> 라고 하자. <span class="math inline">\(\boldsymbol{t}\)</span> 역시 <span class="math inline">\(\boldsymbol{T}\)</span> 로 표현되는 벡터이며 따라서 <span class="math inline">\(n_3=0\)</span> 이며 크기가 <span class="math inline">\(0\)</span> 이 아닌 벡터 가운데 가장 작은 크기의 벡터 이다. 물론 이 크기의 벡터가 여러개 존재 할 수 있으며 이중 하나만 선택한다.</p>
+<p>이 벡터를 <span class="math inline">\(z\)</span> 축을 중심으로 <span class="math inline">\(2\pi/n\)</span> 만큼 회전시킨 벡터도 <span class="math inline">\(\boldsymbol{t}\)</span> 와 같은 크기의 벡터여야 하며, <span class="math inline">\(\|\boldsymbol{t}\|=l\)</span> 이라고 할 때</p>
+<p><span class="math display">\[
+\|\boldsymbol{t}-\boldsymbol{t}'\| = 2 l \sin \frac{\pi}{n}
+\]</span></p>
+<p>어야 한다. 그런데 <span class="math inline">\(\boldsymbol{t}-\boldsymbol{t}'\)</span> 역시 <span class="math inline">\(T\)</span> 에 포함되므로 <span class="math inline">\(l\)</span> 보다 크거나 같아야 한다. 즉 <span class="math inline">\(\sin\left(\dfrac{\pi}{n}\right) \ge \dfrac{1}{2}\)</span> 이어야 한다. 따라서 <span class="math inline">\(n\le 6\)</span> 이다.</p>
+<p>이제 <span class="math inline">\(\boldsymbol{t}'\)</span> 을 <span class="math inline">\(2\pi/n\)</span> 만큼 회전시킨 것을 <span class="math inline">\(\boldsymbol{t}''\)</span> 이라고 하자. <span class="math inline">\(\boldsymbol{t}'' \in T\)</span> 이며 <span class="math inline">\(\|\boldsymbol{t}''\|=l\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{t}\)</span> 와 <span class="math inline">\(\boldsymbol{t}''\)</span> 은 <span class="math inline">\(\dfrac{4\pi}{n}\)</span> 의 사잇각을 가진다. 이로부터</p>
+<p><span class="math display">\[
+\|\boldsymbol{t}+\boldsymbol{t}''\| = 2l \left|\cos \frac{2\pi}{n}\right|
+\]</span></p>
+<p>이다. <span class="math inline">\(\boldsymbol{t}+\boldsymbol{t}''\)</span> 역시 <span class="math inline">\(xy\)</span> 평면상의 병진벡터 이므로 <span class="math inline">\(l\)</span> 보다 크거나 같아야 한다. 즉 <span class="math inline">\(\left|\cos \left(\dfrac{2\pi}{n}\right)\right| \ge \dfrac{1}{2}\)</span> 이어야 한다. <span class="math inline">\(n=5\)</span> 인 경우 <span class="math inline">\(cos(2\pi/5)\approx 0.31 &lt; 0.5\)</span> 이므로 <span class="math inline">\(n=5\)</span> 는 불가능하며 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 인 경우는 가능하다.</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
