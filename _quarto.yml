@@ -21,10 +21,11 @@ book:
       - src/tensor/tensor02.qmd
     - part : 군과 대칭
       chapters :
-      - src/group/group01_introduction.qmd
-      - src/group/group02_representation.qmd
-      - src/group/group02_representation_2.qmd
-      - src/group/group03_quantum.qmd
+      - src/group/group_introduction.qmd
+      - src/group/group_representation.qmd
+      - src/group/group_symmetry_group.qmd
+      - src/group/group_representation_2.qmd
+      - src/group/group_quantum.qmd
     - part: 미분방정식
       chapters :
       - src/differential equation/ode.qmd

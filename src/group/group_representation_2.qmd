@@ -70,6 +70,8 @@ $$
 \displaystyle \sum_{i} (\chi^{(i)}(K_i))^\ast\chi^{(i)}(K_j) = \dfrac{|G|}{|K_i|}\delta_{K_i,K_j}.
 $$ {#eq-Group_c7} 
 
+
+
 </div>
 
 </br>
@@ -82,20 +84,20 @@ $$ {#eq-Group_c7}
 
 
 
-#### **$Z_n$ 군**
+#### **$Z_n$ 군 과 순환군**
 
-(정수에서의 $\Z/n\Z$ 와는 다르다). $\C$ 에서의 $z^n=1$ 의 해의 집합 $Z_n$ 은 곱셈 연산에 대해 군이다. 대수학의 기본정리에 의해 $Z_n$ 은 $n$ 개의 성분을 가지며, $1\in Z_n$ 이고 $z,\, z'\in Z_n$ 일 때 $(zz')^n=1$ 이므로 곱셈에 대해 닫혀 있다. 아벨군이므로 기약표현은 모두 
+(정수에서의 $\Z/n\Z$ 와는 다르다). $\C$ 에서의 $z^n=1$ 의 해의 집합 $Z_n$ 은 곱셈 연산에 대해 군이다. $z^n=1$ 의 해는 $e^{2ki/n}$, $k=1,\ldots,\, n$ 이며 $\gcd(n,\,k_0)=1$ 인 $k_0\in \Z_+$ 에 대해 $Z_n = \langle e^{2 \pi k_0/n} \rangle$ 인 순환군이며 $g^n=1$ 인 $\langle g\rangle$ 과 동형이다. 순환군이므로 아벨군이다. $n$ 이 소수일 경우는 모든 $k=1,\ldots,\,n$ 이 $Z_n$ 을 생성시키지만 $n$ 이 소수가 아닐 경우는 그렇지 않다. $Z_4$ 에 대한 character table 은 아래와 같다.
 
+<center>
+![$Z_4$ character table](figures/character_table_Z4.png){#tbl-Group_character_table_Z4 width=200}
+</center>
 
-</br>
-#### **순환군**
-
-순환군은 아벨군이며 따라서 $1$ 차원 기약표현만이 존재한다. $|G|=\langle g\rangle,\,|G|=n$ 일 때 $g^n=1_G$ 이므로 $D(g^k) = \left(e^{2\pi/m}\right)^k=e^{2\pi k/m},\, m=1,\ldots,\, n$ 으로 나타 낼 수 있다. 
 
 </br> 
+
 #### **$A_3$ 군**
 
-$e$ 를 항등원이라고 할 때 $A_3 =\{e,\, (123), (132)\}$ 이다. @eq-Group_c1 에 의하면 $c=1^2+1^2+1^2$ 이므로 3개의 1차원 기약표현이 존재하며 따라서 $3$ 개의 character 가 존재한다. $A_3$ 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다. 
+$e$ 를 항등원이라고 할 때 $A_3 =\{e,\, (123), (132)\}$ 이며 순환군으로 $A_3 \approx Z_3$ 이다. @eq-Group_c1 에 의하면 $c=1^2+1^2+1^2$ 이므로 3개의 1차원 기약표현이 존재하며 따라서 $3$ 개의 character 가 존재한다. $A_3$ 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다. 
 
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
