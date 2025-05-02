@@ -22,9 +22,8 @@ book:
     - part : 군과 대칭
       chapters :
       - src/group/group_introduction.qmd
-      - src/group/group_representation.qmd
+      - src/group/group_representation1.qmd
       - src/group/group_symmetry_group.qmd
-      - src/group/group_representation_2.qmd
       - src/group/group_quantum.qmd
     - part: 미분방정식
       chapters :

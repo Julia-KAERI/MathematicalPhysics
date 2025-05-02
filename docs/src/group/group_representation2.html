@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>수리물리학 - 7&nbsp; 군과 표현 II.</title>
+<title>7&nbsp; 군과 표현 II. – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-80f14e4a860245008e4f904c7c86406d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_representation_2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_representation2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -150,9 +150,9 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">벡터해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -167,9 +167,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">텐서 해석</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -190,9 +190,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">군과 대칭</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -205,19 +205,19 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_representation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/group/group_representation1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현 I.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_symmetry_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_representation_2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/group/group_representation2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span></a>
   </div>
 </li>
@@ -231,9 +231,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">미분방정식</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -254,9 +254,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">복소함수</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -303,7 +303,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_representation_2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_representation2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></h1>
 </div>
@@ -340,7 +340,7 @@ window.Quarto = {
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="character-table-구성-규칙"><span class="header-section-number">7.1.1</span> Character Table 구성 규칙</h3>
 <p>앞서 우리는 군의 표현과 character 에 대해 많은 것을 증명했다. 이제 여기에 중요한 것을 요약하고자 한다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<p>유한군 <span class="math inline">\(G\)</span> 의 모든 동등하지 않은 기약표현 <span class="math inline">\(D^{(1)},\ldots,\,D^{(N_R)}\)</span> 와 conjugace class 의 집합 <span class="math inline">\(\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}\)</span> 를 생각하자. <span class="math inline">\(D^{(i)}\)</span> 에 대한 character 를 <span class="math inline">\(\chi^{(i)}\)</span> 라고 하고 <span class="math inline">\(D^{(i)}\)</span> 는 <span class="math inline">\(d_i\)</span> 차원 기약표현이라고 하자. <span class="math inline">\(D^{(i)}\)</span> 와 동등한 유니타리 표현을 <span class="math inline">\(U^{(i)}\)</span> 라고 하자. 이 때 다음이 성립한다.</p>
+<p>유한군 <span class="math inline">\(G\)</span> 의 모든 동등하지 않은 기약표현 <span class="math inline">\(D^{(1)},\ldots,\,D^{(N_R)}\)</span> 와 conjugace class 의 집합 <span class="math inline">\(\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}\)</span> 를 생각하자. <span class="math inline">\(D^{(i)}\)</span> 에 대한 character 를 <span class="math inline">\(\chi^{(i)}\)</span> 라고 하고 <span class="math inline">\(D^{(i)}\)</span> 는 <span class="math inline">\(d_i\)</span> 차원 기약표현이라고 하자. <span class="math inline">\(D^{(i)}\)</span> 와 동등한 유니터리 표현을 <span class="math inline">\(U^{(i)}\)</span> 라고 하자. 이 때 다음이 성립한다.</p>
 <section id="r1-표현의-차원과-군의-크기" class="level4">
 <h4 class="anchored" data-anchor-id="r1-표현의-차원과-군의-크기"><strong>(R1) 표현의 차원과 군의 크기</strong></h4>
 <p><span id="eq-Group_c1"><span class="math display">\[
@@ -371,8 +371,8 @@ N_C=N_R
 \displaystyle \sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
 \tag{7.4}\]</span></span></p>
 </section>
-<section id="r6-유니타리-표현에-대한-위대한-직교-정리" class="level4">
-<h4 class="anchored" data-anchor-id="r6-유니타리-표현에-대한-위대한-직교-정리"><strong>(R6) 유니타리 표현에 대한 위대한 직교 정리</strong></h4>
+<section id="r6-유니터리-표현에-대한-위대한-직교-정리" class="level4">
+<h4 class="anchored" data-anchor-id="r6-유니터리-표현에-대한-위대한-직교-정리"><strong>(R6) 유니터리 표현에 대한 위대한 직교 정리</strong></h4>
 <p><span id="eq-Group_c5"><span class="math display">\[
 \displaystyle \sum_{g\in G} {\left[U^{(i)}(g)\right]^\dagger} _{\mu \nu}U^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
 \tag{7.5}\]</span></span></p>
@@ -400,7 +400,7 @@ N_C=N_R
 <h4 class="anchored" data-anchor-id="z_n-군-과-순환군"><strong><span class="math inline">\(Z_n\)</span> 군 과 순환군</strong></h4>
 <p>(정수에서의 <span class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> 와는 다르다). <span class="math inline">\(\mathbb{C}\)</span> 에서의 <span class="math inline">\(z^n=1\)</span> 의 해의 집합 <span class="math inline">\(Z_n\)</span> 은 곱셈 연산에 대해 군이다. <span class="math inline">\(z^n=1\)</span> 의 해는 <span class="math inline">\(e^{2ki/n}\)</span>, <span class="math inline">\(k=1,\ldots,\, n\)</span> 이며 <span class="math inline">\(\gcd(n,\,k_0)=1\)</span> 인 <span class="math inline">\(k_0\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(Z_n = \langle e^{2 \pi k_0/n} \rangle\)</span> 인 순환군이며 <span class="math inline">\(g^n=1\)</span> 인 <span class="math inline">\(\langle g\rangle\)</span> 과 동형이다. 순환군이므로 아벨군이다. <span class="math inline">\(n\)</span> 이 소수일 경우는 모든 <span class="math inline">\(k=1,\ldots,\,n\)</span> 이 <span class="math inline">\(Z_n\)</span> 을 생성시키지만 <span class="math inline">\(n\)</span> 이 소수가 아닐 경우는 그렇지 않다. <span class="math inline">\(Z_4\)</span> 에 대한 character table 은 아래와 같다.</p>
 <center>
-<div id="tbl-Group_character_table_Z4" class="quarto-float anchored">
+<div id="tbl-Group_character_table_Z4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_Z4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;7.1: <span class="math inline">\(Z_4\)</span> character table
@@ -426,7 +426,7 @@ $\Gamma''_1$ & $1$ & $e^{2i\pi/3}$ & $e^{i\pi/3}$ \\
 \hline
 \end{tabular}  -->
 <center>
-<div id="tbl-Group_character_table_A3" class="quarto-float anchored">
+<div id="tbl-Group_character_table_A3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_A3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;7.2: <span class="math inline">\(A_3\)</span> character table
@@ -453,7 +453,7 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 \hline
 \end{tabular} -->
 <center>
-<div id="tbl-Group_character_table_S3_p1" class="quarto-float anchored">
+<div id="tbl-Group_character_table_S3_p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_S3_p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;7.3: <span class="math inline">\(S_3\)</span> character table 부분 완성
@@ -484,7 +484,7 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 \sum_{\gamma \in \Gamma} \left(\chi^{(\gamma)} (\mathcal{C}_2)\right)^\ast \chi^{(\gamma)} (\mathcal{C}_3) &amp;= 1+a^\ast b+c^\ast d=0,
 \end{aligned}
 \]</span></p>
-<p>을 얻는다. <span class="math inline">\(\Gamma'_1\)</span> 은 1차원 표현이므로 <span class="math inline">\(|a|^2=|b|^2=1\)</span> 이다. 따라서 제 2 직교정리 결과의 첫번째 식에 의해 <span class="math inline">\(|c|^2=0,\, |d|^2=1\)</span> 이며, 제 2 직교정리의 세번째 식에 의해 <span class="math inline">\(a=-1\)</span>, 제 1 직교정리의 네번째 식에 의해 <span class="math inline">\(d=-1\)</span>, 제 1 직교정리의 세번째 식에 의해 <span class="math inline">\(b=1\)</span> 이다. 따라서 <a href="group_representation.html#tbl-Group_character_table_of_S3" class="quarto-xref">표&nbsp;<span>5.2</span></a> 를 얻었다.</p>
+<p>을 얻는다. <span class="math inline">\(\Gamma'_1\)</span> 은 1차원 표현이므로 <span class="math inline">\(|a|^2=|b|^2=1\)</span> 이다. 따라서 제 2 직교정리 결과의 첫번째 식에 의해 <span class="math inline">\(|c|^2=0,\, |d|^2=1\)</span> 이며, 제 2 직교정리의 세번째 식에 의해 <span class="math inline">\(a=-1\)</span>, 제 1 직교정리의 네번째 식에 의해 <span class="math inline">\(d=-1\)</span>, 제 1 직교정리의 세번째 식에 의해 <span class="math inline">\(b=1\)</span> 이다. 따라서 <a href="group_representation1.html#tbl-Group_character_table_of_S3" class="quarto-xref">표&nbsp;<span>5.2</span></a> 를 얻었다.</p>
 <p><br></p>
 </section>
 </section>
@@ -535,18 +535,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -578,7 +567,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -586,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -683,7 +692,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -911,8 +919,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/group/group_symmetry_group.html" class="pagination-link" aria-label="군과 표현 II.">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현 II.</span></span>
+      <a href="../../src/group/group_symmetry_group.html" class="pagination-link" aria-label="점군과 공간군">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
