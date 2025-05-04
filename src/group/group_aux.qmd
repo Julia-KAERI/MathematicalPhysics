@@ -1,0 +1,324 @@
+---
+title: "보충자료"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## Character 의 제 2 직교 정리 {#sec-GroupAux-the_second_orthogonality_theorem_for_characters}
+
+유한군 $G$ 에 대해 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 Conjugacy class 개수를 $N_C$ 라고 하자. 우리는 앞서 @eq-Group_inequality_from_orthogonality_of_character_theorem 를 통해 $N_R\le N_C$ 임을 보였다. 실제로는 $N_R=N_C$ 이며, 따라서 character table 은 정사각형이다. 이것을 증명하는 것은 다소 길고 다양한 개념들이 등장한다. 일단 아래의 character 의 제 2 직교 정리를 증명하고자 한다.
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-GroupAux_second_orthogonality_of_character}
+
+#### Character 의 제 2 직교 정리
+
+군 $G$ 의 기약 표현 $D^{(i)}$ 과 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. $K_i,\,K_j$ 가 conjugacy class of $G$ 이고 $\chi^{(k)}$ 가 $D^{(k)}$ 에서의 character 일 때 다음이 성립한다.
+
+
+$$
+\sum_k \left(\chi^{(k)}(K_i)\right)^\ast\chi^{(k)}(K_j) = \dfrac{|G|}{|K_i|} \delta_{K_i,\, K_j}.
+$$ {#eq-thm_GroupAux_second_orthogonality_of_character}
+
+:::
+
+</div></br>
+
+### 프로베니우스 대수
+
+군의 연산은 일반적으로 곱이라고 생각하며 곱으로 정의된 연산에는 합이 정의되지 않는다. 그러나 수학자들은 군의 한계를 벗어나는 구조를 생각해냈다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-GroupAux_frobenius_algebra}
+#### 군의 프로베니우스 대수
+
+군 $(G,\,\cdot)$ 과 체 $\F$ 에 대해 $a_i,\, b_i\in \F,\, g_i\in G$ 일 때 다음의 두 조건을 만족하는 $\left\{\sum_i a_ig_i: a_i\in \F,\, g_i\in G\right\}$ 를 군 $G$ 에 대한 프로비니우스 대수라고 한다.
+
+&emsp;($1$) $\displaystyle \sum_i a_ig_i + \sum_j b_i g_i = (a_i+b_i)g_i$, 
+
+&emsp;($2$) $\displaystyle \left(\sum_i a_i g_i\right)\left(\sum_j b_j g_j\right) = \sum_{ij} a_ib_j g_ig_j$.
+
+
+:::
+:::
+
+</br>
+
+$\mathcal{K}_G$ 에서 정의된 함수 $k$ 를 다음과 같이 정의하자. 
+
+$$
+k(K):= \dfrac{1}{|K|} \sum_{g_i\in K}g_i.
+$$ {#eq-GroupAux_frobenius_algebra_averate}
+
+$k(K)$ 는 $K$ 에 속하는 $G$ 의 원소들의 평균이라고 생각 할 수 있을 것이다. 우선 $E = \{i_G\}$ 는 conjugacy class 이므로 
+
+$$
+k(E)k(E) = i_G
+$$ {#eq-GroupAux_frobenius_for_group_identity}
+
+이다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-GroupAux_frobenius_algebra_1}
+
+$g\in G$, $K_1,\, K_2\in \mathcal{K}_G$ 일 때 다음이 성립한다.
+
+$$
+g^{-1}k(K_1)k(K_2)g = k(K_1)k(K_2).
+$${#eq-GroupAux_frobenius_algebra_invariance}
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+$k(K_1)k(K_2)$ 는 다음과 같다.
+
+$$
+k(K_1)k(K_2) = \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2.
+$$ {#eq-GroupAux_frobenius_algebra_multiplication_of_average}
+
+$g\in G$ 에 대해
+
+$$
+\begin{aligned}
+g^{-1}\left[ k(K_1)k(K_2) \right]g &= \dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} g^{-1}g_1g_2g \\
+&=\dfrac{1}{|K_1||K_2|} \sum_{g_1\in K_1}\sum_{g_2\in K_2} (g^{-1}g_1g)(g^{-1}g_2g) \\
+&=k(K_1)k(K_2)
+\end{aligned}
+$$
+
+이다. $\square$
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-GroupAux_frobenius_algebra_2}
+
+$K_1,\, K_2\in \mathcal{K}_G$ 일 때 다음이 성립한다.
+
+$$
+k(K_1)k(K_2) = k(K_2)k(K_1).
+$$ {#eq-GroupAux_frobenius_algebra_abelian}
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+$\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1$ 임을 보이면 된다.
+$$
+\begin{aligned}
+\sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1 g_2 &= \sum_{g_1\in K_1}\sum_{g_2\in K_2} g_1g_2g_1^{-1}g_1 = \sum_{g_1\in K_1}\sum_{g_2\in K_2}g_2g_1. \quad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+
+@eq-GroupAux_frobenius_algebra_multiplication_of_average 로 부터 우리는 $k(K_1)k(K_2)$ 를 $g_i\in G$ 들의 스칼라곱의 합으로 표현할 수 있다는 것을 안다.
+
+$$
+k(K_1)k(K_2) = \sum_{g_i\in G} a_i g_i
+$$
+
+$g_i,\, g_j$ 가 같은 클래스 $K$ 에 속해있으면 어떤 $x\in G$ 에 대해 $g_i=xg_jx^{-1}$ 이다. 
+
+$$
+xk(K_1)k(K_2)x^{-1} = \sum_{g_i\in G} a_i xg_ix^{-1}
+$$
+
+이므로 $g_i\sim g_j$ 이면 $a_i = a_j$ 이어야 한다. 즉 $a_i$ 는 $K_1,\,K_2,\,K$ 에 의해 정해지는 스칼라이다. 이를 **class 계수 (class coefficients)** 라고 부르며 $\Gamma(K_1,K_2;K)$ 라고 표기하자. 이제 다음 명제가 성립한다는 것을 안다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-GroupAux_frobenius_algebra_3}
+
+군 $G$ 의 conjugacy class 의 집합 $\mathcal{K}_G$ 에 대해 $K_1,\, K_2\in K$ 와 @eq-GroupAux_frobenius_algebra_averate 로 정의된 $k(K)$ 그리고 $K\in \mathcal{K}$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 라고 할 때 다음이 성립한다. 
+$$
+k(K_1)k(K_2) = \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)k(K)
+$$ {#eq-prp_GroupAux_frobenius_algebra_3}
+
+:::
+
+</div>
+</br>
+
+또한 우리는 @prp-Group_properties_on_conjugacy_class 에서 conjugacy class $K$ 에 대해 $\overline{K}:=\{g^{-1}:g\in K\}$ 역시 conjugacy class 임을 보였다. 이를 이용하면
+
+$$
+k(K)k(\overline{K}) = \dfrac{1}{|K|}i_G + \cdots 
+$$ {#eq-prp_GroupAux_frobenius_algebra_4}
+
+임을 안다. 또한 $K'\ne \overline{K}$ 일 경우 $k(K)k(K')$ 은 $i_G$ 항을 갖지 않는다는 것을 안다. 우리는 이로부터 
+
+$$
+k(K_1)k(K_2) = \sum_{K_i \in \mathcal{K}_G} a_K \left(\sum_{g_j \in K_i} g_j\right) = \sum_{K_i\in \mathcal{K}_G}a_K|K| k(K)
+$$
+
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-GroupAux_frobenius_algebra_4}
+
+@prp-GroupAux_frobenius_algebra_3 의 class 계수와 $E=\{i_G\}$ 에 대해 다음이 성립한다.
+$$
+\begin{gather}
+K_2 \ne \overline{K_1} \implies \Gamma(K_1,\, K_2; E) = 0 . \\
+\end{gather}
+$$ {#eq-GroupAux-class_coefficient_for_identity_class}
+
+:::
+
+</div>
+</br>
+
+이제 군 $G$ 의 표현 $D$ 와 $K\in \mathcal{K}_G$ 에 대해 
+
+$$
+\mathcal{D}(K) := \dfrac{1}{|K|} \sum_{g\in K}D(g)
+$$
+
+라고 하자. $\{D(g):g\in G\}$ 역시 군이므로 $\mathcal{D}(K) = k(D(g))$ 와 같다. 이 때 임의의 $x\in G$ 에 대해
+
+$$
+D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal{D}(K)
+$$
+
+이며, @lem-Group_schur_lemma 에 따라 $\mathcal{D}$ 는 항등행렬의 스칼라배이다. 곱해지는 스칼라값은 $K$ 에 따라 다를 수 있으므로
+
+$$
+\mathcal{D}(K) = c_K I
+$$
+
+라고 하자. 
+
+$$
+\text{tr}(\mathcal{D}(K))= \dfrac{1}{|K|} \sum_{g\in K}\chi(K) = \chi(K)
+$$
+
+이므로 $c_K\chi(E) = \chi(K)$ 이다. 이제 @eq-prp_GroupAux_frobenius_algebra_3 으로 부터
+
+$$
+\mathcal{D}(K_1)\mathcal{D}(K_2) = \sum_{K\in \mathcal{K}_G}\Gamma(K_1,K_2;K) \mathcal{D}(K)
+$$
+
+임을 안다. $\mathcal{D}(K)= \chi(K)/\chi(E) I$ 이므로
+
+$$
+\chi(K_1)\chi(K_2) = \chi(E)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi(K)
+$$
+
+이다. 이제 $G$ 에 대한 표현 $D^{(i)}$ 와 이 $D^{(i)}$ 에서의 character $\chi^{(i)}$ 를 생각하면
+
+$$
+\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \chi^{(i)}(E)\sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K)\chi^{(i)}(K)
+$$
+
+이다. 위 식을 모든 기약표현에 대해 더하면
+
+$$
+\begin{aligned}
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) &= \sum_{K\in \mathcal{K}_G} \Gamma(K_1, K_2; K) \sum_i  \chi^{(i)}(E)\chi^{(i)}(K).
+\end{aligned}
+$$
+
+정칙 표현을 다시 생각해보자. $K\ne E$ 일 때 $\chi^{(\text{reg})}=0$ 이며, $\chi^{(\text{reg})}(E) = |G|$ 이고 
+
+$$
+\chi^{(\text{reg})}(K) = \sum_{i} d_i \chi^{(i)}(K) = \sum_i \chi^{(i)}(E) \chi^{(i)}(K)
+$$
+
+이므로 (@exr-Group_regular_expression_1 )
+
+$$
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \sum_{i}\Gamma (K_1,\, K_2; E) \left(\chi^{(i)}(E)\right)^2 = \Gamma (K_1,\, K_2; E) |G|
+$$
+
+이다. @prp-GroupAux_frobenius_algebra_4 로부터 $K_1 \ne \overline{K_2}$ 이면 $\Gamma(K_1,\,K_2;E)=0$ 임을 안다. 따라서
+
+$$
+\sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; E) |G|\delta_{K_1, \overline{K_2}}
+$$
+
+
+이다. 또한 @prp-Group_basic_properties_of_character 로부터 $\chi^{(i)}(K_1)=(\chi^{(i)}(\overline{K_1}))^\ast$, 즉 $\chi^{(i)}(\overline{K_1}) = (\chi^{(i)}(K_1))^\ast$ 임을 안다. 따라서 
+
+$$
+\sum_i \left(\chi^{(i)}(K_1)\right)^\ast \chi^{(i)}(K_2)= \Gamma (\overline{K_1},K_2;E)|G| \delta_{K_1,K_2}
+$$
+
+이다. @eq-prp_GroupAux_frobenius_algebra_4 과 그 부근의 논의로 부터 $\Gamma(\overline{K},\, K'; E)= \dfrac{1}{|K|}\delta_{K,K'}$ 임을 안다. 따라서
+
+$$
+\sum_i \left(\chi^{(i)}(K_1)\right)^\ast\chi^{(i)}(K_2) = \dfrac{|G|}{|K_1|} \delta_{K_1,\, K_2}
+$$
+
+이다. 즉 우리는 Character 의 제 2 직교 정리(@thm-GroupAux_second_orthogonality_of_character) 가 성립한다는 것을 보였다. 
+
+</br>
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-GroupAux_equality_of_numbers_of_class_and_irreducible_representation}
+
+유한군 $G$ 의 conjugacy class 의 개수와 서로 동등하지 않은 기약표현의 개수는 같다.
+
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+@eq-thm_GroupAux_second_orthogonality_of_character 를 보자. 기약표현의 개수 $N_R$ 과 conjugacy class 의 개수 $N_C$ 를 생각하자. $\C^{N_R}$ 에서의 벡터
+
+$$
+|Z_{K_j} \rangle =\sqrt{\dfrac{|K_j|}{|G|}}\begin{bmatrix} \chi^{(1)}(K_j) \\ \vdots \\ \chi^{(N_R)}(K_j)\end{bmatrix}
+$$
+
+을 생각하자. @eq-thm_GroupAux_second_orthogonality_of_character 에 의해 $\langle Z_{K_i}| Z_{K_j}\rangle = \delta_{ij}$ 이므로 $|Z_{K_1}\rangle, \ldots,\, |Z_{K_{N_R}}\rangle$ 은 서로 직교하는 벡터이며, 따라서 $N_C \le N_R$ 이다. 우리는 이미 @thm-Group_first_orthogonality_of_character 로부터 $N_R\le N_C$ 임을 보았다. 따라서 $N_C=N_R$ 이다. $\square$
+
+:::
+
+</br>
+
+위의 정리를 이용하여 아벨군에 대해 다음을 보일 수 있다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#cor-GroupAux_representation_of_abelian}
+
+아벨리안 유한군 $G$ 에 대해 가능한 기약 표현은 $1$ 차원 뿐이다.
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+$G$ 가 아벨리안이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 conjugace class 이다. $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
+
+:::
+
+</br>

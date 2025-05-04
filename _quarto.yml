@@ -25,6 +25,7 @@ book:
       - src/group/group_representation1.qmd
       - src/group/group_symmetry_group.qmd
       - src/group/group_quantum.qmd
+      - src/group/group_aux.qmd
     - part: 미분방정식
       chapters :
       - src/differential equation/ode.qmd
