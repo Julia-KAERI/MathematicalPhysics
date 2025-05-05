@@ -1732,7 +1732,7 @@ $$ {#eq-Group_c8}
 
 #### **(R9) Character 곱 규칙**
 
- $K_jK_k =\sum_{l} c_{jkl} K_l$ 에 대해 
+$K_jK_k =\sum_{l} c_{jkl} K_l$ 에 대해 
 $$
 |K_j|\chi^{(i)}(K_j) |K_k|\chi^{(i)}(K_k) = d_i \sum_l c_{jkl} |K_l| \chi^{(i)}(K_l)
 $${#eq-Group_c9} 
