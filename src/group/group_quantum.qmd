@@ -96,7 +96,7 @@ $$
 I = I^2 = \sigma^2,\qquad, I\sigma = \sigma I.
 $$
 
-따라서 $C_s$ 는 아벨군이며, @cor-Group_representation_of_abelian 에 따라 두개의 1차원 기약표표현을 갖는다. 
+따라서 $C_s$ 는 아벨군이며, @exr-Group_irreducible_representation_of_abelian_group  에 따라 두개의 1차원 기약표현을 갖는다. 
 
 &emsp;($1$) $A_1$ : $U(I)=U(\sigma)=1$,
 

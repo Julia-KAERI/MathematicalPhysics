@@ -69,11 +69,13 @@ $G$ 가 군이다.
 
 3. $G$ 가 유한군일 때 원소의 갯수를 $G$ 의 **차수(order)** 라고 하며 $|G|$ 로 표기한다. $G$ 가 연속군일 경우 연속인 변수의 개수를 **차수(order)** 라고 한다.
 
-4. 일반적으로 $ab\ne ba$ 이다. 그러나 $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
+4. $g\in G$ 일 때 $g^n=1_G$ 가 되는 가장 작은 양의 정수 $n$ 을 $g$ 의 **차수(order)** 라고 한다. (군의 차수와 군의 성분의 차수는 다르다)
 
-5. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 이 때 $G$ 는 $g$ 에 의해 생성된다고 한다.
+5. 일반적으로 $ab\ne ba$ 이다. 그러나 $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
+
+6. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 이 때 $G$ 는 $g$ 에 의해 생성된다고 한다.
    
-6. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
+7. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
 
 :::
 :::
@@ -248,6 +250,7 @@ $f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x
 </br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-Group_unitary_group}
 
 #### 유니터리군과 특수유니터리군
@@ -276,14 +279,14 @@ $n$ 차원 유클리드 공간에서의 회전은 $SO(n)$ 과 같다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-Group_d3}
+::: {#exm-Group_d3_multiplication_table}
 
 #### $D_3$, 정삼각형에 대한 대칭 연산
 </br>
 
-정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 $I$, 삼각형의 중심에 대한 $\pi/3$ 만큼의 반시계 방향 회전 $C_3$ 와 $C_3^2$($C_3$ 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 $\pi/2$ 회전 $C_2,\,C_2',\,C_2''$ (아래 그림을 참고하라.)
+정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 $E$, 삼각형의 중심에 대한 $\pi/3$ 만큼의 반시계 방향 회전 $D$ 와 $F$($D$ 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 $\pi/2$ 회전 $A,\,B,\,C$ (아래 그림을 참고하라.)
 
-![정삼각형에 대한 대칭 연산](figures/d3.png){#fig-Group_d3 width=350}
+![정삼각형에 대한 대칭 연산](figures/d3.png){#fig-Group_d3 width=200}
 
 </br>
 
@@ -292,21 +295,21 @@ $n$ 차원 유클리드 공간에서의 회전은 $SO(n)$ 과 같다.
 
 ![$D_3$ 연산 수행 결과. 음영이 있는 삼각형은 축에 대한 회전 연산으로 인해 위아래가 바뀐 것이다.](figures/d3_2.png){#fig-Group_d3_2 width=600}
 
-이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 하며 $C_3$ 행과 $C_2$ 열에는 $C_3C_2 = C_2''$ 가 표현된다.
+이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 한다.
 
 <center>
 <!-- 
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ c|cccccc }
 \hline
- & $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
+ $D_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\
 \hline
-$I$ &  $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
-$C_3$ &  $C_3$ & $C_3^2$ & $I$ & $C_2''$ & $C_2$ & $C_2'$ \\
-$C_3^2$ &  $C_3^2$ & $I$ & $C_3$ & $C_2'$ & $C_2''$ & $C_2$ \\
-$C_2$ &  $C_2$ & $C_2'$ & $C_2''$ & $I$ & $C_3$ & $C_3^2$ \\
-$C_2'$ &  $C_2'$ & $C_2''$ & $C_2$ & $C_3^2$ & $I$ & $C_3$ \\
-$C_2''$ &  $C_2''$ & $C_2$ & $C_2'$ & $C_3$ & $C_3^2$ & $I$ \\
+$E$ &  $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\
+$A$ &  $A$ & $E$ & $F$ & $D$ & $C$ & $B$ \\
+$B$ &  $B$ & $D$ & $E$ & $F$ & $A$ & $C$ \\
+$C$ &  $C$ & $F$ & $D$ & $E$ & $B$ & $A$ \\
+$D$ &  $D$ & $B$ & $C$ & $A$ & $F$ & $E$ \\
+$F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 \end{tabular} 
 -->
 
@@ -315,7 +318,7 @@ $C_2''$ &  $C_2''$ & $C_2$ & $C_2'$ & $C_3$ & $C_3^2$ & $I$ \\
 </center>
 </br>
 
-이 군은 여러가지 이름으로 불리지만 대표적으로 $D_3$ 라고 불린다. $D$ 는 **dihedral** 의 두문자이며 보통 주 대칭축에 수직인 평면에 $\pi$ 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, $C_2,\,C_2',\,C_2''$ 축이 주 대칭축과 수직한 $\pi$ 회전 대칭축이다. .
+이 군은 여러가지 이름으로 불리지만 대표적으로 $D_3$ 라고 불린다. $D$ 는 **dihedral** 의 두문자이며 보통 주 대칭축에 수직인 평면에 $\pi$ 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, $A,\,B,\,C$ 축이 주 대칭축과 수직한 $\pi$ 회전 대칭축이다. .
 
 
 :::
@@ -453,10 +456,10 @@ $$
 
 $$
 \begin{aligned}
-\ker(\phi) &:= \{g\in G : \phi (g) = 1_{G'}\},\\
+\ker(\phi) &:= \{g\in G : \phi (g) = 1_{G'}\},\\[0.3em]
 \im(\phi) &:= \{\phi(g) : g\in G\}.
 \end{aligned}
-$$
+$$ {#eq-Group_kernel_and_image_of_homomorphism}
 
 즉 $\ker (\phi) = \phi^{-1}(\{1_{G'}\})$ 이다. 
 
@@ -522,6 +525,22 @@ $$
 
 
 </br> 
+
+### 군의 부분집합의 연산 {#sec-Group_multplication_of_subset_of_group}
+
+곱 연산으로 정의된 군 $G$ 를 생각하자. $X,\, Y \subset G$ 이고(부분군이 아닌 부분집합이다) $a\in G$ 일 때, $aX,\, Xa,\, XY$ 를 다음과 같이 정의한다.
+
+$$
+\begin{aligned}
+aX &:= \{ag: g\in G\}, \\[0.3em]
+Xa& := \{ga: g\in G\},\\[0.3em]
+XY &:= \{xy : x\in X,\, y\in Y\}
+\end{aligned}
+$$ {#eq-Group_multiplication_of_subset_of_group}
+
+군의 정의에 의해 $aX\subset G,\, XY \subset G$ 라는 것을 알 수 있다.
+
+</br>
 
 ### Conjugacy Class
 
@@ -640,6 +659,24 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 
 </br>
 
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_conjugacy_class_of_D3}
+
+#### $D_3$ 군의 conjugace class
+
+@exm-Group_d3_multiplication_table 의 Caylay table 을 이용하여 $D_3$ 의 conjugace class 를 구해보자. 우선 $\{E\}$ 는 conjugace class 이다. $A,\,B,\,C$ 는 각각 스스로의 역원이며 $D,\,F$ 는 서로간의 역원이다. $ABA^{-1}=ABA=C$ 이므로 $B\sim C$ 이다. $BAB^{-1}=A$ 이므로 $A\sim C$ 이다. 이것을 반복해보면 $\{A,\,B,\,C\}$ 가 conjugacy class 임을 알 수 있다. 또한 $AFA^{-1}=D$ 이므로 $F\sim D$ 임을 알 수 있다. 즉 $D_3$ 군에는 아래와 같은 $3$ 개의 conjugace class 가 존재한다.
+
+$$
+\{E\},\qquad \{A,\,B,\,C\},\qquad \{D,\,F\}.
+$$
+
+
+:::
+
+</div></br>
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_conjugate_subgroup}
 #### Conjugate subgroup
@@ -655,10 +692,53 @@ $g\in G,\, H\le G$ 일 때 $gHg^{-1}$ 는 $H$ 에 의한 **conjugate subgroup** 
 
 #### 정규부분군(불변부분군)
 
-$N \le G$ 이며 각각의 $g\in G$ 에 대해 $gNg^{-1}=N$ 이면 $N$ 을 $G$ 의 **정규부분군(normal subgroup)** 혹은 **불변 부분군(invariant subgroup)** 이라고 하고 $N \trianglelefteq G$ 라고 표기한다.
+$N \le G$ 이며 각각의 $g\in G$ 에 대해 $gNg^{-1}=N$ 이면 $N$ 을 $G$ 의 **정규부분군(normal subgroup)**,**불변 부분군(invariant subgroup)** 혹은 **normal devisor** 라고 하고 $N \trianglelefteq G$ 라고 표기한다.
 
 :::
 :::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_left_and_right_cosets_of_normal_subgroup}
+
+군 $G$ 의 부분군 $N$ 에 대해 다음은 동치이다.
+
+&emsp;($1$) $N\trianglelefteq G$ 이다.
+
+&emsp;($2$) 임의의 $g\in G$ 에 대해 $gN = Ng$ 이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+($1 \implies 2$) $x\in gN$ 이면 어떤 $n\in N$ 에 대해 $x=gn$ 이며 $x=gn=\left(gng^{-1}\right)g \in Ng$ 이므로 $gn\subset Ng$ 이다. 같은 방법으로 $Ng\subset gN$ 임을 보일 수 있으며 따라서 $gN=Ng$ 이다.
+
+($2\implies 1$) $gNg^{-1}= N$ 이다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#prp-Group_multiplication_of_cosets_of_invariant_subgroup}
+
+$N \trianglelefteq G$ 일 때 임의의 $x,\, y\in G$ 에 대해 $xNyN = xyN$ 이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+$xn_1yn_2 = xy(y^{-1}n_1y)n_2$ 이며 $y^{-1}n_1y =n_1'\in N$ 이므로 $xn_1yn_2 = xyn_1'n_2 \in xyN$ 이다. 즉 $xNyN \subset xyN$ 이다. 또한 $1_G\in N$ 이므로 $xyn=x1_Gyn \in xNyN$ 이다. 즉 $xyN\subset xNyN$ 이다. $\square$
+:::
+
+</br>
+
 
 </br>
 
@@ -693,19 +773,14 @@ $K = \ker(\phi)$ 라고 하자. $k\in K$ 에 대해 $\phi(gkg^{-1})=\phi(g)\phi(
 
 ### 몫군 {#sec-Group_quotient_group}
 
-$N\trianglelefteq G$ 라고 하자. 그리고 $N$ 에 의한 왼쪽 잉여류의 집합 $\{N,\,g_1N,\ldots,\, g_nN\}$ 를 생각하자. 임의의 $g_1,\,g_2\in G,\, n_1,\,n_2\in N$ 에 대해 $g_1n_1\in g_1N,\, g_2n_2\in g_2N$ 이며
+$N \trianglelefteq G$ 일 때 $l=|G|/|N|$ 개의 $N$ 의 왼쪽 잉여류가 존재하며 이 잉여류 집합을 $X_G=\{N,\, g_1N,\ldots,\, g_{l-1}N\}$ 라고 쓸 수 있다. @prp-Group_multiplication_of_cosets_of_invariant_subgroup 에 의해 $(g_iN)(g_jN)= g_ig_jN$ 인 연산을 정의 할 수 있으며 이 때 $N$ 은 항등원 역할을 한다. $(g_iN)(g_i^{-1}N)=N$ 이므로 $g_iN$ 에 대한 역원도 존재한다. 또한 
 
 $$
-g_1n_1g_2n_2 = g_1(g_2g_2^{-1})n_1g_2n_2=g_1g_2(g_2^{-1}n_1g_2)n_2 
+(g_iN)[(g_jN)(g_kN)] = (g_iN)(g_jg_kN)=g_ig_jg_kN = [(g_iN)(g_jN)](g_kN)
 $$
 
-이다. $N$ 이 불변부분군이므로 $g_2^{-1}n_1g_2 = n_3$ 인 $n_3\in N$ 가 존재하며 따라서
+이므로 연산의 결합법칙도 성립한다. 즉 $X_G$ 는 군이며 $G/N$ 으로 표기한다.
 
-$$
-g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
-$$
-
-이다. 즉 $\{N,\,g_1N,\ldots,\,g_nN\}$ 에 곱셈 $(g_iN)(g_j N) = g_ig_hN$ 을 정의 할 수 있다는 의미이다. 또한 $(gN)(N)= gN$ 이므로 $N$ 는 이 연산에서 항등원으로 작용하며, $(gN)(g^{-1}N) = N$ 이므로 $g^{-1}N$ 는 $gN$ 에 대한 영원으로 작용한다. 
 
 </br>
 
@@ -721,6 +796,60 @@ $$
 </br>
 
 위의 몫군에서 정규부분군 $N$ 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 **normal divisor** 라고 부르기도 한다.
+
+</br>
+
+### Class 곱 {#sec-Group_class_multiplication}
+
+$G$ 의 conjugate class 의 집합 $\mathcal{K}_G=\{K_1,\ldots,\,K_m\}$ 를 생각하자. $g\in G$ 에 대해
+
+$$
+gK_i g^{-1}= K_i
+$$
+
+임은 쉽게 알 수 있다. 그렇다면 두 클래스의 곱은 어떻게 될 까?
+
+$$
+K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g 
+$$
+
+이다. 이것은 $K_iK_j$ 가 conjugate class 일 경우 뿐만 아니라 conjugatcy class 의 합집합 일 때도 성립하며, 실제로 그러하다. $K_i,\,K_j$ 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.
+
+$$
+K_iK_j = \sum_k c_{ijk}K_k
+$$ {#eq-Group_class_multiplication_rule}
+
+위 식은 $K_iK_j$ 를 계산 했을 때 $K_k$ 가 몇번 등장하는지를 표기하는 식이며 $2K_1+3K_2$ 라면 $K_1$ 이 $2$ 번 $K_3$ 가 $3$ 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.
+
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_conjugacy_class_multipliciation_of_D3}
+
+#### $D_3$ 군의 클래스 곱
+
+@exm-Group_d3_multiplication_table 과 @exm-Group_conjugacy_class_of_D3 을 이용하여보자. 
+
+$$
+K_1\{E\},\qquad K_2=\{A,\,B,\,C\},\qquad K_3=\{D,\,F\}
+$$
+
+라고 하자. $K_2K_2$ 는 총 9개의 곱이 나타나며 집합으로 표현하면 중복을 무시하지 않고 고려하면
+
+$$
+K_2K_2 = 3K_1+3K_3
+$$
+
+이다. 
+
+:::
+
+</div>
+</br>
+
+
 
 
 
@@ -1032,7 +1161,7 @@ $$ {#eq-Group_commutator_of_angular_momentum}
 </br>
 
 
-우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다. @exm-Group_d3 에서 $C_2C_3=C_2'$, $C_3C_2=C_2''$ 임을 확인하라. 무한소 회전 $R \approx I+A$ 와 임의의 회전 $R'$ 에 대해 $A^2$ 이상의 항을 무시하면
+우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다. @exm-Group_d3_multiplication_table 에서 $AB=F$, $BA=D$ 임을 확인하라. 무한소 회전 $R \approx I+A$ 와 임의의 회전 $R'$ 에 대해 $A^2$ 이상의 항을 무시하면
 
 $$
 RR'R^{-1} \approx (I+A)R'(I-A) \approx R' + AR'-R'A
@@ -1109,5 +1238,95 @@ $$
 
 의 5 개이다.
 
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_2_5}
+#### Tinkham 2.5
+
+같은 클래스에 속하는 성분은 같은 차수(@def-Group_properties) 를 가짐을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$x,\,y$ 가 $g\in G$ 에 대해 $x=gyg^{-1}$ 이라고 하자. $x$ 의 차수가 $n$ 이면 $x^n=1_G=(gyg^{_1})=gy^ng^{-1}$ 이므로 $y^n=1_G$ 이어야 한다. $y^m=1_G = g^{-1}x^mg$ 이므로 $x^m=1_G$ 이어야 한다. 따라서 $x,\,y$ 는 같은 차수여야 한다.
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_2_6}
+#### Tinkham 2.6
+
+차수가 4 와 2 인 순환군 사이에 준동형 사상이 존재함을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$X=\langle x\rangle,\, |X|=4,\, Y=\langle y\rangle,\, |Y|=2$ 라고 하자. $\phi:X\to Y$ 를 $\phi(1_X)=\phi(x^2)=1_Y,\, \phi(x)=\phi(x^3)=y$ 로 정의하자. 
+
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_2_7}
+#### Tinkham 2.7
+
+군 $G$ 이 아벨군일 필요충분 조건은 $\phi(x)=x^{-1}$ 이 동형사상인 것임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+$\phi(x) =x^{-1}$ 은 일단 단사이다.
+
+($1$) $G$ 가 아벨군임을 가정하자. $\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)$ 이므로 $\phi$ 는 동형사상이다.
+
+($2$) $\phi$ 가 동형사상임을 가정하자. 임의의 $x,\,y\in G$ 에 대해 
+$$
+xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
+$$
+
+이므로 $G$ 는 아벨군이다.
+
+:::
+
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_2_8}
+#### Tinkham 2.8
+
+@eq-Group_class_multiplication_rule 에서 $c_{ijk}=c_{jik}$ 임을 보여라. 즉 $K_iK_j=K_jK_i$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$K_i=[x],\, K_j=[y]$ 라고 하자. $K_i$ 의 원소는 어떤 $g\in G$ 에 대해 $gxg^{-1}$ 이며 $K_j$ 의 원소는 어떤 $h\in G$ 에 대해 $hyh^{-1}$ 이다. 따라서 
+
+$$
+\begin{aligned}
+(gxg^{-1})(hyh^{-1}) &= gx\underbrace{(g^{-1}h y h^{-1}g)}_{=y'\in K_j}g^{-1} = gxy'g^{-1}= g\underbrace{xy'x^{-1}}_{=y''\in K_j}xg^{-1}= gy''xg^{-1} \\[0.3em]
+& =\left(gy''g^{-1}\right)\left(gxg^{-1}\right) \in K_jK_i
+\end{aligned}
+$$
+
+이므로 $K_iK_k \subset K_jK_i$ 이다. 대칭이므로 $K_jK_i \subset K_iK_j$ 이며 이는 $K_iK_j=K_jK_i$ 를 의미한다.
 
 :::

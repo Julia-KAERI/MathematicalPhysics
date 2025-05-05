@@ -301,8 +301,10 @@ window.Quarto = {
   <li><a href="#동형사상과-conjugacy-class" id="toc-동형사상과-conjugacy-class" class="nav-link" data-scroll-target="#동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</a>
   <ul class="collapse">
   <li><a href="#동형사상" id="toc-동형사상" class="nav-link" data-scroll-target="#동형사상"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
-  <li><a href="#conjugacy-class" id="toc-conjugacy-class" class="nav-link" data-scroll-target="#conjugacy-class"><span class="header-section-number">4.4.2</span> Conjugacy Class</a></li>
-  <li><a href="#sec-Group_quotient_group" id="toc-sec-Group_quotient_group" class="nav-link" data-scroll-target="#sec-Group_quotient_group"><span class="header-section-number">4.4.3</span> 몫군</a></li>
+  <li><a href="#sec-Group_multplication_of_subset_of_group" id="toc-sec-Group_multplication_of_subset_of_group" class="nav-link" data-scroll-target="#sec-Group_multplication_of_subset_of_group"><span class="header-section-number">4.4.2</span> 군의 부분집합의 연산</a></li>
+  <li><a href="#conjugacy-class" id="toc-conjugacy-class" class="nav-link" data-scroll-target="#conjugacy-class"><span class="header-section-number">4.4.3</span> Conjugacy Class</a></li>
+  <li><a href="#sec-Group_quotient_group" id="toc-sec-Group_quotient_group" class="nav-link" data-scroll-target="#sec-Group_quotient_group"><span class="header-section-number">4.4.4</span> 몫군</a></li>
+  <li><a href="#sec-Group_class_multiplication" id="toc-sec-Group_class_multiplication" class="nav-link" data-scroll-target="#sec-Group_class_multiplication"><span class="header-section-number">4.4.5</span> Class 곱</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#회전과-리-대수" id="toc-회전과-리-대수" class="nav-link" data-scroll-target="#회전과-리-대수"><span class="header-section-number">4.5</span> 회전과 리 대수</a>
@@ -399,6 +401,7 @@ window.Quarto = {
 <li><p><span class="math inline">\(G\)</span> 의 원소의 갯수가 유한개일 때 <strong>유한군(finite group or discrete group)</strong> 이라고 하고, 유한군이 아닐 때 <strong>무한군 (infinite group)</strong> 이라고 한다.</p></li>
 <li><p>어떤 대칭 연산의 경우 군을 이루며 성분의 개수가 무한개 이지만 유한개의 연속인 변수로 기술 될 수 있다. 이런 군을 <strong>연속군 (continuous group)</strong> 이라고 한다.</p></li>
 <li><p><span class="math inline">\(G\)</span> 가 유한군일 때 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>차수(order)</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 로 표기한다. <span class="math inline">\(G\)</span> 가 연속군일 경우 연속인 변수의 개수를 <strong>차수(order)</strong> 라고 한다.</p></li>
+<li><p><span class="math inline">\(g\in G\)</span> 일 때 <span class="math inline">\(g^n=1_G\)</span> 가 되는 가장 작은 양의 정수 <span class="math inline">\(n\)</span> 을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라고 한다. (군의 차수와 군의 성분의 차수는 다르다)</p></li>
 <li><p>일반적으로 <span class="math inline">\(ab\ne ba\)</span> 이다. 그러나 <span class="math inline">\(G\)</span> 의 모든 원소에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>아벨군 (abellian group)</strong> 이라고 한다.</p></li>
 <li><p><span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g^k:k\in \mathbb{Z}\}=G\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>순환군 (cyclic group)</strong> 이라고 하고 <span class="math inline">\(G=\langle g \rangle\)</span> 이라고 표기한다. 이 때 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(g\)</span> 에 의해 생성된다고 한다.</p></li>
 <li><p><span class="math inline">\(H \subset G\)</span> 이며 <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 와 같은 연산에 대해 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하고 <span class="math inline">\(H \le G\)</span> 라고 표기한다.</p></li>
@@ -527,13 +530,13 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-Group_d3" class="theorem example">
+<div id="exm-Group_d3_multiplication_table" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.6 (<span class="math inline">\(D_3\)</span>, 정삼각형에 대한 대칭 연산)</strong></span> <br></p>
-<p>정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 <span class="math inline">\(I\)</span>, 삼각형의 중심에 대한 <span class="math inline">\(\pi/3\)</span> 만큼의 반시계 방향 회전 <span class="math inline">\(C_3\)</span> 와 <span class="math inline">\(C_3^2\)</span>(<span class="math inline">\(C_3\)</span> 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 <span class="math inline">\(\pi/2\)</span> 회전 <span class="math inline">\(C_2,\,C_2',\,C_2''\)</span> (아래 그림을 참고하라.)</p>
+<p>정삼각형에 대한 대칭 연산은 6개의 원소를 가진 군을 이룬다. 항등 연산 <span class="math inline">\(E\)</span>, 삼각형의 중심에 대한 <span class="math inline">\(\pi/3\)</span> 만큼의 반시계 방향 회전 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(F\)</span>(<span class="math inline">\(D\)</span> 연산 2번 연속), 각 꼭지점과 맞은편 모서리의 중점을 잇는 직선을 회전축으로 하는 <span class="math inline">\(\pi/2\)</span> 회전 <span class="math inline">\(A,\,B,\,C\)</span> (아래 그림을 참고하라.)</p>
 <div id="fig-Group_d3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/d3.png" class="img-fluid figure-img" width="350">
+<img src="figures/d3.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;4.1: 정삼각형에 대한 대칭 연산
@@ -552,20 +555,20 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 </figcaption>
 </figure>
 </div>
-<p>이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 하며 <span class="math inline">\(C_3\)</span> 행과 <span class="math inline">\(C_2\)</span> 열에는 <span class="math inline">\(C_3C_2 = C_2''\)</span> 가 표현된다.</p>
+<p>이 연산에 대한 수행 결과를 아래의 표로 정리 할 수 있다. 이런 표를 Caylay table 이라고 한다.</p>
 <center>
 <!-- 
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ c|cccccc }
 \hline
- & $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
+ $D_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\
 \hline
-$I$ &  $I$ & $C_3$ & $C_3^2$ & $C_2$ & $C_2'$ & $C_2''$ \\
-$C_3$ &  $C_3$ & $C_3^2$ & $I$ & $C_2''$ & $C_2$ & $C_2'$ \\
-$C_3^2$ &  $C_3^2$ & $I$ & $C_3$ & $C_2'$ & $C_2''$ & $C_2$ \\
-$C_2$ &  $C_2$ & $C_2'$ & $C_2''$ & $I$ & $C_3$ & $C_3^2$ \\
-$C_2'$ &  $C_2'$ & $C_2''$ & $C_2$ & $C_3^2$ & $I$ & $C_3$ \\
-$C_2''$ &  $C_2''$ & $C_2$ & $C_2'$ & $C_3$ & $C_3^2$ & $I$ \\
+$E$ &  $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\
+$A$ &  $A$ & $E$ & $F$ & $D$ & $C$ & $B$ \\
+$B$ &  $B$ & $D$ & $E$ & $F$ & $A$ & $C$ \\
+$C$ &  $C$ & $F$ & $D$ & $E$ & $B$ & $A$ \\
+$D$ &  $D$ & $B$ & $C$ & $A$ & $F$ & $E$ \\
+$F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 \end{tabular} 
 -->
 <div id="tbl-d3_caylay_table" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -580,7 +583,7 @@ $C_2''$ &  $C_2''$ & $C_2$ & $C_2'$ & $C_3$ & $C_3^2$ & $I$ \\
 </div>
 </center>
 <p><br></p>
-<p>이 군은 여러가지 이름으로 불리지만 대표적으로 <span class="math inline">\(D_3\)</span> 라고 불린다. <span class="math inline">\(D\)</span> 는 <strong>dihedral</strong> 의 두문자이며 보통 주 대칭축에 수직인 평면에 <span class="math inline">\(\pi\)</span> 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, <span class="math inline">\(C_2,\,C_2',\,C_2''\)</span> 축이 주 대칭축과 수직한 <span class="math inline">\(\pi\)</span> 회전 대칭축이다. .</p>
+<p>이 군은 여러가지 이름으로 불리지만 대표적으로 <span class="math inline">\(D_3\)</span> 라고 불린다. <span class="math inline">\(D\)</span> 는 <strong>dihedral</strong> 의 두문자이며 보통 주 대칭축에 수직인 평면에 <span class="math inline">\(\pi\)</span> 회전 대칭축이 있을 때 붙인다. 여기서 주 대칭축은 원점을 우리가 보는 평면에 수직으로 통과하는 축이며, <span class="math inline">\(A,\,B,\,C\)</span> 축이 주 대칭축과 수직한 <span class="math inline">\(\pi\)</span> 회전 대칭축이다. .</p>
 </div>
 </div>
 <p><br></p>
@@ -680,12 +683,12 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <div class="callout-body-container">
 <div id="def-Group_homomorphism_kernel" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 4.6 (kernel)</strong></span> 동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 의 <strong>kernel</strong> <span class="math inline">\(\text{ker}(\phi)\)</span> 와 <span class="math inline">\(\text{im}(\phi)\)</span> 는 다음과 같이 정의된다.</p>
-<p><span class="math display">\[
+<p><span id="eq-Group_kernel_and_image_of_homomorphism"><span class="math display">\[
 \begin{aligned}
-\ker(\phi) &amp;:= \{g\in G : \phi (g) = 1_{G'}\},\\
+\ker(\phi) &amp;:= \{g\in G : \phi (g) = 1_{G'}\},\\[0.3em]
 \operatorname{im}(\phi) &amp;:= \{\phi(g) : g\in G\}.
 \end{aligned}
-\]</span></p>
+\tag{4.1}\]</span></span></p>
 <p>즉 <span class="math inline">\(\ker (\phi) = \phi^{-1}(\{1_{G'}\})\)</span> 이다.</p>
 </div>
 </div>
@@ -724,8 +727,21 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 <p><br></p>
 </section>
-<section id="conjugacy-class" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="conjugacy-class"><span class="header-section-number">4.4.2</span> Conjugacy Class</h3>
+<section id="sec-Group_multplication_of_subset_of_group" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="sec-Group_multplication_of_subset_of_group"><span class="header-section-number">4.4.2</span> 군의 부분집합의 연산</h3>
+<p>곱 연산으로 정의된 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(X,\, Y \subset G\)</span> 이고(부분군이 아닌 부분집합이다) <span class="math inline">\(a\in G\)</span> 일 때, <span class="math inline">\(aX,\, Xa,\, XY\)</span> 를 다음과 같이 정의한다.</p>
+<p><span id="eq-Group_multiplication_of_subset_of_group"><span class="math display">\[
+\begin{aligned}
+aX &amp;:= \{ag: g\in G\}, \\[0.3em]
+Xa&amp; := \{ga: g\in G\},\\[0.3em]
+XY &amp;:= \{xy : x\in X,\, y\in Y\}
+\end{aligned}
+\tag{4.2}\]</span></span></p>
+<p>군의 정의에 의해 <span class="math inline">\(aX\subset G,\, XY \subset G\)</span> 라는 것을 알 수 있다.</p>
+<p><br></p>
+</section>
+<section id="conjugacy-class" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="conjugacy-class"><span class="header-section-number">4.4.3</span> Conjugacy Class</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -803,6 +819,15 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(g\in K\)</span> 이면 <span class="math inline">\(g^{-1}\in \overline{K}\)</span> 이다. <span class="math inline">\((xgx^{-1})^{-1}=xg^{-1}x^{-1}\)</span> 이므로 <span class="math inline">\(g' \sim g \implies g'^{-1} \sim g^{-1}\)</span> 이다. 따라서 <span class="math inline">\(\overline{K}\)</span> 도 conjugacy class 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_conjugacy_class_of_D3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(D_3\)</span> 군의 conjugace class)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 의 Caylay table 을 이용하여 <span class="math inline">\(D_3\)</span> 의 conjugace class 를 구해보자. 우선 <span class="math inline">\(\{E\}\)</span> 는 conjugace class 이다. <span class="math inline">\(A,\,B,\,C\)</span> 는 각각 스스로의 역원이며 <span class="math inline">\(D,\,F\)</span> 는 서로간의 역원이다. <span class="math inline">\(ABA^{-1}=ABA=C\)</span> 이므로 <span class="math inline">\(B\sim C\)</span> 이다. <span class="math inline">\(BAB^{-1}=A\)</span> 이므로 <span class="math inline">\(A\sim C\)</span> 이다. 이것을 반복해보면 <span class="math inline">\(\{A,\,B,\,C\}\)</span> 가 conjugacy class 임을 알 수 있다. 또한 <span class="math inline">\(AFA^{-1}=D\)</span> 이므로 <span class="math inline">\(F\sim D\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(D_3\)</span> 군에는 아래와 같은 <span class="math inline">\(3\)</span> 개의 conjugace class 가 존재한다.</p>
+<p><span class="math display">\[
+\{E\},\qquad \{A,\,B,\,C\},\qquad \{D,\,F\}.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -823,11 +848,35 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 <div class="callout-body-container">
 <div id="def-Group_normal_subgroup" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.10 (정규부분군(불변부분군))</strong></span> <span class="math inline">\(N \le G\)</span> 이며 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}=N\)</span> 이면 <span class="math inline">\(N\)</span> 을 <span class="math inline">\(G\)</span> 의 <strong>정규부분군(normal subgroup)</strong> 혹은 <strong>불변 부분군(invariant subgroup)</strong> 이라고 하고 <span class="math inline">\(N \trianglelefteq G\)</span> 라고 표기한다.</p>
+<p><span class="theorem-title"><strong>정의 4.10 (정규부분군(불변부분군))</strong></span> <span class="math inline">\(N \le G\)</span> 이며 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}=N\)</span> 이면 <span class="math inline">\(N\)</span> 을 <span class="math inline">\(G\)</span> 의 <strong>정규부분군(normal subgroup)</strong>,<strong>불변 부분군(invariant subgroup)</strong> 혹은 <strong>normal devisor</strong> 라고 하고 <span class="math inline">\(N \trianglelefteq G\)</span> 라고 표기한다.</p>
 </div>
 </div>
 </div>
 </div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_left_and_right_cosets_of_normal_subgroup" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 의 부분군 <span class="math inline">\(N\)</span> 에 대해 다음은 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(N\trianglelefteq G\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 임의의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gN = Ng\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(x\in gN\)</span> 이면 어떤 <span class="math inline">\(n\in N\)</span> 에 대해 <span class="math inline">\(x=gn\)</span> 이며 <span class="math inline">\(x=gn=\left(gng^{-1}\right)g \in Ng\)</span> 이므로 <span class="math inline">\(gn\subset Ng\)</span> 이다. 같은 방법으로 <span class="math inline">\(Ng\subset gN\)</span> 임을 보일 수 있으며 따라서 <span class="math inline">\(gN=Ng\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\implies 1\)</span>) <span class="math inline">\(gNg^{-1}= N\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_multiplication_of_cosets_of_invariant_subgroup" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.6</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 임의의 <span class="math inline">\(x,\, y\in G\)</span> 에 대해 <span class="math inline">\(xNyN = xyN\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(xn_1yn_2 = xy(y^{-1}n_1y)n_2\)</span> 이며 <span class="math inline">\(y^{-1}n_1y =n_1'\in N\)</span> 이므로 <span class="math inline">\(xn_1yn_2 = xyn_1'n_2 \in xyN\)</span> 이다. 즉 <span class="math inline">\(xNyN \subset xyN\)</span> 이다. 또한 <span class="math inline">\(1_G\in N\)</span> 이므로 <span class="math inline">\(xyn=x1_Gyn \in xNyN\)</span> 이다. 즉 <span class="math inline">\(xyN\subset xNyN\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -853,17 +902,13 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 <p><br></p>
 </section>
-<section id="sec-Group_quotient_group" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="sec-Group_quotient_group"><span class="header-section-number">4.4.3</span> 몫군</h3>
-<p><span class="math inline">\(N\trianglelefteq G\)</span> 라고 하자. 그리고 <span class="math inline">\(N\)</span> 에 의한 왼쪽 잉여류의 집합 <span class="math inline">\(\{N,\,g_1N,\ldots,\, g_nN\}\)</span> 를 생각하자. 임의의 <span class="math inline">\(g_1,\,g_2\in G,\, n_1,\,n_2\in N\)</span> 에 대해 <span class="math inline">\(g_1n_1\in g_1N,\, g_2n_2\in g_2N\)</span> 이며</p>
+<section id="sec-Group_quotient_group" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="sec-Group_quotient_group"><span class="header-section-number">4.4.4</span> 몫군</h3>
+<p><span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(l=|G|/|N|\)</span> 개의 <span class="math inline">\(N\)</span> 의 왼쪽 잉여류가 존재하며 이 잉여류 집합을 <span class="math inline">\(X_G=\{N,\, g_1N,\ldots,\, g_{l-1}N\}\)</span> 라고 쓸 수 있다. <a href="#prp-Group_multiplication_of_cosets_of_invariant_subgroup" class="quarto-xref">명제&nbsp;<span>4.6</span></a> 에 의해 <span class="math inline">\((g_iN)(g_jN)= g_ig_jN\)</span> 인 연산을 정의 할 수 있으며 이 때 <span class="math inline">\(N\)</span> 은 항등원 역할을 한다. <span class="math inline">\((g_iN)(g_i^{-1}N)=N\)</span> 이므로 <span class="math inline">\(g_iN\)</span> 에 대한 역원도 존재한다. 또한</p>
 <p><span class="math display">\[
-g_1n_1g_2n_2 = g_1(g_2g_2^{-1})n_1g_2n_2=g_1g_2(g_2^{-1}n_1g_2)n_2
+(g_iN)[(g_jN)(g_kN)] = (g_iN)(g_jg_kN)=g_ig_jg_kN = [(g_iN)(g_jN)](g_kN)
 \]</span></p>
-<p>이다. <span class="math inline">\(N\)</span> 이 불변부분군이므로 <span class="math inline">\(g_2^{-1}n_1g_2 = n_3\)</span> 인 <span class="math inline">\(n_3\in N\)</span> 가 존재하며 따라서</p>
-<p><span class="math display">\[
-g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
-\]</span></p>
-<p>이다. 즉 <span class="math inline">\(\{N,\,g_1N,\ldots,\,g_nN\}\)</span> 에 곱셈 <span class="math inline">\((g_iN)(g_j N) = g_ig_hN\)</span> 을 정의 할 수 있다는 의미이다. 또한 <span class="math inline">\((gN)(N)= gN\)</span> 이므로 <span class="math inline">\(N\)</span> 는 이 연산에서 항등원으로 작용하며, <span class="math inline">\((gN)(g^{-1}N) = N\)</span> 이므로 <span class="math inline">\(g^{-1}N\)</span> 는 <span class="math inline">\(gN\)</span> 에 대한 영원으로 작용한다.</p>
+<p>이므로 연산의 결합법칙도 성립한다. 즉 <span class="math inline">\(X_G\)</span> 는 군이며 <span class="math inline">\(G/N\)</span> 으로 표기한다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -879,6 +924,38 @@ g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
 </div>
 <p><br></p>
 <p>위의 몫군에서 정규부분군 <span class="math inline">\(N\)</span> 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 <strong>normal divisor</strong> 라고 부르기도 한다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group_class_multiplication" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="sec-Group_class_multiplication"><span class="header-section-number">4.4.5</span> Class 곱</h3>
+<p><span class="math inline">\(G\)</span> 의 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G=\{K_1,\ldots,\,K_m\}\)</span> 를 생각하자. <span class="math inline">\(g\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+gK_i g^{-1}= K_i
+\]</span></p>
+<p>임은 쉽게 알 수 있다. 그렇다면 두 클래스의 곱은 어떻게 될 까?</p>
+<p><span class="math display">\[
+K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g
+\]</span></p>
+<p>이다. 이것은 <span class="math inline">\(K_iK_j\)</span> 가 conjugate class 일 경우 뿐만 아니라 conjugatcy class 의 합집합 일 때도 성립하며, 실제로 그러하다. <span class="math inline">\(K_i,\,K_j\)</span> 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.</p>
+<p><span id="eq-Group_class_multiplication_rule"><span class="math display">\[
+K_iK_j = \sum_k c_{ijk}K_k
+\tag{4.3}\]</span></span></p>
+<p>위 식은 <span class="math inline">\(K_iK_j\)</span> 를 계산 했을 때 <span class="math inline">\(K_k\)</span> 가 몇번 등장하는지를 표기하는 식이며 <span class="math inline">\(2K_1+3K_2\)</span> 라면 <span class="math inline">\(K_1\)</span> 이 <span class="math inline">\(2\)</span> 번 <span class="math inline">\(K_3\)</span> 가 <span class="math inline">\(3\)</span> 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_conjugacy_class_multipliciation_of_D3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.11 (<span class="math inline">\(D_3\)</span> 군의 클래스 곱)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 과 <a href="#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.10</span></a> 을 이용하여보자.</p>
+<p><span class="math display">\[
+K_1\{E\},\qquad K_2=\{A,\,B,\,C\},\qquad K_3=\{D,\,F\}
+\]</span></p>
+<p>라고 하자. <span class="math inline">\(K_2K_2\)</span> 는 총 9개의 곱이 나타나며 집합으로 표현하면 중복을 무시하지 않고 고려하면</p>
+<p><span class="math display">\[
+K_2K_2 = 3K_1+3K_3
+\]</span></p>
+<p>이다.</p>
+</div>
+</div>
+<p><br></p>
 <p><br></p>
 </section>
 <section id="연습문제" class="level3 unnumbered">
@@ -976,7 +1053,7 @@ g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
 <p>2차원 평면에서 관찰자를 <span class="math inline">\(\theta\)</span> 만큼 반시계 방향으로 회전시킬 때 관찰자를 원점으로 두는 좌표계에서의 좌표 <span class="math inline">\(P\)</span> 의 변화는 다음 행렬로 기술 할 수 있다.</p>
 <p><span id="eq-Group_2d_rotation_matrix"><span class="math display">\[
 \boldsymbol{R}(\theta) = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix}.
-\tag{4.1}\]</span></span></p>
+\tag{4.4}\]</span></span></p>
 <p>즉 <span class="math inline">\(\boldsymbol{r} = \begin{bmatrix} x \\ y \end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}'=\boldsymbol{R}(\theta)\boldsymbol{r}\)</span> 이다.</p>
 <p>이 회전을 기술하는 행렬은 <span class="math inline">\(SO(2)\)</span> 를 이루며 <span class="math inline">\(\boldsymbol{R}\in SO(2)\)</span> 이면 <span class="math inline">\(\boldsymbol{R}^T\boldsymbol{R}=\boldsymbol{RR}^T=\boldsymbol{I}\)</span> 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 <span class="math inline">\(O(2)\)</span> 에는 속하지만 행렬식이 <span class="math inline">\(-1\)</span> 이며, 따라서 <span class="math inline">\(SO(2)\)</span> 에는 속하지 않는다.</p>
 <p><br></p>
@@ -994,30 +1071,30 @@ g_1h_1g_2n_2 = g_1g_2n_3n_2 \in g_1g_2N
 <p>이다. <span class="math inline">\(\boldsymbol{R}^T\boldsymbol{R}=I\)</span> 조건에 의해 <span class="math inline">\(\boldsymbol{A}^T=-\boldsymbol{A}\)</span> 이어야 하는데 (이런 형태의 행렬을 <strong>skew-symmetric</strong> 이라고 한다) <span class="math inline">\(\mathbb{R}^{2\times 2}\)</span> 에는 이것을 만족하는 행렬은</p>
 <p><span id="eq-Group_matrix_for_infinitesimal_rotation_J_for_2d"><span class="math display">\[
 \mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}
-\tag{4.2}\]</span></span></p>
+\tag{4.5}\]</span></span></p>
 <p>와 <span class="math inline">\(-\mathcal{J}\)</span> 뿐이다. 이제 무한소 회전을 나타내는 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 은 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-Group_matrix_for_infinitesimal_rotation"><span class="math display">\[
 \boldsymbol{R}=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 &amp; \theta \\ -\theta &amp; 1 \end{bmatrix} + O(\theta^2).
-\tag{4.3}\]</span></span></p>
-<p><span class="math inline">\(\mathcal{J}\)</span> 는 반대칭 행렬이며 회전군(rotation group) 의 생성자(generator) 로 알려져 있다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 <a href="#eq-Group_matrix_for_infinitesimal_rotation" class="quarto-xref">식&nbsp;<span>4.3</span></a> 와 일치한다. (<span class="math inline">\(-\mathcal{J}\)</span> 도 있지만 <span class="math inline">\(\mathcal{J}\)</span> 를 선택한 이유이기도 하다.)</p>
+\tag{4.6}\]</span></span></p>
+<p><span class="math inline">\(\mathcal{J}\)</span> 는 반대칭 행렬이며 회전군(rotation group) 의 생성자(generator) 로 알려져 있다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 <a href="#eq-Group_matrix_for_infinitesimal_rotation" class="quarto-xref">식&nbsp;<span>4.6</span></a> 와 일치한다. (<span class="math inline">\(-\mathcal{J}\)</span> 도 있지만 <span class="math inline">\(\mathcal{J}\)</span> 를 선택한 이유이기도 하다.)</p>
 <p><span class="math display">\[
 x' \to x + \theta y,\qquad y' \to y - \theta x.
 \]</span></p>
 <p>우리는 행렬의 지수의 정의가</p>
 <p><span id="eq-Group_exponent_of_matrix"><span class="math display">\[
 e^\boldsymbol{A} := \sum_{N=0}^\infty \dfrac{\boldsymbol{A}^N}{N!} = \lim_{N \to \infty} \left[\boldsymbol{I} + \dfrac{\boldsymbol{A}}{N}\right]^N
-\tag{4.4}\]</span></span></p>
+\tag{4.7}\]</span></span></p>
 <p>와 같다는 것을 안다. 물론 위의 정의가 수렴한다는 조건에서만 그러하며 위의 두 정의는 동등하다. <span class="math inline">\(\theta\)</span> 만큼의 회전은 <span class="math inline">\(\theta/N\)</span> 의 회전을 <span class="math inline">\(N\)</span> 번 수행한 것과 같다는 것을 안다. 이것을 <span class="math inline">\(N\to \infty\)</span> 극한을 취하면</p>
 <p><span id="eq-Group_rotation_as_exponent_of_generator_in_2d"><span class="math display">\[
 \boldsymbol{R}(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[\boldsymbol{I} + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
-\tag{4.5}\]</span></span></p>
+\tag{4.8}\]</span></span></p>
 <p>와 같다.</p>
 <p>미적분학의 테일러 정리로부터 우리는 <span class="math inline">\(f\)</span> 의 모든 <span class="math inline">\(n\)</span> 차 도함수를 안다면 <span class="math inline">\(f\)</span> 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 <span class="math inline">\(SO(2)\)</span> 군의 곱 연산의 구조때문에 <span class="math inline">\(\boldsymbol{R}(\theta)\)</span> 의 첫번째 미분, 즉 <span class="math inline">\(\mathcal{J}\)</span> 만으로 <span class="math inline">\(\boldsymbol{R}(\theta)\)</span> 를 구성 할 수 있다는 것을 리 대수를 창안한 리가 발견하였다.</p>
-<p>이제 <a href="#eq-Group_rotation_as_exponent_of_generator_in_2d" class="quarto-xref">식&nbsp;<span>4.5</span></a> 가 <a href="#eq-Group_2d_rotation_matrix" class="quarto-xref">식&nbsp;<span>4.1</span></a> 와 같다는 것을 보여야 한다.</p>
+<p>이제 <a href="#eq-Group_rotation_as_exponent_of_generator_in_2d" class="quarto-xref">식&nbsp;<span>4.8</span></a> 가 <a href="#eq-Group_2d_rotation_matrix" class="quarto-xref">식&nbsp;<span>4.4</span></a> 와 같다는 것을 보여야 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_properties_of_J" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(\mathcal{J}\)</span>)</strong></span> <span class="math inline">\(\mathcal{J}\)</span> 의 거듭제곱은 다음과 같다. <span class="math display">\[
+<p><span class="theorem-title"><strong>예제 4.12 (<span class="math inline">\(\mathcal{J}\)</span>)</strong></span> <span class="math inline">\(\mathcal{J}\)</span> 의 거듭제곱은 다음과 같다. <span class="math display">\[
 \mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -\boldsymbol{I},\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=\boldsymbol{I}
 \]</span></p>
 </div>
@@ -1039,17 +1116,17 @@ e^{\theta \mathcal{J}} &amp;= \sum_{n=0}^\infty \dfrac{\theta^n \mathcal{J}^n}{n
 <p>예를 들어 <span class="math inline">\(3\)</span> 차원의 경우 모든 skew-symmetryc matrix 는</p>
 <p><span id="eq-Group_matrix_for_infinitesimal_rotation_J_for_3d"><span class="math display">\[
 \mathcal{J}_x = \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; -1 &amp; 0\end{bmatrix}, \qquad \mathcal{J}_y = \begin{bmatrix} 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0\end{bmatrix},\qquad \mathcal{J}_z = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{bmatrix}
-\tag{4.6}\]</span></span></p>
+\tag{4.9}\]</span></span></p>
 <p>의 선형결합이다. 즉 <span class="math inline">\(\boldsymbol{J} = \theta_x \mathcal{J}_x + \theta_y \mathcal{J}_y + \theta_z \mathcal{J}_z\)</span> 형태이다.</p>
 <p>중간 과정을 빼고 결론부터 말하자면 모든 3차원 회전은 다음의 형태로 나타 낼 수 있다.</p>
 <p><span id="eq-Group_rotation_as_exponent_of_generator_in_3d"><span class="math display">\[
 \boldsymbol{R}(\theta) = \exp \left(\theta_x \mathcal{J}_x + \theta_y \mathcal{J}_y + \theta_z \mathcal{J}_z\right)
-\tag{4.7}\]</span></span></p>
+\tag{4.10}\]</span></span></p>
 <p>이제 <span class="math inline">\(J_x := -i\mathcal{J}_x,\,J_y := -i\mathcal{J}_y,\,J_z := -i\mathcal{J}_z\)</span> 로 바꿔보자.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_skew_symmetric_and_hermitian" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.11 (반대칭 행렬과 에르미트 행렬)</strong></span> <span class="math inline">\(A\)</span> 가 반대칭 행렬, 즉 <span class="math inline">\(A^T=-A\)</span> 일 때 <span class="math inline">\(H=-iA\)</span> 는 에르미트 행렬이다.</p>
+<p><span class="theorem-title"><strong>예제 4.13 (반대칭 행렬과 에르미트 행렬)</strong></span> <span class="math inline">\(A\)</span> 가 반대칭 행렬, 즉 <span class="math inline">\(A^T=-A\)</span> 일 때 <span class="math inline">\(H=-iA\)</span> 는 에르미트 행렬이다.</p>
 <p><span class="math display">\[
 H^\dagger = (-iA)^\dagger = iA^T = -iA = H.
 \]</span></p>
@@ -1059,7 +1136,7 @@ H^\dagger = (-iA)^\dagger = iA^T = -iA = H.
 <p>이제 우리는 <span class="math inline">\(J_x,\,J_y,\,J_z\)</span> 가 에르미트 행렬임을 안다. 그리고</p>
 <p><span id="eq-Group_3d_rotation_using_angular_momentum_operator"><span class="math display">\[
 R(\theta) = e^{i\sum_k \theta_k J_k} = e^{i\boldsymbol{\theta \cdot J}}
-\tag{4.8}\]</span></span></p>
+\tag{4.11}\]</span></span></p>
 <p>가 된다는 것을 안다.</p>
 <p><br></p>
 </section>
@@ -1075,7 +1152,7 @@ R(\theta) = e^{i\sum_k \theta_k J_k} = e^{i\boldsymbol{\theta \cdot J}}
 <p><span class="theorem-title"><strong>정의 4.13 (교환연산자)</strong></span> 정사각 행렬 <span class="math inline">\(A,\,B\)</span> 에 대해</p>
 <p><span id="eq-Group_commutator"><span class="math display">\[
 [A,\,B] := AB-BA
-\tag{4.9}\]</span></span></p>
+\tag{4.12}\]</span></span></p>
 <p>로 정의된 연산자 <span class="math inline">\([\,,\,]\)</span> 를 <strong>교환연산자(commutator)</strong> 라고 한다.</p>
 </div>
 </div>
@@ -1086,13 +1163,13 @@ R(\theta) = e^{i\sum_k \theta_k J_k} = e^{i\boldsymbol{\theta \cdot J}}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_properties_of_J_and_commutator" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.5</strong></span> <span class="math inline">\(J_x,\,J_y,\,J_z\)</span> 와 commutator, 그리고 Levi-Civita 기호 <span class="math inline">\(\varepsilon_{ijk}\)</span> 에 대해 다음이 성립한다. <span id="eq-Group_commutator_of_angular_momentum"><span class="math display">\[
+<p><span class="theorem-title"><strong>명제 4.7</strong></span> <span class="math inline">\(J_x,\,J_y,\,J_z\)</span> 와 commutator, 그리고 Levi-Civita 기호 <span class="math inline">\(\varepsilon_{ijk}\)</span> 에 대해 다음이 성립한다. <span id="eq-Group_commutator_of_angular_momentum"><span class="math display">\[
 [J_i,\,J_j] = i\varepsilon_{ijk} J_k.
-\tag{4.10}\]</span></span></p>
+\tag{4.13}\]</span></span></p>
 </div>
 </div>
 <p><br></p>
-<p>우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다. <a href="#exm-Group_d3" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(C_2C_3=C_2'\)</span>, <span class="math inline">\(C_3C_2=C_2''\)</span> 임을 확인하라. 무한소 회전 <span class="math inline">\(R \approx I+A\)</span> 와 임의의 회전 <span class="math inline">\(R'\)</span> 에 대해 <span class="math inline">\(A^2\)</span> 이상의 항을 무시하면</p>
+<p>우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다. <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(AB=F\)</span>, <span class="math inline">\(BA=D\)</span> 임을 확인하라. 무한소 회전 <span class="math inline">\(R \approx I+A\)</span> 와 임의의 회전 <span class="math inline">\(R'\)</span> 에 대해 <span class="math inline">\(A^2\)</span> 이상의 항을 무시하면</p>
 <p><span class="math display">\[
 RR'R^{-1} \approx (I+A)R'(I-A) \approx R' + AR'-R'A
 \]</span></p>
@@ -1165,6 +1242,58 @@ RR'R^{-1} \approx I+B+AB-BA = I+B+[A,\,B]
 \{E,\,G\},\, \{E,\,F,\,G,\,H\},\, \{E,\,A,\,B,\,G\},\, \{E,\,C,\,D,\,G\},\,D_4
 \]</span></p>
 <p>의 5 개이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_2_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.7 (Tinkham 2.5)</strong></span> 같은 클래스에 속하는 성분은 같은 차수(<a href="#def-Group_properties" class="quarto-xref">정의&nbsp;<span>4.2</span></a>) 를 가짐을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x,\,y\)</span> 가 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(x=gyg^{-1}\)</span> 이라고 하자. <span class="math inline">\(x\)</span> 의 차수가 <span class="math inline">\(n\)</span> 이면 <span class="math inline">\(x^n=1_G=(gyg^{_1})=gy^ng^{-1}\)</span> 이므로 <span class="math inline">\(y^n=1_G\)</span> 이어야 한다. <span class="math inline">\(y^m=1_G = g^{-1}x^mg\)</span> 이므로 <span class="math inline">\(x^m=1_G\)</span> 이어야 한다. 따라서 <span class="math inline">\(x,\,y\)</span> 는 같은 차수여야 한다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_2_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.8 (Tinkham 2.6)</strong></span> 차수가 4 와 2 인 순환군 사이에 준동형 사상이 존재함을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(X=\langle x\rangle,\, |X|=4,\, Y=\langle y\rangle,\, |Y|=2\)</span> 라고 하자. <span class="math inline">\(\phi:X\to Y\)</span> 를 <span class="math inline">\(\phi(1_X)=\phi(x^2)=1_Y,\, \phi(x)=\phi(x^3)=y\)</span> 로 정의하자.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_2_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.9 (Tinkham 2.7)</strong></span> 군 <span class="math inline">\(G\)</span> 이 아벨군일 필요충분 조건은 <span class="math inline">\(\phi(x)=x^{-1}\)</span> 이 동형사상인 것임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\phi(x) =x^{-1}\)</span> 은 일단 단사이다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 가 아벨군임을 가정하자. <span class="math inline">\(\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 동형사상이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\phi\)</span> 가 동형사상임을 가정하자. 임의의 <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math display">\[
+xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
+\]</span></p>
+<p>이므로 <span class="math inline">\(G\)</span> 는 아벨군이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_2_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.10 (Tinkham 2.8)</strong></span> <a href="#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.3</span></a> 에서 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 보여라. 즉 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(K_i=[x],\, K_j=[y]\)</span> 라고 하자. <span class="math inline">\(K_i\)</span> 의 원소는 어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gxg^{-1}\)</span> 이며 <span class="math inline">\(K_j\)</span> 의 원소는 어떤 <span class="math inline">\(h\in G\)</span> 에 대해 <span class="math inline">\(hyh^{-1}\)</span> 이다. 따라서</p>
+<p><span class="math display">\[
+\begin{aligned}
+(gxg^{-1})(hyh^{-1}) &amp;= gx\underbrace{(g^{-1}h y h^{-1}g)}_{=y'\in K_j}g^{-1} = gxy'g^{-1}= g\underbrace{xy'x^{-1}}_{=y''\in K_j}xg^{-1}= gy''xg^{-1} \\[0.3em]
+&amp; =\left(gy''g^{-1}\right)\left(gxg^{-1}\right) \in K_jK_i
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(K_iK_k \subset K_jK_i\)</span> 이다. 대칭이므로 <span class="math inline">\(K_jK_i \subset K_iK_j\)</span> 이며 이는 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 를 의미한다.</p>
 </div>
 
 
