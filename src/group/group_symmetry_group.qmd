@@ -19,7 +19,7 @@ $$
 \bf{T}=n_1\bf{a}_1+ n_2 \bf{a}_2 + n_3 \bf{a}_3,\qquad n_1,\,n_2,\,n_3\in \Z
 $$
 
-만큼 translation 시키는 연산 $T_{n_1,n_2,n_3}$ 에 대해 불변이다. 특정한 회전 역시 결정에 대해 불변인 연산 일 수 있다. 이렇게 어떤 주어진 결정 구조에 대해 불변인 연산을 그 결정에 대한 **공간군 (space group of crystal)** 이라고 한다. 그리고 공간군중에서 translation 을 $\bf{0}$ 으로 놓았을때의 연산을 그 결정에 대한 **결정학적 점군(point symmetry of crystal)** 라고 한다. 모두 32개의 점군과 230 개의 공간군이 존재한다는 것은 잘 알려져 있다(@tinkham2012group, pp. 51 의 참고 문헌) 결정이 아닌 분자에 대해 생각하자면 여기에는 무한히 만은 점군이 있을 수 있지만 우리가 실제 대면하는 분자의 대부분은 결정학적 점군에 포함된다.
+만큼 translation 시키는 연산 $T_{n_1,n_2,n_3}$ 에 대해 불변이다. 특정한 회전 역시 결정에 대해 불변인 연산 일 수 있다. 이렇게 어떤 주어진 결정 구조에 대해 불변인 연산을 그 결정에 대한 **공간군 (space group of crystal)** 이라고 한다. 그리고 공간군중에서 translation 을 $\bf{0}$ 으로 놓았을때의 연산을 그 결정에 대한 **결정학적 점군(point symmetry of crystal)** 라고 한다. 모두 32개의 점군과 230 개의 공간군이 존재한다는 것은 잘 알려져 있다(@tinkham2012group, pp. 51 의 참고 문헌) 결정이 아닌 분자에 대해 생각하자면 여기에는 무한히 많은 점군이 있을 수 있지만 우리가 실제 대면하는 분자의 대부분은 결정학적 점군에 포함된다.
 
 </br>
 
@@ -83,6 +83,7 @@ $$
 
 ### Schoenflies 표기법
 
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_character_of_class}
 #### Point group 에 대한 Schoenflies 표기법
@@ -133,61 +134,60 @@ $$
 
 ### 단순 회전군
 
+단순 회전군을 도식화 하는데 **평사 투영(streographic prjection)** 방법이 많이 쓰이며 단순회전군에 대한 streographic projection 은 아래 그림과 같다.
+
+![간단한 점군의 stereographic projections](figures/streographic_projections_simple_point_groups.png){#fig-Group_streographic_projection_of_simple_point}
+
+
+- 단순 회전군의 주축이 평면에 대해 수직인 원점을 지나는 축이다.
+- 평면의 위쪽에 있는 대상은 $+$, 평면의 아래쪽에 있는 대상은 $\small \bigcirc$ 로 표기한다. 두개가 겹칠 경우 $\oplus$ 를 사용한다.
+- $n$-회 회전 대칭이 있을 때 속이 찬 $n$ 각형을 두어 회전중심을 표현한다. $n=2$ 일 경우에는 옆으로 긴 속이 찬 타원으로 표현한다.
+- $\sigma_h$ 대칭이 존재할 경우 단위원을 실선으로, 그렇지 않을 경우 파선(dashed line) 을 사용한다.
+- 중심을 지나는 실선은 (실선을 포함하고 평면에 수직인) 반사면을 의미한다. 
+- $n$-회 비정상 회전은 속이 빈 $n$ 각형 내부에 속이 찬 $n/2$ 각형을 둔다. 
+- 주축과 수직인 축으로 $n$-회 회전 대칭이 있을 경우 회전축과 단위원의 호가 만나는 점을 중심으로 속이 찬 타원과 같은 회전 대칭 기호를 넣는다.
+
+
+
 [Wikipedia 의 Molecular Symmetry](https://en.wikipedia.org/wiki/Molecular_symmetry) 을 참고하라.
 
 
-#### $C_n$
-
-주축에 대해 $n$ 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 $C_1,\,C_2,\,C_3,\,C_4,\,C_6$ 뿐이다. (@exr-Group_possible_Cn_symmetry_in_crystalline_solid)  
-
-
 </br>
 
+| 군 | 설명 |
+|:-----:|:-----------------------------|
+| $C_n$ | 주축에 대해 $n$ 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 $C_1,\,C_2,\,C_3,\,C_4,\,C_6$ 뿐이다. (@exr-Group_possible_Cn_symmetry_in_crystalline_solid)  |
+| $C_{nv}$ | 주축에 대해 $C_n$ 대칭이 존재하며 $n$ 개의 $\sigma_v$ 대칭도 존재하는 군.|
+| $C_{nh}$ | 주축에 대해 $C_n$ 대칭이 존재하며 $\sigma_h$ 대칭도 존재하는 군. |
+| $S_n$ | 주축에 대해 $S_n$ 대칭을 가진 군. |
+| $D_n$ | 주축과 수직한 $n$ 개의 $C_2$ 대칭축을 가진 군. $D_2$ 는 Viergrouppe 와 동형이다. |
+| $D_{nd}$ | $D_n$ 과 함께 $n$ 개의 $C_2$ 대칭축 에서 인접하는 두 대축 사이에 $\sigma_d$ 거울상 대칭면이 존재하는 군. |
+| $D_{nh}$ | $D_n$ 과 함깨 $\sigma_h$ 대칭이 존재하는 군. |
+: 단순회전군 {.info .striped .bordered #tbl-Group_simple_rotational_group}
 
-#### $C_{nv}$ 
-
-주축에 대해 $C_n$ 대칭이 존재하며 $n$ 개의 $\sigma_v$ 대칭도 존재하는 군.
-
-</br>
-
-#### $C_{nh}$
-
-주축에 대해 $C_n$ 대칭이 존재하며 $\sigma_h$ 대칭도 존재하는 군.
-
-
-</br>
-
-#### $S_n$
-
-주축에 대해 $S_n$ 대칭을 가진 군.
-
-</br>
-
-#### $D_n$
-
-주축과 수직한 $n$ 개의 $C_2$ 대칭축을 가진 군. $D_2$ 는 Viergrouppe 와 동형이다.
-
-</br>
-
-#### $D_{nd}$ 
-
-$D_n$ 과 함께 $n$ 개의 $C_2$ 대칭축 에서 인접하는 두 대축 사이에 $\sigma_d$ 거울상 대칭면이 존재하는 군.
-
-</br>
-
-#### $D_{nh}$
-
-$D_n$ 과 함깨 $\sigma_h$ 대칭이 존재하는 군.
-
-</br>
 
 </br>
 
 ### 고대칭군
 
+![정육면체 내부의 정사면체](figures/tetrahedron_in_cube.png){#fig-Group_tetrahedron_in_cube width=300}
+
 #### $T$
 
+위의 @fig-Group_tetrahedron_in_cube 와 같이 정육면체 내의 정사면체 $abcd$ 를 생각하자. 정육면체의 각 면은 $x,\,y,\,z$ 축 중 하나와 수직하며, 정육면체의 중심이 좌표계의 원점이라고 하자.
 
+정사면체의 대칭 연산은 총 12개로 아래와 같다.
+
+- $E$ : 항등연산
+- $3C2:$ $x,\,y,\,z$ 축 각각에 대한 $C_2$ 대칭  
+- $8C_3$ : 정육면체의 4개의 대각선에 대한 $2\pi/3$ 및 $4\pi/3$ 회전, 즉 8개의 $C_3$ 대칭
+
+</br>
+
+#### $T_d$
+
+
+</br>
 
 ### 연습문제 {.unnumbered}
 
@@ -223,6 +223,6 @@ $$
 \|\bf{t}+\bf{t}''\| = 2l \left|\cos \frac{2\pi}{n}\right|
 $$
 
-이다. $\bf{t}+\bf{t}''$ 역시 $xy$ 평면상의 병진벡터 이므로 $l$ 보다 크거나 같아야 한다. 즉 $\left|\cos \left(\dfrac{2\pi}{n}\right)\right| \ge \dfrac{1}{2}$ 이어야 한다. $n=5$ 인 경우 $cos(2\pi/5)\approx 0.31 < 0.5$ 이므로 $n=5$ 는 불가능하며 $n=1,\,2,\,3,\,4,\,6$ 인 경우는 가능하다.
+이다. $\bf{t}+\bf{t}''$ 역시 $xy$ 평면상의 병진벡터 이므로 $l$ 보다 크거나 같아야 한다. 즉 $\left|\cos \left(\dfrac{2\pi}{n}\right)\right| \ge \dfrac{1}{2}$ 이어야 한다. $n=5$ 인 경우 $\cos(2\pi/5)\approx 0.31 < 0.5$ 이므로 $n=5$ 는 불가능하며 $n=1,\,2,\,3,\,4,\,6$ 인 경우는 가능하다.
 
 :::

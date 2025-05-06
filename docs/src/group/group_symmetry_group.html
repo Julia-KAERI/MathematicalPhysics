@@ -365,7 +365,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \boldsymbol{T}=n_1\boldsymbol{a}_1+ n_2 \boldsymbol{a}_2 + n_3 \boldsymbol{a}_3,\qquad n_1,\,n_2,\,n_3\in \mathbb{Z}
 \]</span></p>
-<p>만큼 translation 시키는 연산 <span class="math inline">\(T_{n_1,n_2,n_3}\)</span> 에 대해 불변이다. 특정한 회전 역시 결정에 대해 불변인 연산 일 수 있다. 이렇게 어떤 주어진 결정 구조에 대해 불변인 연산을 그 결정에 대한 <strong>공간군 (space group of crystal)</strong> 이라고 한다. 그리고 공간군중에서 translation 을 <span class="math inline">\(\boldsymbol{0}\)</span> 으로 놓았을때의 연산을 그 결정에 대한 <strong>결정학적 점군(point symmetry of crystal)</strong> 라고 한다. 모두 32개의 점군과 230 개의 공간군이 존재한다는 것은 잘 알려져 있다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>, pp.&nbsp;51 의 참고 문헌) 결정이 아닌 분자에 대해 생각하자면 여기에는 무한히 만은 점군이 있을 수 있지만 우리가 실제 대면하는 분자의 대부분은 결정학적 점군에 포함된다.</p>
+<p>만큼 translation 시키는 연산 <span class="math inline">\(T_{n_1,n_2,n_3}\)</span> 에 대해 불변이다. 특정한 회전 역시 결정에 대해 불변인 연산 일 수 있다. 이렇게 어떤 주어진 결정 구조에 대해 불변인 연산을 그 결정에 대한 <strong>공간군 (space group of crystal)</strong> 이라고 한다. 그리고 공간군중에서 translation 을 <span class="math inline">\(\boldsymbol{0}\)</span> 으로 놓았을때의 연산을 그 결정에 대한 <strong>결정학적 점군(point symmetry of crystal)</strong> 라고 한다. 모두 32개의 점군과 230 개의 공간군이 존재한다는 것은 잘 알려져 있다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>, pp.&nbsp;51 의 참고 문헌) 결정이 아닌 분자에 대해 생각하자면 여기에는 무한히 많은 점군이 있을 수 있지만 우리가 실제 대면하는 분자의 대부분은 결정학적 점군에 포함된다.</p>
 <p><br></p>
 <section id="결정학적-점군-구성" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="결정학적-점군-구성"><span class="header-section-number">6.1.1</span> 결정학적 점군 구성</h3>
@@ -443,48 +443,100 @@ window.Quarto = {
 <p><br></p>
 <section id="단순-회전군" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</h3>
+<p>단순 회전군을 도식화 하는데 <strong>평사 투영(streographic prjection)</strong> 방법이 많이 쓰이며 단순회전군에 대한 streographic projection 은 아래 그림과 같다.</p>
+<div id="fig-Group_streographic_projection_of_simple_point" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_streographic_projection_of_simple_point-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/streographic_projections_simple_point_groups.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_streographic_projection_of_simple_point-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.1: 간단한 점군의 stereographic projections
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>단순 회전군의 주축이 평면에 대해 수직인 원점을 지나는 축이다.</li>
+<li>평면의 위쪽에 있는 대상은 <span class="math inline">\(+\)</span>, 평면의 아래쪽에 있는 대상은 <span class="math inline">\(\small \bigcirc\)</span> 로 표기한다. 두개가 겹칠 경우 <span class="math inline">\(\oplus\)</span> 를 사용한다.</li>
+<li><span class="math inline">\(n\)</span>-회 회전 대칭이 있을 때 속이 찬 <span class="math inline">\(n\)</span> 각형을 두어 회전중심을 표현한다. <span class="math inline">\(n=2\)</span> 일 경우에는 옆으로 긴 속이 찬 타원으로 표현한다.</li>
+<li><span class="math inline">\(\sigma_h\)</span> 대칭이 존재할 경우 단위원을 실선으로, 그렇지 않을 경우 파선(dashed line) 을 사용한다.</li>
+<li>중심을 지나는 실선은 (실선을 포함하고 평면에 수직인) 반사면을 의미한다.</li>
+<li><span class="math inline">\(n\)</span>-회 비정상 회전은 속이 빈 <span class="math inline">\(n\)</span> 각형 내부에 속이 찬 <span class="math inline">\(n/2\)</span> 각형을 둔다.</li>
+<li>주축과 수직인 축으로 <span class="math inline">\(n\)</span>-회 회전 대칭이 있을 경우 회전축과 단위원의 호가 만나는 점을 중심으로 속이 찬 타원과 같은 회전 대칭 기호를 넣는다.</li>
+</ul>
 <p><a href="https://en.wikipedia.org/wiki/Molecular_symmetry">Wikipedia 의 Molecular Symmetry</a> 을 참고하라.</p>
-<section id="c_n" class="level4">
-<h4 class="anchored" data-anchor-id="c_n"><span class="math inline">\(C_n\)</span></h4>
-<p>주축에 대해 <span class="math inline">\(n\)</span> 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 <span class="math inline">\(C_1,\,C_2,\,C_3,\,C_4,\,C_6\)</span> 뿐이다. (<a href="#exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>)</p>
 <p><br></p>
-</section>
-<section id="c_nv" class="level4">
-<h4 class="anchored" data-anchor-id="c_nv"><span class="math inline">\(C_{nv}\)</span></h4>
-<p>주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\sigma_v\)</span> 대칭도 존재하는 군.</p>
+<table class="table-info table-striped table-bordered caption-top table">
+<caption>단순회전군</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">군</th>
+<th style="text-align: left;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(C_n\)</span></td>
+<td style="text-align: left;">주축에 대해 <span class="math inline">\(n\)</span> 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 <span class="math inline">\(C_1,\,C_2,\,C_3,\,C_4,\,C_6\)</span> 뿐이다. (<a href="#exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(C_{nv}\)</span></td>
+<td style="text-align: left;">주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\sigma_v\)</span> 대칭도 존재하는 군.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(C_{nh}\)</span></td>
+<td style="text-align: left;">주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(\sigma_h\)</span> 대칭도 존재하는 군.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(S_n\)</span></td>
+<td style="text-align: left;">주축에 대해 <span class="math inline">\(S_n\)</span> 대칭을 가진 군.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(D_n\)</span></td>
+<td style="text-align: left;">주축과 수직한 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축을 가진 군. <span class="math inline">\(D_2\)</span> 는 Viergrouppe 와 동형이다.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(D_{nd}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_n\)</span> 과 함께 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축 에서 인접하는 두 대축 사이에 <span class="math inline">\(\sigma_d\)</span> 거울상 대칭면이 존재하는 군.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(D_{nh}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_n\)</span> 과 함깨 <span class="math inline">\(\sigma_h\)</span> 대칭이 존재하는 군.</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-</section>
-<section id="c_nh" class="level4">
-<h4 class="anchored" data-anchor-id="c_nh"><span class="math inline">\(C_{nh}\)</span></h4>
-<p>주축에 대해 <span class="math inline">\(C_n\)</span> 대칭이 존재하며 <span class="math inline">\(\sigma_h\)</span> 대칭도 존재하는 군.</p>
-<p><br></p>
-</section>
-<section id="s_n" class="level4">
-<h4 class="anchored" data-anchor-id="s_n"><span class="math inline">\(S_n\)</span></h4>
-<p>주축에 대해 <span class="math inline">\(S_n\)</span> 대칭을 가진 군.</p>
-<p><br></p>
-</section>
-<section id="d_n" class="level4">
-<h4 class="anchored" data-anchor-id="d_n"><span class="math inline">\(D_n\)</span></h4>
-<p>주축과 수직한 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축을 가진 군. <span class="math inline">\(D_2\)</span> 는 Viergrouppe 와 동형이다.</p>
-<p><br></p>
-</section>
-<section id="d_nd" class="level4">
-<h4 class="anchored" data-anchor-id="d_nd"><span class="math inline">\(D_{nd}\)</span></h4>
-<p><span class="math inline">\(D_n\)</span> 과 함께 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(C_2\)</span> 대칭축 에서 인접하는 두 대축 사이에 <span class="math inline">\(\sigma_d\)</span> 거울상 대칭면이 존재하는 군.</p>
-<p><br></p>
-</section>
-<section id="d_nh" class="level4">
-<h4 class="anchored" data-anchor-id="d_nh"><span class="math inline">\(D_{nh}\)</span></h4>
-<p><span class="math inline">\(D_n\)</span> 과 함깨 <span class="math inline">\(\sigma_h\)</span> 대칭이 존재하는 군.</p>
-<p><br></p>
-<p><br></p>
-</section>
 </section>
 <section id="고대칭군" class="level3" data-number="6.2.2">
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</h3>
+<div id="fig-Group_tetrahedron_in_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_tetrahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/tetrahedron_in_cube.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_tetrahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.2: 정육면체 내부의 정사면체
+</figcaption>
+</figure>
+</div>
 <section id="t" class="level4">
 <h4 class="anchored" data-anchor-id="t"><span class="math inline">\(T\)</span></h4>
+<p>위의 <a href="#fig-Group_tetrahedron_in_cube" class="quarto-xref">그림&nbsp;<span>6.2</span></a> 와 같이 정육면체 내의 정사면체 <span class="math inline">\(abcd\)</span> 를 생각하자. 정육면체의 각 면은 <span class="math inline">\(x,\,y,\,z\)</span> 축 중 하나와 수직하며, 정육면체의 중심이 좌표계의 원점이라고 하자.</p>
+<p>정사면체의 대칭 연산은 총 12개로 아래와 같다.</p>
+<ul>
+<li><span class="math inline">\(E\)</span> : 항등연산</li>
+<li><span class="math inline">\(3C2:\)</span> <span class="math inline">\(x,\,y,\,z\)</span> 축 각각에 대한 <span class="math inline">\(C_2\)</span> 대칭<br>
+</li>
+<li><span class="math inline">\(8C_3\)</span> : 정육면체의 4개의 대각선에 대한 <span class="math inline">\(2\pi/3\)</span> 및 <span class="math inline">\(4\pi/3\)</span> 회전, 즉 8개의 <span class="math inline">\(C_3\)</span> 대칭</li>
+</ul>
+<p><br></p>
+</section>
+<section id="t_d" class="level4">
+<h4 class="anchored" data-anchor-id="t_d"><span class="math inline">\(T_d\)</span></h4>
+<p><br></p>
 </section>
 </section>
 <section id="연습문제" class="level3 unnumbered">
@@ -508,7 +560,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \|\boldsymbol{t}+\boldsymbol{t}''\| = 2l \left|\cos \frac{2\pi}{n}\right|
 \]</span></p>
-<p>이다. <span class="math inline">\(\boldsymbol{t}+\boldsymbol{t}''\)</span> 역시 <span class="math inline">\(xy\)</span> 평면상의 병진벡터 이므로 <span class="math inline">\(l\)</span> 보다 크거나 같아야 한다. 즉 <span class="math inline">\(\left|\cos \left(\dfrac{2\pi}{n}\right)\right| \ge \dfrac{1}{2}\)</span> 이어야 한다. <span class="math inline">\(n=5\)</span> 인 경우 <span class="math inline">\(cos(2\pi/5)\approx 0.31 &lt; 0.5\)</span> 이므로 <span class="math inline">\(n=5\)</span> 는 불가능하며 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 인 경우는 가능하다.</p>
+<p>이다. <span class="math inline">\(\boldsymbol{t}+\boldsymbol{t}''\)</span> 역시 <span class="math inline">\(xy\)</span> 평면상의 병진벡터 이므로 <span class="math inline">\(l\)</span> 보다 크거나 같아야 한다. 즉 <span class="math inline">\(\left|\cos \left(\dfrac{2\pi}{n}\right)\right| \ge \dfrac{1}{2}\)</span> 이어야 한다. <span class="math inline">\(n=5\)</span> 인 경우 <span class="math inline">\(\cos(2\pi/5)\approx 0.31 &lt; 0.5\)</span> 이므로 <span class="math inline">\(n=5\)</span> 는 불가능하며 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 인 경우는 가능하다.</p>
 </div>
 
 

@@ -414,7 +414,7 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_trivial_representation" class="theorem example">
-<p><span class="theorem-title"><strong>예제 5.1 (Trivial representation)</strong></span> 임의의 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(\phi_n : G \to GL_n\)</span> 을 <span class="math inline">\(\phi_n(g) = I_n\)</span> 으로 정의하자. 여기서 <span class="math inline">\(I_n\)</span> 은 <span class="math inline">\(n \times n\)</span> 항등행렬이다. <span class="math inline">\(\phi_n \in \text{Hom}(G,\,GL_n)\)</span> 이며 따라서 <span class="math inline">\(G\)</span> 의 표현이다. 가장 단순한 표현이므로 <strong>trivial representation</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>예제 5.1 (Trivial representation)</strong></span> 임의의 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(D^{(1)}: G \to GL_1\)</span> 을 <span class="math inline">\(D^{(1)}(g) = [1]\)</span> 로 정의하면 <span class="math inline">\(D^{(1)}\)</span> 은 <span class="math inline">\(G\)</span> 에 대한 표현이다. 가장 단순한 표현이므로 <strong>trivial representation</strong> (<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span> 는 identical representation 이라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
@@ -1681,9 +1681,89 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="group_introduction.html#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span>4.6</span></a> 에서 보았듯이 class 의 갯수가 <span class="math inline">\(5\)</span> 이므로 동등하지 않은 기약표현의 개수도 5 이다.</p>
-<p>(<span class="math inline">\(b\)</span>) 클래스를 <span class="math inline">\(E\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(AB\)</span>, <span class="math inline">\(CD\)</span>, <span class="math inline">\(FG\)</span> 로 표현하자. <span class="math inline">\(N_R=N_C=5\)</span> 이며 <strong>(R1)</strong> 을 만족하는 경우는 <span class="math inline">\(d_1=d_2=d_3=d_4=1,\, d_5=2\)</span> 뿐이다.</p>
+<p>(<span class="math inline">\(b\)</span>) 클래스를 <a href="group_introduction.html#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span>4.6</span></a> 의 (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\(K_1,\,K_2,\,K_3,\,K_4,\,K_5\)</span> 로 표기하는데 클래스의 원소의 개수가 중요하므로 클래스명에 윗첨자로 클래스의 원소의 개수를 표기하자. <span class="math inline">\(N_R=N_C=5\)</span> 이며 <strong>(R1)</strong> 을 만족하는 경우는 <span class="math inline">\(d_1=d_2=d_3=d_4=1,\, d_5=2\)</span> 뿐이다. 1차원 기약표현이 <span class="math inline">\(4\)</span> 종류 2차원 기약표현이 <span class="math inline">\(1\)</span> 종류이다. 1차원 기약표현을 <span class="math inline">\(\Gamma_{11},\ldots,\Gamma_{14}\)</span> 라고 표기하고 2차원 기약표현을 <span class="math inline">\(\Gamma_2\)</span> 라고 하자. 아래와 같은 표를 채우면 된다.</p>
+<div id="fig-Group_D4_character_table_templete" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_D4_character_table_templete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D4_character_table_templete.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_templete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5.2: <span class="math inline">\(D_4\)</span> character table templete
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(K_1 = \{E\}\)</span>, 즉 항등원 뿐이므로 첫번째 행은 차원과 같다.</li>
+<li><span class="math inline">\(\Gamma_1\)</span> 은 trivial representation 으로 한다. 즉 모든 값이 <span class="math inline">\(1\)</span> 이다.</li>
+<li>Character 에 대한 제 2 직교정리(<a href="#eq-Group_c8" class="quarto-xref">식&nbsp;<span>5.37</span></a>) 를 사용한다. 각각의 class 에 대해 수행하면 <span class="math inline">\(\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4\)</span>, <span class="math inline">\(\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0\)</span> 이다. 여기서 <span class="math inline">\(\chi^{(\Gamma_2)}(K_1=\{E\})=2\)</span> 이다.</li>
+<li>Character 에 대한 제 1 직교정리(<a href="#eq-Group_c7" class="quarto-xref">식&nbsp;<span>5.36</span></a>) 를 <span class="math inline">\(i=\Gamma_{11},\, j=\Gamma_2\)</span> 에 적용하면 <span class="math inline">\(\chi^{(\Gamma_2)}(K_5)=-2\)</span> 이다.</li>
+</ul>
+<div id="fig-Group_D4_character_table_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_D4_character_table_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D4_character_table_1.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5.3: <span class="math inline">\(D_4\)</span> character table #1
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Character 에 대한 제 2 직교정리(<a href="#eq-Group_c8" class="quarto-xref">식&nbsp;<span>5.37</span></a>) 를 <span class="math inline">\(K_1\)</span> 과 <span class="math inline">\(K_5\)</span> 에 적용하자. <span class="math inline">\(K_5\)</span> 의 빈 칸을 위서부터 차례로 <span class="math inline">\(a,\,b,\,c\)</span> 라고 하면 <span class="math inline">\(1+a+b+c-4=0\)</span> 이므로 <span class="math inline">\(a+b+c=3\)</span> 이며 <span class="math inline">\(a,\,b,\,c\)</span> 가 모두 1차원 표현의 character 이므로 <span class="math inline">\(|a|=|b|=|c|=1\)</span> 이어야 한다. 이것을 만족하는 것은 <span class="math inline">\(a=b=c=1\)</span> 뿐이다.</li>
+</ul>
+<div id="fig-Group_D4_character_table_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_D4_character_table_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D4_character_table_2.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5.4: <span class="math inline">\(D_4\)</span> character table #2
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>이제 미지수가 <span class="math inline">\(3\times 3 = 9\)</span> 개 남았다. 이 <span class="math inline">\(3\times 3\)</span> 행렬에 대해 아는 것은 (<span class="math inline">\(i\)</span>) 모두 성분이 2개인 클래스에 대한 1차원 기약표현 뿐이므로 절대값은 모두 <span class="math inline">\(1\)</span> 이고(<strong>R4</strong>), (<span class="math inline">\(ii\)</span>) 각 행의 합은 <span class="math inline">\(-1\)</span>(<strong>R7</strong>), (<span class="math inline">\(iii\)</span>) 각 열의 합도 <span class="math inline">\(-1\)</span>(<strong>R8</strong>), (<span class="math inline">\(iii\)</span>) 서로 다른 행벡터의 내적은 <span class="math inline">\(-1\)</span>, (<span class="math inline">\(iv\)</span>) 서로 다른 열벡터의 내적도 <span class="math inline">\(-1\)</span> 이란 것이다. 또한 <span class="math inline">\(\Gamma_{12}...\Gamma_{14}\)</span> 를 구별하는 어떤 것도 없다. 따라서 이 조건을 만족하는 값을 구한 후 순서에 상관 없이 넣으면 된다. 이로부터,</li>
+</ul>
+<div id="fig-Group_D4_character_table" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_D4_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D4_character_table_3.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5.5: <span class="math inline">\(D_4\)</span> character table
+</figcaption>
+</figure>
+</div>
 </div>
 <p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.11 (Tinkham 3.2)</strong></span> Trivial representation <span class="math inline">\(D^{(1)}\)</span> 을 제외하고 <span class="math inline">\(\displaystyle \sum_{g\in G}\chi^{(j)}(g) = 0\)</span> 임을 보여라. Trivial represesntation 에서 그 값은 얼마인가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>Character 에 대한 제 1 직교정리를 이용한다. 군 <span class="math inline">\(G\)</span> 의 conjugate class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. Trivial representatin <span class="math inline">\(D^{(1)}\)</span> 에 대해 <span class="math inline">\(\chi^{(1)}(K_i)=\left(\chi^{(1)}(K_i)\right)^\ast = 1\)</span> 이므로 <span class="math display">\[
+\sum_{g\in G} \chi^{(j)}(g) = \sum_{K_i \in \mathcal{K}_G} |K_i| \chi^{(j)}(K_i) = \sum_{k\in K_G} |K_i| \chi^{(1)}(K_i)\chi^{(j)}(K_i) = |G|\delta_{1i}
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(j\ne 1\)</span> 이면 <span class="math inline">\(0\)</span> 이며 <span class="math inline">\(j=1\)</span> 이면 <span class="math inline">\(|G|\)</span> 이다.</p>
+</div>
+<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.12 (Tinkham 3.4)</strong></span> 정칙표현을 사용하여</p>
+<p><span class="math display">\[
+\sum_j d_j \chi^{(j)}(g) = \left \{ \begin{array}{ll} |G|, \qquad &amp;\text{if } g=i_G, \\ 0, &amp; \text{otherwise},\end{array}\right.
+\]</span></p>
+<p>임을 보여라. <span class="math inline">\(d_i\)</span> 는 <span class="math inline">\(D^{(i)}\)</span> 의 차원이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-Group_regular_representation_and_non_trivial_character" class="quarto-xref">명제&nbsp;<span>5.10</span></a> 과 <a href="#thm-Group_regular_representation" class="quarto-xref">정리&nbsp;<span>5.9</span></a> 를 생각하자.</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
