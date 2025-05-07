@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-80f14e4a860245008e4f904c7c86406d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -528,10 +528,68 @@ window.Quarto = {
 <p>정사면체의 대칭 연산은 총 12개로 아래와 같다.</p>
 <ul>
 <li><span class="math inline">\(E\)</span> : 항등연산</li>
-<li><span class="math inline">\(3C2:\)</span> <span class="math inline">\(x,\,y,\,z\)</span> 축 각각에 대한 <span class="math inline">\(C_2\)</span> 대칭<br>
+<li><span class="math inline">\(3C_2:\)</span> <span class="math inline">\(x,\,y,\,z\)</span> 축 각각에 대한 <span class="math inline">\(C_2\)</span> 대칭<br>
 </li>
 <li><span class="math inline">\(8C_3\)</span> : 정육면체의 4개의 대각선에 대한 <span class="math inline">\(2\pi/3\)</span> 및 <span class="math inline">\(4\pi/3\)</span> 회전, 즉 8개의 <span class="math inline">\(C_3\)</span> 대칭</li>
 </ul>
+<p>각 연산에 대해 정사면체 <span class="math inline">\(abcd\)</span> 가 어떻게 변화하는지는 아래 <a href="#tbl-Group_T_elements" class="quarto-xref">표&nbsp;<span>6.1</span></a> 에 정리하였다. 이 테이블에서 <span class="math inline">\(C_{2x}\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 <span class="math inline">\(\pi\)</span> 회전에 대해 원래의 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 가 어느 위치로 변하는지를 순서대로 나열한 것이다. <span class="math inline">\(C_{3a}\)</span> 는 <span class="math inline">\(a\)</span> 에서 정사면체의 맞은편 면을 보았을 때의 시계방향으로 <span class="math inline">\(2\pi/3\)</span> 만큼 시계방향으로 회전시켰을때의 변화이며, <span class="math inline">\(C_{3a2}\)</span> 는 같은 방향에서 <span class="math inline">\(4\pi2\)</span> 만큼 시계방향으로 회전시켰을 때의 변화이다.</p>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|c } 
+\hline  
+$T$ & result \\ 
+\hline 
+$E$       & $abcd$ \\
+$C_{2x}$  & $badc$  \\
+$C_{2y}$  & $dcba$ \\
+$C_{2z}$  & $cdab$ \\
+$C_{3a}$  & $adbc$ \\
+$C_{3a2}$ & $acdb$\\
+$C_{3b}$  & $cbda$\\
+$C_{3b2}$ & $dbac$\\
+$C_{3c}$  & $dacb$  \\
+$C_{3c2}$ & $bdca$\\
+$C_{3d}$  & $bcad$\\
+$C_{3d2}$ & $cabd$\\
+\hline
+\end{tabular} -->
+<div id="tbl-Group_T_elements" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.1: <span class="math inline">\(T\)</span> 의 성분
+</figcaption>
+<div aria-describedby="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/T_elements.png" class="img-fluid figure-img" width="100">
+</div>
+</figure>
+</div>
+<p>이제 Caylay table 을 만들어 보자.</p>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccccccccccccc } 
+\hline  
+$T$ & $E$ & $C_{2x}$ & $C_{2y}$ & $C_{2z}$ & $C_{3a}$ & $C_{3a2}$ & $C_{3b}$ & $C_{3b2}$ & $C_{3c}$ & $C_{3c2}$ & $C_{3d}$ & $C_{3d2}$ \\ 
+\hline 
+$E$ &       $E$ &  $C_{2x}$ &  $C_{2y}$ &  $C_{2z}$ &  $C_{3a}$ & $C_{3a2}$ &  $C_{3b}$ & $C_{3b2}$ &  $C_{3c}$ & $C_{3c2}$ &  $C_{3d}$ & $C_{3d2}$ \\ 
+$C2x$ &  $C_{2x}$ &       $E$ &  $C_{2z}$ &  $C_{2y}$ &  $C_{3d}$ & $C_{3c2}$ &  $C_{3c}$ & $C_{3d2}$ &  $C_{3b}$ & $C_{3a2}$ &  $C_{3a}$ & $C_{3b2}$ \\ 
+$C2y$ &  $C_{2y}$ &  $C_{2z}$ &       $E$ &  $C_{2x}$ &  $C_{3c}$ & $C_{3b2}$ &  $C_{3d}$ & $C_{3a2}$ &  $C_{3a}$ & $C_{3d2}$ &  $C_{3b}$ & $C_{3c2}$ \\ 
+$C2z$ &  $C_{2z}$ &  $C_{2y}$ &  $C_{2x}$ &       $E$ &  $C_{3b}$ & $C_{3d2}$ &  $C_{3a}$ & $C_{3c2}$ &  $C_{3d}$ & $C_{3b2}$ &  $C_{3c}$ & $C_{3a2}$ \\ 
+$C3a$ &  $C_{3a}$ &  $C_{3c}$ &  $C_{3b}$ &  $C_{3d}$ & $C_{3a2}$ &       $E$ & $C_{3c2}$ &  $C_{2z}$ & $C_{3d2}$ &  $C_{2y}$ & $C_{3b2}$ &  $C_{2x}$ \\ 
+$C3a2$ & $C_{3a2}$ & $C_{3d2}$ & $C_{3c2}$ & $C_{3b2}$ &       $E$ &  $C_{3a}$ &  $C_{2y}$ &  $C_{3d}$ &  $C_{2x}$ &  $C_{3b}$ &  $C_{2z}$ &  $C_{3c}$ \\ 
+$C3b$ &  $C_{3b}$ &  $C_{3d}$ &  $C_{3a}$ &  $C_{3c}$ & $C_{3d2}$ &  $C_{2z}$ & $C_{3b2}$ &       $E$ & $C_{3a2}$ &  $C_{2x}$ & $C_{3c2}$ &  $C_{2y}$ \\ 
+$C3b2$ & $C_{3b2}$ & $C_{3c2}$ & $C_{3d2}$ & $C_{3a2}$ &  $C_{2y}$ &  $C_{3c}$ &       $E$ &  $C_{3b}$ &  $C_{2z}$ &  $C_{3d}$ &  $C_{2x}$ &  $C_{3a}$ \\ 
+$C3c$ &  $C_{3c}$ &  $C_{3a}$ &  $C_{3d}$ &  $C_{3b}$ & $C_{3b2}$ &  $C_{2y}$ & $C_{3d2}$ &  $C_{2x}$ & $C_{3c2}$ &       $E$ & $C_{3a2}$ &  $C_{2z}$ \\ 
+$C3c2$ & $C_{3c2}$ & $C_{3b2}$ & $C_{3a2}$ & $C_{3d2}$ &  $C_{2x}$ &  $C_{3d}$ &  $C_{2z}$ &  $C_{3a}$ &       $E$ &  $C_{3c}$ &  $C_{2y}$ &  $C_{3b}$ \\ 
+$C3d$ &  $C_{3d}$ &  $C_{3b}$ &  $C_{3c}$ &  $C_{3a}$ & $C_{3c2}$ &  $C_{2x}$ & $C_{3a2}$ &  $C_{2y}$ & $C_{3b2}$ &  $C_{2z}$ & $C_{3d2}$ &       $E$ \\ 
+$C3d2$ & $C_{3d2}$ & $C_{3a2}$ & $C_{3b2}$ & $C_{3c2}$ &  $C_{2z}$ &  $C_{3b}$ &  $C_{2x}$ &  $C_{3c}$ &  $C_{2y}$ &  $C_{3a}$ &       $E$ &  $C_{3d}$ \\
+\hline
+\end{tabular} -->
+<div id="tbl-Group_T_caylay_table" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.2: <span class="math inline">\(T\)</span> 의 Caylay table
+</figcaption>
+<div aria-describedby="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/T_caylay_table.png" class="img-fluid figure-img" width="600">
+</div>
+</figure>
+</div>
 <p><br></p>
 </section>
 <section id="t_d" class="level4">
