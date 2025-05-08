@@ -320,6 +320,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#단순-회전군" id="toc-단순-회전군" class="nav-link" data-scroll-target="#단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</a></li>
   <li><a href="#고대칭군" id="toc-고대칭군" class="nav-link" data-scroll-target="#고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</a></li>
+  <li><a href="#sec-Group_crystall_system_and_symmetry_operations" id="toc-sec-Group_crystall_system_and_symmetry_operations" class="nav-link" data-scroll-target="#sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">6.2.3</span> 결정계와 대칭</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   </ul>
@@ -465,8 +466,13 @@ window.Quarto = {
 </ul>
 <p><a href="https://en.wikipedia.org/wiki/Molecular_symmetry">Wikipedia 의 Molecular Symmetry</a> 을 참고하라.</p>
 <p><br></p>
+<div id="tbl-Group_simple_rotational_group" class="info striped bordered quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_simple_rotational_group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.1: 단순회전군
+</figcaption>
+<div aria-describedby="tbl-Group_simple_rotational_group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-info table-striped table-bordered caption-top table">
-<caption>단순회전군</caption>
 <colgroup>
 <col style="width: 18%">
 <col style="width: 81%">
@@ -508,6 +514,9 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p><br></p>
 </section>
 <section id="고대칭군" class="level3" data-number="6.2.2">
@@ -532,7 +541,7 @@ window.Quarto = {
 </li>
 <li><span class="math inline">\(8C_3\)</span> : 정육면체의 4개의 대각선에 대한 <span class="math inline">\(2\pi/3\)</span> 및 <span class="math inline">\(4\pi/3\)</span> 회전, 즉 8개의 <span class="math inline">\(C_3\)</span> 대칭</li>
 </ul>
-<p>각 연산에 대해 정사면체 <span class="math inline">\(abcd\)</span> 가 어떻게 변화하는지는 아래 <a href="#tbl-Group_T_elements" class="quarto-xref">표&nbsp;<span>6.1</span></a> 에 정리하였다. 이 테이블에서 <span class="math inline">\(C_{2x}\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 <span class="math inline">\(\pi\)</span> 회전에 대해 원래의 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 가 어느 위치로 변하는지를 순서대로 나열한 것이다. <span class="math inline">\(C_{3a}\)</span> 는 <span class="math inline">\(a\)</span> 에서 정사면체의 맞은편 면을 보았을 때의 시계방향으로 <span class="math inline">\(2\pi/3\)</span> 만큼 시계방향으로 회전시켰을때의 변화이며, <span class="math inline">\(C_{3a2}\)</span> 는 같은 방향에서 <span class="math inline">\(4\pi2\)</span> 만큼 시계방향으로 회전시켰을 때의 변화이다.</p>
+<p>각 연산에 대해 정사면체 <span class="math inline">\(abcd\)</span> 가 어떻게 변화하는지는 아래 <a href="#tbl-Group_T_elements" class="quarto-xref">표&nbsp;<span>6.2</span></a> 에 정리하였다. 이 테이블에서 <span class="math inline">\(C_{2x}\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 <span class="math inline">\(\pi\)</span> 회전에 대해 원래의 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 가 어느 위치로 변하는지를 순서대로 나열한 것이다. <span class="math inline">\(C_{3a}\)</span> 는 <span class="math inline">\(a\)</span> 에서 정사면체의 맞은편 면을 보았을 때의 시계방향으로 <span class="math inline">\(2\pi/3\)</span> 만큼 시계방향으로 회전시켰을때의 변화이며, <span class="math inline">\(C_{3a2}\)</span> 는 같은 방향에서 <span class="math inline">\(4\pi2\)</span> 만큼 시계방향으로 회전시켰을 때의 변화이다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|c } 
 \hline  
 $T$ & result \\ 
@@ -543,7 +552,7 @@ $C_{2y}$  & $dcba$ \\
 $C_{2z}$  & $cdab$ \\
 $C_{3a}$  & $adbc$ \\
 $C_{3a2}$ & $acdb$\\
-$C_{3b}$  & $cbda$\\
+$C_{3b}$  & $cbda$\\`
 $C_{3b2}$ & $dbac$\\
 $C_{3c}$  & $dacb$  \\
 $C_{3c2}$ & $bdca$\\
@@ -554,7 +563,7 @@ $C_{3d2}$ & $cabd$\\
 <div id="tbl-Group_T_elements" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.1: <span class="math inline">\(T\)</span> 의 성분
+표&nbsp;6.2: <span class="math inline">\(T\)</span> 의 성분
 </figcaption>
 <div aria-describedby="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/T_elements.png" class="img-fluid figure-img" width="100">
@@ -583,19 +592,140 @@ $C3d2$ & $C_{3d2}$ & $C_{3a2}$ & $C_{3b2}$ & $C_{3c2}$ &  $C_{2z}$ &  $C_{3b}$ &
 <div id="tbl-Group_T_caylay_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.2: <span class="math inline">\(T\)</span> 의 Caylay table
+표&nbsp;6.3: <span class="math inline">\(T\)</span> 의 Caylay table
 </figcaption>
 <div aria-describedby="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/T_caylay_table.png" class="img-fluid figure-img" width="600">
 </div>
 </figure>
 </div>
-<p><br></p>
+<p><span class="math inline">\(T\)</span> 의 class 는 다음과 같다. <span class="math display">\[
+\{E\},\qquad \{C_{2x},\,C_{2y},\, C_{2z} \},\qquad \{ C_{3a},\, C_{3b}, \, C_{3c}, \, C_{3d}\},\qquad\{ C_{3a2},\, C_{3b2}, \, C_{3c2}, \, C_{3d2}\}
+\]</span> <br></p>
 </section>
 <section id="t_d" class="level4">
 <h4 class="anchored" data-anchor-id="t_d"><span class="math inline">\(T_d\)</span></h4>
+<p><span class="math inline">\(T_d\)</span> 는 <span class="math inline">\(T\)</span> 에 6 개의 반사면에 의한 대칭과 <span class="math inline">\(x,\,y,\,z\)</span> 축에 대한 각각 2개의 <span class="math inline">\(S_4\)</span> 대칭 연산을 포함하는 성분 24개의 군이다. 6개의 반사면은 정사면체의 6개의 변중 한 변을 포함하면서 그 변을 포함하는 면에 수직인 면을 반사면으로 삼는다. 예를 들어 변 <span class="math inline">\(ab\)</span> 를 포함하며 <span class="math inline">\(x=1\)</span> 평면에 수직인 면에 대한 반사 대칭을 <span class="math inline">\(\sigma_{ab}\)</span> 라고 하자. 이런 반사면이 6개 존재하며 <span class="math inline">\(\sigma_{ab}\)</span> 와 같이 변의 이름을 붙여 호칭할 수 있다. 또한 <span class="math inline">\(x\)</span> 축으로의 <span class="math inline">\(S_4\)</span> 대칭을 각각 <span class="math inline">\(S_{x1}\)</span>, <span class="math inline">\(S_{x3}\)</span> 라고 하자.</p>
+<p>이렇게 한다면 총 24개의 원소가 되며 이 군의 클래스는 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+E &amp;= \{E\},\\[0.3em]
+3C_2 &amp;= \{ C_{2x},\, C_{2y},\, C_{2z}\}, \\[0.3em]
+6\sigma_d &amp;= \{ \sigma_{ab},\, \sigma_{ac},\, \sigma_{ad},\, \sigma_{bc},\, \sigma_{bd},\, \sigma_{cd}\},\\[0.3em]
+8C_3 &amp;= \{ C_{3a},\, C_{3a2},\, C_{3b},\, C_{3b2},\, C_{3c},\, C_{3c2},\, C_{3d},\, C_{3d2}\}, \\[0.3em]
+6S_4 &amp;= \{ S_{x1}, S_{x3},\, S_{y1},\, S_{y3}, \, S_{z1},\, S_{z3}\}.
+\end{aligned}
+\]</span></p>
 <p><br></p>
 </section>
+<section id="t_h" class="level4">
+<h4 class="anchored" data-anchor-id="t_h"><span class="math inline">\(T_h\)</span></h4>
+<p><span class="math inline">\(T\)</span> 대칭에 <span class="math inline">\(i\)</span> 대칭이 포함된것이며 24 개의 성분을 갖는 점군이다. 정사면체는 <span class="math inline">\(i\)</span> 대칭성을 갖지 않는다.</p>
+<p><br></p>
+</section>
+<section id="o" class="level4">
+<h4 class="anchored" data-anchor-id="o"><span class="math inline">\(O\)</span></h4>
+<div id="fig-Group_octahedron_in_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Group_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/octahedron_in_cube.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.3: Octahedron
+</figcaption>
+</figure>
+</div>
+<p>그림에서 보듯이 총 24 개의 성분으로 이루어졌다.</p>
+<p><br></p>
+</section>
+<section id="o_h" class="level4">
+<h4 class="anchored" data-anchor-id="o_h"><span class="math inline">\(O_h\)</span></h4>
+<p><span class="math inline">\(O\times i\)</span></p>
+<p><br></p>
+</section>
+<section id="c_infty-v" class="level4">
+<h4 class="anchored" data-anchor-id="c_infty-v"><span class="math inline">\(C_{\infty v}\)</span></h4>
+<p>선형 분자.</p>
+<p><br></p>
+</section>
+<section id="d_infty-h" class="level4">
+<h4 class="anchored" data-anchor-id="d_infty-h"><span class="math inline">\(D_{\infty h}\)</span></h4>
+<p>For example <span class="math inline">\(CO_2\)</span></p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-Group_crystall_system_and_symmetry_operations" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">6.2.3</span> 결정계와 대칭</h3>
+<div id="tbl-Group_crystall_system" class="striped bordered quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_crystall_system-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.4: 결정계에 따른 점군의 분류
+</figcaption>
+<div aria-describedby="tbl-Group_crystall_system-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-bordered caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 24%">
+<col style="width: 18%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">결정계</th>
+<th style="text-align: center;">단위포 (unit cell)</th>
+<th style="text-align: center;">군</th>
+<th style="text-align: center;">대칭 성분 갯수</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">삼사정계 (triclinic)</td>
+<td style="text-align: center;"><span class="math inline">\(a \ne b \ne c\)</span> <br> <span class="math inline">\(\alpha\ne \beta \ne \gamma\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_1\)</span> <br> <span class="math inline">\(S_2(C_1)\)</span></td>
+<td style="text-align: center;">1 <br> 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">단사정계 (monoclinic)</td>
+<td style="text-align: center;"><span class="math inline">\(a\ne b \ne c\)</span> <br> <span class="math inline">\(\alpha=\gamma = \dfrac{\pi}{2} \ne \beta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_{1h}\)</span> <br> <span class="math inline">\(C_2\)</span> <br> <span class="math inline">\(C_2h\)</span></td>
+<td style="text-align: center;">2 <br> 2 <br> 4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">사방정계 (orthorhombic)</td>
+<td style="text-align: center;"><span class="math inline">\(a \ne b \ne c\)</span> <br> <span class="math inline">\(\alpha=\beta=\gamma = \dfrac{\pi}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_{2v}\)</span> <br> <span class="math inline">\(D_2(V)\)</span> <br> <span class="math inline">\(D_{2h}(V_h)\)</span></td>
+<td style="text-align: center;">4 <br> 4 <br> 8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">정방정계 (tetragonal)</td>
+<td style="text-align: center;"><span class="math inline">\(a=b\ne c\)</span> <br> <span class="math inline">\(\alpha=\beta=\gamma = \dfrac{\pi}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_4\)</span> <br> <span class="math inline">\(S_4\)</span> <br> <span class="math inline">\(C_{4h}\)</span> <br> <span class="math inline">\(D_{2d}(V_d)\)</span> <br> <span class="math inline">\(C_{4v}\)</span> <br> <span class="math inline">\(D_4\)</span> <br> <span class="math inline">\(D_{4h}\)</span></td>
+<td style="text-align: center;">4 <br> 4 <br> 8 <br> 8 <br> 8 <br>8 <br> 16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">삼방정계 (rhombohedral)</td>
+<td style="text-align: center;"><span class="math inline">\(a=b = c\)</span> <br> <span class="math inline">\(\alpha=\beta=\gamma &lt; \dfrac{2\pi}{3} \ne \dfrac{\pi}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_3\)</span> <br> <span class="math inline">\(S_6(C_{3i})\)</span> <br> <span class="math inline">\(C_{3v}\)</span> <br> <span class="math inline">\(D_3\)</span> <br> <span class="math inline">\(D_{3d}\)</span></td>
+<td style="text-align: center;">3 <br> 6 <br> 6 <br> 6 <br> 12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">육방정계 (hexagonal)</td>
+<td style="text-align: center;"><span class="math inline">\(a=b\ne c\)</span> <br> <span class="math inline">\(\alpha = \beta = \dfrac{\pi}{2},\, \gamma = \dfrac{2\pi}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(C_{3h}\)</span> <br> <span class="math inline">\(C_6\)</span> <br> <span class="math inline">\(C_{6h}\)</span> <br> <span class="math inline">\(D_{3h}\)</span> <br> <span class="math inline">\(C_{6v}\)</span> <br> <span class="math inline">\(D_6\)</span> <br> <span class="math inline">\(D_{6h}\)</span></td>
+<td style="text-align: center;">6 <br> 6 <br> 12 <br> 12 <br> 12 <br> 12 <br> 24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">입방정계 (cubic)</td>
+<td style="text-align: center;"><span class="math inline">\(a=b=c\)</span> <br> <span class="math inline">\(\alpha = \beta = \gamma = \dfrac{\pi}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(T\)</span> <br> <span class="math inline">\(T_h\)</span> <br> <span class="math inline">\(T_d\)</span> <br> <span class="math inline">\(O\)</span> <br> <span class="math inline">\(O_h\)</span></td>
+<td style="text-align: center;">12 <br> 24 <br> 24 <br> 24 <br> 48</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><br></p>
 </section>
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>

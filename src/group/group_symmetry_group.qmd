@@ -163,7 +163,7 @@ $$
 | $D_n$ | 주축과 수직한 $n$ 개의 $C_2$ 대칭축을 가진 군. $D_2$ 는 Viergrouppe 와 동형이다. |
 | $D_{nd}$ | $D_n$ 과 함께 $n$ 개의 $C_2$ 대칭축 에서 인접하는 두 대축 사이에 $\sigma_d$ 거울상 대칭면이 존재하는 군. |
 | $D_{nh}$ | $D_n$ 과 함깨 $\sigma_h$ 대칭이 존재하는 군. |
-: 단순회전군 {.info .striped .bordered #tbl-Group_simple_rotational_group}
+: 단순회전군 {#tbl-Group_simple_rotational_group .info .striped .bordered }
 
 
 </br>
@@ -195,7 +195,7 @@ $C_{2y}$  & $dcba$ \\
 $C_{2z}$  & $cdab$ \\
 $C_{3a}$  & $adbc$ \\
 $C_{3a2}$ & $acdb$\\
-$C_{3b}$  & $cbda$\\
+$C_{3b}$  & $cbda$\\`
 $C_{3b2}$ & $dbac$\\
 $C_{3c}$  & $dacb$  \\
 $C_{3c2}$ & $bdca$\\
@@ -229,13 +229,75 @@ $C3d2$ & $C_{3d2}$ & $C_{3a2}$ & $C_{3b2}$ & $C_{3c2}$ &  $C_{2z}$ &  $C_{3b}$ &
 
 ![$T$ 의 Caylay table](figures/T_caylay_table.png){#tbl-Group_T_caylay_table width=600}
 
-
+$T$ 의 class 는 다음과 같다.
+$$
+\{E\},\qquad \{C_{2x},\,C_{2y},\, C_{2z} \},\qquad \{ C_{3a},\, C_{3b}, \, C_{3c}, \, C_{3d}\},\qquad\{ C_{3a2},\, C_{3b2}, \, C_{3c2}, \, C_{3d2}\} 
+$$
 </br>
 
 #### $T_d$
 
+$T_d$ 는 $T$ 에 6 개의 반사면에 의한 대칭과 $x,\,y,\,z$ 축에 대한 각각 2개의 $S_4$ 대칭 연산을 포함하는 성분 24개의 군이다. 6개의 반사면은 정사면체의 6개의 변중 한 변을 포함하면서 그 변을 포함하는 면에 수직인 면을 반사면으로 삼는다. 예를 들어 변 $ab$ 를 포함하며 $x=1$ 평면에 수직인 면에 대한 반사 대칭을 $\sigma_{ab}$ 라고 하자. 이런 반사면이 6개 존재하며 $\sigma_{ab}$ 와 같이 변의 이름을 붙여 호칭할 수 있다. 또한 $x$ 축으로의 $S_4$ 대칭을 각각 $S_{x1}$, $S_{x3}$ 라고 하자. 
+
+이렇게 한다면 총 24개의 원소가 되며 이 군의 클래스는 다음과 같다.
+
+$$
+\begin{aligned}
+E &= \{E\},\\[0.3em]
+3C_2 &= \{ C_{2x},\, C_{2y},\, C_{2z}\}, \\[0.3em]
+6\sigma_d &= \{ \sigma_{ab},\, \sigma_{ac},\, \sigma_{ad},\, \sigma_{bc},\, \sigma_{bd},\, \sigma_{cd}\},\\[0.3em]
+8C_3 &= \{ C_{3a},\, C_{3a2},\, C_{3b},\, C_{3b2},\, C_{3c},\, C_{3c2},\, C_{3d},\, C_{3d2}\}, \\[0.3em]
+6S_4 &= \{ S_{x1}, S_{x3},\, S_{y1},\, S_{y3}, \, S_{z1},\, S_{z3}\}.
+\end{aligned}
+$$
+
+</br>
+
+#### $T_h$
+
+$T$ 대칭에 $i$ 대칭이 포함된것이며 24 개의 성분을 갖는 점군이다. 정사면체는 $i$ 대칭성을 갖지 않는다. 
+
+</br>
+
+#### $O$
+
+![Octahedron](figures/octahedron_in_cube.png){#fig-Group_octahedron_in_cube width=400}
+
+그림에서 보듯이 총 24 개의 성분으로 이루어졌다.
 
 
+</br>
+
+#### $O_h$
+
+$O\times i$
+
+</br>
+
+#### $C_{\infty v}$
+
+선형 분자.
+
+</br>
+
+#### $D_{\infty h}$
+
+For example $CO_2$
+
+</br>
+
+### 결정계와 대칭 {#sec-Group_crystall_system_and_symmetry_operations}
+
+| 결정계 | 단위포 (unit cell) | 군 | 대칭 성분 갯수 |
+|:--------:|:-------:|:-----:|:---------:|
+| 삼사정계 (triclinic) | $a \ne b \ne c$ </br> $\alpha\ne \beta \ne \gamma$ | $C_1$ </br> $S_2(C_1)$ | 1 </br> 2 |
+| 단사정계 (monoclinic) | $a\ne b \ne c$ </br> $\alpha=\gamma = \dfrac{\pi}{2} \ne \beta$ | $C_{1h}$ </br> $C_2$ </br> $C_2h$ | 2 </br> 2 </br> 4 |
+| 사방정계 (orthorhombic) | $a \ne b \ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_{2v}$ </br> $D_2(V)$ </br> $D_{2h}(V_h)$ | 4 </br> 4 </br> 8 |
+| 정방정계 (tetragonal) | $a=b\ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_4$ </br> $S_4$ </br> $C_{4h}$ </br> $D_{2d}(V_d)$ </br> $C_{4v}$ </br> $D_4$ </br> $D_{4h}$ | 4 </br> 4 </br> 8 </br> 8 </br> 8 </br>8 </br> 16 |
+| 삼방정계 (rhombohedral) | $a=b = c$ </br> $\alpha=\beta=\gamma < \dfrac{2\pi}{3} \ne \dfrac{\pi}{2}$ | $C_3$ </br> $S_6(C_{3i})$ </br> $C_{3v}$ </br> $D_3$ </br> $D_{3d}$ | 3 </br> 6 </br> 6 </br> 6 </br> 12 |
+| 육방정계 (hexagonal) | $a=b\ne c$ </br> $\alpha = \beta = \dfrac{\pi}{2},\, \gamma = \dfrac{2\pi}{3}$ | $C_{3h}$ </br> $C_6$ </br> $C_{6h}$ </br> $D_{3h}$ </br> $C_{6v}$ </br> $D_6$ </br> $D_{6h}$ | 6 </br> 6 </br> 12 </br> 12 </br> 12 </br> 12 </br> 24 |
+| 입방정계 (cubic) | $a=b=c$ </br> $\alpha = \beta = \gamma = \dfrac{\pi}{2}$ | $T$ </br> $T_h$ </br> $T_d$ </br> $O$ </br> $O_h$ | 12 </br> 24 </br> 24 </br> 24 </br> 48|
+: 결정계에 따른 점군의 분류 {#tbl-Group_crystall_system .striped .bordered}
 
 </br>
 
