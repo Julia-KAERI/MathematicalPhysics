@@ -1,8 +1,8 @@
-PWD /Users/jiyong/Documents/Projects/MathematicalPhysics/src/group
+PWD /Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/figures
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/octahedron_in_cube.tex
+INPUT /Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/figures/octahedron_in_cube.tex
 OUTPUT octahedron_in_cube.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/standalone/standalone.cls

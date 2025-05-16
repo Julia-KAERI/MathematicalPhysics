@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1746704937 "/Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/octahedron_in_cube.tex" "octahedron_in_cube.pdf" "octahedron_in_cube" 1746704938 0
-  "/Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/octahedron_in_cube.tex" 1746704937 2495 84378a2ef940068240ed95a632b187ff ""
-  "/dev/null" 1746704931 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1747369515 "/Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/figures/octahedron_in_cube.tex" "octahedron_in_cube.pdf" "octahedron_in_cube" 1747369516 0
+  "/Users/jiyong/Documents/Projects/MathematicalPhysics/src/group/figures/octahedron_in_cube.tex" 1747369515 2495 84378a2ef940068240ed95a632b187ff ""
+  "/dev/null" 1747369454 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
@@ -110,8 +110,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1674016646 4623355 58034c3eb7ddf7eacc726a83d01e26d2 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672789015 7874810 bfa33868b1ee0a17ddb982f07460daa5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "octahedron_in_cube.aux" 1746704938 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "octahedron_in_cube.tex" 1746704937 2495 84378a2ef940068240ed95a632b187ff ""
+  "octahedron_in_cube.aux" 1747369516 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "octahedron_in_cube.tex" 1747369515 2495 84378a2ef940068240ed95a632b187ff ""
   (generated)
   "octahedron_in_cube.aux"
   "octahedron_in_cube.log"
