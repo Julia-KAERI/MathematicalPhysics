@@ -121,7 +121,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -314,12 +314,15 @@ window.Quarto = {
   <li><a href="#대칭과-물리" id="toc-대칭과-물리" class="nav-link active" data-scroll-target="#대칭과-물리"><span class="header-section-number">7.1</span> 대칭과 물리</a>
   <ul class="collapse">
   <li><a href="#sec-Group_group_of_schroedinger_equation_and_degeneracy" id="toc-sec-Group_group_of_schroedinger_equation_and_degeneracy" class="nav-link" data-scroll-target="#sec-Group_group_of_schroedinger_equation_and_degeneracy"><span class="header-section-number">7.1.1</span> 슈뢰딩거 방정식과 degeneracy</a></li>
+  <li><a href="#sec-Group_representation_of_schroedinger_equation_group" id="toc-sec-Group_representation_of_schroedinger_equation_group" class="nav-link" data-scroll-target="#sec-Group_representation_of_schroedinger_equation_group"><span class="header-section-number">7.1.2</span> 슈뢰딩거 방정식 군의 표현</a></li>
+  <li><a href="#sec-Group_representation_of_abelian_group" id="toc-sec-Group_representation_of_abelian_group" class="nav-link" data-scroll-target="#sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.3</span> 아벨군의 표현</a></li>
+  <li><a href="#sec-Group_basis_functions_for_irreducible_representations" id="toc-sec-Group_basis_functions_for_irreducible_representations" class="nav-link" data-scroll-target="#sec-Group_basis_functions_for_irreducible_representations"><span class="header-section-number">7.1.4</span> 기약표현의 기저함수</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -352,70 +355,230 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="대칭과-물리" class="level2" data-number="7.1">
+<section id="대칭과-물리" class="level2 page-columns page-full" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="대칭과-물리"><span class="header-section-number">7.1</span> 대칭과 물리</h2>
-<section id="sec-Group_group_of_schroedinger_equation_and_degeneracy" class="level3" data-number="7.1.1">
+<section id="sec-Group_group_of_schroedinger_equation_and_degeneracy" class="level3 page-columns page-full" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="sec-Group_group_of_schroedinger_equation_and_degeneracy"><span class="header-section-number">7.1.1</span> 슈뢰딩거 방정식과 degeneracy</h3>
 <p>해밀토니안 <span class="math inline">\(H = T+V\)</span> 인 양자역학 시스템을 생각하자 그리고 해밀토니안 <span class="math inline">\(H\)</span> 에 어떤 기하학적인 대칭이 존재한다고 하자. 운동 에너지 <span class="math inline">\(T\)</span> 는 회전과 병진에 대해 자체로 불변이기 때문이기 때문에 해밀토니안 <span class="math inline">\(H\)</span> 에 어떤 공간대칭성이 있다면 일반적으로 포텐셜 에너지 <span class="math inline">\(V\)</span> 의 대칭성이다. 비상대론적 양자역학은 슈뢰딩거 방정식에 의해 기술된다.</p>
 <p><span id="eq-Group_schroedinger_equation"><span class="math display">\[
 i\hbar \dfrac{\partial \Psi}{\partial t} = H\Psi.
 \tag{7.1}\]</span></span></p>
-<p>양자역학에서 변환은 유니타리 연산자에 의해 표현되는 유니타리 변환이며 유니타리 변환 <span class="math inline">\(T\)</span> 에 대해 <span class="math inline">\(H\)</span> 가 불변이라는 것은 <span class="math inline">\(TH=HT\)</span> 임을 의미한다. 그리고 이런 변환의 집합은 군을 이룬다는 것을 쉽게 보일 수 있다. 이렇게 슈뢰딩거 방정식에 대해 불변인 변환의 집합을 슈뢰딩거 방정식 군(the group of Schrödinger equation) 이라고 부르기도 한다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
-<p><span class="math inline">\(\Psi_n\)</span> 이 슈뢰딩거 방정식의 고유상태로 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는다고 하자. <span class="math inline">\(T\)</span> 가 슈뢰딩거 방정식군에 포함된다면</p>
+<p>양자역학에서 변환은 유니타리 연산자에 의해 표현되는 유니타리 변환이며 유니타리 변환 <span class="math inline">\(T\)</span> 에 대해 <span class="math inline">\(H\)</span> 가 불변이라는 것은 <span class="math inline">\(TH=HT\)</span> 임을 의미한다. 그리고 이런 변환의 집합은 군을 이룬다는 것을 쉽게 보일 수 있다.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_schoroedinger_equation_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.1 (슈뢰딩거 방정식 군)</strong></span> 슈뢰딩거 방정식에 대해 불변인 유니타리 변환의 집합을 <strong>슈뢰딩거 방정식 군(the group of Schrödinger equation)</strong><span class="math inline">\(^\ast\)</span> 이라고 한다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(^\ast\)</span> <a href="https://en.wikipedia.org/wiki/Schrödinger_group">슈뢰딩거 군(Schrödinger group)</a> 과는 다르다.</span></div><p><span class="math inline">\(|\Psi_n\rangle\)</span> 이 슈뢰딩거 방정식의 고유상태로 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는다고 하자. <span class="math inline">\(T\)</span> 가 슈뢰딩거 방정식군에 포함된다면</p>
 <p><span class="math display">\[
-HT\Psi_n = TH\Psi_n = E_nT\Psi_n
+HT|\Psi_n \rangle = TH |\Psi_n \rangle = E_nT|\Psi_n\rangle
 \]</span></p>
-<p>이므로 <span class="math inline">\(T\Psi_n\)</span> 역시 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다. 어떤 양자 시스템의 degeneracy 를 대칭성을 통해 이해 할 수 있을 때 이 degeneracy 를 normal degeneracy 라고 한다. 그렇지 않을 때는 accidental degeneracy 혹은 dynamical degeneracy 라고 한다. 예를 들어 수소 원자 스펙트럼에서 <span class="math inline">\(2s\)</span> 와 <span class="math inline">\(2p\)</span> 오비탈은 같은 에너지를 갖지만 이 원인은 대칭성 때문이 아니다. Accidental degeneracy 는 대칭성을 이용하여 이해 할 수 없기 때문에 앞으로 특별한 언급이 없는 한 모든 degeneracy 는 normal degeneracy 를 의미한다.</p>
+<p>이므로 <span class="math inline">\(T|\Psi_n\rangle\)</span> 역시 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_normal_degeneracy" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.2 (Normal degeneracy)</strong></span> 어떤 양자 시스템의 degeneracy 를 대칭성을 통해 이해 할 수 있을 때 이 degeneracy 를 <strong>normal degeneracy</strong> 라고 한다. 그렇지 않을 때는 <strong>accidental degeneracy</strong> 혹은 <strong>dynamical degeneracy</strong> 라고 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="page-columns page-full"><p>예를 들어 수소 원자 스펙트럼에서 <span class="math inline">\(2s\)</span> 와 <span class="math inline">\(2p\)</span> 오비탈은 같은 에너지를 갖는 것으로 알려졌지만 이후 운동량 공간에서의 해밀토니안의 4차원 회전 대칭 때문임이 알려졌다<span class="math inline">\(^\dagger\)</span>. Accidental degeneracy 는 대칭성을 이용하여 이해 할 수 없기 때문에 앞으로 특별한 언급이 없는 한 모든 degeneracy 는 normal degeneracy 를 의미한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> Fock. *Z. Physik, <strong>98</strong> 145 (1935)</span></div></div>
 <p><br></p>
-<p>고유값 <span class="math inline">\(E_n\)</span> 에 대해 <span class="math inline">\(d\)</span>-fold normal degeneracy 가 존재한다면 <span class="math inline">\(d\)</span> 개의 정규직교 고유상태 <span class="math inline">\(\{|n1\rangle,\ldots,|nd\rangle\}\)</span> 가 존재한다. 그리고 슈뢰딩거 방정식 군을 <span class="math inline">\(G_{S}\)</span> 라고 하자. <span class="math inline">\(\{|n1\rangle,\ldots,|nd\rangle\}\)</span> 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 <span class="math inline">\(G_S\)</span> 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 <span class="math inline">\(T\in G_S\)</span> 에 대해</p>
+</section>
+<section id="sec-Group_representation_of_schroedinger_equation_group" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sec-Group_representation_of_schroedinger_equation_group"><span class="header-section-number">7.1.2</span> 슈뢰딩거 방정식 군의 표현</h3>
+<p>여기서는 해밀토니안 <span class="math inline">\(H\)</span> 와 이 해밀토니안에 대한 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 을 알 때 <span class="math inline">\(G_S\)</span> 의 기약표현으로부터 해밀토니안의 가능한 degeneracy 를 알 수 있다는 것을 보이고자 한다.</p>
+<p>우선 해밀토니안 <span class="math inline">\(H\)</span> 의 고유값 <span class="math inline">\(E_n\)</span> 에 대해 <span class="math inline">\(d\)</span>-fold normal degeneracy 가 존재한다고 하자. 이 <span class="math inline">\(d\)</span> 차원 고유공간을 <span class="math inline">\(\mathcal{H}_n\)</span> 이라고 하자. 그렇다면 <span class="math inline">\(d\)</span> 개의 정규직교 고유상태 <span class="math inline">\(\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d\rangle\}\)</span> 가 존재한다. 여기서 <span class="math inline">\(\Gamma_n\)</span> 은 <span class="math inline">\(\mathcal{H}_n\)</span> 에 속한다는 것을 의미하며 그 뒤의 인덱스는 고유상태의 순서를 의미한다. <span class="math inline">\(\{|\Gamma_n 1\rangle,\ldots,|\Gamma_n d\rangle\}\)</span> 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 <span class="math inline">\(G_S\)</span> 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 <span class="math inline">\(T\in G_S\)</span> 에 대해</p>
 <p><span id="eq-Group_transformation_by_schroedinger_equation_group"><span class="math display">\[
-T|ni\rangle = \sum_{j=1}^d D^{(n)}(T)_{ji} |nj\rangle
+T|\Gamma_n i\rangle = \sum_{j=1}^d D^{(\Gamma_n)}(T)_{ji} |\Gamma_n j\rangle
 \tag{7.2}\]</span></span></p>
-<p>인 <span class="math inline">\(d\times d\)</span> 행렬 <span class="math inline">\(D^{(n)}(T)\)</span> 가 존재한다.</p>
+<p>인 <span class="math inline">\(d\times d\)</span> 행렬 <span class="math inline">\(D^{(\Gamma_n)}(T)\)</span> 가 존재한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-Group_transformation_by_schroedinger_equation_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#eq-Group_transformation_by_schroedinger_equation_group" class="quarto-xref">식&nbsp;<span>7.2</span></a> 의 <span class="math inline">\(D^{(n)}\)</span> 는 <span class="math inline">\(G_S\)</span> 에 대한 유니타리 기약표현이다.</p>
+<div id="prp-Group_transformation_by_schroedinger_equation_group_1" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#eq-Group_transformation_by_schroedinger_equation_group" class="quarto-xref">식&nbsp;<span>7.2</span></a> 의 <span class="math inline">\(D^{(\Gamma_n)}\)</span> 는 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 유니타리 기약표현이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(D^{(n)}\)</span> 이 표현임을 보이자. <span class="math inline">\(S,\,T\in G_S\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(D^{(\Gamma_n)}\)</span> 이 표현임을 보이자. 표기의 편의를 위해 잠시 <span class="math inline">\(D=D^{(\Gamma_n)}\)</span> 이라고 놓자. <span class="math inline">\(S,\,T\in G_S\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-ST|ni\rangle &amp;= S\sum_j D^{(n)}(T)_{ji}|nj\rangle = \sum_k\sum_j D^{(n)}(S)_{kj}D^{(n)}(T)_{ji}|nk\rangle \\[0.3em]
-&amp;= \sum_k\left[D^{(n)}(S)D^{(n)}(T)\right]_{ki}|nk\rangle
+ST|\Gamma_n i\rangle &amp;= S\sum_j D(T)_{ji}|\Gamma_nj\rangle = \sum_k\sum_j D(T)_{ji}D(S)_{kj}|\Gamma_n k\rangle \\[0.3em]
+&amp;= \sum_k\left[D(S)D(T)\right]_{ki}|\Gamma_nk\rangle
 \end{aligned}
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(D^{(n)}(ST) = D^{(n)}(S)D^{(n)}(T)\)</span> 이므로 <span class="math inline">\(D^{(n)}\)</span> 은 <span class="math inline">\(G_S\)</span> 에 대한 표현이다.</p>
-<p>이제 <span class="math inline">\(D^{(n)}\)</span> 이 기약표현이 아님을 가정하자. <span class="math inline">\(D^{(n)}\)</span> 이 모든 <span class="math inline">\(G_S\)</span> 에 대해 블럭대각행렬이라면 어떤 <span class="math inline">\(|ni\rangle,\, |nj\rangle\)</span> 이 존재하여 모든 <span class="math inline">\(T\in G_S\)</span> 에 대해 <span class="math inline">\(T|ni\rangle \ne |nj\rangle\)</span> 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다.</p>
-<p>이제 <span class="math inline">\(D^{(n)}\)</span> 이 유니타리 임을 보이자. 임의의 <span class="math inline">\(T\in G_S\)</span> 에 대해</p>
+<p>이다. 즉 <span class="math inline">\(D(ST) = D(S)D^{(n)}(T)\)</span> 이므로 <span class="math inline">\(D\)</span> 은 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 표현이다.</p>
+<p>이제 <span class="math inline">\(D\)</span> 이 기약표현이 아님을 가정하자. <span class="math inline">\(D\)</span> 이 모든 <span class="math inline">\(G_S\)</span> 에 대해 블럭대각행렬이라면 어떤 <span class="math inline">\(|\Gamma_ni\rangle,\, |\Gamma_nj\rangle\)</span> 이 존재하여 모든 <span class="math inline">\(T\in G_S\)</span> 에 대해 <span class="math inline">\(T|\Gamma_ni\rangle \ne |\Gamma_nj\rangle\)</span> 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다.</p>
+<p>이제 <span class="math inline">\(D\)</span> 이 유니타리 임을 보이자. 임의의 <span class="math inline">\(T\in G_S\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-\delta_{ij} &amp;= \langle nj|ni\rangle = \langle nj|T^\dagger T|ni\rangle = \sum_{k,m} \left(D^{(n)}(T)_{kj}\right)^\ast D^{(n)}(T)_{mi}\langle nk|nm\rangle \\[0.3em]
-&amp;= \sum_{k,m} \left(D^{(n)}(T)_{kj}\right)^\ast D^{(n)}(T)_{mi}\delta_{km} = \sum_k (D^{(n)}(T))^\dagger_{jk}D^{(n)}(T)_{ki} = [D^{(n)}(T)^\dagger D^{(n)}(T)]_{ji}
+\delta_{ij} &amp;= \langle \Gamma_n j|\Gamma_n i\rangle = \langle \Gamma_nj|T^\dagger T|\Gamma_ni\rangle = \sum_{k,m} \left(D(T)_{kj}\right)^\ast D(T)_{mi}\langle \Gamma_n k|\Gamma_n m\rangle \\[0.3em]
+&amp;= \sum_{k,m} \left(D(T)_{kj}\right)^\ast D(T)_{mi}\delta_{km} = \sum_k (D(T))^\dagger_{jk}D(T)_{ki} = [D(T)^\dagger D(T)]_{ji}
 \end{aligned}
 \]</span></p>
-<p>이므로 <span class="math inline">\(\left(D^{(n)}(T)\right)^{-1}=D^{(n)}(T)^\dagger\)</span> 이다. 즉 <span class="math inline">\(D^{(n)}\)</span> 은 유니타리 표현이다. <span class="math inline">\(\square\)</span></p>
+<p>이므로 <span class="math inline">\(\left(D(T)\right)^{-1}=D(T)^\dagger\)</span> 이다. 즉 <span class="math inline">\(D=D^{(\Gamma_n)}\)</span> 은 <span class="math inline">\(d\)</span> 차원 유니타리 기약표현이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이제 기저를 변경할 경우 그 표현은 어떻게 변하는지 알아보자. <span class="math inline">\(\{|ni\rangle\}\)</span> 정규직교기저에서 <span class="math inline">\(\{nj'\rangle\}\)</span> 정규직교기저로 변경했다고 하자. 이 때</p>
+<p>이제 우리는 해밀토니안에 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재하면 슈뢰딩거 방정식 군에 대해 <span class="math inline">\(d\)</span> 차원 기약표현이 존재한다는 것을 안다. 이제 반대로 슈뢰딩거 방정식 군에 <span class="math inline">\(d\)</span> 차원 기약표현이 존재한다면 해밀토니안에 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재할까? 답은 그렇다 이다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_transformation_by_schroedinger_equation_group_2" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 에 각각의 기약표현 <span class="math inline">\(\Gamma_n\)</span> 과 그 차원 <span class="math inline">\(d_n\)</span> 에 대해 <span class="math inline">\(d_n\)</span>-fold degeneracy 가 존재한다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 가 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 기약표현이라고 하자. 모든 <span class="math inline">\(T\in G_S\)</span> 에 대해 <span class="math inline">\(HT=TH\)</span> 이며 따라서 <span class="math inline">\(HD(T)= D(T)H\)</span> 이다. 슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 에 의해 <span class="math inline">\(H\)</span> 는 항등행렬의 상수배이므로 해밀토니안에는 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재한다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>우리는 이로부터 다음의 결론을 내릴 수 있다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_uniqueness_of_representation_of_schroedinger_group" class="theorem">
+<p><span class="theorem-title"><strong>정리 7.1</strong></span> 해밀토니안 <span class="math inline">\(H\)</span> 와 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 를 생각하자. <span class="math inline">\(G_S\)</span> 의 모든 기약표현의 차원을 알면 이 해밀토니안서 가능한 degeneracy 를 알 수 있으며 그 역도 성립한다.</p>
+</div>
+</div>
+<p><br></p>
+<p>우리는 앞서 degenerated 된 상태를 <span class="math inline">\(|\Gamma_n i\rangle\)</span> 로 표기하였다. <span class="math inline">\(\Gamma_n\)</span> 은 해밀토니안의 degeneracy 에 대한 인덱스였지만 이제 이것이 기약표현의 인덱스로도 사용 될 수 있다는 것을 안다. 즉 <span class="math inline">\(|\Gamma_n j\rangle\)</span> 은 <span class="math inline">\(\Gamma_n\)</span> 기약표현에서 <span class="math inline">\(j\)</span> 번째 기저상태를 의미한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_schroedinger_equation_group_of_triangle" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.1</strong></span> 예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 <span class="math inline">\(D_{3}\)</span> 군으로 표현 할 수 있으며(<a href="group_introduction.html#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a>) <span class="math inline">\(D_{3}\)</span> 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다. <span class="math inline">\(1^2+1^2+2^2=6\)</span> 이므로(<a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a>) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Group_representation_of_abelian_group" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.3</span> 아벨군의 표현</h3>
+<p>아벨군은 군의 특성상 각각의 성분이 하나의 class 를 구성한다. 따라서 모든 기약표현은 1차원이며, 복소수이다. 해밀토니안의 슈뢰딩거 방정식군이 아벨군이라면 degeneracy 가 존재하지 않는다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_abelian_schroedinger_equation_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.2 (순환군)</strong></span> 계수가 <span class="math inline">\(n\)</span> 인 순환군 <span class="math inline">\(G=\langle g\rangle\)</span> 을 생각하자. 표현 <span class="math inline">\(D\)</span> 에 대해 <span class="math inline">\(D(g) = r\)</span> 이라고 하자. <span class="math inline">\(1=D(g^n)= \left(D(g)\right)^n = r^n\)</span> 이므로 <span class="math inline">\(r=e^{2\pi n i},\, (n=1,\ldots,\, n)\)</span> 이다.</p>
+<p>원주 상의 <span class="math inline">\(n\)</span> 개의 등간격 점에 의한 포텐셜이나 periodic boundary condition 을 적용할 경우 슈뢰딩거 방정식 군이 이런 순환군이 된다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_bloch_theorem" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.3 (블로흐 정리)</strong></span> 1차원의 경우를 생각하자. <span class="math inline">\(V(x+a)=V(x)\)</span> 라고 하자. <span class="math inline">\(-a\)</span> 만큼의 translation <span class="math inline">\(T\)</span> 에 대해 <span class="math inline">\(T|x\rangle = T|x-a\rangle\)</span> 이며,</p>
 <p><span class="math display">\[
-|nj'\rangle = \sum_i A_{j'i}|ni\rangle
+T\psi(x) = \langle x|T|\psi\rangle = \psi(x+a)
 \]</span></p>
-<p>인 <span class="math inline">\(d\times d\)</span> 행렬 <span class="math inline">\(A\)</span> 가 존재하며 <span class="math inline">\(A\)</span> 는 유니타리 행렬임을 보일 수 있다.</p>
+<p>이다. 슈뢰딩거 방정식 군은 <span class="math inline">\(T\)</span> 에 의해 생성되는 무한군이다. <span class="math inline">\(p\)</span> 번째 기약표현에 의한 해를 <span class="math inline">\(\psi_p\)</span> 라고 하자.</p>
 <p><span class="math display">\[
-\delta_{j'k'} = \langle nk'|nj'\rangle = \sum_{i, m} (A_{k'm})^\ast A_{j'i}\langle nm|ni\rangle = (A^\dagger)_{ik'}A_{j'i}= (AA^\dagger)_{k'j'}.
+\psi_p(x+a) = T\psi(p)(x) = D^{(p)}(T)\psi_p(x) = e^{2\pi p/n}\psi_p(x)
 \]</span></p>
-<p>따라서 <span class="math inline">\(|ni\rangle = \sum_{j'} (A^\dagger)_{j'i}|nj'\rangle\)</span> 이다. 이로부터</p>
+<p><span class="math inline">\(L = an\)</span> 으로 놓고, <span class="math inline">\(k=2\pi n/L = 2\pi/a\)</span> 로 놓으면</p>
+<p><span class="math display">\[
+\psi_p(x+a) = e^{2\pi p a/L}\psi_p(x) = e^{ika} \psi_p(x)
+\]</span></p>
+<p>이다.</p>
+<p><span class="math display">\[
+\psi_k (x+a) = e^{ika}\psi_k(x)
+\]</span></p>
+<p>이며 이런 형태의 <span class="math inline">\(\psi_k(x)\)</span> 는 다음과 어떤 <span class="math inline">\(a\)</span> 를 주기로 갖는 주기 함수 <span class="math inline">\(u_k(x)\)</span> 에 대해</p>
+<p><span class="math display">\[
+\psi_k(x) = u_k(x) e^{ika}
+\]</span></p>
+<p>로 쓸 수 있음을 안다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_2d_rotational_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.4 (2차원 회전군)</strong></span> 정해진 축으로의 회전은 아벨군이다. <span class="math inline">\(\varphi\)</span> 만큼의 회전 연산을 <span class="math inline">\(R(\varphi)\)</span> 라고하면</p>
+<p><span class="math display">\[
+D(R(\varphi_1))D(R(\varphi_2)) = D(R(\varphi_1+\varphi_2))
+\]</span></p>
+<p>임을 안다. 또한 이것을 만족시키는 표현은 정수 <span class="math inline">\(n\)</span> 에 대해</p>
+<p><span class="math display">\[
+D^{(m)}(\pm \varphi) = e^{im\varphi}
+\]</span></p>
+<p>라는 것도 안다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Group_basis_functions_for_irreducible_representations" class="level3 page-columns page-full" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="sec-Group_basis_functions_for_irreducible_representations"><span class="header-section-number">7.1.4</span> 기약표현의 기저함수</h3>
+<p>기약표현 <span class="math inline">\(\Gamma_n\)</span> 에 속하는(즉 <span class="math inline">\(\Gamma_n\)</span> 에 의해 표현되는 degeneratcy 에 포함되는) 기저의 한 상태 <span class="math inline">\(|\Gamma_n k\rangle\)</span> 을 생각하자. 이 기저에서 <span class="math inline">\(|\Gamma_n k\rangle\)</span> 을 제외한 기저의 상태들을 <span class="math inline">\(|\Gamma_nk\rangle\)</span> 의 <strong>파트너(partner)</strong> 라고 한다.</p>
+<p><a href="#eq-Group_transformation_by_schroedinger_equation_group" class="quarto-xref">식&nbsp;<span>7.2</span></a> 를 생각하자. 슈뢰딩거 방정식군 <span class="math inline">\(G_S\)</span> 와 <span class="math inline">\(R\in G_S\)</span> 인 연산자. 그리고 기약표현 <span class="math inline">\(\Gamma_n\)</span> 에 속한 벡터에 대해 아래와 같이 놓을 수 있다. <span class="math display">\[
+R|\Gamma_n k\rangle  = \sum_{j=1}^{d_n} D^{(\Gamma_n)}(R)_{jk} |\Gamma_n j\rangle
+\]</span></p>
+<p>여기에 <span class="math inline">\(D^{(\Gamma_m)}(R)^\ast_{j'k'}\)</span> 를 곱하고 <span class="math inline">\(\sum_{R\in G_S}\)</span> 로 더하자. 위대한 직교정리(<a href="group_representation1.html#thm-Group_great_orthogonality_theorem" class="quarto-xref">정리&nbsp;<span>5.4</span></a>) 에 의해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-T|nj'\rangle &amp;= \sum_{i}A_{ij'}T|ni\rangle = \sum_{i, k}A_{ij'} D^{(n)}(T)_{ki}|nk\rangle \\[0.3em]
-&amp;= \sum_{i,k,p} A_{ij'} D^{(n)}_{ki} (A^\dagger)_{m'k} |nm'\rangle \\[0.3em]
-&amp;= \sum_{m'}[A^\dagger D^{(n)} A]_{m'j'} |nm'\rangle
+\sum_{R\in G_S} D^{(\Gamma_m)}(R)^\ast_{j'k'} R|\Gamma_n k\rangle &amp;= \sum_{j=1}^{d_n} \sum_{R\in G_S}D^{(\Gamma_n)}(R)_{jk} D^{(\Gamma_m)}(R)^\ast_{j'k'} |\Gamma_n j\rangle \\[0.3em]
+&amp;= \sum_{j=1}^{d_n} \dfrac{|G_S|}{d_n}\delta_{mn}\delta_{jj'}\delta_{kk'} |\Gamma_n j\rangle
 \end{aligned}
 \]</span></p>
-<p>임을 안다. 즉 기저의 유니타리 변환에 대해 슈뢰딩거 방정식 군의 표현 역시 유니타리 변환한다.</p>
+<p>즉</p>
+<p><span id="eq-Group_projection_operator_from_k_to_j_0"><span class="math display">\[
+\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R|\Gamma_n k\rangle = \dfrac{|G_S|}{d_n} |\Gamma_nj\rangle
+\tag{7.3}\]</span></span></p>
+<p>이다.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_projection_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.3 (Projection 연산자)</strong></span> Projection 연산자 <span class="math inline">\(P^{(\Gamma_n)}_{jk}\)</span> 를 아래와 같이 정의한다.</p>
+<p><span id="eq-Group_projection_operator_from_k_to_j"><span class="math display">\[
+P^{(\Gamma_n)}_{jk} := \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R\right).
+\tag{7.4}\]</span></span></p>
+</div>
+</div>
+</div>
+</div>
+<p>그렇다면</p>
+<p><span class="math display">\[
+P^{(\Gamma_n)}_{jk}|\Gamma_n k\rangle = \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R\right)|\Gamma_n k\rangle = |\Gamma_n j\rangle
+\]</span></p>
+<div class="page-columns page-full"><p>이다. 즉 projection 연산자 <span class="math inline">\(P^{(\Gamma_n)}_{jk}\)</span> 는 <span class="math inline">\(\Gamma_n\)</span> 기약표현의 <span class="math inline">\(k\)</span> 기저상태 를 <span class="math inline">\(j\)</span> 기저상태로 변환시켜주는 연산자이다<span class="math inline">\(^{\ast}\)</span>. 당연하게도 아래가 성립한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\ast\)</span> 양자역학(혹은 선형대수학) 에서의 projection operator 와는 다르다!!!</span></div></div>
+<p><span class="math display">\[
+\begin{aligned}
+P^{(\Gamma_n)}_{jj}|\Gamma_n j\rangle &amp;= \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jj} R\right)|\Gamma_n j\rangle = |\Gamma_n j\rangle.
+\end{aligned}
+\]</span></p>
+<p>즉 <span class="math inline">\(P^{(\Gamma_n)}_{jj}\)</span> 는 양자역학과 선형대수학에서의 projection 연산자이며 <span class="math inline">\(P^{(\Gamma_n)}_{jk}\)</span> 는 projection 연산자의 확장판이라고 볼 수 있다. <span class="math inline">\(P^{(\Gamma_n)}_{jk}\)</span> 를 다시 쓰면 다음과 같다.</p>
+<p><span id="eq-Group_projection_operator_in_ketbra_form"><span class="math display">\[
+P_{jk}^{(\Gamma_n)} = |\Gamma_nj\rangle \langle \Gamma_n k|.
+\tag{7.5}\]</span></span></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_uniqueness_of_representation_of_schroedinger_group" class="theorem">
+<p><span class="theorem-title"><strong>정리 7.2</strong></span> 공간 <span class="math inline">\(V\)</span> 에 작용하는 연산자에 의한 유한군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(\Gamma^{(1)},\ldots,\,\Gamma^{(n)}\)</span> 이 서로 동등하지 않은 기약표현이라고 하자. <span class="math inline">\(F:V \to V\)</span> 에 대해</p>
+<p><span class="math display">\[
+f_j^{(\Gamma_n)}|\Gamma_n j\rangle := F|\Gamma_n j\rangle
+\]</span></p>
+<p>이라면 다음이 성립한다.</p>
+<p><span class="math display">\[
+F = \sum_{n}\sum_{j} f_j^{(\Gamma_n)}.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-Group_projection_operator_from_k_to_j" class="quarto-xref">식&nbsp;<span>7.4</span></a> 로부터</p>
+<p><span class="math display">\[
+P_{jj}^{(\Gamma_n)}F = \left(\dfrac{d_n}{|G_S|}\sum_{R\in G} D^{(\Gamma_n)}(R)^\ast_{jk} RF\right)
+\]</span></p>
+<p>이다.</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

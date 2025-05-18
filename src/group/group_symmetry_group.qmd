@@ -6,7 +6,6 @@ crossref:
   chapters: true
 ---  
 
-
 {{< include ../../latexmacros.qmd >}}
 
 </br>
@@ -282,22 +281,54 @@ $O\times i$
 
 #### $D_{\infty h}$
 
-For example $CO_2$
+For example $\textrm{CO}_2$
 
 </br>
 
-### 결정계와 대칭 {#sec-Group_crystall_system_and_symmetry_operations}
 
-| 결정계 | 단위포 (unit cell) | 군 | 대칭 성분 갯수 |
-|:--------:|:-------:|:-----:|:---------:|
-| 삼사정계 (triclinic) | $a \ne b \ne c$ </br> $\alpha\ne \beta \ne \gamma$ | $C_1$ </br> $S_2(C_1)$ | 1 </br> 2 |
-| 단사정계 (monoclinic) | $a\ne b \ne c$ </br> $\alpha=\gamma = \dfrac{\pi}{2} \ne \beta$ | $C_{1h}$ </br> $C_2$ </br> $C_2h$ | 2 </br> 2 </br> 4 |
-| 사방정계 (orthorhombic) | $a \ne b \ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_{2v}$ </br> $D_2(V)$ </br> $D_{2h}(V_h)$ | 4 </br> 4 </br> 8 |
-| 정방정계 (tetragonal) | $a=b\ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_4$ </br> $S_4$ </br> $C_{4h}$ </br> $D_{2d}(V_d)$ </br> $C_{4v}$ </br> $D_4$ </br> $D_{4h}$ | 4 </br> 4 </br> 8 </br> 8 </br> 8 </br>8 </br> 16 |
-| 삼방정계 (rhombohedral) | $a=b = c$ </br> $\alpha=\beta=\gamma < \dfrac{2\pi}{3} \ne \dfrac{\pi}{2}$ | $C_3$ </br> $S_6(C_{3i})$ </br> $C_{3v}$ </br> $D_3$ </br> $D_{3d}$ | 3 </br> 6 </br> 6 </br> 6 </br> 12 |
-| 육방정계 (hexagonal) | $a=b\ne c$ </br> $\alpha = \beta = \dfrac{\pi}{2},\, \gamma = \dfrac{2\pi}{3}$ | $C_{3h}$ </br> $C_6$ </br> $C_{6h}$ </br> $D_{3h}$ </br> $C_{6v}$ </br> $D_6$ </br> $D_{6h}$ | 6 </br> 6 </br> 12 </br> 12 </br> 12 </br> 12 </br> 24 |
-| 입방정계 (cubic) | $a=b=c$ </br> $\alpha = \beta = \gamma = \dfrac{\pi}{2}$ | $T$ </br> $T_h$ </br> $T_d$ </br> $O$ </br> $O_h$ | 12 </br> 24 </br> 24 </br> 24 </br> 48|
+## Hermann-Morgain 표기볍
+
+우리는 앞서 Schoenflies 표기법(이하 SC 표기법)으로 점군과 공간군에 대해 알아보았다. Schoenflies 표기법은 단일 분자의 대칭을 다루는 데 많이 사용되며 결정학에서는 Hermann-Morgain 표기법(이하 HM 표기법)을 훨씬 더 많이 사용하여 국제 X-선 결정 테이블 에서도 이 표기법을 사용한다. 우선 두 표기법을 비교하면 아래와 같다.
+
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ lcc} 
+\hline  
+ & Schoenflies 표기법 & Hermann-Mauguin 표기법\\
+회전 & $C_n$ & $n$ \\
+\hline 
+회전-반전 & $iC_n$ & $\overline{n}$ \\
+반사면 & $\sigma$ & $m$ \\
+$n$-회 대칭축에 수직인 수평 반사면 & $\sigma_h$ & $n/m$ \\
+$n$-회 대칭축을 포함하는 수직 반사면 &$\sigma_v$ & $nm$ \\
+$n$-회 대칭축을 포함하는 위와 동등하지 않은 수직 반사면 & $\sigma_{v'}$ & $nmm$ \\
+\hline
+\end{tabular}
+ -->
+
+
+![Schoenflies 표기법과 Hermann-Mauguin 표기법 비교](figures/shoenflies_and_hermann_mauguin_1.png){#tbl-Group_shoenflies_and_hermiann_mauguin_1 width=600}
+
+위의 표에 적히지 않은  것은 $n$ 이후에 숫자 $k$ 가 올 때는 주축의 $C_n$ 대칭에 더하여 주축과 수직인 축으로의 $C_k$ 회전 대칭이 존재한다는 뜻이다. 예를 들어 $422$ 는 주축에 대해서는 $C_4$ 회전 대칭, 2종류의 $C_2$ 대칭이 존재하므로 $D_4$ 이다.
+
+- HM표기법에서 $4mm$ 는 $C_4$ 와 두종류의 반사면이 존재하므로 $C_{4v}$ 이다. 
+- 
+
+
+## 결정계와 대칭 {#sec-Group_crystall_system_and_symmetry_operations}
+
+| 결정계 | 단위포 (unit cell) | 점군(SC) | 점군 (HM) | 대칭 성분 갯수 |
+|:--------:|:-------:|:-----:|:-----:|:---------:|
+| 삼사정계 (triclinic) | $a \ne b \ne c$ </br> $\alpha\ne \beta \ne \gamma$ | $C_1$ </br> $S_2(C_1)$ | 1 </br> 1 | 1 </br> 2 |
+| 단사정계 (monoclinic) | $a\ne b \ne c$ </br> $\alpha=\gamma = \dfrac{\pi}{2} \ne \beta$ | $C_{1h}$ </br> $C_2$ </br> $C_{2h}$ | $m$ </br> $2$ </br> $2/m$ | 2 </br> 2 </br> 4 |
+| 사방정계 (orthorhombic) | $a \ne b \ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_{2v}$ </br> $D_2(V)$ </br> $D_{2h}(V_h)$ | $2mm$ </br> $222$ </br> $2/m,\,2/m\,2/m$ | 4 </br> 4 </br> 8 |
+| 정방정계 (tetragonal) | $a=b\ne c$ </br> $\alpha=\beta=\gamma = \dfrac{\pi}{2}$ | $C_4$ </br> $S_4$ </br> $C_{4h}$ </br> $D_{2d}(V_d)$ </br> $C_{4v}$ </br> $D_4$ </br> $D_{4h}$ | $4$ </br> $\overline{4}$ </br> $4/m$ </br> $\overline{4}2m$ </br> $4mm$ </br> $422$ </br> $4/m\,2/m,2/m$ | 4 </br> 4 </br> 8 </br> 8 </br> 8 </br>8 </br> 16 |
+| 삼방정계 (rhombohedral) | $a=b = c$ </br> $\alpha=\beta=\gamma < \dfrac{2\pi}{3} \ne \dfrac{\pi}{2}$ | $C_3$ </br> $S_6(C_{3i})$ </br> $C_{3v}$ </br> $D_3$ </br> $D_{3d}$ | $3$ </br> $\overline{3}$ </br> $3m$ </br> $32$ </br> $\overline{3}2/m$ | 3 </br> 6 </br> 6 </br> 6 </br> 12 |
+| 육방정계 (hexagonal) | $a=b\ne c$ </br> $\alpha = \beta = \dfrac{\pi}{2},\, \gamma = \dfrac{2\pi}{3}$ | $C_{3h}$, ($S_3$) </br> $C_6$ </br> $C_{6h}$ </br> $D_{3h}$ </br> $C_{6v}$ </br> $D_6$ </br> $D_{6h}$ | $\overline{6}$ </br> $6$ </br> $6/m$ </br> $\overline{6}2m$ </br> $6mm$ </br> $622$ </br> $6/m,\, 2/m,\, 2/m$ | 6 </br> 6 </br> 12 </br> 12 </br> 12 </br> 12 </br> 24 |
+| 입방정계 (cubic) | $a=b=c$ </br> $\alpha = \beta = \gamma = \dfrac{\pi}{2}$ | $T$ </br> $T_h$ </br> $T_d$ </br> $O$ </br> $O_h$ | $23$ </br> $\frac{2}{m}\overline{3}$ </br> $\overline{4}3m$ </br> $432$ </br> $4/m\, \overline{3},\, 2/m$ |  12 </br> 24 </br> 24 </br> 24 </br> 48|
 : 결정계에 따른 점군의 분류 {#tbl-Group_crystall_system .striped .bordered}
+
+</br>
+
+
 
 </br>
 
