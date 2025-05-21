@@ -14,13 +14,13 @@ crossref:
 ## 대칭과 물리
 
 ### 슈뢰딩거 방정식과 degeneracy {#sec-Group_group_of_schroedinger_equation_and_degeneracy}
-해밀토니안 $H = T+V$ 인 양자역학 시스템을 생각하자 그리고 해밀토니안 $H$ 에 어떤 기하학적인 대칭이 존재한다고 하자. 운동 에너지 $T$ 는 회전과 병진에 대해 자체로 불변이기 때문이기 때문에 해밀토니안 $H$ 에 어떤 공간대칭성이 있다면 일반적으로 포텐셜 에너지 $V$ 의 대칭성이다. 비상대론적 양자역학은 슈뢰딩거 방정식에 의해 기술된다.
+해밀토니안 $\hat{H} = \hat{T}+\hat{V}$ 인 양자역학 시스템을 생각하자 그리고 해밀토니안 $\hat{H}$ 에 어떤 기하학적인 대칭이 존재한다고 하자. 운동 에너지 $\hat{T}$ 는 회전과 병진에 대해 자체로 불변이기 때문이기 때문에 해밀토니안 $\hat{H}$ 에 어떤 공간대칭성이 있다면 일반적으로 포텐셜 에너지 $\hat{V}$ 의 대칭성이다. 비상대론적 양자역학은 슈뢰딩거 방정식에 의해 기술된다.
 
 $$
-i\hbar \dfrac{\partial \Psi}{\partial t} = H\Psi.
+i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi. 
 $$ {#eq-Group_schroedinger_equation}
 
-양자역학에서 변환은 유니타리 연산자에 의해 표현되는 유니타리 변환이며 유니타리 변환 $T$ 에 대해 $H$ 가 불변이라는 것은 $TH=HT$ 임을 의미한다. 그리고 이런 변환의 집합은 군을 이룬다는 것을 쉽게 보일 수 있다. 
+양자역학에서 변환은 유니타리 연산자에 의해 표현되는 유니타리 변환이며 유니타리 변환 $\hat{S}$ 에 대해 $\hat{H}$ 가 불변이라는 것은 $\hat{S}\hat{H}=\hat{H}\hat{S}$ 임을 의미한다. 그리고 이런 변환의 집합은 군을 이룬다는 것을 쉽게 보일 수 있다. 
 
 
 
@@ -34,13 +34,13 @@ $$ {#eq-Group_schroedinger_equation}
 :::
 
 
-$|\Psi_n\rangle$ 이 슈뢰딩거 방정식의 고유상태로 $E_n$ 의 고유값을 갖는다고 하자. $T$ 가 슈뢰딩거 방정식군에 포함된다면
+$|\Psi_n\rangle$ 이 슈뢰딩거 방정식의 고유상태로 $E_n$ 의 고유값을 갖는다고 하자. $S$ 가 슈뢰딩거 방정식군에 포함된다면
 
 $$
-HT|\Psi_n \rangle = TH |\Psi_n \rangle = E_nT|\Psi_n\rangle
+\hat{H}\hat{S}|\Psi_n \rangle = \hat{S}\hat{H} |\Psi_n \rangle = E_n \hat{S}|\Psi_n\rangle
 $$
 
-이므로 $T|\Psi_n\rangle$ 역시 $E_n$ 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다. 
+이므로 $\hat{S}|\Psi_n\rangle$ 역시 $E_n$ 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다. 
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -59,21 +59,21 @@ $$
 
 ### 슈뢰딩거 방정식 군의 표현 {#sec-Group_representation_of_schroedinger_equation_group}
 
-여기서는 해밀토니안 $H$ 와 이 해밀토니안에 대한 슈뢰딩거 방정식 군 $G_S$ 을 알 때 $G_S$ 의 기약표현으로부터 해밀토니안의 가능한 degeneracy 를 알 수 있다는 것을 보이고자 한다. 
+여기서는 해밀토니안 $\hat{H}$ 와 이 해밀토니안에 대한 슈뢰딩거 방정식 군 $G_S$ 을 알 때 $G_S$ 의 기약표현으로부터 해밀토니안의 가능한 degeneracy 를 알 수 있다는 것을 보이고자 한다. 
 
-우선 해밀토니안 $H$ 의 고유값 $E_n$ 에 대해 $d$-fold normal degeneracy 가 존재한다고 하자. 이 $d$ 차원 고유공간을 $\mathcal{H}_n$ 이라고 하자. 그렇다면 $d$ 개의 정규직교 고유상태 $\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d\rangle\}$ 가 존재한다. 여기서 $\Gamma_n$ 은 $\mathcal{H}_n$ 에 속한다는 것을 의미하며 그 뒤의 인덱스는 고유상태의 순서를 의미한다. $\{|\Gamma_n 1\rangle,\ldots,|\Gamma_n d\rangle\}$ 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 $G_S$ 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 $T\in G_S$ 에 대해
+우선 해밀토니안 $\hat{H}$ 의 고유값 $E_n$ 에 대해 $d$-fold normal degeneracy 가 존재한다고 하자. 이 $d$ 차원 고유공간을 $\mathcal{H}_n$ 이라고 하자. 그렇다면 $d$ 개의 정규직교 고유상태 $\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d\rangle\}$ 가 존재한다. 여기서 $\Gamma_n$ 은 $\mathcal{H}_n$ 에 속한다는 것을 의미하며 그 뒤의 인덱스는 $\mathcal{H}_n$ 내의 고유상태의 순서를 의미한다. $\{|\Gamma_n 1\rangle,\ldots,|\Gamma_n d\rangle\}$ 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 $G_S$ 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 $S\in G_S$ 에 대해
 
 $$
-T|\Gamma_n i\rangle = \sum_{j=1}^d D^{(\Gamma_n)}(T)_{ji} |\Gamma_n j\rangle
+\hat{S}|\Gamma_n i\rangle = \sum_{j=1}^d D^{(\Gamma_n)}(S)_{ji} |\Gamma_n j\rangle
 $$ {#eq-Group_transformation_by_schroedinger_equation_group}
 
-인 $d\times d$ 행렬 $D^{(\Gamma_n)}(T)$ 가 존재한다.
+인 $d\times d$ 행렬 $D^{(\Gamma_n)}(S)$ 가 존재한다.
 
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_transformation_by_schroedinger_equation_group_1}
+::: {#lem-Group_transformation_by_schroedinger_equation_group_1}
 
 @eq-Group_transformation_by_schroedinger_equation_group 의 $D^{(\Gamma_n)}$ 는 $G_S$ 에 대한 $d$ 차원 유니타리 기약표현이다.
 :::
@@ -82,29 +82,29 @@ $$ {#eq-Group_transformation_by_schroedinger_equation_group}
 
 ::: {.proof}
 
-우선 $D^{(\Gamma_n)}$ 이 표현임을 보이자. 표기의 편의를 위해 잠시 $D=D^{(\Gamma_n)}$ 이라고 놓자. $S,\,T\in G_S$ 에 대해
+우선 $D^{(\Gamma_n)}$ 이 표현임을 보이자. 표기의 편의를 위해 잠시 $D=D^{(\Gamma_n)}$ 이라고 놓자. $R,\,S\in G_S$ 에 대해
 
 $$
 \begin{aligned}
-ST|\Gamma_n i\rangle &= S\sum_j D(T)_{ji}|\Gamma_nj\rangle = \sum_k\sum_j D(T)_{ji}D(S)_{kj}|\Gamma_n k\rangle \\[0.3em] 
-&= \sum_k\left[D(S)D(T)\right]_{ki}|\Gamma_nk\rangle
+\hat{R}\hat{S}|\Gamma_n i\rangle &= \hat{R}\sum_j D(S)_{ji}|\Gamma_nj\rangle = \sum_k\sum_j D(S)_{ji}D(R)_{kj}|\Gamma_n k\rangle \\[0.3em] 
+&= \sum_k\left[D(R)D(S)\right]_{ki}|\Gamma_nk\rangle
 \end{aligned}
 $$
 
-이다. 즉 $D(ST) = D(S)D^{(n)}(T)$ 이므로 $D$ 은 $G_S$ 에 대한 $d$ 차원 표현이다. 
+이다. 즉 $D(ST) = D(S)D(T)$ 이므로 $D$ 은 $G_S$ 에 대한 $d$ 차원 표현이다. 
 
-이제 $D$ 이 기약표현이 아님을 가정하자. $D$ 이 모든 $G_S$ 에 대해 블럭대각행렬이라면 어떤 $|\Gamma_ni\rangle,\, |\Gamma_nj\rangle$ 이 존재하여 모든 $T\in G_S$ 에 대해 $T|\Gamma_ni\rangle \ne |\Gamma_nj\rangle$ 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다. 
+이제 $D$ 이 기약표현이 아님을 가정하자. $D$ 이 모든 $G_S$ 에 대해 블럭대각행렬이라면 어떤 $|\Gamma_ni\rangle,\, |\Gamma_nj\rangle$ 이 존재하여 모든 $R\in G_S$ 에 대해 $\hat{R}|\Gamma_ni\rangle \ne |\Gamma_nj\rangle$ 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다. 
 
-이제 $D$ 이 유니타리 임을 보이자. 임의의 $T\in G_S$ 에 대해
+이제 $D$ 이 유니타리 임을 보이자. 임의의 $R\in G_S$ 에 대해
 
 $$
 \begin{aligned}
-\delta_{ij} &= \langle \Gamma_n j|\Gamma_n i\rangle = \langle \Gamma_nj|T^\dagger T|\Gamma_ni\rangle = \sum_{k,m} \left(D(T)_{kj}\right)^\ast D(T)_{mi}\langle \Gamma_n k|\Gamma_n m\rangle \\[0.3em]
-&= \sum_{k,m} \left(D(T)_{kj}\right)^\ast D(T)_{mi}\delta_{km} = \sum_k (D(T))^\dagger_{jk}D(T)_{ki} = [D(T)^\dagger D(T)]_{ji}
+\delta_{ij} &= \langle \Gamma_n j|\Gamma_n i\rangle = \langle \Gamma_nj|\hat{R}^\dagger \hat{R}|\Gamma_ni\rangle = \sum_{k,m} \left(D(R)_{kj}\right)^\ast D(R)_{mi}\langle \Gamma_n k|\Gamma_n m\rangle \\[0.3em]
+&= \sum_{k,m} \left(D(R)_{kj}\right)^\ast D(R)_{mi}\delta_{km} = \sum_k (D(R))^\dagger_{jk}D(R)_{ki} = [D(R)^\dagger D(R)]_{ji}
 \end{aligned}
 $$
 
-이므로 $\left(D(T)\right)^{-1}=D(T)^\dagger$ 이다. 즉 $D=D^{(\Gamma_n)}$ 은 $d$ 차원 유니타리 기약표현이다. $\square$
+이므로 $\left(D(R)\right)^{-1}=D(R)^\dagger$ 이다. 즉 $D=D^{(\Gamma_n)}$ 은 $d$ 차원 유니타리 기약표현이다. $\square$
 
 :::
 
@@ -116,9 +116,9 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_transformation_by_schroedinger_equation_group_2}
+::: {#lem-Group_transformation_by_schroedinger_equation_group_2}
 
-슈뢰딩거 방정식 군 $G_S$ 에 각각의 기약표현 $\Gamma_n$ 과 그 차원 $d_n$ 에 대해  $d_n$-fold degeneracy 가 존재한다. 
+슈뢰딩거 방정식 군 $G_S$ 의 기약표현 $\Gamma_n$ 과 그 차원 $d_n$ 에 대해  $d_n$-fold degeneracy 가 존재한다. 
 
 :::
 
@@ -126,29 +126,28 @@ $$
 
 ::: {.proof}
 
-$D$ 가 $G_S$ 에 대한 $d$ 차원 기약표현이라고 하자. 모든 $T\in G_S$ 에 대해 $HT=TH$ 이며 따라서 $HD(T)= D(T)H$ 이다. 슈어 보조정리(@lem-Group_schur_lemma) 에 의해 $H$ 는 항등행렬의 상수배이므로 해밀토니안에는 $d$-fold degeneracy 가 존재한다. $\square$
+$D$ 가 $G_S$ 에 대한 $d$ 차원 기약표현이라고 하자. 모든 $R\in G_S$ 에 대해 $\hat{R}\hat{T}=\hat{T}\hat{R}$ 이며 따라서 $\hat{H}D(T)= D(T)\hat{H}$ 이다. 슈어 보조정리(@lem-Group_schur_lemma) 에 의해 $\hat{H}$ 는 항등행렬의 상수배이므로 해밀토니안에는 $d$-fold degeneracy 가 존재한다. $\square$
 
 :::
 
 </br>
 
-우리는 이로부터 다음의 결론을 내릴 수 있다.
+우리는 @lem-Group_transformation_by_schroedinger_equation_group_1 과 @lem-Group_transformation_by_schroedinger_equation_group_2 로부터 다음의 결론을 내릴 수 있다.
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_uniqueness_of_representation_of_schroedinger_group}
 
-해밀토니안 $H$ 와 슈뢰딩거 방정식 군 $G_S$ 를 생각하자. $G_S$ 의 모든 기약표현의 차원을 알면 이 해밀토니안서 가능한 degeneracy 를 알 수 있으며 그 역도 성립한다.
+해밀토니안 $\hat{H}$ 와 슈뢰딩거 방정식 군 $G_S$ 를 생각하자. $G_S$ 의 모든 기약표현의 차원을 알면 이 해밀토니안에서 가능한 degeneracy 를 알 수 있으며 그 역도 성립한다.
 
 :::
 
 </div></br>
 
-우리는 앞서 degenerated 된 상태를 $|\Gamma_n i\rangle$ 로 표기하였다. $\Gamma_n$ 은 해밀토니안의 degeneracy 에 대한 인덱스였지만 이제 이것이 기약표현의 인덱스로도 사용 될 수 있다는 것을 안다. 즉 $|\Gamma_n j\rangle$ 은 $\Gamma_n$ 기약표현에서 $j$ 번째 기저상태를 의미한다.
+슈뢰딩거 방정식의 기저벡터를 $|E_n,\, j\rangle$ 로 기술하는 경우를 생각하자. 여기서 $E_n$ 은 해밀토니안 연산자의 고유값이며 $j$ 는 이 고유값에 의한 고유공간의 $j$ 번째 기저벡터라는 의미이다. 여기서 @thm-Group_uniqueness_of_representation_of_schroedinger_group 는 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 $E_n$ 에 해당하는 기약표현 $\Gamma_n$ 에 대해 $|\Gamma_nj\rangle$ 로 쓸 수 있으며 $E_n$ 에 의한 고유공간의 차원은 $\Gamma_n$ 기약표현의 차원이다.
 
 </br>
-
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_schroedinger_equation_group_of_triangle}
@@ -186,16 +185,16 @@ $D$ 가 $G_S$ 에 대한 $d$ 차원 기약표현이라고 하자. 모든 $T\in G
 
 #### 블로흐 정리
 
-1차원의 경우를 생각하자. $V(x+a)=V(x)$ 라고 하자. $-a$ 만큼의 translation $T$ 에 대해 $T|x\rangle = T|x-a\rangle$ 이며, 
+1차원의 경우를 생각하자. $V(x+a)=V(x)$ 라고 하자. $-a$ 만큼의 translation $T$ 에 대해 $\hat{T}|x\rangle = \hat{T}|x-a\rangle$ 이며, 
 
 $$
-T\psi(x) = \langle x|T|\psi\rangle = \psi(x+a)
+\hat{T}\psi(x) = \langle x|\hat{T}|\psi\rangle = \psi(x+a)
 $$
 
-이다. 슈뢰딩거 방정식 군은 $T$ 에 의해 생성되는 무한군이다. $p$ 번째 기약표현에 의한 해를 $\psi_p$ 라고 하자.
+이다. 슈뢰딩거 방정식 군은 $\hat{T}$ 에 의해 생성되는 무한군이다. $p$ 번째 기약표현에 의한 해를 $\psi_p$ 라고 하자.
 
 $$
-\psi_p(x+a) = T\psi(p)(x) = D^{(p)}(T)\psi_p(x) = e^{2\pi p/n}\psi_p(x)
+\psi_p(x+a) = \hat{T}\psi(p)(x) = D^{(p)}(T)\psi_p(x) = e^{2\pi p/n}\psi_p(x)
 $$
 
 $L = an$ 으로 놓고, $k=2\pi n/L = 2\pi/a$ 로 놓으면
@@ -251,19 +250,22 @@ $$
 
 ### 기약표현의 기저함수 {#sec-Group_basis_functions_for_irreducible_representations}
 
+지금까지는 우리가 힐베르트 공간의 기저함수를 모두 안다고 가정하였다. 그러나 많은 경우 우리가 아는 것은 슈뢰딩거 방정식 군의 기약표현에 대한 것 뿐이며 각각의 기약표현에 대한 기저함수는 알지 못하는 경우가 많다. 여기서는 우리가 기약 표현을 알 때 이로부터 어떻게 각 기약표현에서의 기저함수를 얻을 수 있는지를 보기로 한다. 
+
 기약표현 $\Gamma_n$ 에 속하는(즉 $\Gamma_n$ 에 의해 표현되는 degeneratcy 에 포함되는) 기저의 한 상태 $|\Gamma_n k\rangle$ 을 생각하자. 이 기저에서 $|\Gamma_n k\rangle$ 을 제외한 기저의 상태들을 $|\Gamma_nk\rangle$ 의 **파트너(partner)** 라고 한다.
+
 
 
 @eq-Group_transformation_by_schroedinger_equation_group 를 생각하자. 슈뢰딩거 방정식군 $G_S$ 와 $R\in G_S$ 인 연산자. 그리고 기약표현 $\Gamma_n$ 에 속한 벡터에 대해 아래와 같이 놓을 수 있다.
 $$
-R|\Gamma_n k\rangle  = \sum_{j=1}^{d_n} D^{(\Gamma_n)}(R)_{jk} |\Gamma_n j\rangle
+\hat{R}|\Gamma_n k\rangle  = \sum_{j=1}^{d_n} D^{(\Gamma_n)}(R)_{jk} |\Gamma_n j\rangle
 $$
 
 여기에 $D^{(\Gamma_m)}(R)^\ast_{j'k'}$ 를 곱하고 $\sum_{R\in G_S}$ 로 더하자. 위대한 직교정리(@thm-Group_great_orthogonality_theorem) 에 의해 다음이 성립한다.
 
 $$
 \begin{aligned}
-\sum_{R\in G_S} D^{(\Gamma_m)}(R)^\ast_{j'k'} R|\Gamma_n k\rangle &= \sum_{j=1}^{d_n} \sum_{R\in G_S}D^{(\Gamma_n)}(R)_{jk} D^{(\Gamma_m)}(R)^\ast_{j'k'} |\Gamma_n j\rangle \\[0.3em]
+\sum_{R\in G_S} D^{(\Gamma_m)}(R)^\ast_{j'k'} \hat{R}|\Gamma_n k\rangle &= \sum_{j=1}^{d_n} \sum_{R\in G_S}D^{(\Gamma_n)}(R)_{jk} D^{(\Gamma_m)}(R)^\ast_{j'k'} |\Gamma_n j\rangle \\[0.3em]
 &= \sum_{j=1}^{d_n} \dfrac{|G_S|}{d_n}\delta_{mn}\delta_{jj'}\delta_{kk'} |\Gamma_n j\rangle
 \end{aligned}
 $$
@@ -271,19 +273,19 @@ $$
 즉
 
 $$
-\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R|\Gamma_n k\rangle = \dfrac{|G_S|}{d_n} |\Gamma_nj\rangle
+\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} \hat{R}|\Gamma_n k\rangle = \dfrac{|G_S|}{d_n} |\Gamma_nj\rangle
 $${#eq-Group_projection_operator_from_k_to_j_0}
 
-이다.
+이다. 이제 유용한 연산자를 정의하자.
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_projection_operator}
-#### Projection 연산자
+#### Projection 연산자 1
 
-Projection 연산자 $P^{(\Gamma_n)}_{jk}$ 를 아래와 같이 정의한다. 
+Projection 연산자 $\hat{\Pi}^{(\Gamma_n)}_{jk}$ 를 아래와 같이 정의한다. 
 
 $$
-P^{(\Gamma_n)}_{jk} := \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R\right).
+\hat{\Pi}^{(\Gamma_n)}_{jk} := \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} \hat{R}\right).
 $$ {#eq-Group_projection_operator_from_k_to_j}
 
 
@@ -291,25 +293,21 @@ $$ {#eq-Group_projection_operator_from_k_to_j}
 :::
 
 
-그렇다면
+그렇다면 @eq-Group_projection_operator_from_k_to_j_0 로부터
 
 $$
-P^{(\Gamma_n)}_{jk}|\Gamma_n k\rangle = \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} R\right)|\Gamma_n k\rangle = |\Gamma_n j\rangle
-$$
+\hat{\Pi}^{(\Gamma_n)}_{jk}|\Gamma_{n'} k'\rangle  = \delta_{nn'}\delta_{kk'}|\Gamma_n j\rangle
+$$ {#eq-Group_group_projection_operator}
 
-이다. 즉 projection 연산자 $P^{(\Gamma_n)}_{jk}$ 는 $\Gamma_n$ 기약표현의 $k$ 기저상태 를 $j$ 기저상태로 변환시켜주는 연산자이다$^{\ast}$[$^\ast$ 양자역학(혹은 선형대수학) 에서의 projection operator 와는 다르다!!!]{.aside}. 당연하게도 아래가 성립한다.
+이다. 즉 projection 연산자 $\hat{\Pi}^{(\Gamma_n)}_{jk}$ 는 $\Gamma_n$ 기약표현의 $k$ 기저상태 를 $j$ 기저상태로 변환시켜주는 연산자이다. 당연하게도 아래가 성립한다.
 
 $$
 \begin{aligned}
-P^{(\Gamma_n)}_{jj}|\Gamma_n j\rangle &= \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jj} R\right)|\Gamma_n j\rangle = |\Gamma_n j\rangle.
+\hat{\Pi}^{(\Gamma_n)}_{jj}|\Gamma_{n'} {j'}\rangle &=  \delta_{nn'}\delta_{jj'}|\Gamma_n j\rangle.
 \end{aligned}
-$$
+$${#eq-Group_group_projection_operator_and_vector_projection_operator}
 
-즉 $P^{(\Gamma_n)}_{jj}$ 는 양자역학과 선형대수학에서의 projection 연산자이며 $P^{(\Gamma_n)}_{jk}$ 는 projection 연산자의 확장판이라고 볼 수 있다.  $P^{(\Gamma_n)}_{jk}$ 를 다시 쓰면 다음과 같다.
-
-$$
-P_{jk}^{(\Gamma_n)} = |\Gamma_nj\rangle \langle \Gamma_n k|.
-$$ {#eq-Group_projection_operator_in_ketbra_form}
+즉 $\hat{\Pi}^{(\Gamma_n)}_{jj}$ 는 양자역학과 선형대수학에서의 projection 연산자이며 $\hat{\Pi}^{(\Gamma_n)}_{jk}$ 는 projection 연산자의 확장판이라고 볼 수 있다. 
 
 
 </br>
@@ -317,17 +315,13 @@ $$ {#eq-Group_projection_operator_in_ketbra_form}
 
 ::: {#thm-Group_uniqueness_of_representation_of_schroedinger_group}
 
-공간 $V$ 에 작용하는 연산자에 의한 유한군 $G$ 에 대해 $\Gamma^{(1)},\ldots,\,\Gamma^{(n)}$ 이 서로 동등하지 않은 기약표현이라고 하자. $F:V \to V$ 에 대해 
+힐베르트 공간 $\mathcal{H}$ 에서 정의된 슈뢰딩거 방정식 군 $G_S$ 와 $G_S$ 의 기약표현 $\Gamma_1,\ldots,\,\Gamma_m$ 을 생각하자. 
 
 $$
-f_j^{(\Gamma_n)}|\Gamma_n j\rangle := F|\Gamma_n j\rangle
-$$
+|\Psi \rangle = \sum_{j=1}^m \sum_{k=1}^{d_j} a_k^j |\Gamma_j k\rangle
+$$ {#eq-Group_representation_of_state_with_irreducible_representation_eigenvectors}
 
-이라면 다음이 성립한다.
-
-$$
-F = \sum_{n}\sum_{j} f_j^{(\Gamma_n)}.
-$$
+이다. 
 
 :::
 
@@ -335,12 +329,208 @@ $$
 
 ::: {.proof}
 
-@eq-Group_projection_operator_from_k_to_j 로부터
+$|\Psi\rangle \in \mathcal{H}$ 에 대해 $\{\hat{R}|\Psi\rangle: R\in G_S\}$ 에서 그람-슈미트 과정을 통해 서로 정규직교벡터인 $\{|\Psi_1\rangle,\ldots,\, |\Psi_n\rangle\}$ 를 구성 할 수 있다. 
 
 $$
-P_{jj}^{(\Gamma_n)}F = \left(\dfrac{d_n}{|G_S|}\sum_{R\in G} D^{(\Gamma_n)}(R)^\ast_{jk} RF\right)
+\hat{R}|\Psi_j\rangle = \sum_{i=1}^n D(R)_{ik}|\Psi_i\rangle
 $$
 
-이다. 
+이다. 이 때의 $D$ 는 기약표현일 수도 있고 아닐 수도 있다. $D$ 가 기약표현이라면 $|\Psi\rangle$ 과 $\{|\Psi_i\rangle\}$ 은 모두 이 기약표현 $D$ 에 대한 상태공간의 벡터이므로 @eq-Group_representation_of_state_with_irreducible_representation_eigenvectors 가 성립한다. $D$ 가 기약표현이 아니라면 어떤 유니타리 행렬 $U$ 에 대해 $U^\dagger D(R) U$ 가 고정된 형태의 블럭대각행렬로 표현되며, 
 
+$$
+|\Phi_{i}\rangle = \sum_{j=1}^nU_{ji}|\Psi_j\rangle
+$$
+
+의 유니타리 변환에 대해
+
+$$
+\hat{R}|\Phi_i\rangle = \sum_{j=1}^n (U^\dagger D(R)U)_{ji}|\Phi_j\rangle
+$$
+
+이다. $|\Phi_j\rangle$ 은 기약표현과, 각 기약 표현 내의 degeneracy 로 $|\Gamma_jk\rangle$ 로 표현 할 수 있으므로 @eq-Group_representation_of_state_with_irreducible_representation_eigenvectors 와 같이 쓸 수 있다. $\square$
+
+:::
+
+</br>
+
+@thm-Group_uniqueness_of_representation_of_schroedinger_group 가 의미하는 바는 자명하다. 만약 우리가 슈뢰딩거 방정식 군 $G_S$ 를 알고, 어떤 상태 $|\Psi\rangle$ 을 안다면 $\{\hat{R}|\Psi\rangle,\, R\in G_S\}$ 로 부터 구성되는 정규직교 기저는 $|\Psi\rangle$ 과 직접 연관되는 모든 기약표현에 대한 기저이다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_orthogonality_of_different_irreducible_representation_and_row}
+
+다음이 성립한다.
+
+$$
+\langle \Gamma_{n'}j'|\Gamma_nj\rangle \propto \delta_{nn'}\delta_{jj'}.
+$${#eq-Group_orthogonality_of_different_irreducible_representation_and_row}
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+위대한 직교정리(@thm-Group_great_orthogonality_theorem) 를 사용한다. 
+$$
+\begin{aligned}
+\langle \Gamma_{n'}j'|\Gamma_nj\rangle &= \sum_{R\in G_S}\dfrac{1}{|G_S|}\langle \Gamma_n'j'|\hat{R}^\dagger \hat{R}|\Gamma_nj\rangle \\[0.3em]
+&= \dfrac{1}{|G_S|} \sum_R \sum_{k,k'}D^{(\Gamma_{n'})}(R)^\ast_{k'j'}D^{(\Gamma_n)}(R)_{kj}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
+&= \dfrac{1}{|G_S|} \sum_{k,k'}\delta_{nn'}\delta_{kk'}\delta_{jj'} \dfrac{|G_S|}{d_n}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
+&= \dfrac{1}{d_n} \delta_{nn'}\delta_{jj'}\sum_k \langle \Gamma_n k|\Gamma_n k\rangle \qquad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_projection_operator2}
+#### Projection 연산자 2
+
+Projection 연산자 $\hat{\Pi}^{(\Gamma_n)}$ 를 아래와 같이 정의한다. 
+
+$$
+\hat{\Pi}^{(\Gamma_n)} := \sum_j \hat{P}^{(\Gamma_n)}_{jj} = \dfrac{d_{n}}{|G_s|} \sum_{R\in G_S} \left(\chi^{(\Gamma_n)}(R)\right)^\ast \hat{R}
+$$ {#eq-Group_projection_operator_2}
+
+
+:::
+:::
+
+</br>
+
+
+$$
+\hat{\Pi}^{(\Gamma_n)} |\Gamma_{n'}j'\rangle = \delta_{nn'}|\Gamma_n j'\rangle
+$$
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_application_of_projection_operator}
+
+간단한 예를 들어 보자. 항등 연산과 $x=0$ 평면에 대한 반사 연산 $\sigma_x$ 로 이루어진 군을 생각하자. 이 군은 두개의 클래스로 이루어졌으며, 따라서 2개의 1차원 기약표현 $\Gamma_1,\, \Gamma_2$ 가 존재한다. 
+
+<center>
+![](figures/table_sigma.png){width=100}
+</center>
+
+따라서 두 기약표현에 대한 Projection 연산자는 다음과 같다.
+
+$$
+\hat{\Pi}^{(\Gamma_1)} = \dfrac{1}{2} \left(\hat{E} + \hat{\sigma}\right) ,\qquad \hat{\Pi}^{\Gamma_2} = \dfrac{1}{2} \left(\hat{E}-\hat{\sigma}\right).
+$$
+
+임의의 파동함수 $\psi(x)$ 에 대해
+
+$$
+\hat{\Pi}^{(\Gamma_1)} \psi(x) = \dfrac{1}{2} (\psi(x)+\psi(-x)),\qquad \hat{\Pi}^{(\Gamma_2)}\psi(x) = \dfrac{1}{2} \left(\psi(x) - \psi(-x)\right)
+$$
+
+이며 각각은 $\sigma$ 에 대해 대칭/반대칭이다. 
+
+
+:::
+</div></br>
+
+## Direct Product Group
+
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_direct_product_group}
+#### Direct product group
+
+군 $G$ 의 두 부분군 $H_1,\,H_2$ 에 대해
+
+$$
+\forall h_1\in H_1,\, h_2\in H_2,\, h_1h_2 = h_2h_1
+$$
+
+일 때 아래와 같이 정의되는 $H_1 \otimes  H_2$ 를 **direct product group** 이라고 한다.
+
+$$
+H_1 \otimes H_2 := \{h_1h_2: h_1\in H_1,\, h_2\in H_2\}
+$$
+
+:::
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_direct_product_is_sugbroup}
+
+@def-Group_direct_product_group 의 조건에서 $H_1 \otimes H_2$ 는 $G$ 의 부분군이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+@prp-Group_how_to_be_subgroup 의 ($c$) 조건을 통해 증명한다.  $a,\,b\in H_1,\, x,\,y \in H_2$ 에 대해 
+
+$$
+(ax)^{-1}(by)= x^{-1}a^{-1}by = a^{-1}bx^{-1}y \in H_1\times H_2
+$$ 
+
+이므로 $H_1 \otimes H_2 \le G$ 이다. $\square$
+
+:::
+
+</br>
+
+[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $H_1,\,H_2$ 에 대한 direct product group $H_1\times H_2$ 가 존재한다고 하자. 그리고 $H_1$ 에 대한 표현 $\Gamma_1$ 과 $H_2$ 에 대한 표현 $\Gamma_2$ 에 대해 $D^{(\Gamma_1 \otimes \Gamma_2)}$ 를 $D^{(\Gamma_1)}$ 과 $D^{(\Gamma_2)}$ 의 직곱표현으로 정의하자. 즉, $x\in H_1,\, y\in H_2$ 에 대해
+
+$$
+D^{(\Gamma_1 \otimes \Gamma_2)} (xy):= D^{(\Gamma_1)}(x)\otimes D^{(\Gamma_2)}(y)
+$$ {#eq-Group_representation_of_direct_product_group}
+
+로 정의한다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_direct_product_representation}
+
+@eq-Group_representation_of_direct_product_group 은 $H_1 \otimes H_2$ 의 표현이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+@exr-Group_proof_of_direct_product_mutiplication 를 사용한다. $a,\,b\in H_1,\, x,\,y\in H_2$ 에 대해
+
+$$
+\begin{aligned}
+D^{(\Gamma_1 \otimes \Gamma_2)}(ax)D^{(\Gamma_1 \otimes \Gamma_2)}(by)  &= [D^{(\Gamma_1)}(a)\otimes D^{(\Gamma_2)}(x)][D^{(\Gamma_1)}(b)\otimes D^{(\Gamma_2)}(y)] \\[0.3em]
+&=D^{(\Gamma_1)}(ab)\otimes D^{(\Gamma_2)}(xy) \\[0.3em]
+&=D^{(\Gamma_1 \otimes \Gamma_2)}(abxy) =D^{(\Gamma_1 \otimes \Gamma_2)}(axby) \qquad \qquad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+증명을 하지는 않지만 다음 결과는 매우 유용하다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_direct_product_representation_irreducibility}
+
+@eq-Group_representation_of_direct_product_group 의 $\Gamma_1$ 과 $\Gamma_2$ 가 각각 $H_1,\,H_2$ 에 대한 기약표현이라면 $\Gamma_1 \otimes \Gamma_2$ 는 $H_1\otimes H_2$ 의 기약표현이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group)
 :::
