@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; 군과 양자역학 – 수리물리학</title>
+<title>7&nbsp; 군과 양자역학 I- 대칭과 슈뢰딩거 방정식군 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/group/group_aux.html" rel="next">
+<link href="../../src/group/group_quantum2_irrep_of_point_group.html" rel="next">
 <link href="../../src/group/group_symmetry_group.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum1_schroedinger_equation_group.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -237,14 +237,20 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_quantum.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></span></a>
+  <a href="../../src/group/group_quantum1_schroedinger_equation_group.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 점군의 기약표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_aux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -261,13 +267,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,19 +290,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,16 +324,20 @@ window.Quarto = {
   <li><a href="#sec-Group_representation_of_abelian_group" id="toc-sec-Group_representation_of_abelian_group" class="nav-link" data-scroll-target="#sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.3</span> 아벨군의 표현</a></li>
   <li><a href="#sec-Group_basis_functions_for_irreducible_representations" id="toc-sec-Group_basis_functions_for_irreducible_representations" class="nav-link" data-scroll-target="#sec-Group_basis_functions_for_irreducible_representations"><span class="header-section-number">7.1.4</span> 기약표현의 기저함수</a></li>
   </ul></li>
-  <li><a href="#direct-product-group" id="toc-direct-product-group" class="nav-link" data-scroll-target="#direct-product-group"><span class="header-section-number">7.2</span> Direct Product Group</a></li>
+  <li><a href="#direct-product-group" id="toc-direct-product-group" class="nav-link" data-scroll-target="#direct-product-group"><span class="header-section-number">7.2</span> Direct Product Group</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_direct_product_group" id="toc-sec-Group_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_direct_product_group"><span class="header-section-number">7.2.1</span> Direct Product Group</a></li>
+  <li><a href="#sec-Group_character_properties_of_direct_product_group" id="toc-sec-Group_character_properties_of_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_character_properties_of_direct_product_group"><span class="header-section-number">7.2.2</span> Character 특성</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum1_schroedinger_equation_group.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></h1>
 </div>
 
 
@@ -372,16 +382,16 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 </div>
 <div class="callout-body-container">
 <div id="def-Group_schoroedinger_equation_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 7.1 (슈뢰딩거 방정식 군)</strong></span> 슈뢰딩거 방정식에 대해 불변인 유니타리 변환의 집합을 <strong>슈뢰딩거 방정식 군(the group of Schrödinger equation)</strong><span class="math inline">\(^\ast\)</span> 이라고 한다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
+<p><span class="theorem-title"><strong>정의 7.1 (슈뢰딩거 방정식 군)</strong></span> 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 와 commute 한 유니타리 변환의 집합을 <strong>슈뢰딩거 방정식 군(the group of Schrödinger equation)</strong><span class="math inline">\(^\ast\)</span> 이라고 한다(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
 </div>
 </div>
 </div>
 </div>
-<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(^\ast\)</span> <a href="https://en.wikipedia.org/wiki/Schrödinger_group">슈뢰딩거 군(Schrödinger group)</a> 과는 다르다.</span></div><p><span class="math inline">\(|\Psi_n\rangle\)</span> 이 슈뢰딩거 방정식의 고유상태로 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는다고 하자. <span class="math inline">\(S\)</span> 가 슈뢰딩거 방정식군에 포함된다면</p>
+<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(^\ast\)</span> <a href="https://en.wikipedia.org/wiki/Schrödinger_group">슈뢰딩거 군(Schrödinger group)</a> 과는 다르다.</span></div><p><span class="math inline">\(|\Psi_n\rangle\)</span> 이 슈뢰딩거 방정식의 고유상태로 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는다고 하자. <span class="math inline">\(R\)</span> 이 슈뢰딩거 방정식군에 포함된다면</p>
 <p><span class="math display">\[
-\hat{H}\hat{S}|\Psi_n \rangle = \hat{S}\hat{H} |\Psi_n \rangle = E_n \hat{S}|\Psi_n\rangle
+\hat{H}\hat{R}|\Psi_n \rangle = \hat{R}\hat{H} |\Psi_n \rangle = E_n \hat{R}|\Psi_n\rangle
 \]</span></p>
-<p>이므로 <span class="math inline">\(\hat{S}|\Psi_n\rangle\)</span> 역시 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다.</p>
+<p>이므로 <span class="math inline">\(\hat{R}|\Psi_n\rangle\)</span> 역시 <span class="math inline">\(E_n\)</span> 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -400,15 +410,15 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 <section id="sec-Group_representation_of_schroedinger_equation_group" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="sec-Group_representation_of_schroedinger_equation_group"><span class="header-section-number">7.1.2</span> 슈뢰딩거 방정식 군의 표현</h3>
 <p>여기서는 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 와 이 해밀토니안에 대한 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 을 알 때 <span class="math inline">\(G_S\)</span> 의 기약표현으로부터 해밀토니안의 가능한 degeneracy 를 알 수 있다는 것을 보이고자 한다.</p>
-<p>우선 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 의 고유값 <span class="math inline">\(E_n\)</span> 에 대해 <span class="math inline">\(d\)</span>-fold normal degeneracy 가 존재한다고 하자. 이 <span class="math inline">\(d\)</span> 차원 고유공간을 <span class="math inline">\(\mathcal{H}_n\)</span> 이라고 하자. 그렇다면 <span class="math inline">\(d\)</span> 개의 정규직교 고유상태 <span class="math inline">\(\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d\rangle\}\)</span> 가 존재한다. 여기서 <span class="math inline">\(\Gamma_n\)</span> 은 <span class="math inline">\(\mathcal{H}_n\)</span> 에 속한다는 것을 의미하며 그 뒤의 인덱스는 <span class="math inline">\(\mathcal{H}_n\)</span> 내의 고유상태의 순서를 의미한다. <span class="math inline">\(\{|\Gamma_n 1\rangle,\ldots,|\Gamma_n d\rangle\}\)</span> 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 <span class="math inline">\(G_S\)</span> 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 <span class="math inline">\(S\in G_S\)</span> 에 대해</p>
+<p>우선 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 의 고유값 <span class="math inline">\(E_n\)</span> 에 대해 <span class="math inline">\(d_n\)</span>-fold normal degeneracy 가 존재한다고 하자. 이 <span class="math inline">\(d_n\)</span> 차원 고유공간을 <span class="math inline">\(\mathcal{H}_n\)</span> 이라고 하자. 그렇다면 <span class="math inline">\(d\)</span> 개의 정규직교 고유상태 <span class="math inline">\(\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d_n\rangle\}\)</span> 가 존재한다. 여기서 <span class="math inline">\(\Gamma_n\)</span> 은 <span class="math inline">\(\mathcal{H}_n\)</span> 에 속한다는 것을 의미하며 그 뒤의 인덱스는 <span class="math inline">\(\mathcal{H}_n\)</span> 내의 고유상태의 순서를 의미한다. <span class="math inline">\(\mathcal{H}_n\)</span> 은<span class="math inline">\(G_S\)</span> 군에 속하는 모든 변환에 대한 불변 공간이므로 임의의 <span class="math inline">\(S\in G_S\)</span> 에 대해</p>
 <p><span id="eq-Group_transformation_by_schroedinger_equation_group"><span class="math display">\[
-\hat{S}|\Gamma_n i\rangle = \sum_{j=1}^d D^{(\Gamma_n)}(S)_{ji} |\Gamma_n j\rangle
+\hat{S}|\Gamma_n i\rangle = \sum_{j=1}^{d_n} D^{(\Gamma_n)}(S)_{ji} |\Gamma_n j\rangle
 \tag{7.2}\]</span></span></p>
-<p>인 <span class="math inline">\(d\times d\)</span> 행렬 <span class="math inline">\(D^{(\Gamma_n)}(S)\)</span> 가 존재한다.</p>
+<p>인 <span class="math inline">\(d_n\times d_n\)</span> 행렬 <span class="math inline">\(D^{(\Gamma_n)}(S)\)</span> 가 존재한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_transformation_by_schroedinger_equation_group_1" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.1</strong></span> <a href="#eq-Group_transformation_by_schroedinger_equation_group" class="quarto-xref">식&nbsp;<span>7.2</span></a> 의 <span class="math inline">\(D^{(\Gamma_n)}\)</span> 는 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 유니타리 기약표현이다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.1</strong></span> <a href="#eq-Group_transformation_by_schroedinger_equation_group" class="quarto-xref">식&nbsp;<span>7.2</span></a> 의 <span class="math inline">\(D^{(\Gamma_n)}\)</span> 는 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d_n\)</span> 차원 유니타리 기약표현이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -416,12 +426,12 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(D^{(\Gamma_n)}\)</span> 이 표현임을 보이자. 표기의 편의를 위해 잠시 <span class="math inline">\(D=D^{(\Gamma_n)}\)</span> 이라고 놓자. <span class="math inline">\(R,\,S\in G_S\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-\hat{R}\hat{S}|\Gamma_n i\rangle &amp;= \hat{R}\sum_j D(S)_{ji}|\Gamma_nj\rangle = \sum_k\sum_j D(S)_{ji}D(R)_{kj}|\Gamma_n k\rangle \\[0.3em]
-&amp;= \sum_k\left[D(R)D(S)\right]_{ki}|\Gamma_nk\rangle
+\hat{R}\hat{S}|\Gamma_n i\rangle &amp;= \hat{R}\sum_j^{d_n} D(S)_{ji}|\Gamma_nj\rangle = \sum_k^{d_n}\sum_j^{d_n} D(S)_{ji}D(R)_{kj}|\Gamma_n k\rangle \\[0.3em]
+&amp;= \sum_k^{d_n}\left[D(R)D(S)\right]_{ki}|\Gamma_nk\rangle
 \end{aligned}
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(D(ST) = D(S)D(T)\)</span> 이므로 <span class="math inline">\(D\)</span> 은 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 표현이다.</p>
-<p>이제 <span class="math inline">\(D\)</span> 이 기약표현이 아님을 가정하자. <span class="math inline">\(D\)</span> 이 모든 <span class="math inline">\(G_S\)</span> 에 대해 블럭대각행렬이라면 어떤 <span class="math inline">\(|\Gamma_ni\rangle,\, |\Gamma_nj\rangle\)</span> 이 존재하여 모든 <span class="math inline">\(R\in G_S\)</span> 에 대해 <span class="math inline">\(\hat{R}|\Gamma_ni\rangle \ne |\Gamma_nj\rangle\)</span> 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다.</p>
+<p>이다. 즉 <span class="math inline">\(D(RS) = D(R)D(S)\)</span> 이므로 <span class="math inline">\(D\)</span> 은 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d_n\)</span> 차원 표현이다.</p>
+<p>이제 <span class="math inline">\(D\)</span> 가 기약표현이 아님을 가정하자. <span class="math inline">\(D\)</span> 가 모든 <span class="math inline">\(G_S\)</span> 에 대해 블럭대각행렬이라면 어떤 <span class="math inline">\(|\Gamma_ni\rangle,\, |\Gamma_nj\rangle\)</span> 이 존재하여 모든 <span class="math inline">\(R\in G_S\)</span> 에 대해 <span class="math inline">\(\hat{R}|\Gamma_ni\rangle \ne |\Gamma_nj\rangle\)</span> 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다. 즉 <span class="math inline">\(D\)</span> 는 기약표현이다.</p>
 <p>이제 <span class="math inline">\(D\)</span> 이 유니타리 임을 보이자. 임의의 <span class="math inline">\(R\in G_S\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -429,10 +439,10 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 &amp;= \sum_{k,m} \left(D(R)_{kj}\right)^\ast D(R)_{mi}\delta_{km} = \sum_k (D(R))^\dagger_{jk}D(R)_{ki} = [D(R)^\dagger D(R)]_{ji}
 \end{aligned}
 \]</span></p>
-<p>이므로 <span class="math inline">\(\left(D(R)\right)^{-1}=D(R)^\dagger\)</span> 이다. 즉 <span class="math inline">\(D=D^{(\Gamma_n)}\)</span> 은 <span class="math inline">\(d\)</span> 차원 유니타리 기약표현이다. <span class="math inline">\(\square\)</span></p>
+<p>이므로 <span class="math inline">\(\left(D(R)\right)^{-1}=D(R)^\dagger\)</span> 이다. 즉 <span class="math inline">\(D=D^{(\Gamma_n)}\)</span> 은 <span class="math inline">\(d_n\)</span> 차원 유니타리 기약표현이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이제 우리는 해밀토니안에 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재하면 슈뢰딩거 방정식 군에 대해 <span class="math inline">\(d\)</span> 차원 기약표현이 존재한다는 것을 안다. 이제 반대로 슈뢰딩거 방정식 군에 <span class="math inline">\(d\)</span> 차원 기약표현이 존재한다면 해밀토니안에 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재할까? 답은 그렇다 이다.</p>
+<p>이제 우리는 해밀토니안에 <span class="math inline">\(d_n\)</span>-fold degeneracy 가 존재하면 슈뢰딩거 방정식 군에 대해 <span class="math inline">\(d_n\)</span> 차원 기약표현이 존재한다는 것을 안다. 이제 반대로 슈뢰딩거 방정식 군에 <span class="math inline">\(d_n\)</span> 차원 기약표현이 존재한다면 해밀토니안에 <span class="math inline">\(d_n\)</span>-fold degeneracy 가 존재할까? 답은 그렇다 이다.</p>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_transformation_by_schroedinger_equation_group_2" class="theorem lemma">
@@ -441,7 +451,7 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 가 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d\)</span> 차원 기약표현이라고 하자. 모든 <span class="math inline">\(R\in G_S\)</span> 에 대해 <span class="math inline">\(\hat{R}\hat{T}=\hat{T}\hat{R}\)</span> 이며 따라서 <span class="math inline">\(\hat{H}D(T)= D(T)\hat{H}\)</span> 이다. 슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 에 의해 <span class="math inline">\(\hat{H}\)</span> 는 항등행렬의 상수배이므로 해밀토니안에는 <span class="math inline">\(d\)</span>-fold degeneracy 가 존재한다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 가 <span class="math inline">\(G_S\)</span> 에 대한 <span class="math inline">\(d_n\)</span> 차원 기약표현이라고 하자. 모든 <span class="math inline">\(R\in G_S\)</span> 에 대해 <span class="math inline">\(\hat{R}\hat{H}=\hat{H}\hat{R}\)</span> 이며 따라서 <span class="math inline">\(\hat{H}D(T)= D(T)\hat{H}\)</span> 이다. 슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 에 의해 <span class="math inline">\(\hat{H}\)</span> 는 항등행렬의 상수배이므로 해밀토니안에는 <span class="math inline">\(d_n\)</span>-fold degeneracy 가 존재한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>우리는 <a href="#lem-Group_transformation_by_schroedinger_equation_group_1" class="quarto-xref">보조정리&nbsp;<span>7.1</span></a> 과 <a href="#lem-Group_transformation_by_schroedinger_equation_group_2" class="quarto-xref">보조정리&nbsp;<span>7.2</span></a> 로부터 다음의 결론을 내릴 수 있다.</p>
@@ -451,8 +461,22 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 </div>
 </div>
 <p><br></p>
+<p><span class="math inline">\(\mathcal{H}_n\)</span> 에서 앞서 주어진 <span class="math inline">\(\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}\)</span> 기저와는 다른 기저 <span class="math inline">\(\{|\psi_j\rangle : j=1,\ldots,\,d_n\}\)</span> 를 선택했다고 하자. 그렇다면 <span class="math inline">\(d_n \times d_n\)</span> 유니타리 행렬 <span class="math inline">\(U\)</span> 에 대해</p>
+<p><span class="math display">\[
+|\psi_j\rangle  = \sum_{i=1}^{d_n} U_{ij} |\Gamma_n i\rangle,\qquad |\Gamma_n i\rangle = \sum_{j=1}^{d_n} U^{-1}_{ji} |\psi_j\rangle
+\]</span></p>
+<p>의 관계를 만족한다. 이 때</p>
+<p><span class="math display">\[
+\begin{aligned}
+\hat{R}|\psi_j\rangle &amp;= \sum_{k=1}^{d_n}U_{ij} \hat{R}|\Gamma_n i\rangle = \sum_{k=1}^{d_n}U_{ij}D^{(\Gamma_n)}(R)_{ki}|\Gamma_n k\rangle  \\
+&amp;=\sum_{k=1}^{d_n}\sum_{k=1}^{d_n} \sum_{l=1}^{d_n}U_{ij} D^{(\Gamma_n)}(R)_{ki} U^{-1}_{lk} |\psi_l\rangle \\[0.3em]
+&amp;= \sum_{l=1}^{d_n} \left(U^\dagger D^{(\Gamma_n)}(R)U\right)_{lj}|\psi_l\rangle
+\end{aligned}
+\]</span></p>
+<p>이므로 기저의 변환에서의 표현은 단지 표현의 유니타리 변환이라는 것을 알 수 있다.</p>
+<p><br></p>
 <p>슈뢰딩거 방정식의 기저벡터를 <span class="math inline">\(|E_n,\, j\rangle\)</span> 로 기술하는 경우를 생각하자. 여기서 <span class="math inline">\(E_n\)</span> 은 해밀토니안 연산자의 고유값이며 <span class="math inline">\(j\)</span> 는 이 고유값에 의한 고유공간의 <span class="math inline">\(j\)</span> 번째 기저벡터라는 의미이다. 여기서 <a href="#thm-Group_uniqueness_of_representation_of_schroedinger_group" class="quarto-xref">정리&nbsp;<span>7.2</span></a> 는 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 <span class="math inline">\(E_n\)</span> 에 해당하는 기약표현 <span class="math inline">\(\Gamma_n\)</span> 에 대해 <span class="math inline">\(|\Gamma_nj\rangle\)</span> 로 쓸 수 있으며 <span class="math inline">\(E_n\)</span> 에 의한 고유공간의 차원은 <span class="math inline">\(\Gamma_n\)</span> 기약표현의 차원이다.</p>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_schroedinger_equation_group_of_triangle" class="theorem example">
 <p><span class="theorem-title"><strong>예제 7.1</strong></span> 예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 <span class="math inline">\(D_{3}\)</span> 군으로 표현 할 수 있으며(<a href="group_introduction.html#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a>) <span class="math inline">\(D_{3}\)</span> 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다. <span class="math inline">\(1^2+1^2+2^2=6\)</span> 이므로(<a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a>) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다.</p>
@@ -648,6 +672,8 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 </section>
 <section id="direct-product-group" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="direct-product-group"><span class="header-section-number">7.2</span> Direct Product Group</h2>
+<section id="sec-Group_direct_product_group" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="sec-Group_direct_product_group"><span class="header-section-number">7.2.1</span> Direct Product Group</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -655,13 +681,12 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 </div>
 <div class="callout-body-container">
 <div id="def-Group_direct_product_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 7.5 (Direct product group)</strong></span> 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(H_1,\,H_2\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정의 7.5 (Direct product group)</strong></span> 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(G_a,\,G_b\)</span> 에 대해</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(G_a \cap G_b = \{1_G\}\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\forall x\in G_a,\, y\in G_b,\, xy = yx\)</span></p>
+<p>일 때 아래와 같이 정의되는 <span class="math inline">\(G_a\otimes  G_b\)</span> 를 <strong>direct product group</strong> 이라고 한다.</p>
 <p><span class="math display">\[
-\forall h_1\in H_1,\, h_2\in H_2,\, h_1h_2 = h_2h_1
-\]</span></p>
-<p>일 때 아래와 같이 정의되는 <span class="math inline">\(H_1 \otimes  H_2\)</span> 를 <strong>direct product group</strong> 이라고 한다.</p>
-<p><span class="math display">\[
-H_1 \otimes H_2 := \{h_1h_2: h_1\in H_1,\, h_2\in H_2\}
+G_a \otimes G_b := \{xy: x\in G_a,\, y\in G_b\}
 \]</span></p>
 </div>
 </div>
@@ -670,51 +695,128 @@ H_1 \otimes H_2 := \{h_1h_2: h_1\in H_1,\, h_2\in H_2\}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_direct_product_is_sugbroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#def-Group_direct_product_group" class="quarto-xref">정의&nbsp;<span>7.5</span></a> 의 조건에서 <span class="math inline">\(H_1 \otimes H_2\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
+<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#def-Group_direct_product_group" class="quarto-xref">정의&nbsp;<span>7.5</span></a> 의 조건에서 <span class="math inline">\(G_a \otimes G_b\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_introduction.html#prp-Group_how_to_be_subgroup" class="quarto-xref">명제&nbsp;<span>4.2</span></a> 의 (<span class="math inline">\(c\)</span>) 조건을 통해 증명한다. <span class="math inline">\(a,\,b\in H_1,\, x,\,y \in H_2\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_introduction.html#prp-Group_how_to_be_subgroup" class="quarto-xref">명제&nbsp;<span>4.2</span></a> 의 (<span class="math inline">\(c\)</span>) 조건을 통해 증명한다. <span class="math inline">\(x,\,y\in G_a,\, p,\,q \in G_b\)</span> 에 대해</p>
 <p><span class="math display">\[
-(ax)^{-1}(by)= x^{-1}a^{-1}by = a^{-1}bx^{-1}y \in H_1\times H_2
+(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\times G_b
 \]</span></p>
-<p>이므로 <span class="math inline">\(H_1 \otimes H_2 \le G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>이므로 <span class="math inline">\(G_a \otimes G_b \le G\)</span> 이다. <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 임은 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="../../src/group/group_representation1.html#sec-Group_direct_sum_representation_and_direct_product_representation">직합표현과 직곱표현</a> 을 참고하라. 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(H_1,\,H_2\)</span> 에 대한 direct product group <span class="math inline">\(H_1\times H_2\)</span> 가 존재한다고 하자. 그리고 <span class="math inline">\(H_1\)</span> 에 대한 표현 <span class="math inline">\(\Gamma_1\)</span> 과 <span class="math inline">\(H_2\)</span> 에 대한 표현 <span class="math inline">\(\Gamma_2\)</span> 에 대해 <span class="math inline">\(D^{(\Gamma_1 \otimes \Gamma_2)}\)</span> 를 <span class="math inline">\(D^{(\Gamma_1)}\)</span> 과 <span class="math inline">\(D^{(\Gamma_2)}\)</span> 의 직곱표현으로 정의하자. 즉, <span class="math inline">\(x\in H_1,\, y\in H_2\)</span> 에 대해</p>
+<p><a href="../../src/group/group_representation1.html#sec-Group_direct_sum_representation_and_direct_product_representation">직합표현과 직곱표현</a> 을 참고하라. 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(G_a,\,G_b\)</span> 에 대한 direct product group <span class="math inline">\(G_a \times G_b\)</span> 가 존재한다고 하자. 그리고 <span class="math inline">\(G_a\)</span> 에 대한 표현 <span class="math inline">\(D^{(a)}\)</span> 과 <span class="math inline">\(G_b\)</span> 에 대한 표현 <span class="math inline">\(D^{(b)}\)</span> 에 대해 <span class="math inline">\(D^{(a\otimes b)}\)</span> 를 <span class="math inline">\(D^{(a)}\)</span> 과 <span class="math inline">\(D^{(b)}\)</span> 의 직곱표현으로 정의하자. 즉, <span class="math inline">\(x\in G_a,\, y\in G_b\)</span> 에 대해</p>
 <p><span id="eq-Group_representation_of_direct_product_group"><span class="math display">\[
-D^{(\Gamma_1 \otimes \Gamma_2)} (xy):= D^{(\Gamma_1)}(x)\otimes D^{(\Gamma_2)}(y)
+D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
 \tag{7.10}\]</span></span></p>
 <p>로 정의한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_direct_product_representation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.2</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 은 <span class="math inline">\(H_1 \otimes H_2\)</span> 의 표현이다.</p>
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 은 <span class="math inline">\(G_a \otimes G_b\)</span> 의 표현이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#exr-Group_proof_of_direct_product_mutiplication" class="quarto-xref">연습문제&nbsp;<span>5.1</span></a> 를 사용한다. <span class="math inline">\(a,\,b\in H_1,\, x,\,y\in H_2\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#exr-Group_proof_of_direct_product_mutiplication" class="quarto-xref">연습문제&nbsp;<span>5.1</span></a> 를 사용한다. <span class="math inline">\(x,\,y\in G_a,\, p,\,q\in G_b\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-D^{(\Gamma_1 \otimes \Gamma_2)}(ax)D^{(\Gamma_1 \otimes \Gamma_2)}(by)  &amp;= [D^{(\Gamma_1)}(a)\otimes D^{(\Gamma_2)}(x)][D^{(\Gamma_1)}(b)\otimes D^{(\Gamma_2)}(y)] \\[0.3em]
-&amp;=D^{(\Gamma_1)}(ab)\otimes D^{(\Gamma_2)}(xy) \\[0.3em]
-&amp;=D^{(\Gamma_1 \otimes \Gamma_2)}(abxy) =D^{(\Gamma_1 \otimes \Gamma_2)}(axby) \qquad \qquad \square
+D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &amp;= [D^{(a)}(x)\otimes D^{(b)}(p)][D^{(a)}(y)\otimes D^{(b)}(q)] \\[0.3em]
+&amp;=D^{(a)}(xy)\otimes D^{(b)}(pq) \\[0.3em]
+&amp;=D^{(a \otimes b)}(xypq) =D^{(a \otimes b)}(xpyq) \qquad \qquad \square
 \end{aligned}
 \]</span></p>
 </div>
 <p><br></p>
 <p>증명을 하지는 않지만 다음 결과는 매우 유용하다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-Group_direct_product_representation_irreducibility" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.3</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 의 <span class="math inline">\(\Gamma_1\)</span> 과 <span class="math inline">\(\Gamma_2\)</span> 가 각각 <span class="math inline">\(H_1,\,H_2\)</span> 에 대한 기약표현이라면 <span class="math inline">\(\Gamma_1 \otimes \Gamma_2\)</span> 는 <span class="math inline">\(H_1\otimes H_2\)</span> 의 기약표현이다.</p>
+<div id="thm-Group_direct_product_representation_irreducibility" class="theorem">
+<p><span class="theorem-title"><strong>정리 7.4</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 의 <span class="math inline">\(\Gamma^{(a)}\)</span> 과 <span class="math inline">\(\Gamma^{(b)}\)</span> 가 각각 <span class="math inline">\(G_a,\,G_b\)</span> 에 대한 기약표현이라면 <span class="math inline">\(D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}\)</span> 는 <span class="math inline">\(H_1\otimes H_2\)</span> 의 기약표현이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>Wigner 책 16장 에 나와 있다고 하더라.(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
 </div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_irreducible_representation_of_direct_product_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.3</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(G_a\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(a)}_1,\ldots\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(b)}_1,\ldots\)</span> 에 대해 <span class="math inline">\(\Gamma^{(a)}_i \otimes \Gamma^{(b)}_j\)</span> 의 집합에 포함되는 기약 표현 이외의 <span class="math inline">\(G_a\otimes G_b\)</span> 의 기약표현은 존재하지 않는다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a> 를 이용한다. <span class="math inline">\(\Gamma^{(a)}_i\)</span> 의 차원을 <span class="math inline">\(d^{(a)}_i\)</span> 라고 하고 <span class="math inline">\(\Gamma^{(b)}_j\)</span> 의 차원을 <span class="math inline">\(d^{(b)}_j\)</span> 라고 하면 <span class="math inline">\(\sum_i \left(d^{(a)}_i\right)^2 = |G_a|\)</span>, <span class="math inline">\(\sum_j \left(d_{j}^{(b)}\right)^2=|G_b|\)</span> 이다. <span class="math inline">\(\Gamma_i^{(a)}\otimes \Gamma_j^{(b)}\)</span> 의 차원을 <span class="math inline">\(d_{ij}\)</span> 라고 하면 행렬의 직곱 표현에 의해 그 차원 <span class="math inline">\(d_{ij}=d^{(a)}_i d^{(b)}_j\)</span> 이다. <a href="#prp-Group_direct_product_is_sugbroup" class="quarto-xref">명제&nbsp;<span>7.1</span></a> 에 의해 <span class="math inline">\(|G_a\otimes G_b| = |G_a||G_b|\)</span> 이며</p>
+<p><span class="math display">\[
+\sum_{i,j} \left(d_{ij}\right)^2 = \left(\sum_i (d_i^{(a)})^2\right)\left(\sum_j (d_j^{(b)})^2\right) = |G_a||G_b| = |G_a \otimes G_b|
+\]</span></p>
+<p>이므로 명제가 증명되었다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="sec-Group_character_properties_of_direct_product_group" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-Group_character_properties_of_direct_product_group"><span class="header-section-number">7.2.2</span> Character 특성</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_classes_of_direct_product_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(\mathcal{K}_a = \{K^{(a)}_1,\ldots,\,K^{(a)}_m\}\)</span> 과 <span class="math inline">\(\mathcal{K}_b = \{K^{(b)}_1 ,\ldots,\, K^{(b)}_n\}\)</span> 이 각각 <span class="math inline">\(G_a,\,G_b\)</span> 의 클래스의 집합일 때 <span class="math inline">\(\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}\)</span> 는 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 집합이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>Direct product group 의 성질로부터 다음을 안다. <span class="math display">\[
+K_i^{(a)}K_j^{(b)}\cap K_{i'}^{(a)}K_{j'}^{(b)} \ne \varnothing \implies i=i',\,j=j'
+\]</span></p>
+<p><span class="math inline">\(\mathcal{K}=\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}\)</span> 라고 하고 <span class="math inline">\(\mathcal{K}_{a\otimes b}\)</span> 를 <span class="math inline">\(G_a\otimes G_b\)</span> 의 클래스의 집합이라고 하자. <span class="math inline">\(x\in K_i^{(a)},\, s\in K_j^{(b)}\)</span> 일 때 임의의 <span class="math inline">\(yt \in G_a\otimes G_b\)</span> 에 대해</p>
+<p><span class="math display">\[
+yt(xs)(yt)^{-1} = ytxst^{-1}y^{-1}=yxy^{-1}tst^{-1}\in K_i^{(a)}K^{(b)}_j
+\]</span></p>
+<p>이므로 <span class="math inline">\(K_i^{(a)}K_j^{(b)} \in \mathcal{K}_{a\otimes b}\)</span> 이다. 즉 <span class="math inline">\(\mathcal{K}\subset \mathcal{K}_{a\otimes b}\)</span> 이다.</p>
+<p><span class="math inline">\(G_a\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현의 개수는 각각 <span class="math inline">\(m,\,n\)</span> 이며 <a href="#prp-Group_irreducible_representation_of_direct_product_group" class="quarto-xref">명제&nbsp;<span>7.3</span></a> 에 의해 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 개수는 <span class="math inline">\(mn\)</span> 이다. 그런데 <span class="math inline">\(|\mathcal{K}|=mn\)</span> 이므로 <span class="math inline">\(\mathcal{K}=\mathcal{K}_{a \otimes b}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_character_of_direct_product_group" class="theorem">
+<p><span class="theorem-title"><strong>정리 7.5</strong></span> Direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 의 표현 <span class="math inline">\(\Gamma^{(a)}\otimes \Gamma^{(b)}\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="math display">\[
+\chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) = \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y).
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
+\begin{aligned}
+\chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) &amp;= \sum_{k} \left(D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) \right)_{kk} \\[0.3em]
+&amp;= \left(\sum_{i}D^{(\Gamma^{(a)})}(x)_{ii}\right) \left(\sum_j D^{(\Gamma^{(b)})}(y)_{jj}\right)  \\[0.3em]
+&amp;= \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y). \qquad \square
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_direct_product_representation_of_D3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.6 (<span class="math inline">\(D_{3h} = D_3 \otimes \sigma_h\)</span>)</strong></span> 정삼각형에 대한 대칭 연산 <span class="math inline">\(D_3\)</span>(<a href="group_introduction.html#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a>, <a href="group_introduction.html#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.10</span></a>) 와 <span class="math inline">\(S=\{E,\,\sigma_h\}\)</span> 를 생각하자.</p>
+<p>항등연산 <span class="math inline">\(E\)</span> 에 대해 <span class="math inline">\(D_3\)</span> 군과 가 서로 연산이 가능하다는 것은 알 수 있다. 또한 대해 <span class="math inline">\(C_3 \cap S = \{E\}\)</span> 이며 <span class="math inline">\(C_3 \otimes \sigma_h\)</span> 가 direct product group 을 이룬다는 것은 쉽게 보일 수 있다. <span class="math inline">\(D_3\)</span> 는 <span class="math inline">\(S_3\)</span> 와 같고 <span class="math inline">\(D_3\)</span> 에 대한 character table 은 <a href="group_representation1.html#tbl-Group_character_table_of_S3" class="quarto-xref">표&nbsp;<span>5.2</span></a> 에서 보였다.</p>
+<center>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc|ccc } 
+\hline  
+$D_{3h}$ & $E$ & $(A,\,B,\,C)$ & $(D,\,F)$ & $\sigma_h$ & $\sigma_h (A,\,B,\,C)$ & $\sigma_h (D,\,F)$\\ 
+\hline
+$\Gamma^{(1+)}$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\ 
+$\Gamma^{(2+)}$ & $1$ & $-1$ & $1$ & $1$ & $-1$ & $1$ \\ 
+$\Gamma^{(3+)}$ & $2$ & $\,0$ & $-1$ & $2$ & $0$ & $-1$ \\ 
+\hline
+$\Gamma^{(1-)}$ & $1$ & $1$ & $1$ & $-1$ & $-1$ & $-1$ \\ 
+$\Gamma^{(2-)}$ & $1$ & $-1$ & $1$ & $-1$ & $1$ & $-1$ \\ 
+$\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\ 
+\end{tabular} -->
+<p><img src="figures/character_table_D3_direct_product_group.png" class="img-fluid" width="400"></p>
+</center>
+</div>
+</div>
+<p><br></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -722,6 +824,7 @@ D^{(\Gamma_1 \otimes \Gamma_2)}(ax)D^{(\Gamma_1 \otimes \Gamma_2)}(by)  &amp;= [
 Tinkham, M. 2012. <em>Group Theory and Quantum Mechanics</em>. Dover Books on Chemistry. Dover Publications. <a href="https://books.google.co.kr/books?id=oe7DAgAAQBAJ">https://books.google.co.kr/books?id=oe7DAgAAQBAJ</a>.
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1149,8 +1252,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/group/group_aux.html" class="pagination-link" aria-label="보충자료">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">보충자료</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="pagination-link" aria-label="군과 양자역학 I- 점군의 기약표현">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 점군의 기약표현</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

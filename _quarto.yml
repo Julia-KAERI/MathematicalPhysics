@@ -24,7 +24,8 @@ book:
       - src/group/group_introduction.qmd
       - src/group/group_representation1.qmd
       - src/group/group_symmetry_group.qmd
-      - src/group/group_quantum.qmd
+      - src/group/group_quantum1_schroedinger_equation_group.qmd
+      - src/group/group_quantum2_irrep_of_point_group.qmd
       - src/group/group_aux.qmd
     - part: 미분방정식
       chapters :

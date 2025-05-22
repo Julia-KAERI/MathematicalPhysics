@@ -1,0 +1,15 @@
+---
+title: "군과 양자역학 I- 점군의 기약표현"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## 대칭과 물리
+

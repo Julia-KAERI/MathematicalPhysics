@@ -1,5 +1,5 @@
 ---
-title: "군과 양자역학"
+title: "군과 양자역학 I- 대칭과 슈뢰딩거 방정식군"
 number-sections: true
 number-depth: 3
 crossref:
@@ -28,19 +28,19 @@ $$ {#eq-Group_schroedinger_equation}
 ::: {#def-Group_schoroedinger_equation_group}
 #### 슈뢰딩거 방정식 군
 
-슈뢰딩거 방정식에 대해 불변인 유니타리 변환의 집합을 **슈뢰딩거 방정식 군(the group of Schrödinger equation)**$^\ast$[$^\ast$ [슈뢰딩거 군(Schrödinger group)](https://en.wikipedia.org/wiki/Schrödinger_group) 과는 다르다.]{.aside} 이라고 한다(@tinkham2012group)
+해밀토니안 $\hat{H}$ 와 commute 한 유니타리 변환의 집합을 **슈뢰딩거 방정식 군(the group of Schrödinger equation)**$^\ast$[$^\ast$ [슈뢰딩거 군(Schrödinger group)](https://en.wikipedia.org/wiki/Schrödinger_group) 과는 다르다.]{.aside} 이라고 한다(@tinkham2012group)
 
 :::
 :::
 
 
-$|\Psi_n\rangle$ 이 슈뢰딩거 방정식의 고유상태로 $E_n$ 의 고유값을 갖는다고 하자. $S$ 가 슈뢰딩거 방정식군에 포함된다면
+$|\Psi_n\rangle$ 이 슈뢰딩거 방정식의 고유상태로 $E_n$ 의 고유값을 갖는다고 하자. $R$ 이 슈뢰딩거 방정식군에 포함된다면
 
 $$
-\hat{H}\hat{S}|\Psi_n \rangle = \hat{S}\hat{H} |\Psi_n \rangle = E_n \hat{S}|\Psi_n\rangle
+\hat{H}\hat{R}|\Psi_n \rangle = \hat{R}\hat{H} |\Psi_n \rangle = E_n \hat{R}|\Psi_n\rangle
 $$
 
-이므로 $\hat{S}|\Psi_n\rangle$ 역시 $E_n$ 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다. 
+이므로 $\hat{R}|\Psi_n\rangle$ 역시 $E_n$ 의 고유값을 갖는 슈뢰딩거 방정식의 고유상태이다. 즉 어떤 대칭성이 있을 때 degeneracy 가 발생한다. 
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -61,13 +61,13 @@ $$
 
 여기서는 해밀토니안 $\hat{H}$ 와 이 해밀토니안에 대한 슈뢰딩거 방정식 군 $G_S$ 을 알 때 $G_S$ 의 기약표현으로부터 해밀토니안의 가능한 degeneracy 를 알 수 있다는 것을 보이고자 한다. 
 
-우선 해밀토니안 $\hat{H}$ 의 고유값 $E_n$ 에 대해 $d$-fold normal degeneracy 가 존재한다고 하자. 이 $d$ 차원 고유공간을 $\mathcal{H}_n$ 이라고 하자. 그렇다면 $d$ 개의 정규직교 고유상태 $\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d\rangle\}$ 가 존재한다. 여기서 $\Gamma_n$ 은 $\mathcal{H}_n$ 에 속한다는 것을 의미하며 그 뒤의 인덱스는 $\mathcal{H}_n$ 내의 고유상태의 순서를 의미한다. $\{|\Gamma_n 1\rangle,\ldots,|\Gamma_n d\rangle\}$ 에 의해 정의되는 벡터공간은 힐베르트 공간의 부분공간이며 $G_S$ 군에 속하는 모든 변환에 대한 불변 공간이다. 임의의 $S\in G_S$ 에 대해
+우선 해밀토니안 $\hat{H}$ 의 고유값 $E_n$ 에 대해 $d_n$-fold normal degeneracy 가 존재한다고 하자. 이 $d_n$ 차원 고유공간을 $\mathcal{H}_n$ 이라고 하자. 그렇다면 $d$ 개의 정규직교 고유상태 $\{|\Gamma_n1\rangle,\ldots,|\Gamma_n d_n\rangle\}$ 가 존재한다. 여기서 $\Gamma_n$ 은 $\mathcal{H}_n$ 에 속한다는 것을 의미하며 그 뒤의 인덱스는 $\mathcal{H}_n$ 내의 고유상태의 순서를 의미한다. $\mathcal{H}_n$ 은$G_S$ 군에 속하는 모든 변환에 대한 불변 공간이므로 임의의 $S\in G_S$ 에 대해
 
 $$
-\hat{S}|\Gamma_n i\rangle = \sum_{j=1}^d D^{(\Gamma_n)}(S)_{ji} |\Gamma_n j\rangle
+\hat{S}|\Gamma_n i\rangle = \sum_{j=1}^{d_n} D^{(\Gamma_n)}(S)_{ji} |\Gamma_n j\rangle
 $$ {#eq-Group_transformation_by_schroedinger_equation_group}
 
-인 $d\times d$ 행렬 $D^{(\Gamma_n)}(S)$ 가 존재한다.
+인 $d_n\times d_n$ 행렬 $D^{(\Gamma_n)}(S)$ 가 존재한다.
 
 </br>
 
@@ -75,7 +75,7 @@ $$ {#eq-Group_transformation_by_schroedinger_equation_group}
 
 ::: {#lem-Group_transformation_by_schroedinger_equation_group_1}
 
-@eq-Group_transformation_by_schroedinger_equation_group 의 $D^{(\Gamma_n)}$ 는 $G_S$ 에 대한 $d$ 차원 유니타리 기약표현이다.
+@eq-Group_transformation_by_schroedinger_equation_group 의 $D^{(\Gamma_n)}$ 는 $G_S$ 에 대한 $d_n$ 차원 유니타리 기약표현이다.
 :::
 
 </div></br>
@@ -86,14 +86,14 @@ $$ {#eq-Group_transformation_by_schroedinger_equation_group}
 
 $$
 \begin{aligned}
-\hat{R}\hat{S}|\Gamma_n i\rangle &= \hat{R}\sum_j D(S)_{ji}|\Gamma_nj\rangle = \sum_k\sum_j D(S)_{ji}D(R)_{kj}|\Gamma_n k\rangle \\[0.3em] 
-&= \sum_k\left[D(R)D(S)\right]_{ki}|\Gamma_nk\rangle
+\hat{R}\hat{S}|\Gamma_n i\rangle &= \hat{R}\sum_j^{d_n} D(S)_{ji}|\Gamma_nj\rangle = \sum_k^{d_n}\sum_j^{d_n} D(S)_{ji}D(R)_{kj}|\Gamma_n k\rangle \\[0.3em] 
+&= \sum_k^{d_n}\left[D(R)D(S)\right]_{ki}|\Gamma_nk\rangle
 \end{aligned}
 $$
 
-이다. 즉 $D(ST) = D(S)D(T)$ 이므로 $D$ 은 $G_S$ 에 대한 $d$ 차원 표현이다. 
+이다. 즉 $D(RS) = D(R)D(S)$ 이므로 $D$ 은 $G_S$ 에 대한 $d_n$ 차원 표현이다. 
 
-이제 $D$ 이 기약표현이 아님을 가정하자. $D$ 이 모든 $G_S$ 에 대해 블럭대각행렬이라면 어떤 $|\Gamma_ni\rangle,\, |\Gamma_nj\rangle$ 이 존재하여 모든 $R\in G_S$ 에 대해 $\hat{R}|\Gamma_ni\rangle \ne |\Gamma_nj\rangle$ 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다. 
+이제 $D$ 가 기약표현이 아님을 가정하자. $D$ 가 모든 $G_S$ 에 대해 블럭대각행렬이라면 어떤 $|\Gamma_ni\rangle,\, |\Gamma_nj\rangle$ 이 존재하여 모든 $R\in G_S$ 에 대해 $\hat{R}|\Gamma_ni\rangle \ne |\Gamma_nj\rangle$ 이어야 한다. 그렇다면 여기에 accidental degeneracy 가 있는 것이며 normal degeneracy 라는 가정에 모순된다. 즉 $D$ 는 기약표현이다.
 
 이제 $D$ 이 유니타리 임을 보이자. 임의의 $R\in G_S$ 에 대해
 
@@ -104,13 +104,13 @@ $$
 \end{aligned}
 $$
 
-이므로 $\left(D(R)\right)^{-1}=D(R)^\dagger$ 이다. 즉 $D=D^{(\Gamma_n)}$ 은 $d$ 차원 유니타리 기약표현이다. $\square$
+이므로 $\left(D(R)\right)^{-1}=D(R)^\dagger$ 이다. 즉 $D=D^{(\Gamma_n)}$ 은 $d_n$ 차원 유니타리 기약표현이다. $\square$
 
 :::
 
 </br>
 
-이제 우리는 해밀토니안에 $d$-fold degeneracy 가 존재하면 슈뢰딩거 방정식 군에 대해 $d$ 차원 기약표현이 존재한다는 것을 안다. 이제 반대로 슈뢰딩거 방정식 군에 $d$ 차원 기약표현이 존재한다면 해밀토니안에 $d$-fold degeneracy 가 존재할까? 답은 그렇다 이다.
+이제 우리는 해밀토니안에 $d_n$-fold degeneracy 가 존재하면 슈뢰딩거 방정식 군에 대해 $d_n$ 차원 기약표현이 존재한다는 것을 안다. 이제 반대로 슈뢰딩거 방정식 군에 $d_n$ 차원 기약표현이 존재한다면 해밀토니안에 $d_n$-fold degeneracy 가 존재할까? 답은 그렇다 이다.
 
 </br>
 
@@ -126,7 +126,7 @@ $$
 
 ::: {.proof}
 
-$D$ 가 $G_S$ 에 대한 $d$ 차원 기약표현이라고 하자. 모든 $R\in G_S$ 에 대해 $\hat{R}\hat{T}=\hat{T}\hat{R}$ 이며 따라서 $\hat{H}D(T)= D(T)\hat{H}$ 이다. 슈어 보조정리(@lem-Group_schur_lemma) 에 의해 $\hat{H}$ 는 항등행렬의 상수배이므로 해밀토니안에는 $d$-fold degeneracy 가 존재한다. $\square$
+$D$ 가 $G_S$ 에 대한 $d_n$ 차원 기약표현이라고 하자. 모든 $R\in G_S$ 에 대해 $\hat{R}\hat{H}=\hat{H}\hat{R}$ 이며 따라서 $\hat{H}D(T)= D(T)\hat{H}$ 이다. 슈어 보조정리(@lem-Group_schur_lemma) 에 의해 $\hat{H}$ 는 항등행렬의 상수배이므로 해밀토니안에는 $d_n$-fold degeneracy 가 존재한다. $\square$
 
 :::
 
@@ -145,9 +145,31 @@ $D$ 가 $G_S$ 에 대한 $d$ 차원 기약표현이라고 하자. 모든 $R\in G
 
 </div></br>
 
+
+$\mathcal{H}_n$ 에서 앞서 주어진 $\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}$ 기저와는 다른 기저 $\{|\psi_j\rangle : j=1,\ldots,\,d_n\}$ 를 선택했다고 하자. 그렇다면 $d_n \times d_n$ 유니타리 행렬 $U$ 에 대해
+
+$$
+|\psi_j\rangle  = \sum_{i=1}^{d_n} U_{ij} |\Gamma_n i\rangle,\qquad |\Gamma_n i\rangle = \sum_{j=1}^{d_n} U^{-1}_{ji} |\psi_j\rangle
+$$
+
+의 관계를 만족한다. 이 때
+
+$$
+\begin{aligned}
+\hat{R}|\psi_j\rangle &= \sum_{k=1}^{d_n}U_{ij} \hat{R}|\Gamma_n i\rangle = \sum_{k=1}^{d_n}U_{ij}D^{(\Gamma_n)}(R)_{ki}|\Gamma_n k\rangle  \\
+&=\sum_{k=1}^{d_n}\sum_{k=1}^{d_n} \sum_{l=1}^{d_n}U_{ij} D^{(\Gamma_n)}(R)_{ki} U^{-1}_{lk} |\psi_l\rangle \\[0.3em]
+&= \sum_{l=1}^{d_n} \left(U^\dagger D^{(\Gamma_n)}(R)U\right)_{lj}|\psi_l\rangle
+\end{aligned}
+$$
+
+이므로 기저의 변환에서의 표현은 단지 표현의 유니타리 변환이라는 것을 알 수 있다. 
+
+</br>
+
 슈뢰딩거 방정식의 기저벡터를 $|E_n,\, j\rangle$ 로 기술하는 경우를 생각하자. 여기서 $E_n$ 은 해밀토니안 연산자의 고유값이며 $j$ 는 이 고유값에 의한 고유공간의 $j$ 번째 기저벡터라는 의미이다. 여기서 @thm-Group_uniqueness_of_representation_of_schroedinger_group 는 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 $E_n$ 에 해당하는 기약표현 $\Gamma_n$ 에 대해 $|\Gamma_nj\rangle$ 로 쓸 수 있으며 $E_n$ 에 의한 고유공간의 차원은 $\Gamma_n$ 기약표현의 차원이다.
 
 </br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_schroedinger_equation_group_of_triangle}
@@ -438,22 +460,23 @@ $$
 
 ## Direct Product Group
 
+### Direct Product Group {#sec-Group_direct_product_group}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_direct_product_group}
 #### Direct product group
 
-군 $G$ 의 두 부분군 $H_1,\,H_2$ 에 대해
+군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대해
+
+&emsp;($1$) $G_a \cap G_b = \{1_G\}$, 
+
+&emsp;($2$) $\forall x\in G_a,\, y\in G_b,\, xy = yx$
+
+일 때 아래와 같이 정의되는 $G_a\otimes  G_b$ 를 **direct product group** 이라고 한다.
 
 $$
-\forall h_1\in H_1,\, h_2\in H_2,\, h_1h_2 = h_2h_1
-$$
-
-일 때 아래와 같이 정의되는 $H_1 \otimes  H_2$ 를 **direct product group** 이라고 한다.
-
-$$
-H_1 \otimes H_2 := \{h_1h_2: h_1\in H_1,\, h_2\in H_2\}
+G_a \otimes G_b := \{xy: x\in G_a,\, y\in G_b\}
 $$
 
 :::
@@ -464,7 +487,7 @@ $$
 
 ::: {#prp-Group_direct_product_is_sugbroup}
 
-@def-Group_direct_product_group 의 조건에서 $H_1 \otimes H_2$ 는 $G$ 의 부분군이다.
+@def-Group_direct_product_group 의 조건에서 $G_a \otimes G_b$ 는 $G$ 의 부분군이며 $|G_a \otimes G_b| = |G_a||G_b|$ 이다.
 
 :::
 
@@ -472,22 +495,22 @@ $$
 
 ::: {.proof}
 
-@prp-Group_how_to_be_subgroup 의 ($c$) 조건을 통해 증명한다.  $a,\,b\in H_1,\, x,\,y \in H_2$ 에 대해 
+@prp-Group_how_to_be_subgroup 의 ($c$) 조건을 통해 증명한다.  $x,\,y\in G_a,\, p,\,q \in G_b$ 에 대해 
 
 $$
-(ax)^{-1}(by)= x^{-1}a^{-1}by = a^{-1}bx^{-1}y \in H_1\times H_2
+(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\times G_b
 $$ 
 
-이므로 $H_1 \otimes H_2 \le G$ 이다. $\square$
+이므로 $G_a \otimes G_b \le G$ 이다. $|G_a \otimes G_b| = |G_a||G_b|$ 임은 쉽게 보일 수 있다. $\square$
 
 :::
 
 </br>
 
-[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $H_1,\,H_2$ 에 대한 direct product group $H_1\times H_2$ 가 존재한다고 하자. 그리고 $H_1$ 에 대한 표현 $\Gamma_1$ 과 $H_2$ 에 대한 표현 $\Gamma_2$ 에 대해 $D^{(\Gamma_1 \otimes \Gamma_2)}$ 를 $D^{(\Gamma_1)}$ 과 $D^{(\Gamma_2)}$ 의 직곱표현으로 정의하자. 즉, $x\in H_1,\, y\in H_2$ 에 대해
+[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대한 direct product group $G_a \times G_b$ 가 존재한다고 하자. 그리고 $G_a$ 에 대한 표현 $D^{(a)}$ 과 $G_b$ 에 대한 표현 $D^{(b)}$ 에 대해 $D^{(a\otimes b)}$ 를 $D^{(a)}$ 과 $D^{(b)}$ 의 직곱표현으로 정의하자. 즉, $x\in G_a,\, y\in G_b$ 에 대해
 
 $$
-D^{(\Gamma_1 \otimes \Gamma_2)} (xy):= D^{(\Gamma_1)}(x)\otimes D^{(\Gamma_2)}(y)
+D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
 $$ {#eq-Group_representation_of_direct_product_group}
 
 로 정의한다.
@@ -497,20 +520,20 @@ $$ {#eq-Group_representation_of_direct_product_group}
 
 ::: {#prp-Group_direct_product_representation}
 
-@eq-Group_representation_of_direct_product_group 은 $H_1 \otimes H_2$ 의 표현이다.
+@eq-Group_representation_of_direct_product_group 은 $G_a \otimes G_b$ 의 표현이다.
 
 :::
 
 </div></br>
 
 ::: {.proof}
-@exr-Group_proof_of_direct_product_mutiplication 를 사용한다. $a,\,b\in H_1,\, x,\,y\in H_2$ 에 대해
+@exr-Group_proof_of_direct_product_mutiplication 를 사용한다. $x,\,y\in G_a,\, p,\,q\in G_b$ 에 대해
 
 $$
 \begin{aligned}
-D^{(\Gamma_1 \otimes \Gamma_2)}(ax)D^{(\Gamma_1 \otimes \Gamma_2)}(by)  &= [D^{(\Gamma_1)}(a)\otimes D^{(\Gamma_2)}(x)][D^{(\Gamma_1)}(b)\otimes D^{(\Gamma_2)}(y)] \\[0.3em]
-&=D^{(\Gamma_1)}(ab)\otimes D^{(\Gamma_2)}(xy) \\[0.3em]
-&=D^{(\Gamma_1 \otimes \Gamma_2)}(abxy) =D^{(\Gamma_1 \otimes \Gamma_2)}(axby) \qquad \qquad \square
+D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &= [D^{(a)}(x)\otimes D^{(b)}(p)][D^{(a)}(y)\otimes D^{(b)}(q)] \\[0.3em]
+&=D^{(a)}(xy)\otimes D^{(b)}(pq) \\[0.3em]
+&=D^{(a \otimes b)}(xypq) =D^{(a \otimes b)}(xpyq) \qquad \qquad \square
 \end{aligned}
 $$
 
@@ -522,9 +545,9 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_direct_product_representation_irreducibility}
+::: {#thm-Group_direct_product_representation_irreducibility}
 
-@eq-Group_representation_of_direct_product_group 의 $\Gamma_1$ 과 $\Gamma_2$ 가 각각 $H_1,\,H_2$ 에 대한 기약표현이라면 $\Gamma_1 \otimes \Gamma_2$ 는 $H_1\otimes H_2$ 의 기약표현이다.
+@eq-Group_representation_of_direct_product_group 의 $\Gamma^{(a)}$ 과 $\Gamma^{(b)}$ 가 각각 $G_a,\,G_b$ 에 대한 기약표현이라면 $D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}$ 는 $H_1\otimes H_2$ 의 기약표현이다.
 
 :::
 
@@ -532,5 +555,126 @@ $$
 
 ::: {.proof}
 
-Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group)
+슈어 보조정리(@lem-Group_schur_lemma) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group)
 :::
+
+</br>
+
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_irreducible_representation_of_direct_product_group}
+
+$G_a,\,G_b$ 가 direct product group  $G_a \otimes G_b$ 를 이룬다고 하자. $G_a$ 의 기약표현 $\Gamma^{(a)}_1,\ldots$ 와 $G_b$ 의 기약표현 $\Gamma^{(b)}_1,\ldots$ 에 대해 $\Gamma^{(a)}_i \otimes \Gamma^{(b)}_j$ 의 집합에 포함되는 기약 표현 이외의 $G_a\otimes G_b$ 의 기약표현은 존재하지 않는다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+@prp-Group_regular_representation_is_not_irreducible_3 를 이용한다. $\Gamma^{(a)}_i$ 의 차원을 $d^{(a)}_i$ 라고 하고 $\Gamma^{(b)}_j$ 의 차원을 $d^{(b)}_j$ 라고 하면 $\sum_i \left(d^{(a)}_i\right)^2 = |G_a|$, $\sum_j \left(d_{j}^{(b)}\right)^2=|G_b|$ 이다. $\Gamma_i^{(a)}\otimes \Gamma_j^{(b)}$ 의 차원을 $d_{ij}$ 라고 하면 행렬의 직곱 표현에 의해 그 차원 $d_{ij}=d^{(a)}_i d^{(b)}_j$ 이다. @prp-Group_direct_product_is_sugbroup 에 의해 $|G_a\otimes G_b| = |G_a||G_b|$ 이며
+
+$$
+\sum_{i,j} \left(d_{ij}\right)^2 = \left(\sum_i (d_i^{(a)})^2\right)\left(\sum_j (d_j^{(b)})^2\right) = |G_a||G_b| = |G_a \otimes G_b|
+$$
+
+이므로 명제가 증명되었다. $\square$
+
+:::
+
+</br>
+
+### Character 특성 {#sec-Group_character_properties_of_direct_product_group}
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_classes_of_direct_product_group}
+
+$G_a,\,G_b$ 가 direct product group  $G_a \otimes G_b$ 를 이룬다고 하자. $\mathcal{K}_a = \{K^{(a)}_1,\ldots,\,K^{(a)}_m\}$ 과 $\mathcal{K}_b = \{K^{(b)}_1 ,\ldots,\, K^{(b)}_n\}$ 이 각각 $G_a,\,G_b$ 의 클래스의 집합일 때 $\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}$ 는 $G_a \otimes G_b$ 의 클래스의 집합이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+Direct product group 의 성질로부터 다음을 안다.
+$$
+K_i^{(a)}K_j^{(b)}\cap K_{i'}^{(a)}K_{j'}^{(b)} \ne \varnothing \implies i=i',\,j=j'
+$$
+
+
+
+$\mathcal{K}=\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}$ 라고 하고 $\mathcal{K}_{a\otimes b}$ 를 $G_a\otimes G_b$ 의 클래스의 집합이라고 하자. $x\in K_i^{(a)},\, s\in K_j^{(b)}$ 일 때 임의의 $yt \in G_a\otimes G_b$ 에 대해
+
+$$
+yt(xs)(yt)^{-1} = ytxst^{-1}y^{-1}=yxy^{-1}tst^{-1}\in K_i^{(a)}K^{(b)}_j
+$$
+
+이므로 $K_i^{(a)}K_j^{(b)} \in \mathcal{K}_{a\otimes b}$ 이다. 즉 $\mathcal{K}\subset \mathcal{K}_{a\otimes b}$ 이다. 
+
+$G_a$ 와 $G_b$ 의 기약표현의 개수는 각각 $m,\,n$ 이며 @prp-Group_irreducible_representation_of_direct_product_group 에 의해 $G_a \otimes G_b$ 의 클래스의 개수는 $mn$ 이다. 그런데 $|\mathcal{K}|=mn$ 이므로 $\mathcal{K}=\mathcal{K}_{a \otimes b}$ 이다. $\square$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_character_of_direct_product_group}
+
+Direct product group $G_a \otimes G_b$ 의 표현 $\Gamma^{(a)}\otimes \Gamma^{(b)}$ 에 대해 다음이 성립한다.
+
+$$
+\chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) = \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y).
+$$
+
+:::
+
+</div></br>
+
+::: {.proof}
+$$
+\begin{aligned}
+\chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) &= \sum_{k} \left(D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) \right)_{kk} \\[0.3em]
+&= \left(\sum_{i}D^{(\Gamma^{(a)})}(x)_{ii}\right) \left(\sum_j D^{(\Gamma^{(b)})}(y)_{jj}\right)  \\[0.3em]
+&= \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y). \qquad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_direct_product_representation_of_D3}
+
+#### $D_{3h} = D_3 \otimes \sigma_h$
+
+정삼각형에 대한 대칭 연산 $D_3$(@exm-Group_d3_multiplication_table, @exm-Group_conjugacy_class_of_D3) 와 $S=\{E,\,\sigma_h\}$ 를 생각하자.  
+
+항등연산 $E$ 에 대해 $D_3$ 군과  가 서로 연산이 가능하다는 것은 알 수 있다. 또한 대해 $C_3 \cap S = \{E\}$ 이며 $C_3 \otimes \sigma_h$ 가 direct product group 을 이룬다는 것은 쉽게 보일 수 있다. $D_3$ 는 $S_3$ 와 같고 $D_3$ 에 대한 character table 은 @tbl-Group_character_table_of_S3 에서 보였다.
+
+<center>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc|ccc } 
+\hline  
+$D_{3h}$ & $E$ & $(A,\,B,\,C)$ & $(D,\,F)$ & $\sigma_h$ & $\sigma_h (A,\,B,\,C)$ & $\sigma_h (D,\,F)$\\ 
+\hline
+$\Gamma^{(1+)}$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\ 
+$\Gamma^{(2+)}$ & $1$ & $-1$ & $1$ & $1$ & $-1$ & $1$ \\ 
+$\Gamma^{(3+)}$ & $2$ & $\,0$ & $-1$ & $2$ & $0$ & $-1$ \\ 
+\hline
+$\Gamma^{(1-)}$ & $1$ & $1$ & $1$ & $-1$ & $-1$ & $-1$ \\ 
+$\Gamma^{(2-)}$ & $1$ & $-1$ & $1$ & $-1$ & $1$ & $-1$ \\ 
+$\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\ 
+\end{tabular} -->
+
+![](figures/character_table_D3_direct_product_group.png){width=400}
+
+</center>
+:::
+</div></br>
+
