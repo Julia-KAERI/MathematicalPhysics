@@ -1,0 +1,36 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[scale=3, extended line/.style={shorten >=-#1,shorten <=-#1},
+    extended line/.default=1cm]
+    
+    \coordinate (P3) at (0, 1);
+    \coordinate (P2) at ({-sqrt(3)/2}, -0.5);
+    \coordinate (P1) at ({sqrt(3)/2}, -0.5);
+    
+    \filldraw[black] (0,0) circle (1pt);
+    
+    % \node [xshift=0.5cm] at(P1) {$1$};
+    \filldraw[black] (P1) circle (1pt) node[xshift=0.5cm, scale=1.5] {$1$};
+    \filldraw[black] (P2) circle (1pt) node[xshift=-0.5cm, scale=1.5] {$2$};
+    % \node [xshift=-0.5cm] at(P2) {$2$};
+
+    \filldraw[black] (P3) circle (1pt) node[xshift=0.4cm, yshift=0.2cm, scale=1.5] {$3$};
+    % \node [xshift=0.5cm] at(P3) {$3$};
+
+    \draw[red, thick, -latex] (0, 0.) node [violet, below right, yshift=-0.8cm] {$C_2$} -- (0, 1.5) node [right] {$y$};
+    \draw[red, thick, -latex] (0,0) -- (1.5, 0) node [above] {$x$};
+    \draw[thick, teal, dashed, extended line=0.5cm] ({-sqrt(3)/2},  0.5)  node [xshift=-0.65cm, yshift=0.3cm, black, scale=1.2] {$B$} -- (P1);
+    \draw[thick, teal, dashed, extended line=0.5cm] ({sqrt(3)/2},  0.5)  node [xshift=0.65cm, yshift=0.3cm, black, scale=1.2] {$C$} -- (P2);
+    \draw[thick, teal, dashed, extended line=0.5cm] (0,  1)  -- (0, -0.5) node [yshift=-0.7cm, black, scale=1.2] {$A$};
+    \draw[very thick] (P1) -- (P2) -- (P3) -- cycle;
+
+    \draw[violet, thick, -latex] ({0.3*cos(250)}, {0.3*sin(250)}) arc (-110:70:0.3);
+    % \node [above] at ({0.3*cos(70)}, {0.3*sin(70)}); %{$C_3$}
+    
+
+    \end{tikzpicture}
+\end{document}

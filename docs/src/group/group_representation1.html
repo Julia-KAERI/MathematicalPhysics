@@ -772,9 +772,9 @@ V = \begin{bmatrix} \frac{1}{\sqrt{3}} &amp;  \frac{1}{\sqrt{3}} &amp;  \frac{1}
 <p><span id="eq-Group_block_diagonalized_unitray_representation_of_D3_2"><span class="math display">\[
 \begin{aligned}
 U'('I)&amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}, &amp;
-U'(C_3) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; \frac{\sqrt{3}}{2} \\ 0 &amp; -\frac{\sqrt{3}}{2} &amp; -\frac{1}{2} \end{bmatrix},  &amp;
-U(C_3^2) &amp;=  \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; -\frac{\sqrt{3}}{2} \\ 0 &amp; \frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix}\\
-U'(C_2) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix},  &amp;
+U'(C_3) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; \frac{\sqrt{3}}{2} \\ 0 &amp; -\frac{\sqrt{3}}{2} &amp; -\frac{1}{2} \end{bmatrix}, \\
+U(C_3^2) &amp;=  \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; -\frac{\sqrt{3}}{2} \\ 0 &amp; \frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix}, &amp;
+U'(C_2) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}, \\
 U'(C_2') &amp;=\begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; \frac{\sqrt{3}}{2} \\ 0 &amp; \frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix},&amp;
 U'(C_2''') &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp; -\frac{\sqrt{3}}{2} \\ 0 &amp; -\frac{\sqrt{3}}{2} &amp; \frac{1}{2} \end{bmatrix}.
 \end{aligned}
@@ -1415,14 +1415,14 @@ S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 <p> (<span class="math inline">\(1\)</span>) 모든 <span class="math inline">\(g\in S_3\)</span> 에 대해 <span class="math inline">\(gEg^{-1}=E\)</span> 이므로 <span class="math inline">\(\{E\}\)</span> 는 conjugacy class 이다. 즉 <span class="math inline">\([E]=\{E\}\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(BAB^{-1}= C,\, CAC^{-1}=B,\, DAD^{-1}=C,\, FAF^{-1}=B\)</span> 이므로 <span class="math inline">\([A]=\{A,\,B,\,C\}\)</span> 이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(ADA^{-1}=F\)</span> 이므로 <span class="math inline">\([D]=\{D,\,F\}\)</span> 이다.</p>
-<p>즉 <span class="math inline">\(3\)</span> 개의 <span class="math inline">\(S_3\)</span> 에 대해 conjugacy class 가 존재한다. 이를 각각 <span class="math inline">\(\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3\)</span> 라고 하자. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. <span class="math inline">\(S_3\)</span> 에 대한 정칙표현은 <span class="math inline">\(6 \times 6\)</span> 행렬이며 3개의 기약 표현에 대해 <span class="math inline">\(d_1^2+d_2^2+d_3^3 = 6\)</span> 이어야 한다. Trivial representation(<a href="#exm-Group_trivial_representation" class="quarto-xref">예제&nbsp;<span>5.1</span></a>) <span class="math inline">\(D^{(1)}\)</span> 에 대해 <span class="math inline">\(d_1=1\)</span> 이며 따라서 가능한 것은 <span class="math inline">\(d_2=1,\, d_3=2\)</span> 뿐이다(<a href="#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a>). 이를 <span class="math inline">\(D^{(2)},\, D^{(3)}\)</span> 라고 하자. 이 기약표현을 정리하면 아래와 같다.</p>
+<p>즉 <span class="math inline">\(3\)</span> 개의 <span class="math inline">\(S_3\)</span> 에 대해 conjugacy class 가 존재한다. 이를 각각 <span class="math inline">\(\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3\)</span> 라고 하자. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. <span class="math inline">\(S_3\)</span> 에 대한 정칙표현은 <span class="math inline">\(6 \times 6\)</span> 행렬이며 3개의 기약 표현에 대해 <span class="math inline">\(d_1^2+d_2^2+d_3^3 = 6\)</span> 이어야 한다. Trivial representation(<a href="#exm-Group_trivial_representation" class="quarto-xref">예제&nbsp;<span>5.1</span></a>) <span class="math inline">\(A_1\)</span> 에 대해 <span class="math inline">\(d_1=1\)</span> 이며 따라서 가능한 것은 <span class="math inline">\(d_2=1,\, d_3=2\)</span> 뿐이다(<a href="#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a>). 이를 <span class="math inline">\(A_2,\, E\)</span> 라고 하자.(1차원 기약표현은 <span class="math inline">\(A,\,B\)</span>, 2 차원 기약표현을 <span class="math inline">\(E\)</span>, 3 차원 기약표현을 <span class="math inline">\(T\)</span> 로 표기하는 관례를 따른다.) 이 기약표현을 정리하면 아래와 같다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|cccccc } 
 \hline  
-$S_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\ 
+$D_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\ 
 \hline 
-$D^{(1)}$ & $[1]$ & $[1]$ & $[1]$  & $[1]$ & $[1]$ & $[1]$ \\
-$D^{(2)}$ & $[1]$ & $[-1]$ & $[-1]$ & $[-1]$ & $[1]$ & $[1]$ \\[0.3em]
-$D^{(3)}$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$\\[1.5em]
+$A_1$ & $[1]$ & $[1]$ & $[1]$  & $[1]$ & $[1]$ & $[1]$ \\
+$A_2$ & $[1]$ & $[-1]$ & $[-1]$ & $[-1]$ & $[1]$ & $[1]$ \\[0.3em]
+$E$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$\\[1.5em]
 \hline
 \end{tabular} -->
 <div id="tbl-Group_irreducible_representation_of_S3" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1436,7 +1436,7 @@ $D^{(3)}$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 
 </figure>
 </div>
 <p>Character table 은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 character 값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. <span class="citation" data-cites="zee2016group">Zee (<a href="../vector calculus/vectorcalculus.html#ref-zee2016group" role="doc-biblioref">2016</a>)</span> 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.</p>
-<p>Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 <span class="math inline">\([\;]\)</span> 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. <span class="math inline">\(S_3\)</span> 의 경우 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3\)</span> 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. <span class="math inline">\(S_3\)</span> 에 대한 character table 은 아래와 같다.</p>
+<p>Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 <span class="math inline">\([\;]\)</span> 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. <span class="math inline">\(D_3\)</span> 의 경우 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3\)</span> 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. <span class="math inline">\(D_3\)</span> 에 대한 character table 은 아래와 같다.</p>
 <!--  \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
 $S_3$ & $\mathcal{C}_1$ & $3\mathcal{C}_2$ & $2\mathcal{C}_3$ \\ 
@@ -1691,7 +1691,7 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 <div id="fig-Group_D4_character_table_templete" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_D4_character_table_templete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/D4_character_table_templete.png" class="img-fluid figure-img" width="300">
+<img src="figures/D4_character_table_templete.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_templete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.2: <span class="math inline">\(D_4\)</span> character table templete
@@ -1707,7 +1707,7 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 <div id="fig-Group_D4_character_table_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_D4_character_table_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/D4_character_table_1.png" class="img-fluid figure-img" width="300">
+<img src="figures/D4_character_table_1.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.3: <span class="math inline">\(D_4\)</span> character table #1
@@ -1720,7 +1720,7 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 <div id="fig-Group_D4_character_table_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_D4_character_table_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/D4_character_table_2.png" class="img-fluid figure-img" width="300">
+<img src="figures/D4_character_table_2.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.4: <span class="math inline">\(D_4\)</span> character table #2
@@ -1733,7 +1733,7 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 <div id="fig-Group_D4_character_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_D4_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/D4_character_table_3.png" class="img-fluid figure-img" width="300">
+<img src="figures/D4_character_table_3.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_D4_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.5: <span class="math inline">\(D_4\)</span> character table

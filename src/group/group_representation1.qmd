@@ -572,9 +572,9 @@ $U'(g) = VU(g)V^{-1}$ 라고 하면,
 $$
 \begin{aligned}
 U'('I)&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, & 
-U'(C_3) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ 0 & -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{bmatrix},  &
-U(C_3^2) &=  \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ 0 & \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}\\
-U'(C_2) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{bmatrix},  & 
+U'(C_3) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ 0 & -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{bmatrix}, \\
+U(C_3^2) &=  \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ 0 & \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}, &
+U'(C_2) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{bmatrix}, \\ 
 U'(C_2') &=\begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ 0 & \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix},&
 U'(C_2''') &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ 0 & -\frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}.
 \end{aligned}
@@ -1574,15 +1574,15 @@ $$
 
 &emsp;($3$) $ADA^{-1}=F$ 이므로 $[D]=\{D,\,F\}$ 이다. 
 
-즉 $3$ 개의 $S_3$ 에 대해 conjugacy class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. $S_3$ 에 대한 정칙표현은 $6 \times 6$ 행렬이며 3개의 기약 표현에 대해 $d_1^2+d_2^2+d_3^3 = 6$ 이어야 한다. Trivial representation(@exm-Group_trivial_representation) $D^{(1)}$ 에 대해 $d_1=1$ 이며 따라서 가능한 것은 $d_2=1,\, d_3=2$ 뿐이다(@prp-Group_regular_representation_is_not_irreducible_3). 이를 $D^{(2)},\, D^{(3)}$ 라고 하자. 이 기약표현을 정리하면 아래와 같다. 
+즉 $3$ 개의 $S_3$ 에 대해 conjugacy class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. $S_3$ 에 대한 정칙표현은 $6 \times 6$ 행렬이며 3개의 기약 표현에 대해 $d_1^2+d_2^2+d_3^3 = 6$ 이어야 한다. Trivial representation(@exm-Group_trivial_representation) $A_1$ 에 대해 $d_1=1$ 이며 따라서 가능한 것은 $d_2=1,\, d_3=2$ 뿐이다(@prp-Group_regular_representation_is_not_irreducible_3). 이를 $A_2,\, E$ 라고 하자.(1차원 기약표현은 $A,\,B$, 2 차원 기약표현을 $E$, 3 차원 기약표현을 $T$ 로 표기하는 관례를 따른다.) 이 기약표현을 정리하면 아래와 같다. 
 
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|cccccc } 
 \hline  
-$S_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\ 
+$D_3$ & $E$ & $A$ & $B$ & $C$ & $D$ & $F$ \\ 
 \hline 
-$D^{(1)}$ & $[1]$ & $[1]$ & $[1]$  & $[1]$ & $[1]$ & $[1]$ \\
-$D^{(2)}$ & $[1]$ & $[-1]$ & $[-1]$ & $[-1]$ & $[1]$ & $[1]$ \\[0.3em]
-$D^{(3)}$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$\\[1.5em]
+$A_1$ & $[1]$ & $[1]$ & $[1]$  & $[1]$ & $[1]$ & $[1]$ \\
+$A_2$ & $[1]$ & $[-1]$ & $[-1]$ & $[-1]$ & $[1]$ & $[1]$ \\[0.3em]
+$E$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$ &  $\begin{bmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix}$\\[1.5em]
 \hline
 \end{tabular} -->
 
@@ -1593,7 +1593,7 @@ $D^{(3)}$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 
 
 Character table 은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 character 값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. @zee2016group 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.
 
-Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 $[\;]$ 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. $S_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. $S_3$ 에 대한 character table 은 아래와 같다. 
+Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 $[\;]$ 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. $D_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. $D_3$ 에 대한 character table 은 아래와 같다. 
 
 <!--  \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
@@ -1880,25 +1880,25 @@ $m\le n$ 일 경우 $M=\begin{bmatrix}I_n & \bf{0}\end{bmatrix}$ 라고 놓으�
 
 ($b$) 클래스를 @exr-tinkham_2_1 의 ($2$) 에 따라 $K_1,\,K_2,\,K_3,\,K_4,\,K_5$ 로 표기하는데 클래스의 원소의 개수가 중요하므로 클래스명에 윗첨자로 클래스의 원소의 개수를 표기하자. $N_R=N_C=5$ 이며 **(R1)** 을 만족하는 경우는 $d_1=d_2=d_3=d_4=1,\, d_5=2$ 뿐이다. 1차원 기약표현이 $4$ 종류 2차원 기약표현이 $1$ 종류이다. 1차원 기약표현을 $\Gamma_{11},\ldots,\Gamma_{14}$ 라고 표기하고 2차원 기약표현을 $\Gamma_2$ 라고 하자. 아래와 같은 표를 채우면 된다.
 
-![$D_4$ character table templete](figures/D4_character_table_templete.png){#fig-Group_D4_character_table_templete width=300}
+![$D_4$ character table templete](figures/D4_character_table_templete.png){#fig-Group_D4_character_table_templete width=250}
 
 - $K_1 = \{E\}$, 즉 항등원 뿐이므로 첫번째 행은 차원과 같다.
 - $\Gamma_1$ 은 trivial representation 으로 한다. 즉 모든 값이 $1$ 이다.
 - Character 에 대한 제 2 직교정리(@eq-Group_c8) 를 사용한다. 각각의 class 에 대해 수행하면 $\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4$, $\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0$ 이다. 여기서 $\chi^{(\Gamma_2)}(K_1=\{E\})=2$ 이다.
 - Character 에 대한 제 1 직교정리(@eq-Group_c7) 를 $i=\Gamma_{11},\, j=\Gamma_2$ 에 적용하면 $\chi^{(\Gamma_2)}(K_5)=-2$ 이다.
 
-![$D_4$ character table #1](figures/D4_character_table_1.png){#fig-Group_D4_character_table_1 width=300}
+![$D_4$ character table #1](figures/D4_character_table_1.png){#fig-Group_D4_character_table_1 width=250}
 
 - Character 에 대한 제 2 직교정리(@eq-Group_c8) 를 $K_1$ 과 $K_5$ 에 적용하자. $K_5$ 의 빈 칸을 위서부터 차례로 $a,\,b,\,c$ 라고 하면 $1+a+b+c-4=0$ 이므로 $a+b+c=3$ 이며 $a,\,b,\,c$ 가 모두 1차원 표현의 character 이므로 $|a|=|b|=|c|=1$ 이어야 한다. 이것을 만족하는 것은 $a=b=c=1$ 뿐이다. 
 
 
-![$D_4$ character table #2](figures/D4_character_table_2.png){#fig-Group_D4_character_table_2 width=300}
+![$D_4$ character table #2](figures/D4_character_table_2.png){#fig-Group_D4_character_table_2 width=250}
 
 
 - 이제 미지수가 $3\times 3 = 9$ 개 남았다. 이 $3\times 3$ 행렬에 대해 아는 것은 ($i$) 모두 성분이 2개인 클래스에 대한 1차원 기약표현 뿐이므로 절대값은 모두 $1$ 이고(**R4**), ($ii$) 각 행의 합은 $-1$(**R7**), ($iii$) 각 열의 합도 $-1$(**R8**), ($iii$) 서로 다른 행벡터의 내적은 $-1$, ($iv$) 서로 다른 열벡터의 내적도 $-1$ 이란 것이다. 또한 $\Gamma_{12}...\Gamma_{14}$ 를 구별하는 어떤 것도 없다. 따라서 이 조건을 만족하는 값을 구한 후 순서에 상관 없이 넣으면 된다. 이로부터,
  
 
-![$D_4$ character table](figures/D4_character_table_3.png){#fig-Group_D4_character_table width=300}
+![$D_4$ character table](figures/D4_character_table_3.png){#fig-Group_D4_character_table width=250}
 
 :::
 

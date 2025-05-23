@@ -162,22 +162,82 @@ $$
 \end{aligned}
 $$
 
-이므로 기저의 변환에서의 표현은 단지 표현의 유니타리 변환이라는 것을 알 수 있다. 
+이다. 즉 기저의 유니타리 변환은 슈뢰딩거 방정식군에 대한 표현의 유니타리 변환이라는 것을 알 수 있다. 즉 다음과 같은 결론을 내릴 수 있다.
 
-</br>
 
-슈뢰딩거 방정식의 기저벡터를 $|E_n,\, j\rangle$ 로 기술하는 경우를 생각하자. 여기서 $E_n$ 은 해밀토니안 연산자의 고유값이며 $j$ 는 이 고유값에 의한 고유공간의 $j$ 번째 기저벡터라는 의미이다. 여기서 @thm-Group_uniqueness_of_representation_of_schroedinger_group 는 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 $E_n$ 에 해당하는 기약표현 $\Gamma_n$ 에 대해 $|\Gamma_nj\rangle$ 로 쓸 수 있으며 $E_n$ 에 의한 고유공간의 차원은 $\Gamma_n$ 기약표현의 차원이다.
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-</br>
+::: {#thm-Group_uniqueness_of_representation_of_schroedinger_group_2}
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-Group_schroedinger_equation_group_of_triangle}
-
-예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 $D_{3}$ 군으로 표현 할 수 있으며(@exm-Group_d3_multiplication_table) $D_{3}$ 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다. $1^2+1^2+2^2=6$ 이므로(@prp-Group_regular_representation_is_not_irreducible_3) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다. 
+해밀토니안의 각각의 고유값에 대해 슈뢰딩거 방정식 군의 기약표현은 (동등한 기약표현의 범위 내애서) 유일하다.
 
 :::
+
 </div></br>
+
+
+슈뢰딩거 방정식의 기저벡터를 에너지 고유값 $E_n$ 에 대해 $|E_n,\, j\rangle$ 로 기술하는 경우를 생각하자. 여기서 $E_n$ 은 해밀토니안 연산자의 고유값이며 $j$ 는 이 고유값에 의한 고유공간의 $j$ 번째 기저벡터라는 의미이다. 여기서 @thm-Group_uniqueness_of_representation_of_schroedinger_group 는 해밀토니안의 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 $E_n$ 에 해당하는 기약표현 $\Gamma_n$ 에 대해 $|\Gamma_nj\rangle$ 로 쓸 수 있으며, 또한 $\Gamma_n$ 은 이 고유값에대한 degeneracy 정보도 포함하기 때문에 더 좋은 표현 방법이다. 즉 $E_n$ 보다 $\Gamma_n$ 이 **좋은 양자수 (good quantum number)** 이다. 
+
+</br>
+
+
+
+### Character Table 과 기저 함수
+
+예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 $D_{3} =\{E,\,A,\,B,\,C,\,D,\,F\}$ 군으로 표현 할 수 있으며(@exm-Group_d3_multiplication_table) $D_{3}$ 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다(@exm-Group_character_table_of_D3). $1^2+1^2+2^2=6$ 이므로(@prp-Group_regular_representation_is_not_irreducible_3) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다. 이제 해밀토니안에 대한 고유함수는 1 차원의 경우는 기약표현에 대한 기호로, 2차원 이상의 경우는 기약표현에 대한 기호와 그 안에서의 인덱스로 표현하자. 즉 $|A_1\rangle,\, |A_2\rangle,\, |E1\rangle,\, |E2\rangle$ 로 표기 될 수 있다. 각각의 기약표현에 대해 우리는 다음을 안다.
+
+- 모든 $R\in D_3$ 에 대해 $\hat{R}|A_1\rangle = |A_1\rangle$ 이다.
+- $R=E,\,D,\,F$ 일 경우 $\hat{R}|A_2\rangle = |A_2\rangle$ 이며 $R=A,\,B,\,C$ 일 경우 $\hat{R}|A_2\rangle = -|A_2\rangle$ 이다.
+- 2차원 기약표현인 $E$ 에 대해 
+
+
+![$D_3$ 의 대칭 연산과 좌표축](figures/D3_with_axis.png){#fig-Group_D3_operation_and_axis width=300}
+
+
+많은 경우 기저함수를 $x,\,y,\,z$ 와 그 2차항까지 사용하여 기술하거나, $R_x,\,R_y,\,R_z$ 를 사용하여 표현하는 경우가 있다. 이 때 $x,\,y,\,z$ 는 주축을 $\hat{z}$ 축으로 잡고 $\hat{x},\,\hat{y}$ 축을 그에 수직하게 위의 그림과 같이 잡았을 때의 각 축의 단위벡터이며, $R_x,\,R_y,\,R_z$ 는 각각의 축으로의 각운동량 성분이다. 즉 $R_z=xp_y-yp_x$ 를 말한다. 이 때 $D_3$ 에 포함되는 변환에 대해 $x,\,y,\,z,\,x^2,\,y^2,\,z^2$ 이 어떻게 변하는 지 확인해보자.
+
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|cccccc} 
+\hline  
+$D_3$ & $x$ & $y$ & $z$ & $x^2$ & $y^2$ & $z^2$ \\ 
+\hline 
+$E$ & $x$ & $y$ & $z$ & $x^2$ & $y^2$ & $z^2$  \\ 
+$A$ & $-x$ & $y$ & $-z$ & $x^2$ & $y^2$ & $z^2$  \\[0.3em]
+$B$ & $\dfrac{1}{2}(x-\sqrt{3}y)$ & $\dfrac{1}{2}(-\sqrt{3}x-y)$ & $-z$ &  $\dfrac{1}{4}(x^2 - 2\sqrt{3}xy +3y^2)$ & $\dfrac{1}{4}(3x^2+2\sqrt{3}xy+y^2)$ & $z^2$ \\[1em]
+$C$ & $\dfrac{1}{2}(x+\sqrt{3}y)$ & $\dfrac{1}{2}(\sqrt{3}x-y)$ & $-z$ & $\dfrac{1}{4}(x^2+2\sqrt{3}xy+3y^2)$ & $\dfrac{1}{4}(3x^2-2\sqrt{3} xy +y^2)$ & $z^2$\\[1em]
+$D$ & $\dfrac{1}{2}(-x + \sqrt{3}y)$ & $\dfrac{1}{2}(-\sqrt{3}x -y)$ & $z$ & $\dfrac{1}{4}(x^2-2\sqrt{3}xy +3y^2)$ & $\dfrac{1}{4}(3x^2+2\sqrt{3}xy +y^2)$ & $z^2$ \\[1em]
+$F$ & $\dfrac{1}{2}(-x-\sqrt{3}y)$ & $\dfrac{1}{2}(\sqrt{3}x-y)$ & $z$ & $\dfrac{1}{4}(x^2+2\sqrt{3}xy+3y^2)$ & $\dfrac{1}{4}(3x^2-2\sqrt{3}xy + y^2)$ & $z^2$\\[1em]
+\hline
+\end{tabular} -->
+
+
+![$(x,\,y,\,z)$ 기저에 $D_3$ 군을 적용했을 때의 변화 1](figures/D3_coord_table1.png){#tbl-Group_D3_coords1 width=600}
+
+- $|A_2\rangle$ 은 $|z\rangle$ 과 같이 변한다. 따라서 $|A_2\rangle = |z\rangle$ 로 놓을 수 있다. 
+
+- $B|x\rangle = \dfrac{1}{2}|x\rangle - \dfrac{\sqrt{3}}{2}|y\rangle$, $B|y\rangle = -\dfrac{\sqrt{3}}{2}|x\rangle -\dfrac{1}{2}|y\rangle$ 이므로 $\{|x\rangle,\, |y\rangle\}$ 기저에서의 $D^{(E)}(B) = \dfrac{1}{2}\begin{bmatrix} 1 & -\sqrt{3}\\ -\sqrt{3}& -1 \end{bmatrix}$ 이다. (@exm-Group_d3_multiplication_table 를 통해 확인할 수 있다.) 이와 같은 방법으로 모든 $R\in D_3$ 에 대해 $D^{(E)}(R)$ 을 구할 수 있다.
+
+ <!--  \renewcommand{\arraystretch}{1.5} \begin{tabular}{c|ccccc} 
+\hline  
+$D_3$ & $x^2+y^2$ & $x^2-y^2$ & $xy$ & $yz$ & $xz$ \\ 
+\hline 
+$E$ & $x^2+y^2$ & $x^2-y^2$ & $xy$ & $yz$ & $xz$ \\ 
+$A$ & $x^2+y^2$ & $x^2-y^2$ & $-xy$ & $-yz$ & $xz$ \\[0.3em]
+$B$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2 - y^2)-\sqrt{3}xy]$ & $\dfrac{1}{4}[-\sqrt{3}(x^2-y^2)+2xy]$ & $\dfrac{z(\sqrt{3}x+y)}{2}$ & $\dfrac{-z(x-\sqrt{3}y)}{2}$ \\[1em]
+$C$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2-y^2)+\sqrt{3}xy]$ & $\dfrac{1}{4}[\sqrt{3}(x^2-y^2)+2xy]$ & $\dfrac{-z(\sqrt{3}x-y)}{2}$ &  $\dfrac{-z(x+\sqrt{3}y)}{2}$\\[1em]
+$D$ & $x^2+y^2$ & $\dfrac{1}{2}[(x^2-y^2)-2\sqrt{3}xy]$ & $\dfrac{1}{4}[\sqrt{3}(x^2-y^2)-2xy]$ & $\dfrac{-z(\sqrt{3}x+y)}{2}$ &  $\dfrac{-z(x-\sqrt{3}y)}{2}$\\[1em]
+$F$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2-y^2)+2\sqrt{3}xy]$ & $\dfrac{1}{4}[-\sqrt{3}(x^2-y^2) -2xy]$ & $\dfrac{z(\sqrt{3}x-y)}{2}$ & $\dfrac{-z(x+\sqrt{3}y)}{2}$  \\[1em]
+\hline
+\end{tabular}
+ -->
+
+
+![$(x,\,y,\,z)$ 기저에 $D_3$ 군을 적용했을 때의 변화 2](figures/D3_coord_table2.png){#tbl-Group_D3_coords2 width=650}
+
+- $x^2+y^2$ 와 $z^2$ 는 모든 변환에 대해 불변이다. 즉 $|A_1\rangle$ 처럼 변한다. 
+- 따라서 $z(x^2+y^2)$ 는 $|A_2\rangle$ 과 같이 변한다.
+- $(x^2-y^2,\, xy)$ 와 $(xz,\,yz)$ 는 각각 $E$ 표현과 같이 변환된다. 
+
+</br>
 
 ### 아벨군의 표현 {#sec-Group_representation_of_abelian_group}
 
@@ -335,7 +395,7 @@ $${#eq-Group_group_projection_operator_and_vector_projection_operator}
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-Group_uniqueness_of_representation_of_schroedinger_group}
+::: {#thm-Group_expansion_of_state_by_irreducible_representation}
 
 힐베르트 공간 $\mathcal{H}$ 에서 정의된 슈뢰딩거 방정식 군 $G_S$ 와 $G_S$ 의 기약표현 $\Gamma_1,\ldots,\,\Gamma_m$ 을 생각하자. 
 
