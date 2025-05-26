@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-80f14e4a860245008e4f904c7c86406d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -557,7 +557,51 @@ $F$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2-y^2)+2\sqrt{3}xy]$ & $\dfrac{1}{4}[-\sqrt{
 <li>따라서 <span class="math inline">\(z(x^2+y^2)\)</span> 는 <span class="math inline">\(|A_2\rangle\)</span> 과 같이 변한다.</li>
 <li><span class="math inline">\((x^2-y^2,\, xy)\)</span> 와 <span class="math inline">\((xz,\,yz)\)</span> 는 각각 <span class="math inline">\(E\)</span> 표현과 같이 변환된다.</li>
 </ul>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{c|ccc} 
+\hline  
+$D_3$ & $R_x$ & $R_y$ & $R_z$ \\ 
+\hline 
+$E$ & $R_x$ & $R_y$ & $R_z$ \\ 
+$A$ & $-R_x$ & $R_y$ & $-R_z$ \\[0.3em]
+$B$ & $\dfrac{1}{2}(R_x - \sqrt{3}R_y)$ & $\dfrac{1}{2}(-\sqrt{3}R_x -R_y)$ & $-R_z$  \\[1em]
+$C$ & $\dfrac{1}{2}(R_x+\sqrt{3}R_y)$ & $\dfrac{1}{2}(\sqrt{3}R_x-R_y)$ & $-R_z$ \\[1em]
+$D$ & $\dfrac{1}{2}(-R_x+\sqrt{3}R_y)$ & $\dfrac{1}{2}(-\sqrt{3}R_x - R_y)$ & $R_z$ \\[1em]
+$F$ & $\dfrac{1}{2}(-R_x-\sqrt{3}R_y)$ & $\dfrac{1}{2}(\sqrt{3}R_x-R_y)$ & $R_z$ \\[1em]
+\hline
+\end{tabular} -->
+<div id="tbl-Group_D3_coords3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;7.3: <span class="math inline">\((x,\,y,\,z)\)</span> 기저에 <span class="math inline">\(D_3\)</span> 군을 적용했을 때의 변화 3
+</figcaption>
+<div aria-describedby="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D3_coord_table3.png" class="img-fluid figure-img" width="250">
+</div>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(R_x,\,R_y,\,R_z\)</span> 는 각각 <span class="math inline">\(x,\,y,\,z\)</span> 와 같이 변화한다.</li>
+</ul>
 <p><br></p>
+<p>기약표현과, 캐릭터, 그리고 기저함수를 테이블로 표현하면 아래와 같다.</p>
+<!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{c|c|c|cccc} 
+\hline  
+\multicolumn{3}{c|}{$D_3$} & $E$ & $2C_3$ & $3C'_2$ \\ 
+\hline 
+$x^2+y^2$, $z^2$ &  & $A_1$ & $1$ & $\;\;\,1$ & $\;\;\,1$ \\ 
+ & $R_z,\,z$ & $A_2$ & $1$ & $\;\;\,1$ & $-1$ \\[0.3em]
+$\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\left.\begin{array}{l}(x,\, y) \\ (R_x,\,R_y)\end{array}\right\}$ & $E$ & $2$ & $-1$ & $\;\;\,0$  \\[1em]
+\hline -->
+<div id="tbl-Group_D3_coords3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;7.4: <span class="math inline">\(D_3\)</span> Character table
+</figcaption>
+<div aria-describedby="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/D3_character_table.png" class="img-fluid figure-img" width="350">
+</div>
+</figure>
+</div>
 </section>
 <section id="sec-Group_representation_of_abelian_group" class="level3" data-number="7.1.4">
 <h3 data-number="7.1.4" class="anchored" data-anchor-id="sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.4</span> 아벨군의 표현</h3>
