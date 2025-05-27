@@ -321,7 +321,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-Group_group_of_schroedinger_equation_and_degeneracy" id="toc-sec-Group_group_of_schroedinger_equation_and_degeneracy" class="nav-link" data-scroll-target="#sec-Group_group_of_schroedinger_equation_and_degeneracy"><span class="header-section-number">7.1.1</span> 슈뢰딩거 방정식과 degeneracy</a></li>
   <li><a href="#sec-Group_representation_of_schroedinger_equation_group" id="toc-sec-Group_representation_of_schroedinger_equation_group" class="nav-link" data-scroll-target="#sec-Group_representation_of_schroedinger_equation_group"><span class="header-section-number">7.1.2</span> 슈뢰딩거 방정식 군의 표현</a></li>
-  <li><a href="#character-table-과-기저-함수" id="toc-character-table-과-기저-함수" class="nav-link" data-scroll-target="#character-table-과-기저-함수"><span class="header-section-number">7.1.3</span> Character Table 과 기저 함수</a></li>
+  <li><a href="#sec-Group_character_table_and_basis_function_D3_case" id="toc-sec-Group_character_table_and_basis_function_D3_case" class="nav-link" data-scroll-target="#sec-Group_character_table_and_basis_function_D3_case"><span class="header-section-number">7.1.3</span> Character Table 과 기저 함수 - <span class="math inline">\(D_3\)</span> 의 경우</a></li>
   <li><a href="#sec-Group_representation_of_abelian_group" id="toc-sec-Group_representation_of_abelian_group" class="nav-link" data-scroll-target="#sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.4</span> 아벨군의 표현</a></li>
   <li><a href="#sec-Group_basis_functions_for_irreducible_representations" id="toc-sec-Group_basis_functions_for_irreducible_representations" class="nav-link" data-scroll-target="#sec-Group_basis_functions_for_irreducible_representations"><span class="header-section-number">7.1.5</span> 기약표현의 기저함수</a></li>
   </ul></li>
@@ -330,6 +330,7 @@ window.Quarto = {
   <li><a href="#sec-Group_direct_product_group" id="toc-sec-Group_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_direct_product_group"><span class="header-section-number">7.2.1</span> Direct Product Group</a></li>
   <li><a href="#sec-Group_character_properties_of_direct_product_group" id="toc-sec-Group_character_properties_of_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_character_properties_of_direct_product_group"><span class="header-section-number">7.2.2</span> Character 특성</a></li>
   </ul></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -447,7 +448,7 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_transformation_by_schroedinger_equation_group_2" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.2</strong></span> 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 의 기약표현 <span class="math inline">\(\Gamma_n\)</span> 과 그 차원 <span class="math inline">\(d_n\)</span> 에 대해 <span class="math inline">\(d_n\)</span>-fold degeneracy 가 존재한다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.2</strong></span> 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 의 기약표현 <span class="math inline">\(\Gamma_n\)</span> 과 그 차원 <span class="math inline">\(d_n\)</span> 에 대해 <span class="math inline">\(d_n\)</span>-fold normal degeneracy 가 존재한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -458,11 +459,11 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 <p>우리는 <a href="#lem-Group_transformation_by_schroedinger_equation_group_1" class="quarto-xref">보조정리&nbsp;<span>7.1</span></a> 과 <a href="#lem-Group_transformation_by_schroedinger_equation_group_2" class="quarto-xref">보조정리&nbsp;<span>7.2</span></a> 로부터 다음의 결론을 내릴 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_uniqueness_of_representation_of_schroedinger_group" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.1</strong></span> 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 와 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 를 생각하자. <span class="math inline">\(G_S\)</span> 의 모든 기약표현의 차원을 알면 이 해밀토니안에서 가능한 degeneracy 를 알 수 있으며 그 역도 성립한다.</p>
+<p><span class="theorem-title"><strong>정리 7.1</strong></span> 해밀토니안 <span class="math inline">\(\hat{H}\)</span> 와 슈뢰딩거 방정식 군 <span class="math inline">\(G_S\)</span> 를 생각하자. <span class="math inline">\(G_S\)</span> 의 모든 기약표현의 차원을 알면 이 해밀토니안에서 가능한 normal degeneracy 를 알 수 있으며 그 역도 성립한다.</p>
 </div>
 </div>
 <p><br></p>
-<p><span class="math inline">\(\mathcal{H}_n\)</span> 에서 앞서 주어진 <span class="math inline">\(\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}\)</span> 기저와는 다른 기저 <span class="math inline">\(\{|\psi_j\rangle : j=1,\ldots,\,d_n\}\)</span> 를 선택했다고 하자. 그렇다면 <span class="math inline">\(d_n \times d_n\)</span> 유니타리 행렬 <span class="math inline">\(U\)</span> 에 대해</p>
+<p><span class="math inline">\(\mathcal{H}_n\)</span> 의 기저를 앞서 주어진 <span class="math inline">\(\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}\)</span> 기저와는 다른 기저 <span class="math inline">\(\{|\psi_j\rangle : j=1,\ldots,\,d_n\}\)</span> 로 선택했다고 하자. 그렇다면 어떤 <span class="math inline">\(d_n \times d_n\)</span> 유니타리 행렬 <span class="math inline">\(U\)</span> 에 대해</p>
 <p><span class="math display">\[
 |\psi_j\rangle  = \sum_{i=1}^{d_n} U_{ij} |\Gamma_n i\rangle,\qquad |\Gamma_n i\rangle = \sum_{j=1}^{d_n} U^{-1}_{ji} |\psi_j\rangle
 \]</span></p>
@@ -484,8 +485,8 @@ i\hbar \dfrac{\partial \Psi}{\partial t} = \hat{H}\Psi.
 <p>슈뢰딩거 방정식의 기저벡터를 에너지 고유값 <span class="math inline">\(E_n\)</span> 에 대해 <span class="math inline">\(|E_n,\, j\rangle\)</span> 로 기술하는 경우를 생각하자. 여기서 <span class="math inline">\(E_n\)</span> 은 해밀토니안 연산자의 고유값이며 <span class="math inline">\(j\)</span> 는 이 고유값에 의한 고유공간의 <span class="math inline">\(j\)</span> 번째 기저벡터라는 의미이다. 여기서 <a href="#thm-Group_uniqueness_of_representation_of_schroedinger_group" class="quarto-xref">정리&nbsp;<span>7.1</span></a> 는 해밀토니안의 고유값에 대해 슈뢰딩거 방정식 군의 특정 기약표현이 1-1 대응한다는 것을 말한다. 따라서 <span class="math inline">\(E_n\)</span> 에 해당하는 기약표현 <span class="math inline">\(\Gamma_n\)</span> 에 대해 <span class="math inline">\(|\Gamma_nj\rangle\)</span> 로 쓸 수 있으며, 또한 <span class="math inline">\(\Gamma_n\)</span> 은 이 고유값에대한 degeneracy 정보도 포함하기 때문에 더 좋은 표현 방법이다. 즉 <span class="math inline">\(E_n\)</span> 보다 <span class="math inline">\(\Gamma_n\)</span> 이 <strong>좋은 양자수 (good quantum number)</strong> 이다.</p>
 <p><br></p>
 </section>
-<section id="character-table-과-기저-함수" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="character-table-과-기저-함수"><span class="header-section-number">7.1.3</span> Character Table 과 기저 함수</h3>
+<section id="sec-Group_character_table_and_basis_function_D3_case" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="sec-Group_character_table_and_basis_function_D3_case"><span class="header-section-number">7.1.3</span> Character Table 과 기저 함수 - <span class="math inline">\(D_3\)</span> 의 경우</h3>
 <p>예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 <span class="math inline">\(D_{3} =\{E,\,A,\,B,\,C,\,D,\,F\}\)</span> 군으로 표현 할 수 있으며(<a href="group_introduction.html#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a>) <span class="math inline">\(D_{3}\)</span> 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다(<a href="group_representation1.html#exm-Group_character_table_of_D3" class="quarto-xref">예제&nbsp;<span>5.9</span></a>). <span class="math inline">\(1^2+1^2+2^2=6\)</span> 이므로(<a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a>) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다. 이제 해밀토니안에 대한 고유함수는 1 차원의 경우는 기약표현에 대한 기호로, 2차원 이상의 경우는 기약표현에 대한 기호와 그 안에서의 인덱스로 표현하자. 즉 <span class="math inline">\(|A_1\rangle,\, |A_2\rangle,\, |E1\rangle,\, |E2\rangle\)</span> 로 표기 될 수 있다. 각각의 기약표현에 대해 우리는 다음을 안다.</p>
 <ul>
 <li>모든 <span class="math inline">\(R\in D_3\)</span> 에 대해 <span class="math inline">\(\hat{R}|A_1\rangle = |A_1\rangle\)</span> 이다.</li>
@@ -557,6 +558,20 @@ $F$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2-y^2)+2\sqrt{3}xy]$ & $\dfrac{1}{4}[-\sqrt{
 <li>따라서 <span class="math inline">\(z(x^2+y^2)\)</span> 는 <span class="math inline">\(|A_2\rangle\)</span> 과 같이 변한다.</li>
 <li><span class="math inline">\((x^2-y^2,\, xy)\)</span> 와 <span class="math inline">\((xz,\,yz)\)</span> 는 각각 <span class="math inline">\(E\)</span> 표현과 같이 변환된다.</li>
 </ul>
+<p><br></p>
+<p>이제 <span class="math inline">\(R_x,\,R_y,\,R_z\)</span> 가 각각의 변환에 대해 어떻게 변하는지 알아보자. <span class="math inline">\(R_x\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 회전이며 <span class="math inline">\(yp_z-zp_y\)</span> 로 표현된다. <span class="math inline">\(y,\,z\)</span> 의 변환은 <a href="#tbl-Group_D3_coords1" class="quarto-xref">표&nbsp;<span>7.1</span></a> 에 나와 있으며 <span class="math inline">\(p_x,\,p_y,\,p_z\)</span> 역시 같은 방식으로 변화한다. 즉,</p>
+<p><span class="math display">\[
+C|p_x\rangle = \dfrac{1}{2}(|p_x\rangle + \sqrt{3} |p_y\rangle)
+\]</span></p>
+<p>이다. 그렇다면 <span class="math inline">\(C\)</span> 에 대한 <span class="math inline">\(R_x\)</span> 의 변화는 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+C|R_x\rangle = C(yp_z-zp_y) &amp;= \dfrac{1}{2}(\sqrt{3}x-y)(-p_z) - (-z)\dfrac{1}{2}(\sqrt{3}p_x-p_y) \\[0.3em]
+&amp;= \dfrac{1}{2}(-\sqrt{3}xp_z + yp_z + \sqrt{3}zp_x - zp_y)  \\[0.3em]
+&amp;= \dfrac{1}{2}(|R_x\rangle + \sqrt{3} |R_y\rangle).
+\end{aligned}
+\]</span></p>
+<p>이것을 모든 연산과 <span class="math inline">\(R_x,\,R_y,\,R_z\)</span> 에 대해 적용하면 아래 표와 같다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{c|ccc} 
 \hline  
 $D_3$ & $R_x$ & $R_y$ & $R_z$ \\ 
@@ -602,6 +617,7 @@ $\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\lef
 </div>
 </figure>
 </div>
+<p><br></p>
 </section>
 <section id="sec-Group_representation_of_abelian_group" class="level3" data-number="7.1.4">
 <h3 data-number="7.1.4" class="anchored" data-anchor-id="sec-Group_representation_of_abelian_group"><span class="header-section-number">7.1.4</span> 아벨군의 표현</h3>
@@ -699,7 +715,7 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 \hat{\Pi}^{(\Gamma_n)}_{jj}|\Gamma_{n'} {j'}\rangle &amp;=  \delta_{nn'}\delta_{jj'}|\Gamma_n j\rangle.
 \end{aligned}
 \tag{7.6}\]</span></span></p>
-<p>즉 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}_{jj}\)</span> 는 양자역학과 선형대수학에서의 projection 연산자이며 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}_{jk}\)</span> 는 projection 연산자의 확장판이라고 볼 수 있다.</p>
+<p>즉 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}_{jj}\)</span> 는 양자역학과 선형대수학에서의 projection 연산자이며 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}_{jk}\)</span> 는 projection 연산자의 확장이라고 볼 수 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_expansion_of_state_by_irreducible_representation" class="theorem">
@@ -733,7 +749,7 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 <div id="thm-Group_orthogonality_of_different_irreducible_representation_and_row" class="theorem">
 <p><span class="theorem-title"><strong>정리 7.4</strong></span> 다음이 성립한다.</p>
 <p><span id="eq-Group_orthogonality_of_different_irreducible_representation_and_row"><span class="math display">\[
-\langle \Gamma_{n'}j'|\Gamma_nj\rangle \propto \delta_{nn'}\delta_{jj'}.
+\langle \Gamma_{n'}j'|\Gamma_nj\rangle = \delta_{nn'}\delta_{jj'}.
 \tag{7.8}\]</span></span></p>
 </div>
 </div>
@@ -744,7 +760,7 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 \langle \Gamma_{n'}j'|\Gamma_nj\rangle &amp;= \sum_{R\in G_S}\dfrac{1}{|G_S|}\langle \Gamma_n'j'|\hat{R}^\dagger \hat{R}|\Gamma_nj\rangle \\[0.3em]
 &amp;= \dfrac{1}{|G_S|} \sum_R \sum_{k,k'}D^{(\Gamma_{n'})}(R)^\ast_{k'j'}D^{(\Gamma_n)}(R)_{kj}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
 &amp;= \dfrac{1}{|G_S|} \sum_{k,k'}\delta_{nn'}\delta_{kk'}\delta_{jj'} \dfrac{|G_S|}{d_n}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
-&amp;= \dfrac{1}{d_n} \delta_{nn'}\delta_{jj'}\sum_k \langle \Gamma_n k|\Gamma_n k\rangle \qquad \square
+&amp;= \dfrac{1}{d_n} \delta_{nn'}\delta_{jj'}\sum_k \langle \Gamma_n k|\Gamma_n k\rangle = \delta_{nn'}\delta_{jj'}\qquad \square
 \end{aligned}
 \]</span></p>
 </div>
@@ -758,16 +774,29 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 <div id="def-Group_projection_operator2" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 7.4 (Projection 연산자 2)</strong></span> Projection 연산자 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}\)</span> 를 아래와 같이 정의한다.</p>
 <p><span id="eq-Group_projection_operator_2"><span class="math display">\[
-\hat{\Pi}^{(\Gamma_n)} := \sum_j \hat{P}^{(\Gamma_n)}_{jj} = \dfrac{d_{n}}{|G_s|} \sum_{R\in G_S} \left(\chi^{(\Gamma_n)}(R)\right)^\ast \hat{R}
+\hat{\Pi}^{(\Gamma_n)} := \sum_j \hat{\Pi}^{(\Gamma_n)}_{jj} = \dfrac{d_{n}}{|G_s|} \sum_{R\in G_S} \left(\chi^{(\Gamma_n)}(R)\right)^\ast \hat{R}
 \tag{7.9}\]</span></span></p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_orthogonality_of_second_projection_operator" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#def-Group_projection_operator2" class="quarto-xref">정의&nbsp;<span>7.4</span></a> 에서 정의된 <span class="math inline">\(\hat{\Pi}^{(\Gamma_n)}\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \hat{\Pi}^{(\Gamma_n)} |\Gamma_{n'}j'\rangle = \delta_{nn'}|\Gamma_n j'\rangle
 \]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-Group_group_projection_operator_and_vector_projection_operator" class="quarto-xref">식&nbsp;<span>7.6</span></a> 을 이용한다. <span class="math display">\[
+\begin{aligned}
+\hat{\Pi}^{(\Gamma_n)} |\Gamma_{n'}j'\rangle &amp;= \sum_j \hat{\Pi}^{(\Gamma_n)}_{jj}|\Gamma_{n'} j'\rangle = \delta_{nn'}|\Gamma_{n}j'\rangle. \qquad \square
+\end{aligned}
+\]</span></p>
+</div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_application_of_projection_operator" class="theorem example">
@@ -777,7 +806,7 @@ D^{(m)}(\pm \varphi) = e^{im\varphi}
 </center>
 <p>따라서 두 기약표현에 대한 Projection 연산자는 다음과 같다.</p>
 <p><span class="math display">\[
-\hat{\Pi}^{(\Gamma_1)} = \dfrac{1}{2} \left(\hat{E} + \hat{\sigma}\right) ,\qquad \hat{\Pi}^{\Gamma_2} = \dfrac{1}{2} \left(\hat{E}-\hat{\sigma}\right).
+\hat{\Pi}^{(\Gamma_1)} = \dfrac{1}{2} \left(\hat{E} + \hat{\sigma}\right) ,\qquad \hat{\Pi}^{(\Gamma_2)} = \dfrac{1}{2} \left(\hat{E}-\hat{\sigma}\right).
 \]</span></p>
 <p>임의의 파동함수 <span class="math inline">\(\psi(x)\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -814,14 +843,14 @@ G_a \otimes G_b := \{xy: x\in G_a,\, y\in G_b\}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_direct_product_is_sugbroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.1</strong></span> <a href="#def-Group_direct_product_group" class="quarto-xref">정의&nbsp;<span>7.5</span></a> 의 조건에서 <span class="math inline">\(G_a \otimes G_b\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> <a href="#def-Group_direct_product_group" class="quarto-xref">정의&nbsp;<span>7.5</span></a> 의 조건에서 <span class="math inline">\(G_a \otimes G_b\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="group_introduction.html#prp-Group_how_to_be_subgroup" class="quarto-xref">명제&nbsp;<span>4.2</span></a> 의 (<span class="math inline">\(c\)</span>) 조건을 통해 증명한다. <span class="math inline">\(x,\,y\in G_a,\, p,\,q \in G_b\)</span> 에 대해</p>
 <p><span class="math display">\[
-(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\times G_b
+(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\otimes G_b
 \]</span></p>
 <p>이므로 <span class="math inline">\(G_a \otimes G_b \le G\)</span> 이다. <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 임은 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -834,7 +863,7 @@ D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_direct_product_representation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.2</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 은 <span class="math inline">\(G_a \otimes G_b\)</span> 의 표현이다.</p>
+<p><span class="theorem-title"><strong>명제 7.3</strong></span> <a href="#eq-Group_representation_of_direct_product_group" class="quarto-xref">식&nbsp;<span>7.10</span></a> 은 <span class="math inline">\(G_a \otimes G_b\)</span> 의 표현이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -857,17 +886,17 @@ D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &amp;= [D^{(a)}(x)\otimes D^{(b)}(p)]
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span>)</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>슈어 보조정리(<a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a>) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(<span class="citation" data-cites="tinkham2012group">Tinkham (<a href="../vector calculus/vectorcalculus.html#ref-tinkham2012group" role="doc-biblioref">2012</a>)</span> pp.&nbsp;44)</p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_irreducible_representation_of_direct_product_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.3</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(G_a\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(a)}_1,\ldots\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(b)}_1,\ldots\)</span> 에 대해 <span class="math inline">\(\Gamma^{(a)}_i \otimes \Gamma^{(b)}_j\)</span> 의 집합에 포함되는 기약 표현 이외의 <span class="math inline">\(G_a\otimes G_b\)</span> 의 기약표현은 존재하지 않는다.</p>
+<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(G_a\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(a)}_1,\ldots\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현 <span class="math inline">\(\Gamma^{(b)}_1,\ldots\)</span> 에 대해 <span class="math inline">\(\Gamma^{(a)}_i \otimes \Gamma^{(b)}_j\)</span> 의 집합에 포함되는 기약 표현 이외의 <span class="math inline">\(G_a\otimes G_b\)</span> 의 기약표현은 존재하지 않는다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a> 를 이용한다. <span class="math inline">\(\Gamma^{(a)}_i\)</span> 의 차원을 <span class="math inline">\(d^{(a)}_i\)</span> 라고 하고 <span class="math inline">\(\Gamma^{(b)}_j\)</span> 의 차원을 <span class="math inline">\(d^{(b)}_j\)</span> 라고 하면 <span class="math inline">\(\sum_i \left(d^{(a)}_i\right)^2 = |G_a|\)</span>, <span class="math inline">\(\sum_j \left(d_{j}^{(b)}\right)^2=|G_b|\)</span> 이다. <span class="math inline">\(\Gamma_i^{(a)}\otimes \Gamma_j^{(b)}\)</span> 의 차원을 <span class="math inline">\(d_{ij}\)</span> 라고 하면 행렬의 직곱 표현에 의해 그 차원 <span class="math inline">\(d_{ij}=d^{(a)}_i d^{(b)}_j\)</span> 이다. <a href="#prp-Group_direct_product_is_sugbroup" class="quarto-xref">명제&nbsp;<span>7.1</span></a> 에 의해 <span class="math inline">\(|G_a\otimes G_b| = |G_a||G_b|\)</span> 이며</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>5.12</span></a> 를 이용한다. <span class="math inline">\(\Gamma^{(a)}_i\)</span> 의 차원을 <span class="math inline">\(d^{(a)}_i\)</span> 라고 하고 <span class="math inline">\(\Gamma^{(b)}_j\)</span> 의 차원을 <span class="math inline">\(d^{(b)}_j\)</span> 라고 하면 <span class="math inline">\(\sum_i \left(d^{(a)}_i\right)^2 = |G_a|\)</span>, <span class="math inline">\(\sum_j \left(d_{j}^{(b)}\right)^2=|G_b|\)</span> 이다. <span class="math inline">\(\Gamma_i^{(a)}\otimes \Gamma_j^{(b)}\)</span> 의 차원을 <span class="math inline">\(d_{ij}\)</span> 라고 하면 행렬의 직곱 표현에 의해 그 차원 <span class="math inline">\(d_{ij}=d^{(a)}_i d^{(b)}_j\)</span> 이다. <a href="#prp-Group_direct_product_is_sugbroup" class="quarto-xref">명제&nbsp;<span>7.2</span></a> 에 의해 <span class="math inline">\(|G_a\otimes G_b| = |G_a||G_b|\)</span> 이며</p>
 <p><span class="math display">\[
 \sum_{i,j} \left(d_{ij}\right)^2 = \left(\sum_i (d_i^{(a)})^2\right)\left(\sum_j (d_j^{(b)})^2\right) = |G_a||G_b| = |G_a \otimes G_b|
 \]</span></p>
@@ -879,7 +908,7 @@ D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &amp;= [D^{(a)}(x)\otimes D^{(b)}(p)]
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-Group_character_properties_of_direct_product_group"><span class="header-section-number">7.2.2</span> Character 특성</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_classes_of_direct_product_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(\mathcal{K}_a = \{K^{(a)}_1,\ldots,\,K^{(a)}_m\}\)</span> 과 <span class="math inline">\(\mathcal{K}_b = \{K^{(b)}_1 ,\ldots,\, K^{(b)}_n\}\)</span> 이 각각 <span class="math inline">\(G_a,\,G_b\)</span> 의 클래스의 집합일 때 <span class="math inline">\(\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}\)</span> 는 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 집합이다.</p>
+<p><span class="theorem-title"><strong>명제 7.5</strong></span> <span class="math inline">\(G_a,\,G_b\)</span> 가 direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 를 이룬다고 하자. <span class="math inline">\(\mathcal{K}_a = \{K^{(a)}_1,\ldots,\,K^{(a)}_m\}\)</span> 과 <span class="math inline">\(\mathcal{K}_b = \{K^{(b)}_1 ,\ldots,\, K^{(b)}_n\}\)</span> 이 각각 <span class="math inline">\(G_a,\,G_b\)</span> 의 클래스의 집합일 때 <span class="math inline">\(\{K_i^{(a)}K_j^{(b)} : i=1,\ldots,\,m,\, j=1,\ldots,n\}\)</span> 는 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 집합이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -892,7 +921,7 @@ K_i^{(a)}K_j^{(b)}\cap K_{i'}^{(a)}K_{j'}^{(b)} \ne \varnothing \implies i=i',\,
 yt(xs)(yt)^{-1} = ytxst^{-1}y^{-1}=yxy^{-1}tst^{-1}\in K_i^{(a)}K^{(b)}_j
 \]</span></p>
 <p>이므로 <span class="math inline">\(K_i^{(a)}K_j^{(b)} \in \mathcal{K}_{a\otimes b}\)</span> 이다. 즉 <span class="math inline">\(\mathcal{K}\subset \mathcal{K}_{a\otimes b}\)</span> 이다.</p>
-<p><span class="math inline">\(G_a\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현의 개수는 각각 <span class="math inline">\(m,\,n\)</span> 이며 <a href="#prp-Group_irreducible_representation_of_direct_product_group" class="quarto-xref">명제&nbsp;<span>7.3</span></a> 에 의해 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 개수는 <span class="math inline">\(mn\)</span> 이다. 그런데 <span class="math inline">\(|\mathcal{K}|=mn\)</span> 이므로 <span class="math inline">\(\mathcal{K}=\mathcal{K}_{a \otimes b}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="math inline">\(G_a\)</span> 와 <span class="math inline">\(G_b\)</span> 의 기약표현의 개수는 각각 <span class="math inline">\(m,\,n\)</span> 이며 <a href="#prp-Group_irreducible_representation_of_direct_product_group" class="quarto-xref">명제&nbsp;<span>7.4</span></a> 에 의해 <span class="math inline">\(G_a \otimes G_b\)</span> 의 클래스의 개수는 <span class="math inline">\(mn\)</span> 이다. 그런데 <span class="math inline">\(|\mathcal{K}|=mn\)</span> 이므로 <span class="math inline">\(\mathcal{K}=\mathcal{K}_{a \otimes b}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -936,6 +965,103 @@ $\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\
 </div>
 </div>
 <p><br></p>
+</section>
+</section>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.1 (Tinkham 3.5)</strong></span> <span class="math inline">\(x,\,y,\,z\)</span> 축 각각에 대해 <span class="math inline">\(\theta_x,\,\theta_y,\,\theta_z\)</span> 만큼의 회전 변환에 대한 행렬 <span class="math inline">\(R_x(\theta_x),\, R_y(\theta_y),\, R_z(\theta_z)\)</span> 를 생각하자. 회전 방향은 <span class="math inline">\(R_z\)</span> 라면 <span class="math inline">\(y\)</span> 축이 <span class="math inline">\(x\)</span> 축을 향한 방향을 양의 방향으로 한다. <span class="math inline">\(R_x(\theta_x)R_y(\theta_y)\)</span> 와 <span class="math inline">\(R_y(\theta_y)R_x(\theta_x)\)</span> 를 계산하고 두 회전이 서로 commute 하지 않음을 보여라. <span class="math inline">\(R_xR_y-R_yR_x\)</span> 행렬은 무엇인가? 이 행렬이 <span class="math inline">\(\theta_x=\theta_y=\theta\)</span> 이고 <span class="math inline">\(|\theta| \ll 1\)</span> 일 때 <span class="math inline">\(\theta^2\)</span> 으로 <span class="math inline">\(0\)</span> 이 됨을 이고 이것이 <span class="math inline">\(z\)</span> 축에 대한 회전 <span class="math inline">\(\theta^2\)</span> 에 대해 <span class="math inline">\(R_z-E\)</span> 와 같음을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><u>solution is not complete</u> <span class="math display">\[
+\begin{aligned}
+R_x(\theta_x) &amp;= \begin {bmatrix}  1 &amp; 0 &amp; 0 \\ 0 &amp; \cos \theta_x &amp; \sin \theta_x \\ 0 &amp; - \sin \theta_x &amp; \cos \theta_x \end{bmatrix}, \qquad &amp;R_y(\theta_y) &amp;= \begin {bmatrix}  - \sin \theta_y &amp; 0 &amp; \cos \theta_y \\ 0 &amp; 1 &amp; 0 \\ \cos \theta_y &amp; 0 &amp; \sin \theta_y   \end{bmatrix}\\[0.3em]
+R_z(\theta_z) &amp;= \begin {bmatrix} \cos \theta_z &amp; \sin \theta_z &amp; 0 \\ -\sin \theta_z &amp; \cos \theta_z &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+R_x(\theta_x)R_y(\theta_y)  &amp;= \begin {bmatrix} - \sin \theta_y &amp; 0 &amp; \cos \theta_y \\ \sin \theta_x \cos \theta_y &amp; \cos \theta_x &amp; \sin \theta_x \sin \theta_y \\ \cos \theta_x \cos\theta_y &amp; - \sin \theta_x &amp; \cos \theta_x \sin \theta_y\end{bmatrix}, \\[0.5em]
+R_y(\theta_y) R_x(\theta_x) &amp;= \begin{bmatrix} - \sin \theta_y &amp; - \sin \theta_x \cos \theta_y &amp; \cos \theta_x \cos \theta_y \\ 0 &amp; \cos \theta_x &amp;\sin \theta_x \\ \cos \theta_y &amp; - \sin \theta_x \sin \theta_y &amp; \cos \theta_x \sin \theta_y\end{bmatrix}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; R_x(\theta_x)R_y(\theta_y) - R_y(\theta_y) R_x(\theta_x) \\
+&amp;\qquad = \begin{bmatrix} 0 &amp; \sin \theta_x \cos \theta_y &amp; (1-\cos\theta_x)\cos\theta_y \\ \sin \theta_x \cos \theta_y &amp; 0 &amp; \sin \theta_x (\sin \theta_y -1) \\ \cos \theta_y (\cos \theta_x -1) &amp; \sin \theta_x(\sin \theta_y -1) &amp; 0 \end{bmatrix} \\[0.3em]
+&amp;\qquad \approx \begin {bmatrix} 0 &amp; \theta &amp; \theta^2/2 \\ \theta &amp; 0 &amp; - (1-\theta)\theta \\ \theta^2/2 &amp; -(1-\theta)\theta &amp; 0 \end{bmatrix}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+R_z(\theta)- E = \begin{bmatrix}  \cos \theta -1&amp; \sin \theta &amp; 0  \\ -\sin \theta &amp; \cos \theta -1 &amp; 0 \\ 0 &amp;  0 &amp; 0 \end{bmatrix}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.2 (Tinkham 3.6)</strong></span> (<span class="math inline">\(a\)</span>) 햠수 <span class="math inline">\(f=x,\, R=R_y(\theta_y),\, S=R_z(\theta_z)\)</span> 에 대해 <span class="math inline">\(\hat{R}f,\, \hat{S}f,\, \hat{S}\hat{R}f,\, \hat{R}\hat{S}f\)</span> 를 구하라. <span class="math inline">\(R^{-1}=R^\dagger = R^T\)</span> 임을 상기하라. 이 결과를 일반화하여 3개의 <span class="math inline">\(p\)</span>-형 함수 <span class="math inline">\(x,\,y,\,z\)</span> 는 전체 회전군의 3차원 표현의 기저가 됨을 보여라. 이 특성은 임의의 음이 아닌 정수 <span class="math inline">\(l\)</span> 에 대해 <span class="math inline">\((2l+1)\)</span> 개의 spherical harmonics 와 equivalent 한 다항식에 대해서도 똑같이 성립한다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(f=xy\)</span> 에 대해서도 (<span class="math inline">\(a\)</span>) 의 변환을 수행하라. <span class="math inline">\(xy\)</span> 에 대해 좋은 partners 를 찾아라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\hat{R}f(\boldsymbol{x}) = f(R^{-1}\boldsymbol{x})\)</span> 임을 이용한다. <a href="#exr-tinkham_3_5" class="quarto-xref">연습문제&nbsp;<span>7.1</span></a> 의 <span class="math inline">\(R_x,\,R_y,\,R_z\)</span> 를 이용한다.</p>
+<p>우선 <span class="math inline">\(\hat{R}^{-1}\hat{S}^{-1} = R_y^{-1}(\theta_y)R_z^{-1}(\theta_z)\)</span> 와 <span class="math inline">\(\hat{S}^{-1}\hat{R}^{-1} = R_z^{-1}(\theta_z)R_y^{-1}(\theta_y)\)</span> 을 구해보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\hat{R}^{-1}\hat{S}^{-1} = R_y^{-1}(\theta_y)R_z^{-1}(\theta_z) &amp;= \begin{bmatrix} \sin \theta_y \cos \theta_z &amp; - \sin \theta_y \sin \theta_z &amp; \cos \theta_y \\ \sin \theta_z &amp; \cos \theta_z &amp; 0 \\ \cos \theta_y \cos \theta_z &amp; - \cos \theta_y \sin \theta_z &amp; - \sin \theta_y \end{bmatrix}, \\[0.3em]
+\hat{S}^{-1}\hat{R}^{-1} = R_z^{-1}(\theta_z)R_y^{-1}(\theta_y) &amp;= \begin{bmatrix} \sin \theta_y \cos \theta_z &amp; - \sin \theta_z &amp;\cos \theta_y \cos \theta_z \\ \sin \theta_y \sin \theta_z &amp; \cos \theta_z &amp; \cos \theta_y \sin \theta_z \\ \cos \theta_y &amp; 0 &amp; - \sin \theta_y\end{bmatrix}.
+\end{aligned}
+\]</span></p>
+<p>위를 이용하여 <span class="math inline">\(f(x) = x\)</span> 에 대한 변환을 계산해보면 아래와 같다. <span class="math display">\[
+\begin{aligned}
+\hat{R}f(\boldsymbol{x}) &amp;= \sin \theta_y x + \cos \theta_y z, \\[0.3em]
+\hat{S}f(\boldsymbol{x}) &amp;= \cos\theta_z x - \sin \theta_z y,\\[0.3em]
+\hat{S}\hat{R}f(\boldsymbol{x}) &amp;= f(\hat{R}^{-1}\hat{S}^{-1}\boldsymbol{x})=\sin \theta_y \cos \theta_z x - \sin \theta_y \sin \theta_z y + \cos \theta_y z, \\
+\hat{R}\hat{S}f(\boldsymbol{x}) &amp;= f(\hat{S}^{-1}\hat{R}^{-1}\boldsymbol{x}) = \sin \theta_y \cos \theta_z x - \sin \theta_z y + \cos \theta_y \cos \theta_z z.
+\end{aligned}
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(f(x,\,y,\,z) = xy\)</span> 에 대해 적용한다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\hat{R}f(\boldsymbol{x}) &amp;= \sin \theta_y (xy) + \cos \theta_y (yz), \\[0.3em]
+\hat{S}f(\boldsymbol{x}) &amp;= \cos \theta_z \sin(\theta_z) (x^2-y^2) +(\cos^2\theta_z - \sin^2 \theta_z)(xy), \\[0.3em]
+\hat{S}{\hat{R}}f(\boldsymbol{x}) &amp;= \sin \theta_y \cos \theta_z \sin \theta_z (x^2-y^2)  + \sin \theta_y (\cos^2 \theta_z - \sin ^2 \theta_z) (xy) \\
+&amp;\qquad + \cos\theta_y \sin \theta_z (xz) + \cos \theta_y \cos \theta_z (yz), \\
+\hat{R}\hat{S}f(\boldsymbol{x}) &amp;= \sin \theta_z \cos \theta_y (xz)+ \cos(\theta_z) \cos(\theta_y)(yz) + \sin \theta_z \cos\theta_z \sin \theta_z(x^2 - y^2) \\
+&amp;\qquad + (\cos^2\theta_z − \sin^2 \theta_z)\sin \theta_y (xy)
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.3 (Tinkham 3.7)</strong></span> (<span class="math inline">\(a\)</span>) <span class="math inline">\(D_3\)</span> 에서 기저중 하나를 <span class="math inline">\(F = x^2zg(r)\)</span> 로 잡고 <span class="math inline">\(D_3\)</span> 의 표현을 구성하라. <span class="math inline">\(z\)</span> 축이 3 fold axis 이고 <span class="math inline">\(g(r)\)</span> 은 radial 적분이 수렴하는 함수이다. 다른 기저함수는 무엇인가?</p>
+<p>(<span class="math inline">\(b\)</span>) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?</p>
+<p>(<span class="math inline">\(c\)</span>) 이 기저함수가 정규직교하지 않다면 이들의 선형결합으로 정규직교기저를 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#sec-Group_character_table_and_basis_function_D3_case">Character Table 과 기저 함수 - <span class="math inline">\(D_3\)</span> 의 경우</a> 를 참고하라. 문제에는 <span class="math inline">\(F\)</span> 함수이지만 <span class="math inline">\(D_3\)</span> 의 <span class="math inline">\(F\)</span> 연산과의 혼동을 방지하기 위해 <span class="math inline">\(|\Phi_1\rangle\)</span> 로 쓰자. 즉 <span class="math inline">\(\langle \boldsymbol{x}|\Phi_1\rangle = \Phi_1(\boldsymbol{x}) = x^2zg(r)\)</span> 이다.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\hat{E}|\Phi_1\rangle = |\Phi_1\rangle,\, \hat{A}|\Phi_1\rangle=-|\Phi\rangle\)</span> 이며,</p>
+<p><span class="math display">\[
+\begin{aligned}
+B\Phi_1(\boldsymbol{x}) &amp;= -\dfrac{1}{4}(x^2-2\sqrt{3}xy + 3y^2)zg(r), \\
+C\Phi_1(\boldsymbol{x}) &amp;= -\dfrac{1}{4}(x^2 +2\sqrt{3}xy + 3y^2)zg(r), \\
+D\Phi_1(\boldsymbol{x}) &amp;= \dfrac{1}{4}(x^2-2\sqrt{3}xy + 3y^2)zg(r), \\
+F\Phi_2(\boldsymbol{x}) &amp;= \dfrac{1}{4}(x^2 +2\sqrt{3}xy + 3y^2)zg(r)
+\end{aligned}
+\]</span></p>
+<p>이며 다른 기저함수는 일단 <span class="math inline">\(\Phi_2\rangle (\boldsymbol{x}) = xyzg(r)\)</span> 과 <span class="math inline">\(\Phi_3\rangle(\boldsymbol{x}) = y^2gz(r)\)</span> 로 잡을 수 있다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(D_3\)</span> 는 2종류의 1차원 기약표현과 1종류의 1차원 기약표현이 존재하므로 여기서 가능한 표현은 1차원 기약표현과 2차원 기약표현으로 이루어진 표현이다.</p>
+<p>(<span class="math inline">\(c\)</span>)</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -943,7 +1069,6 @@ $\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\
 Tinkham, M. 2012. <em>Group Theory and Quantum Mechanics</em>. Dover Books on Chemistry. Dover Publications. <a href="https://books.google.co.kr/books?id=oe7DAgAAQBAJ">https://books.google.co.kr/books?id=oe7DAgAAQBAJ</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

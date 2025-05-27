@@ -118,7 +118,7 @@ $$
 
 ::: {#lem-Group_transformation_by_schroedinger_equation_group_2}
 
-슈뢰딩거 방정식 군 $G_S$ 의 기약표현 $\Gamma_n$ 과 그 차원 $d_n$ 에 대해  $d_n$-fold degeneracy 가 존재한다. 
+슈뢰딩거 방정식 군 $G_S$ 의 기약표현 $\Gamma_n$ 과 그 차원 $d_n$ 에 대해  $d_n$-fold normal degeneracy 가 존재한다. 
 
 :::
 
@@ -139,14 +139,14 @@ $D$ 가 $G_S$ 에 대한 $d_n$ 차원 기약표현이라고 하자. 모든 $R\in
 
 ::: {#thm-Group_uniqueness_of_representation_of_schroedinger_group}
 
-해밀토니안 $\hat{H}$ 와 슈뢰딩거 방정식 군 $G_S$ 를 생각하자. $G_S$ 의 모든 기약표현의 차원을 알면 이 해밀토니안에서 가능한 degeneracy 를 알 수 있으며 그 역도 성립한다.
+해밀토니안 $\hat{H}$ 와 슈뢰딩거 방정식 군 $G_S$ 를 생각하자. $G_S$ 의 모든 기약표현의 차원을 알면 이 해밀토니안에서 가능한 normal degeneracy 를 알 수 있으며 그 역도 성립한다.
 
 :::
 
 </div></br>
 
 
-$\mathcal{H}_n$ 에서 앞서 주어진 $\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}$ 기저와는 다른 기저 $\{|\psi_j\rangle : j=1,\ldots,\,d_n\}$ 를 선택했다고 하자. 그렇다면 $d_n \times d_n$ 유니타리 행렬 $U$ 에 대해
+$\mathcal{H}_n$ 의 기저를 앞서 주어진 $\{|\Gamma_n i\rangle: i=1,\ldots,\,n\}$ 기저와는 다른 기저 $\{|\psi_j\rangle : j=1,\ldots,\,d_n\}$ 로 선택했다고 하자. 그렇다면 어떤 $d_n \times d_n$ 유니타리 행렬 $U$ 에 대해
 
 $$
 |\psi_j\rangle  = \sum_{i=1}^{d_n} U_{ij} |\Gamma_n i\rangle,\qquad |\Gamma_n i\rangle = \sum_{j=1}^{d_n} U^{-1}_{ji} |\psi_j\rangle
@@ -180,9 +180,7 @@ $$
 
 </br>
 
-
-
-### Character Table 과 기저 함수
+### Character Table 과 기저 함수 - $D_3$ 의 경우 {#sec-Group_character_table_and_basis_function_D3_case}
 
 예를 들어 정삼각 형의 각 꼭지점에 동일한 이온이 존재할 때 여기서 움직이는 전자를 슈뢰딩거 방정식으로 기술한다고 하자. 이 대칭 구조는 $D_{3} =\{E,\,A,\,B,\,C,\,D,\,F\}$ 군으로 표현 할 수 있으며(@exm-Group_d3_multiplication_table) $D_{3}$ 는 3개의 conjugate class 를 가지므로 3개의 기약표현을 가진다(@exm-Group_character_table_of_D3). $1^2+1^2+2^2=6$ 이므로(@prp-Group_regular_representation_is_not_irreducible_3) 1차원 기약표현 2개와 2차원 기약표현 1개를 가진다는 것을 알 수 있으며 더 고도의 대칭은 군론의 입장에서 배재된다. 이제 해밀토니안에 대한 고유함수는 1 차원의 경우는 기약표현에 대한 기호로, 2차원 이상의 경우는 기약표현에 대한 기호와 그 안에서의 인덱스로 표현하자. 즉 $|A_1\rangle,\, |A_2\rangle,\, |E1\rangle,\, |E2\rangle$ 로 표기 될 수 있다. 각각의 기약표현에 대해 우리는 다음을 안다.
 
@@ -238,6 +236,26 @@ $F$ & $x^2+y^2$ & $\dfrac{1}{2}[-(x^2-y^2)+2\sqrt{3}xy]$ & $\dfrac{1}{4}[-\sqrt{
 - $(x^2-y^2,\, xy)$ 와 $(xz,\,yz)$ 는 각각 $E$ 표현과 같이 변환된다. 
 
 
+</br>
+
+이제 $R_x,\,R_y,\,R_z$ 가 각각의 변환에 대해 어떻게 변하는지 알아보자. $R_x$ 는 $x$ 축에 대한 회전이며 $yp_z-zp_y$ 로 표현된다. $y,\,z$ 의 변환은 @tbl-Group_D3_coords1 에 나와 있으며 $p_x,\,p_y,\,p_z$ 역시 같은 방식으로 변화한다. 즉,
+
+$$
+C|p_x\rangle = \dfrac{1}{2}(|p_x\rangle + \sqrt{3} |p_y\rangle)
+$$
+
+이다. 그렇다면 $C$ 에 대한 $R_x$ 의 변화는 다음과 같다.
+
+$$
+\begin{aligned}
+C|R_x\rangle = C(yp_z-zp_y) &= \dfrac{1}{2}(\sqrt{3}x-y)(-p_z) - (-z)\dfrac{1}{2}(\sqrt{3}p_x-p_y) \\[0.3em]
+&= \dfrac{1}{2}(-\sqrt{3}xp_z + yp_z + \sqrt{3}zp_x - zp_y)  \\[0.3em]
+&= \dfrac{1}{2}(|R_x\rangle + \sqrt{3} |R_y\rangle).
+\end{aligned}
+$$
+
+이것을 모든 연산과 $R_x,\,R_y,\,R_z$ 에 대해 적용하면 아래 표와 같다.
+
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{c|ccc} 
 \hline  
 $D_3$ & $R_x$ & $R_y$ & $R_z$ \\ 
@@ -269,6 +287,8 @@ $\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\lef
 \hline -->
 
 ![$D_3$ Character table](figures/D3_character_table.png){#tbl-Group_D3_coords3 width=350}
+
+</br>
 
 ### 아벨군의 표현 {#sec-Group_representation_of_abelian_group}
 
@@ -401,7 +421,6 @@ $$
 \hat{\Pi}^{(\Gamma_n)}_{jk} := \left(\dfrac{d_n}{|G_S|}\sum_{R\in G_S} D^{(\Gamma_n)}(R)^\ast_{jk} \hat{R}\right).
 $$ {#eq-Group_projection_operator_from_k_to_j}
 
-
 :::
 :::
 
@@ -420,7 +439,7 @@ $$
 \end{aligned}
 $${#eq-Group_group_projection_operator_and_vector_projection_operator}
 
-즉 $\hat{\Pi}^{(\Gamma_n)}_{jj}$ 는 양자역학과 선형대수학에서의 projection 연산자이며 $\hat{\Pi}^{(\Gamma_n)}_{jk}$ 는 projection 연산자의 확장판이라고 볼 수 있다. 
+즉 $\hat{\Pi}^{(\Gamma_n)}_{jj}$ 는 양자역학과 선형대수학에서의 projection 연산자이며 $\hat{\Pi}^{(\Gamma_n)}_{jk}$ 는 projection 연산자의 확장이라고 볼 수 있다. 
 
 
 </br>
@@ -476,7 +495,7 @@ $$
 다음이 성립한다.
 
 $$
-\langle \Gamma_{n'}j'|\Gamma_nj\rangle \propto \delta_{nn'}\delta_{jj'}.
+\langle \Gamma_{n'}j'|\Gamma_nj\rangle = \delta_{nn'}\delta_{jj'}.
 $${#eq-Group_orthogonality_of_different_irreducible_representation_and_row}
 
 :::
@@ -491,7 +510,7 @@ $$
 \langle \Gamma_{n'}j'|\Gamma_nj\rangle &= \sum_{R\in G_S}\dfrac{1}{|G_S|}\langle \Gamma_n'j'|\hat{R}^\dagger \hat{R}|\Gamma_nj\rangle \\[0.3em]
 &= \dfrac{1}{|G_S|} \sum_R \sum_{k,k'}D^{(\Gamma_{n'})}(R)^\ast_{k'j'}D^{(\Gamma_n)}(R)_{kj}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
 &= \dfrac{1}{|G_S|} \sum_{k,k'}\delta_{nn'}\delta_{kk'}\delta_{jj'} \dfrac{|G_S|}{d_n}\langle \Gamma_{n'}k'|\Gamma_n k\rangle \\[0.3em]
-&= \dfrac{1}{d_n} \delta_{nn'}\delta_{jj'}\sum_k \langle \Gamma_n k|\Gamma_n k\rangle \qquad \square
+&= \dfrac{1}{d_n} \delta_{nn'}\delta_{jj'}\sum_k \langle \Gamma_n k|\Gamma_n k\rangle = \delta_{nn'}\delta_{jj'}\qquad \square
 \end{aligned}
 $$
 
@@ -506,7 +525,7 @@ $$
 Projection 연산자 $\hat{\Pi}^{(\Gamma_n)}$ 를 아래와 같이 정의한다. 
 
 $$
-\hat{\Pi}^{(\Gamma_n)} := \sum_j \hat{P}^{(\Gamma_n)}_{jj} = \dfrac{d_{n}}{|G_s|} \sum_{R\in G_S} \left(\chi^{(\Gamma_n)}(R)\right)^\ast \hat{R}
+\hat{\Pi}^{(\Gamma_n)} := \sum_j \hat{\Pi}^{(\Gamma_n)}_{jj} = \dfrac{d_{n}}{|G_s|} \sum_{R\in G_S} \left(\chi^{(\Gamma_n)}(R)\right)^\ast \hat{R}
 $$ {#eq-Group_projection_operator_2}
 
 
@@ -515,10 +534,28 @@ $$ {#eq-Group_projection_operator_2}
 
 </br>
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_orthogonality_of_second_projection_operator}
+
+@def-Group_projection_operator2 에서 정의된 $\hat{\Pi}^{(\Gamma_n)}$ 에 대해 다음이 성립한다.
 
 $$
 \hat{\Pi}^{(\Gamma_n)} |\Gamma_{n'}j'\rangle = \delta_{nn'}|\Gamma_n j'\rangle
 $$
+:::
+
+</div></br>
+
+::: {.proof}
+@eq-Group_group_projection_operator_and_vector_projection_operator 을 이용한다.
+$$
+\begin{aligned}
+\hat{\Pi}^{(\Gamma_n)} |\Gamma_{n'}j'\rangle &= \sum_j \hat{\Pi}^{(\Gamma_n)}_{jj}|\Gamma_{n'} j'\rangle = \delta_{nn'}|\Gamma_{n}j'\rangle. \qquad \square
+\end{aligned}
+$$
+
+:::
 
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -534,7 +571,7 @@ $$
 따라서 두 기약표현에 대한 Projection 연산자는 다음과 같다.
 
 $$
-\hat{\Pi}^{(\Gamma_1)} = \dfrac{1}{2} \left(\hat{E} + \hat{\sigma}\right) ,\qquad \hat{\Pi}^{\Gamma_2} = \dfrac{1}{2} \left(\hat{E}-\hat{\sigma}\right).
+\hat{\Pi}^{(\Gamma_1)} = \dfrac{1}{2} \left(\hat{E} + \hat{\sigma}\right) ,\qquad \hat{\Pi}^{(\Gamma_2)} = \dfrac{1}{2} \left(\hat{E}-\hat{\sigma}\right).
 $$
 
 임의의 파동함수 $\psi(x)$ 에 대해
@@ -589,7 +626,7 @@ $$
 @prp-Group_how_to_be_subgroup 의 ($c$) 조건을 통해 증명한다.  $x,\,y\in G_a,\, p,\,q \in G_b$ 에 대해 
 
 $$
-(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\times G_b
+(ap)^{-1}(bq)= p^{-1}a^{-1}bq = a^{-1}bp^{-1}q \in G_a\otimes G_b
 $$ 
 
 이므로 $G_a \otimes G_b \le G$ 이다. $|G_a \otimes G_b| = |G_a||G_b|$ 임은 쉽게 보일 수 있다. $\square$
@@ -646,7 +683,7 @@ $$
 
 ::: {.proof}
 
-슈어 보조정리(@lem-Group_schur_lemma) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group)
+슈어 보조정리(@lem-Group_schur_lemma) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group pp. 44)
 :::
 
 </br>
@@ -769,3 +806,140 @@ $\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\
 :::
 </div></br>
 
+## 연습문제 {.unnumbered}
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_3_5}
+
+#### Tinkham 3.5
+
+$x,\,y,\,z$ 축 각각에 대해 $\theta_x,\,\theta_y,\,\theta_z$ 만큼의 회전 변환에 대한 행렬 $R_x(\theta_x),\, R_y(\theta_y),\, R_z(\theta_z)$ 를 생각하자. 회전 방향은 $R_z$ 라면 $y$ 축이 $x$ 축을 향한 방향을 양의 방향으로 한다. $R_x(\theta_x)R_y(\theta_y)$ 와 $R_y(\theta_y)R_x(\theta_x)$ 를 계산하고 두 회전이 서로 commute 하지 않음을 보여라. $R_xR_y-R_yR_x$ 행렬은 무엇인가? 이 행렬이 $\theta_x=\theta_y=\theta$ 이고 $|\theta| \ll 1$ 일 때 $\theta^2$ 으로 $0$ 이 됨을 이고 이것이 $z$ 축에 대한 회전 $\theta^2$ 에 대해 $R_z-E$ 와 같음을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+<u>solution is not complete</u>
+$$
+\begin{aligned}
+R_x(\theta_x) &= \begin {bmatrix}  1 & 0 & 0 \\ 0 & \cos \theta_x & \sin \theta_x \\ 0 & - \sin \theta_x & \cos \theta_x \end{bmatrix}, \qquad &R_y(\theta_y) &= \begin {bmatrix}  - \sin \theta_y & 0 & \cos \theta_y \\ 0 & 1 & 0 \\ \cos \theta_y & 0 & \sin \theta_y   \end{bmatrix}\\[0.3em]
+R_z(\theta_z) &= \begin {bmatrix} \cos \theta_z & \sin \theta_z & 0 \\ -\sin \theta_z & \cos \theta_z & 0 \\ 0 & 0 & 1\end{bmatrix}
+\end{aligned}
+$$
+
+이다.
+
+$$
+\begin{aligned}
+R_x(\theta_x)R_y(\theta_y)  &= \begin {bmatrix} - \sin \theta_y & 0 & \cos \theta_y \\ \sin \theta_x \cos \theta_y & \cos \theta_x & \sin \theta_x \sin \theta_y \\ \cos \theta_x \cos\theta_y & - \sin \theta_x & \cos \theta_x \sin \theta_y\end{bmatrix}, \\[0.5em]
+R_y(\theta_y) R_x(\theta_x) &= \begin{bmatrix} - \sin \theta_y & - \sin \theta_x \cos \theta_y & \cos \theta_x \cos \theta_y \\ 0 & \cos \theta_x &\sin \theta_x \\ \cos \theta_y & - \sin \theta_x \sin \theta_y & \cos \theta_x \sin \theta_y\end{bmatrix}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+& R_x(\theta_x)R_y(\theta_y) - R_y(\theta_y) R_x(\theta_x) \\
+&\qquad = \begin{bmatrix} 0 & \sin \theta_x \cos \theta_y & (1-\cos\theta_x)\cos\theta_y \\ \sin \theta_x \cos \theta_y & 0 & \sin \theta_x (\sin \theta_y -1) \\ \cos \theta_y (\cos \theta_x -1) & \sin \theta_x(\sin \theta_y -1) & 0 \end{bmatrix} \\[0.3em]
+&\qquad \approx \begin {bmatrix} 0 & \theta & \theta^2/2 \\ \theta & 0 & - (1-\theta)\theta \\ \theta^2/2 & -(1-\theta)\theta & 0 \end{bmatrix}
+\end{aligned}
+$$
+
+$$
+R_z(\theta)- E = \begin{bmatrix}  \cos \theta -1& \sin \theta & 0  \\ -\sin \theta & \cos \theta -1 & 0 \\ 0 &  0 & 0 \end{bmatrix}
+$$
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_3_6}
+
+#### Tinkham 3.6
+
+($a$) 햠수 $f=x,\, R=R_y(\theta_y),\, S=R_z(\theta_z)$ 에 대해 $\hat{R}f,\, \hat{S}f,\, \hat{S}\hat{R}f,\, \hat{R}\hat{S}f$ 를 구하라. $R^{-1}=R^\dagger = R^T$ 임을 상기하라. 이 결과를 일반화하여 3개의 $p$-형 함수 $x,\,y,\,z$ 는 전체 회전군의 3차원 표현의 기저가 됨을 보여라. 이 특성은 임의의 음이 아닌 정수 $l$ 에 대해 $(2l+1)$ 개의 spherical harmonics 와 equivalent 한 다항식에 대해서도 똑같이 성립한다.
+
+($b$) $f=xy$ 에 대해서도 ($a$) 의 변환을 수행하라. $xy$ 에 대해 좋은 partners 를 찾아라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) $\hat{R}f(\bf{x}) = f(R^{-1}\bf{x})$ 임을 이용한다. @exr-tinkham_3_5 의 $R_x,\,R_y,\,R_z$ 를 이용한다.
+
+우선 $\hat{R}^{-1}\hat{S}^{-1} = R_y^{-1}(\theta_y)R_z^{-1}(\theta_z)$ 와 $\hat{S}^{-1}\hat{R}^{-1} = R_z^{-1}(\theta_z)R_y^{-1}(\theta_y)$ 을 구해보자.
+
+$$
+\begin{aligned}
+\hat{R}^{-1}\hat{S}^{-1} = R_y^{-1}(\theta_y)R_z^{-1}(\theta_z) &= \begin{bmatrix} \sin \theta_y \cos \theta_z & - \sin \theta_y \sin \theta_z & \cos \theta_y \\ \sin \theta_z & \cos \theta_z & 0 \\ \cos \theta_y \cos \theta_z & - \cos \theta_y \sin \theta_z & - \sin \theta_y \end{bmatrix}, \\[0.3em]
+\hat{S}^{-1}\hat{R}^{-1} = R_z^{-1}(\theta_z)R_y^{-1}(\theta_y) &= \begin{bmatrix} \sin \theta_y \cos \theta_z & - \sin \theta_z &\cos \theta_y \cos \theta_z \\ \sin \theta_y \sin \theta_z & \cos \theta_z & \cos \theta_y \sin \theta_z \\ \cos \theta_y & 0 & - \sin \theta_y\end{bmatrix}.
+\end{aligned}
+$$
+
+위를 이용하여 $f(x) = x$ 에 대한 변환을 계산해보면 아래와 같다.
+$$
+\begin{aligned}
+\hat{R}f(\bf{x}) &= \sin \theta_y x + \cos \theta_y z, \\[0.3em]
+\hat{S}f(\bf{x}) &= \cos\theta_z x - \sin \theta_z y,\\[0.3em]
+\hat{S}\hat{R}f(\bf{x}) &= f(\hat{R}^{-1}\hat{S}^{-1}\bf{x})=\sin \theta_y \cos \theta_z x - \sin \theta_y \sin \theta_z y + \cos \theta_y z, \\
+\hat{R}\hat{S}f(\bf{x}) &= f(\hat{S}^{-1}\hat{R}^{-1}\bf{x}) = \sin \theta_y \cos \theta_z x - \sin \theta_z y + \cos \theta_y \cos \theta_z z.
+\end{aligned}
+$$ 
+
+($b$) $f(x,\,y,\,z) = xy$ 에 대해 적용한다.
+
+$$
+\begin{aligned}
+\hat{R}f(\bf{x}) &= \sin \theta_y (xy) + \cos \theta_y (yz), \\[0.3em]
+\hat{S}f(\bf{x}) &= \cos \theta_z \sin(\theta_z) (x^2-y^2) +(\cos^2\theta_z - \sin^2 \theta_z)(xy), \\[0.3em]
+\hat{S}{\hat{R}}f(\bf{x}) &= \sin \theta_y \cos \theta_z \sin \theta_z (x^2-y^2)  + \sin \theta_y (\cos^2 \theta_z - \sin ^2 \theta_z) (xy) \\
+&\qquad + \cos\theta_y \sin \theta_z (xz) + \cos \theta_y \cos \theta_z (yz), \\
+\hat{R}\hat{S}f(\bf{x}) &= \sin \theta_z \cos \theta_y (xz)+ \cos(\theta_z) \cos(\theta_y)(yz) + \sin \theta_z \cos\theta_z \sin \theta_z(x^2 - y^2) \\
+&\qquad + (\cos^2\theta_z − \sin^2 \theta_z)\sin \theta_y (xy)
+\end{aligned}
+$$
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_3_7}
+
+#### Tinkham 3.7
+
+($a$) $D_3$ 에서 기저중 하나를 $F = x^2zg(r)$ 로 잡고 $D_3$ 의 표현을 구성하라. $z$ 축이 3 fold axis 이고 $g(r)$ 은 radial 적분이 수렴하는 함수이다. 다른 기저함수는 무엇인가?
+
+($b$) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?
+
+($c$) 이 기저함수가 정규직교하지 않다면 이들의 선형결합으로 정규직교기저를 구하라. 
+:::
+
+</div></br>
+
+::: {.solution}
+
+[Character Table 과 기저 함수 - $D_3$ 의 경우](#sec-Group_character_table_and_basis_function_D3_case) 를 참고하라. 문제에는 $F$ 함수이지만 $D_3$ 의 $F$ 연산과의 혼동을 방지하기 위해 $|\Phi_1\rangle$ 로 쓰자. 즉 $\langle \bf{x}|\Phi_1\rangle = \Phi_1(\bf{x}) = x^2zg(r)$ 이다. 
+
+($a$)
+$\hat{E}|\Phi_1\rangle = |\Phi_1\rangle,\, \hat{A}|\Phi_1\rangle=-|\Phi\rangle$ 이며,
+
+$$
+\begin{aligned}
+B\Phi_1(\bf{x}) &= -\dfrac{1}{4}(x^2-2\sqrt{3}xy + 3y^2)zg(r), \\
+C\Phi_1(\bf{x}) &= -\dfrac{1}{4}(x^2 +2\sqrt{3}xy + 3y^2)zg(r), \\
+D\Phi_1(\bf{x}) &= \dfrac{1}{4}(x^2-2\sqrt{3}xy + 3y^2)zg(r), \\
+F\Phi_2(\bf{x}) &= \dfrac{1}{4}(x^2 +2\sqrt{3}xy + 3y^2)zg(r)
+\end{aligned}
+$$
+
+이며 다른 기저함수는 일단 $\Phi_2\rangle (\bf{x}) = xyzg(r)$ 과 $\Phi_3\rangle(\bf{x}) = y^2gz(r)$ 로 잡을 수 있다.
+
+($b$) $D_3$ 는 2종류의 1차원 기약표현과 1종류의 1차원 기약표현이 존재하므로 여기서 가능한 표현은 1차원 기약표현과 2차원 기약표현으로 이루어진 표현이다.
+
+($c$)
+
+:::
