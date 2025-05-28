@@ -244,7 +244,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 점군의 기약표현</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -329,6 +329,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-Group_direct_product_group" id="toc-sec-Group_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_direct_product_group"><span class="header-section-number">7.2.1</span> Direct Product Group</a></li>
   <li><a href="#sec-Group_character_properties_of_direct_product_group" id="toc-sec-Group_character_properties_of_direct_product_group" class="nav-link" data-scroll-target="#sec-Group_character_properties_of_direct_product_group"><span class="header-section-number">7.2.2</span> Character 특성</a></li>
+  <li><a href="#sec-Group_direct_product_representation_in_a_group" id="toc-sec-Group_direct_product_representation_in_a_group" class="nav-link" data-scroll-target="#sec-Group_direct_product_representation_in_a_group"><span class="header-section-number">7.2.3</span> 군 내의 직곱 표현</a></li>
   </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
@@ -605,14 +606,15 @@ $F$ & $\dfrac{1}{2}(-R_x-\sqrt{3}R_y)$ & $\dfrac{1}{2}(\sqrt{3}R_x-R_y)$ & $R_z$
 \hline 
 $x^2+y^2$, $z^2$ &  & $A_1$ & $1$ & $\;\;\,1$ & $\;\;\,1$ \\ 
  & $R_z,\,z$ & $A_2$ & $1$ & $\;\;\,1$ & $-1$ \\[0.3em]
-$\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\left.\begin{array}{l}(x,\, y) \\ (R_x,\,R_y)\end{array}\right\}$ & $E$ & $2$ & $-1$ & $\;\;\,0$  \\[1em]
-\hline -->
-<div id="tbl-Group_D3_coords3" class="quarto-float quarto-figure quarto-figure-center anchored">
+$\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\left.\begin{array}{l}(x,\, y) \\ (R_x,\,R_y)\end{array}\right\}$ & $E$ & $2$ & $-1$ & $\;\;\,0$ \\
+\hline
+\end{tabular} -->
+<div id="tbl-Group_D3_character_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D3_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;7.4: <span class="math inline">\(D_3\)</span> Character table
 </figcaption>
-<div aria-describedby="tbl-Group_D3_coords3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-Group_D3_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/D3_character_table.png" class="img-fluid figure-img" width="350">
 </div>
 </figure>
@@ -855,9 +857,9 @@ G_a \otimes G_b := \{xy: x\in G_a,\, y\in G_b\}
 <p>이므로 <span class="math inline">\(G_a \otimes G_b \le G\)</span> 이다. <span class="math inline">\(|G_a \otimes G_b| = |G_a||G_b|\)</span> 임은 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="../../src/group/group_representation1.html#sec-Group_direct_sum_representation_and_direct_product_representation">직합표현과 직곱표현</a> 을 참고하라. 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(G_a,\,G_b\)</span> 에 대한 direct product group <span class="math inline">\(G_a \times G_b\)</span> 가 존재한다고 하자. 그리고 <span class="math inline">\(G_a\)</span> 에 대한 표현 <span class="math inline">\(D^{(a)}\)</span> 과 <span class="math inline">\(G_b\)</span> 에 대한 표현 <span class="math inline">\(D^{(b)}\)</span> 에 대해 <span class="math inline">\(D^{(a\otimes b)}\)</span> 를 <span class="math inline">\(D^{(a)}\)</span> 과 <span class="math inline">\(D^{(b)}\)</span> 의 직곱표현으로 정의하자. 즉, <span class="math inline">\(x\in G_a,\, y\in G_b\)</span> 에 대해</p>
+<p><a href="../../src/group/group_representation1.html#sec-Group_direct_sum_representation_and_direct_product_representation">직합표현과 직곱표현</a> 을 참고하라. 군 <span class="math inline">\(G\)</span> 의 두 부분군 <span class="math inline">\(G_a,\,G_b\)</span> 에 대한 direct product group <span class="math inline">\(G_a \times G_b\)</span> 가 존재한다고 하자. 그리고 <span class="math inline">\(G_a\)</span> 에 대한 표현 <span class="math inline">\(\Gamma^{(a)}\)</span> 과 <span class="math inline">\(G_b\)</span> 에 대한 표현 <span class="math inline">\(\Gamma^{(b)}\)</span> 에 대해 <span class="math inline">\(D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}\)</span> 를 <span class="math inline">\(D^{(\Gamma^{(a)})}\)</span> 와 <span class="math inline">\(D^{(\Gamma^{(b)})}\)</span> 의 직곱표현으로 정의하자. 즉, <span class="math inline">\(x\in G_a,\, y\in G_b\)</span> 에 대해</p>
 <p><span id="eq-Group_representation_of_direct_product_group"><span class="math display">\[
-D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
+D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})} (xy):= D^{(\Gamma^{(a)})}(x)\otimes D^{(\Gamma^{(b)})}(y)
 \tag{7.10}\]</span></span></p>
 <p>로 정의한다.</p>
 <br>
@@ -871,9 +873,9 @@ D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="group_representation1.html#exr-Group_proof_of_direct_product_mutiplication" class="quarto-xref">연습문제&nbsp;<span>5.1</span></a> 를 사용한다. <span class="math inline">\(x,\,y\in G_a,\, p,\,q\in G_b\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &amp;= [D^{(a)}(x)\otimes D^{(b)}(p)][D^{(a)}(y)\otimes D^{(b)}(q)] \\[0.3em]
-&amp;=D^{(a)}(xy)\otimes D^{(b)}(pq) \\[0.3em]
-&amp;=D^{(a \otimes b)}(xypq) =D^{(a \otimes b)}(xpyq) \qquad \qquad \square
+D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xp)D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(yq)  &amp;= \left[D^{(\Gamma^{(a)})}(x)\otimes D^{(\Gamma^{(b)})}(p)\right] \left[D^{(\Gamma_a)}(y)\otimes D^{(\Gamma_b)}(q)\right] \\[0.3em]
+&amp;=D^{(\Gamma^{(a)})}(xy)\otimes D^{(\Gamma^{(b)})}(pq) \\[0.3em]
+&amp;=D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xypq) =D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xpyq) \qquad \qquad \square
 \end{aligned}
 \]</span></p>
 </div>
@@ -927,9 +929,9 @@ yt(xs)(yt)^{-1} = ytxst^{-1}y^{-1}=yxy^{-1}tst^{-1}\in K_i^{(a)}K^{(b)}_j
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_character_of_direct_product_group" class="theorem">
 <p><span class="theorem-title"><strong>정리 7.6</strong></span> Direct product group <span class="math inline">\(G_a \otimes G_b\)</span> 의 표현 <span class="math inline">\(\Gamma^{(a)}\otimes \Gamma^{(b)}\)</span> 에 대해 다음이 성립한다.</p>
-<p><span class="math display">\[
+<p><span id="eq-Group_character_of_direct_product_group"><span class="math display">\[
 \chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) = \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y).
-\]</span></p>
+\tag{7.11}\]</span></span></p>
 </div>
 </div>
 <p><br></p>
@@ -964,6 +966,55 @@ $\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\
 </center>
 </div>
 </div>
+<p><br></p>
+</section>
+<section id="sec-Group_direct_product_representation_in_a_group" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="sec-Group_direct_product_representation_in_a_group"><span class="header-section-number">7.2.3</span> 군 내의 직곱 표현</h3>
+<p>Direct-product group 과 관련된 것으로 군 내의 두 표현을 결합하여 새로운 표현을 만들어 내는 직곱 표현(direct product represntation) 이 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_direct_product_representation" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.6</strong></span> 군 <span class="math inline">\(G\)</span> 에 대한 두 표현 <span class="math inline">\(\Gamma_1,\,\Gamma_2\)</span> 의 기저 <span class="math inline">\(\{|\Gamma_1\, i\rangle : i=1,\ldots,\,d_1\}\)</span> 와 <span class="math inline">\(\{\Gamma_2\, j\rangle : j=1,\ldots,\,d_2\}\)</span> 을 생각하자. 그렇다면 <span class="math inline">\(\{|\Gamma_1\, i,\,\Gamma_2\,j\rangle := |\Gamma_1\,i\rangle |\Gamma_2\,j\rangle : i=1,\ldots,\,d_1,\, j=1,\ldots,\,d_2\rangle\}\)</span> 는 <span class="math inline">\(\Gamma_1 \otimes \Gamma_2\)</span> 표현에 대한 기저이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>임의의 <span class="math inline">\(R\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{aligned}
+\hat{R}|\Gamma_1\,i,\Gamma_2\,j\rangle &amp;= \left(\hat{R}|\Gamma_1\,i\rangle \right)  \left(\hat{R}|\Gamma_2\,j\rangle \right) = \left(\sum_{m=1}^{d_1} D^{(\Gamma_1)}_{mi}(R)|\Gamma_1,m\rangle\right)\left(\sum_{n=1}^{d_2} D^{(\Gamma_2)}_{nj}(R)|\Gamma_2,n\rangle\right) \\[0.3em]
+&amp;= \sum_{m,\,n} D^{(\Gamma_1)}_{mi}(R)D^{(\Gamma_2)}_{nj}(R)|\Gamma_1\,m,\,\Gamma_2\,n\rangle \\[0.3em]
+&amp;= \sum_{m,\,n} D^{(\Gamma_1 \otimes \Gamma_2)}_{mi, nj}(R)|\Gamma_1\,m,\,\Gamma_2\,n\rangle \\[0.3em]
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<p>이로부터 다음 명제를 쉽게 얻을 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_character_of_direct_product_representation" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.7</strong></span> <a href="#prp-Group_direct_product_representation" class="quarto-xref">명제&nbsp;<span>7.6</span></a> 에서 다음이 성립한다.</p>
+<p><span id="eq-Group_character_of_direct_product_representation"><span class="math display">\[
+\chi^{(\Gamma_1 \otimes \Gamma_2)}(R) = \chi^{(\Gamma_1)}(R) \chi^{(\Gamma_2)}(R).
+\tag{7.12}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<p>일반적으로 한 군 내의 직곱표현은 기약표현이 아니다. 물론 1차원 표현을 포함하는 두 기약표현의 직곱표현은 기약표현이다. 그렇다면 이것을 아래와 같이 표현 할 수 있다.</p>
+<p><span id="eq-Group_direct_product_of_representatin_is_a_linear_combination"><span class="math display">\[
+\Gamma^{(i)} \otimes \Gamma^{(j)} = \sum_k a_{ijk}\Gamma^{(k)}
+\tag{7.13}\]</span></span></p>
+<p>이 때 <span class="math inline">\(a_{ijk}\)</span> 는 <span class="math inline">\(\Gamma^{(i)}\otimes \Gamma^{(j)}\)</span> 에서 기약표현 <span class="math inline">\(\Gamma^{(k)}\)</span> 가 등장하는 횟수이다. <a href="#eq-Group_character_of_direct_product_representation" class="quarto-xref">식&nbsp;<span>7.12</span></a> 로부터</p>
+<p><span class="math display">\[
+\chi^{(\Gamma^{(i)}\otimes \Gamma^{(j)})} (R)= \chi^{(\Gamma^{(i)})} (R) \chi^{(\Gamma^{(j)})}(R) = \sum_k a_{ijk}\chi^{(\Gamma^{(k)})}(R)
+\]</span></p>
+<p>이며 <a href="group_representation1.html#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>5.6</span></a> 로부터 <span class="math inline">\(G\)</span> 의 클래스의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해 다음이 성립한다는 것을 안다.</p>
+<p><span id="eq-Group_coeefficient_of_character_of_direct_product_representation"><span class="math display">\[
+\begin{aligned}
+a_{ijk} &amp;= \dfrac{1}{|G|}\sum_{R\in G} \chi^{(\Gamma^{(i)})}(R) \chi^{(\Gamma^{(j)})}(R)\left(\chi^{(\Gamma^{(k)})}(R)\right)^\ast  \\[0.3em]
+&amp;= \dfrac{1}{|G|} \sum_{K\in \mathcal{K}_G} |K| \chi^{(\Gamma^{(i)})}(K) \chi^{(\Gamma^{(j)})}(K)\left(\chi^{(\Gamma^{(k)})}(K)\right)^\ast
+\end{aligned}
+\tag{7.14}\]</span></span></p>
 <p><br></p>
 </section>
 </section>
@@ -1042,7 +1093,7 @@ R_z(\theta)- E = \begin{bmatrix}  \cos \theta -1&amp; \sin \theta &amp; 0  \\ -\
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_3_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.3 (Tinkham 3.7)</strong></span> (<span class="math inline">\(a\)</span>) <span class="math inline">\(D_3\)</span> 에서 기저중 하나를 <span class="math inline">\(F = x^2zg(r)\)</span> 로 잡고 <span class="math inline">\(D_3\)</span> 의 표현을 구성하라. <span class="math inline">\(z\)</span> 축이 3 fold axis 이고 <span class="math inline">\(g(r)\)</span> 은 radial 적분이 수렴하는 함수이다. 다른 기저함수는 무엇인가?</p>
-<p>(<span class="math inline">\(b\)</span>) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?</p>
+<p>(<span class="math inline">\(b\)</span>) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?jy</p>
 <p>(<span class="math inline">\(c\)</span>) 이 기저함수가 정규직교하지 않다면 이들의 선형결합으로 정규직교기저를 구하라.</p>
 </div>
 </div>
@@ -1061,6 +1112,35 @@ F\Phi_2(\boldsymbol{x}) &amp;= \dfrac{1}{4}(x^2 +2\sqrt{3}xy + 3y^2)zg(r)
 <p>이며 다른 기저함수는 일단 <span class="math inline">\(\Phi_2\rangle (\boldsymbol{x}) = xyzg(r)\)</span> 과 <span class="math inline">\(\Phi_3\rangle(\boldsymbol{x}) = y^2gz(r)\)</span> 로 잡을 수 있다.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(D_3\)</span> 는 2종류의 1차원 기약표현과 1종류의 1차원 기약표현이 존재하므로 여기서 가능한 표현은 1차원 기약표현과 2차원 기약표현으로 이루어진 표현이다.</p>
 <p>(<span class="math inline">\(c\)</span>)</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-tinkham_3_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.4 (Tinkham 3.10)</strong></span> <span class="math inline">\(D_3\)</span> 의 모든 기약표현에 대해 direct product <span class="math inline">\(\Gamma^{(i)}\otimes \Gamma^{(j)} = \sum_k a_{ijk}\Gamma^{(k)}\)</span> 를 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#tbl-Group_D3_character_table" class="quarto-xref">표&nbsp;<span>7.4</span></a>, <a href="#eq-Group_coeefficient_of_character_of_direct_product_representation" class="quarto-xref">식&nbsp;<span>7.14</span></a> 을 참고한다. 또한 <a href="#tbl-Group_D3_character_table" class="quarto-xref">표&nbsp;<span>7.4</span></a> 로부터 <span class="math inline">\(a_{ijk} = a_{jik}\)</span> 임을 안다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+a_{A_1A_1A_1} &amp;= \dfrac{1}{6} (1+2+3)=1, \\
+a_{A_1A_1A_2} &amp;= \dfrac{1}{6}(1+2-3) = 0, \\
+a_{A_1A_1E} &amp;= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_1A_2A_1} &amp;= \dfrac{1}{6}(1+2-3) = 0, \\
+a_{A_1A_2E} &amp;= \dfrac{1}{6}(2-2+0)=0, \\
+a_{A_1EA_1} &amp;= \dfrac{1}{6}(2-2+0)=0, \\
+a_{A_2A_2A_1} &amp;= \dfrac{1}{6}(1+2-3) =0, \\
+a_{A_2A_2A_2} &amp;= \dfrac{1}{6}(1+2+3)=1, \\
+a_{A_2A_2E} &amp;=\dfrac{1}{6}(2-2+0) =0, \\
+a_{A_2EA_1} &amp;= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_2EA_2}&amp;= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_2EE} &amp;= \dfrac{1}{6}(2-2+0)= 0, \\
+a_{EEA_1} &amp;= \dfrac{1}{6}(4+2+0) =1, \\
+a_{EEA_2} &amp;= \dfrac{1}{6}(4+2+0) = 1, \\
+a_{EEE} &amp;= \dfrac{1}{6}(8 -2+0) = 1.
+\end{aligned}
+\]</span></p>
 </div>
 
 
@@ -1496,8 +1576,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="pagination-link" aria-label="군과 양자역학 I- 점군의 기약표현">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 점군의 기약표현</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="pagination-link" aria-label="군과 양자역학 I- 기약표현과 분광학">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

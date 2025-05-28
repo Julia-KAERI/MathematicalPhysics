@@ -283,10 +283,11 @@ $F$ & $\dfrac{1}{2}(-R_x-\sqrt{3}R_y)$ & $\dfrac{1}{2}(\sqrt{3}R_x-R_y)$ & $R_z$
 \hline 
 $x^2+y^2$, $z^2$ &  & $A_1$ & $1$ & $\;\;\,1$ & $\;\;\,1$ \\ 
  & $R_z,\,z$ & $A_2$ & $1$ & $\;\;\,1$ & $-1$ \\[0.3em]
-$\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\left.\begin{array}{l}(x,\, y) \\ (R_x,\,R_y)\end{array}\right\}$ & $E$ & $2$ & $-1$ & $\;\;\,0$  \\[1em]
-\hline -->
+$\left.\begin{array}{l}(xz,\, yz) \\ (x^2-y^2,\, xz)\end{array}\right\}$ & $\left.\begin{array}{l}(x,\, y) \\ (R_x,\,R_y)\end{array}\right\}$ & $E$ & $2$ & $-1$ & $\;\;\,0$ \\
+\hline
+\end{tabular} -->
 
-![$D_3$ Character table](figures/D3_character_table.png){#tbl-Group_D3_coords3 width=350}
+![$D_3$ Character table](figures/D3_character_table.png){#tbl-Group_D3_character_table width=350}
 
 </br>
 
@@ -635,10 +636,10 @@ $$
 
 </br>
 
-[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대한 direct product group $G_a \times G_b$ 가 존재한다고 하자. 그리고 $G_a$ 에 대한 표현 $D^{(a)}$ 과 $G_b$ 에 대한 표현 $D^{(b)}$ 에 대해 $D^{(a\otimes b)}$ 를 $D^{(a)}$ 과 $D^{(b)}$ 의 직곱표현으로 정의하자. 즉, $x\in G_a,\, y\in G_b$ 에 대해
+[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대한 direct product group $G_a \times G_b$ 가 존재한다고 하자. 그리고 $G_a$ 에 대한 표현 $\Gamma^{(a)}$ 과 $G_b$ 에 대한 표현 $\Gamma^{(b)}$ 에 대해 $D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}$ 를 $D^{(\Gamma^{(a)})}$ 와 $D^{(\Gamma^{(b)})}$ 의 직곱표현으로 정의하자. 즉, $x\in G_a,\, y\in G_b$ 에 대해
 
 $$
-D^{(a\otimes b)} (xy):= D^{(a)}(x)\otimes D^{(b)}(y)
+D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})} (xy):= D^{(\Gamma^{(a)})}(x)\otimes D^{(\Gamma^{(b)})}(y)
 $$ {#eq-Group_representation_of_direct_product_group}
 
 로 정의한다.
@@ -659,9 +660,9 @@ $$ {#eq-Group_representation_of_direct_product_group}
 
 $$
 \begin{aligned}
-D^{(a \otimes b)}(xp)D^{(a\otimes b)}(yq)  &= [D^{(a)}(x)\otimes D^{(b)}(p)][D^{(a)}(y)\otimes D^{(b)}(q)] \\[0.3em]
-&=D^{(a)}(xy)\otimes D^{(b)}(pq) \\[0.3em]
-&=D^{(a \otimes b)}(xypq) =D^{(a \otimes b)}(xpyq) \qquad \qquad \square
+D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xp)D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(yq)  &= \left[D^{(\Gamma^{(a)})}(x)\otimes D^{(\Gamma^{(b)})}(p)\right] \left[D^{(\Gamma_a)}(y)\otimes D^{(\Gamma_b)}(q)\right] \\[0.3em]
+&=D^{(\Gamma^{(a)})}(xy)\otimes D^{(\Gamma^{(b)})}(pq) \\[0.3em]
+&=D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xypq) =D^{(\Gamma^{(a)} \otimes \Gamma^{(b)})}(xpyq) \qquad \qquad \square
 \end{aligned}
 $$
 
@@ -757,7 +758,7 @@ Direct product group $G_a \otimes G_b$ 의 표현 $\Gamma^{(a)}\otimes \Gamma^{(
 
 $$
 \chi^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}(xy) = \chi^{(\Gamma^{(a)})}(x) \chi^{(\Gamma^{(b)})}(y).
-$$
+$$ {#eq-Group_character_of_direct_product_group}
 
 :::
 
@@ -803,8 +804,83 @@ $\Gamma^{(3-)}$ & $2$ & $\,0$ & $-1$ & $-2$ & $0$ & $1$ \\
 ![](figures/character_table_D3_direct_product_group.png){width=400}
 
 </center>
+
 :::
+
 </div></br>
+
+### 군 내의 직곱 표현 {#sec-Group_direct_product_representation_in_a_group}
+
+Direct-product group 과 관련된 것으로 군 내의 두 표현을 결합하여 새로운 표현을 만들어 내는 직곱 표현(direct product represntation) 이 있다. 
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_direct_product_representation}
+군 $G$ 에 대한 두 표현 $\Gamma_1,\,\Gamma_2$ 의 기저 $\{|\Gamma_1\, i\rangle : i=1,\ldots,\,d_1\}$ 와 $\{\Gamma_2\, j\rangle : j=1,\ldots,\,d_2\}$ 을 생각하자. 그렇다면 $\{|\Gamma_1\, i,\,\Gamma_2\,j\rangle := |\Gamma_1\,i\rangle |\Gamma_2\,j\rangle : i=1,\ldots,\,d_1,\, j=1,\ldots,\,d_2\rangle\}$ 는 $\Gamma_1 \otimes \Gamma_2$ 표현에 대한 기저이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+임의의 $R\in G$ 에 대해
+
+$$
+\begin{aligned}
+\hat{R}|\Gamma_1\,i,\Gamma_2\,j\rangle &= \left(\hat{R}|\Gamma_1\,i\rangle \right)  \left(\hat{R}|\Gamma_2\,j\rangle \right) = \left(\sum_{m=1}^{d_1} D^{(\Gamma_1)}_{mi}(R)|\Gamma_1,m\rangle\right)\left(\sum_{n=1}^{d_2} D^{(\Gamma_2)}_{nj}(R)|\Gamma_2,n\rangle\right) \\[0.3em]
+&= \sum_{m,\,n} D^{(\Gamma_1)}_{mi}(R)D^{(\Gamma_2)}_{nj}(R)|\Gamma_1\,m,\,\Gamma_2\,n\rangle \\[0.3em]
+&= \sum_{m,\,n} D^{(\Gamma_1 \otimes \Gamma_2)}_{mi, nj}(R)|\Gamma_1\,m,\,\Gamma_2\,n\rangle \\[0.3em]
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+이로부터 다음 명제를 쉽게 얻을 수 있다.
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_character_of_direct_product_representation}
+
+@prp-Group_direct_product_representation 에서 다음이 성립한다.
+
+$$
+\chi^{(\Gamma_1 \otimes \Gamma_2)}(R) = \chi^{(\Gamma_1)}(R) \chi^{(\Gamma_2)}(R).
+$$ {#eq-Group_character_of_direct_product_representation}
+
+
+:::
+
+</div></br>
+
+일반적으로 한 군 내의 직곱표현은 기약표현이 아니다. 물론 1차원 표현을 포함하는 두 기약표현의 직곱표현은 기약표현이다. 그렇다면 이것을 아래와 같이 표현 할 수 있다.
+
+$$
+\Gamma^{(i)} \otimes \Gamma^{(j)} = \sum_k a_{ijk}\Gamma^{(k)}
+$$ {#eq-Group_direct_product_of_representatin_is_a_linear_combination}
+
+이 때 $a_{ijk}$ 는 $\Gamma^{(i)}\otimes \Gamma^{(j)}$ 에서 기약표현 $\Gamma^{(k)}$ 가 등장하는 횟수이다. @eq-Group_character_of_direct_product_representation 로부터
+
+$$
+\chi^{(\Gamma^{(i)}\otimes \Gamma^{(j)})} (R)= \chi^{(\Gamma^{(i)})} (R) \chi^{(\Gamma^{(j)})}(R) = \sum_k a_{ijk}\chi^{(\Gamma^{(k)})}(R)
+$$
+
+이며 @thm-Group_first_orthogonality_of_character 로부터 $G$ 의 클래스의 집합 $\mathcal{K}_G$ 에 대해 다음이 성립한다는 것을 안다.
+
+$$
+\begin{aligned}
+a_{ijk} &= \dfrac{1}{|G|}\sum_{R\in G} \chi^{(\Gamma^{(i)})}(R) \chi^{(\Gamma^{(j)})}(R)\left(\chi^{(\Gamma^{(k)})}(R)\right)^\ast  \\[0.3em]
+&= \dfrac{1}{|G|} \sum_{K\in \mathcal{K}_G} |K| \chi^{(\Gamma^{(i)})}(K) \chi^{(\Gamma^{(j)})}(K)\left(\chi^{(\Gamma^{(k)})}(K)\right)^\ast 
+\end{aligned}
+$${#eq-Group_coeefficient_of_character_of_direct_product_representation}
+
+
+
+</br>
 
 ## 연습문제 {.unnumbered}
 
@@ -913,7 +989,7 @@ $$
 
 ($a$) $D_3$ 에서 기저중 하나를 $F = x^2zg(r)$ 로 잡고 $D_3$ 의 표현을 구성하라. $z$ 축이 3 fold axis 이고 $g(r)$ 은 radial 적분이 수렴하는 함수이다. 다른 기저함수는 무엇인가?
 
-($b$) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?
+($b$) 이 표현이 기약표현이 아니라면 어떤 기약표현을 포함하고 있나?jy
 
 ($c$) 이 기저함수가 정규직교하지 않다면 이들의 선형결합으로 정규직교기저를 구하라. 
 :::
@@ -941,5 +1017,45 @@ $$
 ($b$) $D_3$ 는 2종류의 1차원 기약표현과 1종류의 1차원 기약표현이 존재하므로 여기서 가능한 표현은 1차원 기약표현과 2차원 기약표현으로 이루어진 표현이다.
 
 ($c$)
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-tinkham_3_10}
+
+#### Tinkham 3.10
+
+$D_3$ 의 모든 기약표현에 대해 direct product $\Gamma^{(i)}\otimes \Gamma^{(j)} = \sum_k a_{ijk}\Gamma^{(k)}$ 를 구하라. 
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+@tbl-Group_D3_character_table, @eq-Group_coeefficient_of_character_of_direct_product_representation 을 참고한다. 또한 @tbl-Group_D3_character_table 로부터 $a_{ijk} = a_{jik}$ 임을 안다.
+
+$$
+\begin{aligned}
+a_{A_1A_1A_1} &= \dfrac{1}{6} (1+2+3)=1, \\
+a_{A_1A_1A_2} &= \dfrac{1}{6}(1+2-3) = 0, \\
+a_{A_1A_1E} &= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_1A_2A_1} &= \dfrac{1}{6}(1+2-3) = 0, \\
+a_{A_1A_2E} &= \dfrac{1}{6}(2-2+0)=0, \\
+a_{A_1EA_1} &= \dfrac{1}{6}(2-2+0)=0, \\
+a_{A_2A_2A_1} &= \dfrac{1}{6}(1+2-3) =0, \\
+a_{A_2A_2A_2} &= \dfrac{1}{6}(1+2+3)=1, \\
+a_{A_2A_2E} &=\dfrac{1}{6}(2-2+0) =0, \\
+a_{A_2EA_1} &= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_2EA_2}&= \dfrac{1}{6}(2-2+0) = 0, \\
+a_{A_2EE} &= \dfrac{1}{6}(2-2+0)= 0, \\
+a_{EEA_1} &= \dfrac{1}{6}(4+2+0) =1, \\
+a_{EEA_2} &= \dfrac{1}{6}(4+2+0) = 1, \\
+a_{EEE} &= \dfrac{1}{6}(8 -2+0) = 1.
+\end{aligned}
+$$
+
 
 :::

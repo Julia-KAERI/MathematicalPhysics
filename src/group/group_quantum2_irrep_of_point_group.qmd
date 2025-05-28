@@ -1,5 +1,5 @@
 ---
-title: "군과 양자역학 I- 점군의 기약표현"
+title: "군과 양자역학 I- 기약표현과 분광학"
 number-sections: true
 number-depth: 3
 crossref:
@@ -11,5 +11,134 @@ crossref:
 
 </br>
 
-## 대칭과 물리
+## 격자 대칭군의 기약표현
 
+### 점군의 기약표현과 표준적인 character table {#sec-Group_standard_character_table}
+
+
+![$D_3$ Character table](figures/D3_character_table.png){#tbl-Group_D3_character_table width=350}
+
+$D_3$ 에 대한 표현을 다시 보고 표준적인 character table 작성법을 다시 정리해보자.
+
+- 1차원 기약표현의 레이블은 $A,\,B$ 를 사용한다. 주축 회전에 대한 character 가 $+1$ 일 경우는 $A$, $-1$ 일 경우는 $B$ 를 사용한다. 2차원 기약표현의 레이블은 $E$, 3차원 기약표현의 레이블은 $T$ 를 사용한다. $A$ 타입 기약표현이 여러개 있을 경우 $A_1$ 은 trivial representation 이다. 단 하나 있을 경우는 $A$ 가 trivial representation 이다.
+- 동일한 차원의 기약표현이 여러개일 경우 $1,\,2$ 와 같은 아래첨자 인덱스가 붙는다. 혹은 ${}',\, {}''$ 와 같은 기호로 구분하기도 한다. 반전대칭이 존재할경우 대칭의 even/odd 에 따라 $g,\,u$ 아래첨자가 붙는다. (*gerade*, *ungreade*)
+- 다른 열에는 각 기약표현이 어떻게 변환하는지를 보이기 위해 좌표, 좌표의 2차식, $R_x,\,R_y,\,R_z$ 와 좌표축에 대한 회전을 넣는다. [Character Table 과 기저 함수 - $D_3$ 의 경우](group_quantum1_schroedinger_equation_group.qmd#sec-Group_character_table_and_basis_function_D3_case) 를 참고하라.
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_character_table_of_C2v}
+#### $C_{2v}$ Character table
+
+$C_{2v}$ 는 4개의 원소로 구성된 군이며 $\sigma_v,\, \sigma'_{v}$ 는 각각 $xz$, $yz$ 평면에 대한 거울상 반사이다. 각각이 아벨군이므로 1차원 기약표현만이 존재한다. 주축을 $z$ 축으로 삼으며 character 에 대한 직교정리를 사용하여 정리하면 아래 표와 같다. 여기서는 앞의 규칙 대로 $A$ 형 기약표현 2개와 $B$ 형 기약표현 2개만 존재하며 각각 아래와 같이 레이블울 붙였다. 아직 좌표에 대한 대칭은 정해지지 않았다.
+
+![$C_{2v}$ Character table](figures/C2v_character_table.png){#tbl-Group_C2v_character_table width=300}
+
+ 좌표에 대한 변환은 다음과 같다.
+
+$$
+\hat{E}\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} x \\ y \\ z\end{bmatrix}, \quad \hat{C}_2\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} -x \\ -y \\ z\end{bmatrix},\quad \hat{\sigma}_v\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} x \\ -y \\ z\end{bmatrix}, \quad \hat{\sigma}'_v\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} -x \\ y \\ z\end{bmatrix}
+$$
+
+- $x$ 는 $B_1$, $y$ 는 $B_2$, $z$ 는 $A_1$ 과 같은 형태로 변환한다는 것을 안다. 따라서 $xy$ 는 $A_2$, $xz$ 는 $B_1$, $yz$ 는 $B_2$ 와 같이 변환한다.
+- $x^2,\,y^2,\,z^2$ 은 모두 $A_1$ 과 같이 변환한다. 
+- $R_z = xp_y-yp_x$ 는 $A_2$ 와 같이 변화한다. $R_x,\,R_y$ 에 대해서도 각각 $B_2,\,B_1$ 과 같이 변환된다는 것을 확인 할 수 있다.
+
+:::
+
+</div>
+
+</br>
+
+### 3차원 회전군의 기약표현 {#sec-Group_representation_of_3d_rotation_group}
+
+자유 원자는 완전한 회전 대칭성을 가지며, 해밀토니안과 교환 가능한 대칭 연산의 수는 무한하다. 즉, 임의의 축에 대한 모든 각도로의 회전은 전체 회전 군의 대칭 연산이다. 여기서는 무한하거나 연속적인 군에 대해 자세히 논의하지는 않을 것이지만, 양자역학에서 자주 사용하는 결과들을 엄밀한 증명 없이 받아들일 것이다. 
+
+
+- 정해진 각 $\alpha$ 만큼 회전시키는 모든 연산은 같은 클래스에 속한다. 
+
+
+여기서 사용할 구면조화 함수 $Y_l^m( \theta,\, \varphi)$ 는 르장드르 연관 함수(associated Legendre function) $P_l^m$ 과 음이 아닌 정수 $l$ 그리고 $|m|\le l$ 인 정수 $m$ 에 대해 아래와 같이 정의된다. (자세한 것은 @arfken2013mathematical 을 참고하라.)
+
+$$
+Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}.
+$$ {#eq-Group_definition_of_spherical_harmomics}
+
+즉 정해진 $l$ 값에 대해 $m$ 값은 $2l+1$ 가지가 될 수 있다. 
+
+
+- 여기서 $\theta,\, \varphi$ 를 정하는 기준이 되는 축(이를 polar axis 라고 하며 보통 $z$ 축으로 정한다.) 을 회전연산 $R$ 을 통해 바꾸어 $\theta',\, \varphi'$ 이 되었다고 하자. 이 때 다음이 성랍한다는 것이 알려져 있다.
+
+$$
+\hat{R}Y_l^m (\theta',\, \varphi') = \sum_{m'} D^{(l)} (R)_{m'm} Y_{l}^m (\theta,\, \varphi).
+$$ {#eq-Group_addition_theorem_for_spherical_harmonics}
+
+이 때 $D^{l}(R)$ 은 회전 연산 $R$ 에 대한 $l$ 차원 표현이다. 즉 $2l+1$ 개의 함수 $\{Y_l^m\}$ 은 3차원 회전군의 $2l+1$ 차원 표현의 기저가 된다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_character_of_rotation_group_in_3d}
+
+#### 3차원 회전변환의 character
+$z$ 축으로 $-\alpha$ 만큼의 회전 변환을 $R_\alpha$ 라고 하자. 그렇다면
+
+$$
+\hat{R}_\alpha Y_l^m(\theta,\, \varphi) = Y_l^m(\theta,\, \varphi - \alpha) = e^{-im\alpha} Y_{l}^m (\theta,\, \varphi)
+$$
+
+이며 이에대한 표현은 대각행렬로
+
+$$
+D^{(l)}(R_\alpha) = \begin{bmatrix} e^{-il\alpha} & 0 & \cdots & 0 \\ 0 & e^{-(l-1)\alpha} & \cdots & 0 \\ \vdots & \ddots & \cdots & \cdots \\ 0 & 0 & \cdots & e^{il\alpha}\end{bmatrix}
+$$ {#eq-Group_representation_of_rotation_group_in_3d}
+
+이며, character 는
+
+$$
+\chi^{(l)}(R_\alpha) = e^{-il\alpha}(1+e^{i\alpha} + \cdots + e^{2il\alpha}) = \dfrac{\sin (l+\frac{1}{2})\alpha}{\sin (\alpha/2)}
+$$ {#eq-Group_character_of_3d_rotation_by_alpha}
+
+이다. 앞서 언급했듯이 임의의 각 $\alpha$ 만큼의 모든 회전은 같은 클래스에 속하기 때문에 이 클래스의 character 는 @eq-Group_character_of_3d_rotation_by_alpha 와 같다.
+
+:::
+</div></br>
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_character_table_of_D3}
+
+#### inversion 의 character
+
+이제 반전 $i$ 에 대한 charcter 를 알아보자. 구면조화함수의 성질에 의해
+
+$$
+\hat{i}Y_l^m(\theta,\, \varphi) = Y_l^m(\pi -\theta,\, \varphi+\pi) = (-1)^l Y_l^m(\theta,\, \varphi)
+$$
+
+이다. 따라서, $D^{l}(i)$ 도 대각행렬이며
+
+$$
+\chi^{(l)}(i) = \sum_{m=-l}^l (-1)^l = (-1)^l(2l+1)
+$$ {#eq-Group_character_of_3d_inversion}
+
+이다. 
+
+::: 
+
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_uniqueness_of_irreducible_representation_of_3d_rotation_group}
+
+3차원에서의 회전군에 대해 @eq-Group_representation_of_rotation_group_in_3d 의 
+
+
+
+
+:::
+
+</div>
