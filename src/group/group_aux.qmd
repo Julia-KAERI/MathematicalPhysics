@@ -302,23 +302,3 @@ $$
 
 </br>
 
-위의 정리를 이용하여 아벨군에 대해 다음을 보일 수 있다.
-
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#cor-GroupAux_representation_of_abelian}
-
-아벨리안 유한군 $G$ 에 대해 가능한 기약 표현은 $1$ 차원 뿐이다.
-
-:::
-
-</div> </br>
-
-::: {.proof}
-
-$G$ 가 아벨리안이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 conjugace class 이다. $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
-
-:::
-
-</br>

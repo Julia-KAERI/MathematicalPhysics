@@ -599,7 +599,7 @@ $$
 U(\varphi) = \begin{bmatrix} \cos \varphi & \sin \varphi \\ - \sin \varphi & \cos \varphi \end{bmatrix}
 $$
 
-로 표현 할 수 있다. 이 군은 아벨군이므로 @cor-GroupAux_representation_of_abelian 에 따라 위의 표현은 reducible 하다. 유니터리 행렬 $V$ 
+로 표현 할 수 있다. 이 군은 아벨군이므로 @cor-Group_irrep_of_abelian_is_1d 에 따라 위의 표현은 reducible 하다. 유니터리 행렬 $V$ 
 
 $$
 V= \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 & -i \\ 1 & i\end{bmatrix}
@@ -1229,6 +1229,29 @@ $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 :::
 
 </div></br>
+
+위의 정리를 이용하여 아벨군에 대해 다음을 보일 수 있다.
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-Group_irrep_of_abelian_is_1d}
+
+아벨리안 유한군 $G$ 에 대해 가능한 기약 표현은 $1$ 차원 뿐이다.
+
+:::
+
+</div> </br>
+
+::: {.proof}
+
+$G$ 가 아벨리안이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 conjugace class 이다. $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
+
+:::
+
+</br>
+
 
 이제 @thm-Group_number_of_irreducible_representation_and_classes 를 이용하여 character 에 대한 제 2 직교 정리를 증명한다.
 
