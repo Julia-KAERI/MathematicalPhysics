@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; 군과 양자역학 I- 기약표현과 분광학 – 수리물리학</title>
+<title>8&nbsp; 군과 양자역학 II- 결정장 이론과 기약표현 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-80f14e4a860245008e4f904c7c86406d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum2_irrep_of_point_group.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum2_irrep_of_point_group.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -244,7 +244,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -330,9 +330,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum2_irrep_of_point_group.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_quantum2_irrep_of_point_group.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 기약표현과 분광학</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></h1>
 </div>
 
 
@@ -360,6 +360,8 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
+<p><br></p>
+<p>여기서는 원자가 결정 퍼텐셜 안에 놓였을 때 원자 에너지 준위가 갈라지는 현상, 즉 결정장 갈라짐(cryatal-field splitting) 에 대해 알아본다. 결정장 갈라짐은 군 이론의 비교적 간단한 응용일 뿐만 아니라 군 이론을 고체물리학에 적용할 때 자주 사용되는 고대칭에서 저대칭으로의 전이 과정을 잘 보여주는 좋은 사례이다. 이 장에서는 또한 3차원 회전군의 기약표현에 대해서도 결정장 이론과 함께 다룬다.</p>
 <p><br></p>
 <section id="격자-대칭군의-기약표현" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="격자-대칭군의-기약표현"><span class="header-section-number">8.1</span> 격자 대칭군의 기약표현</h2>
@@ -421,7 +423,7 @@ window.Quarto = {
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><em>Accept without proof</em></p>
 </div>
-<p>따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic function) <span class="math inline">\(Y_l^m( \theta,\, \varphi)\)</span> 는 르장드르 연관 함수(associated Legendre function) <span class="math inline">\(P_l^m\)</span> 과 음이 아닌 정수 <span class="math inline">\(l\)</span> 그리고 <span class="math inline">\(|m|\le l\)</span> 인 정수 <span class="math inline">\(m\)</span> 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 <span class="citation" data-cites="arfken2013mathematical">Arfken et al. (<a href="../vector calculus/vectorcalculus.html#ref-arfken2013mathematical" role="doc-biblioref">2013</a>)</span> 을 참고하라.)</p>
+<p>따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic functions) <span class="math inline">\(Y_l^m( \theta,\, \varphi)\)</span> 는 르장드르 연관 함수(associated Legendre function) <span class="math inline">\(P_l^m\)</span> 과 음이 아닌 정수 <span class="math inline">\(l\)</span> 그리고 <span class="math inline">\(|m|\le l\)</span> 인 정수 <span class="math inline">\(m\)</span> 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 <span class="citation" data-cites="arfken2013mathematical">Arfken et al. (<a href="../vector calculus/vectorcalculus.html#ref-arfken2013mathematical" role="doc-biblioref">2013</a>)</span> 을 참고하라.)</p>
 <p><span id="eq-Group_definition_of_spherical_harmomics"><span class="math display">\[
 Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}.
 \tag{8.1}\]</span></span></p>
@@ -429,14 +431,16 @@ Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} 
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\displaystyle \hat{L}^2 Y_{l}^m (\theta,\, \varphi) = l(l+1)\hbar^2 Y_l^m (\theta,\, \varphi)\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle \hat{L}_z Y_l^m = m\hbar Y_l^m\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\displaystyle \int Y_l^m (Y_{l'}^{m'})^\ast \, d\Omega = \delta_{ll'}\delta_{mm'}\)</span>.</p>
+<p><br></p>
+<p>구면조화함수와 3차원 회전군에 대해 아래 명제도 증명 없이 사용하기로 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_spherical_harmonics_are_basis_of_3d_rotation_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 8.2</strong></span> 구면조화함수에서 <span class="math inline">\(\theta,\, \varphi\)</span> 를 정하는 기준이 되는 축(이를 polar axis 라고 하며 보통 <span class="math inline">\(z\)</span> 축으로 정한다.) 을 회전연산 <span class="math inline">\(R\)</span> 을 통해 바꾸어 <span class="math inline">\(\theta',\, \varphi'\)</span> 이 되었다고 하자. 이 때 다음이 성랍한다는 것이 알려져 있다.</p>
-<p><span id="eq-Group_addition_theorem_for_spherical_harmonics"><span class="math display">\[
+<p><span class="theorem-title"><strong>명제 8.2</strong></span> 구면조화함수에서 <span class="math inline">\(\theta,\, \varphi\)</span> 를 정하는 기준이 되는 축(이를 polar axis 라고 하며 보통 <span class="math inline">\(z\)</span> 축으로 정한다.) 을 회전연산 <span class="math inline">\(R\)</span> 을 통해 바꾸어 <span class="math inline">\(\theta',\, \varphi'\)</span> 이 되었다고 하자. 이 때 다음이 성랍한다.</p>
+<p><span id="eq-Group_represestation_of_3d_rotation_by_spherical_harmonic_functions"><span class="math display">\[
 \hat{R}Y_l^m (\theta',\, \varphi') = \sum_{m'} D^{(l)} (R)_{m'm} Y_{l}^m (\theta,\, \varphi).
 \tag{8.2}\]</span></span></p>
-<p>이 때 <span class="math inline">\(D^{l}(R)\)</span> 은 회전 연산 <span class="math inline">\(R\)</span> 에 대한 <span class="math inline">\(l\)</span> 차원 표현이다. 즉 <span class="math inline">\(2l+1\)</span> 개의 함수 <span class="math inline">\(\{Y_l^m\}\)</span> 은 3차원 회전군의 <span class="math inline">\(2l+1\)</span> 차원 표현의 기저가 된다.</p>
+<p>여기서 <span class="math inline">\(D^{(l)}(R)\)</span> 은 회전 연산 <span class="math inline">\(R\)</span> 에 대한 <span class="math inline">\((2l+1)\)</span> 차원 기약표현이다. 즉 <span class="math inline">\(2l+1\)</span> 개의 함수 <span class="math inline">\(\{Y_l^m\}\)</span> 은 3차원 회전군의 <span class="math inline">\(2l+1\)</span> 차원 표현의 기저가 된다.</p>
 </div>
 </div>
 <p><br></p>
@@ -476,21 +480,24 @@ D^{(l)}(R_\alpha) = \begin{bmatrix} e^{-il\alpha} &amp; 0 &amp; \cdots &amp; 0 \
 </div>
 </div>
 <p><br></p>
+<p>아래의 정리 역시 증명 없이 받으들이기로 하자.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_uniqueness_of_irreducible_representation_of_3d_rotation_group" class="theorem">
-<p><span class="theorem-title"><strong>정리 8.1</strong></span> 3차원에서의 회전군에 대해 <a href="#eq-Group_representation_of_rotation_group_in_3d" class="quarto-xref">식&nbsp;<span>8.3</span></a> 의</p>
+<p><span class="theorem-title"><strong>정리 8.1</strong></span> 3차원에서의 회전군에 대해 <a href="#eq-Group_represestation_of_3d_rotation_by_spherical_harmonic_functions" class="quarto-xref">식&nbsp;<span>8.2</span></a> 에 주어진 기약표현 이외의 홀수 차원의 기약표현은 존재하지 않는다.</p>
 </div>
 </div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>이외의 <span class="math inline">\(2l+1\)</span> 차원 기약표현이 존재한다고 하자.</p>
-<p><em>to be done</em></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><em>Accept without proof</em></p>
 </div>
+<p><br></p>
+<p>3차원 회전에 대한 홀수차원 기약표현은 구면조화함수를 기저로 하는 그것이다. 만약 각운동량이 반정수(음이 아닌 정수 <span class="math inline">\(s\)</span> 에 대해 <span class="math inline">\((2s+1)/2\)</span>) 라면 짝수차원의 기약표현이 존재한다. 여기에 대해서는 다음에 다루기로 하자.</p>
 <p><br></p>
 </section>
 </section>
 <section id="원자-에너지의-결정장-갈라짐" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="원자-에너지의-결정장-갈라짐"><span class="header-section-number">8.2</span> 원자 에너지의 결정장 갈라짐</h2>
-<p>결정 내의 원자나 이온은 자유 상태일 때와는 다르게 등방적이지 않은 포텐셜의 영향을 받게 된다. 자유상태의 입자나 이온은 모든 3차원 회전군과 반전에 대해 대칭이지만 이 비등방 포텐셜의 영향으로 원래 군에 대한 유한 부분군에 대해서만 대칭이다. 이 때 3차원 회전군에서는 기약표현이었던 것이 이 유한 부분군의 표현에서는 이 기약성(irreducibility) 가 깨져버리며, 따라서 degeneracy 가 축소된다. 즉 에너지 레벨이 갈라지게 되며 이것을 <strong>결정장 갈라짐(Crystall field splitting)</strong> 이라고 한다. 순전히 결정장에 의한 에너지 갈라짐을 <strong>zero-field splitting</strong> 이라고 하며 외부 자기장 등을 가했을 때는 대칭이 더 깨지게 된다.</p>
+<p>결정 내의 원자나 이온은 자유 상태일 때와는 다르게 등방적이지 않은 포텐셜의 영향을 받게 된다. 자유상태의 입자나 이온은 모든 3차원 회전군과 반전에 대해 대칭이지만 이 비등방 포텐셜의 영향으로 원래 군에 대한 유한 부분군에 대해서만 대칭이다. 이 때 3차원 회전군에서는 기약표현이었던 것이 이 유한 부분군의 표현에서는 이 기약성(irreducibility) 가 깨져버리며, 따라서 degeneracy 가 축소된다. 즉 에너지 레벨이 갈라지게 되며 이것을 <strong>결정장 갈라짐(Crystall field splitting)</strong> 이라고 한다. 순전히 결정장에 의한 에너지 갈라짐을 <strong>zero-field splitting</strong> 이라고 하며 외부 자기장 등을 가했을 때는 대칭이 더 깨지게 된다. 결정장 갈라짐의 크기는 관련된 이온과 결정장의 특성에 따라 <span class="math inline">\(1\, \mu\text{eV}\)</span> 에서 <span class="math inline">\(6\, \text{eV}\)</span></p>
 <div id="fig-Group_regular_octahedron_in_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_regular_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -505,7 +512,16 @@ D^{(l)}(R_\alpha) = \begin{bmatrix} e^{-il\alpha} &amp; 0 &amp; \cdots &amp; 0 \
 <p><span id="eq-Group_potential_around_origin_by_octahedron_nearest_neighbor"><span class="math display">\[
 V_C(\boldsymbol{r})=\dfrac{35}{16 \pi \epsilon_0}\dfrac{q}{a^5}\left(x^4+y^4+z^4-\dfrac{3}{5}r^4\right).
 \tag{8.6}\]</span></span></p>
-<p>위 식은 <span class="math inline">\(O\)</span> 의 모든 대칭 연산에 대해 불변이며 <strong>cubic-field term</strong> 이라고 불린다. 우리는 원점 <span class="math inline">\(\mathcal{O}\)</span> 근처의 전기장에 관심이 있고, 전기 포텐셜은 이 영역 바깥의 전하에 대한 포텐셜이므로 라플라스 방정식을 만족해야 한다. 3차원 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi (\boldsymbol{r})\)</span> 의 해는 <span class="math inline">\(r^l Y_l^m (\theta,\, \varphi)\)</span> 의 선형결합이라는 것이 알려져 있다.</p>
+<p>위 식은 <span class="math inline">\(O\)</span> 의 모든 대칭 연산에 대해 불변이며 <strong>cubic-field term</strong> 이라고 불린다. 우리는 원점 <span class="math inline">\(\mathcal{O}\)</span> 근처의 전기장에 관심이 있고, 전기 포텐셜은 이 영역 바깥의 전하에 대한 포텐셜이므로 라플라스 방정식을 만족해야 한다. 3차원 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi (\boldsymbol{r})\)</span> 의 해는 <span class="math inline">\(r^l Y_l^m (\theta,\, \varphi)\)</span> 의 선형결합이라는 것이 알려져 있다. 예를 들어 <span class="math inline">\(z\)</span> 축에 대한 회전 대칭이 존재한다면 전기 포텐셜 <span class="math inline">\(V_a\)</span> 의 상수항을 제외한 가장 낮은 차수의 항은</p>
+<p><span class="math display">\[
+V_a \sim r^2 Y_2^0 (\theta) \sim 3z^2 - r^2
+\]</span></p>
+<p>이다. 사방정계(orthorhombic) 대칭만을 가지고 있다면 전기포텐셜 <span class="math inline">\(V_r\)</span> 의 가장 낮은 차수의 항은</p>
+<p><span class="math display">\[
+V_r \sim (ax^2+by^2) - (a+b)z^2
+\]</span></p>
+<p>이다(<a href="#exr-tinkham_4_2" class="quarto-xref">연습문제&nbsp;<span>8.2</span></a>). 이 때 <span class="math inline">\(V_r\)</span> 은 <span class="math inline">\(Y_2^0\)</span> 와 <span class="math inline">\((Y_2^2 + Y_2^{-2}) \sim (x^2-y^2)\)</span> 의 선형결합으로 둘 다 <span class="math inline">\(D_2\)</span> 대칭에 대해 불변이다.</p>
+<p>위의 방법으로 결정장의 크기를 추정하는 것은 실제 값에 대한 대략적인 추정이지만 엄밀한 것과는 거리가 멀다. 실제로는 전자 파동함수의 겹침, 구형이 아닌 전하 분포, 그리고 exchange 상호작용에 의한 효과로 인해 꽤 차이가 난다. 물론 위의 효과들은 대칭에 영향을 주지 않는다.</p>
 <p><br></p>
 </section>
 <section id="연습문제" class="level2 unnumbered">
@@ -541,7 +557,7 @@ V_C(\boldsymbol{r}) = \dfrac{q}{4\pi\epsilon_0 a}\left[6 + \dfrac{35}{4a^4}\left
 </div>
 <br><br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-Tinkham_4_2" class="theorem exercise">
+<div id="exr-tinkham_4_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 8.2 (Tinkham 4.2)</strong></span> (<span class="math inline">\(a\)</span>) Orthorhombic 격자는 <span class="math inline">\(a\ne b \ne c,\, \alpha =\beta= \gamma = \pi/2\)</span> 이다(<a href="group_symmetry_group.html#tbl-Group_crystall_system" class="quarto-xref">표&nbsp;<span>6.5</span></a>). Orthorhombic 에서의 8면체 에 대한 전기 포텐셜 <span class="math inline">\(V_O\)</span> 를 4차항 까지 구하라.</p>
 <p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 의 결과는 상수항, 2개의 homogeneous 한 2차 다항식 항, 3개의 homogeneous 한 4차 다항식항으로 이루어졌으며 각각이 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi= 0\)</span> 을 만족함을 보이고, <span class="math inline">\(D_{2h}\)</span> 군의 대칭 연산에 대해 불변임을 보여라. 각각의 계수를 <span class="math inline">\(a,\,b,\,c\)</span> 로 표현하여라.</p>
 <p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(a=b\ne c\)</span> 인 경우(tetragonal field) 와 <span class="math inline">\(a=b=c\)</span> 인 경우(cubic field) 에 대해서도 고려하라.</p>
