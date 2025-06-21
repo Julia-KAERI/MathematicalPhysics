@@ -978,39 +978,39 @@ $\bf{r}=(la,\,ma,\,na)$ 에 동일한 원자가 위치한 정육면체 결정을
 2차원 평면에서 관찰자를 $\theta$ 만큼 반시계 방향으로 회전시킬 때 관찰자를 원점으로 두는 좌표계에서의 좌표 $P$ 의 변화는 다음 행렬로 기술 할 수 있다.
 
 $$
-\bf{R}(\theta) = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix}.
+R(\theta) = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix}.
 $$ {#eq-Group_2d_rotation_matrix}
 
-즉 $\bf{r} = \begin{bmatrix} x \\ y \end{bmatrix}$, $\bf{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}$ 에 대해 $\bf{r}'=\bf{R}(\theta)\bf{r}$ 이다.
+즉 $\bf{r} = \begin{bmatrix} x \\ y \end{bmatrix}$, $\bf{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}$ 에 대해 $\bf{r}'=R(\theta)\bf{r}$ 이다.
 
-이 회전을 기술하는 행렬은 $SO(2)$ 를 이루며 $\bf{R}\in SO(2)$ 이면 $\bf{R}^T\bf{R}=\bf{RR}^T=\bf{I}$ 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 $O(2)$ 에는 속하지만 행렬식이 $-1$ 이며, 따라서 $SO(2)$ 에는 속하지 않는다.
+이 회전을 기술하는 행렬은 $SO(2)$ 를 이루며 $R\in SO(2)$ 이면 $R^T R=RR^T=I$ 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 $O(2)$ 에는 속하지만 행렬식이 $-1$ 이며, 따라서 $SO(2)$ 에는 속하지 않는다.
 
 </br>
 
-### 무한소 회전
+### 무한소 회전 {#sec-Group_infinitesimal_rotation}
 
-$|\theta| \ll 1$ 일 때 회전 행렬 $\bf{R}(\theta)$ 는 다음과 같이 근사된다.
-
-$$
-\bf{R}(\theta) \approx \bf{I} + \theta \bf{A}
-$$
-
-여기서 $\bf{I}$ 는 항등행렬이며 $\bf{A}$ 가 무한소 회전에 의한 변화를 기술하는 행렬이 된다. 위 식에서 $\theta$ 에 대한 2차항 이상의 항은 무시한다. $\bf{R}$ 은 $SO(2)$ 연산자이므로 $\bf{R}^T\bf{R}=\bf{I}$ 이어야 한다. $\bf{R}=\bf{I}+\theta \bf{A}$ 에 대해 $\bf{R}^T = \bf{I}+\theta \bf{A}^T$ 이며, $\theta^2$ 이상을 무시하면
+$|\theta| \ll 1$ 일 때 회전 행렬 $R(\theta)$ 는 다음과 같이 근사된다.
 
 $$
-\bf{R}^T\bf{R} \approx \bf{I}+\theta(\bf{A}^T+\bf{A})+\theta^2\bf{A}^T\bf{A} \approx \bf{I}+\theta(\bf{A}^T+\bf{A})
+R(\theta) \approx I +  A
 $$
 
-이다. $\bf{R}^T\bf{R}=I$ 조건에 의해 $\bf{A}^T=-\bf{A}$ 이어야 하는데 (이런 형태의 행렬을 **skew-symmetric** 이라고 한다) $\R^{2\times 2}$ 에는 이것을 만족하는 행렬은 
+여기서 $I$ 는 항등행렬이며 $A$ 가 무한소 회전에 의한 변화를 기술하는 행렬이 된다. 위 식에서 $\theta$ 에 대한 2차항 이상의 항은 무시한다. $R$ 은 $SO(2)$ 연산자이므로 $R^T R=I$ 이어야 한다. $R=I+ A$ 에 대해 $R^T = I+A^T$ 이며, $\theta^2$ 이상을 무시하면
+
+$$
+R^T R \approx I+ A^T + A + A^TA \approx I+ (A^T+A)
+$$
+
+이다. $R^T R=I$ 조건에 의해 $A^T=-A$ 이어야 하는데 (이런 형태의 행렬을 **skew-symmetric** 이라고 한다) $\R^{2\times 2}$ 에는 이것을 만족하는 행렬은 
 
 $$
 \mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
 $$ {#eq-Group_matrix_for_infinitesimal_rotation_J_for_2d}
 
-와 $-\mathcal{J}$ 뿐이다. 이제 무한소 회전을 나타내는 행렬 $\bf{R}$ 은 다음과 같이 쓸 수 있다.
+와 $-\mathcal{J}$ 뿐이다. 이제 무한소 회전을 나타내는 행렬 $R$ 은 다음과 같이 쓸 수 있다.
 
 $$
-\bf{R}=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 & \theta \\ -\theta & 1 \end{bmatrix} + O(\theta^2).
+R=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 & \theta \\ -\theta & 1 \end{bmatrix} + O(\theta^2).
 $$ {#eq-Group_matrix_for_infinitesimal_rotation}
 
 $\mathcal{J}$ 는 반대칭 행렬이며 회전군(rotation group) 의 생성자(generator) 로 알려져 있다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 @eq-Group_matrix_for_infinitesimal_rotation 와 일치한다. ($-\mathcal{J}$ 도 있지만 $\mathcal{J}$ 를 선택한 이유이기도 하다.)
@@ -1023,18 +1023,18 @@ $$
 우리는 행렬의 지수의 정의가
 
 $$
-e^\bf{A} := \sum_{N=0}^\infty \dfrac{\bf{A}^N}{N!} = \lim_{N \to \infty} \left[\bf{I} + \dfrac{\bf{A}}{N}\right]^N
+e^A := \sum_{N=0}^\infty \dfrac{A^N}{N!} = \lim_{N \to \infty} \left[I + \dfrac{A}{N}\right]^N
 $$ {#eq-Group_exponent_of_matrix}
 
 와 같다는 것을 안다. 물론 위의 정의가 수렴한다는 조건에서만 그러하며 위의 두 정의는 동등하다. $\theta$ 만큼의 회전은 $\theta/N$ 의 회전을 $N$ 번 수행한 것과 같다는 것을 안다. 이것을 $N\to \infty$ 극한을 취하면
 
 $$
-\bf{R}(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[\bf{I} + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
+R(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[I + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
 $$ {#eq-Group_rotation_as_exponent_of_generator_in_2d}
 
 와 같다. 
 
-미적분학의 테일러 정리로부터 우리는 $f$ 의 모든 $n$ 차 도함수를 안다면 $f$ 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 $SO(2)$ 군의 곱 연산의 구조때문에 $\bf{R}(\theta)$ 의 첫번째 미분, 즉 $\mathcal{J}$ 만으로 $\bf{R}(\theta)$ 를 구성 할 수 있다는 것을 리 대수를 창안한 리가 발견하였다. 
+미적분학의 테일러 정리로부터 우리는 $f$ 의 모든 $n$ 차 도함수를 안다면 $f$ 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 $SO(2)$ 군의 곱 연산의 구조때문에 $R(\theta)$ 의 첫번째 미분, 즉 $\mathcal{J}$ 만으로 $R(\theta)$ 를 구성 할 수 있다는 것을 리 대수를 창안한 리가 발견하였다. 
 
 이제 @eq-Group_rotation_as_exponent_of_generator_in_2d 가 @eq-Group_2d_rotation_matrix 와 같다는 것을 보여야 한다.
 
@@ -1047,7 +1047,7 @@ $$ {#eq-Group_rotation_as_exponent_of_generator_in_2d}
 
 $\mathcal{J}$ 의 거듭제곱은 다음과 같다.
 $$
-\mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -\bf{I},\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=\bf{I}
+\mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -I,\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=I
 $$
 
 :::
@@ -1059,8 +1059,8 @@ $$
 $$
 \begin{aligned}
 e^{\theta \mathcal{J}} &= \sum_{n=0}^\infty \dfrac{\theta^n \mathcal{J}^n}{n!} \\
-&=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)\bf{I} + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\
-&=\cos\theta \bf{I} + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix} =\bf{R}(\theta)
+&=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)I + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\[0.3em]
+&=\cos\theta I + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix} =R(\theta)
 \end{aligned}
 $$
 

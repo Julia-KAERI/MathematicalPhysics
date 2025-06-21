@@ -229,8 +229,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_continuous_tensor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/group/group_aux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,13 +253,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -270,19 +276,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -316,7 +322,7 @@ window.Quarto = {
   <li><a href="#회전과-리-대수" id="toc-회전과-리-대수" class="nav-link" data-scroll-target="#회전과-리-대수"><span class="header-section-number">4.5</span> 회전과 리 대수</a>
   <ul class="collapse">
   <li><a href="#sec-Group_rotation_in_2d" id="toc-sec-Group_rotation_in_2d" class="nav-link" data-scroll-target="#sec-Group_rotation_in_2d"><span class="header-section-number">4.5.1</span> 이차원 평면에서의 회전</a></li>
-  <li><a href="#무한소-회전" id="toc-무한소-회전" class="nav-link" data-scroll-target="#무한소-회전"><span class="header-section-number">4.5.2</span> 무한소 회전</a></li>
+  <li><a href="#sec-Group_infinitesimal_rotation" id="toc-sec-Group_infinitesimal_rotation" class="nav-link" data-scroll-target="#sec-Group_infinitesimal_rotation"><span class="header-section-number">4.5.2</span> 무한소 회전</a></li>
   <li><a href="#차원-에서의-리-대수" id="toc-차원-에서의-리-대수" class="nav-link" data-scroll-target="#차원-에서의-리-대수"><span class="header-section-number">4.5.3</span> 3차원 에서의 리 대수</a></li>
   <li><a href="#리-대수" id="toc-리-대수" class="nav-link" data-scroll-target="#리-대수"><span class="header-section-number">4.5.4</span> 리 대수</a></li>
   <li><a href="#리-군과-구조상수" id="toc-리-군과-구조상수" class="nav-link" data-scroll-target="#리-군과-구조상수"><span class="header-section-number">4.5.5</span> 리 군과 구조상수</a></li>
@@ -1057,29 +1063,29 @@ K_2K_2 = 3K_1+3K_3
 </div>
 <p>2차원 평면에서 관찰자를 <span class="math inline">\(\theta\)</span> 만큼 반시계 방향으로 회전시킬 때 관찰자를 원점으로 두는 좌표계에서의 좌표 <span class="math inline">\(P\)</span> 의 변화는 다음 행렬로 기술 할 수 있다.</p>
 <p><span id="eq-Group_2d_rotation_matrix"><span class="math display">\[
-\boldsymbol{R}(\theta) = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix}.
+R(\theta) = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix}.
 \tag{4.4}\]</span></span></p>
-<p>즉 <span class="math inline">\(\boldsymbol{r} = \begin{bmatrix} x \\ y \end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}'=\boldsymbol{R}(\theta)\boldsymbol{r}\)</span> 이다.</p>
-<p>이 회전을 기술하는 행렬은 <span class="math inline">\(SO(2)\)</span> 를 이루며 <span class="math inline">\(\boldsymbol{R}\in SO(2)\)</span> 이면 <span class="math inline">\(\boldsymbol{R}^T\boldsymbol{R}=\boldsymbol{RR}^T=\boldsymbol{I}\)</span> 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 <span class="math inline">\(O(2)\)</span> 에는 속하지만 행렬식이 <span class="math inline">\(-1\)</span> 이며, 따라서 <span class="math inline">\(SO(2)\)</span> 에는 속하지 않는다.</p>
+<p>즉 <span class="math inline">\(\boldsymbol{r} = \begin{bmatrix} x \\ y \end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}'=R(\theta)\boldsymbol{r}\)</span> 이다.</p>
+<p>이 회전을 기술하는 행렬은 <span class="math inline">\(SO(2)\)</span> 를 이루며 <span class="math inline">\(R\in SO(2)\)</span> 이면 <span class="math inline">\(R^T R=RR^T=I\)</span> 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 <span class="math inline">\(O(2)\)</span> 에는 속하지만 행렬식이 <span class="math inline">\(-1\)</span> 이며, 따라서 <span class="math inline">\(SO(2)\)</span> 에는 속하지 않는다.</p>
 <p><br></p>
 </section>
-<section id="무한소-회전" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="무한소-회전"><span class="header-section-number">4.5.2</span> 무한소 회전</h3>
-<p><span class="math inline">\(|\theta| \ll 1\)</span> 일 때 회전 행렬 <span class="math inline">\(\boldsymbol{R}(\theta)\)</span> 는 다음과 같이 근사된다.</p>
+<section id="sec-Group_infinitesimal_rotation" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-Group_infinitesimal_rotation"><span class="header-section-number">4.5.2</span> 무한소 회전</h3>
+<p><span class="math inline">\(|\theta| \ll 1\)</span> 일 때 회전 행렬 <span class="math inline">\(R(\theta)\)</span> 는 다음과 같이 근사된다.</p>
 <p><span class="math display">\[
-\boldsymbol{R}(\theta) \approx \boldsymbol{I} + \theta \boldsymbol{A}
+R(\theta) \approx I +  A
 \]</span></p>
-<p>여기서 <span class="math inline">\(\boldsymbol{I}\)</span> 는 항등행렬이며 <span class="math inline">\(\boldsymbol{A}\)</span> 가 무한소 회전에 의한 변화를 기술하는 행렬이 된다. 위 식에서 <span class="math inline">\(\theta\)</span> 에 대한 2차항 이상의 항은 무시한다. <span class="math inline">\(\boldsymbol{R}\)</span> 은 <span class="math inline">\(SO(2)\)</span> 연산자이므로 <span class="math inline">\(\boldsymbol{R}^T\boldsymbol{R}=\boldsymbol{I}\)</span> 이어야 한다. <span class="math inline">\(\boldsymbol{R}=\boldsymbol{I}+\theta \boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{R}^T = \boldsymbol{I}+\theta \boldsymbol{A}^T\)</span> 이며, <span class="math inline">\(\theta^2\)</span> 이상을 무시하면</p>
+<p>여기서 <span class="math inline">\(I\)</span> 는 항등행렬이며 <span class="math inline">\(A\)</span> 가 무한소 회전에 의한 변화를 기술하는 행렬이 된다. 위 식에서 <span class="math inline">\(\theta\)</span> 에 대한 2차항 이상의 항은 무시한다. <span class="math inline">\(R\)</span> 은 <span class="math inline">\(SO(2)\)</span> 연산자이므로 <span class="math inline">\(R^T R=I\)</span> 이어야 한다. <span class="math inline">\(R=I+ A\)</span> 에 대해 <span class="math inline">\(R^T = I+A^T\)</span> 이며, <span class="math inline">\(\theta^2\)</span> 이상을 무시하면</p>
 <p><span class="math display">\[
-\boldsymbol{R}^T\boldsymbol{R} \approx \boldsymbol{I}+\theta(\boldsymbol{A}^T+\boldsymbol{A})+\theta^2\boldsymbol{A}^T\boldsymbol{A} \approx \boldsymbol{I}+\theta(\boldsymbol{A}^T+\boldsymbol{A})
+R^T R \approx I+ A^T + A + A^TA \approx I+ (A^T+A)
 \]</span></p>
-<p>이다. <span class="math inline">\(\boldsymbol{R}^T\boldsymbol{R}=I\)</span> 조건에 의해 <span class="math inline">\(\boldsymbol{A}^T=-\boldsymbol{A}\)</span> 이어야 하는데 (이런 형태의 행렬을 <strong>skew-symmetric</strong> 이라고 한다) <span class="math inline">\(\mathbb{R}^{2\times 2}\)</span> 에는 이것을 만족하는 행렬은</p>
+<p>이다. <span class="math inline">\(R^T R=I\)</span> 조건에 의해 <span class="math inline">\(A^T=-A\)</span> 이어야 하는데 (이런 형태의 행렬을 <strong>skew-symmetric</strong> 이라고 한다) <span class="math inline">\(\mathbb{R}^{2\times 2}\)</span> 에는 이것을 만족하는 행렬은</p>
 <p><span id="eq-Group_matrix_for_infinitesimal_rotation_J_for_2d"><span class="math display">\[
 \mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}
 \tag{4.5}\]</span></span></p>
-<p>와 <span class="math inline">\(-\mathcal{J}\)</span> 뿐이다. 이제 무한소 회전을 나타내는 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 은 다음과 같이 쓸 수 있다.</p>
+<p>와 <span class="math inline">\(-\mathcal{J}\)</span> 뿐이다. 이제 무한소 회전을 나타내는 행렬 <span class="math inline">\(R\)</span> 은 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-Group_matrix_for_infinitesimal_rotation"><span class="math display">\[
-\boldsymbol{R}=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 &amp; \theta \\ -\theta &amp; 1 \end{bmatrix} + O(\theta^2).
+R=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 &amp; \theta \\ -\theta &amp; 1 \end{bmatrix} + O(\theta^2).
 \tag{4.6}\]</span></span></p>
 <p><span class="math inline">\(\mathcal{J}\)</span> 는 반대칭 행렬이며 회전군(rotation group) 의 생성자(generator) 로 알려져 있다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 <a href="#eq-Group_matrix_for_infinitesimal_rotation" class="quarto-xref">식&nbsp;<span>4.6</span></a> 와 일치한다. (<span class="math inline">\(-\mathcal{J}\)</span> 도 있지만 <span class="math inline">\(\mathcal{J}\)</span> 를 선택한 이유이기도 하다.)</p>
 <p><span class="math display">\[
@@ -1087,20 +1093,20 @@ x' \to x + \theta y,\qquad y' \to y - \theta x.
 \]</span></p>
 <p>우리는 행렬의 지수의 정의가</p>
 <p><span id="eq-Group_exponent_of_matrix"><span class="math display">\[
-e^\boldsymbol{A} := \sum_{N=0}^\infty \dfrac{\boldsymbol{A}^N}{N!} = \lim_{N \to \infty} \left[\boldsymbol{I} + \dfrac{\boldsymbol{A}}{N}\right]^N
+e^A := \sum_{N=0}^\infty \dfrac{A^N}{N!} = \lim_{N \to \infty} \left[I + \dfrac{A}{N}\right]^N
 \tag{4.7}\]</span></span></p>
 <p>와 같다는 것을 안다. 물론 위의 정의가 수렴한다는 조건에서만 그러하며 위의 두 정의는 동등하다. <span class="math inline">\(\theta\)</span> 만큼의 회전은 <span class="math inline">\(\theta/N\)</span> 의 회전을 <span class="math inline">\(N\)</span> 번 수행한 것과 같다는 것을 안다. 이것을 <span class="math inline">\(N\to \infty\)</span> 극한을 취하면</p>
 <p><span id="eq-Group_rotation_as_exponent_of_generator_in_2d"><span class="math display">\[
-\boldsymbol{R}(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[\boldsymbol{I} + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
+R(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[I + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
 \tag{4.8}\]</span></span></p>
 <p>와 같다.</p>
-<p>미적분학의 테일러 정리로부터 우리는 <span class="math inline">\(f\)</span> 의 모든 <span class="math inline">\(n\)</span> 차 도함수를 안다면 <span class="math inline">\(f\)</span> 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 <span class="math inline">\(SO(2)\)</span> 군의 곱 연산의 구조때문에 <span class="math inline">\(\boldsymbol{R}(\theta)\)</span> 의 첫번째 미분, 즉 <span class="math inline">\(\mathcal{J}\)</span> 만으로 <span class="math inline">\(\boldsymbol{R}(\theta)\)</span> 를 구성 할 수 있다는 것을 리 대수를 창안한 리가 발견하였다.</p>
+<p>미적분학의 테일러 정리로부터 우리는 <span class="math inline">\(f\)</span> 의 모든 <span class="math inline">\(n\)</span> 차 도함수를 안다면 <span class="math inline">\(f\)</span> 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 <span class="math inline">\(SO(2)\)</span> 군의 곱 연산의 구조때문에 <span class="math inline">\(R(\theta)\)</span> 의 첫번째 미분, 즉 <span class="math inline">\(\mathcal{J}\)</span> 만으로 <span class="math inline">\(R(\theta)\)</span> 를 구성 할 수 있다는 것을 리 대수를 창안한 리가 발견하였다.</p>
 <p>이제 <a href="#eq-Group_rotation_as_exponent_of_generator_in_2d" class="quarto-xref">식&nbsp;<span>4.8</span></a> 가 <a href="#eq-Group_2d_rotation_matrix" class="quarto-xref">식&nbsp;<span>4.4</span></a> 와 같다는 것을 보여야 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_properties_of_J" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.12 (<span class="math inline">\(\mathcal{J}\)</span>)</strong></span> <span class="math inline">\(\mathcal{J}\)</span> 의 거듭제곱은 다음과 같다. <span class="math display">\[
-\mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -\boldsymbol{I},\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=\boldsymbol{I}
+\mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -I,\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=I
 \]</span></p>
 </div>
 </div>
@@ -1108,8 +1114,8 @@ e^\boldsymbol{A} := \sum_{N=0}^\infty \dfrac{\boldsymbol{A}^N}{N!} = \lim_{N \to
 <p>위 식을 이용하면 <span class="math display">\[
 \begin{aligned}
 e^{\theta \mathcal{J}} &amp;= \sum_{n=0}^\infty \dfrac{\theta^n \mathcal{J}^n}{n!} \\
-&amp;=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)\boldsymbol{I} + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\
-&amp;=\cos\theta \boldsymbol{I} + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix} =\boldsymbol{R}(\theta)
+&amp;=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)I + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\[0.3em]
+&amp;=\cos\theta I + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix} =R(\theta)
 \end{aligned}
 \]</span></p>
 <p>이다.</p>

@@ -26,6 +26,7 @@ book:
       - src/group/group_symmetry_group.qmd
       - src/group/group_quantum1_schroedinger_equation_group.qmd
       - src/group/group_quantum2_irrep_of_point_group.qmd
+      - src/group/group_continuous_tensor.qmd
       - src/group/group_aux.qmd
     - part: 미분방정식
       chapters :

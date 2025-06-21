@@ -1,0 +1,12 @@
+---
+title: "연속군과 텐서"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
