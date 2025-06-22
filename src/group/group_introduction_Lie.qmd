@@ -1,0 +1,332 @@
+---
+title: "군의 기본적인 성질 2 : 리 군과 리 대수"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## 무한소 회전
+
+### 이차원 평면에서의 회전 {#sec-Group_rotation_in_2d}
+
+::: {.callout-note icon="false"}
+#### 회전
+회전을 생각할 때 대상을 회전시키거나 관찰자를 회전시키는 두가지 가운데 하나를 선택하여야 한다. 여기서는 다른 대부분의 경우와 마찬가지로 관찰자를 회전시키는 것을 우선 생각하기로 한다.
+:::
+
+2차원 평면에서 관찰자를 $\theta$ 만큼 반시계 방향으로 회전시킬 때 관찰자를 원점으로 두는 좌표계에서의 좌표 $P$ 의 변화는 다음 행렬로 기술 할 수 있다.
+
+$$
+R(\theta) = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix}.
+$$ {#eq-Group_2d_rotation_matrix}
+
+즉 $\bf{r} = \begin{bmatrix} x \\ y \end{bmatrix}$, $\bf{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}$ 에 대해 $\bf{r}'=R(\theta)\bf{r}$ 이다.
+
+이 회전을 기술하는 행렬은 $SO(2)$ 를 이루며 $R\in SO(2)$ 이면 $R^T R=RR^T=I$ 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 $O(2)$ 에는 속하지만 행렬식이 $-1$ 이며, 따라서 $SO(2)$ 에는 속하지 않는다.
+
+</br>
+
+### 미소 회전 {#sec-Group_infinitesimal_rotation}
+
+$|\theta| \ll 1$ 일 때 회전 행렬 $R(\theta)$ 는 다음과 같이 근사된다.
+
+$$
+R(\theta) \approx I +  A
+$$
+
+여기서 $I$ 는 항등행렬이며 $A$ 가 미소 회전(infinitesimal rotation)에 의한 변화를 기술하는 행렬이 된다. $A$ 에서는 $\theta$ 에 대한 2차항 이상의 항은 무시한다. $R$ 은 $SO(n)$ 연산자이므로 $R^T R=I$ 이어야 한다. $R=I+ A$ 에 대해 $R^T = I+A^T$ 이며, $\theta^2$ 이상을 무시하면
+
+$$
+R^T R \approx I+ (A^T + A) + A^TA  \approx I+ (A^T+A)
+$$
+
+이다. $R^T R=I$ 조건에 의해 $A^T=-A$ 이어야 하며 이런 형태의 행렬을 **반대칭 행렬 (skew-symmetric matrix)** 이라고 한다. 이제 2차원의 경우를 보자. $\R^{2\times 2}$ 의 반대칭행렬은
+
+$$
+\mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
+$$ {#eq-Group_matrix_for_infinitesimal_rotation_J_for_2d}
+
+과 이 행렬의 스칼라곱 뿐이다. 그렇다면 무한소 회전을 나타내는 행렬 $R$ 은 다음과 같이 쓸 수 있다.
+
+$$
+R=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 & \theta \\ -\theta & 1 \end{bmatrix} + O(\theta^2).
+$$ {#eq-Group_matrix_for_infinitesimal_rotation}
+
+$\mathcal{J}$ 는 반대칭 행렬로 $SO(2)$ 의 **generator** 라고 부른다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 @eq-Group_matrix_for_infinitesimal_rotation 와 일치한다. ($\mathcal{J}$ 의 다른 스칼라곱이 아닌 $\mathcal{J}$ 를 선택한 이유이기도 하다.)
+
+$$
+x' \to x + \theta y,\qquad y' \to y - \theta x.
+$$
+
+
+우리는 행렬의 지수의 정의가
+
+$$
+e^A := \sum_{N=0}^\infty \dfrac{A^N}{N!} = \lim_{N \to \infty} \left[I + \dfrac{A}{N}\right]^N
+$$ {#eq-Group_exponent_of_matrix}
+
+와 같다는 것을 안다. 물론 위의 정의가 수렴한다는 조건에서만 그러하며 위의 두 정의는 동등하다. $\theta$ 만큼의 회전은 $\theta/N$ 의 회전을 $N$ 번 수행한 것과 같다는 것을 안다. 이것을 $N\to \infty$ 극한을 취하면
+
+$$
+R(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[I + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
+$$ {#eq-Group_rotation_as_exponent_of_generator_in_2d}
+
+와 같다. 
+
+미적분학의 테일러 정리로부터 우리는 $f$ 의 모든 $n$ 차 도함수를 안다면 $f$ 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 $SO(2)$ 군의 곱 연산의 구조때문에 $R(\theta)$ 의 첫번째 미분, 즉 $\mathcal{J}$ 만으로 $R(\theta)$ 를 구성 할 수 있다는 것을 리 대수를 창안한 리(Marius Sophus Lie, 1842–1899) 가 발견하였다. 
+
+이제 @eq-Group_rotation_as_exponent_of_generator_in_2d 가 @eq-Group_2d_rotation_matrix 와 같다는 것을 보여야 한다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exm-Group_properties_of_J}
+
+#### $\mathcal{J}$
+
+$\mathcal{J}$ 의 거듭제곱은 다음과 같다.
+$$
+\mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -I,\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=I
+$$
+
+:::
+
+</div>
+</br>
+
+위 식을 이용하면
+$$
+\begin{aligned}
+e^{\theta \mathcal{J}} &= \sum_{n=0}^\infty \dfrac{\theta^n \mathcal{J}^n}{n!} \\
+&=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)I + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\[0.3em]
+&=\cos\theta I + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta & \sin \theta \\ - \sin \theta & \cos \theta \end{bmatrix} =R(\theta)
+\end{aligned}
+$$
+
+이다. 
+
+</br>
+
+### 고차원에서의 Lie {#sec-Group_Lie_algebra_in_3d}
+
+2차원에서의 회전은 상당히 단순하며 굳이 복잡한 행렬의 지수와 같은 것을 도입할 필요가 없을 것 같다. 그러나 굳이 이것을 하는 이유는 고차원에 적용하기 위해서이다. 고차원에서의 회전은 매우 복잡하지만 $SO(n)$ 행렬을 통해 그 회전을 표현할 수 있다는 것을 안다. 또한 소수의 generator 를 통해 $SO(n)$ 군을 구성 할 수 있다. 
+
+예를 들어 $3$ 차원의 경우 모든 반대칭 행렬은 아래의 $\mathcal{J}_x,\,\mathcal{J}_y,\,\mathcal{J}_z$ 의 선형결합이다.
+
+$$
+\mathcal{J}_x = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0\end{bmatrix}, \qquad \mathcal{J}_y = \begin{bmatrix} 0 & 0 & -1 \\ 0 & 0 & 0 \\ 1 & 0 & 0\end{bmatrix},\qquad \mathcal{J}_z = \begin{bmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 0\end{bmatrix}
+$$ {#eq-Group_matrix_for_infinitesimal_rotation_J_for_3d}
+
+이런 의미애서 $\mathcal{J}_x,\,\mathcal{J}_y,\,\mathcal{J}_z$ 를 **generator** 라고 한다.
+
+중간 과정을 빼고 결론부터 말하자면 모든 3차원 회전은 다음의 형태로 나타 낼 수 있다.
+
+$$
+R(\theta) = \exp \left(\theta_x \mathcal{J}_x + \theta_y \mathcal{J}_y + \theta_z \mathcal{J}_z\right)
+$$ {#eq-Group_rotation_as_exponent_of_generator_in_3d}
+
+양자역학에서 에르미트 연산자의 중요성과 편리함을 기억하자. 수학자들은 $\{\mathcal{J}_i\}$ 를 주로 사용하지만 물리학자들은 에르미트화하여 $J_x := -i\mathcal{J}_x,\,J_y := -i\mathcal{J}_y,\,J_z := -i\mathcal{J}_z$ 로 정의된 $\{J_i\}$ 를 주로 사용한다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_skew_symmetric_and_hermitian}
+
+#### 반대칭 행렬과 에르미트 행렬
+
+$A$ 가 반대칭 행렬, 즉 $A^T=-A$ 일 때 $H=-iA$ 는 에르미트 행렬이다. 
+
+$$
+H^\dagger = (-iA)^\dagger = iA^T = -iA = H.
+$$
+
+:::
+</div></br>
+
+이로부터 다음을 얻는다.
+
+$$
+R(\theta) = e^{i\sum_k \theta_k J_k} = e^{i\bf{\theta \cdot J}}
+$$ {#eq-Group_3d_rotation_using_angular_momentum_operator}
+
+</br>
+
+지금까지의 내용을 정리해보자. $n$ 차원에서의 회전은 미소회전의 누적으로 표현 할 수 있고, 미소회전을 나타내는 행렬은 반대칭이어야 한다. 
+
+</br>
+
+## 리 대수 
+
+### 리 대수 {#sec-Group_Lie_algebra_basic}
+
+우선 수학적 개념과 식을 소개한다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-Group_commutator}
+#### 교환연산자
+
+정사각 행렬 $A,\,B$ 에 대해 
+
+$$
+[A,\,B] := AB-BA
+$$ {#eq-Group_commutator}
+
+로 정의된 연산자 $[\,,\,]$ 를 **교환연산자(commutator)** 라고 한다.
+
+:::
+:::
+
+</br>
+
+아래 명제는 많은 교재에 나와 있으므로 증명은 생략한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_properties_of_J_and_commutator}
+
+$J_x,\,J_y,\,J_z$ 와 commutator, 그리고 Levi-Civita 기호 $\varepsilon_{ijk}$ 에 대해 다음이 성립한다.
+$$
+[J_i,\,J_j] = i\varepsilon_{ijk} J_k.
+$$ {#eq-Group_commutator_of_angular_momentum}
+
+:::
+
+</div>
+</br>
+
+
+우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다(@exm-Group_d3_multiplication_table 를 보라.) 무한소 회전 $R \approx I+A$ 와 임의의 회전 $R'$ 에 대해 $A^2$ 이상의 항을 무시하면
+
+$$
+RR'R^{-1} \approx (I+A)R'(I-A) \approx R' + (AR'-R'A)
+$$
+
+을 얻는다. 만약 회전이 commute 하다면 $RR'R^{-1}=R'$ 이 되어야 한다. 이제 $R'\approx I+B$ 역시 무한소 회전이라면
+
+$$
+RR'R^{-1} \approx I+B+(AB-BA) = I+B+[A,\,B]
+$$
+
+이다. 
+
+$SO(3)$ 의 경우 모든 $SO(3)$ 의 성분은 $J_i$ 의 선형결합이다. 따라서 $A=\sum_i \theta_i J_i,\, B=\sum_j \phi_j J_j$ 라고 하면
+
+$$
+[A,\,B] = \sum_{i, j} [J_i,\, J_j]\theta_i\phi_j
+$$
+
+이므로 모든 $[J_i,\,J_j]$ 만을 알면 $SO(3)$ 안의 commutator 연산에 대해 충분하다. 또 하나의 성질은
+
+$$
+([J_i,\, J_j])^T = (J_iJ_j-J_jJ_i)^T = (J_j^TJ_i^T - J_i^TJ_j^T)= [J_j,\,J_i]=-[J_i,\,J_j]
+$$
+
+인 것이다. 즉 $[J_i,\,J_j]$ 자체가 반대칭 행렬이다.
+
+
+</br>
+
+### 구조상수 {#sec-Group_structure_constant_of_lie_algebra}
+
+
+연속 매개변수 $\theta_1,\,\theta_2,\ldots$ 에 의해 정해지는 $g(\theta_1,\,\theta_2,\ldots)$ 를 성분으로 갖는 군을 생각하자. 그리고 항등원이 $g(0,\,0,\ldots)$ 라고 하자. 이런 종류의 군을 **리 군 (Lie group)** 이라고 한다. 리의 위대한 통찰은 아래의 네 과정을 통해 항상 리 군을 구성 할 수 있다는 것을 파악한 것이다.
+
+**1**. 각각의 $\theta_i$ 가 $0$ 부근일 때의 $g$ 를 $g\approx I+A$ 와 같이 전개한다. 
+
+**2**. 군의 성질로부터 얻어지는 생성자의 집합 $\{T_a\}$ 의 선형결합으로 $A$ 를 표현한다. 즉 $A=i\sum_a \theta_a T_a$.
+
+**3**. 항등원에 가까운, 즉 각각의 연속매개변수가 $0$ 에 가까운 두 성분을 생각한다. 즉 $g_1\approx I+A,\, g_2\approx I+B$. 그렇다면 $g_1g_2g_1^{-1}\approx I+B+[A,\,B]$ 이며 $[A,\,B]$ 로부터 항등원 근처의 군의 특성을 알 수 있다.
+
+**4**. **2** 에서와 같이 $B=i\sum_b \theta'_b T_b$ 로 놓고 $[A,\,B]$ 를 $\{T_c\}$ 의 선형결합으로 표현한다. 그렇다면 $[T_a,\,T_b] = if_{abc}T_c$ 의 관계를 얻게 되는데 이 때의 $f_{abc}$ 를 이 군의 **구조상수 (structure constant)** 라고 한다.
+
+
+생성자들의 교환 관계, 특히 구조상수가 리 대수(Lie algebra) 를 결정하며, 이 리 대수가 리 군(Lie group) 을 결정한다. 아직까지는 리 군과 리 대수 모두 모호하고 불확실하지만 이제 곧 익숙해질 것이다.
+
+</br>
+
+### 고차원 공간에서의 회전 {#sec-Group-rotations_in_higher_dimensional_space}
+
+$N\times N$ 행렬 $J_{(mn)}$ 을 다음과 같이 정의한다. (수학에서는 $J_{(mn)} = -i\mathcal{J}_{(mn)}$ 이 되도록 하는 $\mathcal{J}_{(mn)}$ 을 더 선호하긴 한다.)
+
+$$
+(J_{(mn)})_{jk} := -i(\delta_{mj}\delta_{nk} - \delta_{mk}\delta_{nj}) = -i\mathcal{J}_{(mn)}
+$$ {#eq-Group_generators_for_SON}
+
+행렬 $J_{(mn)}$ 은 아래와 같은 성질을 가진다.
+
+&emsp; ($1$) $J_{(mn)}$ 은 반대칭 에르미트 행렬이며,
+
+&emsp; ($2$) $J_{(mm)} = 0$, 
+
+&emsp; ($3$) 서로 독립적인 $J_{(mn)}$ 의 개수는 $N(N-1)/2$ 개이다. 
+
+위의 이유로 우리가 $\{J_{(mn)}\}$ 에 대해 더할 때는 $m>n$ 일 경우만 더하기로 정한다. 앞서와 같이 미소 회전 $R\simeq I+A$ 를 생각할 때 
+
+$$
+A = i \sum_{m>n} \theta_{(mn)}J_{(mn)}
+$$
+
+라 놓을 수 있다. 즉 $\{J_{(mn)}: N\ge m>n \ge 1 \}$ 은 $SO(N)$ 의 generator 이다.
+
+그런데 여기서 한가지 짚고 넘어야 할 것이 있다. 예를 들어 3차원에서 우리는 $x,\,y,\,z$ 축에 대한 회전에는 익숙한데 회전에 대한 생성자는 $J_{(12)},\, J_{(23)},\, J_{(31)}$ 이다. 3차원이야 그렇다고 하더라도 8차원에서는 어떠한가? 그런데 우리가 유의해야 할 것은 고차원에서의 회전은 한 축에 대한 회전이 아니라 한 2차원 평면에 대한 회전이다. 예를 들어 8차원에서 $3$ 번째 축에 대한 회전은 nonsense 이며 예를 들어 $3-7$ 평면에 대한 회전이 의미있는 것이다. 따라서 3차원에서의 $J_{(12)}$ 는 $z=x_3$ 축에 대한 회전이 된다. 
+
+</br>
+
+### $SO(N)$ 에 대한 리 대수 {#sec-Group-lie-algebra_for_son}
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_commutation_relation_for_SON}
+#### 생성자의 교환연산
+
+$SO(N)$ 의 생성자 $\{J_{(mn)}\}$ 에 대해 다음이 성립함을 보여라.
+
+$$
+[J_{(mn)},\, J_{(pq)}] = i(\delta_{mp}J_{(nq)} + \delta_{nq}J_{(mp)} - \delta_{np}J_{(mq)} - \delta_{mq}J_{np}).
+$$ {#eq-Group_commutation_relation_for_SON}
+
+:::
+
+</div>
+::: {.solution}
+
+@eq-Group_generators_for_SON 을 생각하자. 
+$$
+\begin{aligned}
+A_{ij} &= \sum_{k}(J_{(mn)})_{ik}(J_{(pq)})_{kj}-(J_{(pq)})_{ik}(J_{(mn)})_{kj} \\[0.3em]
+&= -\sum_k \left[(\delta_{im}\delta_{kn}-\delta_{in}\delta_{km})(\delta_{kp}\delta_{jq}-\delta_{kq}\delta_{jp}) - (\delta_{ip}\delta_{kq}-\delta_{kp}\delta_{iq})(\delta_{km}\delta_{jn}-\delta_{kn}\delta_{jm})\right] \\[0.3em]
+&= \delta_{in}(\delta_{mp}\delta_{jq}-\delta_{mq}\delta_{jp}) - \delta_{im}(\delta_{np}\delta_{jq}\ - \delta_{nq}\delta_{jp}) + \delta_{ip}(\delta_{mq}\delta_{jn}-\delta_{nq}\delta_{jm}) - \delta_{iq}(\delta_{mp}\delta_{jn}-\delta_{np}\delta_{jm}) \\[0.3em]
+&= \delta_{mp}(\delta_{in}\delta_{jq}-\delta_{iq}\delta_{jn}) + \delta_{np}(\delta_{iq}\delta_{jm}- \delta_{im}\delta_{jq}) + \delta_{mq}(\delta_{ip}\delta_{jn}-\delta_{in}\delta_{jp}) + \delta_{nq}(\delta_{im}\delta_{jp}-\delta_{ip}\delta_{jm})\\[0.3em]
+&= i\left[\delta_{mp}J_{(nq)} - \delta_{np}J_{(mq)} - \delta_{mq}J_{(np)} - \delta_{np}J_{(mp)}\right]_{ij}
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+## 텐서와 $SO(N)$ 의 표현
+
+### 텐서 {#sec-Group_Tensor}
+
+$N$ 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 $T^{ij}$ 를 생각하자. 그리고 $R\in SO(N)$ 에 의해 좌표 $(x^1,\ldots,\,x^N)$ 이 $(x'^1,\ldots,\,x'^N)$ 으로 변환된다고 하자. $R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}$ 이다. 이 변환 $R$ 에 대해 $T^{ij}$ 가 
+
+$$
+T'^{ij} = R^i_kR^j_lT^{kl}
+$$
+
+과 같이 변환될 때 $T^{ij}$ 를 **2차 텐서 (rank-2 tensor)** 라고 한다. 
+
+
+
+### $SO(N)$ 의 표현 {#sec-Group_representation_of_SON}
+
+

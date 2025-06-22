@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; 연속군과 텐서 – 수리물리학</title>
+<title>5&nbsp; 군의 기본적인 성질 2 : 리 군과 리 대수 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/group/group_aux.html" rel="next">
-<link href="../../src/group/group_quantum2_irrep_of_point_group.html" rel="prev">
+<link href="../../src/group/group_representation1.html" rel="next">
+<link href="../../src/group/group_introduction.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_continuous_tensor.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction_Lie.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 2 : 리 군과 리 대수</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,7 +205,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_introduction_Lie.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/group/group_introduction_Lie.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 2 : 리 군과 리 대수</span></span></a>
   </div>
 </li>
@@ -235,7 +235,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_continuous_tensor.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/group/group_continuous_tensor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></span></a>
   </div>
 </li>
@@ -304,15 +304,38 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#무한소-회전" id="toc-무한소-회전" class="nav-link active" data-scroll-target="#무한소-회전"><span class="header-section-number">5.1</span> 무한소 회전</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_rotation_in_2d" id="toc-sec-Group_rotation_in_2d" class="nav-link" data-scroll-target="#sec-Group_rotation_in_2d"><span class="header-section-number">5.1.1</span> 이차원 평면에서의 회전</a></li>
+  <li><a href="#sec-Group_infinitesimal_rotation" id="toc-sec-Group_infinitesimal_rotation" class="nav-link" data-scroll-target="#sec-Group_infinitesimal_rotation"><span class="header-section-number">5.1.2</span> 미소 회전</a></li>
+  <li><a href="#sec-Group_Lie_algebra_in_3d" id="toc-sec-Group_Lie_algebra_in_3d" class="nav-link" data-scroll-target="#sec-Group_Lie_algebra_in_3d"><span class="header-section-number">5.1.3</span> 고차원에서의 Lie</a></li>
+  </ul></li>
+  <li><a href="#리-대수" id="toc-리-대수" class="nav-link" data-scroll-target="#리-대수"><span class="header-section-number">5.2</span> 리 대수</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_Lie_algebra_basic" id="toc-sec-Group_Lie_algebra_basic" class="nav-link" data-scroll-target="#sec-Group_Lie_algebra_basic"><span class="header-section-number">5.2.1</span> 리 대수</a></li>
+  <li><a href="#sec-Group_structure_constant_of_lie_algebra" id="toc-sec-Group_structure_constant_of_lie_algebra" class="nav-link" data-scroll-target="#sec-Group_structure_constant_of_lie_algebra"><span class="header-section-number">5.2.2</span> 구조상수</a></li>
+  <li><a href="#sec-Group-rotations_in_higher_dimensional_space" id="toc-sec-Group-rotations_in_higher_dimensional_space" class="nav-link" data-scroll-target="#sec-Group-rotations_in_higher_dimensional_space"><span class="header-section-number">5.2.3</span> 고차원 공간에서의 회전</a></li>
+  <li><a href="#sec-Group-lie-algebra_for_son" id="toc-sec-Group-lie-algebra_for_son" class="nav-link" data-scroll-target="#sec-Group-lie-algebra_for_son"><span class="header-section-number">5.2.4</span> <span class="math inline">\(SO(N)\)</span> 에 대한 리 대수</a></li>
+  </ul></li>
+  <li><a href="#텐서와-son-의-표현" id="toc-텐서와-son-의-표현" class="nav-link" data-scroll-target="#텐서와-son-의-표현"><span class="header-section-number">5.3</span> 텐서와 <span class="math inline">\(SO(N)\)</span> 의 표현</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_Tensor" id="toc-sec-Group_Tensor" class="nav-link" data-scroll-target="#sec-Group_Tensor"><span class="header-section-number">5.3.1</span> 텐서</a></li>
+  <li><a href="#sec-Group_representation_of_SON" id="toc-sec-Group_representation_of_SON" class="nav-link" data-scroll-target="#sec-Group_representation_of_SON"><span class="header-section-number">5.3.2</span> <span class="math inline">\(SO(N)\)</span> 의 표현</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_continuous_tensor.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction_Lie.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 2 : 리 군과 리 대수</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 2 : 리 군과 리 대수</span></h1>
 </div>
 
 
@@ -341,8 +364,235 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
+<section id="무한소-회전" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="무한소-회전"><span class="header-section-number">5.1</span> 무한소 회전</h2>
+<section id="sec-Group_rotation_in_2d" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="sec-Group_rotation_in_2d"><span class="header-section-number">5.1.1</span> 이차원 평면에서의 회전</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+회전
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>회전을 생각할 때 대상을 회전시키거나 관찰자를 회전시키는 두가지 가운데 하나를 선택하여야 한다. 여기서는 다른 대부분의 경우와 마찬가지로 관찰자를 회전시키는 것을 우선 생각하기로 한다.</p>
+</div>
+</div>
+<p>2차원 평면에서 관찰자를 <span class="math inline">\(\theta\)</span> 만큼 반시계 방향으로 회전시킬 때 관찰자를 원점으로 두는 좌표계에서의 좌표 <span class="math inline">\(P\)</span> 의 변화는 다음 행렬로 기술 할 수 있다.</p>
+<p><span id="eq-Group_2d_rotation_matrix"><span class="math display">\[
+R(\theta) = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix}.
+\tag{5.1}\]</span></span></p>
+<p>즉 <span class="math inline">\(\boldsymbol{r} = \begin{bmatrix} x \\ y \end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{r}' = \begin{bmatrix} x' \\ y ' \end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}'=R(\theta)\boldsymbol{r}\)</span> 이다.</p>
+<p>이 회전을 기술하는 행렬은 <span class="math inline">\(SO(2)\)</span> 를 이루며 <span class="math inline">\(R\in SO(2)\)</span> 이면 <span class="math inline">\(R^T R=RR^T=I\)</span> 임을 알고 있다. 이에 반해 반사(reflection) 연산의 경우 <span class="math inline">\(O(2)\)</span> 에는 속하지만 행렬식이 <span class="math inline">\(-1\)</span> 이며, 따라서 <span class="math inline">\(SO(2)\)</span> 에는 속하지 않는다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group_infinitesimal_rotation" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="sec-Group_infinitesimal_rotation"><span class="header-section-number">5.1.2</span> 미소 회전</h3>
+<p><span class="math inline">\(|\theta| \ll 1\)</span> 일 때 회전 행렬 <span class="math inline">\(R(\theta)\)</span> 는 다음과 같이 근사된다.</p>
+<p><span class="math display">\[
+R(\theta) \approx I +  A
+\]</span></p>
+<p>여기서 <span class="math inline">\(I\)</span> 는 항등행렬이며 <span class="math inline">\(A\)</span> 가 미소 회전(infinitesimal rotation)에 의한 변화를 기술하는 행렬이 된다. <span class="math inline">\(A\)</span> 에서는 <span class="math inline">\(\theta\)</span> 에 대한 2차항 이상의 항은 무시한다. <span class="math inline">\(R\)</span> 은 <span class="math inline">\(SO(n)\)</span> 연산자이므로 <span class="math inline">\(R^T R=I\)</span> 이어야 한다. <span class="math inline">\(R=I+ A\)</span> 에 대해 <span class="math inline">\(R^T = I+A^T\)</span> 이며, <span class="math inline">\(\theta^2\)</span> 이상을 무시하면</p>
+<p><span class="math display">\[
+R^T R \approx I+ (A^T + A) + A^TA  \approx I+ (A^T+A)
+\]</span></p>
+<p>이다. <span class="math inline">\(R^T R=I\)</span> 조건에 의해 <span class="math inline">\(A^T=-A\)</span> 이어야 하며 이런 형태의 행렬을 <strong>반대칭 행렬 (skew-symmetric matrix)</strong> 이라고 한다. 이제 2차원의 경우를 보자. <span class="math inline">\(\mathbb{R}^{2\times 2}\)</span> 의 반대칭행렬은</p>
+<p><span id="eq-Group_matrix_for_infinitesimal_rotation_J_for_2d"><span class="math display">\[
+\mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}
+\tag{5.2}\]</span></span></p>
+<p>과 이 행렬의 스칼라곱 뿐이다. 그렇다면 무한소 회전을 나타내는 행렬 <span class="math inline">\(R\)</span> 은 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-Group_matrix_for_infinitesimal_rotation"><span class="math display">\[
+R=I+\theta\mathcal{J} + O(\theta^2) = \begin{bmatrix} 1 &amp; \theta \\ -\theta &amp; 1 \end{bmatrix} + O(\theta^2).
+\tag{5.3}\]</span></span></p>
+<p><span class="math inline">\(\mathcal{J}\)</span> 는 반대칭 행렬로 <span class="math inline">\(SO(2)\)</span> 의 <strong>generator</strong> 라고 부른다. 삼각함수의 테일러 전개를 사용하면 우리는 무한소 회전이 다음과 같다는 것을 알고 있으며 이것은 <a href="#eq-Group_matrix_for_infinitesimal_rotation" class="quarto-xref">식&nbsp;<span>5.3</span></a> 와 일치한다. (<span class="math inline">\(\mathcal{J}\)</span> 의 다른 스칼라곱이 아닌 <span class="math inline">\(\mathcal{J}\)</span> 를 선택한 이유이기도 하다.)</p>
+<p><span class="math display">\[
+x' \to x + \theta y,\qquad y' \to y - \theta x.
+\]</span></p>
+<p>우리는 행렬의 지수의 정의가</p>
+<p><span id="eq-Group_exponent_of_matrix"><span class="math display">\[
+e^A := \sum_{N=0}^\infty \dfrac{A^N}{N!} = \lim_{N \to \infty} \left[I + \dfrac{A}{N}\right]^N
+\tag{5.4}\]</span></span></p>
+<p>와 같다는 것을 안다. 물론 위의 정의가 수렴한다는 조건에서만 그러하며 위의 두 정의는 동등하다. <span class="math inline">\(\theta\)</span> 만큼의 회전은 <span class="math inline">\(\theta/N\)</span> 의 회전을 <span class="math inline">\(N\)</span> 번 수행한 것과 같다는 것을 안다. 이것을 <span class="math inline">\(N\to \infty\)</span> 극한을 취하면</p>
+<p><span id="eq-Group_rotation_as_exponent_of_generator_in_2d"><span class="math display">\[
+R(\theta) = \lim_{N\to\infty} \left[R\left(\dfrac{\theta}{N}\right)\right]^N = \lim_{N \to \infty} \left[I + \dfrac{\theta}{N}\mathcal{J}\right]^N = \exp \left(\theta\mathcal{J}\right)
+\tag{5.5}\]</span></span></p>
+<p>와 같다.</p>
+<p>미적분학의 테일러 정리로부터 우리는 <span class="math inline">\(f\)</span> 의 모든 <span class="math inline">\(n\)</span> 차 도함수를 안다면 <span class="math inline">\(f\)</span> 를 다항식으로 구성할 수 있다는 것을 안다. 반면 여기서는 <span class="math inline">\(SO(2)\)</span> 군의 곱 연산의 구조때문에 <span class="math inline">\(R(\theta)\)</span> 의 첫번째 미분, 즉 <span class="math inline">\(\mathcal{J}\)</span> 만으로 <span class="math inline">\(R(\theta)\)</span> 를 구성 할 수 있다는 것을 리 대수를 창안한 리(Marius Sophus Lie, 1842–1899) 가 발견하였다.</p>
+<p>이제 <a href="#eq-Group_rotation_as_exponent_of_generator_in_2d" class="quarto-xref">식&nbsp;<span>5.5</span></a> 가 <a href="#eq-Group_2d_rotation_matrix" class="quarto-xref">식&nbsp;<span>5.1</span></a> 와 같다는 것을 보여야 한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_properties_of_J" class="theorem example">
+<p><span class="theorem-title"><strong>예제 5.1 (<span class="math inline">\(\mathcal{J}\)</span>)</strong></span> <span class="math inline">\(\mathcal{J}\)</span> 의 거듭제곱은 다음과 같다. <span class="math display">\[
+\mathcal{J} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}, \qquad \mathcal{J}^2 = -I,\qquad \mathcal{J}^3 = -\mathcal{J},\qquad \mathcal{J}^4=I
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<p>위 식을 이용하면 <span class="math display">\[
+\begin{aligned}
+e^{\theta \mathcal{J}} &amp;= \sum_{n=0}^\infty \dfrac{\theta^n \mathcal{J}^n}{n!} \\
+&amp;=\left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n}}{(2n)!}\right)I + \left(\sum_{n=0}^\infty \dfrac{(-1)^n \theta^{2n+1}}{(2n+1)!} \right)\mathcal{J} \\[0.3em]
+&amp;=\cos\theta I + \sin\theta \mathcal{J} = \begin{bmatrix} \cos \theta &amp; \sin \theta \\ - \sin \theta &amp; \cos \theta \end{bmatrix} =R(\theta)
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group_Lie_algebra_in_3d" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="sec-Group_Lie_algebra_in_3d"><span class="header-section-number">5.1.3</span> 고차원에서의 Lie</h3>
+<p>2차원에서의 회전은 상당히 단순하며 굳이 복잡한 행렬의 지수와 같은 것을 도입할 필요가 없을 것 같다. 그러나 굳이 이것을 하는 이유는 고차원에 적용하기 위해서이다. 고차원에서의 회전은 매우 복잡하지만 <span class="math inline">\(SO(n)\)</span> 행렬을 통해 그 회전을 표현할 수 있다는 것을 안다. 또한 소수의 generator 를 통해 <span class="math inline">\(SO(n)\)</span> 군을 구성 할 수 있다.</p>
+<p>예를 들어 <span class="math inline">\(3\)</span> 차원의 경우 모든 반대칭 행렬은 아래의 <span class="math inline">\(\mathcal{J}_x,\,\mathcal{J}_y,\,\mathcal{J}_z\)</span> 의 선형결합이다.</p>
+<p><span id="eq-Group_matrix_for_infinitesimal_rotation_J_for_3d"><span class="math display">\[
+\mathcal{J}_x = \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; -1 &amp; 0\end{bmatrix}, \qquad \mathcal{J}_y = \begin{bmatrix} 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0\end{bmatrix},\qquad \mathcal{J}_z = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{bmatrix}
+\tag{5.6}\]</span></span></p>
+<p>이런 의미애서 <span class="math inline">\(\mathcal{J}_x,\,\mathcal{J}_y,\,\mathcal{J}_z\)</span> 를 <strong>generator</strong> 라고 한다.</p>
+<p>중간 과정을 빼고 결론부터 말하자면 모든 3차원 회전은 다음의 형태로 나타 낼 수 있다.</p>
+<p><span id="eq-Group_rotation_as_exponent_of_generator_in_3d"><span class="math display">\[
+R(\theta) = \exp \left(\theta_x \mathcal{J}_x + \theta_y \mathcal{J}_y + \theta_z \mathcal{J}_z\right)
+\tag{5.7}\]</span></span></p>
+<p>양자역학에서 에르미트 연산자의 중요성과 편리함을 기억하자. 수학자들은 <span class="math inline">\(\{\mathcal{J}_i\}\)</span> 를 주로 사용하지만 물리학자들은 에르미트화하여 <span class="math inline">\(J_x := -i\mathcal{J}_x,\,J_y := -i\mathcal{J}_y,\,J_z := -i\mathcal{J}_z\)</span> 로 정의된 <span class="math inline">\(\{J_i\}\)</span> 를 주로 사용한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_skew_symmetric_and_hermitian" class="theorem example">
+<p><span class="theorem-title"><strong>예제 5.2 (반대칭 행렬과 에르미트 행렬)</strong></span> <span class="math inline">\(A\)</span> 가 반대칭 행렬, 즉 <span class="math inline">\(A^T=-A\)</span> 일 때 <span class="math inline">\(H=-iA\)</span> 는 에르미트 행렬이다.</p>
+<p><span class="math display">\[
+H^\dagger = (-iA)^\dagger = iA^T = -iA = H.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<p>이로부터 다음을 얻는다.</p>
+<p><span id="eq-Group_3d_rotation_using_angular_momentum_operator"><span class="math display">\[
+R(\theta) = e^{i\sum_k \theta_k J_k} = e^{i\boldsymbol{\theta \cdot J}}
+\tag{5.8}\]</span></span></p>
+<p><br></p>
+<p>지금까지의 내용을 정리해보자. <span class="math inline">\(n\)</span> 차원에서의 회전은 미소회전의 누적으로 표현 할 수 있고, 미소회전을 나타내는 행렬은 반대칭이어야 한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="리-대수" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="리-대수"><span class="header-section-number">5.2</span> 리 대수</h2>
+<section id="sec-Group_Lie_algebra_basic" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-Group_Lie_algebra_basic"><span class="header-section-number">5.2.1</span> 리 대수</h3>
+<p>우선 수학적 개념과 식을 소개한다.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-Group_commutator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.1 (교환연산자)</strong></span> 정사각 행렬 <span class="math inline">\(A,\,B\)</span> 에 대해</p>
+<p><span id="eq-Group_commutator"><span class="math display">\[
+[A,\,B] := AB-BA
+\tag{5.9}\]</span></span></p>
+<p>로 정의된 연산자 <span class="math inline">\([\,,\,]\)</span> 를 <strong>교환연산자(commutator)</strong> 라고 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>아래 명제는 많은 교재에 나와 있으므로 증명은 생략한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_properties_of_J_and_commutator" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.1</strong></span> <span class="math inline">\(J_x,\,J_y,\,J_z\)</span> 와 commutator, 그리고 Levi-Civita 기호 <span class="math inline">\(\varepsilon_{ijk}\)</span> 에 대해 다음이 성립한다. <span id="eq-Group_commutator_of_angular_momentum"><span class="math display">\[
+[J_i,\,J_j] = i\varepsilon_{ijk} J_k.
+\tag{5.10}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+<p>우리는 3차원 이상에서의 회전이 서로 commute 하지 않는다는 것을 안다(<a href="group_introduction.html#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 를 보라.) 무한소 회전 <span class="math inline">\(R \approx I+A\)</span> 와 임의의 회전 <span class="math inline">\(R'\)</span> 에 대해 <span class="math inline">\(A^2\)</span> 이상의 항을 무시하면</p>
+<p><span class="math display">\[
+RR'R^{-1} \approx (I+A)R'(I-A) \approx R' + (AR'-R'A)
+\]</span></p>
+<p>을 얻는다. 만약 회전이 commute 하다면 <span class="math inline">\(RR'R^{-1}=R'\)</span> 이 되어야 한다. 이제 <span class="math inline">\(R'\approx I+B\)</span> 역시 무한소 회전이라면</p>
+<p><span class="math display">\[
+RR'R^{-1} \approx I+B+(AB-BA) = I+B+[A,\,B]
+\]</span></p>
+<p>이다.</p>
+<p><span class="math inline">\(SO(3)\)</span> 의 경우 모든 <span class="math inline">\(SO(3)\)</span> 의 성분은 <span class="math inline">\(J_i\)</span> 의 선형결합이다. 따라서 <span class="math inline">\(A=\sum_i \theta_i J_i,\, B=\sum_j \phi_j J_j\)</span> 라고 하면</p>
+<p><span class="math display">\[
+[A,\,B] = \sum_{i, j} [J_i,\, J_j]\theta_i\phi_j
+\]</span></p>
+<p>이므로 모든 <span class="math inline">\([J_i,\,J_j]\)</span> 만을 알면 <span class="math inline">\(SO(3)\)</span> 안의 commutator 연산에 대해 충분하다. 또 하나의 성질은</p>
+<p><span class="math display">\[
+([J_i,\, J_j])^T = (J_iJ_j-J_jJ_i)^T = (J_j^TJ_i^T - J_i^TJ_j^T)= [J_j,\,J_i]=-[J_i,\,J_j]
+\]</span></p>
+<p>인 것이다. 즉 <span class="math inline">\([J_i,\,J_j]\)</span> 자체가 반대칭 행렬이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group_structure_constant_of_lie_algebra" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="sec-Group_structure_constant_of_lie_algebra"><span class="header-section-number">5.2.2</span> 구조상수</h3>
+<p>연속 매개변수 <span class="math inline">\(\theta_1,\,\theta_2,\ldots\)</span> 에 의해 정해지는 <span class="math inline">\(g(\theta_1,\,\theta_2,\ldots)\)</span> 를 성분으로 갖는 군을 생각하자. 그리고 항등원이 <span class="math inline">\(g(0,\,0,\ldots)\)</span> 라고 하자. 이런 종류의 군을 <strong>리 군 (Lie group)</strong> 이라고 한다. 리의 위대한 통찰은 아래의 네 과정을 통해 항상 리 군을 구성 할 수 있다는 것을 파악한 것이다.</p>
+<p><strong>1</strong>. 각각의 <span class="math inline">\(\theta_i\)</span> 가 <span class="math inline">\(0\)</span> 부근일 때의 <span class="math inline">\(g\)</span> 를 <span class="math inline">\(g\approx I+A\)</span> 와 같이 전개한다.</p>
+<p><strong>2</strong>. 군의 성질로부터 얻어지는 생성자의 집합 <span class="math inline">\(\{T_a\}\)</span> 의 선형결합으로 <span class="math inline">\(A\)</span> 를 표현한다. 즉 <span class="math inline">\(A=i\sum_a \theta_a T_a\)</span>.</p>
+<p><strong>3</strong>. 항등원에 가까운, 즉 각각의 연속매개변수가 <span class="math inline">\(0\)</span> 에 가까운 두 성분을 생각한다. 즉 <span class="math inline">\(g_1\approx I+A,\, g_2\approx I+B\)</span>. 그렇다면 <span class="math inline">\(g_1g_2g_1^{-1}\approx I+B+[A,\,B]\)</span> 이며 <span class="math inline">\([A,\,B]\)</span> 로부터 항등원 근처의 군의 특성을 알 수 있다.</p>
+<p><strong>4</strong>. <strong>2</strong> 에서와 같이 <span class="math inline">\(B=i\sum_b \theta'_b T_b\)</span> 로 놓고 <span class="math inline">\([A,\,B]\)</span> 를 <span class="math inline">\(\{T_c\}\)</span> 의 선형결합으로 표현한다. 그렇다면 <span class="math inline">\([T_a,\,T_b] = if_{abc}T_c\)</span> 의 관계를 얻게 되는데 이 때의 <span class="math inline">\(f_{abc}\)</span> 를 이 군의 <strong>구조상수 (structure constant)</strong> 라고 한다.</p>
+<p>생성자들의 교환 관계, 특히 구조상수가 리 대수(Lie algebra) 를 결정하며, 이 리 대수가 리 군(Lie group) 을 결정한다. 아직까지는 리 군과 리 대수 모두 모호하고 불확실하지만 이제 곧 익숙해질 것이다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group-rotations_in_higher_dimensional_space" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="sec-Group-rotations_in_higher_dimensional_space"><span class="header-section-number">5.2.3</span> 고차원 공간에서의 회전</h3>
+<p><span class="math inline">\(N\times N\)</span> 행렬 <span class="math inline">\(J_{(mn)}\)</span> 을 다음과 같이 정의한다. (수학에서는 <span class="math inline">\(J_{(mn)} = -i\mathcal{J}_{(mn)}\)</span> 이 되도록 하는 <span class="math inline">\(\mathcal{J}_{(mn)}\)</span> 을 더 선호하긴 한다.)</p>
+<p><span id="eq-Group_generators_for_SON"><span class="math display">\[
+(J_{(mn)})_{jk} := -i(\delta_{mj}\delta_{nk} - \delta_{mk}\delta_{nj}) = -i\mathcal{J}_{(mn)}
+\tag{5.11}\]</span></span></p>
+<p>행렬 <span class="math inline">\(J_{(mn)}\)</span> 은 아래와 같은 성질을 가진다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(J_{(mn)}\)</span> 은 반대칭 에르미트 행렬이며,</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(J_{(mm)} = 0\)</span>,</p>
+<p>  (<span class="math inline">\(3\)</span>) 서로 독립적인 <span class="math inline">\(J_{(mn)}\)</span> 의 개수는 <span class="math inline">\(N(N-1)/2\)</span> 개이다.</p>
+<p>위의 이유로 우리가 <span class="math inline">\(\{J_{(mn)}\}\)</span> 에 대해 더할 때는 <span class="math inline">\(m&gt;n\)</span> 일 경우만 더하기로 정한다. 앞서와 같이 미소 회전 <span class="math inline">\(R\simeq I+A\)</span> 를 생각할 때</p>
+<p><span class="math display">\[
+A = i \sum_{m&gt;n} \theta_{(mn)}J_{(mn)}
+\]</span></p>
+<p>라 놓을 수 있다. 즉 <span class="math inline">\(\{J_{(mn)}: N\ge m&gt;n \ge 1 \}\)</span> 은 <span class="math inline">\(SO(N)\)</span> 의 generator 이다.</p>
+<p>그런데 여기서 한가지 짚고 넘어야 할 것이 있다. 예를 들어 3차원에서 우리는 <span class="math inline">\(x,\,y,\,z\)</span> 축에 대한 회전에는 익숙한데 회전에 대한 생성자는 <span class="math inline">\(J_{(12)},\, J_{(23)},\, J_{(31)}\)</span> 이다. 3차원이야 그렇다고 하더라도 8차원에서는 어떠한가? 그런데 우리가 유의해야 할 것은 고차원에서의 회전은 한 축에 대한 회전이 아니라 한 2차원 평면에 대한 회전이다. 예를 들어 8차원에서 <span class="math inline">\(3\)</span> 번째 축에 대한 회전은 nonsense 이며 예를 들어 <span class="math inline">\(3-7\)</span> 평면에 대한 회전이 의미있는 것이다. 따라서 3차원에서의 <span class="math inline">\(J_{(12)}\)</span> 는 <span class="math inline">\(z=x_3\)</span> 축에 대한 회전이 된다.</p>
+<p><br></p>
+</section>
+<section id="sec-Group-lie-algebra_for_son" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="sec-Group-lie-algebra_for_son"><span class="header-section-number">5.2.4</span> <span class="math inline">\(SO(N)\)</span> 에 대한 리 대수</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_commutation_relation_for_SON" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.1 (생성자의 교환연산)</strong></span> <span class="math inline">\(SO(N)\)</span> 의 생성자 <span class="math inline">\(\{J_{(mn)}\}\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span id="eq-Group_commutation_relation_for_SON"><span class="math display">\[
+[J_{(mn)},\, J_{(pq)}] = i(\delta_{mp}J_{(nq)} + \delta_{nq}J_{(mp)} - \delta_{np}J_{(mq)} - \delta_{mq}J_{np}).
+\tag{5.12}\]</span></span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-Group_generators_for_SON" class="quarto-xref">식&nbsp;<span>5.11</span></a> 을 생각하자. <span class="math display">\[
+\begin{aligned}
+A_{ij} &amp;= \sum_{k}(J_{(mn)})_{ik}(J_{(pq)})_{kj}-(J_{(pq)})_{ik}(J_{(mn)})_{kj} \\[0.3em]
+&amp;= -\sum_k \left[(\delta_{im}\delta_{kn}-\delta_{in}\delta_{km})(\delta_{kp}\delta_{jq}-\delta_{kq}\delta_{jp}) - (\delta_{ip}\delta_{kq}-\delta_{kp}\delta_{iq})(\delta_{km}\delta_{jn}-\delta_{kn}\delta_{jm})\right] \\[0.3em]
+&amp;= \delta_{in}(\delta_{mp}\delta_{jq}-\delta_{mq}\delta_{jp}) - \delta_{im}(\delta_{np}\delta_{jq}\ - \delta_{nq}\delta_{jp}) + \delta_{ip}(\delta_{mq}\delta_{jn}-\delta_{nq}\delta_{jm}) - \delta_{iq}(\delta_{mp}\delta_{jn}-\delta_{np}\delta_{jm}) \\[0.3em]
+&amp;= \delta_{mp}(\delta_{in}\delta_{jq}-\delta_{iq}\delta_{jn}) + \delta_{np}(\delta_{iq}\delta_{jm}- \delta_{im}\delta_{jq}) + \delta_{mq}(\delta_{ip}\delta_{jn}-\delta_{in}\delta_{jp}) + \delta_{nq}(\delta_{im}\delta_{jp}-\delta_{ip}\delta_{jm})\\[0.3em]
+&amp;= i\left[\delta_{mp}J_{(nq)} - \delta_{np}J_{(mq)} - \delta_{mq}J_{(np)} - \delta_{np}J_{(mp)}\right]_{ij}
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="텐서와-son-의-표현" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="텐서와-son-의-표현"><span class="header-section-number">5.3</span> 텐서와 <span class="math inline">\(SO(N)\)</span> 의 표현</h2>
+<section id="sec-Group_Tensor" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="sec-Group_Tensor"><span class="header-section-number">5.3.1</span> 텐서</h3>
+<p><span class="math inline">\(N\)</span> 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 <span class="math inline">\(T^{ij}\)</span> 를 생각하자. 그리고 <span class="math inline">\(R\in SO(N)\)</span> 에 의해 좌표 <span class="math inline">\((x^1,\ldots,\,x^N)\)</span> 이 <span class="math inline">\((x'^1,\ldots,\,x'^N)\)</span> 으로 변환된다고 하자. <span class="math inline">\(R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}\)</span> 이다. 이 변환 <span class="math inline">\(R\)</span> 에 대해 <span class="math inline">\(T^{ij}\)</span> 가</p>
+<p><span class="math display">\[
+T'^{ij} = R^i_kR^j_lT^{kl}
+\]</span></p>
+<p>과 같이 변환될 때 <span class="math inline">\(T^{ij}\)</span> 를 <strong>2차 텐서 (rank-2 tensor)</strong> 라고 한다.</p>
+</section>
+<section id="sec-Group_representation_of_SON" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="sec-Group_representation_of_SON"><span class="header-section-number">5.3.2</span> <span class="math inline">\(SO(N)\)</span> 의 표현</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -764,13 +1014,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="pagination-link" aria-label="군과 양자역학 II- 결정장 이론과 기약표현">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span>
+      <a href="../../src/group/group_introduction.html" class="pagination-link" aria-label="군의 기본적인 성질 1: 군">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 1: 군</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/group/group_aux.html" class="pagination-link" aria-label="보충자료">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">보충자료</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/group/group_representation1.html" class="pagination-link" aria-label="군과 표현">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

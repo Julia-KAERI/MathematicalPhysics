@@ -22,6 +22,7 @@ book:
     - part : 군과 대칭
       chapters :
       - src/group/group_introduction.qmd
+      - src/group/group_introduction_Lie.qmd
       - src/group/group_representation1.qmd
       - src/group/group_symmetry_group.qmd
       - src/group/group_quantum1_schroedinger_equation_group.qmd
