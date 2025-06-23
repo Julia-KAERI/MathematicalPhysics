@@ -1,5 +1,5 @@
 ---
-title: "군의 기본적인 성질 2 : 리 군과 리 대수"
+title: "리 군과 리 대수 : $SO(N)$ 을 중심으로"
 number-sections: true
 number-depth: 3
 crossref:
@@ -315,18 +315,113 @@ $$
 
 ## 텐서와 $SO(N)$ 의 표현
 
+::: {.callout-warning icon="false"}
+
+#### 표기법에 대해
+
+물리학에서 텐서에 대해 다룰 경우 관례적으로 벡터를 $\bf{v}$ 와 같이 표현하지 않고 대문자로 $V$ 와 같이 표기한다. 그리고 공변 벡터에 대해서는 $V_i$, 반변벡터에 대해서는 $V^j$ 와 같이 표기하는 방법을 따르기로 하자. 아인슈타인 합 규칙도 여기에 적용된다.
+
+:::
+</br>
+
+### 벡터에 대한 회전군의 표현 {#sec-Group_representing_the_rotation_group_by_vector}
+
+회전군, 즉 $SO(N)$ 을 $N$ 차원 벡터로 표현하자. 우리는 벡터 $V\in \R^N$ 이 $R\in SO(N)$ 에 대해
+
+$$
+V'^i = R^i_j V^j
+$$ {#eq-Group_transformation_of_vector_by_rotation}
+
+와 같이 변한다는 것을 안다. 정확히 하면 @eq-Group_transformation_of_vector_by_rotation 는 물리학에서 사용하는 벡터의 정의로 회전 $R$ 에 대해 위와 같이 변하는 량을 벡터라고 한다. 우리는 $SO(N)$ 에 대한 $N$ 차원 기약표현이 존재한다는 것을 안다. 또한 우리는 자명한 1차원 표현에 대해 알고 있다. 이 표현 이외에 다른 회전군에 대한 기약표현이 존재하는지 알아보자. 
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_irreducible_representation_of_SO2}
+
+#### $SO(2)$ 의 기약표현
+
+2차원에서의 $\theta$ 만큼의 회전은 $k\in \Z$ 에 대해 $e^{ik\theta}$ 로 표현 할 수 있다. 또한 각각의 $k$ 에 대해 이 표현은 기약표현이며, 따라서 $SO(2)$ 의 경우 무한히 많은 1차원 기약표현을 가진다.
+
+:::
+
+</div>
+
+</br>
+
 ### 텐서 {#sec-Group_Tensor}
 
-$N$ 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 $T^{ij}$ 를 생각하자. 그리고 $R\in SO(N)$ 에 의해 좌표 $(x^1,\ldots,\,x^N)$ 이 $(x'^1,\ldots,\,x'^N)$ 으로 변환된다고 하자. $R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}$ 이다. 이 변환 $R$ 에 대해 $T^{ij}$ 가 
+$N$ 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 $T^{ij}$ 를 생각하자. 이 때 $1 \le i,\,j \le N$ 이다. 그리고 $R\in SO(N)$ 에 의해 좌표 $(x^1,\ldots,\,x^N)$ 이 $(x'^1,\ldots,\,x'^N)$ 으로 변환된다고 하자. $R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}$ 이다. 이 변환 $R$ 에 대해 $T^{ij}$ 가 
 
 $$
 T'^{ij} = R^i_kR^j_lT^{kl}
+$$ {#eq-Group_transformation_of_tensor}
+
+과 같이 변환될 때 $T^{ij}$ 를 **2차 텐서 (rank-2 tensor)** 라고 한다는 것을 안다. 
+
+$T^{ij}$ 는 $N^2$ 개의 값으로 이루어져 있다. 이것을 $\R^{N^2}$ 에서 아래와 같이 표현하였다고 하자. 
+
+$$
+\left[T^{ij}\right] = \begin{bmatrix} T^{11} \\ T^{12} \\ \vdots \\ T^{NN}\end{bmatrix}
 $$
 
-과 같이 변환될 때 $T^{ij}$ 를 **2차 텐서 (rank-2 tensor)** 라고 한다. 
+그렇다면 텐서에 대한 회전은 $N^2 \times N^2$ 행렬로 표현 될 것이며 이렇게 표현된 회전은 $D(R)_{kl}^{ij} = R^i_k R^{j}_l$ 이다. 또한 @eq-Group_transformation_of_tensor 에 의해 $R,\,\overline{R}\in SO(N)$ 일 때
+
+$$
+\overline{T}^{ij} = {\overline{R}}^i_k {\overline{R}}^j_l (T'^{kl})={\overline{R}}^i_k {\overline{R}}^j_l R^k_m R^l_n T^{mn} = (\overline{R}R)^i_m (\overline{R}R)^j_n T^{mn}
+$$
+
+이다. 이것은 $R^{N^2}$ 표현에서 $D(\overline{R})D(R) = D(\overline{R}R)$ 임을 의미한다. 
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_tensor_as_a_product_of_two_vector}
+
+#### 두 벡터의 함섭곱으로서의 텐서
+
+$V,\,W\in \R^N$ 에 대해 $T^{ij}= V^iW^j$ 라고 하자.
+
+$$
+T'^{ij} = V'^iW'^j = R^i_m V^i R^j_n W^n = R^i_m R^j_n T^{ij}
+$$
+
+이므로 $T^{ij}$ 는 2차 텐서이다. 그러나 모든 텐서가 그런 것은 아니다. 또한 이런 형태의 텐서는 
+
+$$
+T^{11}/T^{21}=T^{22}/T^{22} = \cdots = T^{1N}/T^{2N} = V^1/V^2
+$$ 
+
+이므로 각 성분이 독립적이지 않다.
+
+:::
+
+</div></br>
+
+앞서 본 $N^2$ 차원 표현은 기약표현일까? 이를 알아보기 위해 아래의 $N^2$ 개의 인덱스를 갖는 두 물리량을 보기로 하자.
+
+$$
+A^{ij} := \dfrac{1}{2}\left( T^{ij} - T^{ji}\right),\qquad S^{ij}:= \dfrac{1}{2}\left( T^{ij} + T^{ji} \right).
+$$ {#eq-Group_assymetric_and_symmetric_tensor}
+
+이에 대해 
+$$
+\begin{aligned}
+A'^{ij} &= \dfrac{1}{2} \left(T'^{ij} - T'^{ji}\right) = \dfrac{1}{2}\left(R^i_m R^j_n T^{mn} - R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)A^{mn}, \\[0.3em]
+S'^{ij} &= \dfrac{1}{2}\left( T'^{ij} + T'^{ji}\right) = \dfrac{1}{2}\left( R^i_m R^j_n T^{mn}  +  R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)S^{mn}.
+\end{aligned}
+$$ {#eq-Group-tensor_like_transform_of_Aji_and_Sij}
+
+이므로 $A^{ij},\, S^{ij}$ 는 모두 2차 텐서이다. 이제 $A^{ij}$ 와 $S^{ij}$ 가 아래의 성질을 갖는다.
+
+$$
+A^{ij} = -A^{ji},\qquad S^{ij} = S^{ji}.
+$$ {#eq-Group_symmetric_properties_of_Aij_and_Sij}
+
+이로부터 $A^{ii}=0$ 이며 $A^{ij}$ 는 $N(N-1)/2$ 의 자유도를, $S^{ij} = N(N+1)/2$ 의 자유도를 갖는다는 것을 안다. $T^{ij} = S^{ij} + A^{ij}$
 
 
 
-### $SO(N)$ 의 표현 {#sec-Group_representation_of_SON}
+
+
 
 
