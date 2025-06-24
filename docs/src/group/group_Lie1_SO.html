@@ -325,7 +325,7 @@ window.Quarto = {
   <li><a href="#텐서와-son-의-표현" id="toc-텐서와-son-의-표현" class="nav-link" data-scroll-target="#텐서와-son-의-표현"><span class="header-section-number">9.3</span> 텐서와 <span class="math inline">\(SO(N)\)</span> 의 표현</a>
   <ul class="collapse">
   <li><a href="#sec-Group_representing_the_rotation_group_by_vector" id="toc-sec-Group_representing_the_rotation_group_by_vector" class="nav-link" data-scroll-target="#sec-Group_representing_the_rotation_group_by_vector"><span class="header-section-number">9.3.1</span> 벡터에 대한 회전군의 표현</a></li>
-  <li><a href="#sec-Group_Tensor" id="toc-sec-Group_Tensor" class="nav-link" data-scroll-target="#sec-Group_Tensor"><span class="header-section-number">9.3.2</span> 텐서</a></li>
+  <li><a href="#sec-Group_Tensor2" id="toc-sec-Group_Tensor2" class="nav-link" data-scroll-target="#sec-Group_Tensor2"><span class="header-section-number">9.3.2</span> 텐서</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -608,22 +608,47 @@ V'^i = R^i_j V^j
 </div>
 <p><br></p>
 </section>
-<section id="sec-Group_Tensor" class="level3" data-number="9.3.2">
-<h3 data-number="9.3.2" class="anchored" data-anchor-id="sec-Group_Tensor"><span class="header-section-number">9.3.2</span> 텐서</h3>
+<section id="sec-Group_Tensor2" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="sec-Group_Tensor2"><span class="header-section-number">9.3.2</span> 텐서</h3>
 <p><span class="math inline">\(N\)</span> 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 <span class="math inline">\(T^{ij}\)</span> 를 생각하자. 이 때 <span class="math inline">\(1 \le i,\,j \le N\)</span> 이다. 그리고 <span class="math inline">\(R\in SO(N)\)</span> 에 의해 좌표 <span class="math inline">\((x^1,\ldots,\,x^N)\)</span> 이 <span class="math inline">\((x'^1,\ldots,\,x'^N)\)</span> 으로 변환된다고 하자. <span class="math inline">\(R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}\)</span> 이다. 이 변환 <span class="math inline">\(R\)</span> 에 대해 <span class="math inline">\(T^{ij}\)</span> 가</p>
 <p><span id="eq-Group_transformation_of_tensor"><span class="math display">\[
 T'^{ij} = R^i_kR^j_lT^{kl}
 \tag{9.14}\]</span></span></p>
-<p>과 같이 변환될 때 <span class="math inline">\(T^{ij}\)</span> 를 <strong>2차 텐서 (rank-2 tensor)</strong> 라고 한다는 것을 안다.</p>
-<p><span class="math inline">\(T^{ij}\)</span> 는 <span class="math inline">\(N^2\)</span> 개의 값으로 이루어져 있다. 이것을 <span class="math inline">\(\mathbb{R}^{N^2}\)</span> 에서 아래와 같이 표현하였다고 하자.</p>
+<p>과 같이 변환될 때 <span class="math inline">\(T^{ij}\)</span> 를 <strong>2차 텐서 (rank-2 tensor)</strong> 라고 한다는 것을 안다. 이차 텐서 가운데 <span class="math inline">\(S^{ij} = S^{ji}\)</span> 인 텐설를 <strong>대칭 텐서 (symmetric tensor)</strong> 라고 하고, <span class="math inline">\(A^{ij}= - A^{ji}\)</span> 인 텐서를 <strong>반대칭 텐서 (skew-symmetric tensor)</strong> 라고 한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_decomposition_of_rank2_tensor" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 9.2</strong></span> <span class="math inline">\(\mathbb{R}^N\)</span> 에서 정의된 2차 텐서의 집합 <span class="math inline">\(\mathcal{T}\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간이다. 대칭텐서의 집합 <span class="math inline">\(\mathcal{S} \subset \mathcal{T}\)</span> 와 반대칭 텐서의 집합 <span class="math inline">\(\mathcal{A}\subset \mathcal{T}\)</span> 는 <span class="math inline">\(\mathcal{T}\)</span> 의 부분공간이며 <span class="math inline">\(\mathcal{T}=\mathcal{S}\oplus \mathcal{A}\)</span> 이다. <span class="math inline">\(\mathcal{S}\)</span> 가운데 <span class="math inline">\(S^{ij}=s_i\delta_{ij}\)</span> 의 집합을 <span class="math inline">\(\mathcal{S}_d\)</span>, <span class="math inline">\(S^{ii}=0,\,i=1,\ldots,\,n\)</span> 을 만족하는 집합을 <span class="math inline">\(\mathcal{S}_n\)</span> 이라고 하자. <span class="math inline">\(\mathcal{S} = \mathcal{S}_d \oplus \mathcal{S}_n\)</span> 이다. 즉</p>
+<p><span id="eq-Group_decomposition_of_rank2_tensor_by_symmetry"><span class="math display">\[
+\mathcal{T} = \mathcal{A} \oplus \mathcal{S}_d \oplus \mathcal{S}_n
+\tag{9.15}\]</span></span></p>
+<p>이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>모든 성분이 <span class="math inline">\(0\)</span> 인 <span class="math inline">\(O\)</span> 는 2차 텐서이므로 <span class="math inline">\(O\in \mathcal{T}\)</span> 이다. 따라서 <span class="math inline">\(\mathcal{T}\ne \varnothing\)</span> 이다. 임의의 <span class="math inline">\(T\in \mathcal{T}\)</span> 에 대해 <span class="math inline">\(O+T = T\)</span> 이다. 임의의 <span class="math inline">\(T,\,S\in \mathcal{T}\)</span> 와 <span class="math inline">\(c\in \mathbb{R}\)</span> 에 대해</p>
 <p><span class="math display">\[
-\left[T^{ij}\right] = \begin{bmatrix} T^{11} \\ T^{12} \\ \vdots \\ T^{NN}\end{bmatrix}
+\begin{aligned}
+(S'+ cT')^{ij} = R^i_k R^j_l (S^{kl}+cT^{kl})
+\end{aligned}
 \]</span></p>
-<p>그렇다면 텐서에 대한 회전은 <span class="math inline">\(N^2 \times N^2\)</span> 행렬로 표현 될 것이며 이렇게 표현된 회전은 <span class="math inline">\(D(R)_{kl}^{ij} = R^i_k R^{j}_l\)</span> 이다. 또한 <a href="#eq-Group_transformation_of_tensor" class="quarto-xref">식&nbsp;<span>9.14</span></a> 에 의해 <span class="math inline">\(R,\,\overline{R}\in SO(N)\)</span> 일 때</p>
+<p>이므로 <span class="math inline">\(\mathcal{T}\)</span> 는 벡터공간이다. <span class="math inline">\(\mathcal{A}\)</span> 와 <span class="math inline">\(\mathcal{S}\)</span> 가 <span class="math inline">\(\mathcal{T}\)</span> 의 벡터부분공간임은 쉽게 알 수 있다. 또한 <span class="math inline">\(\mathcal{A}\cap \mathcal{S} = \{O\}\)</span> 이다.</p>
+<p>임의의 <span class="math inline">\(T\in \mathcal{T}\)</span> 에 대해 <span class="math inline">\(A^{ij} = \frac{1}{2}(T^{ij}-T^{ji}),\, S^{ij} = \frac{1}{2}(T^{ij} +T^{ji})\)</span> 라고 하자. <span class="math inline">\(A\in \mathcal{A},\, S\in \mathcal{S}\)</span> 이며 <span class="math inline">\(T=A+S\)</span> 이므로 <span class="math inline">\(\mathcal{T}=\mathcal{A}\oplus \mathcal{S}\)</span> 이다.</p>
+<p><span class="math inline">\(\mathcal{S}=\mathcal{S}_d + \mathcal{S}_n\)</span> 임은 자명하다. 또한 <span class="math inline">\(\mathcal{S}_d \cap \mathcal{S}_n = \{O\}\)</span> 이다. 따라서, <a href="#eq-Group_decomposition_of_rank2_tensor_by_symmetry" class="quarto-xref">식&nbsp;<span>9.15</span></a> 가 성립한다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_dimension_of_subspace_of_rank2_tensor" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 9.3</strong></span> <a href="#prp-Group_decomposition_of_rank2_tensor" class="quarto-xref">명제&nbsp;<span>9.2</span></a> 에서 와 같이 <span class="math inline">\(\mathbb{R}^N\)</span> 에서 정의된 2차 텐서의 집합과 그 부분공간 <span class="math inline">\(\mathcal{A},\, \mathcal{S}_d,\, \mathcal{S}_n\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
-\overline{T}^{ij} = {\overline{R}}^i_k {\overline{R}}^j_l (T'^{kl})={\overline{R}}^i_k {\overline{R}}^j_l R^k_m R^l_n T^{mn} = (\overline{R}R)^i_m (\overline{R}R)^j_n T^{mn}
+\dim(\mathcal{T}) = N^2,\quad \dim(\mathcal{A})= \dfrac{N(N-1)}{2},\quad \dim(\mathcal{S}_d) = N,\quad \dim(\mathcal{S}_n) = \dfrac{N(N-1)}{2}
 \]</span></p>
-<p>이다. 이것은 <span class="math inline">\(R^{N^2}\)</span> 표현에서 <span class="math inline">\(D(\overline{R})D(R) = D(\overline{R}R)\)</span> 임을 의미한다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(T\in \mathcal{T}\)</span> 는 <span class="math inline">\(T^{ij},\, i,j=1,\ldots,\,N\)</span> 의 <span class="math inline">\(N^2\)</span> 개의 값을 가질 수 있으며 제한이 없으므로 <span class="math inline">\(\dim(\mathcal{T})=N^2\)</span> 이다. 나머지는 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
+</div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_tensor_as_a_product_of_two_vector" class="theorem example">
@@ -639,21 +664,31 @@ T^{11}/T^{21}=T^{22}/T^{22} = \cdots = T^{1N}/T^{2N} = V^1/V^2
 </div>
 </div>
 <p><br></p>
-<p>앞서 본 <span class="math inline">\(N^2\)</span> 차원 표현은 기약표현일까? 이를 알아보기 위해 아래의 <span class="math inline">\(N^2\)</span> 개의 인덱스를 갖는 두 물리량을 보기로 하자.</p>
-<p><span id="eq-Group_assymetric_and_symmetric_tensor"><span class="math display">\[
-A^{ij} := \dfrac{1}{2}\left( T^{ij} - T^{ji}\right),\qquad S^{ij}:= \dfrac{1}{2}\left( T^{ij} + T^{ji} \right).
-\tag{9.15}\]</span></span></p>
-<p>이에 대해 <span id="eq-Group-tensor_like_transform_of_Aji_and_Sij"><span class="math display">\[
-\begin{aligned}
-A'^{ij} &amp;= \dfrac{1}{2} \left(T'^{ij} - T'^{ji}\right) = \dfrac{1}{2}\left(R^i_m R^j_n T^{mn} - R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)A^{mn}, \\[0.3em]
-S'^{ij} &amp;= \dfrac{1}{2}\left( T'^{ij} + T'^{ji}\right) = \dfrac{1}{2}\left( R^i_m R^j_n T^{mn}  +  R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)S^{mn}.
-\end{aligned}
+<p><span class="math inline">\(S\in \mathcal{S}\)</span> 에 대해 <span class="math inline">\(\operatorname{tr}(S) := \sum_i S^{ii}\)</span> 는 회전 변환에 대해 불변임을 아래와 같이 보일 수 있다.</p>
+<p><span class="math display">\[
+\sum_i S'^{ii} = \sum_{i, k, l}R^i_k R^i_l S^{kl} = \sum_{i, k, l} \left(R^T\right)_i^k R^i_l S^{kl} = \sum_{k, l}\left(R^TR\right)^k_l S^{kl} = \delta^k_l S^{kl} = \sum_{k}S^{kk}
+\]</span></p>
+<p>이제 <span class="math inline">\(\tilde{S}^{ij}\)</span> 를 다음과 같이 정의하자.</p>
+<p><span id="eq-Group_tilde_sij"><span class="math display">\[
+\tilde{S}^{ij} := S^{ij} - \dfrac{\delta^{ij}}{N}\operatorname{tr}(S)
 \tag{9.16}\]</span></span></p>
-<p>이므로 <span class="math inline">\(A^{ij},\, S^{ij}\)</span> 는 모두 2차 텐서이다. 이제 <span class="math inline">\(A^{ij}\)</span> 와 <span class="math inline">\(S^{ij}\)</span> 가 아래의 성질을 갖는다.</p>
-<p><span id="eq-Group_symmetric_properties_of_Aij_and_Sij"><span class="math display">\[
-A^{ij} = -A^{ji},\qquad S^{ij} = S^{ji}.
-\tag{9.17}\]</span></span></p>
-<p>이로부터 <span class="math inline">\(A^{ii}=0\)</span> 이며 <span class="math inline">\(A^{ij}\)</span> 는 <span class="math inline">\(N(N-1)/2\)</span> 의 자유도를, <span class="math inline">\(S^{ij} = N(N+1)/2\)</span> 의 자유도를 갖는다는 것을 안다. <span class="math inline">\(T^{ij} = S^{ij} + A^{ij}\)</span></p>
+<p>그렇다면</p>
+<p><span class="math display">\[
+\tilde{S'}^{ij} = R^i_k R^j_l \tilde{S}^{kl} = S'^{ij} - \dfrac{\delta^{kl}}{N}\operatorname{tr}(S)
+\]</span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\operatorname{tr}(\tilde{S}) = \sum_i \tilde{S}^{ii}= 0
+\]</span></p>
+<p><a href="#prp-Group_dimension_of_subspace_of_rank2_tensor" class="quarto-xref">명제&nbsp;<span>9.3</span></a> 로부터 <span class="math inline">\(\mathbb{R}^n\)</span> 에서 정의된 2차 텐서 <span class="math inline">\(T\)</span> 는 <span class="math inline">\(\mathbb{R}^{N^2}\)</span> 벡터로 아래와 같이 표현 할 수 있다는 것을 안다.</p>
+<p><span class="math display">\[
+\begin{bmatrix} T^{11} \\ T^{12} \\ \vdots \\ T^{NN}\end{bmatrix}
+\]</span></p>
+<p>이렇게 <span class="math inline">\(\mathcal{T}\)</span> 를 열벡터로 표현한 벡터 공간은 <span class="math inline">\([\mathcal{T}]\)</span> 라고 하자. 같은 방식으로 <span class="math inline">\(\mathbb{R}^{N^2}\)</span> 에서 표현된 <span class="math inline">\([\mathcal{A}]\)</span>, <span class="math inline">\([\mathcal{S}]\)</span>, <span class="math inline">\([\mathcal{S}_d]\)</span>, <span class="math inline">\([\mathcal{S}_n]\)</span> 을 정의 할 수 있다. 또한 텐서에 대한 회전은 <span class="math inline">\(N^2 \times N^2\)</span> 행렬로 표현 될 것이며 이렇게 표현된 회전은 <span class="math inline">\(D(R)_{kl}^{ij} = R^i_k R^{j}_l\)</span> 이다. 또한 <a href="#eq-Group_transformation_of_tensor" class="quarto-xref">식&nbsp;<span>9.14</span></a> 에 의해 <span class="math inline">\(R,\,\overline{R}\in SO(N)\)</span> 일 때</p>
+<p><span class="math display">\[
+\overline{T}^{ij} = {\overline{R}}^i_k {\overline{R}}^j_l (T'^{kl})={\overline{R}}^i_k {\overline{R}}^j_l R^k_m R^l_n T^{mn} = (\overline{R}R)^i_m (\overline{R}R)^j_n T^{mn}
+\]</span></p>
+<p>이다. 이것은 <span class="math inline">\(R^{N^2}\)</span> 표현에서 <span class="math inline">\(D(\overline{R})D(R) = D(\overline{R}R)\)</span> 임을 의미한다.</p>
 
 
 </section>

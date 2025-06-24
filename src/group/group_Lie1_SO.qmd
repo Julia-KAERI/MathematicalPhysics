@@ -349,7 +349,7 @@ $$ {#eq-Group_transformation_of_vector_by_rotation}
 
 </br>
 
-### 텐서 {#sec-Group_Tensor}
+### 텐서 {#sec-Group_Tensor2}
 
 $N$ 차원 공간에서 정의된 두개의 인덱스를 가진 물리량 $T^{ij}$ 를 생각하자. 이 때 $1 \le i,\,j \le N$ 이다. 그리고 $R\in SO(N)$ 에 의해 좌표 $(x^1,\ldots,\,x^N)$ 이 $(x'^1,\ldots,\,x'^N)$ 으로 변환된다고 하자. $R^{i}_k = \dfrac{\partial x'^i}{\partial x^k}$ 이다. 이 변환 $R$ 에 대해 $T^{ij}$ 가 
 
@@ -357,21 +357,63 @@ $$
 T'^{ij} = R^i_kR^j_lT^{kl}
 $$ {#eq-Group_transformation_of_tensor}
 
-과 같이 변환될 때 $T^{ij}$ 를 **2차 텐서 (rank-2 tensor)** 라고 한다는 것을 안다. 
+과 같이 변환될 때 $T^{ij}$ 를 **2차 텐서 (rank-2 tensor)** 라고 한다는 것을 안다. 이차 텐서 가운데 $S^{ij} = S^{ji}$ 인 텐설를 **대칭 텐서 (symmetric tensor)** 라고 하고, $A^{ij}= - A^{ji}$ 인 텐서를 **반대칭 텐서 (skew-symmetric tensor)** 라고 한다.
 
-$T^{ij}$ 는 $N^2$ 개의 값으로 이루어져 있다. 이것을 $\R^{N^2}$ 에서 아래와 같이 표현하였다고 하자. 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-$$
-\left[T^{ij}\right] = \begin{bmatrix} T^{11} \\ T^{12} \\ \vdots \\ T^{NN}\end{bmatrix}
-$$
+::: {#prp-Group_decomposition_of_rank2_tensor}
 
-그렇다면 텐서에 대한 회전은 $N^2 \times N^2$ 행렬로 표현 될 것이며 이렇게 표현된 회전은 $D(R)_{kl}^{ij} = R^i_k R^{j}_l$ 이다. 또한 @eq-Group_transformation_of_tensor 에 의해 $R,\,\overline{R}\in SO(N)$ 일 때
+$\R^N$ 에서 정의된 2차 텐서의 집합 $\mathcal{T}$ 는 $\R$-벡터공간이다. 대칭텐서의 집합 $\mathcal{S} \subset \mathcal{T}$ 와 반대칭 텐서의 집합 $\mathcal{A}\subset \mathcal{T}$ 는 $\mathcal{T}$ 의 부분공간이며 $\mathcal{T}=\mathcal{S}\oplus \mathcal{A}$ 이다. $\mathcal{S}$ 가운데 $S^{ij}=s_i\delta_{ij}$ 의 집합을 $\mathcal{S}_d$, $S^{ii}=0,\,i=1,\ldots,\,n$ 을 만족하는 집합을 $\mathcal{S}_n$ 이라고 하자. $\mathcal{S} = \mathcal{S}_d \oplus \mathcal{S}_n$ 이다. 즉
 
 $$
-\overline{T}^{ij} = {\overline{R}}^i_k {\overline{R}}^j_l (T'^{kl})={\overline{R}}^i_k {\overline{R}}^j_l R^k_m R^l_n T^{mn} = (\overline{R}R)^i_m (\overline{R}R)^j_n T^{mn}
+\mathcal{T} = \mathcal{A} \oplus \mathcal{S}_d \oplus \mathcal{S}_n
+$$ {#eq-Group_decomposition_of_rank2_tensor_by_symmetry}
+
+이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+모든 성분이 $0$ 인 $O$ 는 2차 텐서이므로 $O\in \mathcal{T}$ 이다. 따라서 $\mathcal{T}\ne \varnothing$ 이다. 임의의 $T\in \mathcal{T}$ 에 대해 $O+T = T$ 이다. 임의의 $T,\,S\in \mathcal{T}$ 와 $c\in \R$ 에 대해
+
+$$
+\begin{aligned}
+(S'+ cT')^{ij} = R^i_k R^j_l (S^{kl}+cT^{kl})
+\end{aligned}
 $$
 
-이다. 이것은 $R^{N^2}$ 표현에서 $D(\overline{R})D(R) = D(\overline{R}R)$ 임을 의미한다. 
+이므로 $\mathcal{T}$ 는 벡터공간이다. $\mathcal{A}$ 와 $\mathcal{S}$ 가 $\mathcal{T}$ 의 벡터부분공간임은 쉽게 알 수 있다. 또한 $\mathcal{A}\cap \mathcal{S} = \{O\}$ 이다.
+
+임의의 $T\in \mathcal{T}$ 에 대해 $A^{ij} = \frac{1}{2}(T^{ij}-T^{ji}),\, S^{ij} = \frac{1}{2}(T^{ij} +T^{ji})$ 라고 하자. $A\in \mathcal{A},\, S\in \mathcal{S}$ 이며 $T=A+S$ 이므로 $\mathcal{T}=\mathcal{A}\oplus \mathcal{S}$ 이다. 
+
+$\mathcal{S}=\mathcal{S}_d + \mathcal{S}_n$ 임은 자명하다. 또한 $\mathcal{S}_d \cap \mathcal{S}_n = \{O\}$ 이다. 따라서, @eq-Group_decomposition_of_rank2_tensor_by_symmetry 가 성립한다. $\square$
+
+:::
+
+</br>
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_dimension_of_subspace_of_rank2_tensor}
+
+@prp-Group_decomposition_of_rank2_tensor 에서 와 같이 $\R^N$ 에서 정의된 2차 텐서의 집합과 그 부분공간 $\mathcal{A},\, \mathcal{S}_d,\, \mathcal{S}_n$ 에 대해 다음이 성립한다.
+
+$$
+\dim(\mathcal{T}) = N^2,\quad \dim(\mathcal{A})= \dfrac{N(N-1)}{2},\quad \dim(\mathcal{S}_d) = N,\quad \dim(\mathcal{S}_n) = \dfrac{N(N-1)}{2}
+$$
+
+:::
+
+</div>
+
+::: {.proof}
+
+$T\in \mathcal{T}$ 는 $T^{ij},\, i,j=1,\ldots,\,N$ 의 $N^2$ 개의 값을 가질 수 있으며 제한이 없으므로 $\dim(\mathcal{T})=N^2$ 이다. 나머지는 쉽게 보일 수 있다. $\square$
+
+:::
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -394,34 +436,52 @@ $$
 이므로 각 성분이 독립적이지 않다.
 
 :::
-
 </div></br>
 
-앞서 본 $N^2$ 차원 표현은 기약표현일까? 이를 알아보기 위해 아래의 $N^2$ 개의 인덱스를 갖는 두 물리량을 보기로 하자.
+$S\in \mathcal{S}$ 에 대해 $\tr (S) := \sum_i S^{ii}$ 는 회전 변환에 대해 불변임을 아래와 같이 보일 수 있다.
 
 $$
-A^{ij} := \dfrac{1}{2}\left( T^{ij} - T^{ji}\right),\qquad S^{ij}:= \dfrac{1}{2}\left( T^{ij} + T^{ji} \right).
-$$ {#eq-Group_assymetric_and_symmetric_tensor}
-
-이에 대해 
+\sum_i S'^{ii} = \sum_{i, k, l}R^i_k R^i_l S^{kl} = \sum_{i, k, l} \left(R^T\right)_i^k R^i_l S^{kl} = \sum_{k, l}\left(R^TR\right)^k_l S^{kl} = \delta^k_l S^{kl} = \sum_{k}S^{kk}
 $$
-\begin{aligned}
-A'^{ij} &= \dfrac{1}{2} \left(T'^{ij} - T'^{ji}\right) = \dfrac{1}{2}\left(R^i_m R^j_n T^{mn} - R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)A^{mn}, \\[0.3em]
-S'^{ij} &= \dfrac{1}{2}\left( T'^{ij} + T'^{ji}\right) = \dfrac{1}{2}\left( R^i_m R^j_n T^{mn}  +  R^j_n R^i_m T^{nm}\right) =  (R^i_m R^j_n)S^{mn}.
-\end{aligned}
-$$ {#eq-Group-tensor_like_transform_of_Aji_and_Sij}
 
-이므로 $A^{ij},\, S^{ij}$ 는 모두 2차 텐서이다. 이제 $A^{ij}$ 와 $S^{ij}$ 가 아래의 성질을 갖는다.
+이제 $\tilde{S}^{ij}$ 를 다음과 같이 정의하자.
 
 $$
-A^{ij} = -A^{ji},\qquad S^{ij} = S^{ji}.
-$$ {#eq-Group_symmetric_properties_of_Aij_and_Sij}
+\tilde{S}^{ij} := S^{ij} - \dfrac{\delta^{ij}}{N}\tr(S)
+$$ {#eq-Group_tilde_sij}
 
-이로부터 $A^{ii}=0$ 이며 $A^{ij}$ 는 $N(N-1)/2$ 의 자유도를, $S^{ij} = N(N+1)/2$ 의 자유도를 갖는다는 것을 안다. $T^{ij} = S^{ij} + A^{ij}$
+그렇다면
+
+$$
+\tilde{S'}^{ij} = R^i_k R^j_l \tilde{S}^{kl} = S'^{ij} - \dfrac{\delta^{kl}}{N}\tr(S)
+$$
+
+이며
+
+$$
+\tr (\tilde{S}) = \sum_i \tilde{S}^{ii}= 0
+$$
 
 
 
 
 
+
+
+
+@prp-Group_dimension_of_subspace_of_rank2_tensor 로부터 $\R^n$ 에서 정의된 2차 텐서 $T$ 는 $\R^{N^2}$ 벡터로 아래와 같이 표현 할 수 있다는 것을 안다. 
+
+$$
+\begin{bmatrix} T^{11} \\ T^{12} \\ \vdots \\ T^{NN}\end{bmatrix}
+$$
+
+
+이렇게 $\mathcal{T}$ 를 열벡터로 표현한 벡터 공간은 $[\mathcal{T}]$ 라고 하자. 같은 방식으로 $\R^{N^2}$ 에서 표현된 $[\mathcal{A}]$, $[\mathcal{S}]$, $[\mathcal{S}_d]$, $[\mathcal{S}_n]$ 을 정의 할 수 있다. 또한 텐서에 대한 회전은 $N^2 \times N^2$ 행렬로 표현 될 것이며 이렇게 표현된 회전은 $D(R)_{kl}^{ij} = R^i_k R^{j}_l$ 이다. 또한 @eq-Group_transformation_of_tensor 에 의해 $R,\,\overline{R}\in SO(N)$ 일 때
+
+$$
+\overline{T}^{ij} = {\overline{R}}^i_k {\overline{R}}^j_l (T'^{kl})={\overline{R}}^i_k {\overline{R}}^j_l R^k_m R^l_n T^{mn} = (\overline{R}R)^i_m (\overline{R}R)^j_n T^{mn}
+$$
+
+이다. 이것은 $R^{N^2}$ 표현에서 $D(\overline{R})D(R) = D(\overline{R}R)$ 임을 의미한다. 
 
 
