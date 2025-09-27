@@ -341,13 +341,11 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$$
-(A')^{ijk..}_{lmn...} = \dfrac{\partial (x')^i}{\partial x^{i'}} \cdots \dfrac{\partial x^{l'}}{\partial (x')^l}\cdots A^{i'j'k'}_{l'm'n'} = 0
-$$
+$\displaystyle (A')^{ijk..}_{lmn...} = \dfrac{\partial (x')^i}{\partial x^{i'}} \cdots \dfrac{\partial x^{l'}}{\partial (x')^l}\cdots A^{i'j'k'}_{l'm'n'} = 0$
 
 
 :::
@@ -369,13 +367,11 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$$
-A_{ij}= \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}A^0_{kl} = \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}B^0_{kl} = B_{ij}
-$$
+$A_{ij}= \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}A^0_{kl} = \dfrac{\partial x^k}{\partial (x^0)^i}\dfrac{\partial x^l}{\partial (x^0)^j}B^0_{kl} = B_{ij}$
 
 :::
 
@@ -391,7 +387,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -420,7 +416,7 @@ $$
 좌표축에 대한 $90^\circ$, $180^\circ$ 회전을 생각하여 3차원 공간에서의 rank 2 텐서 가운데 등방 텐서인 것은 $\delta^i_j$ 의 스칼라 곱 밖에 없음을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 .. to be done..
@@ -457,7 +453,7 @@ $${#eq-Tensor_Arfket_4_1_5_3}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -482,7 +478,7 @@ $${#eq-Tensor_Arfket_4_1_5_3}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -500,14 +496,11 @@ $i,\,k,\,l,\,m$ 가운데 최소한 2개는 같으므로 성분이 모두 $0$ �
 $T_{...i}$ 는 랭크 $n$ 텐서이다. $\partial T_{...i}/\partial x^j$ 는 랭크 $n+1$ 텐서 임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$$
-T'_{...k} = [n \text{ 개의 좌표 편미분의 곱}] T'_{...i}
-$$
-이므로
+$T'_{...k} = [n \text{ 개의 좌표 편미분의 곱}] T'_{...i}$ 이므로
 
 $$
 \dfrac{\partial T'_{...i}}{\partial x'^j} = \dfrac{\partial x_k}{\partial x'^j}[n \text{ 개의 좌표 편미분의 곱}]\dfrac{\partial T_{...i} }{\partial x_k}
@@ -528,7 +521,7 @@ $T_{ijk...}$ 는 랭크 $n$ 텐서이다. $\sum_j \partial T_{ijk...}/\partial x
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -547,7 +540,7 @@ contraction 에 의해 랭크 $n-1$ 텐서가 된다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -568,15 +561,15 @@ $$
 
 </br>
 
-## Pseudotensor 와 Dual Tensor
+## 유사텐서와 쌍대텐서
 
-### Pseudovector 와 pseudotensor {#sec-Tensor_}
+### 유사벡터 와 유사텐서 {#sec-Tensor_pseudo_vector_and_pseudo_tensor}
 
 지금까지 우리는 좌표의 회전에 대해서만 양의 변화를 보았다. 이제 반사(reflection) 이나 반전(inversion) 과 같은 변화를 살펴보자(이를 improper rotation 이라고 한다)
 
-벡터 $A$ 는 회전, 혹은 그 행렬식이 $1$ 인 변환 $R$ 에 대해 $A'=RA$ 와 같이 변환된다. 반전과 같이 행렬식이 $-1$ 인 변환 $R^-$ 에 대해서는 상황이 다르다. 반전(Inversion) 을 생각하자. 위치나 속도와 같은 벡터들은 반전에 대해 $A'=R^- A$ 와 같이 변환된다. 그러나 각운동량, 토크, 각속도와 같은 벡터 물리량은 $A'=\det (R^-) R^- A$ 와 같이 변환된다. 이렇게 좌표와 다른 방식의 대칭성을 가지고 변화하는 벡터를 **pseudovectors**(의사 벡터, 혹은 axial vectors) 라고 한다. 
+벡터 $A$ 는 회전, 혹은 그 행렬식이 $1$ 인 변환 $R$ 에 대해 $A'=RA$ 와 같이 변환된다. 반전과 같이 행렬식이 $-1$ 인 변환 $R^-$ 에 대해서는 상황이 다르다. 반전(Inversion) 을 생각하자. 위치나 속도와 같은 벡터들은 반전에 대해 $A'=R^- A$ 와 같이 변환된다. 그러나 각운동량, 토크, 각속도와 같은 벡터 물리량은 $A'=\det (R^-) R^- A$ 와 같이 변환된다. 이렇게 좌표와 다른 방식의 대칭성을 가지고 변화하는 벡터를 **유사 벡터 (pseudo vectors)**(혹은 axial vectors) 라고 한다. 
 
-이런 pseudovector 의 개념은 임의의 rank 를 가진 텐서로 확장 될 수 있다. 어떤 직교 변환 $R$ 에 대해 일반적인 텐서 변환식에 $\det(R)$ 을 곱한 것으로 변화하는 텐서를 pseudotensor 라고 한다.
+이런 유사벡터 의 개념은 임의의 rank 를 가진 텐서로 확장 될 수 있다. 어떤 직교 변환 $R$ 에 대해 일반적인 텐서 변환식에 $\det(R)$ 을 곱한 것으로 변화하는 텐서를 pseudotensor 라고 한다.
 
 </br>
 
@@ -662,7 +655,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -676,9 +669,7 @@ $$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_4_2_3}
 #### Arfken 4.2.3
@@ -687,7 +678,7 @@ $\nabla \bf{\cdot}\nabla \times \bf{A}$ 와 $\nabla \times \nabla \phi$ 를 $\R^
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -700,9 +691,7 @@ $$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_4_2_4}
 #### Arfken 4.2.4
@@ -716,7 +705,7 @@ $$
 ($c$) $C^{ij}_{kl} = \delta^{i}_k \delta^j_l - \delta^i_l \delta^j_k$.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 ($a$)
@@ -741,9 +730,7 @@ $$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_4_2_5}
 #### Arfken 4.2.5
@@ -752,17 +739,14 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 @exm-Tensor_levi_civita 의 2차원 버젼이다. $\delta^{i}_j$ 는 3차원서 등방 텐서이며 $\epsilon_{ij}$ 는 2차원에서 등방 텐서이다. 
 
-
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_4_2_7}
 #### Arfken 4.2.7
@@ -775,7 +759,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
