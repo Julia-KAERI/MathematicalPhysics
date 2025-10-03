@@ -74,7 +74,7 @@ $$
 :::
 
 
-따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic functions) $Y_l^m( \theta,\, \varphi)$ 는 르장드르 연관 함수(associated Legendre function) $P_l^m$ 과 음이 아닌 정수 $l$ 그리고 $|m|\le l$ 인 정수 $m$ 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 @arfken2013mathematical 을 참고하라.)
+따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic functions) $Y_l^m( \theta,\, \varphi)$ 는 르장드르 연관 함수(associated Legendre function) $P_l^m$ 과 음이 아닌 정수 $l$ 그리고 $|m|\le l$ 인 정수 $m$ 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 @Arfken2013Mathematical 을 참고하라.)
 
 $$
 Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}.

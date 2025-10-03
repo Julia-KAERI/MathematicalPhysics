@@ -60,7 +60,7 @@ $D$ 가 두 군 $G,\, GL_n(\F)$ 사이의 준동형사상이므로 자명하다.
 
 #### Trivial representation
 
-임의의 군 $G$ 에 대해 $D^{(1)}: G \to GL_1$ 을 $D^{(1)}(g) = [1]$ 로 정의하면 $D^{(1)}$ 은 $G$ 에 대한 표현이다. 가장 단순한 표현이므로 **trivial representation** (@tinkham2012group 는 identical representation 이라고 한다.)
+임의의 군 $G$ 에 대해 $D^{(1)}: G \to GL_1$ 을 $D^{(1)}(g) = [1]$ 로 정의하면 $D^{(1)}$ 은 $G$ 에 대한 표현이다. 가장 단순한 표현이므로 **trivial representation** (@Tinkham2012Group 는 identical representation 이라고 한다.)
 
 :::
 
@@ -738,7 +738,7 @@ tiviial
 
 아래 그림과 같이 정사각형을 자기 자신으로 변환시키는 아래 그림과 같은 회전 변환으로 이루어진 군($D_4$) 에 대해 $2 \times 2$ 행렬 표현을 구하라. 또한 Cayley table 을 만들라.
 
-![$D_4$ 대칭군, 출처 : @arfken2013mathematical](figures/d4_3d.png){#fig-Group-D4_3d width=250}
+![$D_4$ 대칭군, 출처 : @Arfken2013Mathematical](figures/d4_3d.png){#fig-Group-D4_3d width=250}
 
 :::
 
@@ -1215,7 +1215,7 @@ $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 
 ### Character 에 대한 제 2 직교정리 {#sec-Group_2nd_orthogonality_theorem_of_characters}
 
-@tinkham2012group 은 @eq-Group_equality_from_orthogonality_of_character_theorem 을 증명 없이 전제하고 제 2 직교정리를 증명했다. @zee2016group 는 프로베니우스 대수를 도입하여 character 에 대한 제 2 직교정리를 증명하고 이로부터 @eq-Group_equality_from_orthogonality_of_character_theorem 를 증명했다. 여기서는 @tinkham2012group 과 같이 @eq-Group_equality_from_orthogonality_of_character_theorem 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. @zee2016group 의 방법은 [Character 의 제 2 직교 정리](group_aux.qmd#sec-GroupAux-the_second_orthogonality_theorem_for_characters) 에 소개한다. 
+@Tinkham2012Group 은 @eq-Group_equality_from_orthogonality_of_character_theorem 을 증명 없이 전제하고 제 2 직교정리를 증명했다. @Zee2016Group 는 프로베니우스 대수를 도입하여 character 에 대한 제 2 직교정리를 증명하고 이로부터 @eq-Group_equality_from_orthogonality_of_character_theorem 를 증명했다. 여기서는 @Tinkham2012Group 과 같이 @eq-Group_equality_from_orthogonality_of_character_theorem 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. @Zee2016Group 의 방법은 [Character 의 제 2 직교 정리](group_aux.qmd#sec-GroupAux-the_second_orthogonality_theorem_for_characters) 에 소개한다. 
 
 
 우선 @eq-Group_equality_from_orthogonality_of_character_theorem 을 소개한다.
@@ -1614,7 +1614,7 @@ $E$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\
 
 
 
-Character table 은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 character 값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. @zee2016group 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.
+Character table 은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 character 값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. @Zee2016Group 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.
 
 Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 $[\;]$ 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. $D_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. $D_3$ 에 대한 character table 은 아래와 같다. 
 

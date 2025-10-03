@@ -10,19 +10,12 @@ crossref:
 
 </br>
 
-### 참고자료 {.unnumbered}
-::: {#refs}
-
-
-:::
-
-</br>
 
 ## 헬름홀츠 정리
 
 
 ::: {.callout-note appearance="minimal"}
-엄밀한 의미와 증명에 대해서는 @johns2023helmholtztheoremuniqueness 를 참고하라. 
+엄밀한 의미와 증명에 대해서는 @Johns2023helmholtztheoremuniqueness 를 참고하라. 
 :::
 
 

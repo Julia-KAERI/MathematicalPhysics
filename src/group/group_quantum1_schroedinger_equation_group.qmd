@@ -28,7 +28,7 @@ $$ {#eq-Group_schroedinger_equation}
 ::: {#def-Group_schoroedinger_equation_group}
 #### 슈뢰딩거 방정식 군
 
-해밀토니안 $\hat{H}$ 와 commute 한 유니타리 변환의 집합을 **슈뢰딩거 방정식 군(the group of Schrödinger equation)**$^\ast$[$^\ast$ [슈뢰딩거 군(Schrödinger group)](https://en.wikipedia.org/wiki/Schrödinger_group) 과는 다르다.]{.aside} 이라고 한다(@tinkham2012group)
+해밀토니안 $\hat{H}$ 와 commute 한 유니타리 변환의 집합을 **슈뢰딩거 방정식 군(the group of Schrödinger equation)**$^\ast$[$^\ast$ [슈뢰딩거 군(Schrödinger group)](https://en.wikipedia.org/wiki/Schrödinger_group) 과는 다르다.]{.aside} 이라고 한다(@Tinkham2012Group)
 
 :::
 :::
@@ -684,7 +684,7 @@ $$
 
 ::: {.proof}
 
-슈어 보조정리(@lem-Group_schur_lemma) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(@tinkham2012group pp. 44)
+슈어 보조정리(@lem-Group_schur_lemma) 를 이용해 증명 할 수 있으며, Wigner 책 16장 에 나와 있다고 하더라.(@Tinkham2012Group pp. 44)
 :::
 
 </br>
