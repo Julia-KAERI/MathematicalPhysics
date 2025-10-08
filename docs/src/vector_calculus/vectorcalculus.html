@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,7 +132,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/vector calculus/vectorcalculus.html">벡터해석</a></li><li class="breadcrumb-item"><a href="../../src/vector calculus/vectorcalculus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/vector_calculus/vectorcalculus.html">벡터해석</a></li><li class="breadcrumb-item"><a href="../../src/vector_calculus/vectorcalculus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +183,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/vector calculus/vectorcalculus.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/vector_calculus/vectorcalculus.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></span></a>
   </div>
 </li>
@@ -320,7 +340,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/vector calculus/vectorcalculus.html">벡터해석</a></li><li class="breadcrumb-item"><a href="../../src/vector calculus/vectorcalculus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/vector_calculus/vectorcalculus.html">벡터해석</a></li><li class="breadcrumb-item"><a href="../../src/vector_calculus/vectorcalculus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터 해석의 주요 사항</span></h1>
 </div>
@@ -359,7 +379,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>엄밀한 의미와 증명에 대해서는 <span class="citation" data-cites="johns2023helmholtztheoremuniqueness">(<a href="#ref-johns2023helmholtztheoremuniqueness" role="doc-biblioref"><strong>johns2023helmholtztheoremuniqueness?</strong></a>)</span> 를 참고하라.</p>
+<p>엄밀한 의미와 증명에 대해서는 <span class="citation" data-cites="Johns2023helmholtztheoremuniqueness">Johns (<a href="#ref-Johns2023helmholtztheoremuniqueness" role="doc-biblioref">2023</a>)</span> 를 참고하라.</p>
 </div>
 </div>
 </div>
@@ -368,7 +388,6 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>정리 1.1</strong></span> 단순 연결 구간 <span class="math inline">\(X\)</span> 에서 그 내부와 경계에서의 수직방향성분에 대한 divergence 와 curl 을 안다면 벡터장은 이 <span class="math inline">\(X\)</span> 에서 유일하게 정해진다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{P}_1,\, \boldsymbol{P}_2\)</span> 가 조건을 만족하는 두 벡터장이라고 하고 <span class="math inline">\(\boldsymbol{Q}=\boldsymbol{P}_1-\boldsymbol{P}_2\)</span> 라고 하자. 조건에 의해</p>
 <p><span class="math display">\[
@@ -395,7 +414,6 @@ window.Quarto = {
 <p>형태이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 우리는 다음 식이 성립함을 안다. <span id="eq-VectorCalculus_hemlhomtz_1"><span class="math display">\[
 \nabla^2 \dfrac{1}{\|\boldsymbol{r}\|} = -4\pi \delta(\boldsymbol{r})
@@ -439,6 +457,11 @@ window.Quarto = {
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Johns2023helmholtztheoremuniqueness" class="csl-entry" role="listitem">
+Johns, Oliver Davis. 2023. <span>“Helmholtz Theorem and Uniqueness.”</span> <a href="https://arxiv.org/abs/2310.20055">https://arxiv.org/abs/2310.20055</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
