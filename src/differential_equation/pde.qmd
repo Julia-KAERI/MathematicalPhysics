@@ -4,8 +4,13 @@ title: "편미분 방정식의 이론적 배경"
 number-sections: true
 number-depth: 3
 crossref:
-  chapters: false
+  chapters: true
 ---
+
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
 
 ## 대표적인 편미분방정식
 
@@ -26,13 +31,13 @@ crossref:
 
 ## 1계 편미분 방정식
 
-### 특성곡선법 
+### 특성곡선법 {#sec-DE_PDE_method_of_characteristic_curve}
 
 상미분방정식과 같이 선형 편미분 연산자를 $\mathcal{L}$ 이라고 하자. 다음과 같이 주어진 편미분 방정식을 생각하자.
 
 $$
 \mathcal{L}\varphi = a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} = 0.
-$$ {#eq-pde_1st_example}
+$$ {#eq-DE_PDE_1st_example}
 
 이 경우 $s=ax+by,\, t= bx-ay$ 로 선형 변환을 해 주면, 
 
@@ -41,28 +46,28 @@ $$
 0 &= a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} = a \left(\dfrac{\partial \varphi}{\partial s}\dfrac{\partial s}{\partial x}+\dfrac{\partial \varphi}{\partial t}\dfrac{\partial t}{\partial x}\right) + b\left(\dfrac{\partial \varphi}{\partial s}\dfrac{\partial s}{\partial y}+\dfrac{\partial \varphi}{\partial t}\dfrac{\partial t}{\partial y}\right) \\
 &= (a^2+b^2)\dfrac{\partial \varphi}{\partial s}
 \end{aligned}
-$$ {#eq-pde_1st_example_2}
+$$ {#eq-DE_PDE_1st_example_2}
 
 
-이 되며, 따라서 $\varphi$ 는 $t$ 의 함수이다. 즉, 임의의 $C^1$ 함수 $f$ 에 대해 $\varphi(x,\,y) = f(bx - ay)$ 이며 다른 조건은 더이상 찾을 수 없다. 즉 @eq-pde_1st_example 에서와 같은 편미분 방정식이 $\dfrac{d\varphi}{ds}=0$ 인 1계 상미분방정식으로 변한다. 이렇게 편미분 방정식을 하나 혹은 그 이상의 상미분 방정식으로 변환하는 것을 **특성곡선법(method of characteristics)** 이라고 하며 변화된 상미분 방정식 **특성 곡선 (characteristic curve)** 혹은 **특성 곡면(characteristic curve)** 라고 한다.
+이 되며, 따라서 $\varphi$ 는 $t$ 의 함수이다. 즉, 임의의 $C^1$ 함수 $f$ 에 대해 $\varphi(x,\,y) = f(bx - ay)$ 이며 다른 조건은 더이상 찾을 수 없다. 즉 @eq-DE_PDE_1st_example 에서와 같은 편미분 방정식이 $\dfrac{d\varphi}{ds}=0$ 인 1계 상미분방정식으로 변한다. 이렇게 편미분 방정식을 하나 혹은 그 이상의 상미분 방정식으로 변환하는 것을 **특성곡선법(method of characteristics)** 이라고 하며 변화된 상미분 방정식 **특성 곡선 (characteristic curve)** 혹은 **특성 곡면(characteristic curve)** 라고 한다.
 
 
-이제 @eq-pde_1st_example 을 다시 보자. $\mathbb{R}^2$ 에서 생각하면 $\boldsymbol{a} = (a,\,b)$ 에 대해 $\boldsymbol{a} \cdot \nabla \varphi (x,\,y)=0$ 인 함수 $\varphi (x,\,y)$ 를 찾는 것이다. $\nabla \varphi (x,\,y)$ 는 $x,\,y$ 에서 $\varphi$ 가 최대로 증가하는 벡터를 의미하며 $\boldsymbol{a} \cdot \nabla \varphi = 0$ 이므로 $\boldsymbol{a}$ 는 $\varphi (x, y)=c$ 인 방향을 의미한다. 즉 $t=bx-ay$ 를 상수로 놓으면 $\varphi (x,\,y)$ 도 상수이다. *-- to be extended--*
+이제 @eq-DE_PDE_1st_example 을 다시 보자. $\mathbb{R}^2$ 에서 생각하면 $\boldsymbol{a} = (a,\,b)$ 에 대해 $\boldsymbol{a} \cdot \nabla \varphi (x,\,y)=0$ 인 함수 $\varphi (x,\,y)$ 를 찾는 것이다. $\nabla \varphi (x,\,y)$ 는 $x,\,y$ 에서 $\varphi$ 가 최대로 증가하는 벡터를 의미하며 $\boldsymbol{a} \cdot \nabla \varphi = 0$ 이므로 $\boldsymbol{a}$ 는 $\varphi (x, y)=c$ 인 방향을 의미한다. 즉 $t=bx-ay$ 를 상수로 놓으면 $\varphi (x,\,y)$ 도 상수이다. *-- to be extended--*
 
 
 이제 좀 더 일반적인 경우를 살펴보자. 아래와 같이 선형 미분 연산자 $\mathcal{L}$ 에 대한 inhomogeneouse 미분방정식
 
 $$
 \mathcal{L}\varphi = a\dfrac{\partial \varphi}{\partial x} + b \dfrac{\partial \varphi}{\partial y} +q(x,\,y)\varphi = F(x, y)\,.
-$$ {#eq-pde_2nd_example}
+$$ {#eq-DE_PDE_2nd_example}
 
 를 앞에서와 같이 $s=ax+by,\, t=bx-ay$ 로 변수를 변환시키면,
 
 $$
 (a^2+b^2) \left(\dfrac{\partial \varphi}{\partial s}\right)+ \overline{q}(s, t) \varphi = \overline{F}(s, t)
-$$ {#eq-pde_2nd_example_2}
+$$ {#eq-DE_PDE_2nd_example_2}
 
-이다. 여기서 $\overline{q},\,\overline{F}$ 는 $q(x,\,y),\, F(x,\,y)$ 를 $x=\dfrac{as}{a^2+b^2} + \dfrac{bt}{a^2+b^2}$, $y=\dfrac{bs}{a^2+b^2}s - \dfrac{at}{a^2+b^2}$ 로 변환시킨 함수이다. 이 경우 @eq-pde_2nd_example_2 는 $\varphi$ 의 $s$ 에 대한 1계 ODE 이며 $t$-constant function 이 특성곡선이 된다.
+이다. 여기서 $\overline{q},\,\overline{F}$ 는 $q(x,\,y),\, F(x,\,y)$ 를 $x=\dfrac{as}{a^2+b^2} + \dfrac{bt}{a^2+b^2}$, $y=\dfrac{bs}{a^2+b^2}s - \dfrac{at}{a^2+b^2}$ 로 변환시킨 함수이다. 이 경우 @eq-DE_PDE_2nd_example_2 는 $\varphi$ 의 $s$ 에 대한 1계 ODE 이며 $t$-constant function 이 특성곡선이 된다.
 
 </br>
 
@@ -70,10 +75,9 @@ $$ {#eq-pde_2nd_example_2}
 
 이제 LHODE 와 같이 선형 제차 편미분방정식을 LHPDE 라고 쓰자. 그리고 함수 $u(x, y)$ 에 대해 $u_{x} = \dfrac{\partial u}{\partial x}$, $u_{xy}= \dfrac{\partial^2 u}{\partial x\partial y}$ 라고 쓰기로 하자. 이것은 타이핑을 많이 줄여준다. 
 
-
 ### 2계 PDE 의 분류
 
-#### 2차원의 경우
+#### **2차원의 경우**
 
 2차원에서의 2계 LHPDE 는 다음과 같은 꼴을 갖는다.
 
@@ -114,7 +118,7 @@ $$
 
 </br>
 
-#### 다차원의 경우
+#### **다차원의 경우**
 
 주로 2차원 공간 + 시간, 3차원 공간, 3차원 공간+시간 의 경우이며 이보다 많은 차원의 경우도 생각 할 수 있다.
 
@@ -142,7 +146,7 @@ $n$ 개의 변수에 대한 PDE 를 $n$ 개의 ODE 로 변환시키는 방법이
 다음과 같이 주어지는 3차원에서의 헬름홀츠 방정식을 생각하자.
 $$
 \nabla^2 \psi + k^2 \psi = 0.
-$$ {#eq-pde-helmholtz_3d}
+$$ {#eq-DE_PDE_helmholtz_3d}
 
 3차원 $(x,\,y,\,z)$ 에서 정의되는 함수 $\psi$ 를 각각 $x,\,y,\,z$ 에 대한 함수의 곱으로 표현하자. 즉, 
 
@@ -150,7 +154,7 @@ $$
 \psi(x,\,y,\,z) = X(x)Y(y)Z(z)
 $$
 
-라고 하자. @eq-pde-helmholtz_3d 를 보면 모든 미분항이 하나의 변수에 대한 미분항이다. 즉 $\partial_x\partial_y$ 같은 것이 없으며, 이 경우 각 변수에 대한 함수의 곱으로 표현했을 때 유용한 경우가 많다. 이렇게 다차원 함수를 각 변수에 대한 함수의 곱으로 표현하여 방정식을 푸는 것을 **변수분리법(separation of variables)** 이라고 한다. 이 경우 @eq-pde-helmholtz_3d 는 다음과 같다. 
+라고 하자. @eq-DE_PDE_helmholtz_3d 를 보면 모든 미분항이 하나의 변수에 대한 미분항이다. 즉 $\partial_x\partial_y$ 같은 것이 없으며, 이 경우 각 변수에 대한 함수의 곱으로 표현했을 때 유용한 경우가 많다. 이렇게 다차원 함수를 각 변수에 대한 함수의 곱으로 표현하여 방정식을 푸는 것을 **변수분리법(separation of variables)** 이라고 한다. 이 경우 @eq-DE_PDE_helmholtz_3d 는 다음과 같다. 
 
 $$
 \dfrac{d^2 X(x)}{dx^2} Y(y)Z(z) + X(x)\dfrac{d^2Y(y)}{d^2y}Z(z) + X(x)Y(y)\dfrac{d^2 Z(z)}{dz^2} + k^2 X(x)Y(y)Z(z)=0.
@@ -198,7 +202,7 @@ $$
 \dfrac{1}{X}\dfrac{d^2X}{dx^2} = -l^2,\qquad \dfrac{1}{Y}\dfrac{d^2Y}{dy^2} = -m^2, \qquad\dfrac{1}{Z} \dfrac{d^2Z}{dz^2}=-n^2,\qquad l^2+m^2+n^2=k^2
 $$
 
-를 얻는다. 각각의 $l,\,m,\,n$ 에 대한 3개의 상미분방정식의 해를 $X_l(x),\, Y_m(y),\, Z_n(z)$ 라고 하자. 당연히 $l^2+m^2+n^2=k^2$ 를 만족해야 한다. 그리고 $\psi_{lmn}(x,\,y,\,z) = X_l(x)Y_m(y)Z_n(z)$ 라고 하자. 이제 @eq-pde-helmholtz_3d 의 일반해를 다음과 같이 기술할 수 있다.
+를 얻는다. 각각의 $l,\,m,\,n$ 에 대한 3개의 상미분방정식의 해를 $X_l(x),\, Y_m(y),\, Z_n(z)$ 라고 하자. 당연히 $l^2+m^2+n^2=k^2$ 를 만족해야 한다. 그리고 $\psi_{lmn}(x,\,y,\,z) = X_l(x)Y_m(y)Z_n(z)$ 라고 하자. 이제 @eq-DE_PDE_helmholtz_3d 의 일반해를 다음과 같이 기술할 수 있다.
 
 $$
 \psi = \sum_{l, m} a_{lm} \psi_{lmn}.
@@ -210,11 +214,11 @@ $$
 
 ### 원통좌표계에서
 
-$(\rho,\, \phi,\, z)$ 를 변수로 하는 실린더 좌표계에서의 핼름홀즈 방정식(@eq-pde-helmholtz_3d) 은
+$(\rho,\, \phi,\, z)$ 를 변수로 하는 실린더 좌표계에서의 핼름홀즈 방정식(@eq-DE_PDE_helmholtz_3d) 은
 
 $$
 \dfrac{1}{\rho}\dfrac{\partial }{\partial \rho} \left(\rho\dfrac{\partial \psi}{\partial \rho}\right) + \dfrac{1}{\rho^2}\dfrac{\partial^2 \psi}{\partial \phi^2} + \dfrac{\partial^2 \psi}{\partial z^2} + k^2 \psi = 0
-$$ {#eq-helimholtz_3d_cylindrical}
+$$ {#eq-DE_PDE_helimholtz_3d_cylindrical}
 
 이 된다. 이 경우 $\partial_\rho \partial_\phi$ 같은 변수가 섞인 편미분항이 없기 때문에 변수분리법을 시도해 볼 수 있다. 
 
@@ -223,7 +227,7 @@ $$
 $$
 
 
-라고 하자. 이 경우 @eq-helimholtz_3d_cylindrical 은 
+라고 하자. 이 경우 @eq-DE_PDE_helimholtz_3d_cylindrical 은 
 
 $$
 \dfrac{\Phi Z}{\rho} \dfrac{d}{d\rho} \left(\rho \dfrac{dP}{d\rho}\right) + \dfrac{PZ}{\rho^2} \dfrac{d^2\Phi}{d\phi^2} + P\Phi \dfrac{d^2Z}{dz^2} + k^2 P \Phi Z = 0
@@ -238,7 +242,7 @@ $$
 
 $$
 \dfrac{d^2Z}{dz^2}= l^2 Z(z)
-$$ {#eq-pde_spherical_coord_Z}
+$$ {#eq-DE_PDE_pde_spherical_coord_Z}
 
 이다. 또한
 
@@ -256,15 +260,15 @@ $$
 
 $$
 \dfrac{d^2\Phi}{d\phi^2} = -m^2 \Phi (\phi)
-$$ {#eq-pde_spherical_coord_Phi}
+$$ {#eq-DE_PDE_spherical_coord_Phi}
 
 와 
 
 $$
 \rho\dfrac{d}{d\rho} \left(\rho \dfrac{dP(\rho)}{d\rho}\right) + (n^2\rho^2 - m^2) P(\rho) = 0
-$$ {#eq-pde_spherical_coord_Rho}
+$$ {#eq-DE_PDE_spherical_coord_Rho}
 
-을 얻는다. 이 때 각에 대한 @eq-pde_spherical_coord_Phi 의 해인 $\Phi$ 는 $\sin m\phi$ 와 $\cos m\phi$ 의 선형결합이며 @eq-pde_spherical_coord_Rho 를 만족하는 함수 $P(\rho)$ 는 베셀 함수
+을 얻는다. 이 때 각에 대한 @eq-DE_PDE_spherical_coord_Phi 의 해인 $\Phi$ 는 $\sin m\phi$ 와 $\cos m\phi$ 의 선형결합이며 @eq-DE_PDE_spherical_coord_Rho 를 만족하는 함수 $P(\rho)$ 는 베셀 함수
 
 
 

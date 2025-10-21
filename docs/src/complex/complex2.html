@@ -262,13 +262,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/differential_equation/ode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/differential_equation/pde.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
@@ -315,16 +315,16 @@ window.Quarto = {
   <ul>
   <li><a href="#특이점과-분지점" id="toc-특이점과-분지점" class="nav-link active" data-scroll-target="#특이점과-분지점"><span class="header-section-number">15.1</span> 특이점과 분지점</a>
   <ul class="collapse">
-  <li><a href="#sec-complex2_singulariity" id="toc-sec-complex2_singulariity" class="nav-link" data-scroll-target="#sec-complex2_singulariity"><span class="header-section-number">15.1.1</span> 특이점</a></li>
-  <li><a href="#sec-complex2_branch_points" id="toc-sec-complex2_branch_points" class="nav-link" data-scroll-target="#sec-complex2_branch_points"><span class="header-section-number">15.1.2</span> 분지점(Branch point)</a></li>
-  <li><a href="#sec-complex2_analytic_continuation" id="toc-sec-complex2_analytic_continuation" class="nav-link" data-scroll-target="#sec-complex2_analytic_continuation"><span class="header-section-number">15.1.3</span> 해석적 연속</a></li>
+  <li><a href="#sec-CF_singulariity" id="toc-sec-CF_singulariity" class="nav-link" data-scroll-target="#sec-CF_singulariity"><span class="header-section-number">15.1.1</span> 특이점</a></li>
+  <li><a href="#sec-CF_branch_points" id="toc-sec-CF_branch_points" class="nav-link" data-scroll-target="#sec-CF_branch_points"><span class="header-section-number">15.1.2</span> 분지점(Branch point)</a></li>
+  <li><a href="#sec-CF_analytic_continuation" id="toc-sec-CF_analytic_continuation" class="nav-link" data-scroll-target="#sec-CF_analytic_continuation"><span class="header-section-number">15.1.3</span> 해석적 연속</a></li>
   </ul></li>
   <li><a href="#유수-계산" id="toc-유수-계산" class="nav-link" data-scroll-target="#유수-계산"><span class="header-section-number">15.2</span> 유수 계산</a>
   <ul class="collapse">
-  <li><a href="#sec-complex2_residue_theorem" id="toc-sec-complex2_residue_theorem" class="nav-link" data-scroll-target="#sec-complex2_residue_theorem"><span class="header-section-number">15.2.1</span> 유수 정리</a></li>
-  <li><a href="#sec-complex2_cauchy_principal_value" id="toc-sec-complex2_cauchy_principal_value" class="nav-link" data-scroll-target="#sec-complex2_cauchy_principal_value"><span class="header-section-number">15.2.2</span> 코시 주요값</a></li>
+  <li><a href="#sec-CF_residue_theorem" id="toc-sec-CF_residue_theorem" class="nav-link" data-scroll-target="#sec-CF_residue_theorem"><span class="header-section-number">15.2.1</span> 유수 정리</a></li>
+  <li><a href="#sec-CF_cauchy_principal_value" id="toc-sec-CF_cauchy_principal_value" class="nav-link" data-scroll-target="#sec-CF_cauchy_principal_value"><span class="header-section-number">15.2.2</span> 코시 주요값</a></li>
   <li><a href="#sec-mitagg_leffler_theorem" id="toc-sec-mitagg_leffler_theorem" class="nav-link" data-scroll-target="#sec-mitagg_leffler_theorem"><span class="header-section-number">15.2.3</span> 미타그-레플레르 정리</a></li>
-  <li><a href="#sec-complex2_number_of_zeros_and_poles" id="toc-sec-complex2_number_of_zeros_and_poles" class="nav-link" data-scroll-target="#sec-complex2_number_of_zeros_and_poles"><span class="header-section-number">15.2.4</span> 극점과 영점의 갯수</a></li>
+  <li><a href="#sec-CF_number_of_zeros_and_poles" id="toc-sec-CF_number_of_zeros_and_poles" class="nav-link" data-scroll-target="#sec-CF_number_of_zeros_and_poles"><span class="header-section-number">15.2.4</span> 극점과 영점의 갯수</a></li>
   <li><a href="#전해석-함수의-곱전개" id="toc-전해석-함수의-곱전개" class="nav-link" data-scroll-target="#전해석-함수의-곱전개"><span class="header-section-number">15.2.5</span> 전해석 함수의 곱전개</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
@@ -367,15 +367,15 @@ window.Quarto = {
 <p><br></p>
 <section id="특이점과-분지점" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="특이점과-분지점"><span class="header-section-number">15.1</span> 특이점과 분지점</h2>
-<section id="sec-complex2_singulariity" class="level3" data-number="15.1.1">
-<h3 data-number="15.1.1" class="anchored" data-anchor-id="sec-complex2_singulariity"><span class="header-section-number">15.1.1</span> 특이점</h3>
+<section id="sec-CF_singulariity" class="level3" data-number="15.1.1">
+<h3 data-number="15.1.1" class="anchored" data-anchor-id="sec-CF_singulariity"><span class="header-section-number">15.1.1</span> 특이점</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-complex2_isolated_point" class="theorem definition">
+<div id="def-CF_isolated_point" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 15.1 (고립점, 극점, 본질적 특이점)</strong></span> <span class="math inline">\(f(z)\)</span> 가 <span class="math inline">\(z_0\)</span> 를 포함하는 어떤 근방에서 <span class="math inline">\(z_0\)</span> 에서는 해석적이지 않지만 나머지에서는 해석적일 때 <span class="math inline">\(z_0\)</span> 를 <strong>고립점(isolated point)</strong> 혹은 <strong>고립 특이점</strong> 이라고 한다. 따라서 <span class="math inline">\(f(z)\)</span> 를 <span class="math inline">\(z_0\)</span> 에 대해 로랑 전개 할 때 <span class="math inline">\(f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k\)</span> 라고 하자.</p>
 <ol type="1">
 <li><p><span class="math inline">\(k&lt;0\)</span> 에 대해 어떤 <span class="math inline">\(N\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(a_{-N} \ne 0\)</span> 이고 <span class="math inline">\(k&lt;-N \implies a_k = 0\)</span> 이면 <span class="math inline">\(z_0\)</span> 를 <span class="math inline">\(N\)</span> 계 극점 <strong>극점(pole)</strong> 이라고 하며 <span class="math inline">\(1\)</span> 계 극점을 <strong>단순 극점(simple pole)</strong> 이라고 한다.</p></li>
@@ -398,7 +398,7 @@ e^{1/z} = \sum_{k=0}^\infty\dfrac{1}{k!}\dfrac{1}{z^k}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-complex2_meromorphic" class="theorem definition">
+<div id="def-CF_meromorphic" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 15.2 (Meromorphic)</strong></span> 어떤 고립된 극점을 제외하고 해석적인 함수를 <strong>meromorphic</strong> 이라고 한다. 예를 들면 다항식 <span class="math inline">\(p(z),\,q(z)\)</span> 에 대해 <span class="math inline">\(p(z)/q(z)\)</span> 가 meromorphic 이다.</p>
 </div>
 </div>
@@ -406,8 +406,8 @@ e^{1/z} = \sum_{k=0}^\infty\dfrac{1}{k!}\dfrac{1}{z^k}
 </div>
 <p><br></p>
 </section>
-<section id="sec-complex2_branch_points" class="level3" data-number="15.1.2">
-<h3 data-number="15.1.2" class="anchored" data-anchor-id="sec-complex2_branch_points"><span class="header-section-number">15.1.2</span> 분지점(Branch point)</h3>
+<section id="sec-CF_branch_points" class="level3" data-number="15.1.2">
+<h3 data-number="15.1.2" class="anchored" data-anchor-id="sec-CF_branch_points"><span class="header-section-number">15.1.2</span> 분지점(Branch point)</h3>
 <p>분지점(Branch point) 는 다가함수(multivalued function) 을 다룰 때 매우 중요하다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -415,7 +415,7 @@ e^{1/z} = \sum_{k=0}^\infty\dfrac{1}{k!}\dfrac{1}{z^k}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-complex2_open_closed_path" class="theorem definition">
+<div id="def-CF_open_closed_path" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 15.3 (open path 와 closed loop)</strong></span> 복소 평면상의 경로에 교차점이 없을 때, 즉 출발한 뒤에 단 한번도 이전의 경로와 만나지 않을 때 이 경로를 <strong>open</strong> 이라고 한다. <span class="math inline">\(z_0\)</span> 로 부터 시작한 경로가 다시 <span class="math inline">\(z_0\)</span> 로 돌아올 때 이 경로를 <strong>closed loop</strong> 라고 한다.</p>
 </div>
 </div>
@@ -423,14 +423,14 @@ e^{1/z} = \sum_{k=0}^\infty\dfrac{1}{k!}\dfrac{1}{z^k}
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_z_12_on_closed_loop" class="theorem example">
+<div id="exm-CF_z_12_on_closed_loop" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.1</strong></span> &nbsp;</p>
-<div id="fig-complex2_branch_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_branch_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_branch_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_branch_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_branch_1.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_branch_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_branch_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.1: 원점 주위의 <span class="math inline">\(z^{1/2}\)</span> 값을 계산하기 위한 경로
 </figcaption>
 </figure>
@@ -449,31 +449,31 @@ f(B') = \dfrac{-1-i}{\sqrt{2}},\, f(C') = -i,\, f(D') = \dfrac{1-i}{\sqrt{2}},\,
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_z_12_on_closed_loop_2" class="theorem example">
+<div id="exm-CF_z_12_on_closed_loop_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.2</strong></span> &nbsp;</p>
-<div id="fig-complex2_branch_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_branch_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_branch_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_branch_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_branch_2.png" class="img-fluid figure-img" width="350">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_branch_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_branch_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.2: 원점 주위가 아닌, <span class="math inline">\(z^{1/2}\)</span> 값을 계산하기 위한 경로
 </figcaption>
 </figure>
 </div>
-<p><span class="math inline">\(z=2\)</span> 을 중심으로 반지름이 1 인 원 경로를 생각하자(<a href="#fig-complex2_branch_2" class="quarto-xref">그림&nbsp;<span>15.2</span></a>). <span class="math inline">\(A\)</span> 점, 즉 <span class="math inline">\(z=3\)</span> 에 대해 <span class="math inline">\(f(3) = \pm \sqrt{3}\)</span> 값을 가질 수 있다. <span class="math inline">\(z=2+e^{i\theta}\)</span> 의 경로를 생각하면 <span class="math inline">\(\text{Re}(z) &gt; 0\)</span> 이며 따라서 <span class="math inline">\(ABCDA\)</span> 순으로 순회하여 다시 <span class="math inline">\(A'=A\)</span> 로 갔을 때의 값은 역시 <span class="math inline">\(\sqrt{3}\)</span> 임을 알 수 있다. 즉 <a href="#exm-complex2_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 의 경우와 달리 closed loop 를 순회하고 다시 돌아왔을 때 그 함수값이 바뀌지 않는다.</p>
+<p><span class="math inline">\(z=2\)</span> 을 중심으로 반지름이 1 인 원 경로를 생각하자(<a href="#fig-CF_branch_2" class="quarto-xref">그림&nbsp;<span>15.2</span></a>). <span class="math inline">\(A\)</span> 점, 즉 <span class="math inline">\(z=3\)</span> 에 대해 <span class="math inline">\(f(3) = \pm \sqrt{3}\)</span> 값을 가질 수 있다. <span class="math inline">\(z=2+e^{i\theta}\)</span> 의 경로를 생각하면 <span class="math inline">\(\text{Re}(z) &gt; 0\)</span> 이며 따라서 <span class="math inline">\(ABCDA\)</span> 순으로 순회하여 다시 <span class="math inline">\(A'=A\)</span> 로 갔을 때의 값은 역시 <span class="math inline">\(\sqrt{3}\)</span> 임을 알 수 있다. 즉 <a href="#exm-CF_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 의 경우와 달리 closed loop 를 순회하고 다시 돌아왔을 때 그 함수값이 바뀌지 않는다.</p>
 </div>
 </div>
 <p><br></p>
-<p><a href="#exm-complex2_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 와 <a href="#exm-complex2_z_12_on_closed_loop_2" class="quarto-xref">예제&nbsp;<span>15.2</span></a> 의 차이는 경로 내부에 특이점 <span class="math inline">\(z\)</span> 를 포함하는지 여부이다. 여기서 <span class="math inline">\(z=0\)</span> 이 왜 특별한가? <span class="math inline">\(f(z) = z^{1/2}\)</span> 는 <span class="math inline">\(z=0\)</span> 에서 미분이 정의되지 않은 특이점이며 이 특이점 주변의 경로에 따라 함수값을 계산할 경우 여려 값을 가질 수 있다. 이런 점을 <strong>branch point</strong> 라고 하며, branch point 의 계수(order)는 함수가 원래의 값으로 돌아오기 위해 거쳐야 하는 경로의 수를 말한다. <a href="#exm-complex2_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 의 경우 <span class="math inline">\(z=0\)</span> 은 <span class="math inline">\(f(z) = z^{1/2}\)</span> 에 대해 계수가 <span class="math inline">\(2\)</span> 인 branch point 이다.</p>
+<p><a href="#exm-CF_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 와 <a href="#exm-CF_z_12_on_closed_loop_2" class="quarto-xref">예제&nbsp;<span>15.2</span></a> 의 차이는 경로 내부에 특이점 <span class="math inline">\(z\)</span> 를 포함하는지 여부이다. 여기서 <span class="math inline">\(z=0\)</span> 이 왜 특별한가? <span class="math inline">\(f(z) = z^{1/2}\)</span> 는 <span class="math inline">\(z=0\)</span> 에서 미분이 정의되지 않은 특이점이며 이 특이점 주변의 경로에 따라 함수값을 계산할 경우 여려 값을 가질 수 있다. 이런 점을 <strong>branch point</strong> 라고 하며, branch point 의 계수(order)는 함수가 원래의 값으로 돌아오기 위해 거쳐야 하는 경로의 수를 말한다. <a href="#exm-CF_z_12_on_closed_loop" class="quarto-xref">예제&nbsp;<span>15.1</span></a> 의 경우 <span class="math inline">\(z=0\)</span> 은 <span class="math inline">\(f(z) = z^{1/2}\)</span> 에 대해 계수가 <span class="math inline">\(2\)</span> 인 branch point 이다.</p>
 <p>다가 함수를 단일값 함수로 제한하기 위해서 해야 할 일은 branch point 를 포함하지 않는 경로를 잡아서 함수값을 정하는 것이다. 보통 <strong>branch line</strong> 혹은 <strong>branch cut</strong> 이라고 부르는 선을 긋는데 branch point 에서 시작하여 무한대 까지 가거나 아니면 다른 유한한 계수의 branch point 까지 가는 직선을 그으며 이 직선을 가로지르는 경로를 잡지 않는다. Branch cut 은 자유롭게 선택할 수 있으며 중요한 것은 Branch cut 의 양 끝이다.</p>
 <p>일단 적당한 branch cut 을 정했다면 원래의 다가 함수는 branch cut 에 의해 한정되는 영역에서는 단일값 함수로 제한 될 수 있으며, 이렇게 단일값으로 제한된 함수를 원래 함수의 <strong>branch</strong> 라고 한다. 우리는 원래의 다가 함수의 시작점에서의 함수값을 자유롭게 정할 수 있기 때문에 다가 함수의 branch 는 여러 개가 될 수 있다. <span class="math inline">\(f(z)=z^{1/2}\)</span> 에서 <span class="math inline">\(z=0\)</span> 을 중심으로 하는 원에서의 branch 는 2개이다.</p>
 <p>Branch point 를 가지는, 즉 여러개의 branch 를 가지는 함수는 branch cut 을 가로질러서는 연속이 아니며, 따라서 branch 컷에 매우 가까운 반대방향의 두 선적분은 서로 상쇄하지 않는다. 따라서 Branch cut 은 해석적 영역을 가르는 실제 경계가 된다. 다중연결영역을 단일 연결영역으로 만들기 위한 벽은 실제로는 해석적 영역을 가르지 않았지만 branch point 는 실제 해석적 영역을 가른다.</p>
 <p>근본적으로 모든 branch 들은 동등하지만 많은 경우 실제 사용될 branch 들이 정해져 있다. 이 branch 를 principal branch 라고 하며 principal branch 에 대한 함수값을 principal value 라고 한다. <span class="math inline">\(z^{1/2}\)</span> 에 대해서는 양의 실수값을 branch cut 으로 잡은 것이 principal branch 가 된다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_branches_of_log_Z" class="theorem example">
-<p><span class="theorem-title"><strong>예제 15.3</strong></span> <span class="math inline">\(f(z) = \ln z\)</span> 를 생각하자. 앞서 <a href="complex1.html#sec-complex1_exponential_and_log" class="quarto-xref"><span> 14.1.2</span></a> 에서 보았듯이 <span class="math inline">\(\ln z\)</span> 는 다가함수이며, 극좌표 표현에서</p>
+<div id="exm-CF_branches_of_log_Z" class="theorem example">
+<p><span class="theorem-title"><strong>예제 15.3</strong></span> <span class="math inline">\(f(z) = \ln z\)</span> 를 생각하자. 앞서 <a href="complex1.html#sec-CF_exponential_and_log" class="quarto-xref"><span> 14.1.2</span></a> 에서 보았듯이 <span class="math inline">\(\ln z\)</span> 는 다가함수이며, 극좌표 표현에서</p>
 <p><span class="math display">\[
 \ln z = \ln r + i(\theta + 2n \pi),\qquad n\in \mathbb{Z}
 \]</span></p>
@@ -483,24 +483,24 @@ f(B') = \dfrac{-1-i}{\sqrt{2}},\, f(C') = -i,\, f(D') = \dfrac{1-i}{\sqrt{2}},\,
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_branches_of_power_of_z" class="theorem example">
+<div id="exm-CF_branches_of_power_of_z" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.4</strong></span> <span class="math inline">\(f(z) = z^p\)</span> 꼴의 함수를 생각하자. 여기서 <span class="math inline">\(p\in \mathbb{C}\)</span> 이다. <span class="math inline">\(z^p = e^{p \ln z}\)</span> 를 생각하면 <span class="math inline">\(p\)</span> 가 정수이면 <span class="math inline">\(f(z)\)</span> 는 단일값 함수이며 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(s/t\)</span> 꼴의 유리수(<span class="math inline">\(\gcd (s,\,t)=1\)</span>) 라면 <span class="math inline">\(t\)</span> 개의 값을 갖는다. 그 외의 경우라면 무한대의 값을 갖는 다가 함수이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_multiple_branch_point" class="theorem example">
+<div id="exm-CF_multiple_branch_point" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.5</strong></span> <span class="math inline">\(f(z) = (z^2-1)^{1/2}= (z+1)^{1/2}(z-1)^{1/2}\)</span> 를 생각하자. <span class="math inline">\((z+1)^{1/2}\)</span> 는 <span class="math inline">\(z=-1\)</span> 에서 branch point 를 가지며 <span class="math inline">\((z-1)^{1/2}\)</span> 는 <span class="math inline">\(z=1\)</span> 에서 branch point 를 가진다. <span class="math inline">\(z\to \infty\)</span> 에서의 경항을 알기 위해 <span class="math inline">\(w=1/z\)</span> 로 치환해보자.</p>
 <p><span class="math display">\[
 (z^2-1)^{1/2} = \dfrac{1}{w} (1-w^2)^{1/2} = \dfrac{1}{w} - \dfrac{w}{2} - \dfrac{w^3}{8} + \cdots
 \]</span></p>
-<p>이므로 <span class="math inline">\(z\to \infty\)</span> 에서 단순 극점을 가진다. 이제 적절한 branch cut 을 구성하여 <span class="math inline">\(f(z)\)</span> 를 단일값 함수로 제한해보자. 방법은 많지만 <a href="#fig-complex2_branch_3" class="quarto-xref">그림&nbsp;<span>15.3</span></a> 에 나온 branch cut 을 이용해 보기로 하자.</p>
-<div id="fig-complex2_branch_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>이므로 <span class="math inline">\(z\to \infty\)</span> 에서 단순 극점을 가진다. 이제 적절한 branch cut 을 구성하여 <span class="math inline">\(f(z)\)</span> 를 단일값 함수로 제한해보자. 방법은 많지만 <a href="#fig-CF_branch_3" class="quarto-xref">그림&nbsp;<span>15.3</span></a> 에 나온 branch cut 을 이용해 보기로 하자.</p>
+<div id="fig-CF_branch_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_branch_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_branch_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_branch_3.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_branch_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_branch_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.3: 가능한 브랜치중의 하나
 </figcaption>
 </figure>
@@ -509,23 +509,23 @@ f(B') = \dfrac{-1-i}{\sqrt{2}},\, f(C') = -i,\, f(D') = \dfrac{1-i}{\sqrt{2}},\,
 <p><span class="math display">\[
 f(z) = r^{1/2}\rho^{1/2}e^{i(\theta+\varphi)/2}
 \]</span></p>
-<p>이다. 이제 <a href="#fig-complex2_branch_4" class="quarto-xref">그림&nbsp;<span>15.4</span></a> 의 closed path 를 생각하자. <span class="math inline">\(A\)</span> 로 부터 시작하여 <span class="math inline">\(B,C,D,E,F\)</span> 를 거쳐 다시 <span class="math inline">\(A\)</span> 로 돌아오는 경로(이때의 <span class="math inline">\(A\)</span> 를 <span class="math inline">\(A'\)</span> 이라고 표기하고 구분하도록 하자)를 생각한다. <span class="math inline">\(A\)</span> 에 대해 <span class="math inline">\(\theta = \varphi = 0\)</span> 으로 놓으면 <span class="math inline">\(f(2) = \sqrt{3}\)</span> 이 된다.</p>
-<div id="fig-complex2_branch_4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>이다. 이제 <a href="#fig-CF_branch_4" class="quarto-xref">그림&nbsp;<span>15.4</span></a> 의 closed path 를 생각하자. <span class="math inline">\(A\)</span> 로 부터 시작하여 <span class="math inline">\(B,C,D,E,F\)</span> 를 거쳐 다시 <span class="math inline">\(A\)</span> 로 돌아오는 경로(이때의 <span class="math inline">\(A\)</span> 를 <span class="math inline">\(A'\)</span> 이라고 표기하고 구분하도록 하자)를 생각한다. <span class="math inline">\(A\)</span> 에 대해 <span class="math inline">\(\theta = \varphi = 0\)</span> 으로 놓으면 <span class="math inline">\(f(2) = \sqrt{3}\)</span> 이 된다.</p>
+<div id="fig-CF_branch_4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_branch_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_branch_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_branch_4.png" class="img-fluid figure-img" width="450">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_branch_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_branch_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.4: Branch cut 주위의 경로
 </figcaption>
 </figure>
 </div>
-<div id="tbl-complex2_phase_angle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-CF_phase_angle" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-complex2_phase_angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-CF_phase_angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;15.1: Phase angles
 </figcaption>
-<div aria-describedby="tbl-complex2_phase_angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-CF_phase_angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -588,8 +588,8 @@ f(z) = r^{1/2}\rho^{1/2}e^{i(\theta+\varphi)/2}
 </div>
 <p><br></p>
 </section>
-<section id="sec-complex2_analytic_continuation" class="level3" data-number="15.1.3">
-<h3 data-number="15.1.3" class="anchored" data-anchor-id="sec-complex2_analytic_continuation"><span class="header-section-number">15.1.3</span> 해석적 연속</h3>
+<section id="sec-CF_analytic_continuation" class="level3" data-number="15.1.3">
+<h3 data-number="15.1.3" class="anchored" data-anchor-id="sec-CF_analytic_continuation"><span class="header-section-number">15.1.3</span> 해석적 연속</h3>
 <p>어떤 영역에서 해석적인 함수는 영역 내의 <span class="math inline">\(z_0\)</span> 를 중심으로 한 테일러 전개가 가능하며, 유일하다. 이 테일러 전개의 수렴반경 내에서 이 테일러 전개는 수렴</p>
 <p>– to be filled</p>
 <p><br></p>
@@ -597,8 +597,8 @@ f(z) = r^{1/2}\rho^{1/2}e^{i(\theta+\varphi)/2}
 </section>
 <section id="유수-계산" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="유수-계산"><span class="header-section-number">15.2</span> 유수 계산</h2>
-<section id="sec-complex2_residue_theorem" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="sec-complex2_residue_theorem"><span class="header-section-number">15.2.1</span> 유수 정리</h3>
+<section id="sec-CF_residue_theorem" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="sec-CF_residue_theorem"><span class="header-section-number">15.2.1</span> 유수 정리</h3>
 <p>함수의 로랑 전개</p>
 <p><span class="math display">\[
 f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k
@@ -611,7 +611,7 @@ a_k\oint (z-z_0)^k\, dz = 2 \pi i a_{-1} \delta_{k,-1}
 <p><span class="math display">\[
 \oint f(z)\, dz = 2i \pi a_{-1}
 \]</span></p>
-<p>이다. 이 때 로랑 전개에의 <span class="math inline">\((z-z_0)^{-1}\)</span> 의 계수를 <strong>유수 (留數, residue)</strong> 라고 하고 <span class="math inline">\(\text{Res}(f,\,x_0)\)</span> 라고 표기한다. 이제 고립점 <span class="math inline">\(z_1,\,z_2,\ldots,\,z_n\)</span> 를 가진 함수 <span class="math inline">\(f(z)\)</span> 에 대해 닫힌 contour 에서 적분한다고 생각하자. 우리는 이 contour 를 <a href="#fig-complex2_residue_1" class="quarto-xref">그림&nbsp;<span>15.5</span></a> 와 같이 변형하여 적분할 수 있으며,</p>
+<p>이다. 이 때 로랑 전개에의 <span class="math inline">\((z-z_0)^{-1}\)</span> 의 계수를 <strong>유수 (留數, residue)</strong> 라고 하고 <span class="math inline">\(\text{Res}(f,\,x_0)\)</span> 라고 표기한다. 이제 고립점 <span class="math inline">\(z_1,\,z_2,\ldots,\,z_n\)</span> 를 가진 함수 <span class="math inline">\(f(z)\)</span> 에 대해 닫힌 contour 에서 적분한다고 생각하자. 우리는 이 contour 를 <a href="#fig-CF_residue_1" class="quarto-xref">그림&nbsp;<span>15.5</span></a> 와 같이 변형하여 적분할 수 있으며,</p>
 <p><span class="math display">\[
 \oint_C f(z)\,dz+ \oint_{C_1} f(z)\,dz+ \oint_{C_2} f(z)\,dz + \cdots + \oint_{C_n} f(z) = 0
 \]</span></p>
@@ -620,19 +620,19 @@ a_k\oint (z-z_0)^k\, dz = 2 \pi i a_{-1} \delta_{k,-1}
 \oint_C f(z)\,dz= - \sum_{j=1}^n \oint_{C_j} f(z)\, dz =  2\pi i \sum_{j=1}^n \text{Res}(f,\,z_j)
 \]</span></p>
 <p>이다. 여기서 <span class="math inline">\(C_j\)</span> 는 시계방향이지만 유수를 계산하기 위한 contour 는 시계방향이므로 부호가 반대가 되서 마지막에서 <span class="math inline">\(-\)</span> 가 사리짐에 유의하라.</p>
-<div id="fig-complex2_residue_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_residue_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_residue_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_residue_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_residue_1.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_residue_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_residue_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.5: 고립점을 제외한 경로 잡기
 </figcaption>
 </figure>
 </div>
 <p>위의 결과를 정리한것이 유수 정리 (Residue theorem)이다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-complex2_residual_theorem" class="theorem">
+<div id="thm-CF_residual_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.1 (유수 정리)</strong></span> 함수 <span class="math inline">\(f(z)\)</span> 가 단일 닫힌곡선 <span class="math inline">\(C\)</span> 의 내부에 있는 유한개의 고립특이점 <span class="math inline">\(z_1,\,z_2,\ldots,\, z_n\)</span> 을 제외하고 <span class="math inline">\(C\)</span> 의 내부와 위에서 해석적이라고 하자. 또한 <span class="math inline">\(z_j\)</span> 에서의 유수를 <span class="math inline">\(\text{Res}(f,\,z_j)\)</span> 라고 쓰면</p>
 <p><span class="math display">\[
 \oint_C f(z)\, dz = 2 \pi i \sum_{j=1}^n \text{Res}(f,\,z_j)
@@ -645,7 +645,7 @@ a_k\oint (z-z_0)^k\, dz = 2 \pi i a_{-1} \delta_{k,-1}
 (z-z_0)f(z) = a_{-1} + a_0(z-z_0) + a_1 (z-z_0)^2 + \cdots
 \]</span></p>
 <p>이며 따라서</p>
-<p><span id="eq-complex2_residual_1"><span class="math display">\[
+<p><span id="eq-CF_residual_1"><span class="math display">\[
 a_{-1} = \lim_{z\to z_0} (z-z_0)f(z)
 \tag{15.1}\]</span></span></p>
 <p>이다. 만약 <span class="math inline">\(f(z)\)</span> 에 계수 <span class="math inline">\(n&gt;1\)</span> 이상의 극점 <span class="math inline">\(z_0\)</span> 가 존재한다면</p>
@@ -653,7 +653,7 @@ a_{-1} = \lim_{z\to z_0} (z-z_0)f(z)
 (z-z_0)^n f(z) = a_{-n} + a_{-n+1}(z-z_0) + a_{-n+2} (z-z_0)^2 + \cdots + a_{-1}(z-z_0)^{n-1}+  a_0 (z-z_0)^n + \cdots
 \]</span></p>
 <p>이므로 <span class="math inline">\(a_{-1}\)</span> 은 <span class="math inline">\((z-z_0)^{n-1}\)</span> 의 계수가 되며 따라서</p>
-<p><span id="eq-complex2_residual_2"><span class="math display">\[
+<p><span id="eq-CF_residual_2"><span class="math display">\[
 a_{-1} = \dfrac{1}{(n-1)!} \lim_{z \to z_0} \left[\dfrac{d^{n-1}}{dz^{n-1}} {\Large (}(z-z_0)^n f(z){\Large )}\right]
 \tag{15.2}\]</span></span></p>
 <p>이다.</p>
@@ -665,7 +665,7 @@ a_{-1} = \dfrac{1}{(n-1)!} \lim_{z \to z_0} \left[\dfrac{d^{n-1}}{dz^{n-1}} {\La
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(f_1(z) = \dfrac{1}{4z+1}\)</span> 은 <span class="math inline">\(z=-\frac{1}{4}\)</span> 에서 단순 극점을 가지므로 <span class="math inline">\(\displaystyle \text{Res}\left(f_1,\, -\frac{1}{4}\right) = \lim_{z\to -1/4} \dfrac{z+1/4}{4z+1} = \dfrac{1}{4}\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(f_2(z) = \dfrac{1}{\sin z}\)</span> 의 <span class="math inline">\(z=0\)</span> 에서의 residue 는 <span class="math inline">\(\displaystyle \lim_{z\to 0}\dfrac{z}{\sin z} = 1\)</span> 이다.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(f_3(z) = \dfrac{\ln z}{z^2+4}\)</span> 의 <span class="math inline">\(z=2e^{i \pi}\)</span> 에서의 residue 는 <span class="math inline">\(\displaystyle \lim_{z\to e^{i\pi}} \left[\dfrac{(z-2e^{i\pi}) \ln z}{z^2+4}\right] =-\dfrac{\ln 2 + i\pi}{4}\)</span> 이다.</p>
-<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(f_4(z)=\dfrac{z}{\sin^2 z }\)</span> 의 <span class="math inline">\(z=\pi\)</span> 에서의 residue 를 계산해 보자. 극점의 계수가 2 이므로 residue 는 <a href="#eq-complex2_residual_2" class="quarto-xref">식&nbsp;<span>15.2</span></a> 에 따라</p>
+<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(f_4(z)=\dfrac{z}{\sin^2 z }\)</span> 의 <span class="math inline">\(z=\pi\)</span> 에서의 residue 를 계산해 보자. 극점의 계수가 2 이므로 residue 는 <a href="#eq-CF_residual_2" class="quarto-xref">식&nbsp;<span>15.2</span></a> 에 따라</p>
 <p><span class="math display">\[
 \text{Res}(f_4,\, \pi) = \lim_{z\to \pi} \dfrac{d}{dz}  \left[\dfrac{(z-\pi) z}{\sin^2 z}\right]
 \]</span></p>
@@ -683,8 +683,8 @@ f_5(z) \approx \dfrac{1}{2\pi z^2} \left(1- \dfrac{z}{2} + \dfrac{z^2}{2^2}+ \cd
 </div>
 <p><br></p>
 </section>
-<section id="sec-complex2_cauchy_principal_value" class="level3" data-number="15.2.2">
-<h3 data-number="15.2.2" class="anchored" data-anchor-id="sec-complex2_cauchy_principal_value"><span class="header-section-number">15.2.2</span> 코시 주요값</h3>
+<section id="sec-CF_cauchy_principal_value" class="level3" data-number="15.2.2">
+<h3 data-number="15.2.2" class="anchored" data-anchor-id="sec-CF_cauchy_principal_value"><span class="header-section-number">15.2.2</span> 코시 주요값</h3>
 <p>때때로 고립 특이점이 적분 경로에 위치하며 이 적분을 발산하게 한다. 가장 간단한 예는 아래와 같다.</p>
 <p><span class="math display">\[
 \int_{-a}^b \dfrac{1}{x}\,dx,\qquad \text{where } a&gt;0,\, b&gt;0
@@ -697,7 +697,7 @@ f_5(z) \approx \dfrac{1}{2\pi z^2} \left(1- \dfrac{z}{2} + \dfrac{z^2}{2^2}+ \cd
 <p><span class="math display">\[
 \lim_{\delta \to 0^+} \left[\int_{a}^{\delta} \dfrac{dx}{x}  + \int_{\delta}^b \dfrac{dx}{x}\right] = \ln b- \ln a
 \]</span></p>
-<p>가 된다. <a href="#fig-complex2_cauchy_principal_value" class="quarto-xref">그림&nbsp;<span>15.6</span></a> 에서 볼 수 있듯이 <span class="math inline">\((-\delta,\, \delta)\)</span> 구간의 적분값은 서로 상쇄되어 <span class="math inline">\(0\)</span> 이된다. 그런데 이 과정은 적분에서의 일반적인 과정과는 다른데 적분의 일반적인 과정 혹은 정의에 의거하면 왼쪽과 오른쪽의 <span class="math inline">\(0\)</span> 에 접근하는 극한이 독립적이어야 한다. 즉,</p>
+<p>가 된다. <a href="#fig-CF_cauchy_principal_value" class="quarto-xref">그림&nbsp;<span>15.6</span></a> 에서 볼 수 있듯이 <span class="math inline">\((-\delta,\, \delta)\)</span> 구간의 적분값은 서로 상쇄되어 <span class="math inline">\(0\)</span> 이된다. 그런데 이 과정은 적분에서의 일반적인 과정과는 다른데 적분의 일반적인 과정 혹은 정의에 의거하면 왼쪽과 오른쪽의 <span class="math inline">\(0\)</span> 에 접근하는 극한이 독립적이어야 한다. 즉,</p>
 <p><span class="math display">\[
 \lim_{\delta_1 \to 0^+,\, \delta_2 \to 0^+} \left[\int_{-a}^{-\delta_1} \dfrac{dx}{x}  + \int_{\delta_2}^b \dfrac{dx}{x}\right]
 \]</span> 이어야 한다. 그런데 위의 적분은 앞서와 같이 서로 상쇄되지 않을 수 있다. 예를 들어 <span class="math inline">\(\delta_2 = 2 \delta_1\)</span> 이라고 하면 위의 적분은</p>
@@ -705,12 +705,12 @@ f_5(z) \approx \dfrac{1}{2\pi z^2} \left(1- \dfrac{z}{2} + \dfrac{z^2}{2^2}+ \cd
 \ln b- \ln a - \ln 2
 \]</span></p>
 <p>가 되어 <span class="math inline">\(\delta_2=\delta_1\)</span> 일 경우와 다르다. 즉 적분이 정의되지 않는다.</p>
-<div id="fig-complex2_cauchy_principal_value" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_cauchy_principal_value" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_cauchy_principal_value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_cauchy_principal_value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_cauchy_principal_value_1.png" class="img-fluid figure-img" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_cauchy_principal_value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_cauchy_principal_value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.6: <span class="math inline">\(1/z\)</span> 적분에 있어서의 코시 주요값 소거
 </figcaption>
 </figure>
@@ -723,9 +723,9 @@ f_5(z) \approx \dfrac{1}{2\pi z^2} \left(1- \dfrac{z}{2} + \dfrac{z^2}{2^2}+ \cd
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-complex2_cauchy_principal_value" class="theorem definition">
+<div id="def-CF_cauchy_principal_value" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 15.4 (코시 주요값)</strong></span> <span class="math inline">\(f:X\subset \mathbb{R} \to \mathbb{R}\)</span> 이 적분 경로에 고립 특이점 <span class="math inline">\(x_0\)</span> 을 가질 때 아래와 같이 적분하는 것을 <strong>코시 주요값 (Cauchy principal value)</strong> 라고 한다.</p>
-<p><span id="eq-complex2_cahchy_principal_value"><span class="math display">\[
+<p><span id="eq-CF_cahchy_principal_value"><span class="math display">\[
 PV\int f(x)\, dx := \lim_{\delta \to 0^+} \left[\int^{x_0-\delta} f(x)\, dx + \int_{x_0+\delta} f(x)\,dx\right]
 \tag{15.3}\]</span></span></p>
 </div>
@@ -734,7 +734,7 @@ PV\int f(x)\, dx := \lim_{\delta \to 0^+} \left[\int^{x_0-\delta} f(x)\, dx + \i
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_cauchy_principal_value_1" class="theorem example">
+<div id="exm-CF_cauchy_principal_value_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.7</strong></span> <span class="math inline">\(\displaystyle I = \int_0^\infty \dfrac{\sin x}{x}\,dx\)</span> 을 생각하자 <span class="math inline">\(\sin x = (e^{ix} - e^{-ix})/(2i)\)</span> 이므로</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -750,13 +750,13 @@ I = PV \int_{-\infty}^\infty \dfrac{e^{ix}}{2ix}\, dx
 </div>
 </div>
 <p><br></p>
-<p>앞서 언급했듯이 코시 주요값은 적분으로 정의되긴 하지만 적분의 일반적인 정의를 벗어난다. 그렇다면 이게 무슨 의미가 있을까? <span class="math inline">\(x_0\)</span> 를 제외하고 실수축에서 적분하는 대신 <a href="#fig-complex2_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 와 같은 복소평면상에서의 적분을 생각하자. 고립특이점 <span class="math inline">\(x_0\)</span> 근처에서 반지름이 <span class="math inline">\(r\)</span> 인 작은 시계방향의 반원 contour <span class="math inline">\(C_1\)</span> 을 생각하자. 여기서는 <span class="math inline">\(x_0\)</span> 가 단순 극점(simple pole) 이라고 하자.(일반적인 계수 <span class="math inline">\(n\)</span> 의 극점에 대해서는 이후에 다룬다.)</p>
-<div id="fig-complex2_cauchy_principal_value_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>앞서 언급했듯이 코시 주요값은 적분으로 정의되긴 하지만 적분의 일반적인 정의를 벗어난다. 그렇다면 이게 무슨 의미가 있을까? <span class="math inline">\(x_0\)</span> 를 제외하고 실수축에서 적분하는 대신 <a href="#fig-CF_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 와 같은 복소평면상에서의 적분을 생각하자. 고립특이점 <span class="math inline">\(x_0\)</span> 근처에서 반지름이 <span class="math inline">\(r\)</span> 인 작은 시계방향의 반원 contour <span class="math inline">\(C_1\)</span> 을 생각하자. 여기서는 <span class="math inline">\(x_0\)</span> 가 단순 극점(simple pole) 이라고 하자.(일반적인 계수 <span class="math inline">\(n\)</span> 의 극점에 대해서는 이후에 다룬다.)</p>
+<div id="fig-CF_cauchy_principal_value_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex2_cauchy_principal_value_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_cauchy_principal_value_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_cauchy_principal_value_2.png" class="img-fluid figure-img" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex2_cauchy_principal_value_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_cauchy_principal_value_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.7: 코시 주요값 적분을 포함하는 contour
 </figcaption>
 </figure>
@@ -780,35 +780,35 @@ I_{\overline{C}_1} &amp;=  \int_\pi^{2\pi} ire^{i\theta} f(z)\, d\theta  = \int_
 \end{aligned}
 \]</span></p>
 <p>이며 <span class="math inline">\(r\to 0\)</span> 극한에서 <span class="math inline">\(I_{\overline{C}_1} \to i \pi a_{-1}\)</span> 이 된다.</p>
-<p>이제 <a href="#fig-complex2_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 의 전체 경로 구간 적분을 생각하자. <span class="math inline">\(\{z_j\}\)</span> 를 그림의 contour 내부에 있는 고립 특이점의 집합이라고 할 때 유수정리에 따라</p>
-<p><span id="eq-complex2_cahchy_principal_value_2"><span class="math display">\[
+<p>이제 <a href="#fig-CF_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 의 전체 경로 구간 적분을 생각하자. <span class="math inline">\(\{z_j\}\)</span> 를 그림의 contour 내부에 있는 고립 특이점의 집합이라고 할 때 유수정리에 따라</p>
+<p><span id="eq-CF_cahchy_principal_value_2"><span class="math display">\[
 PV\int f(z)\,dz + I_{C_1} + \int_{C_2} f(z)\, dz = 2\pi i \sum_{j} \text{Res}(f,\,z_j)
 \tag{15.4}\]</span></span></p>
 <p>혹은 (<span class="math inline">\(x_0\)</span> 가 contour 내부에 있음을 고려하면)</p>
-<p><span id="eq-complex2_cahchy_principal_value_3"><span class="math display">\[
+<p><span id="eq-CF_cahchy_principal_value_3"><span class="math display">\[
 PV\int f(z)\,dz + I_{\overline{C}_1} + \int_{C_2} f(z)\, dz = 2\pi i \sum_{j} \text{Res}(f,\,z_j) + 2\pi i \text{Res}(f,\,z_0)
 \tag{15.5}\]</span></span></p>
-<p>을 얻는다. <span class="math inline">\(2 \pi i \text{Res}(f,\,z_0) = 2\pi i a_{-1}\)</span> 이므로 두 식은 기본적으로 같은 식이다. <span class="math inline">\(C_2\)</span> 에 대한 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 에 되는데 이는 <a href="complex3.html#sec-complex3_integrals_with_complex_exponent" class="quarto-xref"><span> 16.1.3</span></a> 에서 다루며 위 적분값은 <a href="complex3.html#exm-complex3_integral_including_exponential_2" class="quarto-xref">예제&nbsp;<span>16.5</span></a> 에서 구한다.</p>
+<p>을 얻는다. <span class="math inline">\(2 \pi i \text{Res}(f,\,z_0) = 2\pi i a_{-1}\)</span> 이므로 두 식은 기본적으로 같은 식이다. <span class="math inline">\(C_2\)</span> 에 대한 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 에 되는데 이는 <a href="complex3.html#sec-CF_integrals_with_complex_exponent" class="quarto-xref"><span> 16.1.3</span></a> 에서 다루며 위 적분값은 <a href="complex3.html#exm-CF_integral_including_exponential_2" class="quarto-xref">예제&nbsp;<span>16.5</span></a> 에서 구한다.</p>
 <p><br></p>
 </section>
 <section id="sec-mitagg_leffler_theorem" class="level3" data-number="15.2.3">
 <h3 data-number="15.2.3" class="anchored" data-anchor-id="sec-mitagg_leffler_theorem"><span class="header-section-number">15.2.3</span> 미타그-레플레르 정리</h3>
-<p>앞서 <a href="#def-complex2_meromorphic" class="quarto-xref">정의&nbsp;<span>15.2</span></a> 에서 정의했듯이 고립특이점을 제외하고 해석적인 함수를 meromorphic 이라고 한다. 미타그(Mitagg) 와 레플레르(Leffler) 는 해석적인 점 주위로 전개하거나(테일러 전개), 특정 고립특이점 주위로 전개하는(로랑 전개) 것 이외에 다수의 고립특이점에 대해 전개할 수 있다는 것을 보였다. 이를 미타그-레플레르 정리라고 한다.</p>
+<p>앞서 <a href="#def-CF_meromorphic" class="quarto-xref">정의&nbsp;<span>15.2</span></a> 에서 정의했듯이 고립특이점을 제외하고 해석적인 함수를 meromorphic 이라고 한다. 미타그(Mitagg) 와 레플레르(Leffler) 는 해석적인 점 주위로 전개하거나(테일러 전개), 특정 고립특이점 주위로 전개하는(로랑 전개) 것 이외에 다수의 고립특이점에 대해 전개할 수 있다는 것을 보였다. 이를 미타그-레플레르 정리라고 한다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-complex2_mittag-leffler" class="theorem">
+<div id="thm-CF_mittag-leffler" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.2 (미타그-레플레르 정리)</strong></span> <span class="math inline">\(f(z)\)</span> 가 다음의 조건을 만족한다고 하자.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(z=0\)</span> 에서 해석적이며 어떤 영역에서 단순 극점 <span class="math inline">\(z_1,\,z_2,\ldots\)</span> 을 제외하고 해석이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\{z_j\}\)</span> 는 <span class="math inline">\(0 &lt; |z_1| \le |z_2| \le \cdots\)</span> 이도록 정렬되었다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\displaystyle \lim_{|z|\to \infty} \dfrac{f(z)}{z} = 0\)</span>.</p>
 <p>이 때 <span class="math inline">\(f(z)\)</span> 는 다음과 같다.</p>
-<p><span id="eq-complex2_mittag_leffler_1"><span class="math display">\[
+<p><span id="eq-CF_mittag_leffler_1"><span class="math display">\[
 f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \dfrac{1}{z_k}\right).
 \tag{15.6}\]</span></span></p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(b_n = \text{Res}(f,\,z_n)\)</span> 라고 하자. <a href="#eq-complex2_mittag_leffler_1" class="quarto-xref">식&nbsp;<span>15.6</span></a> 의 <span class="math inline">\(\sum\)</span> 부분은 <span class="math inline">\(\dfrac{zb_n}{z_n (z_n-z)}\)</span> 이다. 이제 <span class="math inline">\(z_1,\ldots,\,z_n\)</span> 만을 포함하는 반지름 <span class="math inline">\(R_n\)</span> 인 원형 contour <span class="math inline">\(C_n\)</span> 를 생각하고</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(b_n = \text{Res}(f,\,z_n)\)</span> 라고 하자. <a href="#eq-CF_mittag_leffler_1" class="quarto-xref">식&nbsp;<span>15.6</span></a> 의 <span class="math inline">\(\sum\)</span> 부분은 <span class="math inline">\(\dfrac{zb_n}{z_n (z_n-z)}\)</span> 이다. 이제 <span class="math inline">\(z_1,\ldots,\,z_n\)</span> 만을 포함하는 반지름 <span class="math inline">\(R_n\)</span> 인 원형 contour <span class="math inline">\(C_n\)</span> 를 생각하고</p>
 <p><span class="math display">\[
 I_n := \oint_{C_n} \dfrac{f(w)\, dw}{w(w-z)}
 \]</span></p>
@@ -831,7 +831,7 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 <p>미타그-레플레르 정리의 결과를 이용하여 함수 <span class="math inline">\(f(z)\)</span> 를 극점들에 대한 식으로 전개하는 것을 <strong>극점 점개(pole expansion)</strong> 이라고 한다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_mittag_leffler_1" class="theorem example">
+<div id="exm-CF_mittag_leffler_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.8 (<span class="math inline">\(\tan z\)</span> 의 극점 전개)</strong></span> <span class="math display">\[
 \tan z = \dfrac{e^{iz}+e^{-iz}}{i(e^{iz}-e^{-iz})}
 \]</span></p>
@@ -849,7 +849,7 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 \end{aligned}
 \]</span></p>
 <p>이므로</p>
-<p><span id="eq-complex2_mittag_leffler_2"><span class="math display">\[
+<p><span id="eq-CF_mittag_leffler_2"><span class="math display">\[
 \tan z =2z \left[\dfrac{1}{(\pi/2)^2-z^2} + \dfrac{1}{(3\pi/2)^2-z^2} + \dfrac{1}{(5\pi/2)^2-z^2}+ \cdots\right]
 \tag{15.7}\]</span></span></p>
 <p>이다.</p>
@@ -858,7 +858,7 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 <p><br></p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex2_mittag_leffler_2" class="theorem example">
+<div id="exm-CF_mittag_leffler_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 15.9 (<span class="math inline">\(\cot z\)</span> 의 극점 전개)</strong></span> <span class="math inline">\(\cot z = \cos z/\sin z\)</span> 는 <span class="math inline">\(z=0\)</span> 에서 단순 극점을 가지므로 <span class="math inline">\(\cot z\)</span> 자체에 대한 극점을 생각하기 보다는 <span class="math inline">\(f(z) = \cot z- \dfrac{1}{z}\)</span> 에 대한 극점 전개를 생각 할 수 있다. <span class="math display">\[
 \cot z = \dfrac{i(e^{iz}-e^{-iz})}{e^{iz}+e^{-iz}}
 \]</span></p>
@@ -874,7 +874,7 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 \end{aligned}
 \]</span></p>
 <p>이므로</p>
-<p><span id="eq-complex2_mittag_leffler_3"><span class="math display">\[
+<p><span id="eq-CF_mittag_leffler_3"><span class="math display">\[
 \cot z = \dfrac{1}{z} + 2z \left[\dfrac{1}{z^2-\pi^2} + \dfrac{1}{z^2 - (2\pi)^2} + \cdots\right]
 \tag{15.8}\]</span></span></p>
 <p>이다.</p>
@@ -882,7 +882,7 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 </div>
 <p><br></p>
 <p>연습문제 <a href="#exr-Arfken7_11_7_8" class="quarto-xref">연습문제&nbsp;<span>15.8</span></a> 에서 다음 극점 전개를 보일것이다.</p>
-<p><span id="eq-complex2_mittag_leffler_4"><span class="math display">\[
+<p><span id="eq-CF_mittag_leffler_4"><span class="math display">\[
 \begin{aligned}
 \sec z &amp;= \pi \left[\dfrac{1}{(\pi/2)^2-z^2} - \dfrac{3}{(3\pi)^2-z^2} + \dfrac{5}{(5\pi)^2-z^2} + \cdots \right], \\
 \csc z &amp;=  \dfrac{1}{z} - 2z \left[\dfrac{1}{z^2-\pi^2}- \dfrac{1}{z^2-(2\pi)^2} + \dfrac{1}{z^2-(3\pi)^2} + \cdots \right].
@@ -890,8 +890,8 @@ f(z) = f(0) + \sum_{k=1}^\infty \text{Res}(f,\,z_k) \left(\dfrac{1}{z-z_k} + \df
 \tag{15.9}\]</span></span></p>
 <p><br></p>
 </section>
-<section id="sec-complex2_number_of_zeros_and_poles" class="level3" data-number="15.2.4">
-<h3 data-number="15.2.4" class="anchored" data-anchor-id="sec-complex2_number_of_zeros_and_poles"><span class="header-section-number">15.2.4</span> 극점과 영점의 갯수</h3>
+<section id="sec-CF_number_of_zeros_and_poles" class="level3" data-number="15.2.4">
+<h3 data-number="15.2.4" class="anchored" data-anchor-id="sec-CF_number_of_zeros_and_poles"><span class="header-section-number">15.2.4</span> 극점과 영점의 갯수</h3>
 <p><span class="math inline">\(f(z)=0\)</span> 이면 <span class="math inline">\(z\)</span> 를 <span class="math inline">\(f\)</span> 의 영점(zeros) 라고 한다. 여기서는 복소함수 <span class="math inline">\(f(z)\)</span> 의 극점과 영점의 갯수를 알아내는 법을 배우도록 하자. <span class="math inline">\(z_0\)</span> 가 <span class="math inline">\(f\)</span> 의 영점 혹은 극점이라고 하자. 그렇다면 <span class="math inline">\(z_0\)</span> 를 영점 혹은 극점으로 갖지 않는 어떤 함수 <span class="math inline">\(g(z)\)</span> 에 대해</p>
 <p><span class="math display">\[
 f(z) = (z-z_0)^\mu g(z)
@@ -901,13 +901,13 @@ f(z) = (z-z_0)^\mu g(z)
 \dfrac{f'(z)}{f(z)} = \dfrac{\mu(z-z_0)^{\mu-1} g(z) + (z-z_0)^\mu g(z)}{(z - z_0)^\mu g'(z)} = \dfrac{\mu}{z-z_0} + \dfrac{g'(z)}{g(z)}
 \]</span></p>
 <p>이다. 여기서 <span class="math inline">\(g'/g\)</span> 는 <span class="math inline">\(z_0\)</span> 의 어떤 근방에서 특이점을 갖지 않으므로 <span class="math inline">\(f'/f\)</span> 는 <span class="math inline">\(z_0\)</span> 에서 유수(residue) 가 <span class="math inline">\(\mu\)</span> 인 단순 극점을 가진다. 이제 위 식에 유수정리를 이용하자. 임의의 contour <span class="math inline">\(C\)</span> 에 대해</p>
-<p><span id="eq-complex2_poles_and_zeros"><span class="math display">\[
+<p><span id="eq-CF_poles_and_zeros"><span class="math display">\[
 \oint_C \dfrac{f'(z)}{f(z)} \, dz = 2\pi i (N_f - P_f)
 \tag{15.10}\]</span></span></p>
 <p>이 성립한다. 여기서 <span class="math inline">\(P_f\)</span> 는 <span class="math inline">\(C\)</span> 내부의 각각의 극점에 극점의 계수를 곱한 값의 합이며, <span class="math inline">\(N_f\)</span> 역시 내부의 각각의 영점에 multiplicity 를 곱한 값이다.</p>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-complex2_rouche_theorem" class="theorem">
+<div id="thm-CF_rouche_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.3 (루셰 정리 (Rouché’s theorem))</strong></span> 닫힌 경로 <span class="math inline">\(C\)</span> 의 내부에서 복소함수 <span class="math inline">\(f,\,g\)</span> 가 해석적이며 <span class="math inline">\(C\)</span> 위에서 <span class="math inline">\(|f(z)|&gt; |g(z)|\)</span> 라면 <span class="math inline">\(f(z)\)</span> 와 <span class="math inline">\(f(z)+g(z)\)</span> 는 <span class="math inline">\(C\)</span> 의 내부에서 같은 근을 가지며, 각각의 근에 대한 multiplicity 도 같다.</p>
 </div>
 </div>
@@ -938,7 +938,7 @@ N_f = N_{f+g}
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-complex1_poles_and_zeros" class="theorem example">
-<p><span class="theorem-title"><strong>예제 15.10 (영점 세기)</strong></span> <span class="math inline">\(1&lt;|z|&lt;3\)</span> 사이에 <span class="math inline">\(F(z) = z^3-2z+11\)</span> 의 영점이 몇개인지 확인해보자. <a href="#eq-complex2_poles_and_zeros" class="quarto-xref">식&nbsp;<span>15.10</span></a> 을 <span class="math inline">\(|z|=1\)</span> 인 원과 <span class="math inline">\(|z|=3\)</span> 인 원에 대한 contour 에서 사용하는 방법은 다소 복잡하므로 루셰 정리를 사용하기로 하자. <span class="math inline">\(g(z) = z^3-2z,\, f(z) = 11\)</span> 로 잡으면 <span class="math inline">\(F(z) = f(z)+g(z)\)</span> 이며 <span class="math inline">\(|z|=1\)</span> 에서 <span class="math inline">\(|f(z)|&gt;|g(z)|\)</span> 라는 것을 쉽게 보일 수 있다. <span class="math inline">\(f(z)\)</span> 는 영점이 없으므로 <span class="math inline">\(g(z)\)</span> 도 영접이 없다.</p>
+<p><span class="theorem-title"><strong>예제 15.10 (영점 세기)</strong></span> <span class="math inline">\(1&lt;|z|&lt;3\)</span> 사이에 <span class="math inline">\(F(z) = z^3-2z+11\)</span> 의 영점이 몇개인지 확인해보자. <a href="#eq-CF_poles_and_zeros" class="quarto-xref">식&nbsp;<span>15.10</span></a> 을 <span class="math inline">\(|z|=1\)</span> 인 원과 <span class="math inline">\(|z|=3\)</span> 인 원에 대한 contour 에서 사용하는 방법은 다소 복잡하므로 루셰 정리를 사용하기로 하자. <span class="math inline">\(g(z) = z^3-2z,\, f(z) = 11\)</span> 로 잡으면 <span class="math inline">\(F(z) = f(z)+g(z)\)</span> 이며 <span class="math inline">\(|z|=1\)</span> 에서 <span class="math inline">\(|f(z)|&gt;|g(z)|\)</span> 라는 것을 쉽게 보일 수 있다. <span class="math inline">\(f(z)\)</span> 는 영점이 없으므로 <span class="math inline">\(g(z)\)</span> 도 영접이 없다.</p>
 <p>이제 <span class="math inline">\(|z|=3\)</span> 인 원형 경로를 생각하자. <span class="math inline">\(f(z) = z^3,\, g(z) =11-2z\)</span> 라고 하면 <span class="math inline">\(|f(z)|=27 &gt; |g(z)\)</span> 이다. 따라서 <span class="math inline">\(f(z)\)</span> 와 <span class="math inline">\(f(z)+g(z) = F(z)\)</span> 가 같은 수의 영점을 가진다. 따라서 <span class="math inline">\(F(z)\)</span> 는 <span class="math inline">\(1\)</span> 과 <span class="math inline">\(3\)</span> 사이에 3개의 영점을 가진다.</p>
 </div>
 </div>
@@ -955,11 +955,11 @@ N_f = N_{f+g}
 \ln (f(z)) - \ln f(0) = \dfrac{zf'(0)}{f(0)} + \sum_{k=1}^\infty \left[\ln (z-z_k) - \ln (-z_k) + \dfrac{z}{z_k}\right]
 \]</span></p>
 <p>이므로</p>
-<p><span id="eq-complex2_product_expansion_of_entire_function_1"><span class="math display">\[
+<p><span id="eq-CF_product_expansion_of_entire_function_1"><span class="math display">\[
 f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-\dfrac{z}{z_k}\right)e^{z/z_k}
 \tag{15.11}\]</span></span></p>
 <p>이다. 이를 이용하여 <span class="math inline">\(\sin z\)</span>, <span class="math inline">\(\cos z\)</span> 를 표현하면 다음과 같다.</p>
-<p><span id="eq-complex2_product_expansion_of_entire_function_2"><span class="math display">\[
+<p><span id="eq-CF_product_expansion_of_entire_function_2"><span class="math display">\[
 \begin{aligned}
 \sin z &amp;= z \prod_{\begin{array}{c}  k = -\infty \\ k \ne 0\end{array}}^{\infty} \left(1- \dfrac{z}{k\pi}\right)e^{z/k\pi} = z \prod_{k=1}^\infty \left(1- \dfrac{z^2}{k^2\pi^2}\right), \\
 \cos z &amp;= \prod_{k=1}^\infty \left[1 - \dfrac{z^2}{(n-1/2)^2 \pi^2}\right].
@@ -983,7 +983,6 @@ f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\dfrac{1}{z^2+a^2} = \dfrac{1}{2ai}\left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right)\)</span> 이므로 <span class="math inline">\(\pm ia\)</span> 가 계수 1 인 단순 극점이며 residue 는 <span class="math inline">\(\pm 1/2ai\)</span> 이다.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\dfrac{1}{(z^2+a^2)^2} = \dfrac{1}{4ia^2} \left(\dfrac{1}{z-ia} - \dfrac{1}{z+ia}\right) - \dfrac{1}{4a^2}\left(\dfrac{1}{(z-ia)^2} + \dfrac{1}{(z+ia)^2}\right)\)</span> 이므로 <span class="math inline">\(\pm ia\)</span> 는 각각 계수 2인 극점이며 residue 는 <span class="math inline">\(\pm 1/4ia^2\)</span> 이다.</p>
@@ -1011,15 +1010,14 @@ f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-
 <p>(<span class="math inline">\(g\)</span>) <span class="math inline">\(\dfrac{e^{iz}}{z^2-a^2} = \dfrac{e^{iz}}{2a} \left(\dfrac{1}{z-a}- \dfrac{1}{z+a}\right)\)</span> 이므로 <span class="math inline">\(z=\pm a\)</span> 에서 단순극점을 가지며 residue 는 <span class="math inline">\(e^{ia} /2a\)</span> 와 <span class="math inline">\(-e^{-ia}/2a\)</span> 이다.</p>
 <p>(<span class="math inline">\(h\)</span>) <span class="math inline">\(z=-1\)</span> 에서 단순극점을 가지며 residue <span class="math inline">\(\displaystyle \lim_{z\to -1}\left((z+1) \dfrac{z^{-k}}{z+1}\right) = e^{-ik\pi}\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.2 (Arfken 11.7.3)</strong></span> <span class="math inline">\(\dfrac{\pi \cot (\pi z)}{z(z+1)}\)</span> 에 대해 <span class="math inline">\(z=0,\, -1\)</span> 에서의 residue 를 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-complex2_mittag_leffler_2" class="quarto-xref">예제&nbsp;<span>15.9</span></a> 에 의해</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-CF_mittag_leffler_2" class="quarto-xref">예제&nbsp;<span>15.9</span></a> 에 의해</p>
 <p><span class="math display">\[
 \begin{aligned}
 \pi \cot (\pi z) &amp;= \dfrac{1}{z} + 2z\left[\dfrac{1}{z^2-1^2} + \dfrac{1}{z^2-2^2} + \cdots \right] \\
@@ -1039,7 +1037,7 @@ f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.3 (Arfken 11.7.3)</strong></span> <span class="math inline">\(x&gt;0\)</span> 에서의 지수 적분 함수 <span class="math inline">\(\text{Ei}(x)\)</span> 에 대한 고전적인 정의는 코시 주요값 적분을 사용한 아래와 같은 정의이다.</p>
@@ -1049,7 +1047,6 @@ f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-
 <p>이 때 적분은 <span class="math inline">\(x=0\)</span> 에서 잘린다. 이 적분이 <span class="math inline">\(x&gt;0\)</span> 에서 수렴함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\varepsilon &gt; 0\)</span> 에 대해 <span class="math display">\[
 \begin{aligned}
@@ -1059,7 +1056,7 @@ f(z) = f(0) \exp \left[\dfrac{zf'(0)}{f(0)}\right] \prod_{k=1}^{\infty} \left(1-
 \]</span></p>
 <p>이다. 첫번째 적분이 definite 한 값을 갖는다는 것은 알 수 있다. 두번째는 역시 <span class="math inline">\(\int_\varepsilon^x 2\sinh (t)/t\, dt\)</span> 이며 definite 한 값을 가지므로 어떤 <span class="math inline">\(\varepsilon\)</span> 에 대해서도 값이 잘 정의된다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.4 (Arfken 11.7.4)</strong></span> <span class="math inline">\(0&lt;p&lt;1\)</span> 에 대해</p>
@@ -1069,7 +1066,6 @@ PV\int_{0}^\infty \dfrac{x^{-p}}{x-1}\, dx = \pi \cot p\pi
 <p>임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x=1\)</span> 의 cut 에 대해 표현하면 <span class="math display">\[
 \begin{aligned}
@@ -1093,7 +1089,7 @@ PV\int_{0}^\infty \dfrac{x^{-p}}{x-1}\, dx = \lim_{\varepsilon \to 0} \left[\int
 <p><span class="math display">\[
 \int_{1+\varepsilon}^{\infty} \dfrac{x^{-p}}{x-1}\, dx = \int_{1+\varepsilon}^\infty \sum_{k=0}^\infty x^{-k-p-1}\, dx = \sum_{k=0}^\infty \dfrac{1}{k+p} (1+\varepsilon)^{-k-p}
 \]</span></p>
-<p>이다. <span class="math inline">\(\varepsilon \to 0\)</span> 극한에서 <a href="#exm-complex2_mittag_leffler_2" class="quarto-xref">예제&nbsp;<span>15.9</span></a> 를 참고하면</p>
+<p>이다. <span class="math inline">\(\varepsilon \to 0\)</span> 극한에서 <a href="#exm-CF_mittag_leffler_2" class="quarto-xref">예제&nbsp;<span>15.9</span></a> 를 참고하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 PV\int_{0}^\infty \dfrac{x^{-p}}{x-1} &amp;= \left(\dfrac{1}{p} + \dfrac{1}{p+1} + \cdots \right) - \left(\dfrac{1}{-p+1} + \dfrac{1}{-p+2} + \cdots\right) \\
@@ -1102,15 +1098,14 @@ PV\int_{0}^\infty \dfrac{x^{-p}}{x-1} &amp;= \left(\dfrac{1}{p} + \dfrac{1}{p+1}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 15.5 (Arfken 11.7.5)</strong></span> <a href="#eq-complex2_product_expansion_of_entire_function_1" class="quarto-xref">식&nbsp;<span>15.11</span></a> 는 <a href="#eq-complex2_product_expansion_of_entire_function_2" class="quarto-xref">식&nbsp;<span>15.12</span></a> 의 <span class="math inline">\(\sin z\)</span> 식으로 직접적으로 유도 될 수 없다는 것을 설명하고 <span class="math inline">\(\sin z/z\)</span> 를 전개하여 얻을 수 있다는 것을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 15.5 (Arfken 11.7.5)</strong></span> <a href="#eq-CF_product_expansion_of_entire_function_1" class="quarto-xref">식&nbsp;<span>15.11</span></a> 는 <a href="#eq-CF_product_expansion_of_entire_function_2" class="quarto-xref">식&nbsp;<span>15.12</span></a> 의 <span class="math inline">\(\sin z\)</span> 식으로 직접적으로 유도 될 수 없다는 것을 설명하고 <span class="math inline">\(\sin z/z\)</span> 를 전개하여 얻을 수 있다는 것을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\sin 0 = 0\)</span> 이므로 <a href="#eq-complex2_product_expansion_of_entire_function_1" class="quarto-xref">식&nbsp;<span>15.11</span></a> 의 우변의 맨 앞의 <span class="math inline">\(f(0) \exp [zf'(0)/f(0) ]\)</span> 를 제대로 계산 할 수 없다. <span class="math inline">\(g(z) = \sin z/z\)</span> 라고 하면 <span class="math inline">\(\lim_{z\to 0} g(z) = 1\)</span> 이며,</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\sin 0 = 0\)</span> 이므로 <a href="#eq-CF_product_expansion_of_entire_function_1" class="quarto-xref">식&nbsp;<span>15.11</span></a> 의 우변의 맨 앞의 <span class="math inline">\(f(0) \exp [zf'(0)/f(0) ]\)</span> 를 제대로 계산 할 수 없다. <span class="math inline">\(g(z) = \sin z/z\)</span> 라고 하면 <span class="math inline">\(\lim_{z\to 0} g(z) = 1\)</span> 이며,</p>
 <p><span class="math display">\[
 \lim_{z\to 0} \dfrac{zg'(z)}{g(z)}= \lim_{z\to 0}\dfrac{\cos z - \sin z/z}{\sin z/z} = 0
 \]</span></p>
@@ -1120,38 +1115,35 @@ PV\int_{0}^\infty \dfrac{x^{-p}}{x-1} &amp;= \left(\dfrac{1}{p} + \dfrac{1}{p+1}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.6 (Arfken 11.7.6 (루셰의 정리를 이용한 대수학의 기본정리 증명))</strong></span> 루셰의 정리를 이용하여 대수학의 기본정리를 증명한다. 우리는 다음을 안다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(a z^n\)</span> 은 <span class="math inline">\(n\)</span> 개의 영점을 갖는다.</p>
-<p>  (<span class="math inline">\(2\)</span>) 충분히 큰 <span class="math inline">\(|R|\)</span> 에 대해 <span class="math inline">\(|a_n R|^n &gt; \left|\sum_{m=0}^{n-1} a_m R^m\right|\)</span> 이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(a z^n\)</span> 은 <span class="math inline">\(n\)</span> 개의 영점을 갖는다.</p>
+<p> (<span class="math inline">\(2\)</span>) 충분히 큰 <span class="math inline">\(|R|\)</span> 에 대해 <span class="math inline">\(|a_n R|^n &gt; \left|\sum_{m=0}^{n-1} a_m R^m\right|\)</span> 이다.</p>
 <p>위 사실과 루셰의 정리를 이용하여 대수학의 기본정리를 증명하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(p(z) = a_0 + a_1z + \cdots + a_nz^n\)</span> 에 대해 <span class="math inline">\(f(z)= a_n z^n\)</span>, <span class="math inline">\(g(z) = a_0 + \cdots + a_{n-1}z^{n-1}\)</span> 이라고 하자. 반경 <span class="math inline">\(|R|\)</span> 인 복소평면상의 원점을 중심으로 하는 원 <span class="math inline">\(C\)</span> 를 을생각하자. <span class="math inline">\(R\)</span> 은 <span class="math inline">\(C\)</span> 상의 복소수이다. <span class="math inline">\(|f(R)| &gt; |g(R)|\)</span> 이므로 루셰의 정리에 의해 <span class="math inline">\(f(z)\)</span> 와 <span class="math inline">\(p(z) = f(z)+g(z)\)</span> 는 <span class="math inline">\(C\)</span> 의 내부에서 같은 수의 영점을 갖는다. <span class="math inline">\(f(z)\)</span> 의 <span class="math inline">\(n\)</span> 개의 원점을 포함하며 (<span class="math inline">\(2\)</span>) 의 부등식이 만족하도록 충분히 큰 <span class="math inline">\(|R|\)</span> 을 잡으면 된다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.7 (Arfken 11.7.7)</strong></span> 루셰의 정리를 이용하여 <span class="math inline">\(F(z) = z^6-4z^3+10\)</span> 의 모든 영점이 <span class="math inline">\(|z|=1\)</span> 과 <span class="math inline">\(|z|=2\)</span> 에 대한 원 사이에 있음을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = z^6-4z^3\)</span>, <span class="math inline">\(g(z)=10\)</span> 이라고 하면 <span class="math inline">\(F(z) = f(g)+g(z)\)</span> 이다. <span class="math inline">\(|z|=1\)</span> 인 원에서 생각하면 <span class="math inline">\(|f(z)| = |z^6-4z^3|
 \le |z^6|+4|z^3| = 5 &lt; g(z)\)</span> 이며 <span class="math inline">\(g(z)\)</span> 는 <span class="math inline">\(|z|=1\)</span> 인 원 안에 영점을 갖지 않으므로 <span class="math inline">\(F(z)\)</span> 는 <span class="math inline">\(|z|=1\)</span> 인 원 안에 영점이 없다.</p>
 <p><span class="math inline">\(f(z)=z^6\)</span>, <span class="math inline">\(g(z)=-4z^3+10\)</span> 이라고 하자. 역시 <span class="math inline">\(F(z) = f(z)+g(z)\)</span> 이다. <span class="math inline">\(|z|=2\)</span> 인 원에서 생각하면 <span class="math inline">\(|f(z)| = |z|^6 = 64\)</span> 이며 <span class="math inline">\(|g(z)| \le 4|z|^3 + 10 = 42 &lt; |f(z)|\)</span> 이므로 <span class="math inline">\(F(z)\)</span> 와 <span class="math inline">\(f(z)\)</span> 는 <span class="math inline">\(|z|=2\)</span> 원 안에서의 영점의 갯수가 같다. 그런데 <span class="math inline">\(f(z)\)</span> 의 영점은 모두 <span class="math inline">\(0\)</span> 이므로 <span class="math inline">\(|z|=2\)</span> 인 원 안에 존재한다. 따라서 <span class="math inline">\(F(z)\)</span> 의 모든 영점은 <span class="math inline">\(|z|=1\)</span> 과 <span class="math inline">\(|z|=2\)</span> 사이의 원에 존재한다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 15.8 (Arfken 11.7.8)</strong></span> <span class="math inline">\(\sec z\)</span> 와 <span class="math inline">\(\csc z\)</span> 에 대한 곱전개 <a href="#eq-complex2_mittag_leffler_4" class="quarto-xref">식&nbsp;<span>15.9</span></a> 유도하라.</p>
+<p><span class="theorem-title"><strong>연습문제 15.8 (Arfken 11.7.8)</strong></span> <span class="math inline">\(\sec z\)</span> 와 <span class="math inline">\(\csc z\)</span> 에 대한 곱전개 <a href="#eq-CF_mittag_leffler_4" class="quarto-xref">식&nbsp;<span>15.9</span></a> 유도하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\sec z\)</span> 의 pole 은 <span class="math inline">\(k=1,\,2,\ldots\)</span> 에 대해 <span class="math inline">\(z_k = \pm (2k-1)\pi/2\)</span> 이며</p>
 <p><span class="math display">\[
@@ -1189,13 +1181,12 @@ b_k = \lim_{z\to z_k} \left[(z-z_k)\csc z\right] = \lim_{z \to z_k} \dfrac{z-z_k
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.9 (Arfken 11.7.9)</strong></span> <span class="math inline">\(f(z) = \dfrac{z^2-3z+2}{z}\)</span> 일 때 부분분수 전개를 이용하여 <span class="math inline">\(\oint_C f'(z)/f(z)\, dz = 2\pi i (N_f - P_f)\)</span> 임을 보여라. 여기서 <span class="math inline">\(N_f,\, P_f\)</span> 는 <span class="math inline">\(C\)</span> 내부의 영점과 극의 (multiplicity 를 포함한) 갯수이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>영점은 <span class="math inline">\(z=1,\,2\)</span> 이며 극점은 <span class="math inline">\(z=0\)</span> 에서 단순극점을 가진다는 것을 안다.</p>
 <p><span class="math display">\[
@@ -1207,7 +1198,7 @@ b_k = \lim_{z\to z_k} \left[(z-z_k)\csc z\right] = \lim_{z \to z_k} \dfrac{z-z_k
 \]</span></p>
 <p>이므로 <span class="math inline">\(N_f-P_f = 1\)</span> 이다. 실제로 <span class="math inline">\(N_f=2,\, P_f=1\)</span> 이므로 일치한다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.10 (Arfken 11.7.10)</strong></span> 특이점 주위의 반원에 대한 적분값이 원에 대한 적분값으 반인 것은 단순 극점 대해서만 성립한다. 즉 아래의 식은 단순 극점에 대해서만 성립한다.</p>
@@ -1217,7 +1208,6 @@ b_k = \lim_{z\to z_k} \left[(z-z_k)\csc z\right] = \lim_{z \to z_k} \dfrac{z-z_k
 <p>계수가 1 이상인 극점에 대해 성립하지 않는것을 예를 들어 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = z^{-2}\)</span> 에 대해 <span class="math inline">\(z=e^{i\theta}\)</span> 로 놓고 적분해보자.</p>
 <p><span class="math display">\[
@@ -1227,7 +1217,7 @@ b_k = \lim_{z\to z_k} \left[(z-z_k)\csc z\right] = \lim_{z \to z_k} \dfrac{z-z_k
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_7_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.11 (Arfken 11.7.11)</strong></span> 함수 <span class="math inline">\(f(z)\)</span> 는 실수축을 따라서는 계수 3인 <span class="math inline">\(z=x_0\)</span> 에서의 극점을 제외하고는 해석적이라고 하자. 즉, 로랑 전개는 아래의 형태이다.</p>
@@ -1240,7 +1230,6 @@ f(z) = \dfrac{a_{-3}}{(z-x_0)^3} + \dfrac{a_{-1}}{z-x_0} + g(z).
 <p>여기서 <span class="math inline">\(C_{x_0}\)</span> 는 <span class="math inline">\(z=x_0\)</span> 를 중심으로 하는 반경이 작은 원형 경로이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) 우선 <span class="math inline">\(g(z)\)</span> 는 해석적이므로 (<span class="math inline">\(1\)</span>) 의 적분의 유한값 여부를 판단할 때 제외해도 된다. 또한 <span class="math inline">\(\int_{-\infty}^{x_0-\delta}\)</span> 와 <span class="math inline">\(\int_{x_0+\delta}^\infty\)</span> 가 서로 상쇄되므로 남는 것은 <span class="math inline">\(g(x)\)</span> 의 적분 밖에 없다. 따라서 위의 적분은 유한 값을 가진다.</p>
 <p>(<span class="math inline">\(2\)</span>)</p>
@@ -1257,16 +1246,15 @@ u(s-a) = \left\{\begin{array}{ll} 0, \qquad &amp; s&lt;a \\ 1, &amp; s&gt; a\end
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle u(s) = \dfrac{1}{2} + \lim_{\varepsilon \to 0^+} \dfrac{1}{2\pi i} PV \int_{-\infty}^\infty \dfrac{e^{ixs}}{x}\, dx\)</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="complex3.html#sec-complex3_integrals_with_complex_exponent" class="quarto-xref"><span> 16.1.3</span></a> 의 <a href="../../src/complex/complex3.html#sec-complex3_integrals_with_complex_exponent">복소 지수함수가 포함된 적분</a> 를 이용한다.</p>
-<p>(<span class="math inline">\(a\)</span>) 아래 그림 <a href="#fig-complex_cauchy_principal_value_3" class="quarto-xref">그림&nbsp;<span>15.8</span></a> 와 같은 경로를 생각하자.</p>
-<div id="fig-complex_cauchy_principal_value_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="complex3.html#sec-CF_integrals_with_complex_exponent" class="quarto-xref"><span> 16.1.3</span></a> 의 <a href="../../src/complex/complex3.html#sec-CF_integrals_with_complex_exponent">복소 지수함수가 포함된 적분</a> 를 이용한다.</p>
+<p>(<span class="math inline">\(a\)</span>) 아래 그림 <a href="#fig-CF_cauchy_principal_value_3" class="quarto-xref">그림&nbsp;<span>15.8</span></a> 와 같은 경로를 생각하자.</p>
+<div id="fig-CF_cauchy_principal_value_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex_cauchy_principal_value_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_cauchy_principal_value_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_cauchy_principal_value_3.png" class="img-fluid figure-img" width="600">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex_cauchy_principal_value_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_cauchy_principal_value_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;15.8: 단위 계단 함수의 복소 적분 표현 1
 </figcaption>
 </figure>
@@ -1276,7 +1264,7 @@ u(s-a) = \left\{\begin{array}{ll} 0, \qquad &amp; s&lt;a \\ 1, &amp; s&gt; a\end
 I_{+} = \int_{-\infty}^\infty \dfrac{e^{ixs}}{x-i\varepsilon} =  2\pi i e^{-\varepsilon s}\\
 \]</span></p>
 <p>이며 <span class="math inline">\(\varepsilon \to 0^+\)</span> 극한에서 <span class="math inline">\(I_+ = 2\pi i\)</span> 이다. <span class="math inline">\(s&lt;0\)</span> 에 대해서는 <span class="math inline">\(I_-=0\)</span> 이다. 따라서 (<span class="math inline">\(a\)</span>) 는 성립한다.</p>
-<p>(<span class="math inline">\(b\)</span>) 의 경우는 <a href="#fig-complex2_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 의 경로를 생각하자. <span class="math inline">\(s&gt;0\)</span> 일 때</p>
+<p>(<span class="math inline">\(b\)</span>) 의 경우는 <a href="#fig-CF_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 의 경로를 생각하자. <span class="math inline">\(s&gt;0\)</span> 일 때</p>
 <p><span class="math display">\[
 \int_{C_r} \dfrac{e^{izs}}{z}\, dz = \pi i
 \]</span></p>

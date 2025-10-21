@@ -14,9 +14,9 @@ crossref:
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-complex_start}
+::: {#def-CF_complex_start}
 
-#### 복소수와 복소함수의 다양한 정의들
+#### 복소수와 복소함수에서 사용하는 다양한 개념들
 
 $x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. 이 때 $z$ 에 대한 **conjugate** 를 $z^\ast$ 라고 표기하며 $z^\ast :=x-iy$ 로 정의된다. 복소수 $z$ 를 $r,\, \theta\in \mathbb{R}$ 에 대해 극좌표계에서 $z=re^{i\theta}$ 로 표현 할 수 있으며 $r$ 을 **modulus** 라고 하고 $\theta$ 를 **argument** 혹은 **phase** 라고 한다. 
 
@@ -27,15 +27,15 @@ $x,\,y\in\mathbb{R}$ 에 대해 복소수 $z=x+iy$ 를 생각 할 수 있다. �
 
 </br>
 
-### 복소 함수 {#sec-complex1_complex_function}
+### 복소 함수 {#sec-CF_complex_function}
 
 어떤 함수 $f$ 가 실수에서 급수로 표현된다고 하자. $f(x)= \sum_{j=0}^\infty c_j x^j$ 이고 $x$ 의 수렴반경이 $R$ 이라고 하면 $|z|<R$ 인 복소수 $z$ 에 대해 $f(z)=\sum_{j=0}^\infty c_j z^j$ 라고 정의 할 수 있다. 예를 들어 $\exp (x)$ 는 모든 $x\in \mathbb{R}$ 에 대해 수렴하므로 모든 $z\in \mathbb{C}$ 에 대해 
 
 $$
-f(z) = 1+z+\dfrac{z^2}{2!} + \dfrac{z^3}{3!} + \cdots
+\exp (z) = 1+z+\dfrac{z^2}{2!} + \dfrac{z^3}{3!} + \cdots
 $$
 
-라고 $f:\mathbb{C} \to \mathbb{C}$ 를 정의 할 수 있다. $f:\mathbb{C}\to \mathbb{C}$ 인 경우 함수의 실수부와 허수부를 다음과 같이 나눈다.
+라고 정의 할 수 있다. $f:\mathbb{C}\to \mathbb{C}$ 인 경우 함수의 실수부와 허수부를 다음과 같이 나눈다.
 
 $$
 f(z) = u(z) + iv(z) \qquad \text{or}\qquad f(x,\,y) = u(x,\,y) + i v(x,\,y)
@@ -45,7 +45,7 @@ $$
 
 </br>
 
-### 복소수의 지수와 로그 {#sec-complex1_exponential_and_log}
+### 복소수의 지수와 로그 {#sec-CF_exponential_and_log}
 
 $z=x+iy$ 를 극좌표계에서 $z=re^{i\theta}$ 로 표현하는 것은 1-1 대응을 이룬다. 정확히 말하면 1-1 대응을 이루도록 하기 위해 $\theta$ 의 범위를 $[0,\, 2\pi)$ 로 제한한다. 정수 $n$ 에 대해 
 
@@ -75,11 +75,11 @@ $$
 
 ## 코시-리만 조건 과 해석 함수
 
-### 코시-리만 조건 {#sec-complex1_cauchy_riemann_condition}
+### 코시-리만 조건 {#sec-CF_cauchy_riemann_condition}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-differentiability_of_complex_valued_function}
+::: {#def-CF_differentiability_of_complex_valued_function}
 
 #### 복소함수의 미분
 
@@ -112,9 +112,9 @@ $$
 
 $$
 \dfrac{\delta f}{\delta z} = \dfrac{\delta u + i\delta v}{\delta x + i \delta y}
-$$ {#eq-complex_variation_of_function}
+$$ {#eq-CF_variation_of_function}
 
-@eq-complex_variation_of_function 을 두가지 경로에서 생각해보자. 우선  $\delta y=0$ 인 경로에서 생각하면
+@eq-CF_variation_of_function 을 두가지 경로에서 생각해보자. 우선  $\delta y=0$ 인 경로에서 생각하면
 
 $$
 \lim_{\delta z \to 0} \dfrac{\delta f}{\delta z} = \lim_{\delta x\to 0} \left(\dfrac{\delta u}{\delta x} + i \dfrac{\delta v}{\delta x}\right) = \dfrac{\partial u}{\partial x} + i\dfrac{\partial v}{\partial x}
@@ -130,9 +130,9 @@ $$
 
 $$
 \dfrac{\partial u}{\partial x} = \dfrac{\partial v}{\partial y},\qquad \dfrac{\partial v}{\partial x} = -\dfrac{\partial u}{\partial y}
-$$ {#eq-complex_cauchy_riemann_condition}
+$$ {#eq-CF_cauchy_riemann_condition}
 
-이어야 한다. @eq-complex_cauchy_riemann_condition 의 조건을 **코시-리만 조건 (Cauchy-Riemann condition)** 이라고 하며 코시 리만 조건은 도함수가 존재하기 위한 필요조건이다.
+이어야 한다. @eq-CF_cauchy_riemann_condition 의 조건을 **코시-리만 조건 (Cauchy-Riemann condition)** 이라고 하며 코시 리만 조건은 도함수가 존재하기 위한 필요조건이다.
 
 이제 코시 리만 조건을 만족하면 도함수가 존재하며 여기에 각각의 편도함수가 $z$ 에서 연속이라고 하자. 그렇다면 $f(x,\,y)$ 에 대해
 
@@ -153,24 +153,22 @@ $$
 
 $$
 \dfrac{d f}{d z} = \dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x} = \dfrac{\partial v}{\partial y} - i\dfrac{\partial u}{\partial y}
-$$ {#eq-complex_derivative_of_complex_function}
+$$ {#eq-CF_derivative_of_complex_function}
 
-이다. @eq-complex_derivative_of_complex_function 은 $\delta x$ 와 $\delta y$ 의 상대적인 값에 무관하며 따라서 경로에 무관하다. 즉 $f$ 에 대한 $z$ 에서의 미분값이 존재한다.
+이다. @eq-CF_derivative_of_complex_function 은 $\delta x$ 와 $\delta y$ 의 상대적인 값에 무관하며 따라서 경로에 무관하다. 즉 $f$ 에 대한 $z$ 에서의 미분값이 존재한다.
 
 </br>
 
-### 해석 함수 {#sec-compex1_analytic_function}
+### 해석 함수 {#sec-CF_analytic_function}
 
 ::: {.callout-note appearance="minimal"}
-
-::: {#def-complex_analytic_function}
+::: {#def-CF_analytic_function}
 
 #### 해석 함수, 전해석 함수, 특이점
 
 복소평면의 어떤 열린 부분집합 $U \subset \mathbb{C}$ 에서 정의된 함수 $f:U \to \mathbb{C}$ 가 각각의 $z\in U$ 에서 미분가능하며, 다가 함수(multivalued function) 가 아닐 때 이 함수를 **해석 함수(analytic function)** 라고 한다. $U=\mathbb{C}$ 일 때 이 함수를 **전해석 함수(entire function)** 이라고 한다. $z_0\in Z$ 에서 도함수가 존재하지 않을 경우 이 $z_0$ 를 **특이점 (singular point)** 라고 한다.
 
 :::
-
 :::
 
 
@@ -178,13 +176,10 @@ $$ {#eq-complex_derivative_of_complex_function}
 
 실함수와 구별되는 복소함수의 가장 큰 특징을 나열하고자 한다. 여기에 대한 증명은 복소해석학의 다양한 교과서를 참고하라. 
 
-
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 
-::: {#prp-complex_properties_of_analytic_function}
+::: {#prp-CF_properties_of_analytic_function}
 
 복소평면의 열린 부분집합 $U\subset C$ 에서 정의된 $f:U \to \mathbb{C}$ 에 대해 다음은 동치이다.
 
@@ -195,15 +190,13 @@ $$ {#eq-complex_derivative_of_complex_function}
 &emsp;($3$) 모든 $z\in U$ 에서의 $f$ 의 테일러 급수는 $f(z)$ 로 수렴한다.
 :::
 
-</div>
+</div></br>
 
-</br>
-
-다가 함수의 경우 range 를 제한하여 단일값을 가지도록 하고 그 제한에서 해석 함수로 사용하기도 한다. 
+다가 함수의 경우 정의역을 제한하여 단일값을 가지도록 하고 그 제한에서 해석 함수로 사용하기도 한다. 
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex_zsq}
+::: {#exm-CF_square_polynomial}
 
 $f(z) = z^2$ 가 해석함수임을 보이자. $z=x+iy$ 라고 하면 $f(x,\,y) = (x^2-y^2)+2ixy$ 이며 
 
@@ -220,7 +213,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex_conjugate_z}
+::: {#exm-CF_conjugate_z}
 
 $f(z) = z^\ast = x-iy$ 에 대해
 
@@ -236,7 +229,7 @@ $$
 </div></br>
 
 
-### 해석함수와 라플라스 방정식 {#sec-complex1_analytic_function_and_laplace_equation}
+### 해석함수와 라플라스 방정식 {#sec-CF_analytic_function_and_laplace_equation}
 
 $f(x,\,y) = u(x,\,y) + iv(x,\,y)$ 가 $Z\subset \mathbb{C}$ 에서 해석함수라면 코시 리만 조건으로부터
 
@@ -248,13 +241,13 @@ $$
 
 $$
 \nabla^2 f = \sum_{i=1}^n \dfrac{\partial^2 f}{\partial x_i^2} =  0
-$$ {#eq-complex_laplace_equation}
+$$ {#eq-CF_laplace_equation}
 
 을 만족하는 함수 $f$ 를 **조화 함수(harmonic function)** 이라고 부른다(구면 조화 함수(spherical harmonic function) 과는 완전히 다른 종류이다). 즉 해석함수의 실수부와 허수부는 2차원 조화함수이다.
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_orthoginality_of_real_and_complex_function}
+::: {#exm-CF_orthoginality_of_real_and_complex_function}
 
 $u(x,\,y)=c$ 를 만족하는 곡선 $C_u$을 생각하자. 
 
@@ -281,9 +274,9 @@ $$
 
 </div></br>
 
-### 해석함수의 미분 {#sec-complex1_derivative_of_analytic_function}
+### 해석함수의 미분 {#sec-CF_derivative_of_analytic_function}
 
-@eq-complex_derivative_of_complex_function 로부터
+@eq-CF_derivative_of_complex_function 로부터
 
 $$
 f'(z) = \dfrac{df}{dz} = \dfrac{\partial f}{\partial x}
@@ -301,15 +294,15 @@ $$
 \begin{aligned}
 \dfrac{d}{dz}[f(z)g(z)] = \dfrac{\partial}{\partial x}[f(z)g(z)] = (\partial_x f) g + f (\partial_x g)= f'(z)g(z) +f(z)g'(z)
 \end{aligned}
-$$ {#eq-complex1_derivative_of_product_of_functions}
+$$ {#eq-CF_derivative_of_product_of_functions}
 
 즉 실함수에서의 두 함수의 곱의 미분과 동일하다.
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_derivative_of_power}
+::: {#exm-CF_derivative_of_power}
 
-@eq-complex1_derivative_of_product_of_functions 를 이용하여 양의 정수 $n$ 에 대해 $(z^n)' = nz^{n-1}$ 임을 보일 수 있다. Induction 을 사용한다. $n=1$ 일 경우는 이미 보였다. $(z^n)'=nz^{n-1}$ 임을 가정하면
+@eq-CF_derivative_of_product_of_functions 를 이용하여 양의 정수 $n$ 에 대해 $(z^n)' = nz^{n-1}$ 임을 보일 수 있다. Induction 을 사용한다. $n=1$ 일 경우는 이미 보였다. $(z^n)'=nz^{n-1}$ 임을 가정하면
 
 $$
 (z^{n+1})' = (z z^n)' = z^n + z(nz^{n-1})= z^{n} + nz^{n} = (n+1)z^{n+1}
@@ -323,7 +316,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_derivative_of_logarithm}
+::: {#exm-CF_derivative_of_logarithm}
 
 $\ln z = \ln r+i(\theta +2n\pi) = u+iv$ 라고 놓으면, 
 
@@ -335,7 +328,7 @@ $$
 
 $$
 \dfrac{d(\ln z)}{dz} = \dfrac{\partial \ln z}{\partial x} = \dfrac{x}{r^2} - i \dfrac{y}{r^2} = \dfrac{1}{x+iy} = \dfrac{1}{z}
-$$ {#eq-complex1_derivative_of_ln_z}
+$$ {#eq-CF_derivative_of_ln_z}
 
 이다. 주의해야 할 것은 $\ln z$ 는 다가함수(multivalued function) 이므로 함수의 영역을 제한해야 해석함수가 된다. 여기에 대해서는 이후 다루기로 한다.
 
@@ -343,8 +336,7 @@ $$ {#eq-complex1_derivative_of_ln_z}
 
 </div></br>
 
-
-### 무한원점 (Point at infinity) {#sec-complex1_point_at_infinity}
+### 무한원점 {#sec-CF_point_at_infinity}
 
 복소수를 다룰 때 무한대는 하나의 점으로 다루게 되며 이 점을 무한원점이라고 한다. 무한원점의 근방(neighborhood) 를 다룰 때는 $w=1/z$ 로 변환시킨 후 $w = 0$ 근방을 다룬다. 이렇게 되면 큰 양의 실수 $R$ 에 대해 $z=-R$ 을 다룰 때 $w=1/z$ 근처의 미분을 다루게 되면 $z=R$ 이 모두 $w=1/z$ 근처에 있기 때문에 영향을 끼치게 된다. 이외의 특이한 사항에 대해서는 차후 다루기로 한다.
 
@@ -362,6 +354,7 @@ $$ {#eq-complex1_derivative_of_ln_z}
 $f(z) = \text{Re}(z)= x$ 가 해석함수인지 여부를 확인하라.
 
 :::
+</div>
 
 ::: {.solution}
 
@@ -371,9 +364,8 @@ $$
 
 이므로 해석함수가 아니다.
 :::
-</div></br>
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_2_2}
 
@@ -382,6 +374,7 @@ $$
 해석함수 $w(z)$ 의 실수부 $u(x,\,y)$ 와 허수부 $v(x,\,y)$ 가 복소평면의 열린 부분집합 $U$ 에서 라플라스 방정식을 만족한다고 하자. 그렇다면 $u,\,v$ 모두 $U$ 의 내부에서 최대값 혹은 최소값을 갖지 않는다는 것을 보여라.
 
 :::
+</div>
 
 ::: {.solution}
 
@@ -397,9 +390,8 @@ $$
 이며 $\det(H_v) \le 0$ 도 같은 방법으로 보일 수 있다.
 
 :::
-</div></br>
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_2_4}
 
@@ -410,14 +402,15 @@ $w_1 = u(x,\,y) + i v(x,\,y)$, $w_2= w_1^\ast = u(x,\,y) - iv(x,\,y)$ 가 공통
 
 :::
 
+</div>
+
 ::: {.solution}
 
 $w_1$ 의 코시-리만 조건으로부터 $\partial_x u = - \partial_y v$ 이며 $w_1^\ast$ 의 코시 리만 조건으로 부터 $\partial_x u = \partial_yv$ 이므로 $\partial_x u = 0$ 이다. 즉 $u=u(x)$ 이다. $w_1$ 의 코시-리만 조건으로부터 $\partial_x v =  -\partial_y u$ 이며  $w_1^\ast$ 의 코시-리만 조건으로부터 $\partial_x v = \partial_y u$ 이므로 $\partial_y u=0$ 이다. 즉 $u$ 는 상수이다. 마찬가지로 $v$ 가 상수 임을 보일 수 있다.
 
 :::
-</div></br>
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_2_5}
 
@@ -425,8 +418,9 @@ $w_1$ 의 코시-리만 조건으로부터 $\partial_x u = - \partial_y v$ 이�
 
 $f(z) = 1/(x+iy)$ 에 대해 $1/z$ 가 $z=0$ 을 제외하고는 전해석 함수 임을 보여라. 이를 이용하여 $n\in \mathbb{Z}_+$ 에 대해 $z^{-n}$ 가 $z=0$ 을 제외한 영역에서의 해석함수 여부까지 확장하라.
 
-
 :::
+
+</div>
 
 ::: {.solution}
 
@@ -459,9 +453,8 @@ $$
 이며 $n=1$ 일 때와 마찬가지로 $z\ne 0$ 에서 해석함수 임을 보일 수 있다.
 
 :::
-</div></br>
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_2_7}
 
@@ -474,6 +467,8 @@ $$
 $$ {#eq-complex1_cauchy_riemann_condition_in_polar_coordinate}
 
 :::
+
+</div>
 
 ::: {.solution}
  
@@ -513,9 +508,8 @@ $$
 
 
 :::
-</div></br>
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken7_11_2_8}
 
@@ -530,6 +524,8 @@ $$
 을 만족함을 보여라.
 
 :::
+
+</div>
 
 ::: {.solution}
  
@@ -558,22 +554,23 @@ $$
 이다. 주어진 식을 만족한다.
 
 :::
-</div></br>
+
+</br>
 
 
 ## 코시의 적분 정리
 
-### Contour 적분 {#sec-complex_contour_integral}
+### Contour 적분 {#sec-CF_contour_integral}
 
-복소평면에서 특정 경로에 대해 적분할 때 이 경로를 **contour** 라고 한다. 보통 countour 는 $C$ 로 표기한다. 경로의 시작점과 끝점을 각각 $z_0,\,z_n$ 이라고 하고 경로 중간에 점 $z_1,\ldots,\,z_{n-1}$ 을 위치시켰다고 하자(@fig-complex1_contour). 이 때 $z_{j}$ 와 $z_{j+1}$ 사이의 어떤 점을 선택하여 $\xi_j$ 라고 하고 다음의 합을 생각한다.
+복소평면에서 특정 경로에 대해 적분할 때 이 경로를 **contour** 라고 한다. 보통 countour 는 $C$ 로 표기한다. 경로의 시작점과 끝점을 각각 $z_0,\,z_n$ 이라고 하고 경로 중간에 점 $z_1,\ldots,\,z_{n-1}$ 을 위치시켰다고 하자(@fig-CF_contour). 이 때 $z_{j}$ 와 $z_{j+1}$ 사이의 어떤 점을 선택하여 $\xi_j$ 라고 하고 다음의 합을 생각한다.
 
 $$
 S_n = \sum_{j=0}^{n-1} f(\xi_j) (z_{j+1}-z_j).
-$$ {#eq-complex1_summation_before_integration}
+$$ {#eq-CF_summation_before_integration}
 
 이 때 $n\to \infty$ 극한에서 $|z_{j+1}-z_j|\to 0$ 이며 $S_n \to \int_C f(z)\,dz$ 가 된다. 
 
-![적분 경로](figures/fig-complex_contour.png){#fig-complex1_contour width=400}
+![적분 경로](figures/fig-complex_contour.png){#fig-CF_contour width=400}
 
 혹은 $z_0 = x_0+iy_0,\, z_n = x_n +iy_n$ 에 대해
 
@@ -591,13 +588,13 @@ $$
 
 </br>
 
-### 코시 적분 정리 {#sec-complex1_cauthy_integral_theorem}
+### 코시 적분 정리 {#sec-CF_cauthy_integral_theorem}
 
 코시 정리는 단순연결영역(simply connected region) 이라는 특별한 성질을 가진 복소평면 $\mathbb{C}$ 의 부분집합 위에서 성립한다. 일단 **영역(region)** 은 공집합이 아니며(non-empty), 연결되어 있는 위상공간의 열린 집합을 의미한다$^1$.[$^1$ https://en.wikipedia.org/wiki/Domain_(mathematical_analysis)]{.aside} 영역 $U \subset C$ 의 내부에 구명이 없다면, 즉 $U$ 에서 정의된 임의의 닫힌 곡선 $C'$ 에 대해 $C'$ 의 내부가 모두 $U$ 에 포함된다며 $U$ 는 단순연결영역이다. 뒤에 보겠지만 이는 스토크스 정리(Stokes' theorem) 이 성립하는 영역과 같은데 코시 정리의 증명에 스토크스 정리가 사용되기 때문이다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_cauthy_integral_theorem}
+::: {#thm-CF_cauthy_integral_theorem}
 
 #### 코시 적분 정리
 
@@ -605,7 +602,7 @@ $C$ 가 복소평면에서의 닫힌 경로이며 $f$ 가 $C$ 를 포함하는 �
 
 $$
 \oint_C f(z)\, dz = 0
-$$ {#eq-complex1_cauthy_theorem}
+$$ {#eq-CF_cauthy_theorem}
 :::
 
 </div></br>
@@ -635,7 +632,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_integration_of_zn_in_circular_contour}
+::: {#exm-CF_integration_of_zn_in_circular_contour}
 
 $\oint z^n\, dz$ 를 원점을 중심으로 반지름 $r$ 인 원을 contour 로 잡아 계산해보자. 경로는 반시계방향으로 한다. $z=re^{i\theta}$ 라고 하면 $dz = ire^{i\theta}d\theta$ 이며, 
 
@@ -663,11 +660,11 @@ $$
 
 </br>
 
-### 다중 연결 영역 {#sec-complex1_multiply_connected_regions}
+### 다중 연결 영역 {#sec-CF_multiply_connected_regions}
 
-단일 연결 영역이 아닌 영역을  다중 연결 영역(multiply connected region) 이라고 한다. @fig-complex1_multiply_connected_reigon 의 (A) 는 단순연결영역이 아니므로 다중연결영역이다.
+단일 연결 영역이 아닌 영역을  다중 연결 영역(multiply connected region) 이라고 한다. @fig-CF_multiply_connected_reigon 의 (A) 는 단순연결영역이 아니므로 다중연결영역이다.
 
-![다중 연결 영역](figures/fig-multply_connected_region.png){#fig-complex1_multiply_connected_reigon width=500}
+![다중 연결 영역](figures/fig-multply_connected_region.png){#fig-CF_multiply_connected_reigon width=500}
 
 함수 $f$ 가 하얀 부분($R$) 에서 해석함수라고 하자. 코시 정리는 contour $C$ 에 대한 적분에 사용 될 수 없다. 그러나 그림 (B) 의 $C'$ 과 같이 경로를 잡는다면 코시 적분을 수행할 수 있다. (B) 에서와 같이 $R$ 내부에 얇은 틈을 만들어 $R'$ 을 외부의 영역과 연결한다. 그렇다면 새로운 영역에 어떤 폐곡선을 그리더라도 폐곡선의 내부에 영역이 아닌 점을 포함하지 않는다. 즉 틈을 통해 단순연결영역이 된다. 그리고 $ABDEFGA$ 를 연결하는 새로운 경로 $C'$ 을 생각하자. 이 경로는 단순 연결 영역 내의 경로이므로 코시 정리가 성립한다. 또한 $f(z)$ 가 원래의 영역에서 연속이기 때문에 $C'$ 의 부분경로 $AG$ 와 $DE$ 에 대한 적분은 서로 상쇄한다는 것을 알 수 있다. 즉
 
@@ -689,11 +686,11 @@ $$
 
 이다. 
 
-이제 @exm-complex1_integration_of_zn_in_circular_contour 을 다시 한번 보자. 그렇다면 우리는 다음을 알 수 있다.
+이제 @exm-CF_integration_of_zn_in_circular_contour 을 다시 한번 보자. 그렇다면 우리는 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-complex1_countour_integral_of_zn}
+::: {#prp-CF_countour_integral_of_zn}
 
 $z_0$ 를 내부에 포함하는 반시계방향의 닫힌 경로 $C$ 에 대해 다음이 성립한다.
 
@@ -723,7 +720,7 @@ $$
 
 ::: {.solution}
 
-@eq-complex1_summation_before_integration 의 개념을 그대로 사용하자. 또한 우리는 $|\sum a_n| \le \sum |a_n|$ 임을 안다. 
+@eq-CF_summation_before_integration 의 개념을 그대로 사용하자. 또한 우리는 $|\sum a_n| \le \sum |a_n|$ 임을 안다. 
 
 $$
 \begin{aligned}
@@ -761,12 +758,12 @@ $$
 :::
 </div></br>
 
-## 코시 적분 공식 {#sec-complex1_cauthy_integral_formular}
+## 코시 적분 공식 {#sec-CF_cauthy_integral_formular}
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_cauthy_integral_formula}
+::: {#thm-CF_cauthy_integral_formula}
 
 #### 코시 적분 공식
 
@@ -774,7 +771,7 @@ $z_0$ 가 복소평면상의 반시계 방향의 닫힌 contour $C$ 의 내부�
 
 $$
 \dfrac{1}{2\pi i} \oint_C \dfrac{f(z)}{z-z_0} \, dz = f(z_0)
-$$ {#eq-complex1_cauchy_integral_formula}
+$$ {#eq-CF_cauchy_integral_formula}
 
 
 :::
@@ -783,9 +780,9 @@ $$ {#eq-complex1_cauchy_integral_formula}
 
 ::: {.proof}
 
-$z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-complex1_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
+$z_0$ 가 $C$ 의 내부에 있으므로 각각의 $z\in C$ 에 대해 $z\ne z_0$ 이며 따라서 위의 적분은 잘 정의된다. $f(z)$ 가 해석적이라도 $z-z_0$ 로 인해 $f(z)/(z-z_0)$ 는 $z=z_0$ 에서 해석적이 아니다. 아래 @fig-CF_contour_z0 와 같이 $C$ 내부에 $z_0$ 주위의 반경 $r$ 의 반시계방향으로 회전하는 원형 경로 $C'$ 을 생각하자. 
 
-![$z_0$ 주위의 두 coutour](figures/fig-complex_contour_z0.png){#fig-complex1_contour_z0 width=350}
+![$z_0$ 주위의 두 coutour](figures/fig-complex_contour_z0.png){#fig-CF_contour_z0 width=350}
 
 우리느 $C$ 경로로의 적분과 $C'$ 경로로의 적분값이 같다는 것을 안다. $C'$ 경로에 대해 적분하고자 한다. $z=z_0 +re^{i\theta}$ 이며 $dz=ire^{i\theta}\,d\theta$ 이므로
 
@@ -805,11 +802,11 @@ $$
 
 </br>
 
-@thm-complex1_cauthy_integral_formula 의 조건에서 $z_0$ 가 contour 외부에 위치한다면 어떨까? $f(z)/(z-z_0)$ 는 $C$ 내부에서 해석적이며 따라서 적분은 $0$ 이 된다.
+@thm-CF_cauthy_integral_formula 의 조건에서 $z_0$ 가 contour 외부에 위치한다면 어떨까? $f(z)/(z-z_0)$ 는 $C$ 내부에서 해석적이며 따라서 적분은 $0$ 이 된다.
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_integrztion_z_z1}
+::: {#exm-CF_integrztion_z_z1}
 
 단위원의 경로 $C$ 에 대해 $1/z(z+2)$ 를 적분한 값을 $I$ 라고 하자. 
 
@@ -829,24 +826,24 @@ $$
 
 </div></br>
 
-## 미분 {#sec-complex1_derivatives_of_Cauchy_integral}
+## 미분 {#sec-CF_derivatives_of_Cauchy_integral}
 
-@eq-complex1_cauchy_integral_formula 을 $z_0$ 에 대해 미분하면
+@eq-CF_cauchy_integral_formula 을 $z_0$ 에 대해 미분하면
 
 
 $$
 f'(z_0) = \dfrac{1}{2\pi i} \oint \dfrac{f(z)}{(z-z_0)^2}\, dz
-$$ {#eq-complex1_derivative_of_cauchy_integral_1}
+$$ {#eq-CF_derivative_of_cauchy_integral_1}
 
 를 얻는다. 이를 반복하면 다음을 얻는다. 
 
 $$
 f^{(n)}(z_0) = \dfrac{n!}{2\pi i} \oint \dfrac{f(z)}{(z-z_0)^{n+1}}\, dz.
-$$ {#eq-complex1_derivative_of_cauchy_integral}
+$$ {#eq-CF_derivative_of_cauchy_integral}
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_derivative_of_cauchy_integral_1}
+::: {#exm-CF_derivative_of_cauchy_integral_1}
 
 $z=a$ 를 포함하는 경로 $C$ 에 대해 다음의 적분을 생각하자
 
@@ -854,7 +851,7 @@ $$
 I = \oint_C \dfrac{\sin^2 z}{(z-a)^4}\, dz.
 $$
 
-@eq-complex1_derivative_of_cauchy_integral 를 생각하면 다음과 같이 계산 할 수 있다.
+@eq-CF_derivative_of_cauchy_integral 를 생각하면 다음과 같이 계산 할 수 있다.
 
 $$
 I = \dfrac{2\pi i}{3!} \left[\dfrac{d^3}{dz^3} \sin z^2\right]_{z=a} = - \dfrac{8\pi i}{3} \sin a. \cos a
@@ -864,12 +861,12 @@ $$
 </div></br>
 
 
-### 모레라의 정리 {#sec-complex1_Morera_theorem}
+### 모레라의 정리 {#sec-CF_Morera_theorem}
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_morera_theorem}
+::: {#thm-CF_morera_theorem}
 
 #### 모레라의 정리
 
@@ -885,19 +882,19 @@ $z_0 \in R$ 을 하나 선택하자. 조건에 의해 $F:R \to \mathbb{C}$ 인 $
 
 $$
 F(z) := \int_{z_0}^z f(z)\,dz
-$$ {#eq-complex1_morera_0} 
+$$ {#eq-CF_morera_0} 
 
 임의의 $z_1,\,z_2\in R$ 에 대해
 
 $$
 F(z_2)-F(z_1) = \int_{z_1}^{z_2} f(z)\, dz
-$$ {#eq-complex1_morera_1}
+$$ {#eq-CF_morera_1}
 
 이다. 그렇다면 복소 변수 $t$ 에 대한 적분으로 다음과 같이 쓸 수 있다.
 
 $$
 \dfrac{F(z_2)-F(z_1)}{z_2-z_1} - f(z_1) = \dfrac{1}{z_2-z_1} \int_{z_1}^{z_2} {\large [ }f(t) - f(z_1){\large ]}\, dt
-$$ {#eq-complex1_morera_2}
+$$ {#eq-CF_morera_2}
 
 $f$ 가 연속이므로 $\varepsilon > 0$ 에 대해 어떤 $\delta>0$ 이 존재하여 
 
@@ -919,7 +916,7 @@ $$
 
 $$
 f(z_1) = F'(z_1)
-$$ {#eq-complex1_morera_3}
+$$ {#eq-CF_morera_3}
 
 
 이다. 즉 $F$ 가 $R$ 에서 해석적이므로 $F'(z) = f(z)$ 역시 $R$ 에서 해석적이다. $\square$
@@ -928,7 +925,7 @@ $$ {#eq-complex1_morera_3}
 
 </br>
 
-모레라의 정리는 다중 연결 영역까지 확장되지 않는다는 것에 유의해야 한다. 단순 연결 영역이 아닐 경우 @eq-complex1_morera_1 가 경로에 무관하게 정의된다는 보장이 없기 때문이다. 종합적으로 보면 다중 연결 영역에서 해석적인 함수는 모든 $n$-계 도함수가 존재하지만 그 적분이 경로-독립적으로 존재한다는 보장이 없다. 이 문제는 이후 다시 다루기로 한다. 
+모레라의 정리는 다중 연결 영역까지 확장되지 않는다는 것에 유의해야 한다. 단순 연결 영역이 아닐 경우 @eq-CF_morera_1 가 경로에 무관하게 정의된다는 보장이 없기 때문이다. 종합적으로 보면 다중 연결 영역에서 해석적인 함수는 모든 $n$-계 도함수가 존재하지만 그 적분이 경로-독립적으로 존재한다는 보장이 없다. 이 문제는 이후 다시 다루기로 한다. 
 
 어쨌든 모레라의 정리는 우리에게 복소함수에 대한 부정적분을 생각할 수 있도록 해 준다. 즉 함수 $f(z)$ 에 대한 경로-독립적인 적분을 생각 할 수 있다면 이 적분 함수의 미분이 $f(z)$ 라는 것이다.
 
@@ -938,7 +935,7 @@ $$ {#eq-complex1_morera_3}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-complex1_cauchy_inequality}
+::: {#prp-CF_cauchy_inequality}
 
 #### 코시 부등식
 
@@ -959,7 +956,7 @@ $$
 
 $$
 a_n = \dfrac{1}{2\pi} \oint_{|z|=r} \dfrac{f(z)}{z^{n+1}}\, dz
-$$ {#eq-complex1_cauchy_inequality}
+$$ {#eq-CF_cauchy_inequality}
 
 이며 따라서
 
@@ -967,7 +964,7 @@ $$
 |a_n| = \dfrac{1}{2\pi} \left|\oint_{|z|=r} \dfrac{f(z)}{z^{n+1}}\, dz\right| \le \dfrac{1}{2\pi} \oint_{|z|=r} \left|\dfrac{f(z)}{z^{n+1}} \right|\, |dz| \le \dfrac{1}{2\pi} \dfrac{M}{r^{n+1}}2\pi r= \dfrac{M}{r^{n+1}}
 $$
 
-이다. 즉 @eq-complex1_cauchy_inequality 이 성립한다. $\square$
+이다. 즉 @eq-CF_cauchy_inequality 이 성립한다. $\square$
 
 :::
 
@@ -977,7 +974,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_liouville}
+::: {#thm-CF_liouville}
 
 #### 리우빌 정리
 
@@ -995,11 +992,11 @@ $f(z)$ 가 유계, 즉 $z\in \mathbb{C}$ 에 대해 $|f(z)|\le M$ 인 $M>0$ 이 
 
 </br>
 
-@thm-complex1_liouville 로부터 $f(z)$ 가 상수함수가 아니라면 $f(z)$ 가 유계가 아니거나 전해석 함수가 아니어야 한다. 우리는 이로부터 놀라운 증명을 할 수 있다.
+@thm-CF_liouville 로부터 $f(z)$ 가 상수함수가 아니라면 $f(z)$ 가 유계가 아니거나 전해석 함수가 아니어야 한다. 우리는 이로부터 놀라운 증명을 할 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_fundamental_theorem_of_algebra}
+::: {#thm-CF_fundamental_theorem_of_algebra}
 
 #### 대수학의 기본정리
 
@@ -1036,7 +1033,7 @@ $$
 
 ::: {.solution}
 
-@exm-complex1_integration_of_zn_in_circular_contour 에 따라 $m-n-1 = -1$ 일 경우, 즉 $m=n$ 인 경우를 제외하면 $0$ 이며 $m=n$ 일 경우 우변이 $1$ 이다. 
+@exm-CF_integration_of_zn_in_circular_contour 에 따라 $m-n-1 = -1$ 일 경우, 즉 $m=n$ 인 경우를 제외하면 $0$ 이며 $m=n$ 일 경우 우변이 $1$ 이다. 
 
 :::
 
@@ -1142,7 +1139,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_gauss_mean_value_theorem}
+::: {#thm-CF_gauss_mean_value_theorem}
 
 #### 가우스의 평균값 정리
 
@@ -1150,7 +1147,7 @@ $$
 
 $$
 f(z_0) = \dfrac{1}{2\pi } \int_0^{2\pi} f(z_0+re^{i\theta}) d\theta
-$$ {#eq-complex1_gauss_mean_value_theorem}
+$$ {#eq-CF_gauss_mean_value_theorem}
 
 :::
 
@@ -1172,7 +1169,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-complex1_maximum_modulus_theorem}
+::: {#thm-CF_maximum_modulus_theorem}
 
 #### 최대 절대값 원리
 
@@ -1182,7 +1179,7 @@ $$
 
 ::: {.proof}
 
-$|f(z)|$ 를 최대로 하는 $z_0$ 가 $C$ 의 내부에 존재한다고 가정하자. 그렇다면 $z_0$ 를 중심으로 $C$ 내부에 위치하는 원이 존재하며 이 원의 반지름을 $r$ 이라고 하자. $z_0$ 에서 $|f(z)|$ 가 최대값이며 상수함수가 아니므로 $|f(z_0+re^{i\theta})| < |f(z_0)|$ 이어야 한다. 가우스의 평균값 정리의 @eq-complex1_gauss_mean_value_theorem 에서
+$|f(z)|$ 를 최대로 하는 $z_0$ 가 $C$ 의 내부에 존재한다고 가정하자. 그렇다면 $z_0$ 를 중심으로 $C$ 내부에 위치하는 원이 존재하며 이 원의 반지름을 $r$ 이라고 하자. $z_0$ 에서 $|f(z)|$ 가 최대값이며 상수함수가 아니므로 $|f(z_0+re^{i\theta})| < |f(z_0)|$ 이어야 한다. 가우스의 평균값 정리의 @eq-CF_gauss_mean_value_theorem 에서
 
 $$
 |f(z_0)| = \dfrac{1}{2\pi} \left|\int_0^{2\pi} f(z_0+re^{i\theta}) \, d\theta\right|  < \dfrac{1}{2\pi} \int_0^{2\pi} |f(z_0+re^{i\theta}) | \,d \theta \le |f(z_0)|
@@ -1213,7 +1210,7 @@ $z=0$ 를 중심으로 한 변의 길이가 $a>1$ 인 정사각형으로 이루�
 
 ::: {.solution}
 
-$e^{iz}$ 는 해석적이므로 @eq-complex1_derivative_of_cauchy_integral 을 이용하면
+$e^{iz}$ 는 해석적이므로 @eq-CF_derivative_of_cauchy_integral 을 이용하면
 
 $$
  \dfrac{2!}{2\pi i} \oint \dfrac{e^{iz}}{z^3}\, dz =\left.\dfrac{d^2}{dz^2} e^{iz}\right|_{z=0} = -1
@@ -1293,57 +1290,57 @@ $$
 
 ## 로랑 급수
 
-### 테일러 전개 {#sec-complex1_tayler_expansion}
+### 테일러 전개 {#sec-CF_tayler_expansion}
 
-![테일러 전개를 위한 원형 도메인](figures/fig-complex_taylor_expansion.png){#fig-complex_tayler_expansion width=350}
+![테일러 전개를 위한 원형 도메인](figures/fig-complex_taylor_expansion.png){#fig-CF_tayler_expansion width=350}
 
-$f(z)$ 를 $z_0$ 를 중심으로 테일러 전개하고자 한다. $z_1$ 이 $z_0$ 에서 가장 가까운 특이점이라고 하자. 즉 $f(z)$ 는 $z_0$ 주위에서 해석적이다. $z_0$ 를 중심으로 반지름이 $z_1$ 까지의 거리보다 짧도록 원형 contour $C$ 를 잡을 수 있으며 $C$ 내부에서 $f$ 는 해석적이다. $z$ 가 $C$ 내부의 점일 때 코시 적분 공식(@eq-complex1_cauchy_integral_formula)  으로부터
+$f(z)$ 를 $z_0$ 를 중심으로 테일러 전개하고자 한다. $z_1$ 이 $z_0$ 에서 가장 가까운 특이점이라고 하자. 즉 $f(z)$ 는 $z_0$ 주위에서 해석적이다. $z_0$ 를 중심으로 반지름이 $z_1$ 까지의 거리보다 짧도록 원형 contour $C$ 를 잡을 수 있으며 $C$ 내부에서 $f$ 는 해석적이다. $z$ 가 $C$ 내부의 점일 때 코시 적분 공식(@eq-CF_cauchy_integral_formula)  으로부터
 
 $$
 \begin{aligned}
 f(z) &= \dfrac{1}{2\pi i} \oint_C \dfrac{f(z')}{z'-z}\, dz' = \dfrac{1}{2\pi i} \oint_C \dfrac{f(z')}{(z'-z_0) - (z-z_0)}\, dz' \\[0.3em]
 &= \dfrac{1}{2\pi i} \oint_C \dfrac{f(z')}{(z'-z_0)\left[1- \dfrac{(z-z_0)}{(z'-z_0)}\right]}\, dz'
 \end{aligned}
-$$ {#eq-complex1_taylor_expansion1}
+$$ {#eq-CF_taylor_expansion1}
 
 이다. $z'$ 은 $C$ 위의 점이며 $z$ 는 $C$ 의 내부이므로 $|z-z_0|<|z'-z_0|$ 이다. $|s|<1$ 에 대해 
 
 $$
 \dfrac{1}{1-s} = 1+s+s^2+s^3 + \cdots = \sum_{k=0}^\infty s^k
-$$ {#eq-complex1_binomial_theorem}
+$$ {#eq-CF_binomial_theorem}
 
-임을 이용하면 @eq-complex1_taylor_expansion1 은 다음과 같다.
+임을 이용하면 @eq-CF_taylor_expansion1 은 다음과 같다.
 
 $$
 f(z) = \dfrac{1}{2\pi i} \oint_C \sum_{k=0}^\infty \dfrac{(z-z_0)^k}{(z'-z_0)^{k+1}}f(z')\, dz'
-$$ {#eq-complex1_taylor_expansion2}
+$$ {#eq-CF_taylor_expansion2}
 
-@eq-complex1_binomial_theorem 은 균등수렴하므로 @eq-complex1_taylor_expansion2 의 적분과 합의 순서를 바꿀 수 있다. 즉
+@eq-CF_binomial_theorem 은 균등수렴하므로 @eq-CF_taylor_expansion2 의 적분과 합의 순서를 바꿀 수 있다. 즉
 
 $$
 f(z) = \dfrac{1}{2\pi i} \sum_{k=0}^\infty (z-z_0)^k \oint_C \dfrac{f(z')}{(z'-z_0)^{k+1}}\, dz'
 $$ {#eq-complex1_taylor_expansion3}
 
-이다. @eq-complex1_derivative_of_cauchy_integral 로 부터
+이다. @eq-CF_derivative_of_cauchy_integral 로 부터
 
 $$
 f(z) = \sum_{k=0}^\infty \dfrac{f^{(k)}(z_0)}{k!} (z-z_0)^k
-$$ {#eq-complex1_tayler_expansion4}
+$$ {#eq-CF_tayler_expansion4}
 
-를 얻는다. 우리는 앞서 $z_0$ 로 부터 가장 가까운 특이점을 $z_1$ 이라고 할 때 적분 contour 를 $z_0$ 를 중심으로 $|z_0-z|< |z_0-z_1|$ 인 원으로 잡았다. 이때문에 @eq-complex1_tayler_expansion4 테일러 전개의 수렴 반경은 $|z_0-z_1|$ 이다. 
+를 얻는다. 우리는 앞서 $z_0$ 로 부터 가장 가까운 특이점을 $z_1$ 이라고 할 때 적분 contour 를 $z_0$ 를 중심으로 $|z_0-z|< |z_0-z_1|$ 인 원으로 잡았다. 이때문에 @eq-CF_tayler_expansion4 테일러 전개의 수렴 반경은 $|z_0-z_1|$ 이다. 
 
 </br>
 
-### 로랑 급수 {#sec-complex1_laurent_series}
+### 로랑 급수 {#sec-CF_laurent_series}
 
-![로랑 급수를 위한 영역](figures/fig-complex_laurant_expansion.png){#fig-complex_laurant_expansion width=350}
+![로랑 급수를 위한 영역](figures/fig-complex_laurant_expansion.png){#fig-CF_laurant_expansion width=350}
 
 
-많은 경우 $z_0$ 를 중심으로 내경 $r$, 외경 $R$ 인 두 원의 사이에서 해석적인 함수를 생각해야 한다(@fig-complex_laurant_expansion). 이 영역은 다중 연결 영역이며 가상의 아주 얇은 벽을 만들어 단순연결 영역으로 간주할 수 있으며 단순연결영역에 대해서는 코시 적분 정리(@thm-complex1_cauthy_integral_theorem) 를 사용 할 수 있다. 이제 @fig-complex_laurant_expansion 에서와 같이 원형 경로 $C_1$ 과 $C_2$ 를 잡고 각각의 반지름을 각각 $r_1,\,r_2$ 라고 하자. Contour line 위아래의 얇은 직선 경로는 서로 상쇄하므로 다음이 성립한다.
+많은 경우 $z_0$ 를 중심으로 내경 $r$, 외경 $R$ 인 두 원의 사이에서 해석적인 함수를 생각해야 한다(@fig-CF_laurant_expansion). 이 영역은 다중 연결 영역이며 가상의 아주 얇은 벽을 만들어 단순연결 영역으로 간주할 수 있으며 단순연결영역에 대해서는 코시 적분 정리(@thm-CF_cauthy_integral_theorem) 를 사용 할 수 있다. 이제 @fig-CF_laurant_expansion 에서와 같이 원형 경로 $C_1$ 과 $C_2$ 를 잡고 각각의 반지름을 각각 $r_1,\,r_2$ 라고 하자. Contour line 위아래의 얇은 직선 경로는 서로 상쇄하므로 다음이 성립한다.
 
 $$
 f(z) = \dfrac{1}{2\pi i} \oint_{C_1}\dfrac{f(z')\,dz'}{z'-z} - \dfrac{1}{2\pi i} \oint_{C_2} \dfrac{f(z')\, dz'}{z'-z}
-$$ {#eq-complex1_laurant_expansion_1}
+$$ {#eq-CF_laurant_expansion_1}
 
 $C_1$ 에서 $|z'-z_0| > |z-z_0|$ 이며 $C_2$ 에서 $|z'-z_0|< |z-z_0|$ 이므로 각 적분항을 아래와 같이 급수로 바꿀 수 있다.
 
@@ -1355,9 +1352,9 @@ $$
 &= - \sum_{k=0}^{\infty} (z-z_0)^{-(k+1)} \oint_{C_2} (z'-z_0)^k f(z')\, dz \\
 &= - \sum_{k=1}^{\infty} (z-z_0)^{-k} \oint_{C_2}(z'-z_0)^{k-1} f(z')\, dz.
 \end{aligned}
-$$ {#eq-complex1_laurant_expansion_2}
+$$ {#eq-CF_laurant_expansion_2}
 
-이 식을 이용하면 @eq-complex1_laurant_expansion_1 을 아래와 같이 표현 할 수 있다.
+이 식을 이용하면 @eq-CF_laurant_expansion_1 을 아래와 같이 표현 할 수 있다.
 
 $$
 \begin{aligned}
@@ -1369,20 +1366,20 @@ $$
 위 식의 두 합을 하나로 아래와 같이 합친 것을 **로랑 급수(Laurant expantion)** 이라고 한다.
 $$
 f(z)= \sum_{k=-\infty}^\infty a_k (z-z_0)^{k},\qquad \text{where}\;a_k = \dfrac{1}{2\pi i}\oint_C \dfrac{f(z')\, dz'}{(z'-z_0)^{k+1}}
-$$ {#eq-complex1_laurant_expansion_3}
+$$ {#eq-CF_laurant_expansion_3}
 
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-complex1_laurant_expansion_1}
+::: {#exm-CF_laurant_expansion_1}
 
 $f(z) = \dfrac{1}{z(z-1)}$ 이며 $z_0=0$ 근처에서 $f(z)$ 에 대한 로랑 급수를 구해보자. 우선 $z=0,\,1$ 이 특이점이므로 $0<r<R<1$ 인 annular 영역을 생각한다. 이 영역에서
 
 $$
 \dfrac{1}{z(z-1)}= -\dfrac{1}{1-z} - \dfrac{1}{z} = - \dfrac{1}{z} - 1 - z - z^2 - \cdots = - \sum_{k=-1}^{\infty} z^k
-$$ {#eq-exm_compelx1_laurant_expansion_1}
+$$ {#eq-exm_CF_laurant_expansion_1}
 
-임을 알 수 있다. 우리가 구하고자 하는 로랑 급수가 위 식과 일치하는지 여부를 알아보자. @eq-complex1_laurant_expansion_3 로부터 반지름 $\varepsilon$ 이 $0<\varepsilon<1$ 사이에 있는 반시계방향 원형 contour $C_0$ 에서
+임을 알 수 있다. 우리가 구하고자 하는 로랑 급수가 위 식과 일치하는지 여부를 알아보자. @eq-CF_laurant_expansion_3 로부터 반지름 $\varepsilon$ 이 $0<\varepsilon<1$ 사이에 있는 반시계방향 원형 contour $C_0$ 에서
 $$
 \begin{aligned}
 a_k &= \dfrac{1}{2\pi i} \oint_{C_0} \dfrac{dz'}{(z')^{k+2}(z'-1)} \\
@@ -1402,7 +1399,7 @@ $$
 a_k = \left\{\begin{array}{ll} -1, \qquad &k\ge -1,\\ 0, &\text{otherwise}. \end{array}\right.
 $$
 
-이고 로랑 전개의 결과는 앞부분의 급수(@eq-exm_compelx1_laurant_expansion_1) 와 일치한다.
+이고 로랑 전개의 결과는 앞부분의 급수(@eq-exm_CF_laurant_expansion_1) 와 일치한다.
 
 :::
 
@@ -1476,7 +1473,7 @@ $f(z)$ 가 단위원 과 그 내부에서 해석적이라고 하자. 또한 $|z|
 
 ::: {.solution}
 
-$f(z) = \sum_{k=1}^\infty a_k z^k$ 이므로 $g(z) = f(z)/z$ 역시 단위원과 그 내부에서 해석적이다. 앞서 최대 절대값 원리(@thm-complex1_maximum_modulus_theorem) 에서 보았듯이 최대값은 단위원에서 존재하며 단위원에서
+$f(z) = \sum_{k=1}^\infty a_k z^k$ 이므로 $g(z) = f(z)/z$ 역시 단위원과 그 내부에서 해석적이다. 앞서 최대 절대값 원리(@thm-CF_maximum_modulus_theorem) 에서 보았듯이 최대값은 단위원에서 존재하며 단위원에서
 
 $$
 |g(z)| = |f(z)|<1

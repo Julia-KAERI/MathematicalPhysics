@@ -261,13 +261,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential equation/ode.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/differential_equation/ode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential equation/pde.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/differential_equation/pde.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
@@ -314,9 +314,9 @@ window.Quarto = {
   <ul>
   <li><a href="#복소함수의-적분" id="toc-복소함수의-적분" class="nav-link active" data-scroll-target="#복소함수의-적분"><span class="header-section-number">16.1</span> 복소함수의 적분</a>
   <ul class="collapse">
-  <li><a href="#sec-complex3_trigonometric_integral" id="toc-sec-complex3_trigonometric_integral" class="nav-link" data-scroll-target="#sec-complex3_trigonometric_integral"><span class="header-section-number">16.1.1</span> 삼각함수의 적분</a></li>
-  <li><a href="#sec-complex3_integral_infinite" id="toc-sec-complex3_integral_infinite" class="nav-link" data-scroll-target="#sec-complex3_integral_infinite"><span class="header-section-number">16.1.2</span> <span class="math inline">\(-\infty\)</span> 에서 <span class="math inline">\(\infty\)</span> 로의 적분</a></li>
-  <li><a href="#sec-complex3_integrals_with_complex_exponent" id="toc-sec-complex3_integrals_with_complex_exponent" class="nav-link" data-scroll-target="#sec-complex3_integrals_with_complex_exponent"><span class="header-section-number">16.1.3</span> 복소 지수함수가 포함된 적분</a></li>
+  <li><a href="#sec-CF_trigonometric_integral" id="toc-sec-CF_trigonometric_integral" class="nav-link" data-scroll-target="#sec-CF_trigonometric_integral"><span class="header-section-number">16.1.1</span> 삼각함수의 적분</a></li>
+  <li><a href="#sec-CF_integral_infinite" id="toc-sec-CF_integral_infinite" class="nav-link" data-scroll-target="#sec-CF_integral_infinite"><span class="header-section-number">16.1.2</span> <span class="math inline">\(-\infty\)</span> 에서 <span class="math inline">\(\infty\)</span> 로의 적분</a></li>
+  <li><a href="#sec-CF_integrals_with_complex_exponent" id="toc-sec-CF_integrals_with_complex_exponent" class="nav-link" data-scroll-target="#sec-CF_integrals_with_complex_exponent"><span class="header-section-number">16.1.3</span> 복소 지수함수가 포함된 적분</a></li>
   <li><a href="#대칭이-없는-무한대-적분" id="toc-대칭이-없는-무한대-적분" class="nav-link" data-scroll-target="#대칭이-없는-무한대-적분"><span class="header-section-number">16.1.4</span> 대칭이 없는 무한대 적분</a></li>
   <li><a href="#branch-point-를-피하여-적분하기" id="toc-branch-point-를-피하여-적분하기" class="nav-link" data-scroll-target="#branch-point-를-피하여-적분하기"><span class="header-section-number">16.1.5</span> Branch point 를 피하여 적분하기</a></li>
   <li><a href="#sec-exploiting_branch_cuts" id="toc-sec-exploiting_branch_cuts" class="nav-link" data-scroll-target="#sec-exploiting_branch_cuts"><span class="header-section-number">16.1.6</span> Branch Cuts 를 이용한 적분</a></li>
@@ -362,24 +362,24 @@ window.Quarto = {
 <p><br></p>
 <section id="복소함수의-적분" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="복소함수의-적분"><span class="header-section-number">16.1</span> 복소함수의 적분</h2>
-<section id="sec-complex3_trigonometric_integral" class="level3" data-number="16.1.1">
-<h3 data-number="16.1.1" class="anchored" data-anchor-id="sec-complex3_trigonometric_integral"><span class="header-section-number">16.1.1</span> 삼각함수의 적분</h3>
+<section id="sec-CF_trigonometric_integral" class="level3" data-number="16.1.1">
+<h3 data-number="16.1.1" class="anchored" data-anchor-id="sec-CF_trigonometric_integral"><span class="header-section-number">16.1.1</span> 삼각함수의 적분</h3>
 <p>아래와 같은 꼴의 적분을 생각하자.</p>
-<p><span id="eq-complex3_trigonometric_form_1"><span class="math display">\[
+<p><span id="eq-CF_trigonometric_form_1"><span class="math display">\[
 I = \int_0^{2\pi} f(\sin \theta,\, \cos\theta)\, d\theta.
 \tag{16.1}\]</span></span></p>
-<p>여기서 <span class="math inline">\(f\)</span> 는 모든 <span class="math inline">\(\theta\)</span> 에 대해 유한하며 <span class="math inline">\(\sin \theta,\ \cos\theta\)</span> 에 대해 meromorphic 이라고 하자. 즉 단일값 함수이다. 변수를 <span class="math inline">\(z=e^{i\theta},\, dz=ie^{i\theta}\)</span> 로 바꾼다면 <a href="#eq-complex3_trigonometric_form_1" class="quarto-xref">식&nbsp;<span>16.1</span></a> 는 복소평면상의 단위원 <span class="math inline">\(C_1\)</span> 에 대한 경로적분으로 아래와 같이 바꿀 수 있다.</p>
-<p><span id="eq-complex3_trigonometric_form_2"><span class="math display">\[
+<p>여기서 <span class="math inline">\(f\)</span> 는 모든 <span class="math inline">\(\theta\)</span> 에 대해 유한하며 <span class="math inline">\(\sin \theta,\ \cos\theta\)</span> 에 대해 meromorphic 이라고 하자. 즉 단일값 함수이다. 변수를 <span class="math inline">\(z=e^{i\theta},\, dz=ie^{i\theta}\)</span> 로 바꾼다면 <a href="#eq-CF_trigonometric_form_1" class="quarto-xref">식&nbsp;<span>16.1</span></a> 는 복소평면상의 단위원 <span class="math inline">\(C_1\)</span> 에 대한 경로적분으로 아래와 같이 바꿀 수 있다.</p>
+<p><span id="eq-CF_trigonometric_form_2"><span class="math display">\[
 I = -i \oint_{C_1} f\left(\dfrac{z-z^{-1}}{2i},\, \dfrac{z+z^{-1}}{2} \right) \, \dfrac{dz}{z}.
 \tag{16.2}\]</span></span></p>
 <p><span class="math inline">\(f\)</span> 가 merohorphi 이므로 유수정리를 이용할 수 있으며 <span class="math inline">\(\{z_j\}\)</span> 가 단위원 내에서의 단순 고립점이라고 하면</p>
-<p><span id="eq-complex3_trigonometric_form_3"><span class="math display">\[
+<p><span id="eq-CF_trigonometric_form_3"><span class="math display">\[
 I = (-i) 2\pi i \sum_j \text{Res}(f,\, z_i)
 \tag{16.3}\]</span></span></p>
 <p>을 얻는다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_trigonomeetric_1" class="theorem example">
+<div id="exm-CF_trigonomeetric_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.1</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^{2\pi} \dfrac{d\theta}{1+a\cos \theta},\qquad |a|&lt;1
@@ -400,7 +400,7 @@ I = 2\pi i \left(-\dfrac{2i}{a}\right) \dfrac{1}{z_2-z_1} =  \dfrac{2\pi}{\sqrt{
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_trigonomeetric_2" class="theorem example">
+<div id="exm-CF_trigonomeetric_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.2</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^{2\pi} \dfrac{\cos 2\theta\, d\theta}{5-4\cos \theta}
@@ -426,22 +426,22 @@ I = (2\pi i)\dfrac{i}{4} \left(\dfrac{5}{2} - \dfrac{17}{6}\right) = \dfrac{\pi}
 </div>
 <p><br></p>
 </section>
-<section id="sec-complex3_integral_infinite" class="level3" data-number="16.1.2">
-<h3 data-number="16.1.2" class="anchored" data-anchor-id="sec-complex3_integral_infinite"><span class="header-section-number">16.1.2</span> <span class="math inline">\(-\infty\)</span> 에서 <span class="math inline">\(\infty\)</span> 로의 적분</h3>
+<section id="sec-CF_integral_infinite" class="level3" data-number="16.1.2">
+<h3 data-number="16.1.2" class="anchored" data-anchor-id="sec-CF_integral_infinite"><span class="header-section-number">16.1.2</span> <span class="math inline">\(-\infty\)</span> 에서 <span class="math inline">\(\infty\)</span> 로의 적분</h3>
 <p>아래와 같은 형태의 적분을 구해야 한다고 하자.</p>
-<p><span id="eq-complex3_infinity_integral"><span class="math display">\[
+<p><span id="eq-CF_infinity_integral"><span class="math display">\[
 I = \int_{-\infty}^\infty f(x)\, dx
 \tag{16.4}\]</span></span></p>
 <p>이 때 <span class="math inline">\(f(x)\)</span> 가 복소평면의 위쪽 반평면(<span class="math inline">\(\text{Im}(z) \ge 0\)</span>) 이나 아래쪽 반평면 (<span class="math inline">\(\text{Im}(z) \le 0\)</span>) 에서 다음을 만족한다고 하자.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(f\)</span> 는 유한한 극점을 제외하고는 해석적이며, 실수축에는 극점이 없다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle \lim_{|z|\to \infty} zf(z) = 0\)</span> 이다. 즉 원점으로부터 충분히 먼 거리에서 <span class="math inline">\(f(z)\)</span> 는 <span class="math inline">\(1/z\)</span> 보다 빨리 감소한다.</p>
-<p>보통 <a href="#eq-complex3_infinity_integral" class="quarto-xref">식&nbsp;<span>16.4</span></a> 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 와 같은 contour 를 생각한다. <span class="math inline">\(z_1,\,z_2,\ldots\)</span> 는 극점이며 contour <span class="math inline">\(C\)</span> 는 <span class="math inline">\(C_R+C_I\)</span> 라고 하자.</p>
-<div id="fig-complex3_infinite_integral" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>보통 <a href="#eq-CF_infinity_integral" class="quarto-xref">식&nbsp;<span>16.4</span></a> 형태의 적분을 계산 할 때 위의 두 조건을 만족하는 복소평면의 위쪽이나 아래쪽 반평면을 선택하게 된다. 우선 위쪽 반평면을 생각하기로 하자. 그리고 아래 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 와 같은 contour 를 생각한다. <span class="math inline">\(z_1,\,z_2,\ldots\)</span> 는 극점이며 contour <span class="math inline">\(C\)</span> 는 <span class="math inline">\(C_R+C_I\)</span> 라고 하자.</p>
+<div id="fig-CF_infinite_integral" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_infinite_integral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_infinite_integral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_infinite_integral.png" class="img-fluid figure-img" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_infinite_integral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_infinite_integral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.1: 큰 반원으로 둘러쌓인 위쪽 반평면에서의 contour
 </figcaption>
 </figure>
@@ -460,7 +460,7 @@ I = \int_{C_I}f(z)\,dz = \oint_C f(z)\, dz = 2\pi i \sum_j \text{Res}(f,\,z_j)
 <p>이 된다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_infinite_integral_2" class="theorem example">
+<div id="exm-CF_infinite_integral_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.3</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_0^\infty \dfrac{1}{1+x^2}\, dx.
@@ -477,15 +477,15 @@ I = \dfrac{1}{2} 2\pi i \dfrac{1}{2i} = \dfrac{\pi}{2}.
 </div>
 <p><br></p>
 </section>
-<section id="sec-complex3_integrals_with_complex_exponent" class="level3" data-number="16.1.3">
-<h3 data-number="16.1.3" class="anchored" data-anchor-id="sec-complex3_integrals_with_complex_exponent"><span class="header-section-number">16.1.3</span> 복소 지수함수가 포함된 적분</h3>
-<p>실수 <span class="math inline">\(a\)</span> 에 대해 아래와 같은 형태의 적분을 생각하자. <span id="eq-complex3_integral_including_exponential_1"><span class="math display">\[
+<section id="sec-CF_integrals_with_complex_exponent" class="level3" data-number="16.1.3">
+<h3 data-number="16.1.3" class="anchored" data-anchor-id="sec-CF_integrals_with_complex_exponent"><span class="header-section-number">16.1.3</span> 복소 지수함수가 포함된 적분</h3>
+<p>실수 <span class="math inline">\(a\)</span> 에 대해 아래와 같은 형태의 적분을 생각하자. <span id="eq-CF_integral_including_exponential_1"><span class="math display">\[
 I = \int_{-\infty}^\infty f(x) e^{iax}\, dx
 \tag{16.5}\]</span></span></p>
 <p>다음의 조건을 생각하자.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(a&gt;0\)</span> 이며 복소평면의 위쪽 반평면에서 유한개의 극점을 제외하고는 해석적이다.</p>
 <p> (<span class="math inline">\(2\)</span>) 위쪽 반평면에서 <span class="math inline">\(\displaystyle \lim_{|z|\to\infty} f(z) = 0\)</span> 이다.</p>
-<p>우리는 <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 에서의 위쪽 반평면에서의 <span class="math inline">\(C_R,\,C_I\)</span> 로 이루어진 contour 를 생각하자. <span class="math inline">\(C_R\)</span> 에서의 적분을 <span class="math inline">\(I_R\)</span> 이라고 하고 <span class="math inline">\(z=Re^{i\theta}\)</span> 로 잡자.</p>
+<p>우리는 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 에서의 위쪽 반평면에서의 <span class="math inline">\(C_R,\,C_I\)</span> 로 이루어진 contour 를 생각하자. <span class="math inline">\(C_R\)</span> 에서의 적분을 <span class="math inline">\(I_R\)</span> 이라고 하고 <span class="math inline">\(z=Re^{i\theta}\)</span> 로 잡자.</p>
 <p><span class="math display">\[
 I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta -aR\sin \theta} \, iRe^{i\theta}\, d\theta
 \]</span></p>
@@ -508,9 +508,9 @@ I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta
 <p>이므로 <span class="math inline">\(\displaystyle \lim_{R\to \infty} I_R = 0\)</span> 이다. 이것을 요르당의 따름정리라고 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-complex3_jordan_lemma" class="theorem">
+<div id="thm-CF_jordan_lemma" class="theorem">
 <p><span class="theorem-title"><strong>정리 16.1 (조르당의 따름정리)</strong></span> 복소 함수 <span class="math inline">\(f(z)\)</span> 가 복소평면의 위쪽 반평면에서 정의된 반지름 <span class="math inline">\(R\)</span> 의 반원형 <span class="math inline">\(C_R\)</span> 에서 <span class="math inline">\(\displaystyle \lim_{|R|\to \infty} f(z) = 0\)</span> 를 만족한다면 <span class="math inline">\(a&gt;0\)</span> 에 대해</p>
-<p><span id="eq-complex3_integral_including_exponential_2"><span class="math display">\[
+<p><span id="eq-CF_integral_including_exponential_2"><span class="math display">\[
 \lim_{R\to \infty} \int_{C_R} e^{iaz} f(z) \, dz = 0
 \tag{16.6}\]</span></span></p>
 <p>이다.</p>
@@ -520,9 +520,9 @@ I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta
 <p>만약 <span class="math inline">\(a&lt;0\)</span> 에 대해 <span class="math inline">\(\int_{-\infty}^\infty f(x)e^{iax}\, dx\)</span> 를 계산해야 한다고 하자. <span class="math inline">\(a\)</span> 값이 중요한 것은 반원 경로 적분에서 적분값이 <span class="math inline">\(0\)</span> 이 되어야 하는 것인데 <span class="math inline">\([0,\, \pi]\)</span> 구간에서는 <span class="math inline">\(\sin \theta\)</span> 가 양수이므로 <span class="math inline">\(a&gt;0\)</span> 에서 적분값이 사라진다. 따라서 <span class="math inline">\(a&lt;0\)</span> 이라면 <span class="math inline">\(\sin \theta\)</span> 를 음수로 하는 <span class="math inline">\([\pi,\, 2\pi]\)</span> 구간, 즉 아래쪽 반평면에서 적분하면 된다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-complex3_jordan_lemma" class="theorem lemma">
+<div id="lem-CF_jordan_lemma" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.1 (조르당의 따름정리의 따름정리)</strong></span> 복소 함수 <span class="math inline">\(f(z)\)</span> 가 복소평면의 아래쪽 반평면에서 정의된 반지름 <span class="math inline">\(R\)</span> 의 반원형 <span class="math inline">\(C_\overline{R}\)</span> 에서 <span class="math inline">\(\displaystyle \lim_{|R|\to \infty} f(z) = 0\)</span> 를 만족한다면 <span class="math inline">\(a&lt;0\)</span> 에 대해</p>
-<p><span id="eq-complex3_integral_including_exponential_3"><span class="math display">\[
+<p><span id="eq-CF_integral_including_exponential_3"><span class="math display">\[
 \lim_{R\to \infty} \int_{C_\overline{R}} e^{iaz} f(z) \, dz = 0
 \tag{16.7}\]</span></span></p>
 <p>이다.</p>
@@ -530,13 +530,13 @@ I_R = \int_{C_R} f(z)e^{iaz}\, dz = \int_0^\pi f(Re^{i\theta}) e^{iaR\cos \theta
 </div>
 <p><br></p>
 <p>결론적으로 조르당의 정리를 만족하는 함수 <span class="math inline">\(f(x)\)</span> 에 대해 <span class="math inline">\(a&gt;0\)</span> 일 경우는 위쪽 평면에서, <span class="math inline">\(a&lt;0\)</span> 일 경우는 아래쪽 평면에서의 <span class="math inline">\(f(z)\)</span> 의 특이점 <span class="math inline">\(z_1,\,z_2,\ldots,\,z_n\)</span> 에 대해</p>
-<p><span id="eq-complex3_integral_including_exponential_4"><span class="math display">\[
+<p><span id="eq-CF_integral_including_exponential_4"><span class="math display">\[
 \int_{-\infty}^\infty f(x)\, e^{iax}\, dx = 2\pi i \sum_j \text{Res}(e^{iaz}f(z),\,z_j)
 \tag{16.8}\]</span></span></p>
 <p>이다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_integral_including_exponential_1" class="theorem example">
+<div id="exm-CF_integral_including_exponential_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.4</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{\cos x}{x^2+1}\, dx
@@ -556,7 +556,7 @@ I = \dfrac{1}{2} (2\pi i) \dfrac{e^{-1}}{2i} = \dfrac{\pi}{2e}
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_integral_including_exponential_2" class="theorem example">
+<div id="exm-CF_integral_including_exponential_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.5</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{\sin x}{x}\, dx
@@ -573,7 +573,7 @@ I &amp;= \lim_{\varepsilon \to 0^+} \left[\dfrac{1}{2i} \int_{\varepsilon}^\inft
 &amp;= \dfrac{1}{2i} P.V\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\, dx
 \end{aligned}
 \]</span></p>
-<p>이다. 이제 <a href="complex2.html#fig-complex2_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 에서의 경로대로 적분을 구해보자.</p>
+<p>이다. 이제 <span class="quarto-unresolved-ref">?fig-complex2_cauchy_principal_value_2</span> 에서의 경로대로 적분을 구해보자.</p>
 <p><span class="math display">\[
 \oint \dfrac{e^{2iz}}{iz}\, dz = I + \int_{C_r} \dfrac{e^{iz}}{2iz}\, dz + \int_{C_R}\dfrac{e^{iz}}{2iz}\, dz
 \]</span></p>
@@ -591,7 +591,7 @@ I = \int_{0}^\infty \dfrac{\sin x}{x}\, dx = \dfrac{\pi}{2}
 <p>앞서 <span class="math inline">\((a,\,\infty)\)</span> 적분을 대칭성을 이용하여 <span class="math inline">\((-\infty,\, \infty)\)</span> 적분으로 변환시켰다. 여기서는 대칭성을 이용할 수 없는 경우에 대해 생각해 보기로 하자.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_integral_wihtout_symmetry_1" class="theorem example">
+<div id="exm-CF_integral_wihtout_symmetry_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.6</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{dx}{x^3+1}.
@@ -611,7 +611,7 @@ I = \int_{0}^\infty \dfrac{dx}{x^3+1}.
 <p><span class="math display">\[
 \int_{C_2} \dfrac{dz}{z^3+1} = \int_{r}^0 \dfrac{e^{i2\pi/3} dr}{r^3+1} = \left(\dfrac{1}{2} - i\dfrac{\sqrt{3}}{2}\right) \int_{0}^r \dfrac{dx}{x^3+1}
 \]</span></p>
-<p>이다. 우리는 <span class="math inline">\(r\to \infty\)</span> 극한에서 <span class="math inline">\(C_R\)</span> 경로에서의 적분이 <span class="math inline">\(0\)</span> 이라는 것을 안다(<a href="#sec-complex3_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a>). 또한 contour <span class="math inline">\(C_1+C_R+C_2\)</span> 내의 극점이 <span class="math inline">\(e^{\pi/3}\)</span> 뿐이므로</p>
+<p>이다. 우리는 <span class="math inline">\(r\to \infty\)</span> 극한에서 <span class="math inline">\(C_R\)</span> 경로에서의 적분이 <span class="math inline">\(0\)</span> 이라는 것을 안다(<a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a>). 또한 contour <span class="math inline">\(C_1+C_R+C_2\)</span> 내의 극점이 <span class="math inline">\(e^{\pi/3}\)</span> 뿐이므로</p>
 <p><span class="math display">\[
 \oint_{C_1+C_R+C_2} \dfrac{dz}{z^3+1}\, dz = \left(\dfrac{3}{2}-i\dfrac{\sqrt{3}}{2}\right) I = 2\pi i  \cdot  \text{Res}\left(\dfrac{1}{z^3+1},\, \dfrac{1}{2}+i\dfrac{\sqrt{3}}{2}\right)
 \]</span></p>
@@ -632,12 +632,12 @@ I = \dfrac{2\pi}{3\sqrt{3}}
 <p>때때로 우리는 branch points 를 가진 함수를 적분해야 할 때가 있다. 이 경우 contour 적분을 위해서는 branch points 가 적분 경로상에, 그리고 contour 내부에 포함되지 않도록 contour 를 잡아야 한다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_integration_avoiding_branch_points_1" class="theorem example">
+<div id="exm-CF_integration_avoiding_branch_points_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.7</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{\ln x\, dx}{x^3+1}.
 \]</span></p>
-<p>함수 <span class="math inline">\(f(x) = \dfrac{\ln x}{x^3+1}\)</span> 에 대해 <span class="math inline">\(x=0\)</span> 은 특이점이다. 또한 복소평면에서 branch point 이므로 contour 를 잡을 때 <span class="math inline">\(z=0\)</span> 을 피해야 하며 <span class="math inline">\(0\)</span> 에서 <span class="math inline">\(z=\infty\)</span> 로 향한 branch cut 을 잡고 그것도 피해야 한다. 여기서는 아래와 같은 contour 를 잡기로 하자. <a href="#fig-complex_integral_without_symmetry" class="quarto-xref">그림&nbsp;<span>16.2</span></a> 와 유사하다. 또한 <span class="math inline">\(f(x)\)</span> 는 <a href="#exm-complex3_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 과 같은 극점을 가진다.</p>
+<p>함수 <span class="math inline">\(f(x) = \dfrac{\ln x}{x^3+1}\)</span> 에 대해 <span class="math inline">\(x=0\)</span> 은 특이점이다. 또한 복소평면에서 branch point 이므로 contour 를 잡을 때 <span class="math inline">\(z=0\)</span> 을 피해야 하며 <span class="math inline">\(0\)</span> 에서 <span class="math inline">\(z=\infty\)</span> 로 향한 branch cut 을 잡고 그것도 피해야 한다. 여기서는 아래와 같은 contour 를 잡기로 하자. <a href="#fig-complex_integral_without_symmetry" class="quarto-xref">그림&nbsp;<span>16.2</span></a> 와 유사하다. 또한 <span class="math inline">\(f(x)\)</span> 는 <a href="#exm-CF_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 과 같은 극점을 가진다.</p>
 <div id="fig-complex_integral_avoiding_branch" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-complex_integral_avoiding_branch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -652,7 +652,7 @@ I = \int_{0}^\infty \dfrac{\ln x\, dx}{x^3+1}.
 <p><span class="math display">\[
 \oint_C \dfrac{\ln z\, dz}{z^3+1}
 \]</span></p>
-<p>을 생각하자. <span class="math inline">\(C_R\)</span> 에 대한 적분은 <a href="#sec-complex3_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 의 조건에 따라 <span class="math inline">\(0\)</span> 이 된다. <span class="math inline">\(C_1\)</span> 에서의 적분은 <span class="math inline">\(I_1\)</span> 이라고 하자. 즉</p>
+<p>을 생각하자. <span class="math inline">\(C_R\)</span> 에 대한 적분은 <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 의 조건에 따라 <span class="math inline">\(0\)</span> 이 된다. <span class="math inline">\(C_1\)</span> 에서의 적분은 <span class="math inline">\(I_1\)</span> 이라고 하자. 즉</p>
 <p><span class="math display">\[
 I_1 = \int_{\varepsilon}^R \dfrac{\ln x\, dx}{x^3+1}
 \]</span></p>
@@ -673,7 +673,7 @@ I_1 = \int_{\varepsilon}^R \dfrac{\ln x\, dx}{x^3+1}
 <p><span class="math display">\[
 \oint_C\dfrac{\ln z\, dz}{z^3+1} = I - e^{i\theta_0}I -  i\theta_0 e^{i\theta_0} \int_0^\infty \dfrac{dx}{x^3+1}
 \]</span></p>
-<p>이며 <a href="#exm-complex3_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 에서 <span class="math inline">\(\int_0^\infty \dfrac{dx}{x^3+1} = \dfrac{2\pi}{3\sqrt{3}}\)</span> 임을 보였다. 또한 <span class="math inline">\(C\)</span> 내부의 극점은 <span class="math inline">\(z=e^{i\theta_0}\)</span> 뿐이므로</p>
+<p>이며 <a href="#exm-CF_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 에서 <span class="math inline">\(\int_0^\infty \dfrac{dx}{x^3+1} = \dfrac{2\pi}{3\sqrt{3}}\)</span> 임을 보였다. 또한 <span class="math inline">\(C\)</span> 내부의 극점은 <span class="math inline">\(z=e^{i\theta_0}\)</span> 뿐이므로</p>
 <p><span class="math display">\[
 \oint_C\dfrac{\ln z\, dz}{z^3+1} = 2\pi i \dfrac{i \pi e^{-i\theta_0}}{9}
 \]</span></p>
@@ -690,22 +690,22 @@ I = - \dfrac{2\pi^2}{27}.
 <p>때때로 branch cuts 를 이용한 적분은 어려운 적분을 계산할 때 의외로 유용하다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_exploiting_branch_cuts_1" class="theorem example">
+<div id="exm-CF_exploiting_branch_cuts_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.8</strong></span> 다음 적분을 계산한다고 하자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{x^p dx}{x^2+1}, \qquad 0&lt;p&lt;1.
 \]</span></p>
-<p>그리고 아래 <a href="#fig-complex3_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 에서의 복소평면에서의 적분</p>
+<p>그리고 아래 <a href="#fig-CF_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 에서의 복소평면에서의 적분</p>
 <p><span class="math display">\[
 \oint \dfrac{z^p\, dz}{z^2+1}
 \]</span></p>
 <p>를 생각하자.</p>
-<div id="fig-complex3_exploiting_branch_cuts" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_exploiting_branch_cuts" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_exploiting_branch_cuts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_exploiting_branch_cuts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_exploiting_branch_cuts.png" class="img-fluid figure-img" width="350">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_exploiting_branch_cuts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_exploiting_branch_cuts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.4: Contour
 </figcaption>
 </figure>
@@ -727,12 +727,12 @@ I = \dfrac{\pi e^{ip\pi/2}(e^{ip\pi - 1})}{e^{2ip\pi} -1} = \dfrac{\pi \sin (p\p
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_exploiting_branch_cuts_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 16.9</strong></span> <a href="#exm-complex3_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 에서 했던 아래의 적분을 다시 계산해보자.</p>
+<div id="exm-CF_exploiting_branch_cuts_2" class="theorem example">
+<p><span class="theorem-title"><strong>예제 16.9</strong></span> <a href="#exm-CF_integral_wihtout_symmetry_1" class="quarto-xref">예제&nbsp;<span>16.6</span></a> 에서 했던 아래의 적분을 다시 계산해보자.</p>
 <p><span class="math display">\[
 I = \int_{0}^\infty \dfrac{dx}{x^3+1}.
 \]</span></p>
-<p>이 적분의 계산을 <a href="#fig-complex3_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 에서</p>
+<p>이 적분의 계산을 <a href="#fig-CF_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 에서</p>
 <p><span class="math display">\[
 \oint \dfrac{\ln z\, dz}{z^3+1}
 \]</span></p>
@@ -768,12 +768,12 @@ I = \dfrac{2\pi}{3\sqrt{3}}.
 <h3 data-number="16.1.7" class="anchored" data-anchor-id="sec-exploiting_periodicity"><span class="header-section-number">16.1.7</span> 주기함수의 적분</h3>
 <p>삼각함수, 즉 복소평면에서의 hyperbolic 함수에 대한 적분의 경우를 다룬다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-complex3_exploiting_periodicity_1" class="theorem example">
+<div id="exm-CF_exploiting_periodicity_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 16.10</strong></span> 다음의 적분을 생각하자.</p>
 <p><span class="math display">\[
 I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 \]</span></p>
-<p><span class="math inline">\(\sinh(iy) = i \sin(y)\)</span> 임을 안다. 이제 <a href="#fig-complex3_exploiting_periodicity_1" class="quarto-xref">그림&nbsp;<span>16.5</span></a> 의 contour 에서의 적분</p>
+<p><span class="math inline">\(\sinh(iy) = i \sin(y)\)</span> 임을 안다. 이제 <a href="#fig-CF_exploiting_periodicity_1" class="quarto-xref">그림&nbsp;<span>16.5</span></a> 의 contour 에서의 적분</p>
 <p><span class="math display">\[
 \oint \dfrac{z \, dz}{\sinh z}
 \]</span></p>
@@ -784,18 +784,18 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 <p>임을 안다. 이제 극점에 대해 생각해보자.</p>
 <p>(<span class="math inline">\(1\)</span>) 로피탈의 정리를 이용하면 <span class="math inline">\(\displaystyle \lim_{z\to 0}\dfrac{z}{\sinh z}=1\)</span> 임을 안다. 따라서 <span class="math inline">\(z=0\)</span> 은 극점이 아니다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\sinh (z) = 0 \iff z=in\pi,\, n\in \mathbb{Z}\)</span> 이다. 따라서 <span class="math inline">\(z= \pm i\pi,\, \pm 2\pi,\ldots\)</span> 가 극점이다.</p>
-<p>위로부터 <a href="#fig-complex3_exploiting_periodicity_1" class="quarto-xref">그림&nbsp;<span>16.5</span></a> 의 contour 에서의 극점은 <span class="math inline">\(z=i\pi\)</span> 뿐임을 안다. 그렇다면,</p>
+<p>위로부터 <a href="#fig-CF_exploiting_periodicity_1" class="quarto-xref">그림&nbsp;<span>16.5</span></a> 의 contour 에서의 극점은 <span class="math inline">\(z=i\pi\)</span> 뿐임을 안다. 그렇다면,</p>
 <p><span class="math display">\[
 \oint_{C} \dfrac{z\,dz}{\sinh z} = 2\pi i \text{Res}\left(\dfrac{z}{\sinh z},\, i\pi \right) = (2\pi i)(-i\pi) = 2\pi^2
 \]</span></p>
 <p>이다.</p>
 <p><br></p>
-<div id="fig-complex3_exploiting_periodicity_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_exploiting_periodicity_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_exploiting_periodicity_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_exploiting_periodicity_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_exploiting_periodicity_1.png" class="img-fluid figure-img" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_exploiting_periodicity_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_exploiting_periodicity_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.5: Contour
 </figcaption>
 </figure>
@@ -837,7 +837,7 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 16.1 (Arfken 11.8.1)</strong></span> <a href="#exm-complex3_trigonomeetric_1" class="quarto-xref">예제&nbsp;<span>16.1</span></a> 의 적분을 일반화 한 아래의 식이 성립함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 16.1 (Arfken 11.8.1)</strong></span> <a href="#exm-CF_trigonomeetric_1" class="quarto-xref">예제&nbsp;<span>16.1</span></a> 의 적분을 일반화 한 아래의 식이 성립함을 보여라.</p>
 <p><span class="math display">\[
 \int_{0}^{2\pi} \dfrac{d\theta}{a\pm b \cos \theta} = \int_{0}^{2\pi} \dfrac{d\theta}{a\pm b \sin \theta} = \dfrac{2\pi}{\sqrt{a^2-b^2}}, \qquad \text{for } a&gt;|b|.
 \]</span></p>
@@ -986,12 +986,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 16.6 (Arfken 11.8.7)</strong></span> <a href="#exm-complex3_exploiting_branch_cuts_1" class="quarto-xref">예제&nbsp;<span>16.8</span></a> 에서 <span class="math inline">\(R\to \infty\)</span> 일 때의 <span class="math inline">\(C_R\)</span> 경로에서의 적분과 <span class="math inline">\(\varepsilon \to 0\)</span> 에서의 <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적분값이 모두 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 16.6 (Arfken 11.8.7)</strong></span> <a href="#exm-CF_exploiting_branch_cuts_1" class="quarto-xref">예제&nbsp;<span>16.8</span></a> 에서 <span class="math inline">\(R\to \infty\)</span> 일 때의 <span class="math inline">\(C_R\)</span> 경로에서의 적분과 <span class="math inline">\(\varepsilon \to 0\)</span> 에서의 <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적분값이 모두 <span class="math inline">\(0\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(0&lt;p&lt;1\)</span> 에 대해 <span class="math inline">\(f(z) = \dfrac{z^p}{z^2+1}\)</span> 이라고 하자. <a href="#sec-complex3_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 의 두가지 조건을 <span class="math inline">\(f\)</span> 가 만족하기 때문에 <span class="math inline">\(C_R\)</span> 경로에서의 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적문을 생각하자. <span class="math inline">\(z=\varepsilon e^{i\theta},\, dz=i\varepsilon e^{i\theta}\,d\theta\)</span> 이므로</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(0&lt;p&lt;1\)</span> 에 대해 <span class="math inline">\(f(z) = \dfrac{z^p}{z^2+1}\)</span> 이라고 하자. <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 의 두가지 조건을 <span class="math inline">\(f\)</span> 가 만족하기 때문에 <span class="math inline">\(C_R\)</span> 경로에서의 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적문을 생각하자. <span class="math inline">\(z=\varepsilon e^{i\theta},\, dz=i\varepsilon e^{i\theta}\,d\theta\)</span> 이므로</p>
 <p><span class="math display">\[
 \left|\oint_{C_\varepsilon}f(z)\,dz \right| = \int_{0}^{2\pi}  \left|\dfrac{\varepsilon^p e^{i{(p+1)\theta}}}{\varepsilon^2e^{i2\theta} +1}\right| d\theta \le \int_0^{2\pi} \dfrac{\varepsilon^p}{|\varepsilon^2 e^{i2\theta}+1|}\, d\theta
 \]</span></p>
@@ -1009,7 +1009,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-complex3_integral_including_exponential_2" class="quarto-xref">예제&nbsp;<span>16.5</span></a> 로부터 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t} \, dt = \pi\)</span> 임을 안다. 앞의 적분에서 <span class="math inline">\(s&gt;0\)</span> 에 대해 <span class="math inline">\(t=sx\)</span> 로 환하면 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin (sx)}{x}\, dx= \pi\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-CF_integral_including_exponential_2" class="quarto-xref">예제&nbsp;<span>16.5</span></a> 로부터 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t} \, dt = \pi\)</span> 임을 안다. 앞의 적분에서 <span class="math inline">\(s&gt;0\)</span> 에 대해 <span class="math inline">\(t=sx\)</span> 로 환하면 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin (sx)}{x}\, dx= \pi\)</span> 이다.</p>
 <p><span class="math display">\[
 \dfrac{d}{ds}\left(\dfrac{\cos sx}{x^2}\right) = -\dfrac{\sin s x}{x}
 \]</span></p>
@@ -1049,7 +1049,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\dfrac{x \sin2 x}{x^2+1}\)</span> 가 우함수 이므로 <span class="math inline">\(\displaystyle \int_{0}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx = \dfrac{1}{2}\int_{-\infty}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx\)</span> 이다. 복소함수 <span class="math inline">\(f(z) = \dfrac{ze^{2iz}}{z^2+1}\)</span> 에 대해 <span class="math inline">\(\dfrac{f(z)+f(-z)}{2i}= \dfrac{z \sin 2z}{z^2+1}\)</span> 임을 이용하여 문제의 적분을 계산 할 수 있다.</p>
-<p>우선 <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 의 경로대로 위쪽 반평면에서 <span class="math inline">\(\oint_C f(z)\,dz\)</span> 를 계산해 보자. <span class="math inline">\(C_R\)</span> 에 대한 경로적분은 <span class="math inline">\(0\)</span> 이며 경로상의 고립점은 <span class="math inline">\(z=i\)</span> 이므로</p>
+<p>우선 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 의 경로대로 위쪽 반평면에서 <span class="math inline">\(\oint_C f(z)\,dz\)</span> 를 계산해 보자. <span class="math inline">\(C_R\)</span> 에 대한 경로적분은 <span class="math inline">\(0\)</span> 이며 경로상의 고립점은 <span class="math inline">\(z=i\)</span> 이므로</p>
 <p><span class="math display">\[
 \lim_{R\to \infty}\int_{C_I} \dfrac{ze^{iz}}{z^2+1}\, dz = (2\pi i) \text{Res}(f, i)= 2\pi i \dfrac{1}{2e} = \dfrac{i\pi}{e}
 \]</span></p>
@@ -1090,7 +1090,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(f(z) = \dfrac{e^{iz}}{z^2+a^2}\)</span> 이라고 하면 <span class="math inline">\(\displaystyle \dfrac{\cos x}{x^2+a^2} = \dfrac{f(x)+f(-x)}{2}\)</span> 이다. 위쪽 반평면에 대해 <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 경로의 적분을 생각하자. <span class="math inline">\(C_R\)</span> 경로 적분값은 <span class="math inline">\(0\)</span> 이며, 경로 내부의 고립점은 <span class="math inline">\(ia\)</span> 이므로</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(f(z) = \dfrac{e^{iz}}{z^2+a^2}\)</span> 이라고 하면 <span class="math inline">\(\displaystyle \dfrac{\cos x}{x^2+a^2} = \dfrac{f(x)+f(-x)}{2}\)</span> 이다. 위쪽 반평면에 대해 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 경로의 적분을 생각하자. <span class="math inline">\(C_R\)</span> 경로 적분값은 <span class="math inline">\(0\)</span> 이며, 경로 내부의 고립점은 <span class="math inline">\(ia\)</span> 이므로</p>
 <p><span class="math display">\[
 \int_{-\infty}^\infty \dfrac{e^{iz}}{z^2+a^2} \,dz = 2\pi i \text{Res}(f, ia) = 2\pi i \dfrac{e^{-a}}{2ia} = \dfrac{\pi}{a}e^{-a}
 \]</span></p>
@@ -1102,7 +1102,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 <p><span class="math display">\[
 \int_{-\infty}^\infty  \dfrac{\cos kx}{x^2+a^2}\,dx \overset{t=kx}{=} \dfrac{1}{k}\int_{-\infty}^\infty \dfrac{\cos t\, dt}{t^2/k^2+a^2} = k\int_{-\infty}^\infty \dfrac{\cos t\, dt}{t^2+a^2k^2} = \dfrac{\pi}{a}e^{-ak}.
 \]</span></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(f(z) = \dfrac{ze^{iz}}{z^2+a^2}\)</span> 라고 하면 <span class="math inline">\(\dfrac{x\sin x}{x^2+a^2} = \dfrac{f(z)+f(-z)}{2i}\)</span> 이다. <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 의 경로를 생각하면 <span class="math inline">\(C_R\)</span> 경로의 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이며 contour 내의 고립점은 <span class="math inline">\(ia\)</span> 이다. 따라서,</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(f(z) = \dfrac{ze^{iz}}{z^2+a^2}\)</span> 라고 하면 <span class="math inline">\(\dfrac{x\sin x}{x^2+a^2} = \dfrac{f(z)+f(-z)}{2i}\)</span> 이다. <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 의 경로를 생각하면 <span class="math inline">\(C_R\)</span> 경로의 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이며 contour 내의 고립점은 <span class="math inline">\(ia\)</span> 이다. 따라서,</p>
 <p><span class="math display">\[
 \int_{-\infty}^\infty \dfrac{ze^{iz}\, dz}{z^2+a^2} = 2\pi i \text{Res}(f,\, ia)= 2\pi i \dfrac{iae^{-a}}{2ai}= i\pi e^{-a}
 \]</span></p>
@@ -1120,12 +1120,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.12 (Arfken 11.8.13)</strong></span> 아래 그림의 contour 에서 <span class="math inline">\(R\to \infty\)</span> 극한을 이용하여 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin x}{x}\,dx = \pi\)</span> 임을 보여라.</p>
-<div id="fig-complex3_contour_Arfket_11_8_13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_contour_Arfket_11_8_13" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_contour_Arfket_11_8_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_contour_Arfket_11_8_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_contour_Arfken_11_8_13.png" class="img-fluid figure-img" width="350">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_contour_Arfket_11_8_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_contour_Arfket_11_8_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.6: Contour
 </figcaption>
 </figure>
@@ -1182,12 +1182,12 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{\sin t}{t}e^{ipt} = \dfrac{e^{i(p+1)t}-e^{i(p-1)t}}{2it}\)</span> 라고 하자. 이것을 계산 하기 위해 <span class="math inline">\(\int_{-\infty}^\infty e^{iat}/t\,dt\)</span> 를 계산해 보자.</p>
-<div id="fig-complex3_contour_Arfken_11_8_14.png" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_contour_Arfken_11_8_14.png" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_contour_Arfken_11_8_14.png-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_contour_Arfken_11_8_14.png-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_contour_Arfken_11_8_14.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_contour_Arfken_11_8_14.png-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_contour_Arfken_11_8_14.png-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.7: Contour
 </figcaption>
 </figure>
@@ -1222,7 +1222,7 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 <p><span class="math display">\[
 \int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2}\int_\infty^\infty \dfrac{dx}{(x^2+a^2)^2}
 \]</span></p>
-<p>이다. <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. <span class="math inline">\(f(z)\)</span> 은 <a href="#sec-complex3_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 에서의 조건을 만족하며, 따라서 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\int_{C_R}f(z)\,dz = 0\)</span> 이다. 즉</p>
+<p>이다. <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. <span class="math inline">\(f(z)\)</span> 은 <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 에서의 조건을 만족하며, 따라서 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\int_{C_R}f(z)\,dz = 0\)</span> 이다. 즉</p>
 <p><span class="math display">\[
 \oint_C f(z) \,dz = \int_{-\infty}^\infty f(x)\,dx = 2\pi i \text{Res}(f,\, ia)
 \]</span></p>
@@ -1243,7 +1243,7 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{z^2}{z^4+1}\)</span> 의 극점은 <span class="math inline">\(z_1=\dfrac{1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_2=\dfrac{-1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_3= \dfrac{-1-i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_4= \dfrac{1-i}{\sqrt{2}}\)</span> 이다. <a href="#fig-complex3_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. <span class="math inline">\(f(z)\)</span> 은 <a href="#sec-complex3_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 에서의 조건을 만족하며, 따라서 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\int_{C_R}f(z)\,dz = 0\)</span> 이다. 네개의 극점중 위쪽 반평면에 위치하는 것은 <span class="math inline">\(z_1,\,z_2\)</span> 이므로</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{z^2}{z^4+1}\)</span> 의 극점은 <span class="math inline">\(z_1=\dfrac{1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_2=\dfrac{-1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_3= \dfrac{-1-i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_4= \dfrac{1-i}{\sqrt{2}}\)</span> 이다. <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. <span class="math inline">\(f(z)\)</span> 은 <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 에서의 조건을 만족하며, 따라서 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\int_{C_R}f(z)\,dz = 0\)</span> 이다. 네개의 극점중 위쪽 반평면에 위치하는 것은 <span class="math inline">\(z_1,\,z_2\)</span> 이므로</p>
 <p><span class="math display">\[
 \oint_C f(z) \, dz= \int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1} = 2\pi i \left(\text{Res}(f,\, z_1) + \text{Res}(f,\,z_2)\right)
 \]</span></p>
@@ -1269,14 +1269,14 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(I = \displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx\)</span> 라고 하고 <a href="#fig-complex3_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 를 생각하자. <span class="math inline">\(f(z) = \dfrac{z^p\ln z}{z^2+1}\)</span> 은 <span class="math inline">\(z_1=e^{\pi i/2},\, z_2=e^{i3\pi/2}\)</span> 에서 극점을 가진다. 따라서,</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(I = \displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx\)</span> 라고 하고 <a href="#fig-CF_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 를 생각하자. <span class="math inline">\(f(z) = \dfrac{z^p\ln z}{z^2+1}\)</span> 은 <span class="math inline">\(z_1=e^{\pi i/2},\, z_2=e^{i3\pi/2}\)</span> 에서 극점을 가진다. 따라서,</p>
 <p><span id="eq-exr-Arfke7_11_8_17_1"><span class="math display">\[
 \begin{aligned}
 \oint_{C} f(z) \, dz &amp;= \int_{C_1} f(z)\,dz + \int_{C_R} f(z)\, dz + \int_{C_2}f(z)\, dz + \int_{C_\varepsilon} f(z)\,dz \\
 &amp;= 2\pi i\left(\text{Res}(f,\,z_1) + \text{Res}(f,\,z_2)\right)
 \end{aligned}
 \tag{16.11}\]</span></span></p>
-<p>이다. <span class="math inline">\(C_R\)</span> 경로 적분에서 <span class="math inline">\(\lim_{x\to \infty}xf(x) = 0\)</span> 이므로 <span class="math inline">\(C_R\)</span> 경로상의 적분의 기여는 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(C_2\)</span> 경로의 적분은 <span class="math inline">\(z=xe^{2i\pi}\)</span> 에 대한 적분이며 <a href="#exm-complex3_exploiting_branch_cuts_1" class="quarto-xref">예제&nbsp;<span>16.8</span></a> 의 결과를 사용하면</p>
+<p>이다. <span class="math inline">\(C_R\)</span> 경로 적분에서 <span class="math inline">\(\lim_{x\to \infty}xf(x) = 0\)</span> 이므로 <span class="math inline">\(C_R\)</span> 경로상의 적분의 기여는 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(C_2\)</span> 경로의 적분은 <span class="math inline">\(z=xe^{2i\pi}\)</span> 에 대한 적분이며 <a href="#exm-CF_exploiting_branch_cuts_1" class="quarto-xref">예제&nbsp;<span>16.8</span></a> 의 결과를 사용하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 \int_{C_2} f(z)\, dz &amp;= \int_{R}^\varepsilon \dfrac{x^pe^{i2p\pi}(\ln x + i2\pi) }{x^2+1} dx \\
@@ -1336,12 +1336,12 @@ I = \dfrac{\pi^2 \sin^2(p\pi/2)}{2\sin (p\pi) \cos(p\pi/2)} = \dfrac{\pi^2 \sin 
 <p><span class="theorem-title"><strong>연습문제 16.17 (Arfken 11.8.18)</strong></span> <span class="math inline">\(\displaystyle \int_0^\infty \dfrac{(\ln x)^2}{1+x^2}\,dx\)</span> 를 두가지 방법으로 계산해보자</p>
 <p>(<span class="math inline">\(a\)</span>) 적분되는 함수를 급수 전개하여 <span class="math inline">\(\displaystyle 4\sum_{k=0}^\infty (-1)^k (2k+1)^{-3}\)</span> 을 얻어라.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(x\to z=e^t\)</span> 로 치환하고 아래 그림의 경로에서 적분하여 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\dfrac{\pi^3}{8}\)</span> 을 얻어라.</p>
-<div id="fig-complex3_contour_Arfken_11_8_18" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CF_contour_Arfken_11_8_18" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-complex3_contour_Arfken_11_8_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CF_contour_Arfken_11_8_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig-complex_contour_Arfken_11_8_18.png" class="img-fluid figure-img" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex3_contour_Arfken_11_8_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CF_contour_Arfken_11_8_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;16.8: Contour
 </figcaption>
 </figure>

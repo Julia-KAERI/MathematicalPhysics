@@ -1,11 +1,14 @@
-# 미분방정식 {.unnumbered}
+---
+title: " 미분방정식"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---  
 
-This is a Quarto book.
+{{< include ../../latexmacros.qmd >}}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-
-중요한 식은 다음과 같이 강조한다.
+</br>
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">

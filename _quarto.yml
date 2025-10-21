@@ -30,10 +30,11 @@ book:
       - src/group/group_Lie1_SO.qmd
       - src/group/group_continuous_tensor.qmd
       - src/group/group_aux.qmd
+    
     - part: 미분방정식
       chapters :
-      - src/differential equation/ode.qmd
-      - src/differential equation/pde.qmd
+      - src/differential_equation/ode.qmd
+      - src/differential_equation/pde.qmd
 
     - part: 복소함수
       chapters :
