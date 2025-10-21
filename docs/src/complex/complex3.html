@@ -319,8 +319,8 @@ window.Quarto = {
   <li><a href="#sec-CF_integrals_with_complex_exponent" id="toc-sec-CF_integrals_with_complex_exponent" class="nav-link" data-scroll-target="#sec-CF_integrals_with_complex_exponent"><span class="header-section-number">16.1.3</span> 복소 지수함수가 포함된 적분</a></li>
   <li><a href="#대칭이-없는-무한대-적분" id="toc-대칭이-없는-무한대-적분" class="nav-link" data-scroll-target="#대칭이-없는-무한대-적분"><span class="header-section-number">16.1.4</span> 대칭이 없는 무한대 적분</a></li>
   <li><a href="#branch-point-를-피하여-적분하기" id="toc-branch-point-를-피하여-적분하기" class="nav-link" data-scroll-target="#branch-point-를-피하여-적분하기"><span class="header-section-number">16.1.5</span> Branch point 를 피하여 적분하기</a></li>
-  <li><a href="#sec-exploiting_branch_cuts" id="toc-sec-exploiting_branch_cuts" class="nav-link" data-scroll-target="#sec-exploiting_branch_cuts"><span class="header-section-number">16.1.6</span> Branch Cuts 를 이용한 적분</a></li>
-  <li><a href="#sec-exploiting_periodicity" id="toc-sec-exploiting_periodicity" class="nav-link" data-scroll-target="#sec-exploiting_periodicity"><span class="header-section-number">16.1.7</span> 주기함수의 적분</a></li>
+  <li><a href="#sec-CF_exploiting_branch_cuts" id="toc-sec-CF_exploiting_branch_cuts" class="nav-link" data-scroll-target="#sec-CF_exploiting_branch_cuts"><span class="header-section-number">16.1.6</span> Branch Cuts 를 이용한 적분</a></li>
+  <li><a href="#sec-CF_exploiting_periodicity" id="toc-sec-CF_exploiting_periodicity" class="nav-link" data-scroll-target="#sec-CF_exploiting_periodicity"><span class="header-section-number">16.1.7</span> 주기함수의 적분</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   </ul>
@@ -573,7 +573,7 @@ I &amp;= \lim_{\varepsilon \to 0^+} \left[\dfrac{1}{2i} \int_{\varepsilon}^\inft
 &amp;= \dfrac{1}{2i} P.V\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\, dx
 \end{aligned}
 \]</span></p>
-<p>이다. 이제 <span class="quarto-unresolved-ref">?fig-complex2_cauchy_principal_value_2</span> 에서의 경로대로 적분을 구해보자.</p>
+<p>이다. 이제 <a href="complex2.html#fig-CF_cauchy_principal_value_2" class="quarto-xref">그림&nbsp;<span>15.7</span></a> 에서의 경로대로 적분을 구해보자.</p>
 <p><span class="math display">\[
 \oint \dfrac{e^{2iz}}{iz}\, dz = I + \int_{C_r} \dfrac{e^{iz}}{2iz}\, dz + \int_{C_R}\dfrac{e^{iz}}{2iz}\, dz
 \]</span></p>
@@ -685,8 +685,8 @@ I = - \dfrac{2\pi^2}{27}.
 </div>
 <p><br></p>
 </section>
-<section id="sec-exploiting_branch_cuts" class="level3" data-number="16.1.6">
-<h3 data-number="16.1.6" class="anchored" data-anchor-id="sec-exploiting_branch_cuts"><span class="header-section-number">16.1.6</span> Branch Cuts 를 이용한 적분</h3>
+<section id="sec-CF_exploiting_branch_cuts" class="level3" data-number="16.1.6">
+<h3 data-number="16.1.6" class="anchored" data-anchor-id="sec-CF_exploiting_branch_cuts"><span class="header-section-number">16.1.6</span> Branch Cuts 를 이용한 적분</h3>
 <p>때때로 branch cuts 를 이용한 적분은 어려운 적분을 계산할 때 의외로 유용하다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -764,8 +764,8 @@ I = \dfrac{2\pi}{3\sqrt{3}}.
 </div>
 <p><br></p>
 </section>
-<section id="sec-exploiting_periodicity" class="level3" data-number="16.1.7">
-<h3 data-number="16.1.7" class="anchored" data-anchor-id="sec-exploiting_periodicity"><span class="header-section-number">16.1.7</span> 주기함수의 적분</h3>
+<section id="sec-CF_exploiting_periodicity" class="level3" data-number="16.1.7">
+<h3 data-number="16.1.7" class="anchored" data-anchor-id="sec-CF_exploiting_periodicity"><span class="header-section-number">16.1.7</span> 주기함수의 적분</h3>
 <p>삼각함수, 즉 복소평면에서의 hyperbolic 함수에 대한 적분의 경우를 다룬다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CF_exploiting_periodicity_1" class="theorem example">
@@ -844,7 +844,6 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 <p><span class="math inline">\(|b|&gt;|a|\)</span> 인 경우는 어떻게 되는가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(a&gt;0\)</span> 이며 <span class="math inline">\(b\)</span> 는 부호를 정하지 않으면 <span class="math inline">\(a+b\cos\theta\)</span> 에 대해서반 생각해도 된다. 복소평면상의 단위원의 경로 <span class="math inline">\(C_U\)</span> 에 대해 <span class="math inline">\(z=e^{i\theta}\)</span> 로 놓으면, <span class="math inline">\(dz = ie^{i\theta}\,d\theta\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -864,13 +863,12 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 <p>이다. <span class="math inline">\(1/(a+b\sin \theta)\)</span> 에 대한 적분도 같은 방식으로 계산 할 수 있다.</p>
 <p><span class="math inline">\(|b|&gt;|a|\)</span> 이면 극점이 단위원 경로상에 존재한다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.2 (Arfken 11.8.2)</strong></span> <span class="math inline">\(a&gt;1\)</span> 에 대해 <span class="math inline">\(\displaystyle \int_0^{\pi} \dfrac{d\theta}{(a+\cos \theta)^2} = \dfrac{\pi a}{(a^2-1)^{3/2}}\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\cos (2\pi - \theta)= \cos \theta\)</span> 임을 이용하면</p>
 <p><span class="math display">\[
@@ -890,13 +888,12 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.3 (Arfken 11.8.3)</strong></span> <span class="math inline">\(|t|&lt;1\)</span> 에 대해 <span class="math inline">\(\displaystyle \int_0^{2\pi} \dfrac{d\theta}{1-2t\cos\theta + t^2} = \dfrac{2\pi}{1-t^2}\)</span> 임을 보여라. <span class="math inline">\(|t|&gt;1\)</span> 이면 어떠한가? <span class="math inline">\(|t|=1\)</span> 이면 어떤가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|t|&lt;1\)</span> 이면 <span class="math inline">\(1+t^2\ge 2t,\, 1+t^2\ge 0\)</span> 임을 안다. 따라서 <a href="#exr-Arfken7_11_8_1" class="quarto-xref">연습문제&nbsp;<span>16.1</span></a> 에 의해</p>
 <p><span class="math display">\[
@@ -904,7 +901,7 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 \]</span></p>
 <p>이다. <span class="math inline">\(|t|&gt;1\)</span> 일 경우에는 역시 <span class="math inline">\(1+t^2\ge 2t\)</span> 이므로 적분값이 <span class="math inline">\(\dfrac{2\pi}{t^2-1}\)</span> 이며, <span class="math inline">\(|t|=1\)</span> 일 경우에는 단위원 경로 내에 극점이 존재하므로 적분을 계산 할 수 없다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.4 (Arfken 11.8.4)</strong></span> <span class="math inline">\(\displaystyle \int_0^{2\pi} \dfrac{\cos 3\theta \, d\theta}{5-4\cos \theta}\)</span> 를 계산하라</p>
@@ -932,7 +929,7 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.5 (Arfken 11.8.5)</strong></span> 유수에 대한 계산을 이용하여 다음을 보여라.</p>
@@ -941,7 +938,6 @@ I = \int_0^\infty \dfrac{x\,dx}{\sinh x}.
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>단위원에 대한 경로 <span class="math inline">\(C_U\)</span> 를 따르는 적분을 생각한다. <span class="math inline">\(z=e^{i\theta},\, dz = (iz)d\theta\)</span> 이다. 또한 <span class="math inline">\(\cos(2\pi - \theta) = \cos \theta\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -983,13 +979,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.6 (Arfken 11.8.7)</strong></span> <a href="#exm-CF_exploiting_branch_cuts_1" class="quarto-xref">예제&nbsp;<span>16.8</span></a> 에서 <span class="math inline">\(R\to \infty\)</span> 일 때의 <span class="math inline">\(C_R\)</span> 경로에서의 적분과 <span class="math inline">\(\varepsilon \to 0\)</span> 에서의 <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적분값이 모두 <span class="math inline">\(0\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(0&lt;p&lt;1\)</span> 에 대해 <span class="math inline">\(f(z) = \dfrac{z^p}{z^2+1}\)</span> 이라고 하자. <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 의 두가지 조건을 <span class="math inline">\(f\)</span> 가 만족하기 때문에 <span class="math inline">\(C_R\)</span> 경로에서의 적분은 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(C_\varepsilon\)</span> 경로에서의 적문을 생각하자. <span class="math inline">\(z=\varepsilon e^{i\theta},\, dz=i\varepsilon e^{i\theta}\,d\theta\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -1001,13 +996,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \]</span></p>
 <p>이다. <span class="math inline">\(0&lt;p&lt;1\)</span> 이므로 <span class="math inline">\(\varepsilon \to 0\)</span> 극한에서 <span class="math inline">\(C_\varepsilon\)</span> 경로의 적분은 <span class="math inline">\(0\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_8" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.7 (Arfken 11.8.8)</strong></span> <span class="math inline">\(a&gt;b&gt;0\)</span> 에서 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\cos bx - \cos ax}{x^2}\, dx\)</span> 값을 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><a href="#exm-CF_integral_including_exponential_2" class="quarto-xref">예제&nbsp;<span>16.5</span></a> 로부터 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t} \, dt = \pi\)</span> 임을 안다. 앞의 적분에서 <span class="math inline">\(s&gt;0\)</span> 에 대해 <span class="math inline">\(t=sx\)</span> 로 환하면 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin (sx)}{x}\, dx= \pi\)</span> 이다.</p>
 <p><span class="math display">\[
@@ -1024,13 +1018,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \end{aligned}
 \]</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.8 (Arfken 11.8.9)</strong></span> <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin^2 x}{x^2}\, dx = \pi\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\sin^2 x = (1-\cos 2x)/2\)</span> 임을 이용한다. <a href="#eq-exr_Arfken7_11_8_8_1" class="quarto-xref">식&nbsp;<span>16.9</span></a> 을 이용하면</p>
 <p><span class="math display">\[
@@ -1040,13 +1033,12 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.9 (Arfken 11.8.10)</strong></span> <span class="math inline">\(\displaystyle \int_{0}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx = \dfrac{\pi}{2e}\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\dfrac{x \sin2 x}{x^2+1}\)</span> 가 우함수 이므로 <span class="math inline">\(\displaystyle \int_{0}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx = \dfrac{1}{2}\int_{-\infty}^\infty \dfrac{x \sin2 x}{x^2+1}\, dx\)</span> 이다. 복소함수 <span class="math inline">\(f(z) = \dfrac{ze^{2iz}}{z^2+1}\)</span> 에 대해 <span class="math inline">\(\dfrac{f(z)+f(-z)}{2i}= \dfrac{z \sin 2z}{z^2+1}\)</span> 임을 이용하여 문제의 적분을 계산 할 수 있다.</p>
 <p>우선 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 의 경로대로 위쪽 반평면에서 <span class="math inline">\(\oint_C f(z)\,dz\)</span> 를 계산해 보자. <span class="math inline">\(C_R\)</span> 에 대한 경로적분은 <span class="math inline">\(0\)</span> 이며 경로상의 고립점은 <span class="math inline">\(z=i\)</span> 이므로</p>
@@ -1062,7 +1054,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \int_0^\infty \dfrac{x\sin 2x}{x^2+1}\,dx = \dfrac{1}{2} \dfrac{1}{2i} \dfrac{2i\pi}{e}= \dfrac{\pi}{2e}.
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.10 (Arfken 11.8.11)</strong></span> 양자역학에서의 전이확률을 계산할 때 <span class="math inline">\(f(t,\,\omega)= \dfrac{2(1-\cos \omega t)}{\omega^2}\)</span> 가 등장한다. 다음을 보여라.</p>
@@ -1071,7 +1063,6 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-Arfken7_11_8_9" class="quarto-xref">연습문제&nbsp;<span>16.8</span></a> 의 결과를 사용한다. <span class="math display">\[
 \begin{aligned}
@@ -1080,7 +1071,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_12" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.11 (Arfken 11.8.12)</strong></span> <span class="math inline">\(a&gt;0\)</span> 에 대해 다음을 보여라.</p>
@@ -1088,7 +1079,6 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 <p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{x\sin x}{x^2+a^2} \,dx = \pi a^{-a}\)</span>. <span class="math inline">\(\sin x\)</span> 가 <span class="math inline">\(\sin kx\)</span> 로 바뀌면 어떻게 되는가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(f(z) = \dfrac{e^{iz}}{z^2+a^2}\)</span> 이라고 하면 <span class="math inline">\(\displaystyle \dfrac{\cos x}{x^2+a^2} = \dfrac{f(x)+f(-x)}{2}\)</span> 이다. 위쪽 반평면에 대해 <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 경로의 적분을 생각하자. <span class="math inline">\(C_R\)</span> 경로 적분값은 <span class="math inline">\(0\)</span> 이며, 경로 내부의 고립점은 <span class="math inline">\(ia\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -1116,7 +1106,7 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.12 (Arfken 11.8.13)</strong></span> 아래 그림의 contour 에서 <span class="math inline">\(R\to \infty\)</span> 극한을 이용하여 <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{\sin x}{x}\,dx = \pi\)</span> 임을 보여라.</p>
@@ -1132,7 +1122,6 @@ R_0 = \dfrac{1}{(2k)!} \dfrac{(2k)!}{(k!)^2}(2k!)= \dfrac{(2k)!}{(k!)^2}
 </div>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{e^{iz}}{z}\)</span> 라고 하면 <span class="math inline">\(\dfrac{\sin x}{x} = \dfrac{f(x) + f(-x)}{2i}\)</span> 이다. 이 contour 내부에 고립점이 없으므로</p>
 <p><span id="eq-exr-Arfken7_11_8_13"><span class="math display">\[
@@ -1173,13 +1162,12 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_14" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.13 (Arfken 11.8.14)</strong></span> 원자 충돌에 대한 양자 이론에서 <span class="math inline">\(p\in \mathbb{R}\)</span> 일 때의 적분 <span class="math inline">\(I = \displaystyle \int_{-\infty}^\infty \dfrac{\sin t}{t}e^{ipt}\,dt\)</span> 가 등장한다. <span class="math inline">\(|p|&gt;1\)</span> 이면 <span class="math inline">\(I=0\)</span> 이며 <span class="math inline">\(|p|&lt;1\)</span> 이면 <span class="math inline">\(I=\pi\)</span> 임을 보여라. 그리고 <span class="math inline">\(p=\pm 1\)</span> 이면 어떻게 되는가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{\sin t}{t}e^{ipt} = \dfrac{e^{i(p+1)t}-e^{i(p-1)t}}{2it}\)</span> 라고 하자. 이것을 계산 하기 위해 <span class="math inline">\(\int_{-\infty}^\infty e^{iat}/t\,dt\)</span> 를 계산해 보자.</p>
 <div id="fig-CF_contour_Arfken_11_8_14.png" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1210,13 +1198,12 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(p&lt;-1\)</span> 이면 <span class="math inline">\(p-1 &lt; p+1 &lt; 0\)</span> 이므로 <span class="math inline">\(I = \dfrac{-i\pi - (-i\pi)}{2i} = 0\)</span> 이다.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(|p|&lt;1\)</span> 이면 <span class="math inline">\(p-1&lt;0&lt;p+1\)</span> 이므로 <span class="math inline">\(I = \dfrac{i\pi - (-i\pi)}{2i} = \pi\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.14 (Arfken 11.8.15)</strong></span> <span class="math inline">\(a&gt;0\)</span> 에 대해 <span class="math inline">\(\displaystyle \int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{\pi}{4a^3}\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{1}{(z^2+a^2)^2}\)</span> 가 우함수이므로</p>
 <p><span class="math display">\[
@@ -1235,13 +1222,12 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 \int_0^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2}\int_\infty^\infty \dfrac{dx}{(x^2+a^2)^2} = \dfrac{1}{2} (2\pi i)\dfrac{1}{4ia^3}=\dfrac{\pi}{4a^3}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_16" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.15 (Arfken 11.8.16)</strong></span> <span class="math inline">\(\displaystyle \int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1}\)</span> 를 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(f(z) = \dfrac{z^2}{z^4+1}\)</span> 의 극점은 <span class="math inline">\(z_1=\dfrac{1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_2=\dfrac{-1+i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_3= \dfrac{-1-i}{\sqrt{2}}\)</span>, <span class="math inline">\(z_4= \dfrac{1-i}{\sqrt{2}}\)</span> 이다. <a href="#fig-CF_infinite_integral" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 복소평면위 위쪽 반평면에서 정의된 반원형 contour 를 생각하자. <span class="math inline">\(f(z)\)</span> 은 <a href="#sec-CF_integral_infinite" class="quarto-xref"><span> 16.1.2</span></a> 에서의 조건을 만족하며, 따라서 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(\int_{C_R}f(z)\,dz = 0\)</span> 이다. 네개의 극점중 위쪽 반평면에 위치하는 것은 <span class="math inline">\(z_1,\,z_2\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -1261,13 +1247,12 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 \int_{-\infty}^\infty \dfrac{x^2\,dx}{x^4+1} = 2\pi i \left(\dfrac{-2i}{4\sqrt{2}}\right) = \dfrac{\pi}{\sqrt{2}}.
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_17" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.16 (Arfken 11.8.17)</strong></span> <span class="math inline">\(0&lt;p&lt;1\)</span> 에 대해 <span class="math inline">\(\displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx\)</span> 를 구하라</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(I = \displaystyle \int_{0}^\infty \dfrac{x^p \ln x}{x^2+1}\,dx\)</span> 라고 하고 <a href="#fig-CF_exploiting_branch_cuts" class="quarto-xref">그림&nbsp;<span>16.4</span></a> 의 contour 를 생각하자. <span class="math inline">\(f(z) = \dfrac{z^p\ln z}{z^2+1}\)</span> 은 <span class="math inline">\(z_1=e^{\pi i/2},\, z_2=e^{i3\pi/2}\)</span> 에서 극점을 가진다. 따라서,</p>
 <p><span id="eq-exr-Arfke7_11_8_17_1"><span class="math display">\[
@@ -1330,7 +1315,7 @@ PV\int_{-\infty}^\infty \dfrac{e^{ix}}{x}\,dx - i\pi = 0
 I = \dfrac{\pi^2 \sin^2(p\pi/2)}{2\sin (p\pi) \cos(p\pi/2)} = \dfrac{\pi^2 \sin (p\pi/2)}{4 \cos^2 (p\pi/2)}.
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken7_11_8_18" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.17 (Arfken 11.8.18)</strong></span> <span class="math inline">\(\displaystyle \int_0^\infty \dfrac{(\ln x)^2}{1+x^2}\,dx\)</span> 를 두가지 방법으로 계산해보자</p>
@@ -1348,7 +1333,6 @@ I = \dfrac{\pi^2 \sin^2(p\pi/2)}{2\sin (p\pi) \cos(p\pi/2)} = \dfrac{\pi^2 \sin 
 </div>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(I_1 = \displaystyle \int_0^1 \dfrac{(\ln x)^2}{1+x^2}\,dx\)</span>, <span class="math inline">\(I_2=\displaystyle \int_1^\infty \dfrac{(\ln x)^2}{1+x^2}\,dx\)</span> 라고 하면 구하고자 하는 적분은 <span class="math inline">\(I_1+I_2\)</span> 이다.</p>
 <p><span class="math display">\[
