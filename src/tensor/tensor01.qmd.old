@@ -10,180 +10,162 @@ crossref:
 
 </br>
 
+
 ## 텐서의 기초
 
-### 공변벡터, 반변벡터, 아인슈타인 표기법 {#sec-Tensor_contravariant_covariant_einstein}
-
-#### **공변벡터와 반변벡터** 
-
-여기서는 유한차원 벡터공간 $V$ 와 그 쌍대공간 $V^\ast$ 에 대해 생각한다. $V$ 의 기저 $(e_1,\ldots,\,e_n)$ 의 각각의 $e_j$ 에 대해 $\theta^i\in V^\ast$ 가 존재하여 $\theta^i(e_j)=\delta^i_j$ 이며, $(\theta^1,\ldots,\,\theta^n)$ 이 $V^\ast$ 의 기저가 된다는 것을 안다. 이 때 $\omega \in V^\ast$ 를 **공변벡터(covariant vector 혹은 covector)** 라고 하고 $v\in V$ 를 **반변 벡터(contravariant vector)** 라고 한다.
-
-</br>
-
-#### **벡터의 성분값과 자연쌍대**
-
-$v\in V$ 를 $v=\sum_i v^ie_i$, $\omega \in V^\ast$ 를 $\omega = \sum_j\omega_j \theta^j$ 와 같이 표기하는 것이 표준적이다. 이 때 다음이 성립한다는 것을 알 수 있다.
-$$
-v^i = \theta^i(v),\qquad \omega_i = \omega(e_i).
-$$ {#eq-Tensor_componant_of_contravariant_and_covariant_vector}
-
-
-$\omega\in V^\ast,\, v\in V$ 에 대해 $\omega (v)$ 가 존재한다. 이를 **자연 쌍대(natural pairing)** 라고 한다. 이 때 다음이 성립한다. 
-
-$$
-\omega (v) =\sum_{i, j} \omega_j \theta^j(v^i e_i) = \sum_{i, j} \omega_j v^i \theta^j(e_i) = \underbrace{\sum_i \omega_iv^i \equiv \omega_i v^i}_{\text{Einstein notation}}
-$$ {#eq-Tensor_natural_pariaing}
-
-
-@eq-Tensor_natural_pariaing 에서와 같이 $\sum_i \omega_iv^i$ 를 $\omega_iv^i$ 와 같이 표기하는 것을 **아인슈타인 표기법 (Einsteine notation)** 이라고 한다. 
-
-</br>
-
-### 변환의 규칙 {#sec-Tensor_rule_of_transformation}
-
-$V$ 에서 기저를 $(e_1,\ldots,\,e_n)$ 에서 $(e'_1,\ldots,\,e'_n)$ 으로 아래와 같이 변경한다고 하자.
-
-$$
-e_i = {R_i}^j e'_j, \qquad \text{i. e.}\qquad e'_j = \left({R_i}^j\right)^{-1}e_i.
-$$ {#eq-Tensor_basis_transform}
-
-그렇다면 벡터 성분의 변화는
-
-$$
-v'=v'^ie'_i = v^ie_i=v^i {R_i}^j e'_j = {R_i}^jv'^i e'_j
-$$
-
-이므로
-
-$$
-v'^i = ({R_i}^j)v^j
-$$ {#eq-Tensor_transform_of_contavariant_vector_component}
-
-이어야 한다. 즉 $v'\in V$ 의 성분은 기저의 변환에 대해 반대로(contra-) 변하므로(정확히는 역행렬에 따라 변하므로) 반변벡터라는 이름이 붙었다. 또한 이로부터
-
-$$
-{R_i}^j = \dfrac{\partial (x')^i}{\partial x^j},\qquad \left({R_i}^j\right)^{-1} = \dfrac{\partial x^j}{\partial (x')^i}
-$$
-
-임을 안다. 이에 반해 
-
-$$
-\omega'_i = \omega(e'_i)= \left({R_i}^j\right)^{-1} \omega(e_j)= \left({R_i}^j\right)^{-1}  \omega_j
-$$ {#eq-Tensor_transform_of_covariant_vector_component}
-
-이다. 즉 $\omega$ 의 성분은 기저의 변환에 대해 변환행렬에 맟추어(co-) 변하므로 공변벡터 라는 이름이 붙었다. 
-
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#prp-Tensor_invairanice_of_scalar}
-
-$v\in V,\, \omega\in V^\ast$ 에서 $v^i\omega_i$ 는 좌표변환에 대해 불변이다.
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-tensor_def_tensor}
+   
+#### 스칼라, 벡터, 텐서
+벡터 공간 $\R^d$ 를 생각하자. 좌표의 회전 변환에 대해 불변인 양을 **스칼라(scalar)** 라고 한다. 좌표의 회전 변환에 대해 좌표와 같이 변환되는 양를 **벡터(vector)** 라고 한다. 스칼라는 $1$ 개의 수로 표현 될 수 있으며 벡터는 $d$ 개의 수로 표현 될 수 있다. 랭크 $n$ 텐서는 $d^n$ 개의 성분으로 표현 될 수 있으며, 좌표 변환에 대해 특별한 형태를 따르는 양을 말한다. 스칼라는 랭크 $0$ 텐서이며, 벡터는 랭크 $1$ 텐서이다.
 
 :::
-
-</div>
-
-::: {.proof}
-$v'^i\omega'_i = ({R_i}^j)^{-1}v^j({R_i}^k)\omega_k = v^j\omega_j.$
-
 :::
 
+</br>
+
+### 공변벡터와 반변 벡터
+
+![공변벡터와 반변벡터](figures/vectors.png){#fig-Tensor_vectors_01 width=800}
+
+우리가 다루는 벡터공간에서 벡터는 기저에 대한 성분으로 표현 할 수 있다. 우선 2차원에서 생각해보자. $\bf{\varepsilon}_1,\, \bf{\varepsilon}_2$ 기저에서 벡터 $A$ 는
+
+$$
+A=A^1\bf{\varepsilon}_1 +A^2\bf{\varepsilon}_2
+$$ {#eq-Tensor_contravariant_representation_of_vector}
+
+로 표현 할 수 있다. $A^1,\,A^2$ 는 반변 성분(contravariant components) 이라고 하고 $\bf{\varepsilon}_1,\,\bf{\varepsilon}_2$ 를 공변 기저(covariant basis) 라고 한다. 공변 기저 $\bf{\varepsilon}_1,\, \bf{\varepsilon}_2$ 에 대해 $\bf{\varepsilon}_i \bf{\cdot \varepsilon}^j = \delta_{ij}$ 가 되도록 하는 벡터 $\bf{\varepsilon}^1,\, \bf{\varepsilon}^2$ 찾을 수 있으며 선형 독립이고, 따라서 기저가 될 수 있다. 선형대수학에서는 이를 어떤 기저에 대한 쌍대 기저(dual basis) 라고 한다. 이 기저를 반변 기저(contravariant basis) 라 하며 이 기저에 대해
+
+$$
+A=A_1 \bf{\varepsilon}^1  + A_2 \bf{\varepsilon}^2
+$$ {#eq-Tensor_covariant_representation_of_vector}
+
+
+로 표현 할 수 있다. 이 때 $A_1,\,A_2$ 를 공변 성분(covariant components) 라고 한다. 반변 기저에 대한 공변 성분을 $(A_1 ,\, A_2)$ 와 같이 표현한 것을 공변 벡터라고 하고 공변기저에 대한 반변 성분을 $(A^1,\, A^2)$ 와 같이 표현한 것을 반변 벡터 라고 한다. 그리고 공변/반변 벡터/성분을 각각 위첨자, 아래첨자로 위와같이 구별하는 것을 **아인슈타인 표기법 (Einstein notation)** 이라고 한다. 즉 위첨자는 반변 벡터나 반변 성분을 의미하며 아래첨자는 공변벡터나 공변 성분을 의미한다. 그리고 여기서는 2차원에서 표현했지만 실제로는 $n$ 차원으로 확장 할 수 있다.  
+
 
 </br>
 
-### 텐서
+### 벡터의 변환과 아인슈타인 표기법
 
-#### **텐서와 변환규칙**
-
-$\F$-벡터공간 $V_1,\,V_2,\ldots,\,V_k$ 에 대해 $V_1 \times \cdots \times V_k \mapsto \R$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 $k$-차 **텐서 (tensor)** 라고 한다. 즉 $v_i,\,u_i \in V_i$ 와 $c\in \F$ 에 대해 
+$\R^3$ 에서의 선형 변환 $\bf{R}$ 에 의해 변위 벡터 $\bf{x}$ 의 좌표가 $\begin{bmatrix} x_1 & x_2 & x_3\end{bmatrix}^T$ 에서 $\bf{x}'=\begin{bmatrix} x_1' & x_2' & x_3' \end{bmatrix}^T$ 로 변환된다고 하자. 즉 $\bf{x}'=\bf{Rx}$ 라고 하자. 이로부터 
 
 $$
-T(\ldots,\,v_i + cu_i,\ldots) = T(\ldots,v_i,\ldots) + c T(\ldots,u_i,\ldots)
-$$
+R_{ij}= \dfrac{\partial x'_i}{\partial x_j}
+$$ {#eq-Tensor_transform_matrix_1}
 
-이어야 한다. 여기에서 다루는 텐서가 정의되는 벡터공간은 일반적으로 정해진 벡터공간 $V$ 에 대해 $V$ 이거나 $V^\ast$ 이다. $V$ 에 대해 정해진 기저 $(e_i)$ 를 생각하자. $T$ 가 $V\times V$ 에서 정의된 텐서라면, 즉 2차 텐서라면
-
-$$
-T(u,\,v) = \sum_{i, j} u^iv^jT(e_i,\,e_j) \equiv T_{ij} u^iv^j
-$$
-
-이다. 우리는 $T_{ij} := T(e_i,\,e_j)$ 라고 정의 할 수 있다. 반대로 $S$ 가 $V^\ast \times V^\ast$ 에서 정의된 2차 텐서라면
+이며, 따라서
 
 $$
-S(\omega,\, \eta) = \sum \omega_i \eta_j S(\theta^i,\, \theta^j) \equiv  S^{ij}\omega_i \eta_j
-$$
+x'_i = \sum_{j}R_{ij}x_j = \sum_j \dfrac{\partial x'_i}{\partial x_j}x_j
+$$ {#eq-Tensor_transform_of_coordinate}
 
-이다. 우리는 $S^{ij} = S(\theta^i,\,\theta^j)$ 라고 정의 할 수 있다. 만약 $A$ 가 $V \times V^\ast$ 에서 정의된 텐서라면
-
-$$
-A(v,\,\omega) = \sum_{i,j} v^i\omega_j A(e_i,\,\theta^j) \equiv {A_i}^j v^i\omega_j
-$$
-
-이다. 우리는 ${A_i}^j$ 를 $A(e_i,\,\theta^j)$ 로 정의 할 수 있다. 또한 이것을 확장하여 임의의 $k$ 차 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다.
-$$
-\begin{aligned}
-T'_{ij} &:= T(e'_i,\,e'_j) = \sum_{k,\,l}T(\left({R_i}^k\right)^{-1} e_k,\, \left({R_j^l}\right)^{-1} e_l) = \left({R_i}^k\right)^{-1} \left({R_j}^l\right)^{-1} T_{kl} , \\[0.3em]
-S'^{ij} &:= S(\theta'_i,\, \theta'_j) = \sum_{k,\,l}S\left({R_i}^k\theta_k, {R_j}^l\theta_l\right) = {R_i}^k{R_j}^l\theta_l S^{kl}, \\[0.3em]
-{{A'}_i}^j &= A(e'_i,\,\theta'^j) = \left({R_i}^k\right)^{-1} {R_j}^l {A_k}^l.
-\end{aligned}
-$$ {#eq-CFT-transform_of_rank_2_tensor}
-
-이 식을 보면 알 수 있듯이 이것은 2차 이상의 텐서에 대해서도 그대로 적용된다. 텐서의 공변 성분은 공변벡터의 변환을 따르고 반변 성분은 반번 벡터의 변환을 따른다.
-
-</br>
-
-#### **계량 텐서**
-
-$\F$-벡터공간 $V$ 에 대해, 정확히는 다양체 $M$ 의 탄젠트 공간 $V=T_pM$ 에서 정의되는 **계량 텐서 (metric tensor)** $g \in \mathcal{T}^2(V)$ 는 다음의 성질을 가진다.
-
-&emsp;($1$) **대칭성** : $g(u,\,v) = g (v,\,u)$, 
-
-&emsp;($2$) **비축퇴성** : $\forall u\in V,\, g(v,\,u)=0 \iff v=0$
-
-계량텐서는 내적벡터공간의 내적과 같이 벡터공간에 부여되는 구조이다. 이 때 계량텐서가 $0$ 이 아닌 모든 $u,\,v\in V$ 에 대해 $g(u,\,v) > 0$ 이면 이 텐서를 **리만 계량(Riemann metric)** 이라고 하고 아래와 같이 주어졌을 때 **로런츠 계량(Lorentz metric)** 이라고 한다. 텐서의 인덱스 규칙에 따라 $g_{ij} = g(e_i,\,e_j)$ 라고 하자. 로런츠 계량은 아래와 같이 주어진다.
+이다. 이제 기저의 변환을 보자. 기저 $\bf{b}$ 가 $\bf{b'}$ 으로 변화한다면,
 
 $$
-g_{ij} = \left[\,\begin{array}{rrrr} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 &-1\end{array}\,\right].
-$$ {#eq-Tensor_lorentz_metric}
+(\bf{b}')_j = \bf{R}^{-1}\bf{b}_j 
+$$ {#eq-Tensor_transform_of_basis}
 
-계량의 정의에 의해 아래의 대칭성이 성립한다는 것을 알 수 있다.
-
-$$
-\boxed{ g_{ij} = g_{ji}}.
-$$ {#eq-Tensor_symmetric_property_of_metric_tensor}
-
-
-이 때 내림 사상 $\flat : V\to V^\ast$ 을 다음과 같이 정의한다.
+이다. 기저를 $(1, 0, 0), (0, 1, 0),\, (0, 0, 1)$ 에서 $(1, 0, 0),\, (0, 2, 0),\, (0, 0, 3)$ 으로 바꾸는 변환을 생각하자. 이 변환을 나타내는 행렬 $\bf{R}_s$ 은
 
 $$
-\flat(v) (u) := g(v,\,u).
-$$ {#eq-Tensor_flat_map}
-
-$g$ 가 쌍선형 사상이므로 $\flat$ 은 선형사상이며 $g$ 의 비축퇴성으로 인해 $\flat$ 은 가역사상이다.
-
-이 때, $v=v^ie_i,\, u=u^je_j$ 에 대해 
-$$
-\flat (v^ie_i)(u^ie_i) = g(v^ie_i,\, u^je_j) = \sum_{i,j}v^iu^jg(e_i,\,e_j) = g_{ij}v^iu^j
+\bf{R}_s = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1/2 & 0 \\ 0 & 0 & 1/3\end{bmatrix}
 $$
 
-이므로 $v_j = g_{ij}v^i$ 로 놓으면 $g(v,\,u) = v_ju^j$ 이다. 
-
-$\flat$ 이 가역사상이므로 $\flat$ 의 역사상이 존재한다. 이를 $\sharp$ 라고 하자. 그렇다면 $v^j = (g_{ij})^{-1}v_i$ 이며 $(g_{ij})^{-1}$ 은 아래 인덱스를 위 인덱스로 바꾸저 주는 역할을 하므로 $g^{ji}$ 와 같이 쓸 수 있다. 즉
-
-$$
-g^{ij} = (g_{ji})^{-1}
-$$
-
-이다. 이제 $v_i = {g_i}^j v_j = {g_i}^j g_{jk}v^k$ 이며 $v_i = g_{ik}v^k$ 이므로 ${g_i}^j = g_{ik}(g_{jk})^{-1}= g_{ik}g^{kj}$ 임을 알 수 있다. 같은 방식으로 ${g^i}_j = g^{ik}g_{kj}$ 임을 안다. 이를 정리하면 정해진 계랑 $g_{ij}$ 에 대해
-
-$$
-\boxed{
-  g^{ij} = (g_{ji})^{-1},\qquad {g_i}^j = g_{ik}g^{kj},\qquad {g^i}_j = g^{ik}g_{kj}
-}
-$$ {#eq-Tensor_metric_tensor_and_its_variations}
 
 이다.
+
+벡터 $\bf{a}$ 는 좌표 변환에 대해 좌표와 같은 형태로(@eq-Tensor_transform_of_coordinate), 혹은 기저와 같은 형태로(@eq-Tensor_transform_of_coordinate) 변환한다. 벡터 $\bf{a}$ 가 좌표와 같은 형태로 
+
+$$
+(a')_i = \sum_{j}\dfrac{\partial x'_i}{\partial x_j}a_j
+$$
+
+와 같이 변화한다면 이런 벡터를 **반변 벡터(contravariant vector)** 라고 한다.
+
+반대로 $\R^3$ 에서 정의된 스칼라 함수의 그래디언트를 생각하자.
+
+$$
+\left(\nabla' \phi\right)_i := \dfrac{\partial \phi}{\partial x'_i} = \sum_j \dfrac{\partial x_j}{\partial x'_i}\dfrac{\partial \phi}{\partial x_j}
+$$
+
+이 벡터는 기저와 같이 변환된다. 이런 벡터를 **공변 벡터(covariant vector)** 라고 한다.
+
+데카르트 좌표계, 즉 정규직교기저를 사용하는 좌표계에서는 반변벡터와 공변벡터가 동일하지만 데카르트 좌표계가 아닌 경우는 반변벡터와 공변벡터가 다르다. 
+
+</br>
+
+#### **아인슈타인 표기법**
+
+반변벡터와 공변벡터를 엄격하게 다루기 위해 반변벡터는 위첨자를, 공변벡터는 아래첨자를 사용하여 아래와 같이 표기한다.
+
+$$
+\begin{aligned}
+(A')^i &= \sum_j \dfrac{\partial (x')^i}{\partial x^j} A^j,\qquad &&\bf{A}, \text{ a contravariant vector,}\\[0.3em]
+A'_i &= \sum_j \dfrac{\partial x^j}{\partial (x')^i}A_j && \bf{A}, \text{ a covariant vector.}
+\end{aligned}
+$$ {#eq-Tensor_notatioin_of_contravariant_and_covariant_vector}
+
+또한 위첨자와와 아래첨자에 같은 인덱스가 있다면 **free index** 라고 하며 $\sum$ 과 같은 표기 없이 합으로 표기한다. 즉
+
+$$
+A^iA_i := \sum_i A^iA_i
+$$
+
+이다. 이것은 아인슈타인이 최초로 사용했기 때문에 **아인슈타인 표기법(Einstein notation)** 이라고 한다.
+
+</br>
+
+### 랭크 2 텐서
+
+좌표 변환에 대해 다음과 같이 변하는 텐서를 **랭크 2 탠서(tensor of rank 2)** 라고 한다.
+
+$$
+\begin{aligned}
+(A')^{ij} &= \sum_{k, l} \dfrac{\partial (x')^i}{\partial x^k}\dfrac{\partial (x')^j}{\partial x_l}A^{kl}, \\[0.3em]
+(B')^i_j &= \sum_{k,l}\dfrac{\partial (x')^i}{\partial x^k}\dfrac{\partial x^l}{\partial (x')_j}B^k_l, \\[0.3em]
+(C')_{ij} &= \sum_{k,l}\dfrac{\partial x^k}{\partial (x')_i}\dfrac{\partial x^l}{\partial (x')_j}C_{kl}.
+\end{aligned}
+$$ {#eq-Tensor_rank_2_tensor}
+
+$A^{kl}$ 은 두 인덱스에 대해 반변벡터와 같은 방식으로 변환되고 $C_{kl}$ 은 두 인덱스에 대해 공변벡터와 같은 방식으로 변환된다는 것을 알 수 있다. 이에 맞추어 $A^{kl}$ 과 같이 변환되는 텐서를 **반변텐서**, $C_{kl}$ 과 같이 변환되는 텐서를 **공변텐서** 라고 부른다. $B^k_l$ 은 공변벡터와 반변벡터의 변환방식이 섞여 있으며 **혼합 텐서(mixed tensor)** 라고 부른다. 
+
+
+이렇게 번잡한 개념과 표기법을 도입하는 것은 좌표계와 무관한 물리량을 엄밀하게 사용하기 위해서이다. 실제로 텐서의 도입으로 이것이 어떻게 이루어지는지는 이후에 보기로 하자.
+
+랭크 2 텐서는 자주 행렬로 아래와 같이 표기된다.
+$$
+\bf{A} = \begin{bmatrix} A^{11} & A^{12} & A^{13}\\ A^{21} & A^{22} & A^{23} \\ A^{31} & A^{32} & A^{33} \end{bmatrix}
+$$
+
+하지만 행렬이 모두 랭크 2 텐서는 아니다. 텐서는 @eq-Tensor_rank_2_tensor 와 같이 변환되는 양이라는 것을 다시 한번 상기하자. 
+
+
+@eq-Tensor_transform_matrix_1 을 첨자 표기법에 따라 표기하면 변환행렬 $\bf{R}$ 은 다음과 같다.
+
+$$
+R_{ij}= \dfrac{\partial (x')^i}{\partial x^j}.
+$${#eq-Tensor_transform_matrix_2}
+
+그렇다면
+
+$$
+(A')^{ij} = \sum_{k, l} R_{ik} R_{jl} A^{kl} = \sum_{k, l} R_{ik} A^{kl} (R^T)_{lj}\qquad \text{or}\qquad \bf{A}' = \bf{RAR}^T.
+$$
+
+이다. 
+
+</br>
+
+#### **랭크 2 텐서의 연산**
+
+랭크 2 반변 텐서의 합을 다음과 같이 정하는 것은 자연스럽다. 
+
+$$
+A^{ij} + B^{ij} = C^{ij}
+$$
+
+단 합이 정의가 되려면 텐서가 같은 랭크여야 하며 같은 공간에서 정의되어야 하고 같은 공변성 혹은 반변성을 가져야 한다.
 
 </br>
 
