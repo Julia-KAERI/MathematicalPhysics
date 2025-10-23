@@ -39,7 +39,11 @@ crossref:
 
 ::: {#prp-Group_left_and_right_inverse}
 
-$g\in G$ 에 대해 $xg=gy=1_G$ 이면 $x=y$ 이다. 
+$g,\,x,\,y \in G$ 에 대해 다음이 성립한다. 
+
+&emsp;($1$) $xg=gy=1_G$ 이면 $x=y$ 이다. 
+
+&emsp;($2$) $xg=yg$ 이면 $x=y$ 이다.
 
 :::
 
@@ -47,7 +51,9 @@ $g\in G$ 에 대해 $xg=gy=1_G$ 이면 $x=y$ 이다.
 
 ::: {.proof}
 
-$x=x1_G =x(gy)= (xg)y = 1_Gy = y$. $\square$
+($1$) $x=x1_G =x(gy)= (xg)y = 1_Gy = y$. 
+
+($2$) $xg=yg \implies xgg^{-1} = ygg^{-1} \implies x=y.\qquad \square$
 :::
 
 
@@ -165,7 +171,6 @@ $H\le G$ 일 때
 :::
 
 </div>
-</br>
 
 ::: {.proof}
 
@@ -203,7 +208,6 @@ $G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉�
 </br>
 
 ## 중요한 군 {#sec-Group_important_groups}
-
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -367,7 +371,6 @@ see @exr-Arfken_17_1_3 $\square$
 <center>
 <!-- 
 \renewcommand{\arraystretch}{1.5}
-
 \begin{tabular}{ c|cccc }
 \hline
  & $e$ & $a$ & $b$ & $ab$ \\
@@ -378,6 +381,7 @@ $b$ & $b$ & $ab$ & $e$ & $a$ \\
 $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 \end{tabular} 
 -->
+
 ![Viergrouppe Caylay 표](figures/viergrouppe_caylay_table.png){#tbl-viergrouppe_caylay_table width=200}
 
 </center>
@@ -388,7 +392,7 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 
 ## 동형사상과 Conjugacy Class
 
-### 동형사상
+### 동형사상 {#sec-Group_homomorphism}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-Group_homomorphism}
@@ -1073,9 +1077,9 @@ $X=\langle x\rangle,\, |X|=4,\, Y=\langle y\rangle,\, |Y|=2$ 라고 하자. $\ph
 ::: {.solution}
 $\phi(x) =x^{-1}$ 은 일단 단사이다.
 
-($1$) $G$ 가 아벨군임을 가정하자. $\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)$ 이므로 $\phi$ 는 동형사상이다.
+($\implies$) $G$ 가 아벨군임을 가정하자. $\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)$ 이므로 $\phi$ 는 동형사상이다.
 
-($2$) $\phi$ 가 동형사상임을 가정하자. 임의의 $x,\,y\in G$ 에 대해 
+($\impliedby$) $\phi$ 가 동형사상임을 가정하자. 임의의 $x,\,y\in G$ 에 대해 
 $$
 xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 $$

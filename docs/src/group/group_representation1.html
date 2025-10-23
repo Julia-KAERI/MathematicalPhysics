@@ -413,14 +413,14 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-Group_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.1 (군의 표현)</strong></span> <span class="math inline">\(D\in \text{Hom} (G,\, GL_n(\mathbb{F}))\)</span> 일 때 <span class="math inline">\(D\)</span> 를 <span class="math inline">\(G\)</span> 의 표현이라고 한다. <span class="math inline">\(D(G)\)</span> 가 유니터리 행렬의 집합일 때 <span class="math inline">\(D\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>유니터리 표현(unitary representation)</strong> 이라고 한다. <span class="math inline">\(D\)</span> 가 단사일 때 이 표현이 <strong>faithful</strong> 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다. 군이 <span class="math inline">\(n \times n\)</span> 행렬로 표현되었을 때 <span class="math inline">\(n\)</span> 을 이 표현 <span class="math inline">\(D\)</span> 의 <strong>차원(dimension)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 5.1 (군의 표현)</strong></span> <span class="math inline">\(D\in \text{Hom} (G,\, GL_n(\mathbb{F}))\)</span> 일 때 <span class="math inline">\(D\)</span> 를 <span class="math inline">\(G\)</span> 의 표현이라고 한다. <span class="math inline">\(D(G)\)</span> 가 유니터리 행렬의 집합일 때 <span class="math inline">\(D\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>유니터리 표현(unitary representation)</strong> 이라고 한다. <span class="math inline">\(D\)</span> 가 단사일 때 <strong>신뢰할만한 표현(faithful representation)</strong> 하다고 한다. 즉 군의 원소에 대한 어떤 두 행렬 표현도 동일하지 않기 때문에 faithful 이라는 이름이 붙을 만 하다. 군이 <span class="math inline">\(n \times n\)</span> 행렬로 표현되었을 때 <span class="math inline">\(n\)</span> 을 이 표현 <span class="math inline">\(D\)</span> 의 <strong>차원(dimension)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
 <p>즉 <span class="math inline">\(D\)</span> 가 <span class="math inline">\(G\)</span> 의 표현이고 <span class="math inline">\(a,\,b\in G\)</span> 일 때 <span class="math inline">\(D(ab) = D(a)D(b)\)</span> 이다. 단 군에 대한 행렬 표현이 항상 유니터리 표현일 필요는 없다. 또한 <span class="math inline">\(GL_n\)</span> 은 정의상 가역행렬의 집합이므로 군의 표현이 가역행렬이 아닐 경우를 생각하지 않는다.</p>
-<br> <br>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_basic_properties_of_representation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.1</strong></span> <span class="math inline">\(D\)</span> 가 군 <span class="math inline">\(G\)</span> 의 표현일 때 다음이 성립한다.</p>
@@ -428,7 +428,6 @@ window.Quarto = {
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(D(g^{-1}) = (D(g))^{-1}\)</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 가 두 군 <span class="math inline">\(G,\, GL_n(\mathbb{F})\)</span> 사이의 준동형사상이므로 자명하다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -443,7 +442,7 @@ window.Quarto = {
 <p>즉 모든 군에 대해 최소한 하나의 표현은 존재한다.</p>
 <p><br></p>
 <p>이제 몇가지 질문이 자연스럽게 생겨난다. (1) 모든 군은 표현 가능한가? (2) 군의 표현은 몇가지나 (최소한 trivial representation 을 제외하고라도) 가능한가? (3) 다수의 표현이 존재한다면 이것을 어떤 특징에 따라 분류 할 수 있는가? (4) 표현에 대한 어떤 일반적인 성질이 존재하는가?</p>
-<p>일부분은 이미 대답 할 수 있다. 군론의 유명한 정리중의 하나는 모든 유한군은 대칭군 <span class="math inline">\(S_n\)</span> 의 어떤 부분군과 동형이라는 것이다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며, 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?</p>
+<p>일부분은 이미 대답 할 수 있다. Caylay 정리 (<a href="group_introduction.html#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span>4.3</span></a>) 모든 유한군은 대칭군 <span class="math inline">\(S_n\)</span> 의 어떤 부분군과 동형이라는 것을 알려준다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며(<a href="#exm-Group_representation_for_Sn" class="quarto-xref">예제&nbsp;<span>5.4</span></a>), 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_matrix_representation_of_Rplus" class="theorem example">

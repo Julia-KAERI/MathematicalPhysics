@@ -322,7 +322,7 @@ window.Quarto = {
   <li><a href="#sec-Group_important_groups" id="toc-sec-Group_important_groups" class="nav-link" data-scroll-target="#sec-Group_important_groups"><span class="header-section-number">4.3</span> 중요한 군</a></li>
   <li><a href="#동형사상과-conjugacy-class" id="toc-동형사상과-conjugacy-class" class="nav-link" data-scroll-target="#동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</a>
   <ul class="collapse">
-  <li><a href="#동형사상" id="toc-동형사상" class="nav-link" data-scroll-target="#동형사상"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
+  <li><a href="#sec-Group_homomorphism" id="toc-sec-Group_homomorphism" class="nav-link" data-scroll-target="#sec-Group_homomorphism"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
   <li><a href="#sec-Group_multplication_of_subset_of_group" id="toc-sec-Group_multplication_of_subset_of_group" class="nav-link" data-scroll-target="#sec-Group_multplication_of_subset_of_group"><span class="header-section-number">4.4.2</span> 군의 부분집합의 연산</a></li>
   <li><a href="#conjugacy-class" id="toc-conjugacy-class" class="nav-link" data-scroll-target="#conjugacy-class"><span class="header-section-number">4.4.3</span> Conjugacy Class</a></li>
   <li><a href="#sec-Group_quotient_group" id="toc-sec-Group_quotient_group" class="nav-link" data-scroll-target="#sec-Group_quotient_group"><span class="header-section-number">4.4.4</span> 몫군</a></li>
@@ -392,11 +392,14 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_left_and_right_inverse" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.1</strong></span> <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(xg=gy=1_G\)</span> 이면 <span class="math inline">\(x=y\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 4.1</strong></span> <span class="math inline">\(g,\,x,\,y \in G\)</span> 에 대해 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(xg=gy=1_G\)</span> 이면 <span class="math inline">\(x=y\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(xg=yg\)</span> 이면 <span class="math inline">\(x=y\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(x=x1_G =x(gy)= (xg)y = 1_Gy = y\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(x=x1_G =x(gy)= (xg)y = 1_Gy = y\)</span>.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(xg=yg \implies xgg^{-1} = ygg^{-1} \implies x=y.\qquad \square\)</span></p>
 </div>
 <p><br></p>
 </section>
@@ -488,7 +491,6 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(G\)</span> 의 모든 원소는 단 하나의 <span class="math inline">\(H\)</span> 에 의한 잉여류에 포함된다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(H\)</span> 자체도 잉여류이다. <span class="math inline">\(gH\)</span> 에 대해 <span class="math inline">\(gh_1 = gh_2\)</span> 이면 <span class="math inline">\(h_1=h_2\)</span> 이다. 따라서 모든 잉여류가 포함하는 원소의 갯수는 <span class="math inline">\(H\)</span> 의 원소의 갯수와 같다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(g_1H\)</span> 와 <span class="math inline">\(g_2H\)</span> 를 생각하자. <span class="math inline">\(x\in g_1H \cap g_2H\)</span> 라고 하자. <span class="math inline">\(x=g_1h_1=g_2h_2\)</span> 인 <span class="math inline">\(h_1,\,h_2\in H\)</span> 가 존재하며 따라서 <span class="math inline">\(g_1 = g_2h_2h_1^{-1}\)</span> 이다. 즉 <span class="math inline">\(h\in H\)</span> 에 대해 <span class="math inline">\(g_1h=g_2h_2h_1^{-1}h \in g_2H\)</span> 이므로 <span class="math inline">\(g_1H \subset g_2H\)</span> 이다. 같은 논리로 <span class="math inline">\(g_2H \subset g_1H\)</span> 임을 보일 수 있다. 즉 <span class="math inline">\(g_1H\cap g_2H \ne \varnothing\)</span> 이면 <span class="math inline">\(g_1H=g_2H\)</span> 이다.</p>
@@ -621,7 +623,6 @@ $F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 <center>
 <!-- 
 \renewcommand{\arraystretch}{1.5}
-
 \begin{tabular}{ c|cccc }
 \hline
  & $e$ & $a$ & $b$ & $ab$ \\
@@ -649,8 +650,8 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </section>
 <section id="동형사상과-conjugacy-class" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</h2>
-<section id="동형사상" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="동형사상"><span class="header-section-number">4.4.1</span> 동형사상</h3>
+<section id="sec-Group_homomorphism" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="sec-Group_homomorphism"><span class="header-section-number">4.4.1</span> 동형사상</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1115,8 +1116,8 @@ K_1= \{E\},\, K_2=\{A,\,B\},\, K_3=\{C,\,D\},\, K_4=\{F,\,H\},\, K_5=\{G\}
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\phi(x) =x^{-1}\)</span> 은 일단 단사이다.</p>
-<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 가 아벨군임을 가정하자. <span class="math inline">\(\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 동형사상이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\phi\)</span> 가 동형사상임을 가정하자. 임의의 <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math display">\[
+<p>(<span class="math inline">\(\implies\)</span>) <span class="math inline">\(G\)</span> 가 아벨군임을 가정하자. <span class="math inline">\(\phi(x)\phi(y) = x^{-1}y^{-1}=y^{-1}x^{-1}= (xy)^{-1}=\phi(xy)\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 동형사상이다.</p>
+<p>(<span class="math inline">\(\impliedby\)</span>) <span class="math inline">\(\phi\)</span> 가 동형사상임을 가정하자. 임의의 <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math display">\[
 xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 \]</span></p>
 <p>이므로 <span class="math inline">\(G\)</span> 는 아벨군이다.</p>
