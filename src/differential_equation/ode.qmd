@@ -406,8 +406,83 @@ $$
 y(x) = \dfrac{1}{\alpha(x)} \left[\int^x \alpha(x') q(x')\,dx' + C\right]
 $$
 
+이다. 여기서 $y_1,\,y_2$ 를 다음과 같이 정하자.
+
+$$
+y_1 := \dfrac{1}{\alpha(x)} \int^x \alpha (x')q(x')\,dx',\qquad y_2 := \dfrac{C}{\alpha(x)}.
+$$
+
+그렇다면 $y=y_1+y_2$ 이며, 
+
+$$
+y_2' + py = 0
+$$
+
+이다. 즉 $y_2$ 는 @eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor 의 $q(x)=0$ 인 제차 미분방정식의 해이다. 반면 $y_1$ 은 $q(x)$ 를 포함한 @eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor 을 만족한다. 
+
+이것은 어찌 보면 당연한데 비 제차 미분방정식의 해는 제차 형태의 미분방정식의 해(일반해, general solution) 들의 선형결합과 비제차 미분방정식의 해(특이해, particular solution)의 합이다. 
+
+
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-DE_ODE_summary}
+
+1계 선형 미분방정식에 대해 다음이 성립한다.
+
+($1$) 비 제차 1계 선형 미분방정식의 해는 제차 미분방정식의 선형결합을 제외하면 유일하게 결정된다.
+
+($2$) 제차 1계 선형 미분방정식은 유일한 선형 독립 해를 가진다.
+
+
+:::
+</div>
+
+::: {.proof}
+
+($1$) $y_1,\,y_2$ 가 미분방정식 $y'+py=q$ 두 해라고 하자. 즉 $y_1'+py_1=q,\, y_2'+py_2=q$ 이면 $(y_1'-y_2')+p(y_1'-y_2') = 0$ 이며 따라서 $y_1'-y_2'$ 은 주어진 미분방정식의 제차 형태의 해이므로 특이해는 제차 미분방정식의 선형결합을 제외하면 유일하게 결정된다.
+
+($2$) $y_1,\,y_2$ 가 제차 미분방정식 $y'+py=0$ 의 선형독립인 두 해라고 하자. 그렇다면 $y_1'/y_1 = y_2'/y_2 = -p(x)$ 이며 이로부터 어떤 상수 $C$ 에 대해 $y_1=Cy_2$ 인데 이는 선형독립인 가정에 모순이다. $\square$
+
+:::
 
 </br>
+
+#### **매개변수 변환법**
+
+1계 상미분 방정식 $y'+py=q$ 의 해를 구하는 한 방법이다. 우선 제차 형태인 $y'+py=0$ 해 $y_h$ 를 구하면
+
+$$
+y_h = C \exp \left(\int^x p(x')\,dx'\right)
+$$
+
+이다. 여기서 $C$ 를 상수가 아닌 $x$ 에 대한 함수로 놓고 특이해를 구할 수 있는 경우가 있다. 즉 $C\to C(x)$ 로 변환하고 $y'$ 을 구하면
+
+$$
+y' = \left(\int^x p(x')\,dx'\right)\left(-p(x)C(x) + C'(x)\right) = -p(x)y(x) + C'(x) \left(\int^x p(x')\,dx'\right)
+$$
+
+이며 따라서
+
+$$
+C'(x)\left(\int^x p(x')\,dx'\right) = q(x)
+$$
+
+
+
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-DE_ODE_sho1}
+
+#### 단순조화진동자 
+LHODE $y'' + \omega^2 y = 0$ 을 보자. $y=e^{\lambda x}$ 라고 놓으면, $\lambda^2+\omega^2 = 0$ 이어야 하므로 $\lambda = \pm \omega i$ 이다. 임의의 $a,\,b \in \mathbb{C}$ 에 대해 $a e^{i\omega x} + be^{-i\omega x}$ 는 미분방정식의 해이다.
+:::
+
+</div></br>
+
 
 ## 계수가 상수인 ODE 의 경우
 
@@ -427,17 +502,7 @@ $$
 
 </br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-DE_ODE_sho1}
-
-#### 단순조화진동자 
-LHODE $y'' + \omega^2 y = 0$ 을 보자. $y=e^{\lambda x}$ 라고 놓으면, $\lambda^2+\omega^2 = 0$ 이어야 하므로 $\lambda = \pm \omega i$ 이다. 임의의 $a,\,b \in \mathbb{C}$ 에 대해 $a e^{i\omega x} + be^{-i\omega x}$ 는 미분방정식의 해이다.
-:::
-
-</div>
-
-</br>
 
 ## 2계 선형 ODE
 
