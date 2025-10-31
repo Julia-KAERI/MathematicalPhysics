@@ -616,7 +616,7 @@ $$
 주어진 식으로부터
 $$
 \begin{aligned}
-y' &= - p(x) y(x)+ \left(\left[\int^x p(t)\,dt\right]\,q(s)\,ds\right)y(x)
+y' &= - p(x) y(x)+ \left(\left[\int^x p(t)\,dt\right]\,q(x)\,ds\right)y(x)
 \end{aligned}
 $$
 
