@@ -454,22 +454,173 @@ $$
 1계 상미분 방정식 $y'+py=q$ 의 해를 구하는 한 방법이다. 우선 제차 형태인 $y'+py=0$ 해 $y_h$ 를 구하면
 
 $$
-y_h = C \exp \left(\int^x p(x')\,dx'\right)
+y_h = C \exp \left(-\int^x p(x')\,dx'\right)
 $$
 
-이다. 여기서 $C$ 를 상수가 아닌 $x$ 에 대한 함수로 놓고 특이해를 구할 수 있는 경우가 있다. 즉 $C\to C(x)$ 로 변환하고 $y'$ 을 구하면
+이다. 여기서 $C$ 를 상수가 아닌 $x$ 에 대한 함수로 놓고 특이해를 구할 수 있는 경우가 있다. 즉 $C\to C(x)$ 로 변환한 $y_h$ 를 $y$ 로 놓고 $y'$ 을 구하면
 
 $$
-y' = \left(\int^x p(x')\,dx'\right)\left(-p(x)C(x) + C'(x)\right) = -p(x)y(x) + C'(x) \left(\int^x p(x')\,dx'\right)
+\begin{aligned}
+y' &= \exp \left(-\int^x p(x')\,dx'\right)\left(-p(x)C(x) + C'(x)\right) \\[0.3em]
+&= -p(x)y(x) + C'(x) \exp \left(-\int^x p(x')\,dx'\right)
+\end{aligned}
 $$
 
 이며 따라서
 
 $$
-C'(x)\left(\int^x p(x')\,dx'\right) = q(x)
+C'(x)\exp\left(-\int^x p(x')\,dx'\right) = q(x)
 $$
 
+이다. 그렇다면 특이해 $y_p$ 는 아래와 같다.
 
+$$
+y_p = C(x) \exp \left(-\int^x p(x')\,dx'\right),\quad \text{where } C(x) = \int^x \exp \left(\int^{x'} p(x')\,dx' \right) q(x'')\,dx''.
+$$
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_2_2}
+
+#### Arfken 7.2.3
+
+베셀 방정식 ($n=0$) 의 라플라스 변환을 통해 아래 식을 얻는다. $f(s)$ 를 구하라.
+
+$$
+(s^2+1)f'(x) + sf(x) = 0.
+$$
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\dfrac{f'(x)}{f(s)} = - \dfrac{s}{s^2+1}$ 로부터 $\ln f(s) = - \dfrac{1}{2}\ln s+C$ 를 얻는다. 따라서 $f(s) = C\sqrt{s^2+1}$ 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_2_3}
+
+#### Arfken 7.2.3
+
+Catastrophic two-body collisions 에 의한 decay of populiation 은 아래의 1계 비선형 미분방정식에 의해 기술된다.
+
+$$
+\dfrac{dN}{dt} = -kN^2.
+$$
+
+$\tau_0 = (kN_0)^{-1}$ 에 대해 이 미분방정식의 해가 를 유도하고 다음과 같음을 보여라.
+
+$$
+N(t) = N_0 \left(1+ \dfrac{t}{\tau_0}\right)^{-1}.
+$$
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\dfrac{dN}{N^2} = -k\,dt$ 를 적분하면
+
+$$
+- \dfrac{1}{N(t)}+ \dfrac{1}{N_0} = -kt
+$$
+
+이며 문제의 해를 얻는다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_2_6}
+
+#### Arfken 7.2.6
+
+1계 미분방정식 $\dfrac{dy}{dx}=f(x,\,y)$ 에서 함수 $f(x,\,y)$ 는 $y/x$ 의 함수이다. 즉 $\dfrac{dy}{dx}=g(y/x)$ 이다. $u=y/x$ 치환에 의해 이 미분방정식은 $u,\,x$ 에 대해 분리가능한 방정식이 됨을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$y=ux$ 이므로 $\dfrac{dy}{dx}= u + x\dfrac{du}{dx}$ 이다. 주어진 미분방정식은 $x,\,y$ 에 대해 $u+xu' = g(u)$ 이므로 아래와 같이 분리가능한 미분방정식을 얻는다.
+
+$$
+\dfrac{dx}{x} = \dfrac{du}{g(u)-u}.
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_2_10}
+
+#### Arfken 7.2.10
+
+아래와 같이 주어진 미분방정식에서 $f,\,g,\,h$ 는 $0$ 이 아니다. 
+
+$$
+f(x)\,dx + g(x)h(y)\,dy = 0.
+$$
+
+이 식이 전미분 형태가 될 필요충분조건은 $g(x)=\text{constant}$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$g(x)=\text{constant}$ 이면 전미분 형태임. 이제 방정식이 전미분 형태임을 가정하면
+
+$$
+\dfrac{\partial f(x)}{\partial y} = \dfrac{\partial g(x)h(y)}{\partial x} =0
+$$
+
+이어야 하므로 $g'(x)=0$. 즉 $g(x)=\text{constant.}$.
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_2_11}
+
+#### Arfken 7.2.11
+
+$$
+y(x) = \exp \left[-\int^x p(t)\,dt\right] \left(\int^x \left[\int^s p(t)\,dt\right]\,q(s)\,ds + C\right)
+$$
+
+가 아래의 미분방정식의 해임을 보여라.
+
+$$
+\dfrac{dy}{dx}+p(x)y(x) = q(x).
+$$
+
+:::
+
+</div>
+
+::: {.solution}
+
+주어진 식으로부터
+$$
+\begin{aligned}
+y' &= - p(x) y(x)+ \left(\left[\int^x p(t)\,dt\right]\,q(s)\,ds\right)y(x)
+\end{aligned}
+$$
+
+:::
 
 
 </br>
