@@ -598,7 +598,7 @@ $$
 #### Arfken 7.2.11
 
 $$
-y(x) = \exp \left[-\int^x p(t)\,dt\right] \left(\int^x \left[\int^s p(t)\,dt\right]\,q(s)\,ds + C\right)
+y(x) = \exp \left[-\int^x p(t)\,dt\right] \left(\int^x \exp \left[\int^s p(t)\,dt\right]\,q(s)\,ds + C\right)
 $$
 
 가 아래의 미분방정식의 해임을 보여라.
@@ -616,24 +616,85 @@ $$
 주어진 식으로부터
 $$
 \begin{aligned}
-y' &= - p(x) y(x)+ \left(\left[\int^x p(t)\,dt\right]\,q(x)\,ds\right)y(x)
+y' &= - p(x) y(x)+ \exp \left[-\int^x p(t)\,dt\right] \left(\exp \left[\int^x p(t)\,dt\right]\,q(x)\,ds\right)y(x) \\[0.3em]
+&= -p(x)y(x) + q(x).
 \end{aligned}
 $$
 
 :::
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-</br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exr-ODE_arfken_7_2_13}
 
-::: {#exm-DE_ODE_sho1}
+#### Arfken 7.2.13
 
-#### 단순조화진동자 
-LHODE $y'' + \omega^2 y = 0$ 을 보자. $y=e^{\lambda x}$ 라고 놓으면, $\lambda^2+\omega^2 = 0$ 이어야 하므로 $\lambda = \pm \omega i$ 이다. 임의의 $a,\,b \in \mathbb{C}$ 에 대해 $a e^{i\omega x} + be^{-i\omega x}$ 는 미분방정식의 해이다.
+방사성 핵 붕괴는 아래의 법칙을 따른다.
+
+$$
+\dfrac{dN}{dt} = -\lambda N.
+$$
+
+여기서 $N$ 은 핵의 농도이고 $\lambda$ 는 특정 핵종에 따른 붕괘 상수이다. 서로 다른 두 핵종의 연속 방사성 붕괘 계열은 각각의 농도를 $N_1(t),\,N_2(t)$ 라고 할 때 아래의 미분방정식을 따른다.
+
+$$
+\begin{aligned}
+\dfrac{dN_1}{dt}&= -\lambda_1 N_1,\\[0.3em]
+\dfrac{dN_2}{dt}&= \lambda_1 N_1 - \lambda_2 N_2.
+\end{aligned}
+$$
+
+$N_1(0)=N_0,\, N_2(0)=0$ 일 때 $N_2(t)$ 를 구하라.
+
 :::
 
-</div></br>
+</div>
 
+::: {.solution}
+
+$N_1(t) = N_0 e^{-\lambda_1 t}$ 이므로
+
+$$
+\dfrac{dN_2}{dt} + \lambda_2 N_2 = \lambda_1 N_0 e^{-\lambda_1 t} 
+$$
+
+이다. 제차 형태에 대한 미분방정식의 해는 $N_2(t) = N_2e^{-\lambda_2 t}$ 이므로 $N_2(t) = C(t)e^{-\lambda_2 t}$ 로 놓으면
+
+$$
+C'(t) e^{-\lambda_2 t}= \lambda_1 N_0 e^{-\lambda_1 t}
+$$
+
+이다. 
+
+$$
+C'(t) = \lambda_1 N_0 e^{-(\lambda_1 - \lambda_2)t}
+$$
+
+이며 $N_2(0)=0$ 이므로 $C(0)=0$ 이다. 
+
+**(1) $\lambda_1 \ne \lambda_2$ 일 때**
+
+$$
+C(t) = \dfrac{\lambda_1N_0}{\lambda_2-\lambda_1} e^{-(\lambda_1-\lambda_2)t} - \dfrac{\lambda_1N_0}{\lambda_2-\lambda_1} 
+$$
+
+이므로 다음을 얻는다.
+
+$$
+N_2(t) = \dfrac{\lambda_1 N_0}{\lambda_2-\lambda_1} (e^{-\lambda_1 t} - e^{-\lambda_2 t})
+$$
+
+**(2) $\lambda_1 = \lambda_2$ 일 때**
+
+$C'(t) = \lambda_2 N_0$ 이므로 $C(t) = \lambda_2 N_0 t$ 이다. 따라서
+
+$$
+N_2(t) = \lambda_2N_0 te^{-\lambda_2t}.
+$$
+
+:::
+
+</br>
 
 ## 계수가 상수인 ODE 의 경우
 
@@ -653,8 +714,6 @@ $$
 
 </br>
 
-
-
 ## 2계 선형 ODE
 
 ### Singularity {#sec-DE_ODE_sigularity}
@@ -663,15 +722,15 @@ $$
 
 $$
 y''  + p(x) y' + q(x) y  = 0
-$$ {#eq-simple_2nd_ode}
+$$ {#eq-DE_ODE_simple_2nd_ode}
 
-이 식은 모든 항에서 $y$ 와 그 도함수가 1차이므로 homogeneous 하다. $p(x)$ 와 $q(x)$ 가 유한한 값을 가질 때 이 $x$ 를 **ordinary point** 라고 하며 그렇지 않을 때는 **singular point** 라고 한다. $x_0$ 가 singular point 일 때  
+이 식은 모든 항에서 $y$ 와 그 도함수가 1차이므로 homogeneous 하다. $p(x)$ 와 $q(x)$ 가 유한한 값을 가질 때 이 $x$ 를 **일반점 (ordinary point)** 이라고 하며 그렇지 않을 때는 **특이점 (singular point)** 이라고 한다. 특이점 $x_0$ 에 대해
 
 $$
-\lim_{x\to x_0} |(x-x_0)p(x)|<\infty, \qquad \lim_{x\to x_0} |(x-x_0)q(x)|<\infty
+\lim_{x\to x_0} |(x-x_0)p(x)|<\infty, \qquad \lim_{x\to x_0} |(x-x_0)^2q(x)|<\infty
 $$ 
 
-이면 **regular singularity** 라고 하며 그렇지 않을 때 **irregular singularity** 혹은 **essential singularity** 라고 한다. 
+이면 **정칙 특이점 (regular singularity)** 이라고 하며 그렇지 않을 때 **비정칙 특이점(irregular singularity/essential singularity)** 라고 한다. 
 
 
 $x\to \infty$ 나 $x \to -\infty$ 의 경우에는 $z=1/x$ 로 치환하여 미분방정식을 $z$ 에 대한 미분방정식으로 바꾼다. $w(z) = y(z^{-1})$ 이라면, 
@@ -684,29 +743,52 @@ y'' (x) &= \dfrac{dy'}{dz}\dfrac{dz}{dx} = z^4 w'' + 2z^3 w'
 $$
 
 
-이므로 @eq-simple_2nd_ode 는 다음과 같이 변형된다.
+이므로 @eq-DE_ODE_simple_2nd_ode 는 다음과 같이 변형된다.
 
 $$
-4zw'' + \left[ 2z^3 - z^2 p(1/z) \right] w' + q(z^{-1}) w = 0.
+z^4w'' + \left[ 2z^3 - z^2 p(z^{-1}) \right] w' + q(z^{-1}) w = 0.
 $$ {#eq-DE_ODE_modified_simplie_2nd_ode}
 
-</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-DE_ODE_bessel_function}
+
+#### 베셀 함수
+
+베셀 함수는 아래와 같이 주어진다.
+
+$$
+x^2 y'' + xy' + (x^2-n^2)y = 0.
+$$
+
+@eq-DE_ODE_simple_2nd_ode 와 비교하면 $p(x) = \dfrac{1}{x},\, q(x) = 1-\dfrac{n^2}{x^2}$ 이므로 $x=0$ 은 정칙 특이점이다. 이 외에는 $x$ 가 유한한 영역에서 특이점이 없다는 것은 쉽게 알 수 있다. $z=1/x$ 로 치환하여 $x\to \infty$ 에서의 미분방정식의 행동을 보자. @eq-DE_ODE_modified_simplie_2nd_ode 는 다음과 같다.
+
+$$
+w'' + \dfrac{1}{z}w' + \dfrac{1-n^2z^2}{z^4}=0
+$$
+
+즉 $x\to \infty$ 에서 베셀방정식은 비정칙 특이점을 가진다.
+
+:::
+
+</div></br>
+
 
 ### 중요한 2계 선형 미분방정식 {#sec-DE_ODE_important_differential_equations}
 
 
-| 이름 | 방정식 | regular singularity | irregular singularity|
-|:-----:|:----------------------------|:------------:|:------------:|
-| Hypergeometric | $x(x-1) y'' + [(1+a+b)x + c]\,y' +aby=0$ | $0, 1 \infty$ | |
-| Legendre | $(1-x^2) y'' -2xy' + l(l+1)y=0$ | $-1, 1, \infty$ | |
-| Chebyshev | $(1-x^2) y'' -xy' + n^2y = 0$ | $-1, 1, \infty$ | |
-| Confluent hypoergeometryc | $xy'' + (c-x)y' -ay = 0$ | $0$ | $\infty$ |
-| Bessel | $x^2y'' + xy' + (x^2-n^2)y = 0$ | $0$ |$\infty$ |
-| Laguerre | $xy'' + (1-x)y' + a y = 0$ | $0$ | $\infty$ |
-| SHO | $y'' + \omega^2 y' = 0$ | | $\infty$ |
-| Hermite | $y'' -2xy' + 2\alpha y = 0$ | | $\infty$ |
+| 방정식 이름 | 정칙 특이점 | 비정칙 특이점 |
+|:---------------------------------|:------------:|:------------:|
+| 초기하 방정식 (Hypergeometric) </br> $x(x-1) y'' + [(1+a+b)x + c]\,y' +aby=0$ | $0, 1 \infty$ | |
+| 르장드르 방정식 (Legendre) </br> $(1-x^2) y'' -2xy' + l(l+1)y=0$ | $-1, 1, \infty$ | |
+| 체비셰프 방정식 (Chebyshev) </br> $(1-x^2) y'' -xy' + n^2y = 0$ | $-1, 1, \infty$ | |
+| Confluent hypoergeometryc </br> $xy'' + (c-x)y' -ay = 0$ | $0$ | $\infty$ |
+| 베셀 방정식 (Bessel) </br> $x^2y'' + xy' + (x^2-n^2)y = 0$ | $0$ |$\infty$ |
+| 라게르 방정식 (Laguerre) </br> $xy'' + (1-x)y' + a y = 0$ | $0$ | $\infty$ |
+| 단순 조화 진동자 (SHO) </br> $y'' + \omega^2 y' = 0$ | | $\infty$ |
+| 에르미트 방정식 (Hermite) </br> $y'' -2xy' + 2\alpha y = 0$ | | $\infty$ |
 
-: 중요한 2계 선형 ODE 와 singularity {#tbl-2nd_ode_singularity}
+: 중요한 2계 선형 ODE 와 singularity {#tbl-2nd_DE_ODE_singularity_of_odes}
 
 
 대표적으로 르장드르 함수 $(1-x^2) y'' -2xy' + l(l+1)y=0$ 를 보자. 르장드르 함수는
@@ -719,9 +801,61 @@ $$
 
 </br>
 
-### Frobenius 방법을 이용한 급수해 {#sec-DE_ODE_power_series_soluiton}
+### 연습문제 {.unnumbered}
 
-@eq-simple_2nd_ode 꼴로 주어진 2계 LHODE 를 생각하자. 이 경우 $y$ 를 $x$ 의 급수로 놓고 해를 구하는 것을 Frobenius 방법이라고 한다. 즉,
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_4_1}
+
+#### Arfken 7.4.1 ~ 7.4.4
+</br>
+
+($1$) 르장드르 방정식과 체비셰프 방정식이 $x=\pm 1,\, \infty$ 에서 정칙 특이점을 가짐을 보여라.
+
+($2$) 라게르 방정식이 베셀 함수와 같이 $x=0$ 에서 정칙특이점을, $x=\infty$ 에서 비정칙 특이점을 가짐을 보여라.
+
+($3$) 에르미트 방정식이 $x=\infty$ 이 비정칙 특이점인 것을 제외하면 특이점을 갖지 않음을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($1$) 르장드르 방정식의 경우 $p(x) = \dfrac{-2x}{1-x^2},\,q(x) = \dfrac{l(l+1)}{1-x^2}$ 이므로 $x=\pm 1$ 에서 정칙 특이점을 가진다. 또한 @eq-DE_ODE_modified_simplie_2nd_ode 형태는
+
+$$
+w'' + \dfrac{2z}{(z^2-1)}w' + \dfrac{l(l+1)z^2}{1-z^2} w= 0
+$$
+
+이므로 $z=0 (x=\infty)$ 에서 정칙 특이점을 가진다. 체비셰프 방정식의 형태를 생각하면 특이점의 정칙성은 르장드르 방정식과 동일함을 알 수 있다.
+
+($2$) 라게르 방정식의 경우 $p(x) = (1-x)/x,\, q(x) = a/x$ 이므로 $x=0$ 에서 정칙 특이점이다. @eq-DE_ODE_modified_simplie_2nd_ode 형태는
+
+$$
+w'' + \dfrac{z+1}{z^2}y' + \dfrac{a}{z^4} w=0
+$$
+
+이므로 $z=0$ 에서 비정칙 특이점을 가진다.
+
+($3$) 에르미트 방정식은 유한한 값에서 특이점을 갖지 않음을 쉽게 알 수 있다. @eq-DE_ODE_modified_simplie_2nd_ode 형태는
+
+$$
+w'' + \dfrac{2z^2+2}{z^2}y' + \dfrac{2\alpha}{z^4}w = 0
+$$
+
+이므로 $z=0 (x=\infty)$ 는 비정칙 특이점이다. 
+
+
+:::
+
+</br>
+
+## 프로베니우스 방법을 이용한 급수해
+
+### 프로베니우스 방법 {#sec-DE_ODE_power_series_soluiton}
+
+@eq-DE_ODE_simple_2nd_ode 형태의 2계 LHODE 를 생각하자. 이 경우 $y$ 를 $x$ 의 급수로 놓고 해를 구하는 것을 Frobenius 방법이라고 한다. 즉,
 
 $$
 y(x) = \sum_{i=0}^\infty a_i x^{s+i} ,\qquad a_0 \ne 0
@@ -731,11 +865,7 @@ $$ {#eq-ode_expansion_about_zero}
 
 </br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-ode_frobenius_sho}
-
-#### 단순조화진동자의 경우
+### 단순조화진동자의 해 {#sec-DE_ODE_frobenius_sho}
 
 예를 들어 $y'' + \omega^2 y = 0$ 의 경우, 
 
@@ -777,9 +907,8 @@ y(x) {\large \mid}_{s=1} =  \dfrac{a_0}{\omega}\sin (\omega x)
 $$
 
 임을 알 수 있다. 
-:::
 
-</div></br>
+</br>
 
 ### $x_0$ 주위로의 멱급수 전개
 
@@ -792,6 +921,96 @@ $$
 $x_0$ 를 regular singularity 로 잡으면 많은 경우 미분방정식의 해를 찾는 데 유용하지만 irregular siglularity 의 경우는 Frobenius 방법으로 해를 구할 수 없다.
 
 </br>
+
+### 해의 대칭성 {#sec-DE_ODE_symmetry_of_solutions}
+
+미분연산자 $\mathcal{L}(x)$ 에 대해 아래와 같이 주어지는 제차 상미분 방정식을 생각하자.
+
+$$
+\mathcal{L}(x)y(x) = 0.
+$$
+
+이 미분연산자가 $\mathcal{L}(-x) = \mathcal{L}(x)$ 일 때 이 미분연산자는 **even parity** 를 가진다고 하며 $\mathcal{L}(-x) = -\mathcal{L}(x)$ 일 때 **odd parity** 를 가진다고 한다. 일단 even/odd 패리티를 가지며 $y(x)$ 가 이 미분방정식의 해 일 때
+
+$$
+0 = \mathcal{L}(x) y(x) = \mathcal{L}(-x) y(-x) = \pm \mathcal{L}(x) y(-x)
+$$
+
+이므로 $y(-x)$ 역시 해임을 알 수 있다. $y(x)$ 와 $y(-x)$ 가 선형 독립일 경우, 즉 $y(-x) \ne \pm y(x)$ 일 경우 
+
+$$
+y_\text{even} := y(x) + y(-x),\qquad y_\text{odd} := y(x) - y(-x) 
+$$
+
+역시 서로 독립인 이 미분방정식의 해이다. $y(x)$ 와 $y(-x)$ 가 선형 종속이라면 $y(-x) = \pm y(x)$ 이므로 여기에 대해 생각 할 필요가 없다. 
+
+@tbl-2nd_DE_ODE_singularity_of_odes 의 미분방정식을 보면 르장드르, 체비셰프, 베셀, 단순조화진동자, 그리고 에르미트 방정식의 경우는 even parity 를 가지며 라게르 방정식의 경우는 even 이나 odd parity 를 갖지 않는다. 
+
+</br>
+
+### 베셀 함수의 해 {#sec-DE_ODE_frobenius_bessel}
+
+베셀 방정식은 아래와 같이 주어진다.
+
+$$
+x^2 y'' + xy' + (x^2-n^2)y = 0.
+$$ {#eq-DE_ODE_frobenius_bessel_1}
+
+이제 해를 $y = \sum_{j=0} a_j x^{s+j}$ 로 가정하면 위의 미분방정식으로부터 다음을 얻는다.
+
+$$
+\begin{aligned}
+\sum_{j=0}^\infty a_j (s+j)(s+j-1)x^{s+j} + \sum_{j=0}^\infty a_j (s+j) x^{s+j} + \sum_{j=0} a_j x^{s+j-2} - \sum_{j=0}^\infty a_j n^2 x^{s+j} = 0.
+\end{aligned}
+$$
+
+$x^s$ 에 대한 계수를 비교하면 다음을 얻는다.
+
+$$
+0=a_0 [s(s-1) + s-n^2] = a_0 [s^2-n^2],
+$$
+
+$a_0 \ne 0$ 이어야 하므로 $s = \pm n$ 을 얻는다. 이제 $x^{s+1} 의 계수를 비교하면 다음을 얻는다.
+
+$$
+0 = a_1[(s+1)s + s+1 - n^2] = a_1 (s+1-n)(s+1+n)
+$$
+
+$s=\pm n$ 을 생각하면 $a_1=0$ 일 수 밖에 없다. 이제 $x^{s+j}$ 에 대해 비교하자. 방정식이 $n^2$ 에 대한 방정식이므로 $n \ge 0$ 이라고 생각하자.
+
+
+**(1) $s=n \ge 0$ 인 경우 **
+
+$s=n$ 이라면 
+
+$$
+a_{j+2} = -\dfrac{a_j}{(j+2)(2n+j+2)}
+$$
+
+를 얻는다. $a_0 \ne 0,\, a_1 = 0$ 이므로 $a_{2k}$ 만 의미있으며 정리하면 다음을 얻는다.
+
+$$
+a_{2k} = (-1)^k \dfrac{a_0 n!}{2^{2k} k! (n+k)!}.
+$$
+
+$n$ 에 대한 방정식의 해를 $J_n(x)$ 라고 하면 (이 함수를 베셀 함수라고 한다) 아래와 같다.
+
+$$
+J_n(x) = a_0 2^n n! \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(n+j)!}\left(\dfrac{x}{2}\right)^{n+2j}
+$$
+
+**(2) $s=-n < 0$ 인 경우**
+
+이 경우에 대한 해를 $J_{-n}$ 으로 표기한다. 그런데 멱급수의 계수에 대해 
+
+$$
+a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}
+$$
+
+의 관계가 성립하며, $n$ 이 정수 일 때 $j=2(n-1)$ 에서 $a_{j+2}$ 가 발산하며 따라서 이 경우에는 프로베니우스 방법을 통해 해를 얻을 수 없다.
+
+
+</br> 
 
 ### Fuchs' theorem {#sec-DE_ODE_fuchs_theorem}
 
@@ -807,7 +1026,7 @@ $$
 \displaystyle y''+p(x)y'+q(x)y=F(x)
 $$
 
-이 방정식은 $p(x),\, q(x),\, F(x)$ 가 $x=a$ 에서 해석적 이거나 $a$ 가 regular singular point 라면 프로베니우스 방법에 의한 해를 가진다. 즉 이 미분방정식의 $x=a$ 근처의 해는 어떤 양수 $s$ 에 대해 
+이 방정식은 $p(x),\, q(x),\, F(x)$ 가 $x=a$ 에서 해석적 이거나 $a$ 가 정칙 특이점이라면 프로베니우스 방법에 의한 해를 가진다. 즉 이 미분방정식의 $x=a$ 근처의 해는 어떤 양수 $s$ 에 대해 
 
 $$
 y_1=\sum _{n=0}^{\infty }a_{n}(x-a)^{n+s},\quad a_{0}\ne 0
@@ -890,7 +1109,7 @@ $$
 
 ::: {#exm-DE_ODE_dependency_sho}
 
-@exm-ode_frobenius_sho 에서 우리는 $y'' + \omega^2 y = 0$ 의 해  $\sin \omega x,\,\cos\omega x$ 를 구했다. 여기서
+@sec-DE_ODE_frobenius_sho 에서 우리는 $y'' + \omega^2 y = 0$ 의 해  $\sin \omega x,\,\cos\omega x$ 를 구했다. 여기서
 
 $$
 W[\sin \omega x,\, \cos\omega x] = \det \left(\begin{bmatrix} \cos \omega x & \sin \omega x \\ - \sin \omega x & \cos \omega x\end{bmatrix}\right) = 1
@@ -1127,7 +1346,7 @@ $$
 \mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -2x\dfrac{d}{dx}
 $$
 
-에 대해 $\mathcal{L}P_l(x) = -l(l+1)P_l(x)$ 를 푸는 것이 @tbl-2nd_ode_singularity 의 르장드르 미분방정식의 해이다. 자연수 $l$ 에 대한 미분방정식의 해는 $l$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는 $w(x)=1$ 이다.
+에 대해 $\mathcal{L}P_l(x) = -l(l+1)P_l(x)$ 를 푸는 것이 @tbl-2nd_DE_ODE_singularity_of_odes 의 르장드르 미분방정식의 해이다. 자연수 $l$ 에 대한 미분방정식의 해는 $l$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는 $w(x)=1$ 이다.
 
 :::
 
@@ -1145,7 +1364,7 @@ $$
 \mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -x\dfrac{d}{dx}
 $$
 
-에 대해 $\mathcal{L}T_n(x) = -n^2T_n(x)$ 를 푸는 것이 @tbl-2nd_ode_singularity 의 르장드르 미분방정식의 해이다. 자연수 $n$ 에 대한 미분방정식의 해는 $n$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는
+에 대해 $\mathcal{L}T_n(x) = -n^2T_n(x)$ 를 푸는 것이 @tbl-2nd_DE_ODE_singularity_of_odes 의 르장드르 미분방정식의 해이다. 자연수 $n$ 에 대한 미분방정식의 해는 $n$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는
 
 $$
 w(x) = \dfrac{1}{1-x^2} \exp \left(\int_{a}^x \dfrac{t}{1-t^2}\, dt \right)= \dfrac{1}{\sqrt{1-x^2}}
