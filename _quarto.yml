@@ -33,7 +33,8 @@ book:
     
     - part: 미분방정식
       chapters :
-      - src/differential_equation/ode.qmd
+      - src/differential_equation/ode1.qmd
+      - src/differential_equation/ode2.qmd
       - src/differential_equation/pde.qmd
 
     - part: 복소함수

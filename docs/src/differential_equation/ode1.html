@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; 상미분 방정식 – 수리물리학</title>
+<title>12&nbsp; 상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/differential_equation/pde.html" rel="next">
+<link href="../../src/differential_equation/ode2.html" rel="next">
 <link href="../../src/group/group_aux.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -259,14 +259,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/differential_equation/ode.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></span></a>
+  <a href="../../src/differential_equation/ode1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/differential_equation/ode2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,19 +289,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -335,24 +341,10 @@ window.Quarto = {
   <li><a href="#sec-DE_ODE_frobenius_sho" id="toc-sec-DE_ODE_frobenius_sho" class="nav-link" data-scroll-target="#sec-DE_ODE_frobenius_sho"><span class="header-section-number">12.5.2</span> 단순조화진동자의 해</a></li>
   <li><a href="#x_0-주위로의-멱급수-전개" id="toc-x_0-주위로의-멱급수-전개" class="nav-link" data-scroll-target="#x_0-주위로의-멱급수-전개"><span class="header-section-number">12.5.3</span> <span class="math inline">\(x_0\)</span> 주위로의 멱급수 전개</a></li>
   <li><a href="#sec-DE_ODE_symmetry_of_solutions" id="toc-sec-DE_ODE_symmetry_of_solutions" class="nav-link" data-scroll-target="#sec-DE_ODE_symmetry_of_solutions"><span class="header-section-number">12.5.4</span> 해의 대칭성</a></li>
-  <li><a href="#sec-DE_ODE_frobenius_bessel" id="toc-sec-DE_ODE_frobenius_bessel" class="nav-link" data-scroll-target="#sec-DE_ODE_frobenius_bessel"><span class="header-section-number">12.5.5</span> 베셀 함수의 해</a></li>
+  <li><a href="#sec-DE_ODE_frobenius_bessel" id="toc-sec-DE_ODE_frobenius_bessel" class="nav-link" data-scroll-target="#sec-DE_ODE_frobenius_bessel"><span class="header-section-number">12.5.5</span> 베셀 방정식의 해</a></li>
   <li><a href="#sec-DE_ODE_regular_and_irregular_singularities_in_frobenius_method" id="toc-sec-DE_ODE_regular_and_irregular_singularities_in_frobenius_method" class="nav-link" data-scroll-target="#sec-DE_ODE_regular_and_irregular_singularities_in_frobenius_method"><span class="header-section-number">12.5.6</span> 정칙 특이점과 비정칙 특이점</a></li>
   <li><a href="#sec-DE_ODE_fuchs_theorem" id="toc-sec-DE_ODE_fuchs_theorem" class="nav-link" data-scroll-target="#sec-DE_ODE_fuchs_theorem"><span class="header-section-number">12.5.7</span> Fuchs’ theorem</a></li>
-  </ul></li>
-  <li><a href="#알고-있는-해로부터-해를-더-구하는-법" id="toc-알고-있는-해로부터-해를-더-구하는-법" class="nav-link" data-scroll-target="#알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">12.6</span> 알고 있는 해로부터 해를 더 구하는 법</a>
-  <ul class="collapse">
-  <li><a href="#함수의-벡터공간" id="toc-함수의-벡터공간" class="nav-link" data-scroll-target="#함수의-벡터공간"><span class="header-section-number">12.6.1</span> 함수의 벡터공간</a></li>
-  </ul></li>
-  <li><a href="#sec-DE_ODE_sturm_liouville_theory" id="toc-sec-DE_ODE_sturm_liouville_theory" class="nav-link" data-scroll-target="#sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">12.7</span> Sturm-Liouville theory</a>
-  <ul class="collapse">
-  <li><a href="#sec-DE_ODE_stum_liouville_hermitian" id="toc-sec-DE_ODE_stum_liouville_hermitian" class="nav-link" data-scroll-target="#sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">12.7.1</span> 에르미트 연산자</a></li>
-  <li><a href="#sec-DE_ODE_hermitianization_of_ode" id="toc-sec-DE_ODE_hermitianization_of_ode" class="nav-link" data-scroll-target="#sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">12.7.2</span> 미분방정식을 에르미트 연산자 형태로 변경하기</a></li>
-  </ul></li>
-  <li><a href="#직교하는-다항식" id="toc-직교하는-다항식" class="nav-link" data-scroll-target="#직교하는-다항식"><span class="header-section-number">12.8</span> 직교하는 다항식</a>
-  <ul class="collapse">
-  <li><a href="#sec-ODE_DE_rodriguess_formula" id="toc-sec-ODE_DE_rodriguess_formula" class="nav-link" data-scroll-target="#sec-ODE_DE_rodriguess_formula"><span class="header-section-number">12.8.1</span> 로드리게스 공식</a></li>
-  <li><a href="#schlaefli-적분" id="toc-schlaefli-적분" class="nav-link" data-scroll-target="#schlaefli-적분"><span class="header-section-number">12.8.2</span> Schlaefli 적분</a></li>
-  <li><a href="#생성-함수" id="toc-생성-함수" class="nav-link" data-scroll-target="#생성-함수"><span class="header-section-number">12.8.3</span> 생성 함수</a></li>
+  <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -360,9 +352,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></h1>
 </div>
 
 
@@ -926,7 +918,7 @@ w'' + \dfrac{1}{z}w' + \dfrac{1-n^2z^2}{z^4}=0
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Confluent hypoergeometryc <br> <span class="math inline">\(xy'' + (c-x)y' -ay = 0\)</span></td>
+<td style="text-align: left;">합류 초기하 방정식 (Confluent hypoergeometrc function) <br> <span class="math inline">\(xy'' + (c-x)y' -ay = 0\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(0\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
 </tr>
@@ -1017,7 +1009,7 @@ y(x) = \sum_{i=0}^\infty a_i x^{s+i} ,\qquad a_0 \ne 0
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(a_0 s(s-1) =0\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(a_1s(s+1) = 0\)</span>,</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(a_{i+2}(s+i+2)(s+i+1) + \omega^2 a_j = 0\)</span></p>
-<p><span class="math inline">\(a_0\ne 0\)</span> 이므로 (<span class="math inline">\(1\)</span>) 의 조건에 의해 <span class="math inline">\(s(s-1)=0\)</span> 이어야 한다. 이 방정식은 <span class="math inline">\(s\)</span> 를 결정하는 중요한 방정식으로 <strong>결정방정식(indicial equation)</strong> 이라고 한다. (<span class="math inline">\(2\)</span>) 의 조건에서 <span class="math inline">\(s=-1\)</span> 일 경우 <span class="math inline">\(a_0 = 0\)</span> 이어야 하므로 조건에 위배된다. 따라서 남은 조건은 <span class="math inline">\(s=0\)</span> 이고 <span class="math inline">\(a_1\)</span> 을 자유로 두거나, <span class="math inline">\(s=1\)</span> 이며 <span class="math inline">\(a_1=0\)</span> 으로 두는 것 밖에 없다. 그리고 (<span class="math inline">\(3\)</span>) 조건에 의해,</p>
+<p><span class="math inline">\(a_0\ne 0\)</span> 이므로 (<span class="math inline">\(1\)</span>) 의 조건에 의해 <span class="math inline">\(s(s-1)=0\)</span> 이어야 한다. 이 방정식은 <span class="math inline">\(s\)</span> 를 결정하는 중요한 방정식으로 <strong>결정방정식(indicial equation)</strong> 이라고 한다. (<span class="math inline">\(2\)</span>) 의 조건에서 <span class="math inline">\(s=-1\)</span> 일 경우 <span class="math inline">\(a_0 = 0\)</span> 이어야 하므로 조건에 위배된다. 따라서 남은 조건은 <span class="math inline">\(s=0\)</span> 이고 <span class="math inline">\(a_1\)</span> 을 자유로 두거나, <span class="math inline">\(s=1\)</span> 이며 <span class="math inline">\(a_1=0\)</span> 으로 두는 것 밖에 없다. 그리고 (<span class="math inline">\(3\)</span>) 조건에 의해</p>
 <p><span class="math display">\[
 a_{i+2} = \dfrac{-\omega^2}{(i+1)(i+2)}a_i \implies  a_{2k} = (-1)^n \dfrac{\omega^{2k}}{(2k)!} a_0,\, a_{2k+1} = (-1)^n \dfrac{\omega^{2k}}{(2k+1)!} a_1
 \]</span></p>
@@ -1041,7 +1033,7 @@ y(x) {\large \mid}_{s=1} =  \dfrac{a_0}{\omega}\sin (\omega x)
 <p><span class="math display">\[
 y(x) = \sum_{i=0}^\infty a_i (x-x_0)^{s+i} ,\qquad a_0 \ne 0
 \]</span></p>
-<p><span class="math inline">\(x_0\)</span> 를 regular singularity 로 잡으면 많은 경우 미분방정식의 해를 찾는 데 유용하지만 irregular siglularity 의 경우는 Frobenius 방법으로 해를 구할 수 없다.</p>
+<p><span class="math inline">\(x_0\)</span> 를 정칙 특이점으로 잡으면 많은 경우 미분방정식의 해를 찾는 데 유용하지만 비정칙 특이점의 경우는 Frobenius 방법으로 해를 구할 수 없다.</p>
 <p><br></p>
 </section>
 <section id="sec-DE_ODE_symmetry_of_solutions" class="level3" data-number="12.5.4">
@@ -1063,7 +1055,7 @@ y_\text{even} := y(x) + y(-x),\qquad y_\text{odd} := y(x) - y(-x)
 <p><br></p>
 </section>
 <section id="sec-DE_ODE_frobenius_bessel" class="level3" data-number="12.5.5">
-<h3 data-number="12.5.5" class="anchored" data-anchor-id="sec-DE_ODE_frobenius_bessel"><span class="header-section-number">12.5.5</span> 베셀 함수의 해</h3>
+<h3 data-number="12.5.5" class="anchored" data-anchor-id="sec-DE_ODE_frobenius_bessel"><span class="header-section-number">12.5.5</span> 베셀 방정식의 해</h3>
 <p>베셀 방정식은 아래와 같이 주어진다.</p>
 <p><span id="eq-DE_ODE_frobenius_bessel_1"><span class="math display">\[
 x^2 y'' + xy' + (x^2-n^2)y = 0.
@@ -1075,20 +1067,20 @@ x^2 y'' + xy' + (x^2-n^2)y = 0.
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(x^s\)</span> 에 대한 계수를 비교하면 아래와 같은 결정방정식(indicial equation)을 얻는다.</p>
-<p><span class="math display">\[
+<p><span id="eq-DE_ODE_indication_equation_for_bessel_equation"><span class="math display">\[
 0=a_0 [s(s-1) + s-n^2] = a_0 [s^2-n^2],
-\]</span></p>
+\tag{12.13}\]</span></span></p>
 <p><span class="math inline">\(a_0 \ne 0\)</span> 이어야 하므로 <span class="math inline">\(s = \pm n\)</span> 을 얻는다. 이제 <span class="math inline">\(x^{s+1}\)</span> 의 계수를 비교하면 다음을 얻는다.</p>
 <p><span class="math display">\[
 0 = a_1[(s+1)s + s+1 - n^2] = a_1 (s+1-n)(s+1+n)
 \]</span></p>
 <p><span class="math inline">\(s=\pm n\)</span> 을 생각하면 <span class="math inline">\(a_1=0\)</span> 일 수 밖에 없다. 이제 <span class="math inline">\(x^{s+j}\)</span> 에 대해 비교하자. 방정식이 <span class="math inline">\(n^2\)</span> 에 대한 방정식이므로 <span class="math inline">\(n \ge 0\)</span> 이라고 생각하자.</p>
 <p><strong>(1) <span class="math inline">\(s=n \ge 0\)</span> 인 경우 </strong></p>
-<p><span class="math inline">\(s=n\)</span> 이라면</p>
+<p><span class="math inline">\(s=n\)</span> 이라면 아래의 점화식(recurrence relation) 을 얻는다.</p>
 <p><span class="math display">\[
 a_{j+2} = -\dfrac{a_j}{(j+2)(2n+j+2)}
 \]</span></p>
-<p>를 얻는다. <span class="math inline">\(a_0 \ne 0,\, a_1 = 0\)</span> 이므로 <span class="math inline">\(a_{2k}\)</span> 만 의미있으며 정리하면 다음을 얻는다.</p>
+<p><span class="math inline">\(a_0 \ne 0,\, a_1 = 0\)</span> 이므로 <span class="math inline">\(a_{2k}\)</span> 만 의미있으며 정리하면 다음을 얻는다.</p>
 <p><span class="math display">\[
 a_{2k} = (-1)^k \dfrac{a_0 n!}{2^{2k} k! (n+k)!}.
 \]</span></p>
@@ -1097,11 +1089,11 @@ a_{2k} = (-1)^k \dfrac{a_0 n!}{2^{2k} k! (n+k)!}.
 J_n(x) = a_0 2^n n! \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(n+j)!}\left(\dfrac{x}{2}\right)^{n+2j}
 \]</span></p>
 <p><strong>(2) <span class="math inline">\(s=-n &lt; 0\)</span> 인 경우</strong></p>
-<p>이 경우에 대한 해를 <span class="math inline">\(J_{-n}\)</span> 으로 표기한다. 그런데 멱급수의 계수에 대해</p>
+<p>이 경우에 대한 해를 <span class="math inline">\(J_{-n}\)</span> 으로 표기한다. 그런데 멱급수의 계수에 대해 아래의 점화식을 얻는다.</p>
 <p><span class="math display">\[
-a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}
+a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}.
 \]</span></p>
-<p>의 관계가 성립하며, <span class="math inline">\(n\)</span> 이 정수 일 때 <span class="math inline">\(j=2(n-1)\)</span> 에서 <span class="math inline">\(a_{j+2}\)</span> 가 발산하며 따라서 이 경우에는 프로베니우스 방법을 통해 해를 얻을 수 없다.</p>
+<p><span class="math inline">\(n\)</span> 이 정수 일 때 <span class="math inline">\(j=2(n-1)\)</span> 에서 <span class="math inline">\(a_{j+2}\)</span> 가 발산하며 따라서 이 경우에는 프로베니우스 방법을 통해 해를 얻을 수 없다.</p>
 <p><br></p>
 <p>지금까지 프로베니우스 방법을 이용하여 단순조화진동자와 베셀방정식에 대한 해를 얻었다. 급수를 이용한 프로베니우스 방법은 항상 사용 할 수 있는 것은 아니다.</p>
 <p><br></p>
@@ -1109,10 +1101,15 @@ a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}
 <section id="sec-DE_ODE_regular_and_irregular_singularities_in_frobenius_method" class="level3" data-number="12.5.6">
 <h3 data-number="12.5.6" class="anchored" data-anchor-id="sec-DE_ODE_regular_and_irregular_singularities_in_frobenius_method"><span class="header-section-number">12.5.6</span> 정칙 특이점과 비정칙 특이점</h3>
 <p>프로베니우스 방법을 제대로 사용할지 여부는 결정방정식의 해와 미분방정식에서의 비정칙 특이점의 특이성이 정도에 따른다. 예를 들어</p>
-<p><span class="math display">\[
+<p><span id="eq-DE_ODE_singularity_1"><span class="math display">\[
 y'' - \dfrac{6}{x^2}y = 0
-\]</span></p>
-<p>의 경우 결정방정식 <span class="math inline">\(s^2-s-6=0\)</span> 으로부터 <span class="math inline">\(s=3\)</span> 혹은 <span class="math inline">\(s=-2\)</span> 임을 안다.</p>
+\tag{12.14}\]</span></span></p>
+<p>의 경우 결정방정식 <span class="math inline">\(s^2-s-6=0\)</span> 으로부터 <span class="math inline">\(s=3\)</span> 혹은 <span class="math inline">\(s=-2\)</span> 임을 안다. 제차 미분방정식이므로 점화식이 존재하지 않고 단지 <span class="math inline">\(x^3,\, x^{-2}\)</span> 의 답을 얻을 수 있다.</p>
+<p>이제 아래의 미분방정식을 보자. <span id="eq-DE_ODE_singularity_2"><span class="math display">\[
+y'' - \dfrac{6}{x^3}y = 0.
+\tag{12.15}\]</span></span></p>
+<p>이 경우 <span class="math inline">\(y=\sum_j a_j x^{s+j}\)</span> 에 대한 결정방정식은 <span class="math inline">\(a_0=0\)</span> 뿐이다. 이것은 <span class="math inline">\(a_0\ne 0\)</span> 이어야 하는 조건에 위배되므로 최소한 이 방법으로는 해를 얻을 수 없다.</p>
+<p>…. boring part ..</p>
 <p><br></p>
 </section>
 <section id="sec-DE_ODE_fuchs_theorem" class="level3" data-number="12.5.7">
@@ -1135,396 +1132,126 @@ y=y_1\ln(x-a)+\sum _{n=0}^{\infty }b_{n}(x-a)^{n+r},\quad b_{0}\neq 0.
 </div>
 <p><br></p>
 </section>
-</section>
-<section id="알고-있는-해로부터-해를-더-구하는-법" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">12.6</span> 알고 있는 해로부터 해를 더 구하는 법</h2>
-<p><br></p>
-<section id="함수의-벡터공간" class="level3" data-number="12.6.1">
-<h3 data-number="12.6.1" class="anchored" data-anchor-id="함수의-벡터공간"><span class="header-section-number">12.6.1</span> 함수의 벡터공간</h3>
-<p>구간 <span class="math inline">\(I\)</span> 에서 <span class="math inline">\(n-1\)</span> 번 미분 가능한함수의 집합은 벡터공간을 이루며 따라서 함수에 대한 선형 독립을 정의 할 수 있다. 또한 이 벡터공간에 적절한 내적을 정하여 내적벡터공간으로 구성하면 함수 사이의 직교성(orthogonality) 도 생각 할 수 있다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="def-DE_ODE_wronskian" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 12.2 (Wronskian)</strong></span> 어떤 구간 <span class="math inline">\(I\)</span> 에서 정의된 <span class="math inline">\(n-1\)</span> 번 미분 가능한 함수 <span class="math inline">\(\varphi_1,\ldots,\,\varphi_n\)</span> 에 대해 다음 과 같이 정의된 행렬식을 <strong>Wronskian</strong> 이라고 한다.</p>
-<p><span class="math display">\[
-W[\varphi_1,\ldots,\,\varphi_n] = W[\{\varphi_i\}]:= \det \left(\begin{bmatrix} \varphi_1 &amp; \varphi_2 &amp; \cdots &amp;\varphi_n \\ \varphi'_1 &amp; \varphi'_2 &amp; \cdots &amp; \varphi'_n \\ \vdots  &amp; &amp; &amp;\vdots \\ \varphi^{(n-1)}_1 &amp; \varphi^{(n-1)}_2 &amp; \cdots &amp; \varphi^{(n-1)}_n\end{bmatrix}\right)
-\]</span></p>
+<section id="연습문제-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ODE_arfken_7_5_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.8 (Arfken 7.5.1, 유일성 정리)</strong></span> <span class="math inline">\(y(x)\)</span> 가 2계 제차 선형 미분방정식의 해이고 <span class="math inline">\(x=x_0\)</span> 에서 <span class="math inline">\(y(x_0)=y_0,\, y'(x_0)=y'_0\)</span> 라고 하자. <span class="math inline">\(y(x)\)</span> 가 유일함을 보여라. 즉 기울기 <span class="math inline">\(y'_0\)</span> 를 가지고 <span class="math inline">\((x_0,\,y_0)\)</span> 를 통과하는 미분방정식의 해는 유일함을 보여라.</p>
 </div>
 </div>
-</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(y_1,\,y_2\)</span> 가 <span class="math inline">\(y''+p(x)y' + q(x) = 0\)</span> 와 주어진 초기조건을 만족하는 두 해라고 하자. <span class="math inline">\(y_1(x)-y_2(x) = \overline{y}(x)\)</span> 라고 하면 <span class="math inline">\(\overline{y}''+p(x)\overline{y}' + q\overline{y}=0\)</span> 이며</p>
+<p>… to be completed …</p>
 </div>
 <br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-DE_ODE_wronskian_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 12.1</strong></span> <a href="#def-DE_ODE_wronskian" class="quarto-xref">정의&nbsp;<span>12.2</span></a> 의 Wronskian 에 대해 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(W[\{\varphi_i\}]\ne 0\)</span> 이면 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형독립이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(W[\{\varphi_i\}] = 0\)</span> 이면 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형종속이다.</p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ODE_arfken_7_5_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.9 (Arfken 7.5.2)</strong></span> <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>12.9</span></a> 의 해를 <span class="math inline">\(x=x_0\)</span> 에 대한 프로베니우스 방법으로 구한다고 하자. <span class="math inline">\(x_0\)</span> 가 일반점일 경우 결정방정식은 <span class="math inline">\(s=0,\,1\)</span> 의 해를 가짐을 보여라.</p>
 </div>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\{\varphi_i\}\)</span> 에 대해</p>
-<p><span class="math display">\[
-a_1 \varphi_1  + \cdots + a_n \varphi_n = 0
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x_0\)</span> 가 일반점이므로 <span class="math inline">\(p(x),\,q(x)\)</span> 역시 <span class="math inline">\(\sum_{j=0} b_j(x_0)^{n+j}\)</span> 형태로 표현 할 수 있다. 멱급수 형태인 <span class="math inline">\(y(x) = \sum_j a_j (x-x_0)^{j+s}\)</span> 를 <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>12.9</span></a> 에 적용하면 다음을 얻는다. <span class="math display">\[
+\begin{aligned}
+0 &amp;= \sum_{j=0}a_j(j+s)(j+s-1) (x-x_0)^{j+s-2} + \sum_{j=0} a_j(j+s) p(x) (x-x_0)^{j+s-1} \\[0.3em]
+&amp;\qquad + \sum_{j=0} a_j q(x) (x-x_0)^{j+s}
+\end{aligned}
 \]</span></p>
-<p>이라고 하자. 그렇다면 <span class="math inline">\(k=1,\ldots,\, n-1\)</span> 에 대해</p>
-<p><span class="math display">\[
-a_1\varphi_1^{(k)} + \cdots + a_n \varphi_n^{(k)} = 0
-\]</span></p>
-<p>을 만족하며 따라서 <span class="math inline">\(\begin{bmatrix} a_1 &amp; \cdots &amp; a_n \end{bmatrix}^T\)</span> 는 다음의 선형방정식의 해이다.</p>
-<p><span class="math display">\[
-\begin{bmatrix} \varphi_1 &amp; \varphi_2 &amp; \cdots &amp;\varphi_n \\ \varphi'_1 &amp; \varphi'_2 &amp; \cdots &amp; \varphi'_n \\ \vdots  &amp; &amp; &amp;\vdots \\ \varphi^{(n-1)}_1 &amp; \varphi^{(n-1)}_2 &amp; \cdots &amp; \varphi^{(n-1)}_n\end{bmatrix} \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{bmatrix}
-\]</span></p>
-<p>즉 <span class="math inline">\(W[\{\varphi_i\}] = 0\)</span> 이면 nontrivial <span class="math inline">\(a_1,\ldots,\,a_n\)</span> 이 존재하며 따라서 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형 종속이다. <span class="math inline">\(W[\{\varphi_i\}] \ne 0\)</span> 이면 <span class="math inline">\(a_1=\cdots = a_n = 0\)</span> 이므로 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형 독립이다. <span class="math inline">\(\square\)</span></p>
+<p>이로부터 <span class="math inline">\(a_0(s)(s-1) = 0\)</span> 의 결정방정식을 얻으며 이 해는 <span class="math inline">\(s=0,\,1\)</span> 이다.</p>
 </div>
 <br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-DE_ODE_dependency_sho" class="theorem example">
-<p><span class="theorem-title"><strong>예제 12.7</strong></span> <a href="#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span> 12.5.2</span></a> 에서 우리는 <span class="math inline">\(y'' + \omega^2 y = 0\)</span> 의 해 <span class="math inline">\(\sin \omega x,\,\cos\omega x\)</span> 를 구했다. 여기서</p>
-<p><span class="math display">\[
-W[\sin \omega x,\, \cos\omega x] = \det \left(\begin{bmatrix} \cos \omega x &amp; \sin \omega x \\ - \sin \omega x &amp; \cos \omega x\end{bmatrix}\right) = 1
-\]</span></p>
-<p>이므로 두 해는 선형독립임을 안다.</p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ODE_arfken_7_5_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.10 (Arfken 7.5.4)</strong></span> <a href="#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span> 12.5.2</span></a> 에서 단순조화진동자의 해를 구할 때 두번째 계수 <span class="math inline">\(a_1\)</span> 를 without irrevocably losing anything 하게 <span class="math inline">\(0\)</span> 으로 놓을 수 있는지, 아니면 무조건 <span class="math inline">\(0\)</span> 으로 놓아야 할 경우는 어떤 경우인지 확인하라.</p>
 </div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>멱급수 해 <span class="math inline">\(y=\sum_j a_j x^{j+s}\)</span> 를 사용한다.</p>
+<p>(<span class="math inline">\(a\)</span>) 르장드르 방정식 : <span class="math inline">\((1-x^2) y'' -2xy' + l(l+1)y=0\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+0 &amp;= \sum_{j=0}^\infty a_j(s+j)(s+j-1)x^{s+j-2} - \sum_{j=0}^\infty a_j(s+j)(s+j-1)x^{s+j} \\[0.3em]
+&amp;\quad -2\sum_{j=0}^\infty a_j (s+j)x^{s+j} + l(l+1) \sum_{j=0}^\infty a_j x^{s+j}
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(a_0 s(s-1) x^{s-2} + a_1 s(s+1) x^{s-1}=0\)</span> 이어야 한다. 첫번째 항으로부터 <span class="math inline">\(s=0\)</span> 혹은 <span class="math inline">\(s=1\)</span> 이어야 함을 안다. <span class="math inline">\(s=0\)</span> 일 경우 <span class="math inline">\(a_1\)</span> 은 어떤 수여도 상관 없으므로 필요하다면 <span class="math inline">\(a_1=0\)</span> 으로 놓을 수 있으며 <span class="math inline">\(s=1\)</span> 일 경우 <span class="math inline">\(a_1=0\)</span> 으로 놓아야 한다.</p>
+<p>(<span class="math inline">\(b\)</span>) 체비셰프 방정식 : <span class="math inline">\((1-x^2) y'' -xy' + n^2y = 0\)</span></p>
+<p>르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.</p>
+<p>(<span class="math inline">\(c\)</span>) 베셀 방정식 : <span class="math inline">\(x^2y'' + xy' + (x^2-n^2)y = 0\)</span></p>
+<p><a href="#sec-DE_ODE_frobenius_bessel" class="quarto-xref"><span> 12.5.5</span></a> 의 <a href="#eq-DE_ODE_indication_equation_for_bessel_equation" class="quarto-xref">식&nbsp;<span>12.13</span></a> 와 그 이후를 보라. <span class="math inline">\(a_1=0\)</span> 일 수 밖에 없다.</p>
+<p>(<span class="math inline">\(d\)</span>) 에르미트 방정식 : <span class="math inline">\(y'' -2xy' + 2\alpha y = 0\)</span></p>
+<p>르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.</p>
 </div>
 <br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-DE_ODE_number_of_solution_of_second_order_linear_ode" class="theorem">
-<p><span class="theorem-title"><strong>정리 12.3</strong></span> 2계 LHODE 는 최대 두개의 독립적인 해를 가진다.</p>
-</div>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>2계 LHODE</p>
-<p><span id="eq-DE_ODE_thm_nsos_1"><span class="math display">\[
-y'' + p(x) y' + q(x) y = 0
-\tag{12.13}\]</span></span></p>
-<p>를 생각하자. <span class="math inline">\(y_1,\,y_2,\,y_3\)</span> 가 이 방정식의 해라고 하자. 그리고 <span class="math inline">\(W_{ij} = W[y_i, y_j]\)</span> 라고 하면 <span class="math inline">\(W_{ij}=  y_i y'_j - y'_i y_j\)</span> 이다. 그렇다면</p>
-<p><span id="eq-DE_ODE_thm_nsos_2"><span class="math display">\[
-W'_{ij} = \dfrac{dW_{ij}}{dx} = y'_i y'_j + y_i y''_j - y''_iy_j - y'_i y'_j = y_i y''_j - y''_i y_j
-\tag{12.14}\]</span></span></p>
-<p>이다. <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>12.13</span></a> 로 부터,</p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ODE_arfken_7_5_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.11 (Arfken 7.5.5)</strong></span> 아래와 같은 초기하 방정식 (hypergeometric equation) 의 멱급수해를 고하고 그 수렴을 확인하라.</p>
 <p><span class="math display">\[
-\dfrac{y''_i}{y_i} + p(x) \dfrac{y'_i}{y_i} = -q(x) = \dfrac{y''_j}{y_j} + p(x) \dfrac{y_j'}{y_j}
+x(x-1)y'' + [(1+a+b) x -c]y' + aby=0.
 \]</span></p>
-<p>이며 여기에 <span class="math inline">\(y_i y_j\)</span> 를 곱하면</p>
-<p><span id="eq-DE_ODE_differential_of_wronskian"><span class="math display">\[
-W'_{ij} = -p(x) W_{ij}
-\tag{12.15}\]</span></span></p>
-<p>를 얻는다. 이제</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>멱급수 해 <span class="math inline">\(y=\sum_j a_j x^{j+s}\)</span> 를 사용한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-W(y_1, y_2, y_3) &amp;= \det\left(\begin{bmatrix} y_1 &amp; y_2 &amp; y_3 \\ y'_1 &amp; y'_2 &amp; y'_3 \\ y''_1 &amp; y''_2 &amp; y''_3 \end{bmatrix}\right) = - y'_1 W_{23}' - y'_2 W'_{31} - y'_3 W'_{12} \\
-&amp;= -p(x) (y_1W_23 + y_2 W_31 + y_3 W_12) = \det\left(\begin{bmatrix} y_1 &amp; y_2 &amp; y_3 \\ y'_1 &amp; y'_2 &amp; y'_3 \\ y'_1 &amp; y'_2 &amp; y'_3 \end{bmatrix}\right) = 0
+0 &amp;= \sum_j a_j (s+j)(s+j-1)x^{s+j} - \sum_j a_j (s+j)(s+j-1)x^{s+j-1} \\[0.3em]
+&amp;\quad + \sum_j a_j(1+a+b)(s+j)x^{s+j} - \sum_j ca_j (s+j)x^{s+j-1} + \sum_j ab a_j x^{s+j}
 \end{aligned}
 \]</span></p>
-<p>이다. 따라서 2계 LHODE 의 선형 독립인 해는 많아야 2개이다. <span class="math inline">\(\square\)</span></p>
-</div>
-<p><br></p>
-<p>이제 <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>12.13</span></a> 의 꼴의 미분방정식의 한 해를 알고 있다고 하자. Frobenius 방법으로든, 직관으로 파악했든 하나의 해를 알았다면 이제 두번째 해, 즉 첫번째 해에 대해 선형독립인 나머지 해를 찾을 수 있음을 보이고자 한다. 두 해의 Wronskian <span class="math inline">\(W[y_1,\,y_2] = W\)</span> 은 <span class="math inline">\(x\)</span> 에 대한 함수이다. <a href="#eq-DE_ODE_differential_of_wronskian" class="quarto-xref">식&nbsp;<span>12.15</span></a> 로부터,</p>
+<p>로부터 결정방정식</p>
 <p><span class="math display">\[
-\dfrac{d}{dx}W(x) = -p(x) W(x) \implies W(x) = W(a) e^{-\int_{a}^x p(t)\,dt}
+a_0[s(s-1) + cs] = a_0s (s+c-1)=0,
 \]</span></p>
-<p>를 얻는다. 또한</p>
+<p>과 점화식</p>
 <p><span class="math display">\[
-W(x) = y_1y_2' - y_1'y_2 = y_1^2 \dfrac{d}{dx}\left(\dfrac{y_2}{y_1}\right)
+a_{j+1} = \dfrac{(s+j + a)(s+j+b)}{(s+j+1)(s+j+c)}a_j
 \]</span></p>
-<p>이므로,</p>
+<p>을 얻는다. 결정방정식으로부터 <span class="math inline">\(s=0\)</span> 혹은 <span class="math inline">\(s=1-c\)</span> 임을 안다.</p>
+<p><strong>(1)<span class="math inline">\(s=0\)</span> 인 경우</strong></p>
 <p><span class="math display">\[
-\begin{aligned}
-y_2(x) &amp;= y_1(x) \int_b^x \dfrac{W(x')}{[y_1(x')]^2} \, dx' - \dfrac{y_2(b)}{y_1(b)}y_1(x) \\
-&amp;= y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'- \dfrac{y_2(b)}{y_1(b)}y_1(x)
-\end{aligned}
+a_{j+1} = \dfrac{(j+a)(j+b)}{(j+1)(j+c)}a_j
 \]</span></p>
-<p>이다. 여기서 <span class="math inline">\(a,\,b\)</span> 는 임의의 상수이다. 그런데 우리는 <span class="math inline">\(y_1\)</span> 과 선형독립인 <span class="math inline">\(y_2\)</span> 를 찾는 것이므로 뒤의 <span class="math inline">\(y_2(b)y_1(x)/y_2(b)\)</span> 는 없어도 무관하다. 따라서,</p>
+<p>이며 <span class="math inline">\(j\to \infty\)</span> 극한에서 <span class="math inline">\(a_{j+1} = a_j\)</span> 이다. 따라서 멱급수해는 <span class="math inline">\(|x|&lt;1\)</span> 에서만 정의된다.</p>
+<p><strong>(2) <span class="math inline">\(s=1-c\)</span> 인 경우</strong></p>
 <p><span class="math display">\[
-y_2(x) = y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'
+a_{j+1} = \dfrac{(j+1+a-c)(j+1+b-c)}{(j+2-c)(j+1)} a_j
 \]</span></p>
-<p>만 생각해도 된다.</p>
-<br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-DE_ODE-anothor_solution_of_2nd_lhode" class="theorem example">
-<p><span class="theorem-title"><strong>예제 12.8 (단순조화진동자(SHO) 의 경우)</strong></span> 우리는 <span class="math inline">\(y'' + \omega^2 y=0\)</span> 의 한 해가 <span class="math inline">\(\cos \omega x\)</span> 임을 안다. <span class="math inline">\(p(x) = 0\)</span> 이므로 <span class="math inline">\(W(x) = W_0 = \text{const.}\)</span> 이다. 따라서,</p>
-<p><span class="math display">\[
-y_2 (x) = \cos(\omega x) W_0 \int_{0}^x \dfrac{1}{\cos ^2 \omega x'}\, dx' = \dfrac{W_0}{\omega} \cos (\omega x) \tan (\omega x) = \dfrac{W_0}{\omega} \sin (\omega x)
-\]</span></p>
-</div>
-</div>
-<p><br></p>
-</section>
-</section>
-<section id="sec-DE_ODE_sturm_liouville_theory" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">12.7</span> Sturm-Liouville theory</h2>
-<p>2계 LHODE 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대해</p>
-<p><span class="math display">\[
-\mathcal{L}\psi (x) = \lambda \psi (x)
-\]</span></p>
-<p>는 미분방정식을 고유값 문제로 바꾸게 된다. 이 경우 <span class="math inline">\(\mathcal{L}\)</span> 은</p>
-<p><span id="eq-DE_ODE_2nd_lhode"><span class="math display">\[
-\mathcal{L}\psi (x) = \left[p_0 (x) \dfrac{d}{dx^2} + p_1(x) \dfrac{d}{dx} + p_2(x)\right]\psi(x)
-\tag{12.16}\]</span></span></p>
-<p>꼴로 주어진다. 특정한 물리적 상황에 대한 미분방정식은, 그 해가 가저야 할 조건이 주어지며 많은 경우 그 해, 혹은 그 해의 도함수가 가져야할 경계조건으로 주어진다. 어떤 이계 미분 방정식이 <span class="math inline">\(x=a,\,b\)</span> 에서 <span class="math inline">\(f(a)=f(b) =0\)</span> 이거나 <span class="math inline">\(f'(a) = f'(b)=0\)</span> 이어야 한다면, 이 조건을 만족하는 미분가능한 함수의 집합 <span class="math inline">\(X\)</span> 는 힐베르트 공간을 이룬다. 즉 우리는 미분방정식을 벡터공간의 입장에서 다룰 수 있다. 만약 적절한 내적(inner product) 가 주어진 상황에서 <span class="math inline">\(\mathcal{L}\)</span> 연산자가 hermitian 이라면 고유값은 항상 실수이며, 전체 벡터공간을 고유벡터의 선형결합으로 표현 할 수 있다.</p>
-<p><br></p>
-<section id="sec-DE_ODE_stum_liouville_hermitian" class="level3" data-number="12.7.1">
-<h3 data-number="12.7.1" class="anchored" data-anchor-id="sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">12.7.1</span> 에르미트 연산자</h3>
-<p><a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>12.16</span></a> 형태로 주어진 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에서 <span class="math inline">\(p'_0 (x) = p_1(x)\)</span> 일 경우를 생각하자. 그렇다면,</p>
-<p><span class="math display">\[
-\mathcal{L} \psi (x) = \left[\dfrac{d}{dx} \left(p_0(x) \dfrac{d}{dx}\right) + p_2(x)\right]\psi (x) = [p_0(x) \psi'(x)]' + p_2(x) ] \psi(x)
-\]</span></p>
-<p>이다. 여기서 내적이 <span class="math inline">\(\langle u(x),\, v(x) \rangle = \displaystyle \int_{a}^b v^\ast(x) u(x)\, dx\)</span> 로 정의되었다면,</p>
-<p><span class="math display">\[
-\begin{aligned}
-\langle \mathcal{L}u(x),\, v(x)\rangle &amp;= \int_{a}^b \left(v^\ast ( p_0 u')' + v^\ast p_2 u\right) \, dx \\
-&amp;= {\large \left[ \right.}v^\ast p_0 u' {\large \left.\right]}_a^b +\int_a^b \left( -(v^\ast)' p_0 u' + v^\ast p_2 u\right) \, dx \\
-&amp;= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \int_a^b \left[ (p_0 {v^\ast}')' u + v^\ast p_2 u\right]\, dx\\
-&amp;= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \int_a^b (\mathcal{L}v)^\ast u\, dx \\
-&amp;= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \langle u(x),\, \mathcal{L}v(x)\, \rangle
-\end{aligned}
-\]</span></p>
-<p>이다. 만약 <span class="math inline">\({\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b = 0\)</span> 인 경계조건을 가지고 있다면,</p>
-<p><span class="math display">\[
-\langle \mathcal{L}u(x),\, v(x)\rangle = \langle u(x),\, \mathcal{L}v(x)\, \rangle
-\]</span></p>
-<p>이며 이것은 벡터공간에서의 에르미트 연산자의 조건이다. 즉 일반적인 내적 벡터공간에서의 에르미트 연산자와는 달리 미분방정식에서의 에르미트 조건은 경계조건을 포함한다. 보통 <span class="math inline">\(u(a)=u(b) = v(a)=v(b) = 0\)</span> 이거나 <span class="math inline">\(u'(a) =u'(b) = v'(a) = v'(b) = 0\)</span> 인 조건을 가지게 되며 전자를 <strong>디리클레 경계조건 (Dirichlet boundary condition)</strong> 이라고 하고 후자를 <strong>노이만 경계 조건 (Neumann boundary condition)</strong> 이라고 한다.</p>
-<p>이제 디리클레 경계조건, 혹은 노이만 경계 조건을 만족하는 <span class="math inline">\(C^2\)</span> 함수의 집합을 <span class="math inline">\(X\)</span> 라고 하면 <span class="math inline">\(X\)</span> 는 벡터공간며 여기에 내적 <span class="math inline">\(\langle u,\,v\rangle = \displaystyle \int_a^b v^\ast(x)u(x)\,dx\)</span> 이 정의되어 있다면 <span class="math inline">\(X\)</span> 는 내적 벡터 공간이 된다. <span class="math inline">\(\mathcal{L}\)</span> 연산자는 에르미트 연산자이므로 <span class="math inline">\(\mathcal{L}\)</span> 의 고유함수로 <span class="math inline">\(X\)</span> 의 기저를 구성 할 수 있다. <span class="math inline">\(\varphi_i,\, \varphi_j\)</span> 가 각각 <span class="math inline">\(\lambda_i,\, \lambda_j\)</span> 를 고유값으로 갖는 고유함수이며 <span class="math inline">\(\lambda_i\neq \lambda_j\)</span> 라면 당연히 <span class="math inline">\(\langle \varphi_i,\,\varphi_j \rangle = 0\)</span> 이다.</p>
-<p><br></p>
-</section>
-<section id="sec-DE_ODE_hermitianization_of_ode" class="level3" data-number="12.7.2">
-<h3 data-number="12.7.2" class="anchored" data-anchor-id="sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">12.7.2</span> 미분방정식을 에르미트 연산자 형태로 변경하기</h3>
-<p>위에서 설명했듯이 미분연산자가 hermitian 이라면 매우 좋은 성질을 갖게 된다. 만약 자체로는 에르미트 연산자가 아니지만 약간 변형하여 에르미트 연산자로 만들 수 있다면? <a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>12.16</span></a> 형태의 미분방정식이 에르미트 연산자가 될 조건은 아래의 두가지 이다.</p>
-<p>  (1) <span class="math inline">\(p_0'(x) = p_1(x)\)</span>,</p>
-<p>  (2) 경계조건 <span class="math inline">\({\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b =  0\)</span> .</p>
-<p>만약 어떤 함수 <span class="math inline">\(w(x)\)</span> 를 곱하여,</p>
-<p><span class="math display">\[
-\mathcal{L}'\psi(x) = w(x) \mathcal{L} \psi(x) = \left[w(x) p_0 (x) \dfrac{d}{dx^2} + w(x) p_1(x) \dfrac{d}{dx} + w(x) p_2(x)\right]\psi(x)
-\]</span></p>
-<p>의 <span class="math inline">\(\mathcal{L}'\)</span> 이 hermitian 이 되려면 <span class="math inline">\((wp_0)' =wp_1\)</span> 이 되어야 한다. <span class="math inline">\((wp_0)' = (wp_0)\dfrac{p_1}{p_0}\)</span> 이므로,</p>
-<p><span id="eq-ode_weighting"><span class="math display">\[
-w(x)p_0(x) = w(a)p_0(a) \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-\tag{12.17}\]</span></span></p>
-<p>이며,</p>
-<p><span class="math display">\[
-w(x) = \dfrac{1}{p_0(x)} \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-\]</span></p>
-<p>로 놓을 수 있다. <span class="math inline">\(w(a)p_0(a)\)</span> 는 상수로 미분방정식에 영항을 끼치지 않아서 <span class="math inline">\(1\)</span> 로 놓았다. 실제로는 계산하기 편하도록 어떤 0 이 아닌 상수를 곱하여도 상관 없다. 이제 <span class="math display">\[
-\overline{p}_0 = \exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right),\qquad \overline{p}_1 = \dfrac{p_1(x)}{p_0(x)}\exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-\]</span> 에 대해</p>
-<p><span class="math display">\[
-\mathcal{L}'\psi (x) = \left[\overline{p}_0 (x) \dfrac{d^2}{dx^2} + \overline{p}_1(x) \dfrac{d}{dx} + w(x)p_2(x)\right]\psi(x)
-\]</span></p>
-<p>의 미분방정식을 얻었다.</p>
-<p>이제 에르미트 조건을 알아보자.</p>
-<p><span id="eq-DE_ODE_hermitian_cond_1"><span class="math display">\[
-\begin{aligned}
-\int_a^b v^\ast (x) \mathcal{L}'u(x)\, dx &amp;= \int_a^b v^\ast (x) w(x)\mathcal{L}u(x)\, dx \\
-&amp;=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b (\mathcal{L}'v(x))^\ast u(x)\, dx \\
-&amp;=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b w(x)(\mathcal{L}v(x))^\ast u(x)\, dx
-\end{aligned}
-\tag{12.18}\]</span></span></p>
-<p>이제 내적을</p>
-<p><span id="eq-odd_innerproduct_with_weight"><span class="math display">\[
-\langle u(x),\, v(x)\rangle = \int_a^b v^\ast (x) u(x) w(x)\, dx
-\tag{12.19}\]</span></span></p>
-<p>로 정의하자. 이 때 <span class="math inline">\(w(x)\)</span> 를 <strong>무게 함수(weight function)</strong> 이라고 한다. 그렇다면 <a href="#eq-DE_ODE_hermitian_cond_1" class="quarto-xref">식&nbsp;<span>12.18</span></a> 은</p>
-<p><span class="math display">\[
-\langle \mathcal{L}u(x),\, v(x)\rangle =  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b  + \langle u,\, \mathcal{L}v(x)\rangle
-\]</span></p>
-<p>이 된다. 즉 내적의 정의가 변하며 연산자 <span class="math inline">\(\mathcal{L}\)</span> 이 hermitian 이 된다.</p>
-<br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-DE_ODE_legendre_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 12.9 (르장드르 함수 (Legendre function))</strong></span> 르장드르 미분연산자</p>
-<p><span class="math display">\[
-\mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -2x\dfrac{d}{dx}
-\]</span></p>
-<p>에 대해 <span class="math inline">\(\mathcal{L}P_l(x) = -l(l+1)P_l(x)\)</span> 를 푸는 것이 <a href="#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 르장드르 미분방정식의 해이다. 자연수 <span class="math inline">\(l\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(l\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는 <span class="math inline">\(w(x)=1\)</span> 이다.</p>
-</div>
+<p>이며 역시 <span class="math inline">\(j \to \infty\)</span> 극한에서 <span class="math inline">\(a_{j+1}= a_j\)</span> 이다. 따라서 멱급수해는 <span class="math inline">\(|x|&lt;1\)</span> 에서만 정의된다.</p>
 </div>
 <br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-DE_ODE_chevyshev_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 12.10 (체비쇼프 함수 (Legendre function))</strong></span> 체비쇼프 미분연산자</p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ODE_arfken_7_5_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.12 (Arfken 7.5.6)</strong></span> 아래와 같은 합류 초기하 방정식 (confluenthypergeometric equation) 의 멱급수해를 고하고 그 수렴을 확인하라.</p>
 <p><span class="math display">\[
-\mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -x\dfrac{d}{dx}
+xy'' + (c-x)y' -ay=0.
 \]</span></p>
-<p>에 대해 <span class="math inline">\(\mathcal{L}T_n(x) = -n^2T_n(x)\)</span> 를 푸는 것이 <a href="#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 르장드르 미분방정식의 해이다. 자연수 <span class="math inline">\(n\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(n\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는</p>
-<p><span class="math display">\[
-w(x) = \dfrac{1}{1-x^2} \exp \left(\int_{a}^x \dfrac{t}{1-t^2}\, dt \right)= \dfrac{1}{\sqrt{1-x^2}}
-\]</span></p>
-<p>이다. 적분시 <span class="math inline">\(a\)</span> 에 대한 항은 상수곱이 되므로 무시했다.</p>
 </div>
 </div>
-<p><br></p>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-DE_ODE_laruerre_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 12.11 (라게르 함수(Laguerre function))</strong></span> 아래의 미분방정식 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대한 고유값 문제 <span class="math inline">\(\mathcal{L}\psi =\lambda \psi\)</span> 를 풀고자 한다.</p>
-<p><span id="eq-ode-laguerre_operator"><span class="math display">\[
-\mathcal{L} = x \dfrac{d^2}{dx^2} + (1-x)\dfrac{d}{dx}.
-\tag{12.20}\]</span></span></p>
-<p>이 때 <span class="math inline">\(\psi\)</span> 는 <span class="math inline">\(0\le x &lt;\infty\)</span> 에서 nonsingular 하며, <span class="math inline">\(\psi (x\to \infty) = 0\)</span> 이라고 하자. <span class="math inline">\(p'_0\ne p_1\)</span> 이므로 weighting function <span class="math inline">\(w(x)\)</span> 를 <a href="#eq-ode_weighting" class="quarto-xref">식&nbsp;<span>12.17</span></a> 으로 계산하면,</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>멱급수 해 <span class="math inline">\(y=\sum_j a_j x^{j+s}\)</span> 를 사용한다.</p>
 <p><span class="math display">\[
-w(x) = \dfrac{1}{x} \exp \left(\int^x \dfrac{1-t}{t}\,dt\right) = \dfrac{1}{x} e^{\ln x - x} = e^{-x}
-\]</span></p>
-<p>이 미분방정식이 hermitian 이 되려면 경계조건</p>
-<p><span class="math display">\[
-0 = {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b =  {\large \left[ \right.} xe^{-x} (v^\ast  u' - (v^\ast)'  u) {\large \left. \right]}_a^b
-\]</span></p>
-<p>을 만족해야 한다.</p>
-</div>
-</div>
-<p><br></p>
-</section>
-</section>
-<section id="직교하는-다항식" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="직교하는-다항식"><span class="header-section-number">12.8</span> 직교하는 다항식</h2>
-<section id="sec-ODE_DE_rodriguess_formula" class="level3" data-number="12.8.1">
-<h3 data-number="12.8.1" class="anchored" data-anchor-id="sec-ODE_DE_rodriguess_formula"><span class="header-section-number">12.8.1</span> 로드리게스 공식</h3>
-<p>Sturm-Liouville 형태의 미분방정식</p>
-<p><span id="eq-DE_ODE_sturm_liourille_ode"><span class="math display">\[
-p(x) y'' + q(x)y' + \lambda y = 0
-\tag{12.21}\]</span></span></p>
-<p>를 생각하자. 많은 경우 <span class="math inline">\(p(x),\, q(x)\)</span> 는 각각 2차, 1차 다항식 형태이다.</p>
-<p><span class="math display">\[
-p(x) = \alpha x^2 + \beta x + \gamma,\qquad q(x) = \mu x + \nu
-\]</span></p>
-<p>이 미분방정식의 <span class="math inline">\(n\)</span> 차 다항식 해를 <span class="math inline">\(y_n = \sum_{k=0}^n c_k x^k\)</span> 라고 이 해에 대한 <span class="math inline">\(\lambda\)</span> 를 <span class="math inline">\(\lambda_n\)</span> 이라고 하자. <span class="math inline">\(c_n\neq 0\)</span> 이다. 그렇다면 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>12.21</span></a> 는 최고차항에서</p>
-<p><span id="eq-eigenvalue_of_n_order_polynomial"><span class="math display">\[
-\lambda_n = -n(n-1)\alpha - n\mu
-\tag{12.22}\]</span></span></p>
-<p>을 만족해야 한다. 무게함수 <span class="math inline">\(w(x)\)</span> 를 생각하면</p>
-<p><span class="math display">\[
-\dfrac{d}{dx}[w(x)p(x)y'] + \lambda w(x)y = 0
-\]</span></p>
-<p>을 만족해야 한다. 이것을 이용하여 아래의 <a href="#thm-rodrigues_fomula" class="quarto-xref">정리&nbsp;<span>12.4</span></a> 를 증명 할 수 있다. Arfken 의 수리물리학에서 Rodriguess formular 를 찾아보면 지루한 증명을 찾아 볼 수 있으나 여기서는 생략하기로 한다.</p>
-<br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-rodrigues_fomula" class="theorem">
-<p><span class="theorem-title"><strong>정리 12.4</strong></span> 아래와 같이 정의된 <span class="math inline">\(y_n(x)\)</span> 는 <span class="math inline">\(\lambda\)</span> 가 <a href="#eq-eigenvalue_of_n_order_polynomial" class="quarto-xref">식&nbsp;<span>12.22</span></a> 의 <span class="math inline">\(\lambda_n\)</span> 인 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>12.21</span></a> 의 해이다. <span id="eq-rodrigues_formula"><span class="math display">\[
-y_n(x) = \dfrac{1}{w(x)} \left(\dfrac{d}{dx}\right)^n \left[w(x)p(x)^n\right].
-\tag{12.23}\]</span></span></p>
-</div>
-</div>
-<!-- ::: {.proof}
-
-
-무게함수 $w(x)$ 는 $(wp)' = wq$ 를 만족하게 하는 함수임을 안다. 
-
-$$
 \begin{aligned}
-p[wp^n]' &= p(w'p^n) + np^nw p' = (w'p)p^n + nwp^n p'\\
-&= (wq-wp')p^n + nwp^np' \\
-&= wp^n((n-1)p' + q)
+0 &amp;= \sum_j a_j (s+j)(s+j-1)x^{s+j-1} + \sum_j ca_j(s+j)x^{s+j-1} - \sum_j a_j (s+j)x^{s+j} -\sum_j aa_j x^{s+j}
 \end{aligned}
-$$ {#eq-DE_ODE_thm_rodriguess_formlar_1}
-
-이제 위 식을 $n+1$ 번 미분한 후 $w$ 로 나누어 보자. $p$ 는 2차식이며 $q$ 는 1차식임에 유의하라. 
-
-$$
-\begin{aligned}
-\dfrac{1}{w}\left(\dfrac{d}{dx}\right)^{n+1}p[wp^n]' &= \dfrac{p}{w} \left(\dfrac{d}{dx}\right)^{n+2}[wp^n] + \dfrac{(n+1)p'}{w}\left(\dfrac{d}{dx}\right)^{n+1}[wp^n] \\
-&\qquad \qquad + \dfrac{n(n+1)p''}{w}\left(\dfrac{d}{dx}\right)^{n-1}[wp^n]
-\end{aligned}
-$$
-
-
-
-
-$$
-\begin{aligned}
-\dfrac{p}{w} \left(\dfrac{d}{dx}\right)^{n+2} [wp^n] + \dfrac{(n+1)p'}{w} \left(\dfrac{d}{dx}\right)^{n+1} + \dfrac{n(n+1)p''}{2w}\left(\dfrac{d}{dx}\right)^n [wp]^n
-\end{aligned}
-$$
-
-
--- to be filled  --
-:::
-
- -->
-<p><br></p>
-</section>
-<section id="schlaefli-적분" class="level3" data-number="12.8.2">
-<h3 data-number="12.8.2" class="anchored" data-anchor-id="schlaefli-적분"><span class="header-section-number">12.8.2</span> Schlaefli 적분</h3>
-<p><a href="#eq-rodrigues_formula" class="quarto-xref">식&nbsp;<span>12.23</span></a> 을 만족한다면 코시 적분 공식를 사용하여</p>
-<p><span id="eq-DE_ODE_schlaefli_integral"><span class="math display">\[
-y_n (x) = \dfrac{1}{2}\dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-\tag{12.24}\]</span></span></p>
-<p>를 얻을 수 있다. 이를 <strong>Schlaefli 적분</strong> 이라고 한다.</p>
-<p><br></p>
-</section>
-<section id="생성-함수" class="level3" data-number="12.8.3">
-<h3 data-number="12.8.3" class="anchored" data-anchor-id="생성-함수"><span class="header-section-number">12.8.3</span> 생성 함수</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="def-DE_ODE_generating_function" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 12.3</strong></span> 우리가 원하는 함수의 집합 <span class="math inline">\(\{f_n(x)\}\)</span> 가 <span class="math inline">\(x\)</span> 와 보조변수 <span class="math inline">\(t\)</span> 에 대해 정의된 어떤 함수 <span class="math inline">\(g(x,\,t)\)</span> 에 대해</p>
-<p><span class="math display">\[
-g(x,\,t) = \sum_{n} c_n f_n(x) t^n
 \]</span></p>
-<p>의 형태가 될 때 <span class="math inline">\(g(x,\,t)\)</span> 를 <strong>생성 함수(generating function)</strong> 이라고 한다.</p>
-</div>
-</div>
-</div>
-</div>
-<p><span class="math inline">\(n = 0,\,1,\ldots\)</span> 일 때는 <span class="math inline">\(t\)</span> 에 대한 테일러 전개로 간주 할 수 있으며 <span class="math inline">\(n\)</span> 이 음의 정수를 포함한다면 로랑 전개(Laurant series) 로 간주 할 수 있다. 복소함수의 유수 정리(residue theorem) 을 사용한다면</p>
+<p>로부터 결정방정식</p>
 <p><span class="math display">\[
-c_n f_n(x) = \dfrac{1}{2\pi i} \oint \dfrac{g(x,\,t)}{t^{n+1}}\, dt
+a_0s(s+c-1)=0
 \]</span></p>
-<p>를 통해 얻을 수 있다. 여기서 적분 경로(contour) 는 <span class="math inline">\(0\)</span> 을 포함하며 <span class="math inline">\(0\)</span> 이외의 다른 특이점이 없어야 한다.</p>
-<p>생성함수는 <a href="#eq-DE_ODE_schlaefli_integral" class="quarto-xref">식&nbsp;<span>12.24</span></a> 을 이용하면 다음과 같이 얻을 수 있다.</p>
-<p><span id="eq-DE_ODE_generating_function_using_Schlaefli_formula"><span class="math display">\[
-g(x,\,t) = \dfrac{1}{w(x)} \sum_{n=0}^\infty t^n \dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-\tag{12.25}\]</span></span></p>
-<p><br></p>
-<div id="tbl-DE_ODE_2nd_ode_generating_function" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-DE_ODE_2nd_ode_generating_function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;12.2: 중요한 2계 선형 ODE 의 생성 함수
-</figcaption>
-<div aria-describedby="tbl-DE_ODE_2nd_ode_generating_function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 44%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">이름</th>
-<th style="text-align: left;">방정식</th>
-<th style="text-align: left;">생성 함수</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Legendre</td>
-<td style="text-align: left;"><span class="math inline">\(\displaystyle (1-x^2) y'' -2xy' + n(n+1)y=0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\displaystyle (1-2xt+t^2)^{-1/2} = \sum_{n=0}^\infty P_n(x)t^n\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Chebyshev type <span class="math inline">\(I\)</span></td>
-<td style="text-align: left;"><span class="math inline">\((1-x^2) y'' -xy' + n^2y = 0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\displaystyle \dfrac{1-t^2}{1-2xt+t^2} = T_0 (x) + 2\sum_{n=1}^\infty T_n(x)t^n\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Laguerre</td>
-<td style="text-align: left;"><span class="math inline">\(xy'' + (1-x)y' + n y = 0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\displaystyle \dfrac{e^{-xt/(1-t)}}{1-t} = \sum_{n=0}^\infty L_n (x) t^n\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Hermite</td>
-<td style="text-align: left;"><span class="math inline">\(y'' -2xy' + 2n y = 0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\displaystyle e^{-t^2+2xt} = \sum_{n=0}^\infty \dfrac{1}{n!} H_n(x)t^n\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
+<p>과 점화식</p>
+<p><span class="math display">\[
+a_{j+1} = \dfrac{(s+j + a)}{(s+j+1)(s+j+c)}a_j
+\]</span></p>
+<p>을 얻는다. 결정방정식으로부터 <span class="math inline">\(s=0\)</span> 혹은 <span class="math inline">\(s=1-c\)</span> 임을 안다.</p>
+<p><strong>(1)<span class="math inline">\(s=0\)</span> 인 경우</strong></p>
+<p><span class="math display">\[
+a_{j+1} = \dfrac{(j+a)}{(j+1)(j+c)}a_j
+\]</span></p>
+<p>이며 따라서 멱급수해는 수렴한다.</p>
+<p><strong>(2) <span class="math inline">\(s=1-c\)</span> 인 경우</strong></p>
+<p><span class="math display">\[
+a_{j+1} = \dfrac{(j+1+a-c)}{(j+2-c)(j+1)} a_j
+\]</span> 이며 따라서 멱급수해는 수렴한다.</p>
 </div>
 
 
@@ -1938,8 +1665,8 @@ g(x,\,t) = \dfrac{1}{w(x)} \sum_{n=0}^\infty t^n \dfrac{n!}{2\pi i} \oint_C \dfr
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/differential_equation/pde.html" class="pagination-link" aria-label="편미분 방정식의 이론적 배경">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/differential_equation/ode2.html" class="pagination-link" aria-label="상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

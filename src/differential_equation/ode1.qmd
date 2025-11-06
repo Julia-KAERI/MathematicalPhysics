@@ -1,5 +1,5 @@
 ---
-title: "상미분 방정식"
+title: "상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식"
 
 number-sections: true
 number-depth: 3
@@ -782,7 +782,7 @@ $$
 | 초기하 방정식 (Hypergeometric) </br> $x(x-1) y'' + [(1+a+b)x + c]\,y' +aby=0$ | $0, 1 \infty$ | |
 | 르장드르 방정식 (Legendre) </br> $(1-x^2) y'' -2xy' + l(l+1)y=0$ | $-1, 1, \infty$ | |
 | 체비셰프 방정식 (Chebyshev) </br> $(1-x^2) y'' -xy' + n^2y = 0$ | $-1, 1, \infty$ | |
-| Confluent hypoergeometryc </br> $xy'' + (c-x)y' -ay = 0$ | $0$ | $\infty$ |
+| 합류 초기하 방정식 (Confluent hypoergeometrc function) </br> $xy'' + (c-x)y' -ay = 0$ | $0$ | $\infty$ |
 | 베셀 방정식 (Bessel) </br> $x^2y'' + xy' + (x^2-n^2)y = 0$ | $0$ |$\infty$ |
 | 라게르 방정식 (Laguerre) </br> $xy'' + (1-x)y' + a y = 0$ | $0$ | $\infty$ |
 | 단순 조화 진동자 (SHO) </br> $y'' + \omega^2 y' = 0$ | | $\infty$ |
@@ -885,7 +885,7 @@ $$
 
 &emsp; ($3$) $a_{i+2}(s+i+2)(s+i+1) + \omega^2 a_j = 0$
 
-$a_0\ne 0$ 이므로 ($1$) 의 조건에 의해 $s(s-1)=0$ 이어야 한다. 이 방정식은 $s$ 를 결정하는 중요한 방정식으로 **결정방정식(indicial equation)** 이라고 한다. ($2$) 의 조건에서 $s=-1$ 일 경우 $a_0 = 0$ 이어야 하므로 조건에 위배된다. 따라서 남은 조건은 $s=0$ 이고 $a_1$ 을 자유로 두거나, $s=1$ 이며 $a_1=0$ 으로 두는 것 밖에 없다. 그리고 ($3$) 조건에 의해, 
+$a_0\ne 0$ 이므로 ($1$) 의 조건에 의해 $s(s-1)=0$ 이어야 한다. 이 방정식은 $s$ 를 결정하는 중요한 방정식으로 **결정방정식(indicial equation)** 이라고 한다. ($2$) 의 조건에서 $s=-1$ 일 경우 $a_0 = 0$ 이어야 하므로 조건에 위배된다. 따라서 남은 조건은 $s=0$ 이고 $a_1$ 을 자유로 두거나, $s=1$ 이며 $a_1=0$ 으로 두는 것 밖에 없다. 그리고 ($3$) 조건에 의해
 
 $$
 a_{i+2} = \dfrac{-\omega^2}{(i+1)(i+2)}a_i \implies  a_{2k} = (-1)^n \dfrac{\omega^{2k}}{(2k)!} a_0,\, a_{2k+1} = (-1)^n \dfrac{\omega^{2k}}{(2k+1)!} a_1
@@ -918,7 +918,7 @@ $$
 y(x) = \sum_{i=0}^\infty a_i (x-x_0)^{s+i} ,\qquad a_0 \ne 0
 $$
 
-$x_0$ 를 regular singularity 로 잡으면 많은 경우 미분방정식의 해를 찾는 데 유용하지만 irregular siglularity 의 경우는 Frobenius 방법으로 해를 구할 수 없다.
+$x_0$ 를 정칙 특이점으로 잡으면 많은 경우 미분방정식의 해를 찾는 데 유용하지만 비정칙 특이점의 경우는 Frobenius 방법으로 해를 구할 수 없다.
 
 </br>
 
@@ -948,7 +948,7 @@ $$
 
 </br>
 
-### 베셀 함수의 해 {#sec-DE_ODE_frobenius_bessel}
+### 베셀 방정식의 해 {#sec-DE_ODE_frobenius_bessel}
 
 베셀 방정식은 아래와 같이 주어진다.
 
@@ -968,7 +968,7 @@ $x^s$ 에 대한 계수를 비교하면 아래와 같은 결정방정식(indicia
 
 $$
 0=a_0 [s(s-1) + s-n^2] = a_0 [s^2-n^2],
-$$
+$$ {#eq-DE_ODE_indication_equation_for_bessel_equation}
 
 $a_0 \ne 0$ 이어야 하므로 $s = \pm n$ 을 얻는다. 이제 $x^{s+1}$ 의 계수를 비교하면 다음을 얻는다.
 
@@ -981,13 +981,13 @@ $s=\pm n$ 을 생각하면 $a_1=0$ 일 수 밖에 없다. 이제 $x^{s+j}$ 에 �
 
 **(1) $s=n \ge 0$ 인 경우 **
 
-$s=n$ 이라면 
+$s=n$ 이라면 아래의 점화식(recurrence relation) 을 얻는다.
 
 $$
 a_{j+2} = -\dfrac{a_j}{(j+2)(2n+j+2)}
-$$
+$$ 
 
-를 얻는다. $a_0 \ne 0,\, a_1 = 0$ 이므로 $a_{2k}$ 만 의미있으며 정리하면 다음을 얻는다.
+$a_0 \ne 0,\, a_1 = 0$ 이므로 $a_{2k}$ 만 의미있으며 정리하면 다음을 얻는다.
 
 $$
 a_{2k} = (-1)^k \dfrac{a_0 n!}{2^{2k} k! (n+k)!}.
@@ -1001,13 +1001,13 @@ $$
 
 **(2) $s=-n < 0$ 인 경우**
 
-이 경우에 대한 해를 $J_{-n}$ 으로 표기한다. 그런데 멱급수의 계수에 대해 
+이 경우에 대한 해를 $J_{-n}$ 으로 표기한다. 그런데 멱급수의 계수에 대해 아래의 점화식을 얻는다.
 
 $$
-a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}
+a_{j+2} = - \dfrac{a_j}{(j+2)(j-2n+2)}.
 $$
 
-의 관계가 성립하며, $n$ 이 정수 일 때 $j=2(n-1)$ 에서 $a_{j+2}$ 가 발산하며 따라서 이 경우에는 프로베니우스 방법을 통해 해를 얻을 수 없다.
+$n$ 이 정수 일 때 $j=2(n-1)$ 에서 $a_{j+2}$ 가 발산하며 따라서 이 경우에는 프로베니우스 방법을 통해 해를 얻을 수 없다.
 
 </br>
 
@@ -1021,10 +1021,19 @@ $$
 
 $$
 y'' - \dfrac{6}{x^2}y = 0
+$$ {#eq-DE_ODE_singularity_1}
+
+의 경우 결정방정식 $s^2-s-6=0$ 으로부터 $s=3$ 혹은 $s=-2$ 임을 안다. 제차 미분방정식이므로 점화식이 존재하지 않고 단지 $x^3,\, x^{-2}$ 의 답을 얻을 수 있다.
+
+이제 아래의 미분방정식을 보자.
 $$
+y'' - \dfrac{6}{x^3}y = 0.
+$${#eq-DE_ODE_singularity_2}
 
-의 경우 결정방정식 $s^2-s-6=0$ 으로부터 $s=3$ 혹은 $s=-2$ 임을 안다.
+이 경우 $y=\sum_j a_j x^{s+j}$ 에 대한 결정방정식은 $a_0=0$ 뿐이다. 이것은 $a_0\ne 0$ 이어야 하는 조건에 위배되므로 최소한 이 방법으로는 해를 얻을 수 없다.
 
+
+.... boring part ..
 
 </br> 
 
@@ -1056,503 +1065,210 @@ $$
 
 :::
 
-
 </div></br>
 
-## 알고 있는 해로부터 해를 더 구하는 법
 
-</br>
-
-### 함수의 벡터공간
-
-구간 $I$ 에서 $n-1$ 번 미분 가능한함수의 집합은 벡터공간을 이루며 따라서 함수에 대한 선형 독립을 정의 할 수 있다. 또한 이 벡터공간에 적절한 내적을 정하여 내적벡터공간으로 구성하면 함수 사이의 직교성(orthogonality) 도 생각 할 수 있다.
+### 연습문제 {.unnumbered}
 
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-DE_ODE_wronskian}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-#### Wronskian
+::: {#exr-ODE_arfken_7_5_1}
 
-어떤 구간 $I$ 에서 정의된 $n-1$ 번 미분 가능한 함수 $\varphi_1,\ldots,\,\varphi_n$ 에 대해 다음 과 같이 정의된 행렬식을 **Wronskian** 이라고 한다.
+#### Arfken 7.5.1, 유일성 정리
 
-$$
-W[\varphi_1,\ldots,\,\varphi_n] = W[\{\varphi_i\}]:= \det \left(\begin{bmatrix} \varphi_1 & \varphi_2 & \cdots &\varphi_n \\ \varphi'_1 & \varphi'_2 & \cdots & \varphi'_n \\ \vdots  & & &\vdots \\ \varphi^{(n-1)}_1 & \varphi^{(n-1)}_2 & \cdots & \varphi^{(n-1)}_n\end{bmatrix}\right)
-$$
-
-:::
-:::
-
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#prp-DE_ODE_wronskian_1}
-
-@def-DE_ODE_wronskian 의 Wronskian 에 대해 다음이 성립한다.
-
-&emsp; ($1$) $W[\{\varphi_i\}]\ne 0$ 이면 $\{\varphi_i\}$ 는 선형독립이다.
-
-&emsp; ($2$) $W[\{\varphi_i\}] = 0$ 이면 $\{\varphi_i\}$ 는 선형종속이다.
-
-:::
-</div>
-
-::: {.proof} 
-
-$\{\varphi_i\}$ 에 대해 
-
-$$
-a_1 \varphi_1  + \cdots + a_n \varphi_n = 0
-$$
-
-이라고 하자. 그렇다면 $k=1,\ldots,\, n-1$ 에 대해
-
-$$
-a_1\varphi_1^{(k)} + \cdots + a_n \varphi_n^{(k)} = 0
-$$
-
-을 만족하며 따라서 $\begin{bmatrix} a_1 & \cdots & a_n \end{bmatrix}^T$ 는 다음의 선형방정식의 해이다. 
-
-$$
-\begin{bmatrix} \varphi_1 & \varphi_2 & \cdots &\varphi_n \\ \varphi'_1 & \varphi'_2 & \cdots & \varphi'_n \\ \vdots  & & &\vdots \\ \varphi^{(n-1)}_1 & \varphi^{(n-1)}_2 & \cdots & \varphi^{(n-1)}_n\end{bmatrix} \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{bmatrix}
-$$
-
-즉 $W[\{\varphi_i\}] = 0$ 이면 nontrivial $a_1,\ldots,\,a_n$ 이 존재하며 따라서 $\{\varphi_i\}$ 는 선형 종속이다. $W[\{\varphi_i\}] \ne 0$ 이면 $a_1=\cdots = a_n = 0$ 이므로 $\{\varphi_i\}$ 는 선형 독립이다. $\square$
-
-:::
-
-</br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-DE_ODE_dependency_sho}
-
-@sec-DE_ODE_frobenius_sho 에서 우리는 $y'' + \omega^2 y = 0$ 의 해  $\sin \omega x,\,\cos\omega x$ 를 구했다. 여기서
-
-$$
-W[\sin \omega x,\, \cos\omega x] = \det \left(\begin{bmatrix} \cos \omega x & \sin \omega x \\ - \sin \omega x & \cos \omega x\end{bmatrix}\right) = 1
-$$
-
-이므로 두 해는 선형독립임을 안다.
+$y(x)$ 가 2계 제차 선형 미분방정식의 해이고 $x=x_0$ 에서 $y(x_0)=y_0,\, y'(x_0)=y'_0$ 라고 하자. $y(x)$ 가 유일함을 보여라. 즉 기울기 $y'_0$ 를 가지고 $(x_0,\,y_0)$ 를 통과하는 미분방정식의 해는 유일함을 보여라.
 
 :::
 
 </div>
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {.solution}
 
-::: {#thm-DE_ODE_number_of_solution_of_second_order_linear_ode}
+$y_1,\,y_2$ 가 $y''+p(x)y' + q(x) = 0$ 와 주어진 초기조건을 만족하는 두 해라고 하자. $y_1(x)-y_2(x) = \overline{y}(x)$ 라고 하면 $\overline{y}''+p(x)\overline{y}' + q\overline{y}=0$ 이며 
 
-2계 LHODE 는 최대 두개의 독립적인 해를 가진다.
-
-:::
-</div>
-
-::: {.proof}
-
-2계 LHODE 
-
-$$
-y'' + p(x) y' + q(x) y = 0 
-$$ {#eq-DE_ODE_thm_nsos_1}
-
-를 생각하자. $y_1,\,y_2,\,y_3$ 가 이 방정식의 해라고 하자. 그리고 $W_{ij} = W[y_i, y_j]$ 라고 하면  $W_{ij}=  y_i y'_j - y'_i y_j$ 이다. 그렇다면 
-
-$$
-W'_{ij} = \dfrac{dW_{ij}}{dx} = y'_i y'_j + y_i y''_j - y''_iy_j - y'_i y'_j = y_i y''_j - y''_i y_j
-$$ {#eq-DE_ODE_thm_nsos_2}
-
-이다. @eq-DE_ODE_thm_nsos_1 로 부터, 
-
-$$
-\dfrac{y''_i}{y_i} + p(x) \dfrac{y'_i}{y_i} = -q(x) = \dfrac{y''_j}{y_j} + p(x) \dfrac{y_j'}{y_j} 
-$$
-
-이며 여기에 $y_i y_j$ 를 곱하면
-
-$$
-W'_{ij} = -p(x) W_{ij}
-$$ {#eq-DE_ODE_differential_of_wronskian}
-
-를 얻는다. 이제 
-
-$$
-\begin{aligned}
-W(y_1, y_2, y_3) &= \det\left(\begin{bmatrix} y_1 & y_2 & y_3 \\ y'_1 & y'_2 & y'_3 \\ y''_1 & y''_2 & y''_3 \end{bmatrix}\right) = - y'_1 W_{23}' - y'_2 W'_{31} - y'_3 W'_{12} \\
-&= -p(x) (y_1W_23 + y_2 W_31 + y_3 W_12) = \det\left(\begin{bmatrix} y_1 & y_2 & y_3 \\ y'_1 & y'_2 & y'_3 \\ y'_1 & y'_2 & y'_3 \end{bmatrix}\right) = 0
-\end{aligned}
-$$
-
-이다. 따라서 2계 LHODE 의 선형 독립인 해는 많아야 2개이다. $\square$
-
+... to be completed ...
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-이제 @eq-DE_ODE_thm_nsos_1 의 꼴의 미분방정식의 한 해를 알고 있다고 하자. Frobenius 방법으로든, 직관으로 파악했든 하나의 해를 알았다면 이제 두번째 해, 즉 첫번째 해에 대해 선형독립인 나머지 해를 찾을 수 있음을 보이고자 한다. 두 해의 Wronskian $W[y_1,\,y_2] = W$ 은 $x$ 에 대한 함수이다. @eq-DE_ODE_differential_of_wronskian  로부터, 
+::: {#exr-ODE_arfken_7_5_2}
 
-$$
-\dfrac{d}{dx}W(x) = -p(x) W(x) \implies W(x) = W(a) e^{-\int_{a}^x p(t)\,dt}
-$$
+#### Arfken 7.5.2
 
-를 얻는다. 또한
-
-$$
-W(x) = y_1y_2' - y_1'y_2 = y_1^2 \dfrac{d}{dx}\left(\dfrac{y_2}{y_1}\right)
-$$
-
-이므로, 
-
-$$
-\begin{aligned}
-y_2(x) &= y_1(x) \int_b^x \dfrac{W(x')}{[y_1(x')]^2} \, dx' - \dfrac{y_2(b)}{y_1(b)}y_1(x) \\
-&= y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'- \dfrac{y_2(b)}{y_1(b)}y_1(x) 
-\end{aligned}
-$$
-
-이다. 여기서 $a,\,b$ 는 임의의 상수이다. 그런데 우리는 $y_1$ 과 선형독립인 $y_2$ 를 찾는 것이므로 뒤의 $y_2(b)y_1(x)/y_2(b)$ 는 없어도 무관하다. 따라서,
-
-$$
-y_2(x) = y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'
-$$
-
-만 생각해도 된다.
-
-<br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-DE_ODE-anothor_solution_of_2nd_lhode}
-
-#### 단순조화진동자(SHO) 의 경우
-
-우리는 $y'' + \omega^2 y=0$ 의 한 해가 $\cos \omega x$ 임을 안다. $p(x) = 0$ 이므로 $W(x) = W_0 = \text{const.}$ 이다. 따라서, 
-
-$$
-y_2 (x) = \cos(\omega x) W_0 \int_{0}^x \dfrac{1}{\cos ^2 \omega x'}\, dx' = \dfrac{W_0}{\omega} \cos (\omega x) \tan (\omega x) = \dfrac{W_0}{\omega} \sin (\omega x)
-$$
-
-:::
-
-</div></br>
-
-## Sturm-Liouville theory {#sec-DE_ODE_sturm_liouville_theory}
-
-2계 LHODE 연산자 $\mathcal{L}$ 에 대해
-
-$$
-\mathcal{L}\psi (x) = \lambda \psi (x)
-$$
-
-는 미분방정식을 고유값 문제로 바꾸게 된다. 이 경우 $\mathcal{L}$ 은
-
-$$
-\mathcal{L}\psi (x) = \left[p_0 (x) \dfrac{d}{dx^2} + p_1(x) \dfrac{d}{dx} + p_2(x)\right]\psi(x)
-$$ {#eq-DE_ODE_2nd_lhode}
-
-꼴로 주어진다. 
-특정한 물리적 상황에 대한 미분방정식은, 그 해가 가저야 할 조건이 주어지며 많은 경우 그 해, 혹은 그 해의 도함수가 가져야할 경계조건으로 주어진다. 어떤 이계 미분 방정식이 $x=a,\,b$ 에서 $f(a)=f(b) =0$ 이거나 $f'(a) = f'(b)=0$ 이어야 한다면, 이 조건을 만족하는 미분가능한 함수의 집합 $X$ 는 힐베르트 공간을 이룬다. 즉 우리는 미분방정식을 벡터공간의 입장에서 다룰 수 있다. 만약 적절한 내적(inner product) 가 주어진 상황에서 $\mathcal{L}$ 연산자가 hermitian 이라면 고유값은 항상 실수이며, 전체 벡터공간을 고유벡터의 선형결합으로 표현 할 수 있다. 
-
-</br>
-
-### 에르미트 연산자 {#sec-DE_ODE_stum_liouville_hermitian}
-
-
-@eq-DE_ODE_2nd_lhode 형태로 주어진 연산자 $\mathcal{L}$ 에서 $p'_0 (x) = p_1(x)$ 일 경우를 생각하자. 그렇다면, 
-
-
-$$
-\mathcal{L} \psi (x) = \left[\dfrac{d}{dx} \left(p_0(x) \dfrac{d}{dx}\right) + p_2(x)\right]\psi (x) = [p_0(x) \psi'(x)]' + p_2(x) ] \psi(x)
-$$
-
-이다. 여기서 내적이 $\langle u(x),\, v(x) \rangle = \displaystyle \int_{a}^b v^\ast(x) u(x)\, dx$ 로 정의되었다면, 
-
-$$
-\begin{aligned}
-\langle \mathcal{L}u(x),\, v(x)\rangle &= \int_{a}^b \left(v^\ast ( p_0 u')' + v^\ast p_2 u\right) \, dx \\
-&= {\large \left[ \right.}v^\ast p_0 u' {\large \left.\right]}_a^b +\int_a^b \left( -(v^\ast)' p_0 u' + v^\ast p_2 u\right) \, dx \\
-&= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \int_a^b \left[ (p_0 {v^\ast}')' u + v^\ast p_2 u\right]\, dx\\
-&= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \int_a^b (\mathcal{L}v)^\ast u\, dx \\
-&= {\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b + \langle u(x),\, \mathcal{L}v(x)\, \rangle
-\end{aligned}
-$$
-
-
-이다. 만약 ${\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b = 0$ 인 경계조건을 가지고 있다면, 
-
-$$
-\langle \mathcal{L}u(x),\, v(x)\rangle = \langle u(x),\, \mathcal{L}v(x)\, \rangle
-$$
-
-이며 이것은 벡터공간에서의 에르미트 연산자의 조건이다. 즉 일반적인 내적 벡터공간에서의 에르미트 연산자와는 달리 미분방정식에서의 에르미트 조건은 경계조건을 포함한다. 보통 $u(a)=u(b) = v(a)=v(b) = 0$ 이거나 $u'(a) =u'(b) = v'(a) = v'(b) = 0$ 인 조건을 가지게 되며 전자를 **디리클레 경계조건 (Dirichlet boundary condition)** 이라고 하고 후자를 **노이만 경계 조건 (Neumann boundary condition)** 이라고 한다. 
-
-이제 디리클레 경계조건, 혹은 노이만 경계 조건을 만족하는 $C^2$ 함수의 집합을 $X$ 라고 하면 $X$ 는 벡터공간며 여기에 내적 $\langle u,\,v\rangle = \displaystyle \int_a^b v^\ast(x)u(x)\,dx$ 이 정의되어 있다면 $X$ 는 내적 벡터 공간이 된다. $\mathcal{L}$ 연산자는 에르미트 연산자이므로 $\mathcal{L}$ 의 고유함수로 $X$ 의 기저를 구성 할 수 있다. $\varphi_i,\, \varphi_j$ 가 각각 $\lambda_i,\, \lambda_j$ 를 고유값으로 갖는 고유함수이며 $\lambda_i\neq \lambda_j$ 라면 당연히 $\langle \varphi_i,\,\varphi_j \rangle = 0$ 이다.
-
-
-</br>
-
-### 미분방정식을 에르미트 연산자 형태로 변경하기 {#sec-DE_ODE_hermitianization_of_ode}
-
-위에서 설명했듯이 미분연산자가 hermitian 이라면 매우 좋은 성질을 갖게 된다. 만약 자체로는 에르미트 연산자가 아니지만 약간 변형하여 에르미트 연산자로 만들 수 있다면? @eq-DE_ODE_2nd_lhode 형태의 미분방정식이 에르미트 연산자가 될 조건은 아래의 두가지 이다.
-
-&emsp; (1) $p_0'(x) = p_1(x)$,
-
-&emsp; (2) 경계조건 ${\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b =  0$ .
-
-만약 어떤 함수 $w(x)$ 를 곱하여, 
-
-$$
-\mathcal{L}'\psi(x) = w(x) \mathcal{L} \psi(x) = \left[w(x) p_0 (x) \dfrac{d}{dx^2} + w(x) p_1(x) \dfrac{d}{dx} + w(x) p_2(x)\right]\psi(x)
-$$
-
-의 $\mathcal{L}'$ 이 hermitian 이 되려면 $(wp_0)' =wp_1$ 이 되어야 한다. $(wp_0)' = (wp_0)\dfrac{p_1}{p_0}$ 이므로, 
-
-$$
-w(x)p_0(x) = w(a)p_0(a) \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-$$ {#eq-ode_weighting}
-
-이며, 
-
-$$
-w(x) = \dfrac{1}{p_0(x)} \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-$$
-
-로 놓을 수 있다. $w(a)p_0(a)$ 는 상수로 미분방정식에 영항을 끼치지 않아서 $1$ 로 놓았다. 실제로는 계산하기 편하도록 어떤 0 이 아닌 상수를 곱하여도 상관 없다. 이제 
-$$
-\overline{p}_0 = \exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right),\qquad \overline{p}_1 = \dfrac{p_1(x)}{p_0(x)}\exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-$$
-에 대해 
-
-$$
-\mathcal{L}'\psi (x) = \left[\overline{p}_0 (x) \dfrac{d^2}{dx^2} + \overline{p}_1(x) \dfrac{d}{dx} + w(x)p_2(x)\right]\psi(x)
-$$
-
-의 미분방정식을 얻었다. 
-
-이제 에르미트 조건을 알아보자.
-
-$$
-\begin{aligned}
-\int_a^b v^\ast (x) \mathcal{L}'u(x)\, dx &= \int_a^b v^\ast (x) w(x)\mathcal{L}u(x)\, dx \\
-&=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b (\mathcal{L}'v(x))^\ast u(x)\, dx \\
-&=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b w(x)(\mathcal{L}v(x))^\ast u(x)\, dx
-\end{aligned}
-$$ {#eq-DE_ODE_hermitian_cond_1}
-
-이제 내적을
-
-$$
-\langle u(x),\, v(x)\rangle = \int_a^b v^\ast (x) u(x) w(x)\, dx
-$$ {#eq-odd_innerproduct_with_weight}
-
-로 정의하자. 이 때 $w(x)$ 를 **무게 함수(weight function)** 이라고 한다. 그렇다면 @eq-DE_ODE_hermitian_cond_1 은
-
-$$
-\langle \mathcal{L}u(x),\, v(x)\rangle =  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b  + \langle u,\, \mathcal{L}v(x)\rangle
-$$
-
-
-이 된다. 즉 내적의 정의가 변하며 연산자 $\mathcal{L}$ 이 hermitian 이 된다.
-
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-DE_ODE_legendre_function}
-
-#### 르장드르 함수 (Legendre function)
-
-르장드르 미분연산자
-
-$$
-\mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -2x\dfrac{d}{dx}
-$$
-
-에 대해 $\mathcal{L}P_l(x) = -l(l+1)P_l(x)$ 를 푸는 것이 @tbl-2nd_DE_ODE_singularity_of_odes 의 르장드르 미분방정식의 해이다. 자연수 $l$ 에 대한 미분방정식의 해는 $l$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는 $w(x)=1$ 이다.
+@eq-DE_ODE_simple_2nd_ode 의 해를 $x=x_0$ 에 대한 프로베니우스 방법으로 구한다고 하자. $x_0$ 가 일반점일 경우 결정방정식은 $s=0,\,1$ 의 해를 가짐을 보여라.
 
 :::
 
 </div>
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {.solution}
 
-::: {#exm-DE_ODE_chevyshev_function}
-
-#### 체비쇼프 함수 (Legendre function)
-
-체비쇼프 미분연산자
-
+$x_0$ 가 일반점이므로 $p(x),\,q(x)$ 역시 $\sum_{j=0} b_j(x_0)^{n+j}$ 형태로 표현 할 수 있다. 멱급수 형태인 $y(x) = \sum_j a_j (x-x_0)^{j+s}$ 를 @eq-DE_ODE_simple_2nd_ode 에 적용하면 다음을 얻는다.
 $$
-\mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -x\dfrac{d}{dx}
+\begin{aligned}
+0 &= \sum_{j=0}a_j(j+s)(j+s-1) (x-x_0)^{j+s-2} + \sum_{j=0} a_j(j+s) p(x) (x-x_0)^{j+s-1} \\[0.3em]
+&\qquad + \sum_{j=0} a_j q(x) (x-x_0)^{j+s}
+\end{aligned}
 $$
 
-에 대해 $\mathcal{L}T_n(x) = -n^2T_n(x)$ 를 푸는 것이 @tbl-2nd_DE_ODE_singularity_of_odes 의 르장드르 미분방정식의 해이다. 자연수 $n$ 에 대한 미분방정식의 해는 $n$ 차 다항식임이 알려저 있다. $\dfrac{d}{dx}(1-x^2)=-2x$ 이므로 무게함수는
-
-$$
-w(x) = \dfrac{1}{1-x^2} \exp \left(\int_{a}^x \dfrac{t}{1-t^2}\, dt \right)= \dfrac{1}{\sqrt{1-x^2}}
-$$
-
-이다. 적분시 $a$ 에 대한 항은 상수곱이 되므로 무시했다.
+이로부터 $a_0(s)(s-1) = 0$ 의 결정방정식을 얻으며 이 해는 $s=0,\,1$ 이다.
 
 :::
 
-</div></br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+::: {#exr-ODE_arfken_7_5_4}
 
-::: {#exm-DE_ODE_laruerre_function}
+#### Arfken 7.5.4
 
-#### 라게르 함수(Laguerre function)
-
-아래의 미분방정식 연산자 $\mathcal{L}$ 에 대한 고유값 문제 $\mathcal{L}\psi =\lambda \psi$ 를 풀고자 한다. 
-
-$$
-\mathcal{L} = x \dfrac{d^2}{dx^2} + (1-x)\dfrac{d}{dx}.
-$$ {#eq-ode-laguerre_operator}
-
-이 때 $\psi$ 는 $0\le x <\infty$ 에서 nonsingular 하며, $\psi (x\to \infty) = 0$ 이라고 하자. $p'_0\ne p_1$ 이므로 weighting function $w(x)$ 를 @eq-ode_weighting 으로 계산하면, 
-
-$$
-w(x) = \dfrac{1}{x} \exp \left(\int^x \dfrac{1-t}{t}\,dt\right) = \dfrac{1}{x} e^{\ln x - x} = e^{-x}
-$$
-
-이 미분방정식이 hermitian 이 되려면 경계조건
-
-$$
-0 = {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b =  {\large \left[ \right.} xe^{-x} (v^\ast  u' - (v^\ast)'  u) {\large \left. \right]}_a^b
-$$
-
-을 만족해야 한다. 
-
-:::
-
-</div></br>
-
-## 직교하는 다항식
-
-### 로드리게스 공식 {#sec-ODE_DE_rodriguess_formula}
-
-Sturm-Liouville 형태의 미분방정식
-
-$$
-p(x) y'' + q(x)y' + \lambda y = 0
-$$ {#eq-DE_ODE_sturm_liourille_ode}
-
-를 생각하자. 많은 경우 $p(x),\, q(x)$ 는 각각 2차, 1차 다항식 형태이다.
-
-$$
-p(x) = \alpha x^2 + \beta x + \gamma,\qquad q(x) = \mu x + \nu
-$$
-
-이 미분방정식의 $n$ 차 다항식 해를 $y_n = \sum_{k=0}^n c_k x^k$ 라고 이 해에 대한 $\lambda$ 를 $\lambda_n$ 이라고 하자. $c_n\neq 0$ 이다. 그렇다면 @eq-DE_ODE_sturm_liourille_ode 는 최고차항에서
-
-$$
-\lambda_n = -n(n-1)\alpha - n\mu
-$$ {#eq-eigenvalue_of_n_order_polynomial}
-
-을 만족해야 한다. 무게함수 $w(x)$ 를 생각하면 
-
-$$
-\dfrac{d}{dx}[w(x)p(x)y'] + \lambda w(x)y = 0 
-$$
-
-을 만족해야 한다. 이것을 이용하여 아래의 @thm-rodrigues_fomula 를 증명 할 수 있다. Arfken 의 수리물리학에서 Rodriguess formular 를 찾아보면 지루한 증명을 찾아 볼 수 있으나 여기서는 생략하기로 한다.
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#thm-rodrigues_fomula}
-
-아래와 같이 정의된 $y_n(x)$ 는 $\lambda$ 가 @eq-eigenvalue_of_n_order_polynomial 의 $\lambda_n$ 인 @eq-DE_ODE_sturm_liourille_ode 의 해이다.
-$$
-y_n(x) = \dfrac{1}{w(x)} \left(\dfrac{d}{dx}\right)^n \left[w(x)p(x)^n\right].
-$$ {#eq-rodrigues_formula}
+@sec-DE_ODE_frobenius_sho 에서 단순조화진동자의 해를 구할 때 두번째 계수 $a_1$ 를 without irrevocably losing anything 하게 $0$ 으로 놓을 수 있는지, 아니면 무조건 $0$ 으로 놓아야 할 경우는 어떤 경우인지 확인하라.
 
 :::
 
 </div>
-<!-- ::: {.proof}
 
+::: {.solution}
 
-무게함수 $w(x)$ 는 $(wp)' = wq$ 를 만족하게 하는 함수임을 안다. 
+멱급수 해 $y=\sum_j a_j x^{j+s}$ 를 사용한다. 
 
-$$
-\begin{aligned}
-p[wp^n]' &= p(w'p^n) + np^nw p' = (w'p)p^n + nwp^n p'\\
-&= (wq-wp')p^n + nwp^np' \\
-&= wp^n((n-1)p' + q)
-\end{aligned}
-$$ {#eq-DE_ODE_thm_rodriguess_formlar_1}
-
-이제 위 식을 $n+1$ 번 미분한 후 $w$ 로 나누어 보자. $p$ 는 2차식이며 $q$ 는 1차식임에 유의하라. 
+($a$) 르장드르 방정식 : $(1-x^2) y'' -2xy' + l(l+1)y=0$
 
 $$
 \begin{aligned}
-\dfrac{1}{w}\left(\dfrac{d}{dx}\right)^{n+1}p[wp^n]' &= \dfrac{p}{w} \left(\dfrac{d}{dx}\right)^{n+2}[wp^n] + \dfrac{(n+1)p'}{w}\left(\dfrac{d}{dx}\right)^{n+1}[wp^n] \\
-&\qquad \qquad + \dfrac{n(n+1)p''}{w}\left(\dfrac{d}{dx}\right)^{n-1}[wp^n]
+0 &= \sum_{j=0}^\infty a_j(s+j)(s+j-1)x^{s+j-2} - \sum_{j=0}^\infty a_j(s+j)(s+j-1)x^{s+j} \\[0.3em]
+&\quad -2\sum_{j=0}^\infty a_j (s+j)x^{s+j} + l(l+1) \sum_{j=0}^\infty a_j x^{s+j} 
 \end{aligned}
 $$
 
+이므로 $a_0 s(s-1) x^{s-2} + a_1 s(s+1) x^{s-1}=0$ 이어야 한다. 첫번째 항으로부터 $s=0$ 혹은 $s=1$ 이어야 함을 안다. $s=0$ 일 경우 $a_1$ 은 어떤 수여도 상관 없으므로 필요하다면 $a_1=0$ 으로 놓을 수 있으며 $s=1$ 일 경우 $a_1=0$ 으로 놓아야 한다.
+
+($b$) 체비셰프 방정식 : $(1-x^2) y'' -xy' + n^2y = 0$
+
+르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.
+
+($c$) 베셀 방정식 : $x^2y'' + xy' + (x^2-n^2)y = 0$
+
+@sec-DE_ODE_frobenius_bessel 의 @eq-DE_ODE_indication_equation_for_bessel_equation 와 그 이후를 보라. $a_1=0$ 일 수 밖에 없다. 
+
+($d$) 에르미트 방정식 : $y'' -2xy' + 2\alpha y = 0$
+
+르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.
+
+:::
 
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ODE_arfken_7_5_5}
+
+#### Arfken 7.5.5
+
+아래와 같은 초기하 방정식 (hypergeometric equation) 의 멱급수해를 고하고 그 수렴을 확인하라.
+
+$$
+x(x-1)y'' + [(1+a+b) x -c]y' + aby=0.
+$$
+:::
+
+</div>
+
+::: {.solution}
+
+멱급수 해 $y=\sum_j a_j x^{j+s}$ 를 사용한다. 
 
 $$
 \begin{aligned}
-\dfrac{p}{w} \left(\dfrac{d}{dx}\right)^{n+2} [wp^n] + \dfrac{(n+1)p'}{w} \left(\dfrac{d}{dx}\right)^{n+1} + \dfrac{n(n+1)p''}{2w}\left(\dfrac{d}{dx}\right)^n [wp]^n
+0 &= \sum_j a_j (s+j)(s+j-1)x^{s+j} - \sum_j a_j (s+j)(s+j-1)x^{s+j-1} \\[0.3em]
+&\quad + \sum_j a_j(1+a+b)(s+j)x^{s+j} - \sum_j ca_j (s+j)x^{s+j-1} + \sum_j ab a_j x^{s+j}
 \end{aligned}
 $$
 
+로부터 결정방정식
 
--- to be filled  --
+$$
+a_0[s(s-1) + cs] = a_0s (s+c-1)=0,
+$$
+
+과 점화식
+
+$$
+a_{j+1} = \dfrac{(s+j + a)(s+j+b)}{(s+j+1)(s+j+c)}a_j
+$$
+
+을 얻는다. 결정방정식으로부터 $s=0$ 혹은 $s=1-c$ 임을 안다.
+
+**(1)$s=0$ 인 경우**
+
+$$
+a_{j+1} = \dfrac{(j+a)(j+b)}{(j+1)(j+c)}a_j
+$$
+
+이며 $j\to \infty$ 극한에서 $a_{j+1} = a_j$ 이다. 따라서 멱급수해는 $|x|<1$ 에서만 정의된다.
+
+**(2) $s=1-c$ 인 경우**
+
+$$
+a_{j+1} = \dfrac{(j+1+a-c)(j+1+b-c)}{(j+2-c)(j+1)} a_j
+$$
+
+이며 역시 $j \to \infty$ 극한에서 $a_{j+1}= a_j$ 이다. 따라서 멱급수해는 $|x|<1$ 에서만 정의된다.
+
 :::
 
- -->
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-</br>
+::: {#exr-ODE_arfken_7_5_6}
 
-### Schlaefli 적분
-
-@eq-rodrigues_formula 을 만족한다면 코시 적분 공식를 사용하여 
-
-$$
-y_n (x) = \dfrac{1}{2}\dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-$$ {#eq-DE_ODE_schlaefli_integral}
-
-를 얻을 수 있다. 이를 **Schlaefli 적분** 이라고 한다.
-
-</br>
-
-### 생성 함수
-
-::: {.callout-note appearance="minimal"}
-
-::: {#def-DE_ODE_generating_function}
-우리가 원하는 함수의 집합 $\{f_n(x)\}$ 가 $x$ 와 보조변수 $t$ 에 대해 정의된 어떤 함수 $g(x,\,t)$ 에 대해
+#### Arfken 7.5.6
+아래와 같은 합류 초기하 방정식 (confluenthypergeometric equation) 의 멱급수해를 고하고 그 수렴을 확인하라.
 
 $$
-g(x,\,t) = \sum_{n} c_n f_n(x) t^n
+xy'' + (c-x)y' -ay=0.
 $$
 
-의 형태가 될 때 $g(x,\,t)$ 를 **생성 함수(generating function)** 이라고 한다. 
 
 :::
+
+</div>
+
+::: {.solution}
+
+멱급수 해 $y=\sum_j a_j x^{j+s}$ 를 사용한다. 
+
+$$
+\begin{aligned}
+0 &= \sum_j a_j (s+j)(s+j-1)x^{s+j-1} + \sum_j ca_j(s+j)x^{s+j-1} - \sum_j a_j (s+j)x^{s+j} -\sum_j aa_j x^{s+j}
+\end{aligned}
+$$
+
+로부터 결정방정식
+
+$$
+a_0s(s+c-1)=0
+$$
+
+과 점화식
+
+$$
+a_{j+1} = \dfrac{(s+j + a)}{(s+j+1)(s+j+c)}a_j
+$$
+
+을 얻는다. 결정방정식으로부터 $s=0$ 혹은 $s=1-c$ 임을 안다.
+
+**(1)$s=0$ 인 경우**
+
+$$
+a_{j+1} = \dfrac{(j+a)}{(j+1)(j+c)}a_j
+$$
+
+이며 따라서 멱급수해는 수렴한다.
+
+**(2) $s=1-c$ 인 경우**
+
+$$
+a_{j+1} = \dfrac{(j+1+a-c)}{(j+2-c)(j+1)} a_j
+$$
+이며 따라서 멱급수해는 수렴한다.
+
 :::
-
-$n = 0,\,1,\ldots$ 일 때는 $t$ 에 대한 테일러 전개로 간주 할 수 있으며 $n$ 이 음의 정수를 포함한다면 로랑 전개(Laurant series) 로 간주 할 수 있다. 복소함수의 유수 정리(residue theorem) 을 사용한다면
-
-$$
-c_n f_n(x) = \dfrac{1}{2\pi i} \oint \dfrac{g(x,\,t)}{t^{n+1}}\, dt
-$$
-
-를 통해 얻을 수 있다. 여기서 적분 경로(contour) 는 $0$ 을 포함하며 $0$ 이외의 다른 특이점이 없어야 한다. 
-
-생성함수는 @eq-DE_ODE_schlaefli_integral 을 이용하면 다음과 같이 얻을 수 있다.
-
-$$
-g(x,\,t) = \dfrac{1}{w(x)} \sum_{n=0}^\infty t^n \dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-$$ {#eq-DE_ODE_generating_function_using_Schlaefli_formula}
-
-
-</br>
-
-| 이름 | 방정식 | 생성 함수
-|:-----:|:----------------------------|:----------------------------|
-| Legendre | $\displaystyle (1-x^2) y'' -2xy' + n(n+1)y=0$ | $\displaystyle (1-2xt+t^2)^{-1/2} = \sum_{n=0}^\infty P_n(x)t^n$ |
-| Chebyshev type $I$ | $(1-x^2) y'' -xy' + n^2y = 0$ | $\displaystyle \dfrac{1-t^2}{1-2xt+t^2} = T_0 (x) + 2\sum_{n=1}^\infty T_n(x)t^n$ |
-| Laguerre | $xy'' + (1-x)y' + n y = 0$ | $\displaystyle \dfrac{e^{-xt/(1-t)}}{1-t} = \sum_{n=0}^\infty L_n (x) t^n$ |
-| Hermite | $y'' -2xy' + 2n y = 0$ | $\displaystyle e^{-t^2+2xt} = \sum_{n=0}^\infty \dfrac{1}{n!} H_n(x)t^n$ |
-
-: 중요한 2계 선형 ODE 의 생성 함수 {#tbl-DE_ODE_2nd_ode_generating_function}
