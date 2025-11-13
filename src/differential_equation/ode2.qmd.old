@@ -160,23 +160,17 @@ $$
 $$
 \begin{aligned}
 y_2(x) &= y_1(x) \int_b^x \dfrac{W(x')}{[y_1(x')]^2} \, dx' - \dfrac{y_2(b)}{y_1(b)}y_1(x) \\
-&= y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]^2}\, dx'- \dfrac{y_2(b)}{y_1(b)}y_1(x) 
+&= y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'- \dfrac{y_2(b)}{y_1(b)}y_1(x) 
 \end{aligned}
 $$
 
 이다. 여기서 $a,\,b$ 는 임의의 상수이다. 그런데 우리는 $y_1$ 과 선형독립인 $y_2$ 를 찾는 것이므로 뒤의 $y_2(b)y_1(x)/y_2(b)$ 는 없어도 무관하다. 따라서,
 
 $$
-y_2(x) = y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]^2}\, dx'
-$$ {#eq-DE_ODE_second_linearly_independent_solution_using_wronskian_0}
-
-만 생각해도 된다. 그런데 $W(a)$ 는 $x=a$ 에서의 Wronskian 이며 상수이고, 제차 미분방정식의 해는 임의의 상수곱을 하더라도 해이므로 $W(a)=1$ 로 놓을 수 있다. 따라서 두번째 해는 아래와 같다.
-
-$$
-y_2(x) = y_1(x) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]^2}\, dx'.
+y_2(x) = y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]}\, dx'
 $$ {#eq-DE_ODE_second_linearly_independent_solution_using_wronskian}
 
-
+만 생각해도 된다.
 
 <br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -193,63 +187,6 @@ $$
 :::
 
 </div></br>
-
-### 두번째 해의 급수 형태
-
-@eq-DE_ODE_thm_nsos_1 의 $p(x),\, q(x)$ 가 아래와 같은 급수 형태라고 하자.
-
-$$
-p(x) = \sum_{i=-1}^\infty p_ix^i,\qquad q(x) = \sum_{j=-2}^\infty q_j x^j.
-$$ {#eq-DE-ODE_series_form_of_coefficients_of_2nd_ode}
-
-Fuch 정리 (@thm-DE-ODE_fuchs_theorem) 에 의해 프로베니우스 해를 보장받기 위해서 $p(x)$ 와 $q(x)$ 의 첫번째 항이 위의 식과 같이 정해졌다. 이제 
-
-$$
-y = \sum_{k=0}^\infty a_k x^{s+k}
-$$
-
-로 놓고 미분방정식을 전개해 보자.
-
-$$
-y'' + (p_{-1} x^{-1} + p_0 + p_1 x + \cdots) y'  + (q_{-2} x^{-2} _+ q_{-1} x^{-1} + \cdots) y=0
-$$
-
-으로부터
-
-$$
-\begin{aligned}
-\sum_{k=0}^\infty &(s+k)(s+k-1)a_{k}x^{s+k-2} + \sum_{i=-1}^\infty p_i x^{i}\sum_{k=0}(s+k)a_k x^{s+k-1} \\[0.3em]
-*\qquad+ \sum_{j=-2}^\infty q_j x^j \sum_{k=0}^\infty a_k x^{s+k} = 0
-\end{aligned}
-$$
-
-을 얻는다. $p_{-1}\ne 0$ 이면 아래와 같은 결정방정식을 얻는다.
-
-$$
-s^2 + (p_{-1}-1)s+ q_{-2}=0.
-$$
-
-이 결정방정식의 두 근을 $n\ge 0$ 에 대해 $\alpha,\, \alpha-n$ 이라고 하자. $n$ 이 양의 정수라면 @sec-DE_ODE_Frobenius 의 방법을 사용 할 수 있다. 이로부터
-
-$$
-p_{-1} = n-2\alpha +1
-$$
-
-이며 $s=\alpha$ 에 대한 급수해 $y_1$ 을 아래와 같이 놓을 수 있다.
-
-$$
-y_1 = x^{\alpha} \sum_{k=0}^\infty a_k x^{k}.
-$$
-
-이제 @eq-DE_ODE_second_linearly_independent_solution_using_wronskian 를 이용하여 두번째 해 $y_2$ 를 구하면
-
-$$
-y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i x_1^i \,dx_1\right)}{x_2^{2\alpha}\left(\sum_{k=0}^\infty a_k x^k_2\right)^2}\right] \,dx_2
-$$
-
-이다. 여기서 분모의 $\exp$ 안의 적분을 
-
-</br>
 
 ## 스튀름-리우빌 정리
 
