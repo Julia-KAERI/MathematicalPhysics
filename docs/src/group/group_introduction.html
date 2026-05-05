@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; 군의 기본적인 성질 1: 군 – 수리물리학</title>
+<title>4&nbsp; 군의 기본적인 성질 – 수리물리학</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/tensor/tensor02.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -112,7 +133,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 1: 군</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,9 +146,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">수리물리학</a> 
         <div class="sidebar-tools-main">
@@ -204,7 +223,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_introduction.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 1: 군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -329,9 +348,9 @@ window.Quarto = {
   <li><a href="#동형사상과-conjugacy-class" id="toc-동형사상과-conjugacy-class" class="nav-link" data-scroll-target="#동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</a>
   <ul class="collapse">
   <li><a href="#sec-Group_homomorphism" id="toc-sec-Group_homomorphism" class="nav-link" data-scroll-target="#sec-Group_homomorphism"><span class="header-section-number">4.4.1</span> 동형사상</a></li>
-  <li><a href="#sec-Group_multplication_of_subset_of_group" id="toc-sec-Group_multplication_of_subset_of_group" class="nav-link" data-scroll-target="#sec-Group_multplication_of_subset_of_group"><span class="header-section-number">4.4.2</span> 군의 부분집합의 연산</a></li>
-  <li><a href="#conjugacy-class" id="toc-conjugacy-class" class="nav-link" data-scroll-target="#conjugacy-class"><span class="header-section-number">4.4.3</span> Conjugacy Class</a></li>
-  <li><a href="#sec-Group_quotient_group" id="toc-sec-Group_quotient_group" class="nav-link" data-scroll-target="#sec-Group_quotient_group"><span class="header-section-number">4.4.4</span> 몫군</a></li>
+  <li><a href="#sec-Group_conjugacy_class_and_invariant_subgroup" id="toc-sec-Group_conjugacy_class_and_invariant_subgroup" class="nav-link" data-scroll-target="#sec-Group_conjugacy_class_and_invariant_subgroup"><span class="header-section-number">4.4.2</span> 켤레류와 불변부분군</a></li>
+  <li><a href="#sec-Group_quotient_group" id="toc-sec-Group_quotient_group" class="nav-link" data-scroll-target="#sec-Group_quotient_group"><span class="header-section-number">4.4.3</span> 몫군</a></li>
+  <li><a href="#sec-Group_example_of_groups" id="toc-sec-Group_example_of_groups" class="nav-link" data-scroll-target="#sec-Group_example_of_groups"><span class="header-section-number">4.4.4</span> 여러가지 군</a></li>
   <li><a href="#sec-Group_class_multiplication" id="toc-sec-Group_class_multiplication" class="nav-link" data-scroll-target="#sec-Group_class_multiplication"><span class="header-section-number">4.4.5</span> Class 곱</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
@@ -342,9 +361,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 1: 군</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질 1: 군</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">군의 기본적인 성질</span></h1>
 </div>
 
 
@@ -363,7 +382,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-%
+<p>%</p>
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -377,14 +396,18 @@ window.Quarto = {
 <h2 data-number="4.1" class="anchored" data-anchor-id="군의-정의와-기본적인-성질-group"><span class="header-section-number">4.1</span> 군의 정의와 기본적인 성질 (Group)</h2>
 <section id="sec-Group_group" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-Group_group"><span class="header-section-number">4.1.1</span> 군의 정의</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_groups" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.1 (군 (Groups))</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며, 아래 세 조건을 만족 할 때 <span class="math inline">\(G\)</span> 를 <strong>군(Group)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.1</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며, 아래 세 조건을 만족 할 때 <span class="math inline">\(G\)</span> 를 <strong>군(Group)</strong> 이라고 한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <strong>결합 규칙</strong> : <span class="math inline">\(\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <strong>항등원의 존재</strong> : <span class="math inline">\(\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <strong>역원의 존재</strong> : <span class="math inline">\(\forall a\in G,\, \exists a^{-1}\in G,\, a\cdot a^{-1} = a^{-1}\cdot a = e\)</span></p>
@@ -392,8 +415,6 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>군에서의 연산 기호는 <span class="math inline">\(a\circ b\)</span>, <span class="math inline">\(a \cdot b\)</span>, <span class="math inline">\(ab\)</span>, <span class="math inline">\(a+b\)</span> 처럼 다양한 기호가 사용 될 수 있다. 기호를 생략하는 <span class="math inline">\(ab\)</span> 와 같은 표기법도 많이 사용된다. 군을 정의할 때 집합과 연산을 묶어 <span class="math inline">\((G,\, \cdot)\)</span> 와 같은 표기법도 흔히 사용된다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -411,12 +432,16 @@ window.Quarto = {
 </section>
 <section id="군의-성질" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="군의-성질"><span class="header-section-number">4.1.2</span> 군의 성질</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>중요한 군들</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_properties" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 4.2</strong></span> <span class="math inline">\(G\)</span> 가 군이다.</p>
 <ol type="1">
@@ -424,11 +449,10 @@ window.Quarto = {
 <li><p>어떤 대칭 연산의 경우 군을 이루며 성분의 개수가 무한개 이지만 유한개의 연속인 변수로 기술 될 수 있다. 이런 군을 <strong>연속군 (continuous group)</strong> 이라고 한다.</p></li>
 <li><p><span class="math inline">\(G\)</span> 가 유한군일 때 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>차수(order)</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 로 표기한다. <span class="math inline">\(G\)</span> 가 연속군일 경우 연속인 변수의 개수를 <strong>차수(order)</strong> 라고 한다.</p></li>
 <li><p><span class="math inline">\(g\in G\)</span> 일 때 <span class="math inline">\(g^n=1_G\)</span> 가 되는 가장 작은 양의 정수 <span class="math inline">\(n\)</span> 을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라고 한다. (군의 차수와 군의 성분의 차수는 다르다)</p></li>
-<li><p>일반적으로 <span class="math inline">\(ab\ne ba\)</span> 이다. 그러나 <span class="math inline">\(G\)</span> 의 모든 원소에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>아벨군 (abellian group)</strong> 이라고 한다.</p></li>
-<li><p><span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g^k:k\in \mathbb{Z}\}=G\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>순환군 (cyclic group)</strong> 이라고 하고 <span class="math inline">\(G=\langle g \rangle\)</span> 이라고 표기한다. 이 때 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(g\)</span> 에 의해 생성된다고 한다.</p></li>
-<li><p><span class="math inline">\(H \subset G\)</span> 이며 <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 와 같은 연산에 대해 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하고 <span class="math inline">\(H \le G\)</span> 라고 표기한다.</p></li>
+<li><p><span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>아벨군 (abellian group)</strong> 이라고 한다.</p></li>
+<li><p>어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g^k:k\in \mathbb{Z}\}=G\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>순환군 (cyclic group)</strong> 이라고 하고 <span class="math inline">\(G=\langle g \rangle\)</span> 이라고 표기한다. 이 때 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(g\)</span> 에 의해 생성된다고 한다.</p></li>
+<li><p><span class="math inline">\(H \subset G\)</span> 이며 <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 와 같은 연산에 대해 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하고 <span class="math inline">\(H \le G\)</span> 라고 표기한다. <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 와 일치하지 않을 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>진부분군(proper subgroup)</strong> 이라고 하고 <span class="math inline">\(H&lt; G\)</span> 라고 표기한다.</p></li>
 </ol>
-</div>
 </div>
 </div>
 </div>
@@ -446,17 +470,45 @@ window.Quarto = {
 <p>(<span class="math inline">\(b \implies c\)</span>) (<span class="math inline">\(b-2\)</span>) 에 의해 <span class="math inline">\(b^{-1}\in H\)</span> 이며, (<span class="math inline">\(b-1\)</span>) 에 의해 <span class="math inline">\(ab^{-1}\in H\)</span> 이다.</p>
 <p>(<span class="math inline">\(c \implies a\)</span>) 같은 연산이 정의되었으므로 <span class="math inline">\(H\)</span> 의 원소에 대해 결합규칙이 성립한다. <span class="math inline">\(aa^{-1}=1_G\in H\)</span> 이다. <span class="math inline">\(1_Gb^{-1}=b^{-1}\in H\)</span> 이므로 역원이 존재한다. 따라서 <span class="math inline">\(H\le G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
+<p>보통 (<span class="math inline">\(c\)</span>) 를 이용하여 부분집합이 부분군임을 증명한다.</p>
 <p><br></p>
-<p>위의 명제는 군의 부분집합이 부분군임을 증명할 때 사용될 수 있다.</p>
-<p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>생성 부분군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_generated_subgroup" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.3</strong></span> <span class="math inline">\(G\)</span> 가 군이고 <span class="math inline">\(A\)</span> 가 <span class="math inline">\(G\)</span> 의 부분집합일 때 <span class="math inline">\(A\)</span> 의 원소와 각 원소의 역원의 유한곱으로 이루어진 집합을 <span class="math inline">\(\langle A \rangle\)</span> 로 표기하며 이를 <span class="math inline">\(A\)</span> 에 의한 <strong>생성 부분군 (generated subgroup)</strong> 이라고 한다.</p>
+</div>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_generated_subgroup_is_subgroup" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.3</strong></span> <span class="math inline">\(A\)</span> 가 군 <span class="math inline">\(G\)</span> 의 부분집합일 때 <span class="math inline">\(\langle A \rangle \le G\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\langle A \rangle \subseteq G\)</span> 임은 자명하다. 이제 <span class="math inline">\(x,\,y \in \langle A \rangle\)</span> 에 대해 <span class="math inline">\(xy^{-1}\in \langle A \rangle\)</span> 임을 보이면 된다. <span class="math inline">\(x,\,y\)</span> 는 <span class="math inline">\(A\)</span> 의 원소와 그 역원의 유한곱이므로 <span class="math inline">\(y^{-1}\)</span> 역시 그렇고 <span class="math inline">\(xy^{-1}\)</span> 역시 그렇다. 따라서 <span class="math inline">\(\langle A \rangle \le G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>곱군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_product_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.3 (곱군)</strong></span> <span class="math inline">\(G,\,F\)</span> 가 군일 때</p>
+<p><span class="theorem-title"><strong>정의 4.4</strong></span> <span class="math inline">\(G,\,F\)</span> 가 군일 때</p>
 <p><span class="math display">\[
 G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 \]</span></p>
@@ -464,30 +516,42 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <p><span class="math display">\[
 (g_1,\,f_1)(g_2,\,f_2) = (g_1g_2,\,f_1f_2)
 \]</span></p>
-<p>로 정의하면 <span class="math inline">\(G\otimes F\)</span> 역시 군이 되며 <span class="math inline">\(G \otimes F\)</span> 를 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(F\)</span> 에 의한 <strong>곱군(direct product group)</strong> 이라고 한다.</p>
+<p>로 정의하면 <span class="math inline">\(G\otimes F\)</span> 역시 군이 되며(<a href="#prp-Group_product_group" class="quarto-xref">명제&nbsp;<span>4.4</span></a>) <span class="math inline">\(G \otimes F\)</span> 를 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(F\)</span> 에 의한 <strong>곱군(direct product group)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_product_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.4</strong></span> 군 <span class="math inline">\(G,\,F\)</span> 에 대해 곱군은 군이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(g_1,\,g_2 \in G\)</span>, <span class="math inline">\(f_1,\,f_2\in F\)</span> 에 대해 <span class="math inline">\((g_1,\,f_1)(g_2,\,f_2)= (g_1g_2,\,f_1f_2)\in G\otimes F\)</span> 이므로 연산에 대해 닫혀 있다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(g\in G,\, f\in F\)</span> 에 대해 <span class="math inline">\((g,\,f)(1_G,\,1_F)= (1_G,\, 1_F)(g,\,f)=(g,\,f)\)</span> 이므로 <span class="math inline">\((1_G,\,1_F)\)</span> 는 <span class="math inline">\(G\otimes F\)</span> 의 항등원이다.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(g\in G,\, f\in F\)</span> 에 대해 <span class="math inline">\((g,\,f)(g^{-1},\,f^{-1}) = (g^{-1},\,f^{-1})(g,\,f)=(1_G,\,1_F)\)</span> 이므로 역원이 존재한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
 </section>
 <section id="잉여류와-라그랑쥬-정리" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="잉여류와-라그랑쥬-정리"><span class="header-section-number">4.2</span> 잉여류와 라그랑쥬 정리</h2>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>잉여류</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_coset" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.4 (잉여류)</strong></span> 군 <span class="math inline">\(G\)</span> 와 부분군 <span class="math inline">\(H\)</span> 를 생각하자. <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gH = \{gh:h\in H\}\)</span> 를 <span class="math inline">\(g\)</span> 가 속하는 <span class="math inline">\(H\)</span> 의 <strong>왼쪽 잉여류(left coset)</strong> 이라고 한다. 마찬가지로 <span class="math inline">\(g\)</span> 가 속하는 <span class="math inline">\(H\)</span> 의 <strong>오른쪽 잉여류(right coset)</strong> <span class="math inline">\(Hg=\{hg:h\in H\}\)</span> 를 정의 할 수 있다.</p>
+<p><span class="theorem-title"><strong>정의 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 와 부분군 <span class="math inline">\(H\)</span> 를 생각하자. <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gH = \{gh:h\in H\}\)</span> 를 <span class="math inline">\(g\)</span> 가 속하는 <span class="math inline">\(H\)</span> 에 대한 <strong>왼쪽 잉여류(left coset)</strong> 이라고 한다. 마찬가지로 <span class="math inline">\(g\)</span> 가 속하는 <span class="math inline">\(H\)</span> 에 대한 <strong>오른쪽 잉여류(right coset)</strong> <span class="math inline">\(Hg=\{hg:h\in H\}\)</span> 를 정의 할 수 있다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
-<p>잉여류로 여려가지를 증명하는데 왼쪽 잉여류를 쓰든 오른쪽 잉여류를 쓰든 상관 없지만 보통 왼쪽 잉여류를 많이 사용한다.</p>
+<p>앞으로 잉여류로 여려가지를 증명하는데 왼쪽 잉여류를 쓰든 오른쪽 잉여류를 쓰든 상관 없지만 보통 왼쪽 잉여류를 많이 사용한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_coset_and_equivalence_relation" class="theorem lemma">
@@ -519,35 +583,37 @@ G \otimes F := \{(g,\, f): g\in G,\, f\in F\}
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-Group_important_groups"><span class="header-section-number">4.3</span> 중요한 군</h2>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_permutation_group" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.1 (대칭군과 치환군)</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(X \mapsto X\)</span> 전단사 함수의 집합을 <strong>대칭군(symmetric group)</strong> 이라고 하고 <span class="math inline">\(S_X\)</span> 혹은 <span class="math inline">\(\text{Sym}(X)\)</span> 라고 표기한다. 특별히 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 자연수의 집합에 대한 순환군은 <span class="math inline">\(S_n\)</span> 이라고 표기한다. <span class="math inline">\(S_X\)</span> 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 <strong>순열군(permutation group)</strong> 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.</p>
-<p><span class="math inline">\(f\in \text{Sym}(X)\)</span> 에서 <span class="math inline">\(a,\,b\in X\)</span> 에 대해 <span class="math inline">\(f(a)=b,\, f(b)=a\)</span> 이며 <span class="math inline">\(x\ne a,\,b\)</span> 일 때 <span class="math inline">\(f(x)=x\)</span> 인 경우 <span class="math inline">\(f\)</span> 를 <strong>호환(transposition)</strong> 이라고 한다. 모든 <span class="math inline">\(\text{Sym}(X)\)</span> 의 원소는 호환의 곱으로 표현 할 수 있다. <span class="math inline">\(g\in \text{Sym}(X)\)</span> 에 대해 호환의 곱은 유일하지 않고 곱해지는 호환의 갯수도 유일하지 않지만 호환의 갯수가 짝수인지 홀수인지는 불변이다. 짝수일 때를 짝순열, 홀수일 때는 홀순열이라고 하며 짝순열의 집합은 <span class="math inline">\(\text{Sym}(X)\)</span> 의 부분군으로 <strong>교대군(alternating group)</strong> 이라고 하며 <span class="math inline">\(A_X\)</span> 로 표현한다.</p>
+<p><span class="theorem-title"><strong>예제 4.1 (대칭군과 치환군)</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(X \mapsto X\)</span> 전단사 함수의 집합을 <strong>대칭군(symmetric group)</strong> 이라고 하고 <span class="math inline">\(S_X\)</span> 혹은 <span class="math inline">\(\text{Sym}(X)\)</span> 라고 표기한다. 특별히 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 자연수의 집합에 대한 순환군은 <span class="math inline">\(S_n\)</span> 이라고 표기한다. <span class="math inline">\(S_X\)</span> 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 <strong>순열군(permutation group)</strong> 이라고 하고 순열군의 원소를 <strong>순열(permutation)</strong> 이라고 한다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(f\in \text{Sym}(X)\)</span> 에서 <span class="math inline">\(a,\,b\in X\)</span> 에 대해 <span class="math inline">\(f(a)=b,\, f(b)=a\)</span> 이며 <span class="math inline">\(x\ne a,\,b\)</span> 일 때 <span class="math inline">\(f(x)=x\)</span> 인 경우 <span class="math inline">\(f\)</span> 를 <strong>호환(transposition)</strong> 이라고 한다.</p>
+<p>(<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(\text{Sym}(X)\)</span> 의 원소는 호환의 곱으로 표현 할 수 있다. <span class="math inline">\(g\in \text{Sym}(X)\)</span> 에 대해 호환의 곱은 유일하지 않고 곱해지는 호환의 갯수도 유일하지 않지만 호환의 갯수가 짝수인지 홀수인지는 불변이다. 함수 <span class="math inline">\(\text{sgn}: \text{Sym}(X) \to \{1,\,-1\}\)</span> 은 <span class="math inline">\(\sigma\in \text{Sym}(X)\)</span> 가 짝수개의 호환의 곱일 때 <span class="math inline">\(\text{sgn}(\sigma)=+1\)</span> 이며 홀수개이면 <span class="math inline">\(\text{sgn}(\sigma)=-1\)</span> 로 정의되는 함수이다.</p>
+<p>(<span class="math inline">\(3\)</span>) 짝수일 때를 짝순열, 홀수일 때는 홀순열이라고 하며 짝순열의 집합은 <span class="math inline">\(\text{Sym}(X)\)</span> 의 부분군으로 <strong>교대군(alternating group)</strong> 이라고 하며 흔히 <span class="math inline">\(A_X\)</span> 로 표현한다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_linear_group" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.2 (일반선형군과 특수선형군)</strong></span> 체 <span class="math inline">\(\mathbb{F}\)</span> 위에서 정의된 <span class="math inline">\(n\times n\)</span> 행렬의 집합 <span class="math inline">\(\mathbb{F}^{n \times n}\)</span> 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 <strong>일반선형군 (general linear group)</strong> 이라고 하고 <span class="math inline">\(GL_n(\mathbb{F})\)</span> 라고 표기한다. 이 가운데 행렬식이 <span class="math inline">\(1\)</span> 인 행렬의 집합도 군이며 이를 <strong>특수선형군 (special linear group)</strong> 이라고 하며 <span class="math inline">\(SL_n(\mathbb{F})\)</span> 라고 표기한다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_orthogonal_group" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.3 (직교군과 특수직교군)</strong></span> 실수체 <span class="math inline">\(\mathbb{R}\)</span> 위에서 정의된 직교행렬, 즉 <span class="math inline">\(A^TA=AA^T=I\)</span> 을 만족하는 <span class="math inline">\(n\times n\)</span> 정사각 행렬의 집합은 행렬의 곱 연산에 대해 군이다. 이를 <strong>직교군 (orthogonal group)</strong> 이라고 하고 <span class="math inline">\(O(n)\)</span> 으로 표기한다. 직교군의 행렬식은 <span class="math inline">\(\pm 1\)</span> 인데 이가운데 행렬식이 <span class="math inline">\(+1\)</span> 인 행렬의 집합은 <span class="math inline">\(O(n)\)</span> 의 부분군으로 <strong>특수직교군 (special orthogonal group)</strong> 이라고 하고 <span class="math inline">\(SO(n)\)</span> 으로 표기한다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitary_group" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.4 (유니터리군과 특수유니터리군)</strong></span> 복소수체 <span class="math inline">\(\mathbb{C}\)</span> 위에서 정의된 직교행렬, 즉 <span class="math inline">\(A^\dagger A=AA^\dagger=I\)</span> 을 만족하는 <span class="math inline">\(n\times n\)</span> 정사각 행렬의 집합은 행렬의 곱 연산에 대해 군이다. 이를 <strong>유니터리군 (unitary group)</strong> 이라고 하고 <span class="math inline">\(U(n)\)</span> 으로 표기한다. 유니터리군의 행렬식은 <span class="math inline">\(\pm 1\)</span> 인데 이가운데 행렬식이 <span class="math inline">\(+1\)</span> 인 행렬의 집합은 <span class="math inline">\(U(n)\)</span> 의 부분군으로 <strong>특수 유니터리군 (special unitary group)</strong> 이라고 하고 <span class="math inline">\(SU(n)\)</span> 으로 표기한다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_rotation_and_orthogonal_group" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.5 (회전과 특수직교군)</strong></span> <span class="math inline">\(n\)</span> 차원 유클리드 공간에서의 회전은 <span class="math inline">\(SO(n)\)</span> 과 같다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_d3_multiplication_table" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.6 (<span class="math inline">\(D_3\)</span>, 정삼각형에 대한 대칭 연산)</strong></span> <br></p>
@@ -612,7 +678,7 @@ $F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>see <a href="#exr-Arfken_17_1_3" class="quarto-xref">연습문제&nbsp;<span>4.2</span></a> <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>see <a href="#exr-Arfken_17_1_3" class="quarto-xref">연습문제&nbsp;<span>4.9</span></a> <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -658,19 +724,22 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</h2>
 <section id="sec-Group_homomorphism" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="sec-Group_homomorphism"><span class="header-section-number">4.4.1</span> 동형사상</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>동형사상, 준동형사상, 자기동형사상</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_homomorphism" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.5 (동형사상, 준동형사상, 자기동형사상)</strong></span> 두 군 <span class="math inline">\(G,\,G'\)</span> 사이에 어떤 함수 <span class="math inline">\(\phi : G \to G'\)</span> 이 존재하여</p>
+<p><span class="theorem-title"><strong>정의 4.6</strong></span> 두 군 <span class="math inline">\(G,\,G'\)</span> 사이에 어떤 함수 <span class="math inline">\(\phi : G \to G'\)</span> 이 존재하여</p>
 <p><span class="math display">\[
 \forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
 \]</span></p>
-<p>일 때 <span class="math inline">\(\phi\)</span> 를 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 <strong>준동형사상(homomorphism)</strong> 이라고 한다. <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 준동형 사상의 집합을 <span class="math inline">\(\text{Hom}(G,\,G')\)</span> 이라고 쓴다. <span class="math inline">\(\phi\)</span> 가 전단사 함수 일 때 <span class="math inline">\(\phi\)</span> 를 <strong>동형 사상(isomorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 동형사상의 집합을 <span class="math inline">\(\text{Iso}(G,\,G')\)</span> 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 <strong>동형 (isomorphic)</strong> 이라고 하며 <span class="math inline">\(G \approx G'\)</span> 이라고 표기한다. 그리고 <span class="math inline">\(G \to G\)</span> 동형사상을 <strong>자기동형사상 (automorphism)</strong> 이라고 하며 <span class="math inline">\(\text{Aut}(G)\)</span> 로 표기한다.</p>
-</div>
+<p>일 때 <span class="math inline">\(\phi\)</span> 를 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 <strong>준동형사상(homomorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 준동형 사상의 집합을 <span class="math inline">\(\text{Hom}(G,\,G')\)</span> 이라고 표기한다. <span class="math inline">\(\phi\)</span> 가 전단사 함수 일 때 <span class="math inline">\(\phi\)</span> 를 <strong>동형 사상(isomorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 동형사상의 집합을 <span class="math inline">\(\text{Iso}(G,\,G')\)</span> 이라고 표기한다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 <strong>동형 (isomorphic)</strong> 이라고 하며 <span class="math inline">\(G \approx G'\)</span> 이라고 표기한다. 그리고 <span class="math inline">\(G \to G\)</span> 동형사상을 <strong>자기동형사상 (automorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서의 자기동형사상의 집합을 <span class="math inline">\(\text{Aut}(G)\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
@@ -690,15 +759,32 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <p>로 정의하면 <span class="math inline">\(\psi \in \text{Hom}(G_1,\,G_3)\)</span> 이다.</p>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_nth_roots_of_unit_and_Zn" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(Z_n\)</span> 과 <span class="math inline">\(\mathbb{Z}_n\)</span>)</strong></span> <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 는 <span class="math inline">\(Z_n\)</span> 을 <span class="math inline">\(z^n=1\)</span> 의 모든 복소해의 집합으로 정의하며 이는 곱셈 연산에 대해 군이다. 예를 들어 <span class="math inline">\(Z_3 = \{1,\,\omega,\,\omega^2\}\)</span>.</p>
+<p><span class="math inline">\(\mathbb{Z}_n=\{0, 1, 2, \ldots, n-1\}\)</span> 은 <span class="math inline">\(n\)</span> 을 법(mod)으로 하는 덧셈에 대해 닫혀 있는 군이다. <span class="math inline">\(\phi : Z_n \to \mathbb{Z}_n\)</span> 을 <span class="math inline">\(\phi(\omega^k) = k\)</span> 로 정의하면 <span class="math inline">\(\phi\)</span> 는 동형사상이며 따라서 <span class="math inline">\(Z_n \approx \mathbb{Z}_n\)</span> 이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_SO2_and_U1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.11 (<span class="math inline">\(SO(2)\)</span> 와 <span class="math inline">\(U(1)\)</span>)</strong></span> <span class="math inline">\(SO(2)\)</span> 는 2차원 평면에서의 회전 연산의 집합으로 이루어진 군이며 <span class="math inline">\(U(1) = \{e^{i\theta} : \theta\in \mathbb{R}\}\)</span> 이다. 반식</p>
+</div>
+</div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>kernel</strong> 과 <strong>상</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_homomorphism_kernel" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.6 (kernel)</strong></span> 동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 의 <strong>kernel</strong> <span class="math inline">\(\text{ker}(\phi)\)</span> 와 <span class="math inline">\(\text{im}(\phi)\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 4.7</strong></span> 준동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 의 <strong>kernel</strong> <span class="math inline">\(\text{ker}(\phi)\)</span> 와 <span class="math inline">\(\text{im}(\phi)\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-Group_kernel_and_image_of_homomorphism"><span class="math display">\[
 \begin{aligned}
 \ker(\phi) &amp;:= \{g\in G : \phi (g) = 1_{G'}\},\\[0.3em]
@@ -709,11 +795,10 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 </div>
 </div>
-</div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group-kernel_of_homomorphism" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.3</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 4.5</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(1_G \in \ker(\phi)\)</span>, <span class="math inline">\(1_{G'} \in \operatorname{im}(\phi)\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\ker (\varphi) \le G\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\operatorname{im}(\phi) \le G'\)</span></p>
@@ -741,9 +826,21 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 <p><br></p>
 </section>
-<section id="sec-Group_multplication_of_subset_of_group" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="sec-Group_multplication_of_subset_of_group"><span class="header-section-number">4.4.2</span> 군의 부분집합의 연산</h3>
-<p>곱 연산으로 정의된 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(X,\, Y \subset G\)</span> 이고(부분군이 아닌 부분집합이다) <span class="math inline">\(a\in G\)</span> 일 때, <span class="math inline">\(aX,\, Xa,\, XY\)</span> 를 다음과 같이 정의한다.</p>
+<section id="sec-Group_conjugacy_class_and_invariant_subgroup" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="sec-Group_conjugacy_class_and_invariant_subgroup"><span class="header-section-number">4.4.2</span> 켤레류와 불변부분군</h3>
+<p>앞으로의 사용을 위헤 군의 부분집합에 관련된 연산을 아래와 같이 정의한다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>군의 부분집합의 연산</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_equivalent_class" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.8</strong></span> 곱 연산으로 정의된 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(X,\, Y \subset G\)</span> 이고(부분군이 아닌 부분집합이다) <span class="math inline">\(a\in G\)</span> 일 때, <span class="math inline">\(aX,\, Xa,\, XY\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-Group_multiplication_of_subset_of_group"><span class="math display">\[
 \begin{aligned}
 aX &amp;:= \{ag: g\in G\}, \\[0.3em]
@@ -752,23 +849,26 @@ XY &amp;:= \{xy : x\in X,\, y\in Y\}
 \end{aligned}
 \tag{4.2}\]</span></span></p>
 <p>군의 정의에 의해 <span class="math inline">\(aX\subset G,\, XY \subset G\)</span> 라는 것을 알 수 있다.</p>
+</div>
+</div>
+</div>
 <p><br></p>
-</section>
-<section id="conjugacy-class" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="conjugacy-class"><span class="header-section-number">4.4.3</span> Conjugacy Class</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>동치관계와 동치류</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_equivalent_class" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.7 (동치관계와 동치류)</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 정의된 어떤 함수 <span class="math inline">\(f:X\times X \to \{0,\,1\}\)</span> 를 생각하자. <span class="math inline">\(f(x,\,y) = 1\)</span> 일 때 <span class="math inline">\(x \sim y\)</span> 라고 표기하며 다음 세 조건을 만족할 때 함수 <span class="math inline">\(f\)</span> 에 대해 <strong>동치관계(equivalent relation)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.9</strong></span> 집합 <span class="math inline">\(X\)</span> 에 대해 정의된 어떤 함수 <span class="math inline">\(f:X\times X \to \{0,\,1\}\)</span> 를 생각하자. <span class="math inline">\(f(x,\,y) = 1\)</span> 일 때 <span class="math inline">\(x \sim y\)</span> 라고 표기하며 다음 세 조건을 만족할 때 함수 <span class="math inline">\(f\)</span> 에 대해 <strong>동치관계(equivalent relation)</strong> 라고 한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(x \sim x\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x \sim y \implies y \sim x\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(x \sim y,\, y \sim z \implies x \sim z\)</span>.</p>
 <p><span class="math inline">\(x\in X\)</span> 에 대해 <span class="math inline">\(\{y\in X : y \sim x\}\)</span> 를 <span class="math inline">\(x\)</span> 에 대한 <strong>동치류(equivalece class)</strong> 라고 한다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -787,150 +887,241 @@ XY &amp;:= \{xy : x\in X,\, y\in Y\}
 <p>(<span class="math inline">\(3\)</span>) 모든 <span class="math inline">\(x\in X\)</span> 는 어떤 동치류에 포함되며, 각각의 동치류는 서로소이거나 동일하므로 <span class="math inline">\(X\)</span> 는 서로소인 동치류들의 합집합과 같다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>켤레와 켤레류</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_conjugacy_class" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.8 (Conjugate, Conjugacy Class)</strong></span> 군 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\(\exists g\in G,\, gag^{-1}=b\)</span> 일 때 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 는 서로 conjugate 라고 한다. 어떤 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(\{gag^{-1}:g\in G\}\)</span> 를 <span class="math inline">\(a\)</span> 에 의한 <strong>conjugacy class</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.10</strong></span> 군 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\(\exists g\in G,\, gag^{-1}=b\)</span> 일 때 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 는 서로 <strong>켤레 (conjugate)</strong> 라고 한다. 어떤 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(\{gag^{-1}:g\in G\}\)</span> 를 <span class="math inline">\(a\)</span> 에 의한 <strong>켤레류 (conjugacy class)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_conjugacy_and_equivalence_class" class="theorem">
 <p><span class="theorem-title"><strong>정리 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 conjugate 인 것은 동치관계이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-Group_equivalent_class" class="quarto-xref">정의&nbsp;<span>4.7</span></a> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(a=gbg^{-1}\)</span> 일 때 <span class="math inline">\(a \sim b\)</span> 라고 하자. <span class="math inline">\(a=aaa^{-1}\)</span> 이므로 <span class="math inline">\(a\sim a\)</span> 이다. <span class="math inline">\(a=gbg^{-1}\)</span> 이면 <span class="math inline">\(b=g^{-1}a(g^{-1})^{-1}\)</span> 이므로 <span class="math inline">\(a\sim b \implies b \sim a\)</span> 이다. <span class="math inline">\(a\sim b,\, b\sim c\)</span> 이면 <span class="math inline">\(a=gbg^{-1},\, b=g'cg'^{-1}\)</span> 이며 따라서 <span class="math inline">\(a=(gg')c(gg')^{-1}\)</span> 이므로 <span class="math inline">\(a\sim c\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-Group_equivalent_class" class="quarto-xref">정의&nbsp;<span>4.9</span></a> 를 생각하자. <span class="math inline">\(a,\,b\in G\)</span> 가 어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(a=gbg^{-1}\)</span> 일 때 <span class="math inline">\(a \sim b\)</span> 라고 하자. <span class="math inline">\(a=aaa^{-1}\)</span> 이므로 <span class="math inline">\(a\sim a\)</span> 이다. <span class="math inline">\(a=gbg^{-1}\)</span> 이면 <span class="math inline">\(b=g^{-1}a(g^{-1})^{-1}\)</span> 이므로 <span class="math inline">\(a\sim b \implies b \sim a\)</span> 이다. <span class="math inline">\(a\sim b,\, b\sim c\)</span> 이면 <span class="math inline">\(a=gbg^{-1},\, b=g'cg'^{-1}\)</span> 이며 따라서 <span class="math inline">\(a=(gg')c(gg')^{-1}\)</span> 이므로 <span class="math inline">\(a\sim c\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>집합 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(A\)</span> 의 부분집합 <span class="math inline">\(A_1,\,A_2,\ldots\)</span> 에 대해 <span class="math inline">\(A=\bigcup A_i\)</span> 이고 <span class="math inline">\(i\ne j\implies A_i\cap A_j=\varnothing\)</span> 일 때 <span class="math inline">\(A_1,\,A_2,\ldots\)</span> 가 <span class="math inline">\(A\)</span> 를 분할한다고 한다. <a href="#thm-Group_conjugacy_and_equivalence_class" class="quarto-xref">정리&nbsp;<span>4.5</span></a> 로부터 다음 결론은 자연스럽다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-Group_conjugacy_and_equivalent_class" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> 군 <span class="math inline">\(G\)</span> 는 conjugate 관계에 의해 분할된다.</p>
+<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> 군 <span class="math inline">\(G\)</span> 는 켤레 관계에 의해 분할된다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_properties_on_conjugacy_class" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.4</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 다음이 성립한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 항등원 <span class="math inline">\(i_G\)</span> 에 대해 <span class="math inline">\(E=\{i_G\}\)</span> 는 conjugacy class 이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 가 아벨군이면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g\}\)</span> 는 conjugacy class 이다.</p>
+<p><span class="theorem-title"><strong>명제 4.6</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) 항등원 <span class="math inline">\(i_G\)</span> 에 대해 <span class="math inline">\(E=\{i_G\}\)</span> 는 켤레류이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 가 아벨군이면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\{g\}\)</span> 는 켤레류이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1} = \{ghg^{-1}: h\in H\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
-<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 conjugacy class 일 때 <span class="math inline">\(\overline{K} = \{g^{-1}: g\in K\}\)</span> 도 conjugacy class 이다.</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 켤레류 일 때 <span class="math inline">\(\overline{K} = \{g^{-1}: g\in K\}\)</span> 도 켤레류이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 자명하며 (<span class="math inline">\(3\)</span>) 은 <a href="#exr-Arfken_17_1_4" class="quarto-xref">연습문제&nbsp;<span>4.3</span></a> 로 넘긴다.</p>
-<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(g\in K\)</span> 이면 <span class="math inline">\(g^{-1}\in \overline{K}\)</span> 이다. <span class="math inline">\((xgx^{-1})^{-1}=xg^{-1}x^{-1}\)</span> 이므로 <span class="math inline">\(g' \sim g \implies g'^{-1} \sim g^{-1}\)</span> 이다. 따라서 <span class="math inline">\(\overline{K}\)</span> 도 conjugacy class 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 자명하며 (<span class="math inline">\(3\)</span>) 은 <a href="#exr-Arfken_17_1_4" class="quarto-xref">연습문제&nbsp;<span>4.10</span></a> 로 넘긴다.</p>
+<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(g\in K\)</span> 이면 <span class="math inline">\(g^{-1}\in \overline{K}\)</span> 이다. <span class="math inline">\((xgx^{-1})^{-1}=xg^{-1}x^{-1}\)</span> 이므로 <span class="math inline">\(g' \sim g \implies g'^{-1} \sim g^{-1}\)</span> 이다. 따라서 <span class="math inline">\(\overline{K}\)</span> 도 켤레류이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_conjugacy_class_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(D_3\)</span> 군의 conjugace class)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 의 Caylay table 을 이용하여 <span class="math inline">\(D_3\)</span> 의 conjugace class 를 구해보자. 우선 <span class="math inline">\(\{E\}\)</span> 는 conjugace class 이다. <span class="math inline">\(A,\,B,\,C\)</span> 는 각각 스스로의 역원이며 <span class="math inline">\(D,\,F\)</span> 는 서로간의 역원이다. <span class="math inline">\(ABA^{-1}=ABA=C\)</span> 이므로 <span class="math inline">\(B\sim C\)</span> 이다. <span class="math inline">\(BAB^{-1}=A\)</span> 이므로 <span class="math inline">\(A\sim C\)</span> 이다. 이것을 반복해보면 <span class="math inline">\(\{A,\,B,\,C\}\)</span> 가 conjugacy class 임을 알 수 있다. 또한 <span class="math inline">\(AFA^{-1}=D\)</span> 이므로 <span class="math inline">\(F\sim D\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(D_3\)</span> 군에는 아래와 같은 <span class="math inline">\(3\)</span> 개의 conjugace class 가 존재한다.</p>
+<p><span class="theorem-title"><strong>예제 4.12 (<span class="math inline">\(D_3\)</span> 군의 켤레류)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 의 Caylay table 을 이용하여 <span class="math inline">\(D_3\)</span> 의 켤레류를 구해보자. 우선 <span class="math inline">\(\{E\}\)</span> 는 켤레류이다. <span class="math inline">\(A,\,B,\,C\)</span> 는 각각 스스로의 역원이며 <span class="math inline">\(D,\,F\)</span> 는 서로간의 역원이다. <span class="math inline">\(ABA^{-1}=ABA=C\)</span> 이므로 <span class="math inline">\(B\sim C\)</span> 이다. <span class="math inline">\(BAB^{-1}=A\)</span> 이므로 <span class="math inline">\(A\sim C\)</span> 이다. 이것을 반복해보면 <span class="math inline">\(\{A,\,B,\,C\}\)</span> 가 켤레류 임을 알 수 있다. 또한 <span class="math inline">\(AFA^{-1}=D\)</span> 이므로 <span class="math inline">\(F\sim D\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(D_3\)</span> 군에는 아래와 같은 <span class="math inline">\(3\)</span> 개의 켤레류가 존재한다.</p>
 <p><span class="math display">\[
 \{E\},\qquad \{A,\,B,\,C\},\qquad \{D,\,F\}.
 \]</span></p>
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>켤레 부분군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_conjugate_subgroup" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.9 (Conjugate subgroup)</strong></span> <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1}\)</span> 는 <span class="math inline">\(H\)</span> 에 의한 <strong>conjugate subgroup</strong> 이라고 한다.</p>
-</div>
+<p><span class="theorem-title"><strong>정의 4.11</strong></span> <span class="math inline">\(g\in G,\, H\le G\)</span> 일 때 <span class="math inline">\(gHg^{-1}\)</span> 는 <span class="math inline">\(H\)</span> 에 의한 <strong>켤레 부분군 (conjugate subgroup)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-Group_normal_subgroup" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.10 (정규부분군(불변부분군))</strong></span> <span class="math inline">\(N \le G\)</span> 이며 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}=N\)</span> 이면 <span class="math inline">\(N\)</span> 을 <span class="math inline">\(G\)</span> 의 <strong>정규부분군(normal subgroup)</strong>,<strong>불변 부분군(invariant subgroup)</strong> 혹은 <strong>normal devisor</strong> 라고 하고 <span class="math inline">\(N \trianglelefteq G\)</span> 라고 표기한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>불변부분군(정규부분군)</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_normal_subgroup" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.12</strong></span> <span class="math inline">\(N \le G\)</span> 이며 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}\subseteq N\)</span> 이면 <span class="math inline">\(N\)</span> 을 <span class="math inline">\(G\)</span> 의 <strong>불변 부분군(invariant subgroup)</strong>, <strong>정규부분군(normal subgroup)</strong> 혹은 <strong>normal devisor</strong> 라고 하고 <span class="math inline">\(N \trianglelefteq G\)</span> 라고 표기한다. <span class="math inline">\(N\)</span> 이 <span class="math inline">\(G\)</span> 의 진부분집합이며 <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <strong>진불변 부분군 (proper invariant subgroup)</strong> 혹은 <strong>진정규 부분군 (proper normal subgroup)</strong> 이라고 하고 <span class="math inline">\(N \triangleleft G\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
 <p><br></p>
+<p>다음은 정규분분군에 대한 중요한 동치관계이다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-Group_left_and_right_cosets_of_normal_subgroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.5</strong></span> 군 <span class="math inline">\(G\)</span> 의 부분군 <span class="math inline">\(N\)</span> 에 대해 다음은 동치이다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(N\trianglelefteq G\)</span> 이다.</p>
-<p> (<span class="math inline">\(2\)</span>) 임의의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gN = Ng\)</span> 이다.</p>
+<div id="thm-Group_equivalent_contitions_for_normal_subgroup" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.6</strong></span> 군 <span class="math inline">\(G\)</span> 의 부분군 <span class="math inline">\(N\)</span> 에 대해 다음은 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1} \subseteq N\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1} = N\)</span> 이다.</p>
+<p> (<span class="math inline">\(3\)</span>) 각각의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gN = Ng\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(x\in gN\)</span> 이면 어떤 <span class="math inline">\(n\in N\)</span> 에 대해 <span class="math inline">\(x=gn\)</span> 이며 <span class="math inline">\(x=gn=\left(gng^{-1}\right)g \in Ng\)</span> 이므로 <span class="math inline">\(gn\subset Ng\)</span> 이다. 같은 방법으로 <span class="math inline">\(Ng\subset gN\)</span> 임을 보일 수 있으며 따라서 <span class="math inline">\(gN=Ng\)</span> 이다.</p>
-<p>(<span class="math inline">\(2\implies 1\)</span>) <span class="math inline">\(gNg^{-1}= N\)</span> 이다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(gNg^{-1} \subseteq N\)</span> 이므로 <span class="math inline">\(N \subseteq gNg^{-1}\)</span> 임을 보이면 된다. <span class="math inline">\(n\in N\)</span> 에 대해 <span class="math inline">\(g^{-1}ng = n'\)</span> 인 <span class="math inline">\(N'\in N\)</span> 이 존재하며 따라서 <span class="math inline">\(n=gn'g^{-1}\in gNg^{-1}\)</span> 이다. 즉 <span class="math inline">\(N \subseteq gNg^{-1}\)</span> 이다.</p>
+<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(x\in gN\)</span> 이면 어떤 <span class="math inline">\(n\in N\)</span> 에 대해 <span class="math inline">\(x=gn\)</span> 이며 <span class="math inline">\(x=gn=\left(gng^{-1}\right)g \in Ng\)</span> 이므로 <span class="math inline">\(gn\subset Ng\)</span> 이다. 같은 방법으로 <span class="math inline">\(Ng\subset gN\)</span> 임을 보일 수 있으며 따라서 <span class="math inline">\(gN=Ng\)</span> 이다.</p>
+<p>(<span class="math inline">\(3\implies 1\)</span>) <span class="math inline">\(n\in N\)</span> 에 대해 <span class="math inline">\(gn=n'g\)</span> 를 만족하는 <span class="math inline">\(n'\in N\)</span> 이 존재한다. 따라서 <span class="math inline">\(gng^{-1}\in N\)</span> 이므로 <span class="math inline">\(gNg^{-1}\subseteq N\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_multiplication_of_cosets_of_invariant_subgroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.6</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 임의의 <span class="math inline">\(x,\, y\in G\)</span> 에 대해 <span class="math inline">\(xNyN = xyN\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 4.7</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 임의의 <span class="math inline">\(x,\, y\in G\)</span> 에 대해 <span class="math inline">\(xNyN = xyN\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(xn_1yn_2 = xy(y^{-1}n_1y)n_2\)</span> 이며 <span class="math inline">\(y^{-1}n_1y =n_1'\in N\)</span> 이므로 <span class="math inline">\(xn_1yn_2 = xyn_1'n_2 \in xyN\)</span> 이다. 즉 <span class="math inline">\(xNyN \subset xyN\)</span> 이다. 또한 <span class="math inline">\(1_G\in N\)</span> 이므로 <span class="math inline">\(xyn=x1_Gyn \in xNyN\)</span> 이다. 즉 <span class="math inline">\(xyN\subset xNyN\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_example_invariant_subgroup_alternating_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.13 (교대군)</strong></span> 교대군 <span class="math inline">\(A_n\)</span> 은 짝수개의 호환의 곱으로 표현되며 따라서 교대군 <span class="math inline">\(S_n\)</span> 의 불변 부분군이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_example_invariant_subgroup_product_of_invariant_subgroups" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.14 (불변부분군의 곱군)</strong></span> <span class="math inline">\(E\trianglelefteq G,\, F\trianglelefteq H\)</span> 일 때 <span class="math inline">\(E\otimes F \trianglelefteq G \otimes H\)</span> 이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_example_invariant_subgroup_product_derived_subgroup" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.15 (유도 부분군/교환자 부분군)</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(A=\{a^{-1}b^{-1}ab : a,\,b\in G\}\)</span> 에 의한 생성 부분군 <span class="math inline">\(\langle A \rangle\)</span> 을 <span class="math inline">\(G\)</span> 에 대한 <strong>유도 부분군 (derived subgroup)</strong> 혹은 <strong>교환자 부분군 (commutator subgroup)</strong> 이라고 한다. <a href="#prp-Group_generated_subgroup_is_subgroup" class="quarto-xref">명제&nbsp;<span>4.3</span></a> 에 의해 <span class="math inline">\(\langle A \rangle \le G\)</span> 이다. 이제 <span class="math inline">\(\langle A \rangle \trianglelefteq G\)</span> 임을 보이자. 정해진 <span class="math inline">\(a,\,b\in G\)</span> 와 임의의 <span class="math inline">\(g\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+g^{-1}(a^{-1}b^{-1}ab)g = (g^{-1}a^{-1}g) (g^{-1}b^{-1} g) (g^{-1}a g) (g^{-1}b g)
+\]</span></p>
+<p>이며 <span class="math inline">\(\overline{a} = g^{-1}a g,\, \overline{b} = g^{-1}b g\)</span> 라고 하면 <span class="math inline">\(\overline{a},\,\overline{b}\in G\)</span> 이며</p>
+<p><span class="math display">\[
+g^{-1}(a^{-1}b^{-1}ab)g  = \overline{a}^{-1}\overline{b}^{-1}\overline{a}\overline{b} \in \langle A \rangle
+\]</span></p>
+<p>이다. <span class="math inline">\(a_1,\ldots,\,a_n \in A\)</span> 와 <span class="math inline">\(\epsilon_1,\ldots,\,\epsilon_n \in \{\pm 1\}\)</span> 에 대해 <span class="math inline">\(g\in G\)</span> 일 때 <span class="math inline">\(g^{-1}a_ig\in G\)</span> 라면</p>
+<p><span class="math display">\[
+g^{-1}(a_1^{\epsilon_1}\cdots a_n^{\epsilon_n})g^{-1} = (g^{-1}a_1g)^{\epsilon_1} \cdots  (g^{-1}a_ng)^{\epsilon_n} \in \langle A \rangle
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(\langle A \rangle \trianglelefteq G\)</span> 이다.</p>
+</div>
+</div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-Group_simple_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.11 (단순군)</strong></span> <span class="math inline">\(\{1_G\}\)</span> 와 자기 자신을 제외한 불변부분군이 존재하지 않을 때 <span class="math inline">\(G\)</span> 를 <strong>단순군 (simple group)</strong> 이라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>단순군</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_simple_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.13</strong></span> <span class="math inline">\(\{1_G\}\)</span> 와 자기 자신을 제외한 불변부분군이 존재하지 않을 때 <span class="math inline">\(G\)</span> 를 <strong>단순군 (simple group)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_kernel_of_homomorphism_is_invariant_subgroup" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.6</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 <span class="math inline">\(\ker (\phi) \trianglelefteq G\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>정리 4.7</strong></span> <span class="math inline">\(\phi \in \text{Hom}(G,\,G')\)</span> 일 때 <span class="math inline">\(\ker (\phi) \trianglelefteq G\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(K = \ker(\phi)\)</span> 라고 하자. <span class="math inline">\(k\in K\)</span> 에 대해 <span class="math inline">\(\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g^{-1})=\phi(g)\phi(g^{-1})=1_{G'}\)</span> 이므로 <span class="math inline">\(gKg^{-1}=K\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(K = \ker(\phi),\, g\in G\)</span> 라고 하자. <span class="math inline">\(k\in K\)</span> 에 대해 <span class="math inline">\(\phi(gkg^{-1})=1_{G'}\)</span> 이므로 <span class="math inline">\(gKg^{-1}\subseteq K\)</span> 이다. 따라서 <a href="#def-Group_normal_subgroup" class="quarto-xref">정의&nbsp;<span>4.12</span></a> 에 따라 <span class="math inline">\(\ker (\phi )\trianglelefteq G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
-<section id="sec-Group_quotient_group" class="level3" data-number="4.4.4">
-<h3 data-number="4.4.4" class="anchored" data-anchor-id="sec-Group_quotient_group"><span class="header-section-number">4.4.4</span> 몫군</h3>
-<p><span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(l=|G|/|N|\)</span> 개의 <span class="math inline">\(N\)</span> 의 왼쪽 잉여류가 존재하며 이 잉여류 집합을 <span class="math inline">\(X_G=\{N,\, g_1N,\ldots,\, g_{l-1}N\}\)</span> 라고 쓸 수 있다. <a href="#prp-Group_multiplication_of_cosets_of_invariant_subgroup" class="quarto-xref">명제&nbsp;<span>4.6</span></a> 에 의해 <span class="math inline">\((g_iN)(g_jN)= g_ig_jN\)</span> 인 연산을 정의 할 수 있으며 이 때 <span class="math inline">\(N\)</span> 은 항등원 역할을 한다. <span class="math inline">\((g_iN)(g_i^{-1}N)=N\)</span> 이므로 <span class="math inline">\(g_iN\)</span> 에 대한 역원도 존재한다. 또한</p>
+<section id="sec-Group_quotient_group" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="sec-Group_quotient_group"><span class="header-section-number">4.4.3</span> 몫군</h3>
+<p><span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(l=|G|/|N|\)</span> 개의 <span class="math inline">\(N\)</span> 의 왼쪽 잉여류가 존재하며 이 잉여류 집합을 <span class="math inline">\(X_G=\{N,\, g_1N,\ldots,\, g_{l-1}N\}\)</span> 라고 쓸 수 있다. <a href="#prp-Group_multiplication_of_cosets_of_invariant_subgroup" class="quarto-xref">명제&nbsp;<span>4.7</span></a> 에 의해 <span class="math inline">\((g_iN)(g_jN)= g_ig_jN\)</span> 인 연산을 정의 할 수 있으며 이 때 <span class="math inline">\(N\)</span> 은 항등원 역할을 한다. <span class="math inline">\((g_iN)(g_i^{-1}N)=N\)</span> 이므로 <span class="math inline">\(g_iN\)</span> 에 대한 역원도 존재한다. 또한</p>
 <p><span class="math display">\[
 (g_iN)[(g_jN)(g_kN)] = (g_iN)(g_jg_kN)=g_ig_jg_kN = [(g_iN)(g_jN)](g_kN)
 \]</span></p>
 <p>이므로 연산의 결합법칙도 성립한다. 즉 <span class="math inline">\(X_G\)</span> 는 군이며 <span class="math inline">\(G/N\)</span> 으로 표기한다.</p>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>몫군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-Group_quotient_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.12 (몫군 (Groups))</strong></span> 군 <span class="math inline">\(G\)</span> 의 불변부분군 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(N\)</span> 의 모든 왼쪽 잉여류의 집합 <span class="math inline">\(\{N,\, g_1N,\ldots,\,g_nN\}\)</span> 에 <span class="math inline">\((g_1N)(g_2N)=g_1g_2N\)</span> 이라는 연산을 부여할 수 있으며 이 구조는 <span class="math inline">\(N\)</span> 을 항등원으로 갖고 <span class="math inline">\(gN\)</span> 에 대해 <span class="math inline">\(g^{-1}\)</span> 을 역원으로 갖는 군이 된다. 이렇게 정의된 군을 <span class="math inline">\(N\)</span> 에 의한 몫군이라고 하며 <span class="math inline">\(G/N\)</span> 으로 표기한다.</p>
+<p><span class="theorem-title"><strong>정의 4.14</strong></span> 군 <span class="math inline">\(G\)</span> 의 불변부분군 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(N\)</span> 의 모든 왼쪽 잉여류의 집합 <span class="math inline">\(\{N,\, g_1N,\ldots,\,g_nN\}\)</span> 에 <span class="math inline">\((g_1N)(g_2N)=g_1g_2N\)</span> 이라는 연산을 부여할 수 있으며 이 구조는 <span class="math inline">\(N\)</span> 을 항등원으로 갖고 <span class="math inline">\(gN\)</span> 에 대해 <span class="math inline">\(g^{-1}\)</span> 을 역원으로 갖는 군이 된다. 이렇게 정의된 군을 <span class="math inline">\(N\)</span> 에 의한 몫군이라고 하며 <span class="math inline">\(G/N\)</span> 으로 표기한다.</p>
 </div>
 </div>
 </div>
+<p>몫군에서 정규부분군 <span class="math inline">\(N\)</span> 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 <strong>normal divisor</strong> 라고 부르기도 한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_invariant_subgroup_is_a_kerel_to_homomorphism" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.8</strong></span> 군 <span class="math inline">\(G\)</span> 와 불변부분군 <span class="math inline">\(N \trianglelefteq G\)</span> 이 주어졌을 때 <span class="math inline">\(N\)</span> 을 kernel 로 하는 준동형사상이 존재한다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\pi : G \to G/N\)</span> 을 <span class="math inline">\(\pi (g) := gN\)</span> 로 정의하자. <span class="math inline">\(\pi(g_1g_2)= g_1g_2N = g_1Ng_2N = \pi(g_1)\pi(g_2)\)</span> 이므로 <span class="math inline">\(\pi \in \text{Hom}(G,\,G/N)\)</span> 이며 <span class="math inline">\(\ker (\pi)=N\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>위의 몫군에서 정규부분군 <span class="math inline">\(N\)</span> 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 <strong>normal divisor</strong> 라고 부르기도 한다.</p>
+</section>
+<section id="sec-Group_example_of_groups" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="sec-Group_example_of_groups"><span class="header-section-number">4.4.4</span> 여러가지 군</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_example_dihedral_group_DN" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.16 (정이면체군 <span class="math inline">\(D_n\)</span>)</strong></span> 정이면체군 <span class="math inline">\(D_n\)</span> 은 정 <span class="math inline">\(n\)</span>-각형의 대칭군이다. <span class="math inline">\(2\pi/n\)</span> 만큼의 회전 <span class="math inline">\(R\)</span> 과 반사 <span class="math inline">\(r\)</span> 에 의해 생성된다. 반사는 <span class="math inline">\(n\)</span> 이 홀수일때는 한 꼭지점과 이 꼭지점과 마주보는 모서리의 중심을 지나는 직선에 대한 반사이며 <span class="math inline">\(n\)</span> 이 짝수일때는 마주모는 꼭지점을 잇는 직선에 대한 반사와 마주보는 모서리 각각의 중앙을 잇는 직선에 대한 반사이다. <span class="math inline">\(0^\circ\)</span> 회전을 포함하여 <span class="math inline">\(n\)</span> 개의 회전과 <span class="math inline">\(n\)</span> 개의 반사가 존재한다. 이 군의 항등원을 <span class="math inline">\(I\)</span> 라고 하면 <span class="math inline">\(R^n = r^2 = I\)</span> 이다. <span class="math inline">\(D_n\)</span> 에서 <span class="math inline">\(rRr=R\)</span>, 즉 <span class="math inline">\(Rr= rR^{-1}\)</span> 이며 따라서 아래와 같이 <span class="math inline">\(2n\)</span> 개의 성분을 가진다.</p>
+<p><span class="math display">\[
+D_n = \{I,\,R,\ldots,\,R^{n-1},\, r,\,Rr,\ldots,\,R^{n-1}r\}
+\]</span></p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_example_quartenionic_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.17 (사원수군 <span class="math inline">\(\mathcal{Q}\)</span>)</strong></span> 해밀토는 2차원에서의 복소평면을 일반화하여 다음과 같은 규칙을 갖는 사원수 규칙을 만들었다.</p>
+<p><span class="math display">\[
+i^2=j^2=k^2=-1,\qquad ij=-ji = k,\, jk=-kj = i,\, ki=-ik = j.
+\]</span></p>
+<p>이 규칙에 대해</p>
+<p><span class="math display">\[
+\mathcal{Q} = \{\pm 1,\, \pm i,\, \pm j,\, \pm k\}
+\]</span></p>
+<p>는 군을 이루며 이를 <strong>사원수군(quatenionic group)</strong> 이라고 한다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_exmple_coexter_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.18 (콕서터 군)</strong></span> <span class="math inline">\(A=\{a_1,\ldots,\,a_k\}\)</span> 에 대해 <span class="math inline">\(a_i^2=1\)</span> 이며 <span class="math inline">\((a_ia_j)^{n_{ij}}=1\)</span> 인 <span class="math inline">\(n_{ij}\ge 2\)</span> 가 항상 존재한다고 하자. 이 때 <span class="math inline">\(A\)</span> 에 의해 생성되는 군을 콕서터 군이라고 한다. 콕서터 군에서 <span class="math inline">\(n_{ij}=n_{ji}\)</span> 임을 보이자. 우선 <span class="math inline">\((ab)^n=1\)</span> 일 때</p>
+<p><span class="math display">\[
+1 = b^2 = b(ab)^nb = baba\cdots ba = (ba)^nb^2=(ba)^n
+\]</span></p>
+</div>
+</div>
 <p><br></p>
 </section>
 <section id="sec-Group_class_multiplication" class="level3" data-number="4.4.5">
@@ -948,10 +1139,10 @@ K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g
 K_iK_j = \sum_k c_{ijk}K_k
 \tag{4.3}\]</span></span></p>
 <p>위 식은 <span class="math inline">\(K_iK_j\)</span> 를 계산 했을 때 <span class="math inline">\(K_k\)</span> 가 몇번 등장하는지를 표기하는 식이며 <span class="math inline">\(2K_1+3K_2\)</span> 라면 <span class="math inline">\(K_1\)</span> 이 <span class="math inline">\(2\)</span> 번 <span class="math inline">\(K_3\)</span> 가 <span class="math inline">\(3\)</span> 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.</p>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_conjugacy_class_multipliciation_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.11 (<span class="math inline">\(D_3\)</span> 군의 클래스 곱)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 과 <a href="#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.10</span></a> 을 이용하여보자.</p>
+<p><span class="theorem-title"><strong>예제 4.19 (<span class="math inline">\(D_3\)</span> 군의 클래스 곱)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 과 <a href="#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.12</span></a> 을 이용하여보자.</p>
 <p><span class="math display">\[
 K_1\{E\},\qquad K_2=\{A,\,B,\,C\},\qquad K_3=\{D,\,F\}
 \]</span></p>
@@ -967,8 +1158,83 @@ K_2K_2 = 3K_1+3K_3
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Zee_1_2_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.1 (Zee 1.2.2)</strong></span> <span class="math inline">\(n\ge 3\)</span> 에 대해 <span class="math inline">\(A_n\)</span> 은 3-cycle 에 의해 생성됨을 보여라. 즉 <span class="math inline">\(A_n\)</span> 의 모든 성분은 3-cycle 의 곱으로 표현된다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(a,\,b,\,c,\,d\)</span> 는 모두 다르다고 하자. <span class="math inline">\((a\,b)(a\,c) = (a\,c\,b)\)</span> 이며 <span class="math inline">\((a\,b)(c\,d)=(a\,b\,c)(b\,c\,d)\)</span> 이다. 즉 모든 두 호환의 곱은 3-cycle 의 곱으로 표현된다. 교대군은 짝수개의 호한의 곱이므로 3-cycle 의 곱으로 표현된다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_order_of_alternating_group" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.2</strong></span> <span class="math inline">\(|S_n|=n!\)</span> 이며 <span class="math inline">\(|A_n|=n!/2\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(S_n\)</span> 은 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지를 순서대로 한번씩 배치한는 방법이므로 <span class="math inline">\(|S_n|=n!\)</span> 이다. <span class="math inline">\(A_n\triangleleft S_n\)</span> 이다(<a href="#exm-Group_example_invariant_subgroup_alternating_group" class="quarto-xref">예제&nbsp;<span>4.13</span></a>). <a href="#exm-Group_permutation_group" class="quarto-xref">예제&nbsp;<span>4.1</span></a> 의 <span class="math inline">\(\text{sgn} : S_n \to \{\pm 1\}\)</span> 함수는 준동형 사상이며 <span class="math inline">\(\ker(\text{sgn})= A_n\)</span> 임을 쉽게 보일 수 있다.</p>
+<p><span class="math inline">\(S_n\)</span> 은 홀치환과 짝치환으로 분할된다. 홀치환을 <span class="math inline">\(X_n\)</span> 라고 하자. 임의의 고정된 호횐 <span class="math inline">\(\sigma \in S_n\)</span> 에 대해 <span class="math inline">\(\phi: A_n \to X_n\)</span> 을 <span class="math inline">\(\phi (x)= \sigma x\)</span> 로 정의하자. <span class="math inline">\(\sigma x_1 = \sigma x_2 \implies x_1 = x_2\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 단사이다. 임의의 <span class="math inline">\(y\in X_n\)</span> 에 대해 <span class="math inline">\(\sigma y\in A_n\)</span> 이며 <span class="math inline">\(\sigma^2 y = y\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 전사이다. 다라서 <span class="math inline">\(|A_n| = |X_n|\)</span> 이며 <span class="math inline">\(|S_n| = |A_n|+|X_n|=2|A_n|\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_Zee_1_2_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.3 (Zee 1.2.3)</strong></span> <span class="math inline">\(S_n\)</span> 이 <span class="math inline">\(A_{n+2}\)</span> 의 어떤 부분집합과 동형임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\sigma = (n+1, n+2)\in S_{n+2}\)</span> 에 대해 <span class="math inline">\(\phi:S_n \to A_{n+2}\)</span> 를 다음과 같이 정의한다.</p>
+<p><span class="math display">\[
+\phi (x) = \left\{\begin{array}{ll} x, &amp;\text{where } x\in A_n, \\ \sigma x,\qquad &amp;\text{where } x\notin A_n. \end{array}\right.
+\]</span></p>
+<p><span class="math inline">\(\sigma \notin S_n\)</span> 이므로 <span class="math inline">\(\sigma x = x\sigma\)</span> 이며 이를 이용하면 <span class="math inline">\(\sigma \in \text{Hom}(S_n,\, A_{n+2})\)</span> 임을 보일 수 있다. 또한 <span class="math inline">\(\phi\)</span> 는 단사이므로 <span class="math inline">\(S_n \approx \text{im}(\phi)\)</span> 이며 <span class="math inline">\(\text{im}(\phi)\le A_{n+2}\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_Zee_1_2_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.4 (Zee 1.2.8)</strong></span> <span class="math inline">\(A_4\)</span> 가 단순군이 아님을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+A_4 = \left\{\begin{array}{l} I,\\
+(1\,2)(1\,3),\, (1\,2)(1\,4),\, (1\,3)(1\,4),\, (2\,3)(2\,4), \\
+(1\,2)(2\,3),\, (1\,2)(2\,4),\, (1\,3)(3\,4),\, (2\,3)(3\,4), \\
+(1\,2)(3\,4),\, (1\,3)(2\,4),\, (1\,4)(2\,3)
+\end{array}\right \}
+\]</span></p>
+<p>이며 <span class="math inline">\(\{I,\, (1\,2)(3\,4),\, (1\,3)(2\,4),\, (1\,4)(2\,3)\}\)</span> 는 <span class="math inline">\(A_4\)</span> 의 진불변 부분군이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_Zee_1_2_12" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.5 (Zee 1.2.12)</strong></span> 군 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(f,\,g\in G\)</span> 일 때 일반적으로 <span class="math inline">\(fg\ne gf\)</span> 이다. 하지만 <span class="math inline">\(fg \sim gf\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(fg = g^{-1}(gf)g\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_Zee_1_1_13" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.6 (Zee 1.1.13)</strong></span> <span class="math inline">\(G\)</span> 가 차수가 짝수인 유한군일 때 항등원이 아니면서 제곱하면 항등원이 되는 원소를 항상 포함함을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x^2\ne 1_G\)</span> 이면 <span class="math inline">\(x\ne x^{-1}\)</span> 이다. <span class="math inline">\(G\)</span> 가 군이므로 <span class="math inline">\(x,\, x^{-1}\)</span> 짝은 항상 <span class="math inline">\(G\)</span> 에 포함되어야 한다. 만약 제곱하여 향등원이 되는 <span class="math inline">\(1_G\)</span> 뿐이라면 <span class="math inline">\(G\)</span> 의 차수는 홀수이어야 한다. 이로부터 홀수 차수의 유한군은 항등원을 제외하고 제곱하여 항등원이 되는 원소를 항상 홀수개 가져야 한다는 것을 알 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_Zee_1_1_16" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.7 (Zee 1.1.16)</strong></span> 콕서터 군(<a href="#exm-Group_exmple_coexter_group" class="quarto-xref">예제&nbsp;<span>4.18</span></a>) 에서 <span class="math inline">\(n_{ij}=2\)</span> 이며 <span class="math inline">\(a_ia_j=a_ja_i\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>콕서터 군의 정의에 의해 <span class="math inline">\(a_i^2 = a_j^2=1\)</span> 이다. 즉 <span class="math inline">\(a_i^{-1}=a_i\)</span> 이다. <span class="math inline">\((a_ia_j)^2=a_ia_ja_ia_j=1\)</span> 이며 각 변의 왼쪽에 <span class="math inline">\(a_i\)</span> 오른쪽에 <span class="math inline">\(a_j\)</span> 를 곱하면 <span class="math inline">\(a_ja_i=a_ia_j\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.1 (Arfken 17.1.1)</strong></span> <a href="#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span>4.8</span></a> 의 vierergrouppe 가 순환군인지 아벨군인지 여부를 확인하라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.8 (Arfken 17.1.1)</strong></span> <a href="#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span>4.8</span></a> 의 vierergrouppe 가 순환군인지 아벨군인지 여부를 확인하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -977,8 +1243,7 @@ K_2K_2 = 3K_1+3K_3
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.2 (Arfken 17.1.3 (Rearrangement theorem))</strong></span> <br></p>
-<p>군 <span class="math inline">\(\{e,\,a,\,b,\,\ldots,\,n\}\)</span> 에 대해 <span class="math inline">\(\{ae,\, aa,\, ab,\,ac,\,\ldots,\,an\}\)</span> 은 군의 모든 원소를 각각 한번씩마나 포함한다는 것을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.9 (Arfken 17.1.3 (Rearrangement theorem))</strong></span> 군 <span class="math inline">\(\{e,\,a,\,b,\,\ldots,\,n\}\)</span> 에 대해 <span class="math inline">\(\{ae,\, aa,\, ab,\,ac,\,\ldots,\,an\}\)</span> 은 군의 모든 원소를 각각 한번씩마나 포함한다는 것을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -987,8 +1252,8 @@ K_2K_2 = 3K_1+3K_3
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.3 (Arfken 17.1.4)</strong></span> <br></p>
-<p><a href="#prp-Group_properties_on_conjugacy_class" class="quarto-xref">명제&nbsp;<span>4.4</span></a> (<span class="math inline">\(3\)</span>) 를 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.10 (Arfken 17.1.4)</strong></span> <br></p>
+<p><a href="#prp-Group_properties_on_conjugacy_class" class="quarto-xref">명제&nbsp;<span>4.6</span></a> (<span class="math inline">\(3\)</span>) 를 증명하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -997,7 +1262,7 @@ K_2K_2 = 3K_1+3K_3
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.4 (Arfken 17.1.6)</strong></span> <span class="math inline">\(\boldsymbol{r}=(la,\,ma,\,na)\)</span> 에 동일한 원자가 위치한 정육면체 결정을 생각하자. 여기서 <span class="math inline">\(l,\,m,\,n\)</span> 은 정수이다.</p>
+<p><span class="theorem-title"><strong>연습문제 4.11 (Arfken 17.1.6)</strong></span> <span class="math inline">\(\boldsymbol{r}=(la,\,ma,\,na)\)</span> 에 동일한 원자가 위치한 정육면체 결정을 생각하자. 여기서 <span class="math inline">\(l,\,m,\,n\)</span> 은 정수이다.</p>
 <p>(<span class="math inline">\(a\)</span>) 각각의 데카르트 축은 4중 대칭축(4-fold symmetric axis)임을 보여라.</p>
 <p>(<span class="math inline">\(b\)</span>) 정육면 점군(point group) 은 정육면체를 유지하며 <span class="math inline">\(l=m=n=0\)</span> 에 위치한 원자를 이동시키지 않는 모든 연산(rotation, reflection, inversion)으로 이루어져 있다. 양과 음의 좌표축의 permutation 을 생각하여 정육면 점군이 얼마나 많은 원소로 이루어졌는지 알아보라.</p>
 </div>
@@ -1009,7 +1274,7 @@ K_2K_2 = 3K_1+3K_3
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.5 (Arfken 17.1.7)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>연습문제 4.12 (Arfken 17.1.7)</strong></span> &nbsp;</p>
 <div id="fig-Group-hexagon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-hexagon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1038,7 +1303,7 @@ K_2K_2 = 3K_1+3K_3
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.6 (Tinkham 2.1)</strong></span> 정사각형에 대한 대칭연산을 나타내는 대칭군 <span class="math inline">\(D_4\)</span> 를 생각하자. 이 군은 9개의 원소로 이루어져 있다.</p>
+<p><span class="theorem-title"><strong>연습문제 4.13 (Tinkham 2.1)</strong></span> 정사각형에 대한 대칭연산을 나타내는 대칭군 <span class="math inline">\(D_4\)</span> 를 생각하자. 이 군은 9개의 원소로 이루어져 있다.</p>
 <div id="fig-Group-D4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-D4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1083,7 +1348,7 @@ K_1= \{E\},\, K_2=\{A,\,B\},\, K_3=\{C,\,D\},\, K_4=\{F,\,H\},\, K_5=\{G\}
 \{E,\,G\},\, \{E,\,F,\,G,\,H\},\, \{E,\,A,\,B,\,G\},\, \{E,\,C,\,D,\,G\},\,D_4
 \]</span></p>
 <p>의 5 개이다.</p>
-<p>(<span class="math inline">\(f\)</span>) <a href="#exr-tinkham_2_8" class="quarto-xref">연습문제&nbsp;<span>4.10</span></a> 로부터 <span class="math inline">\(K_iK_h = K_jK_i\)</span> 이며 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 안다.</p>
+<p>(<span class="math inline">\(f\)</span>) <a href="#exr-tinkham_2_8" class="quarto-xref">연습문제&nbsp;<span>4.17</span></a> 로부터 <span class="math inline">\(K_iK_h = K_jK_i\)</span> 이며 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 안다.</p>
 <p><span class="math inline">\(K_1K_i=K_iK_1=K_i\)</span> 이므로 <span class="math inline">\(c_{1jk}=\delta_{jk}\)</span>, <span class="math inline">\(c_{i1k}=\delta_{ik}\)</span> 이다.</p>
 <p><span class="math inline">\(K_2K_2 = 2K_1+ 2K_5\)</span> 이므로 <span class="math inline">\(c_{221}= c_{225}=2\)</span>,</p>
 <p><span class="math inline">\(K_2K_3 = K_3K_2 = 2K_4\)</span> 이므로 <span class="math inline">\(c_{234}=c_{324}=2\)</span>,</p>
@@ -1099,7 +1364,7 @@ K_1= \{E\},\, K_2=\{A,\,B\},\, K_3=\{C,\,D\},\, K_4=\{F,\,H\},\, K_5=\{G\}
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.7 (Tinkham 2.5)</strong></span> 같은 클래스에 속하는 성분은 같은 차수(<a href="#def-Group_properties" class="quarto-xref">정의&nbsp;<span>4.2</span></a>) 를 가짐을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.14 (Tinkham 2.5)</strong></span> 같은 클래스에 속하는 성분은 같은 차수(<a href="#def-Group_properties" class="quarto-xref">정의&nbsp;<span>4.2</span></a>) 를 가짐을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1108,7 +1373,7 @@ K_1= \{E\},\, K_2=\{A,\,B\},\, K_3=\{C,\,D\},\, K_4=\{F,\,H\},\, K_5=\{G\}
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.8 (Tinkham 2.6)</strong></span> 차수가 4 와 2 인 순환군 사이에 준동형 사상이 존재함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.15 (Tinkham 2.6)</strong></span> 차수가 4 와 2 인 순환군 사이에 준동형 사상이 존재함을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1117,7 +1382,7 @@ K_1= \{E\},\, K_2=\{A,\,B\},\, K_3=\{C,\,D\},\, K_4=\{F,\,H\},\, K_5=\{G\}
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.9 (Tinkham 2.7)</strong></span> 군 <span class="math inline">\(G\)</span> 이 아벨군일 필요충분 조건은 <span class="math inline">\(\phi(x)=x^{-1}\)</span> 이 동형사상인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.16 (Tinkham 2.7)</strong></span> 군 <span class="math inline">\(G\)</span> 이 아벨군일 필요충분 조건은 <span class="math inline">\(\phi(x)=x^{-1}\)</span> 이 동형사상인 것임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1131,7 +1396,7 @@ xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.10 (Tinkham 2.8)</strong></span> <a href="#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.3</span></a> 에서 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 보여라. 즉 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.17 (Tinkham 2.8)</strong></span> <a href="#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.3</span></a> 에서 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 보여라. 즉 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1146,6 +1411,11 @@ xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Zee2016Group" class="csl-entry" role="listitem">
+Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -1,5 +1,5 @@
 ---
-title: "군의 기본적인 성질 1: 군"
+title: "군의 기본적인 성질"
 number-sections: true
 number-depth: 3
 crossref:
@@ -15,9 +15,12 @@ crossref:
 
 ### 군의 정의 {#sec-Group_group}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note  icon="false"}
+
+#### **군**
+
 ::: {#def-Group_groups}
-#### 군 (Groups)
+
 
 집합 $G$ 에 이항연산 $\cdot$ 이 정의되어 있으며, 아래 세 조건을 만족 할 때 $G$ 를 **군(Group)** 이라고 한다.
 
@@ -30,8 +33,6 @@ crossref:
 군을 이루는 집합과 연산을 합쳐 $(G,\cdot)$ 이라고 쓰기도 한다. 이 때 ($2$) 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. ($3$) 의 $a^{-1}$ 을 $a$ 의 역원 이라고 한다.
 :::
 :::
-
-</br>
 
 군에서의 연산 기호는 $a\circ b$, $a \cdot b$, $ab$, $a+b$ 처럼 다양한 기호가 사용 될 수 있다. 기호를 생략하는 $ab$ 와 같은 표기법도 많이 사용된다. 군을 정의할 때 집합과 연산을 묶어 $(G,\, \cdot)$ 와 같은 표기법도 흔히 사용된다. 
 
@@ -61,7 +62,9 @@ $g,\,x,\,y \in G$ 에 대해 다음이 성립한다.
 
 ### 군의 성질
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **중요한 군들**
 ::: {#def-Group_properties}
 
 $G$ 가 군이다.
@@ -74,17 +77,16 @@ $G$ 가 군이다.
 
 4. $g\in G$ 일 때 $g^n=1_G$ 가 되는 가장 작은 양의 정수 $n$ 을 $g$ 의 **차수(order)** 라고 한다. (군의 차수와 군의 성분의 차수는 다르다)
 
-5. 일반적으로 $ab\ne ba$ 이다. 그러나 $G$ 의 모든 원소에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
+5. $\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **아벨군 (abellian group)** 이라고 한다.
 
-6. $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 이 때 $G$ 는 $g$ 에 의해 생성된다고 한다.
+6. 어떤 $g\in G$ 에 대해 $\{g^k:k\in \Z\}=G$ 일 때 $G$ 를 **순환군 (cyclic group)** 이라고 하고 $G=\langle g \rangle$ 이라고 표기한다. 이 때 $G$ 는 $g$ 에 의해 생성된다고 한다.
    
-7. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다.
+7. $H \subset G$ 이며 $H$ 가 $G$ 와 같은 연산에 대해 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하고 $H \le G$ 라고 표기한다. $H$ 가 $G$ 와 일치하지 않을 때 $H$ 를 $G$ 의 **진부분군(proper subgroup)** 이라고 하고 $H< G$ 라고 표기한다.
 
 :::
 :::
 
-</br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-Group_how_to_be_subgroup}
 
@@ -111,16 +113,50 @@ $G$ 가 군이고 $H$ 가 $G$ 의 부분집합이며 같은 연산이 정의되�
 
 :::
 
-</br>
-
-위의 명제는 군의 부분집합이 부분군임을 증명할 때 사용될 수 있다.
+보통 ($c$) 를 이용하여 부분집합이 부분군임을 증명한다.
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+
+
+::: {.callout-note icon="false"}
+
+#### **생성 부분군**
+
+::: {#def-Group_generated_subgroup}
+ 
+$G$ 가 군이고 $A$ 가 $G$ 의 부분집합일 때 $A$ 의 원소와 각 원소의 역원의 유한곱으로 이루어진 집합을 $\langle A \rangle$ 로 표기하며 이를 $A$ 에 의한 **생성 부분군 (generated subgroup)** 이라고 한다.
+
+
+:::
+:::
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_generated_subgroup_is_subgroup}
+
+$A$ 가 군 $G$ 의 부분집합일 때 $\langle A \rangle \le G$ 이다.
+:::
+
+</div>
+
+::: {.proof}
+
+$\langle A \rangle \subseteq G$ 임은 자명하다. 이제 $x,\,y \in \langle A \rangle$ 에 대해 $xy^{-1}\in \langle A \rangle$ 임을 보이면 된다. $x,\,y$ 는 $A$ 의 원소와 그 역원의 유한곱이므로 $y^{-1}$ 역시 그렇고 $xy^{-1}$ 역시 그렇다. 따라서 $\langle A \rangle \le G$ 이다. $\square$
+
+
+:::
+
+
+</br>
+
+::: {.callout-note icon="false"}
+
+#### **곱군**
+
 ::: {#def-Group_product_group}
-#### 곱군 
-
+ 
 $G,\,F$ 가 군일 때 
 
 $$
@@ -133,29 +169,47 @@ $$
 (g_1,\,f_1)(g_2,\,f_2) = (g_1g_2,\,f_1f_2)
 $$
 
-로 정의하면 $G\otimes F$ 역시 군이 되며 $G \otimes F$ 를 $G$ 와 $F$ 에 의한 **곱군(direct product group)** 이라고 한다.
+로 정의하면 $G\otimes F$ 역시 군이 되며(@prp-Group_product_group) $G \otimes F$ 를 $G$ 와 $F$ 에 의한 **곱군(direct product group)** 이라고 한다.
 
 :::
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_product_group}
+
+군 $G,\,F$ 에 대해 곱군은 군이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+($1$) $g_1,\,g_2 \in G$, $f_1,\,f_2\in F$ 에 대해 $(g_1,\,f_1)(g_2,\,f_2)= (g_1g_2,\,f_1f_2)\in G\otimes F$ 이므로 연산에 대해 닫혀 있다. 
+
+($2$) $g\in G,\, f\in F$ 에 대해 $(g,\,f)(1_G,\,1_F)= (1_G,\, 1_F)(g,\,f)=(g,\,f)$ 이므로 $(1_G,\,1_F)$ 는 $G\otimes F$ 의 항등원이다. 
+
+($3$) $g\in G,\, f\in F$ 에 대해 $(g,\,f)(g^{-1},\,f^{-1}) = (g^{-1},\,f^{-1})(g,\,f)=(1_G,\,1_F)$ 이므로 역원이 존재한다. $\square$
+
 :::
 
 </br>
-
 
 ## 잉여류와 라그랑쥬 정리
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **잉여류**
+
 ::: {#def-Group_coset}
 
-#### 잉여류
-
-군 $G$ 와 부분군 $H$ 를 생각하자. $g\in G$ 에 대해 $gH = \{gh:h\in H\}$ 를 $g$ 가 속하는 $H$ 의 **왼쪽 잉여류(left coset)** 이라고 한다. 마찬가지로 $g$ 가 속하는 $H$ 의 **오른쪽 잉여류(right coset)** $Hg=\{hg:h\in H\}$ 를 정의 할 수 있다.
+군 $G$ 와 부분군 $H$ 를 생각하자. $g\in G$ 에 대해 $gH = \{gh:h\in H\}$ 를 $g$ 가 속하는 $H$ 에 대한 **왼쪽 잉여류(left coset)** 이라고 한다. 마찬가지로 $g$ 가 속하는 $H$ 에 대한 **오른쪽 잉여류(right coset)** $Hg=\{hg:h\in H\}$ 를 정의 할 수 있다.
 
 :::
 :::
 
-</br>
-
-잉여류로 여려가지를 증명하는데 왼쪽 잉여류를 쓰든 오른쪽 잉여류를 쓰든 상관 없지만 보통 왼쪽 잉여류를 많이 사용한다.
+앞으로 잉여류로 여려가지를 증명하는데 왼쪽 잉여류를 쓰든 오른쪽 잉여류를 쓰든 상관 없지만 보통 왼쪽 잉여류를 많이 사용한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -215,17 +269,20 @@ $G$ 의 모든 원소는 어떤 $H$ 의 잉여류에 포함되며, $H$ 의 잉�
 
 #### 대칭군과 치환군
 
-집합 $X$ 에 대해 $X \mapsto X$ 전단사 함수의 집합을 **대칭군(symmetric group)** 이라고 하고  $S_X$ 혹은 $\text{Sym}(X)$ 라고 표기한다. 특별히 $1$ 부터 $n$ 까지의 자연수의 집합에 대한 순환군은 $S_n$ 이라고 표기한다. $S_X$ 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 **순열군(permutation group)** 이라고 하고 순열군의 원소를 순열(permutation) 이라고 한다.
+집합 $X$ 에 대해 $X \mapsto X$ 전단사 함수의 집합을 **대칭군(symmetric group)** 이라고 하고  $S_X$ 혹은 $\text{Sym}(X)$ 라고 표기한다. 특별히 $1$ 부터 $n$ 까지의 자연수의 집합에 대한 순환군은 $S_n$ 이라고 표기한다. $S_X$ 가 함수 합성 연산에 대해 군이라는 것은 쉽게 보일 수 있다. 대칭군의 부분군울 **순열군(permutation group)** 이라고 하고 순열군의 원소를 **순열(permutation)** 이라고 한다.
 
-$f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x\ne a,\,b$ 일 때 $f(x)=x$ 인 경우 $f$ 를 **호환(transposition)** 이라고 한다. 모든 $\text{Sym}(X)$ 의 원소는 호환의 곱으로 표현 할 수 있다. $g\in \text{Sym}(X)$ 에 대해 호환의 곱은 유일하지 않고 곱해지는 호환의 갯수도 유일하지 않지만 호환의 갯수가 짝수인지 홀수인지는 불변이다. 짝수일 때를 짝순열, 홀수일 때는 홀순열이라고 하며 짝순열의 집합은 $\text{Sym}(X)$ 의 부분군으로 **교대군(alternating group)** 이라고 하며 $A_X$ 로 표현한다.
+($1$) $f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x\ne a,\,b$ 일 때 $f(x)=x$ 인 경우 $f$ 를 **호환(transposition)** 이라고 한다. 
+
+($2$) 모든 $\text{Sym}(X)$ 의 원소는 호환의 곱으로 표현 할 수 있다. $g\in \text{Sym}(X)$ 에 대해 호환의 곱은 유일하지 않고 곱해지는 호환의 갯수도 유일하지 않지만 호환의 갯수가 짝수인지 홀수인지는 불변이다. 함수 $\text{sgn}: \text{Sym}(X) \to \{1,\,-1\}$ 은 $\sigma\in \text{Sym}(X)$ 가 짝수개의 호환의 곱일 때 $\text{sgn}(\sigma)=+1$ 이며 홀수개이면 $\text{sgn}(\sigma)=-1$ 로 정의되는 함수이다. 
+
+($3$) 짝수일 때를 짝순열, 홀수일 때는 홀순열이라고 하며 짝순열의 집합은 $\text{Sym}(X)$ 의 부분군으로 **교대군(alternating group)** 이라고 하며 흔히 $A_X$ 로 표현한다.
 
 :::
 
 </div>
-</br>
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exm-Group_linear_group}
 
 #### 일반선형군과 특수선형군
@@ -234,9 +291,9 @@ $f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x
 :::
 
 </div>
-</br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-Group_orthogonal_group}
 
 #### 직교군과 특수직교군
@@ -246,9 +303,8 @@ $f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x
 :::
 
 </div>
-</br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_unitary_group}
 
@@ -259,10 +315,8 @@ $f\in \text{Sym}(X)$ 에서 $a,\,b\in X$ 에 대해 $f(a)=b,\, f(b)=a$ 이며 $x
 :::
 
 </div>
-</br>
 
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_rotation_and_orthogonal_group}
 
@@ -273,10 +327,8 @@ $n$ 차원 유클리드 공간에서의 회전은 $SO(n)$ 과 같다.
 :::
 
 </div>
-</br>
 
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_d3_multiplication_table}
 
@@ -330,6 +382,7 @@ $F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 ::: {#thm-Group_rearrangement_theorem}
 
 #### Group rearrangement theorem
+
 위에서 설명한 Caylay 테이블에서 제목행과 제목열을 제외한 테이블 내용에 대해 각 행과 각 열에서는 모든 군의 원소가 단 한번씩만 나온다.
 
 :::
@@ -394,10 +447,11 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 
 ### 동형사상 {#sec-Group_homomorphism}
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_homomorphism}
+::: {.callout-note icon="false"}
 
-#### 동형사상, 준동형사상, 자기동형사상
+#### **동형사상, 준동형사상, 자기동형사상**
+
+::: {#def-Group_homomorphism}
 
 두 군 $G,\,G'$ 사이에 어떤 함수 $\phi : G \to G'$ 이 존재하여
 
@@ -405,7 +459,7 @@ $$
 \forall a,\,b\in G,\, \phi (a)\phi(b)=\phi(ab)
 $$
 
-일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 쓴다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 쓴다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다. 그리고 $G \to G$ 동형사상을 **자기동형사상 (automorphism)** 이라고 하며 $\text{Aut}(G)$ 로 표기한다.
+일 때 $\phi$ 를 $G$ 에서 $G'$ 으로의 **준동형사상(homomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 준동형 사상의 집합을 $\text{Hom}(G,\,G')$ 이라고 표기한다. $\phi$ 가 전단사 함수 일 때 $\phi$ 를 **동형 사상(isomorphism)** 이라고 하며 $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}(G,\,G')$ 이라고 표기한다. 두 군 사이에 동형사상이 존재할 경우 이 두 군은 **동형 (isomorphic)** 이라고 하며 $G \approx G'$ 이라고 표기한다. 그리고 $G \to G$ 동형사상을 **자기동형사상 (automorphism)** 이라고 하며 $G$ 에서의 자기동형사상의 집합을 $\text{Aut}(G)$ 로 표기한다.
 :::
 :::
 
@@ -438,14 +492,45 @@ $$
 
 </div>
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_nth_roots_of_unit_and_Zn}
+
+#### $Z_n$ 과 $\Z_n$
+
+@Zee2016Group 는 $Z_n$ 을 $z^n=1$ 의 모든 복소해의 집합으로 정의하며 이는 곱셈 연산에 대해 군이다. 예를 들어 $Z_3 = \{1,\,\omega,\,\omega^2\}$. 
+
+$\Z_n=\{0, 1, 2, \ldots, n-1\}$ 은 $n$ 을 법(mod)으로 하는 덧셈에 대해 닫혀 있는 군이다. $\phi : Z_n \to \Z_n$ 을 $\phi(\omega^k) = k$ 로 정의하면 $\phi$ 는 동형사상이며 따라서 $Z_n \approx \Z_n$ 이다.
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_SO2_and_U1}
+
+#### $SO(2)$ 와 $U(1)$ 
+
+$SO(2)$ 는 2차원 평면에서의 회전 연산의 집합으로 이루어진 군이며 $U(1) = \{e^{i\theta} : \theta\in \R\}$ 이다. 반식
+
+:::
+
+</div>
+
+
+
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **kernel** 과 **상**
+
 ::: {#def-Group_homomorphism_kernel}
 
-#### kernel
 
-동형사상 $\phi \in \text{Hom}(G,\,G')$ 의 **kernel** $\text{ker}(\phi)$ 와 $\text{im}(\phi)$ 는 다음과 같이 정의된다.
+
+준동형사상 $\phi \in \text{Hom}(G,\,G')$ 의 **kernel** $\text{ker}(\phi)$ 와 $\text{im}(\phi)$ 는 다음과 같이 정의된다.
 
 $$
 \begin{aligned}
@@ -517,7 +602,17 @@ $$
 
 </br> 
 
-### 군의 부분집합의 연산 {#sec-Group_multplication_of_subset_of_group}
+
+### 켤레류와 불변부분군 {#sec-Group_conjugacy_class_and_invariant_subgroup}
+
+앞으로의 사용을 위헤 군의 부분집합에 관련된 연산을 아래와 같이 정의한다.
+
+::: {.callout-note icon="false"}
+
+#### **군의 부분집합의 연산**
+
+::: {#def-Group_equivalent_class}
+
 
 곱 연산으로 정의된 군 $G$ 를 생각하자. $X,\, Y \subset G$ 이고(부분군이 아닌 부분집합이다) $a\in G$ 일 때, $aX,\, Xa,\, XY$ 를 다음과 같이 정의한다.
 
@@ -531,14 +626,16 @@ $$ {#eq-Group_multiplication_of_subset_of_group}
 
 군의 정의에 의해 $aX\subset G,\, XY \subset G$ 라는 것을 알 수 있다.
 
+:::
+:::
+
 </br>
 
-### Conjugacy Class
+::: {.callout-note icon="false"}
 
-::: {.callout-note appearance="simple" icon="false"}
+#### **동치관계와 동치류**
+
 ::: {#def-Group_equivalent_class}
-
-#### 동치관계와 동치류
 
 집합 $X$ 에 대해 정의된 어떤 함수 $f:X\times X \to \{0,\,1\}$ 를 생각하자. $f(x,\,y) = 1$ 일 때 $x \sim y$ 라고 표기하며 다음 세 조건을 만족할 때 함수 $f$ 에 대해 **동치관계(equivalent relation)** 라고 한다. 
 
@@ -553,8 +650,7 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 :::
 :::
 
-</br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_equivalency_class}
 
@@ -581,17 +677,17 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **켤레와 켤레류**
+
 ::: {#def-Group_conjugacy_class}
-#### Conjugate, Conjugacy Class
 
-군 $G$ 에서 $a,\,b\in G$ 에 대해 $\exists g\in G,\, gag^{-1}=b$ 일 때 $a$ 와 $b$ 는 서로 conjugate 라고 한다. 어떤 $a\in G$ 에 대해 $\{gag^{-1}:g\in G\}$ 를 $a$ 에 의한 **conjugacy class** 라고 한다.
+군 $G$ 에서 $a,\,b\in G$ 에 대해 $\exists g\in G,\, gag^{-1}=b$ 일 때 $a$ 와 $b$ 는 서로 **켤레 (conjugate)** 라고 한다. 어떤 $a\in G$ 에 대해 $\{gag^{-1}:g\in G\}$ 를 $a$ 에 의한 **켤레류 (conjugacy class)** 라고 한다.
 :::
 :::
 
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_conjugacy_and_equivalence_class}
 
@@ -613,7 +709,7 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 
 ::: {#cor-Group_conjugacy_and_equivalent_class}
 
-군 $G$ 는 conjugate 관계에 의해 분할된다.
+군 $G$ 는 켤레 관계에 의해 분할된다.
 
 :::
 
@@ -625,32 +721,29 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 
 군 $G$ 에 대해 다음이 성립한다.
 
-&emsp;($1$) 항등원 $i_G$ 에 대해 $E=\{i_G\}$ 는 conjugacy class 이다.
+&emsp;($1$) 항등원 $i_G$ 에 대해 $E=\{i_G\}$ 는 켤레류이다.
 
-&emsp;($2$) $G$ 가 아벨군이면 모든 $g\in G$ 에 대해 $\{g\}$ 는 conjugacy class 이다.
+&emsp;($2$) $G$ 가 아벨군이면 모든 $g\in G$ 에 대해 $\{g\}$ 는 켤레류이다.
 
 &emsp;($3$) $g\in G,\, H\le G$ 일 때 $gHg^{-1} = \{ghg^{-1}: h\in H\}$ 는 $G$ 의 부분군이다.
 
-&emsp;($4$) $K$ 가 $G$ 의 conjugacy class 일 때 $\overline{K} = \{g^{-1}: g\in K\}$ 도 conjugacy class 이다.
+&emsp;($4$) $K$ 가 $G$ 의 켤레류 일 때 $\overline{K} = \{g^{-1}: g\in K\}$ 도 켤레류이다.
 :::
 </div>
 
 ::: {.proof}
 ($1$), ($2$) 는 자명하며 ($3$) 은 @exr-Arfken_17_1_4 로 넘긴다.
 
-($4$) $g\in K$ 이면 $g^{-1}\in \overline{K}$ 이다. $(xgx^{-1})^{-1}=xg^{-1}x^{-1}$ 이므로 $g' \sim g \implies g'^{-1} \sim g^{-1}$ 이다. 따라서 $\overline{K}$ 도 conjugacy class 이다. $\square$
+($4$) $g\in K$ 이면 $g^{-1}\in \overline{K}$ 이다. $(xgx^{-1})^{-1}=xg^{-1}x^{-1}$ 이므로 $g' \sim g \implies g'^{-1} \sim g^{-1}$ 이다. 따라서 $\overline{K}$ 도 켤레류이다. $\square$
 :::
 
-</br>
-
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_conjugacy_class_of_D3}
 
-#### $D_3$ 군의 conjugace class
+#### $D_3$ 군의 켤레류
 
-@exm-Group_d3_multiplication_table 의 Caylay table 을 이용하여 $D_3$ 의 conjugace class 를 구해보자. 우선 $\{E\}$ 는 conjugace class 이다. $A,\,B,\,C$ 는 각각 스스로의 역원이며 $D,\,F$ 는 서로간의 역원이다. $ABA^{-1}=ABA=C$ 이므로 $B\sim C$ 이다. $BAB^{-1}=A$ 이므로 $A\sim C$ 이다. 이것을 반복해보면 $\{A,\,B,\,C\}$ 가 conjugacy class 임을 알 수 있다. 또한 $AFA^{-1}=D$ 이므로 $F\sim D$ 임을 알 수 있다. 즉 $D_3$ 군에는 아래와 같은 $3$ 개의 conjugace class 가 존재한다.
+@exm-Group_d3_multiplication_table 의 Caylay table 을 이용하여 $D_3$ 의 켤레류를 구해보자. 우선 $\{E\}$ 는 켤레류이다. $A,\,B,\,C$ 는 각각 스스로의 역원이며 $D,\,F$ 는 서로간의 역원이다. $ABA^{-1}=ABA=C$ 이므로 $B\sim C$ 이다. $BAB^{-1}=A$ 이므로 $A\sim C$ 이다. 이것을 반복해보면 $\{A,\,B,\,C\}$ 가 켤레류 임을 알 수 있다. 또한 $AFA^{-1}=D$ 이므로 $F\sim D$ 임을 알 수 있다. 즉 $D_3$ 군에는 아래와 같은 $3$ 개의 켤레류가 존재한다.
 
 $$
 \{E\},\qquad \{A,\,B,\,C\},\qquad \{D,\,F\}.
@@ -660,37 +753,45 @@ $$
 
 </div></br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_conjugate_subgroup}
-#### Conjugate subgroup
+::: {.callout-note icon="false"}
 
-$g\in G,\, H\le G$ 일 때 $gHg^{-1}$ 는 $H$ 에 의한 **conjugate subgroup** 이라고 한다.
+#### **켤레 부분군**
+
+::: {#def-Group_conjugate_subgroup}
+
+
+$g\in G,\, H\le G$ 일 때 $gHg^{-1}$ 는 $H$ 에 의한 **켤레 부분군 (conjugate subgroup)** 이라고 한다.
 :::
 :::
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note  icon="false"}
+
+#### **불변부분군(정규부분군)**
+
 ::: {#def-Group_normal_subgroup}
 
-#### 정규부분군(불변부분군)
-
-$N \le G$ 이며 각각의 $g\in G$ 에 대해 $gNg^{-1}=N$ 이면 $N$ 을 $G$ 의 **정규부분군(normal subgroup)**,**불변 부분군(invariant subgroup)** 혹은 **normal devisor** 라고 하고 $N \trianglelefteq G$ 라고 표기한다.
-
+$N \le G$ 이며 각각의 $g\in G$ 에 대해 $gNg^{-1}\subseteq N$ 이면 $N$ 을 $G$ 의 **불변 부분군(invariant subgroup)**, **정규부분군(normal subgroup)** 혹은 **normal devisor** 라고 하고 $N \trianglelefteq G$ 라고 표기한다.
+$N$ 이 $G$ 의 진부분집합이며 $N \trianglelefteq G$ 일 때 **진불변 부분군 (proper invariant subgroup)** 혹은 **진정규 부분군 (proper normal subgroup)** 이라고 하고 $N \triangleleft G$ 로 표기한다.
 :::
 :::
 
 </br>
+
+다음은 정규분분군에 대한 중요한 동치관계이다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_left_and_right_cosets_of_normal_subgroup}
+::: {#thm-Group_equivalent_contitions_for_normal_subgroup}
 
 군 $G$ 의 부분군 $N$ 에 대해 다음은 동치이다.
 
-&emsp;($1$) $N\trianglelefteq G$ 이다.
+&emsp;($1$) 각각의 $g\in G$ 에 대해 $gNg^{-1} \subseteq N$ 이다. 
 
-&emsp;($2$) 임의의 $g\in G$ 에 대해 $gN = Ng$ 이다.
+&emsp;($2$) 각각의 $g\in G$ 에 대해 $gNg^{-1} = N$ 이다.
+
+&emsp;($3$) 각각의 $g\in G$ 에 대해 $gN = Ng$ 이다.
 
 :::
 
@@ -698,15 +799,15 @@ $N \le G$ 이며 각각의 $g\in G$ 에 대해 $gNg^{-1}=N$ 이면 $N$ 을 $G$ �
 
 ::: {.proof}
 
-($1 \implies 2$) $x\in gN$ 이면 어떤 $n\in N$ 에 대해 $x=gn$ 이며 $x=gn=\left(gng^{-1}\right)g \in Ng$ 이므로 $gn\subset Ng$ 이다. 같은 방법으로 $Ng\subset gN$ 임을 보일 수 있으며 따라서 $gN=Ng$ 이다.
+($1 \implies 2$) $gNg^{-1} \subseteq N$ 이므로 $N \subseteq gNg^{-1}$ 임을 보이면 된다. $n\in N$ 에 대해 $g^{-1}ng = n'$ 인 $N'\in N$ 이 존재하며 따라서 $n=gn'g^{-1}\in gNg^{-1}$ 이다. 즉 $N \subseteq gNg^{-1}$ 이다. 
 
-($2\implies 1$) $gNg^{-1}= N$ 이다.
+($2 \implies 3$) $x\in gN$ 이면 어떤 $n\in N$ 에 대해 $x=gn$ 이며 $x=gn=\left(gng^{-1}\right)g \in Ng$ 이므로 $gn\subset Ng$ 이다. 같은 방법으로 $Ng\subset gN$ 임을 보일 수 있으며 따라서 $gN=Ng$ 이다.
+
+($3\implies 1$) $n\in N$ 에 대해 $gn=n'g$ 를 만족하는 $n'\in N$ 이 존재한다. 따라서 $gng^{-1}\in N$ 이므로 $gNg^{-1}\subseteq N$ 이다. $\square$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-Group_multiplication_of_cosets_of_invariant_subgroup}
 
@@ -721,12 +822,67 @@ $N \trianglelefteq G$ 일 때 임의의 $x,\, y\in G$ 에 대해 $xNyN = xyN$ �
 $xn_1yn_2 = xy(y^{-1}n_1y)n_2$ 이며 $y^{-1}n_1y =n_1'\in N$ 이므로 $xn_1yn_2 = xyn_1'n_2 \in xyN$ 이다. 즉 $xNyN \subset xyN$ 이다. 또한 $1_G\in N$ 이므로 $xyn=x1_Gyn \in xNyN$ 이다. 즉 $xyN\subset xNyN$ 이다. $\square$
 :::
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_example_invariant_subgroup_alternating_group}
+
+#### 교대군
+
+교대군 $A_n$ 은 짝수개의 호환의 곱으로 표현되며 따라서 교대군 $S_n$ 의 불변 부분군이다.
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_example_invariant_subgroup_product_of_invariant_subgroups}
+
+#### 불변부분군의 곱군
+
+$E\trianglelefteq G,\, F\trianglelefteq H$ 일 때 $E\otimes F \trianglelefteq G \otimes H$ 이다. 
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_example_invariant_subgroup_product_derived_subgroup}
+
+#### 유도 부분군/교환자 부분군
+
+군 $G$ 에 대해 $A=\{a^{-1}b^{-1}ab : a,\,b\in G\}$ 에 의한 생성 부분군 $\langle A \rangle$ 을 $G$ 에 대한 **유도 부분군 (derived subgroup)** 혹은 **교환자 부분군 (commutator subgroup)** 이라고 한다. @prp-Group_generated_subgroup_is_subgroup 에 의해 $\langle A \rangle \le G$ 이다. 이제 $\langle A \rangle \trianglelefteq G$ 임을 보이자. 정해진 $a,\,b\in G$ 와 임의의 $g\in G$ 에 대해 
+
+$$
+g^{-1}(a^{-1}b^{-1}ab)g = (g^{-1}a^{-1}g) (g^{-1}b^{-1} g) (g^{-1}a g) (g^{-1}b g)
+$$
+
+이며 $\overline{a} = g^{-1}a g,\, \overline{b} = g^{-1}b g$ 라고 하면 $\overline{a},\,\overline{b}\in G$ 이며 
+
+$$
+g^{-1}(a^{-1}b^{-1}ab)g  = \overline{a}^{-1}\overline{b}^{-1}\overline{a}\overline{b} \in \langle A \rangle
+$$
+
+이다. $a_1,\ldots,\,a_n \in A$ 와 $\epsilon_1,\ldots,\,\epsilon_n \in \{\pm 1\}$ 에 대해 $g\in G$ 일 때 $g^{-1}a_ig\in G$ 라면 
+
+$$
+g^{-1}(a_1^{\epsilon_1}\cdots a_n^{\epsilon_n})g^{-1} = (g^{-1}a_1g)^{\epsilon_1} \cdots  (g^{-1}a_ng)^{\epsilon_n} \in \langle A \rangle 
+$$
+
+이다. 즉 $\langle A \rangle \trianglelefteq G$ 이다.
+
+:::
+
+</div>
+
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_simple_group}
+::: {.callout-note icon="false"}
 
-#### 단순군
+#### **단순군**
+
+::: {#def-Group_simple_group}
 
 $\{1_G\}$ 와 자기 자신을 제외한 불변부분군이 존재하지 않을 때 $G$ 를 **단순군 (simple group)** 이라고 한다.
 
@@ -736,6 +892,7 @@ $\{1_G\}$ 와 자기 자신을 제외한 불변부분군이 존재하지 않을 
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-Group_kernel_of_homomorphism_is_invariant_subgroup}
 
 $\phi \in \text{Hom}(G,\,G')$ 일 때 $\ker (\phi) \trianglelefteq G$ 이다.
@@ -746,7 +903,7 @@ $\phi \in \text{Hom}(G,\,G')$ 일 때 $\ker (\phi) \trianglelefteq G$ 이다.
 
 ::: {.proof}
 
-$K = \ker(\phi)$ 라고 하자. $k\in K$ 에 대해 $\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g^{-1})=\phi(g)\phi(g^{-1})=1_{G'}$ 이므로 $gKg^{-1}=K$ 이다. $\square$ 
+$K = \ker(\phi),\, g\in G$ 라고 하자. $k\in K$ 에 대해 $\phi(gkg^{-1})=1_{G'}$ 이므로 $gKg^{-1}\subseteq K$ 이다. 따라서 @def-Group_normal_subgroup 에 따라 $\ker (\phi )\trianglelefteq G$ 이다.  $\square$ 
 
 :::
 
@@ -764,18 +921,101 @@ $$
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **몫군**
+
 ::: {#def-Group_quotient_group}
-#### 몫군 (Groups)
 
 군 $G$ 의 불변부분군 $N$ 에 대해 $N$ 의 모든 왼쪽 잉여류의 집합 $\{N,\, g_1N,\ldots,\,g_nN\}$ 에 $(g_1N)(g_2N)=g_1g_2N$ 이라는 연산을 부여할 수 있으며 이 구조는 $N$ 을 항등원으로 갖고 $gN$ 에 대해 $g^{-1}$ 을 역원으로 갖는 군이 된다. 이렇게 정의된 군을 $N$ 에 의한 몫군이라고 하며 $G/N$ 으로 표기한다.
 
 :::
 :::
 
+몫군에서 정규부분군 $N$ 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 **normal divisor** 라고 부르기도 한다.
+
 </br>
 
-위의 몫군에서 정규부분군 $N$ 은 나눗셈의 제수(divisor) 역할을 수행한다고 볼 수 있다. 이런 이유로 정규부분군을 **normal divisor** 라고 부르기도 한다.
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_invariant_subgroup_is_a_kerel_to_homomorphism}
+
+군 $G$ 와 불변부분군 $N \trianglelefteq G$ 이 주어졌을 때 $N$ 을 kernel 로 하는 준동형사상이 존재한다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$\pi : G \to G/N$ 을 $\pi (g) := gN$ 로 정의하자. $\pi(g_1g_2)= g_1g_2N = g_1Ng_2N = \pi(g_1)\pi(g_2)$ 이므로 $\pi \in \text{Hom}(G,\,G/N)$ 이며 $\ker (\pi)=N$ 이다. $\square$
+
+
+:::
+
+
+</br>
+
+### 여러가지 군 {#sec-Group_example_of_groups}
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_example_dihedral_group_DN}
+
+#### 정이면체군 $D_n$ 
+
+정이면체군 $D_n$ 은 정 $n$-각형의 대칭군이다. $2\pi/n$ 만큼의 회전 $R$ 과 반사 $r$ 에 의해 생성된다. 반사는 $n$ 이 홀수일때는 한 꼭지점과 이 꼭지점과 마주보는 모서리의 중심을 지나는 직선에 대한 반사이며 $n$ 이 짝수일때는 마주모는 꼭지점을 잇는 직선에 대한 반사와 마주보는 모서리 각각의 중앙을 잇는 직선에 대한 반사이다. $0^\circ$ 회전을 포함하여 $n$ 개의 회전과 $n$ 개의 반사가 존재한다. 이 군의 항등원을 $I$ 라고 하면 $R^n = r^2 = I$ 이다. $D_n$ 에서 $rRr=R$, 즉 $Rr= rR^{-1}$ 이며 따라서 아래와 같이 $2n$ 개의 성분을 가진다.
+
+$$
+D_n = \{I,\,R,\ldots,\,R^{n-1},\, r,\,Rr,\ldots,\,R^{n-1}r\}
+$$
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_example_quartenionic_group}
+
+#### 사원수군 $\mathcal{Q}$ 
+
+해밀토는 2차원에서의 복소평면을 일반화하여 다음과 같은 규칙을 갖는 사원수 규칙을 만들었다.
+
+$$
+i^2=j^2=k^2=-1,\qquad ij=-ji = k,\, jk=-kj = i,\, ki=-ik = j.
+$$
+
+이 규칙에 대해
+
+$$
+\mathcal{Q} = \{\pm 1,\, \pm i,\, \pm j,\, \pm k\}
+$$
+
+는 군을 이루며 이를 **사원수군(quatenionic group)** 이라고 한다.
+
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_exmple_coexter_group}
+
+#### 콕서터 군
+
+
+$A=\{a_1,\ldots,\,a_k\}$ 에 대해 $a_i^2=1$ 이며 $(a_ia_j)^{n_{ij}}=1$ 인 $n_{ij}\ge 2$ 가 항상 존재한다고 하자. 이 때 $A$ 에 의해 생성되는 군을 콕서터 군이라고 한다. 콕서터 군에서 $n_{ij}=n_{ji}$ 임을 보이자. 우선 $(ab)^n=1$ 일 때
+
+$$
+1 = b^2 = b(ab)^nb = baba\cdots ba = (ba)^nb^2=(ba)^n
+$$
+
+
+:::
+
+</div>
 
 </br>
 
@@ -802,9 +1042,7 @@ $$ {#eq-Group_class_multiplication_rule}
 위 식은 $K_iK_j$ 를 계산 했을 때 $K_k$ 가 몇번 등장하는지를 표기하는 식이며 $2K_1+3K_2$ 라면 $K_1$ 이 $2$ 번 $K_3$ 가 $3$ 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.
 
 
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_conjugacy_class_multipliciation_of_D3}
 
@@ -826,13 +1064,148 @@ $$
 
 :::
 
-</div>
-</br>
+</div></br>
+
 
 ### 연습문제 {.unnumbered}
 
-
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Zee_1_2_2}
+#### Zee 1.2.2
+
+$n\ge 3$ 에 대해 $A_n$ 은 3-cycle 에 의해 생성됨을 보여라. 즉 $A_n$ 의 모든 성분은 3-cycle 의 곱으로 표현된다.
+:::
+
+</div>
+
+::: {.solution}
+
+$a,\,b,\,c,\,d$ 는 모두 다르다고 하자. $(a\,b)(a\,c) = (a\,c\,b)$ 이며 $(a\,b)(c\,d)=(a\,b\,c)(b\,c\,d)
+$ 이다. 즉 모든 두 호환의 곱은 3-cycle 의 곱으로 표현된다. 교대군은 짝수개의 호한의 곱이므로 3-cycle 의 곱으로 표현된다.
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_order_of_alternating_group}
+
+$|S_n|=n!$ 이며 $|A_n|=n!/2$ 임을 보여라. 
+:::
+
+</div>
+
+::: {.solution}
+
+$S_n$ 은 $1$ 부터 $n$ 까지를 순서대로 한번씩 배치한는 방법이므로 $|S_n|=n!$ 이다. $A_n\triangleleft S_n$ 이다(@exm-Group_example_invariant_subgroup_alternating_group). @exm-Group_permutation_group 의 $\text{sgn} : S_n \to \{\pm 1\}$ 함수는 준동형 사상이며 $\ker(\text{sgn})= A_n$ 임을 쉽게 보일 수 있다. 
+
+$S_n$ 은 홀치환과 짝치환으로 분할된다. 홀치환을 $X_n$ 라고 하자. 임의의 고정된 호횐 $\sigma \in S_n$ 에 대해 $\phi: A_n \to X_n$ 을 $\phi (x)= \sigma x$ 로 정의하자. $\sigma x_1 = \sigma x_2 \implies x_1 = x_2$ 이므로 $\phi$ 는 단사이다. 임의의 $y\in X_n$ 에 대해 $\sigma y\in A_n$ 이며 $\sigma^2 y = y$ 이므로 $\phi$ 는 전사이다. 다라서 $|A_n| = |X_n|$ 이며 $|S_n| = |A_n|+|X_n|=2|A_n|$ 이다. 
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_2_3}
+
+#### Zee 1.2.3
+$S_n$ 이 $A_{n+2}$ 의 어떤 부분집합과 동형임을 보여라. 
+:::
+
+</div>
+
+::: {.solution}
+
+$\sigma = (n+1, n+2)\in S_{n+2}$ 에 대해 $\phi:S_n \to A_{n+2}$ 를 다음과 같이 정의한다.
+
+$$
+\phi (x) = \left\{\begin{array}{ll} x, &\text{where } x\in A_n, \\ \sigma x,\qquad &\text{where } x\notin A_n. \end{array}\right.
+$$
+
+$\sigma \notin S_n$ 이므로 $\sigma x = x\sigma$ 이며 이를 이용하면 $\sigma \in \text{Hom}(S_n,\, A_{n+2})$ 임을 보일 수 있다. 또한 $\phi$ 는 단사이므로 $S_n \approx \text{im}(\phi)$ 이며 $\text{im}(\phi)\le A_{n+2}$ 이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_2_8}
+
+#### Zee 1.2.8 
+$A_4$ 가 단순군이 아님을 보여라.
+:::
+
+</div>
+
+::: {.solution}
+
+$$
+A_4 = \left\{\begin{array}{l} I,\\
+(1\,2)(1\,3),\, (1\,2)(1\,4),\, (1\,3)(1\,4),\, (2\,3)(2\,4), \\
+(1\,2)(2\,3),\, (1\,2)(2\,4),\, (1\,3)(3\,4),\, (2\,3)(3\,4), \\
+(1\,2)(3\,4),\, (1\,3)(2\,4),\, (1\,4)(2\,3)
+\end{array}\right \}
+$$
+
+이며 $\{I,\, (1\,2)(3\,4),\, (1\,3)(2\,4),\, (1\,4)(2\,3)\}$ 는 $A_4$ 의 진불변 부분군이다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_2_12}
+
+#### Zee 1.2.12
+군 $G$ 에서 $f,\,g\in G$ 일 때 일반적으로 $fg\ne gf$ 이다. 하지만 $fg \sim gf$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$fg = g^{-1}(gf)g$
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_1_13}
+
+### Zee 1.1.13
+
+$G$ 가 차수가 짝수인 유한군일 때 항등원이 아니면서 제곱하면 항등원이 되는 원소를 항상 포함함을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$x^2\ne 1_G$ 이면 $x\ne x^{-1}$ 이다. $G$ 가 군이므로 $x,\, x^{-1}$ 짝은 항상 $G$ 에 포함되어야 한다. 만약 제곱하여 향등원이 되는 $1_G$ 뿐이라면 $G$ 의 차수는 홀수이어야 한다. 이로부터 홀수 차수의 유한군은 항등원을 제외하고 제곱하여 항등원이 되는 원소를 항상 홀수개 가져야 한다는 것을 알 수 있다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_1_16}
+
+### Zee 1.1.16
+
+콕서터 군(@exm-Group_exmple_coexter_group) 에서 $n_{ij}=2$ 이며 $a_ia_j=a_ja_i$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+콕서터 군의 정의에 의해 $a_i^2 = a_j^2=1$ 이다. 즉 $a_i^{-1}=a_i$ 이다. $(a_ia_j)^2=a_ia_ja_ia_j=1$ 이며 각 변의 왼쪽에 $a_i$ 오른쪽에 $a_j$ 를 곱하면 $a_ja_i=a_ia_j$. 
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_17_1_1}
 #### Arfken 17.1.1
@@ -855,7 +1228,6 @@ $a^2=b^2 = (ab)^2 = e$ 이므로 순환군이 아니다.  $a(ab)=b,\, (ab)a = a$
 
 ::: {#exr-Arfken_17_1_3}
 #### Arfken 17.1.3 (Rearrangement theorem)
-</br>
 
 군 $\{e,\,a,\,b,\,\ldots,\,n\}$ 에 대해 $\{ae,\, aa,\, ab,\,ac,\,\ldots,\,an\}$ 은 군의 모든 원소를 각각 한번씩마나 포함한다는 것을 보여라.
 
