@@ -848,6 +848,33 @@ $E\trianglelefteq G,\, F\trianglelefteq H$ 일 때 $E\otimes F \trianglelefteq G
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
+::: {#exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4}
+
+#### Viergrouppe 와 $A_4$
+
+교대군 $A_4$ 는 다음과 같다.
+
+$$
+A_4 = \left\{\begin{array}{l} I,\,(123),\, (124),\, (132),\, (134), (142),\, (143),\, (234),\, (243)\\[0.3em]
+(12)(34),\, (13)(24),\, (14)(23)
+\end{array}\right \}
+$$ {#eq-Group_A4}
+
+여기서
+
+$$
+\{I,\,(12)(34),\, (13)(24),\, (14)(23)\}
+$$
+
+는 Viergrouppe (@exm-Group_viergrouppe) 와 동형이며 $A_4$ 의 정규부분군이다.
+
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-Group_example_invariant_subgroup_product_derived_subgroup}
 
 #### 유도 부분군/교환자 부분군
@@ -1067,7 +1094,7 @@ $$
 </div></br>
 
 
-### 연습문제 {.unnumbered}
+## 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1186,7 +1213,6 @@ $x^2\ne 1_G$ 이면 $x\ne x^{-1}$ 이다. $G$ 가 군이므로 $x,\, x^{-1}$ 짝
 
 :::
 
-
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Group_Zee_1_1_16}
@@ -1202,6 +1228,123 @@ $x^2\ne 1_G$ 이면 $x\ne x^{-1}$ 이다. $G$ 가 군이므로 $x,\, x^{-1}$ 짝
 ::: {.solution}
 
 콕서터 군의 정의에 의해 $a_i^2 = a_j^2=1$ 이다. 즉 $a_i^{-1}=a_i$ 이다. $(a_ia_j)^2=a_ia_ja_ia_j=1$ 이며 각 변의 왼쪽에 $a_i$ 오른쪽에 $a_j$ 를 곱하면 $a_ja_i=a_ia_j$. 
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_Zee_1_1_18}
+
+### Zee 1.1.18
+
+
+::: {.callout-note icon="false"}
+
+#### **embedding**
+
+::: {#def-Group_embedding_of_group}
+
+군 $G$ 에서 군 $F$ 로의 단사인 준동형사상 $\phi \in \text{Hom}(G,\,F)$ 가 존재할 때 $G$ 가 $F$ 로 embedding 된다고 한다. 당연히 $F$ 에는 $G$ 와 동형인 부분군이 존재한다.
+
+:::
+:::
+
+
+일반적으로, 군 $H$ 는 더 큰 군 $G$ 에 여러 방식으로 부분군으로 embedding 될 수 있다. 예를 들어 $A_4$ 는 $A_4 \subset S_4 \subset S_5 \subset S_6$ 경로를 따라 자연스럽게 $S_6$ 에 embedding될 수 있다. $A_4$ 를 $S_6$ 에 embedding 하는 다른 방법을 찾아보라. 힌트: 기하학을 생각하라!
+
+:::
+
+</div>
+
+::: {.solution}
+
+$A_4$ 는 정 4면체의 회전과 동형이며 정 4면체는 4개의 꼭지점과 6개의 변으로 이루어져 있다. 정 4 면체의 꼭지점을 각각 $1,\,2,\,3,\,4$ 라고 하고 변 $l_i$ 를
+
+$$
+l_1 = \overline{12},\quad l_2 = \overline{13},\quad l_3=\overline{14},\quad l_4 = \overline{23},\quad l_5=\overline{24},\quad l_6 = \overline{34}
+$$
+
+라고 하자. 4면를 회전시키는 것은 변을 치환하게 되므로 $\sigma\in A_4$ 와 $\tau \in S_6$ 사이에 관계를 갖게 된다. 이것을 $\rho : A_4 \to S_6$ 라고 하자.
+
+$A_4$ 는 @eq-Group_A4 이며 $\rho (I)$ 를 제외한 연산 결과는 다음과 같다.
+
+$$
+\begin{aligned}
+\rho ((123)) &= (142)(356), \\[0.3em]
+\rho ((124)) &= (153)(245), \\[0.3em]
+\rho ((132)) &= (124)(365), \\[0.3em]
+\rho ((134)) &= (145)(263), \\[0.3em]
+\rho ((142)) &= (135)(264), \\[0.3em]
+\rho ((143)) &= (154)(236), \\[0.3em]
+\rho ((234)) &= (123)(465), \\[0.3em]
+\rho ((243)) &= (132)(456), \\[0.3em]
+\rho ((12)(34)) &= (25)(34), \\[0.3em]
+\rho ((13)(24)) &= (16)(34), \\[0.3em]
+\rho ((14)(23)) &= (16)(25). \\[0.3em]
+\end{aligned}
+$$
+
+실제로 $\rho$ 가 하는 것은 $A_4$ 를 정사면체에 작용하는 것이고 변은 변환된 꼭지점에 대해 정해진다. 즉 군의 작용으로 $\rho \in \text{Hom}(A_4,\, S_6)$ 이며 $\ker \rho = \{I\}$ 이므로 단사이다.
+
+여담으로 @exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4 에서 언급했듯이 $A_4$ 는 Viergrouppe 와 동형인 정규부분군을 가진다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Zee_1_2_19}
+#### Zee 1.2.19
+
+$A_n$ 이 $S_n$ 의 유도 부분군(@exm-Group_example_invariant_subgroup_product_derived_subgroup) 임을 보여라.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$S_n$ 의 유도부분군은 $X=\{a^{-1}b^{-1}ab : a,\,b\in S_n\}$ 에 의해 생성되는 군이다. 여기서 $a\,\,b$ 가 홀순열이든 짝순열이든 $a^{-1}b^{-1}ab$ 는 짝순열이므로 $\langle X\rangle$ 은 $A_n$ 의 부분군이다. 이제 $A_n \subset \langle X \rangle$ 임을 보이면 된다. @exr-Zee_1_2_2 에 의해 $A_n$ 은 3-circle 에 의해 생성된다. 이 때
+
+$$
+(a\,b\,c) = (a\,b)(a\,c)(a\,b)^{-1}(a\,c)^{-1}
+$$
+
+이다. 즉 $A_n \subset \langle X\rangle$ 이다. 따라서 $A_n$ 은 $S_n$ 의 유도부분군이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Zee_1_2_20}
+#### Zee 1.2.20
+
+실변수 $x$ 에 대한 실함수의 집합에서 두 함수의 연산을 함수의 합성으로 정의한다면 군을 정의 할 수 있다. 즉 $(fg)(x) = f(g(x))$. 함수 $I(x) = x,\, A(x) = (1-x)^{-1}$ 은 차수 3 인 군을 정의함을 보여라. 여기에 $C(x) = x^{-1}$ 포함시키면 차수 6인 군을 생성함을 보여라.
+
+
+:::
+
+</div>
+
+::: {.proof}
+
+$B(x) = (AA)(x)$ 라고 하자.
+$$
+B(x) = \dfrac{1}{1-1/(1-x)}= \dfrac{x-1}{x},\quad AB(x) =BA(x) = I(x)
+$$
+
+이므로 $\{I,\,A,\,B\}$ 는 군이다.
+
+$C(x) = 1/x$ 를 포함시키면
+
+$$
+(AC)(x) =(CB)(x) = \dfrac{x}{x-1},\quad (CA)(x) = (BC)(x) = 1-x,\qquad,\, CC(x) =I(x)
+$$
+
+이므로 $\left\{I,\, 1-x,\, (x-1)/x,\, 1/x,\, x/(x-1),\, 1-x \right\}$ 로 이루어진 군이다.
+
+
+
+
 :::
 
 
@@ -1316,13 +1459,7 @@ $\bf{r}=(la,\,ma,\,na)$ 에 동일한 원자가 위치한 정육면체 결정을
 도 회전 대칭이 존재한다. 또한 서로 마주보는 모서리의 각각의 중심을 잇는 직선을 축으로 180$^\circ$ 회전 대칭이 존재한다. 또한 각 모서리를 중심으로 하는 180$^\circ$ 회전대칭도 존재한다.
 :::
 
-</br>
-
-
-## 연습문제 {.unnumbered}
-
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-tinkham_2_1}
 #### Tinkham 2.1 
