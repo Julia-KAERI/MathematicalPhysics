@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; 점군과 공간군 – 수리물리학</title>
+<title>7&nbsp; 점군과 공간군 – 수리물리학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../src/group/group_quantum1_schroedinger_equation_group.html" rel="next">
-<link href="../../src/group/group_representation1.html" rel="prev">
+<link href="../../src/group/group_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -132,7 +132,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_symmetry_group.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_symmetry_group.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -227,32 +227,32 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_representation1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span></a>
+  <a href="../../src/group/group_Lie1_SO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">\(SO(N)\)</span> 을 중심으로</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_symmetry_group.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum1_schroedinger_equation_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_Lie1_SO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">\(SO(N)\)</span> 을 중심으로</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -337,18 +337,18 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#결정-대칭-연산" id="toc-결정-대칭-연산" class="nav-link active" data-scroll-target="#결정-대칭-연산"><span class="header-section-number">6.1</span> 결정 대칭 연산</a>
+  <li><a href="#결정-대칭-연산" id="toc-결정-대칭-연산" class="nav-link active" data-scroll-target="#결정-대칭-연산"><span class="header-section-number">7.1</span> 결정 대칭 연산</a>
   <ul class="collapse">
-  <li><a href="#결정학적-점군-구성" id="toc-결정학적-점군-구성" class="nav-link" data-scroll-target="#결정학적-점군-구성"><span class="header-section-number">6.1.1</span> 결정학적 점군 구성</a></li>
-  <li><a href="#schoenflies-표기법" id="toc-schoenflies-표기법" class="nav-link" data-scroll-target="#schoenflies-표기법"><span class="header-section-number">6.1.2</span> Schoenflies 표기법</a></li>
+  <li><a href="#결정학적-점군-구성" id="toc-결정학적-점군-구성" class="nav-link" data-scroll-target="#결정학적-점군-구성"><span class="header-section-number">7.1.1</span> 결정학적 점군 구성</a></li>
+  <li><a href="#schoenflies-표기법" id="toc-schoenflies-표기법" class="nav-link" data-scroll-target="#schoenflies-표기법"><span class="header-section-number">7.1.2</span> Schoenflies 표기법</a></li>
   </ul></li>
-  <li><a href="#결정학적-점군" id="toc-결정학적-점군" class="nav-link" data-scroll-target="#결정학적-점군"><span class="header-section-number">6.2</span> 결정학적 점군</a>
+  <li><a href="#결정학적-점군" id="toc-결정학적-점군" class="nav-link" data-scroll-target="#결정학적-점군"><span class="header-section-number">7.2</span> 결정학적 점군</a>
   <ul class="collapse">
-  <li><a href="#단순-회전군" id="toc-단순-회전군" class="nav-link" data-scroll-target="#단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</a></li>
-  <li><a href="#고대칭군" id="toc-고대칭군" class="nav-link" data-scroll-target="#고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</a></li>
+  <li><a href="#단순-회전군" id="toc-단순-회전군" class="nav-link" data-scroll-target="#단순-회전군"><span class="header-section-number">7.2.1</span> 단순 회전군</a></li>
+  <li><a href="#고대칭군" id="toc-고대칭군" class="nav-link" data-scroll-target="#고대칭군"><span class="header-section-number">7.2.2</span> 고대칭군</a></li>
   </ul></li>
-  <li><a href="#hermann-morgain-표기볍" id="toc-hermann-morgain-표기볍" class="nav-link" data-scroll-target="#hermann-morgain-표기볍"><span class="header-section-number">6.3</span> Hermann-Morgain 표기볍</a></li>
-  <li><a href="#sec-Group_crystall_system_and_symmetry_operations" id="toc-sec-Group_crystall_system_and_symmetry_operations" class="nav-link" data-scroll-target="#sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">6.4</span> 결정계와 대칭</a>
+  <li><a href="#hermann-morgain-표기볍" id="toc-hermann-morgain-표기볍" class="nav-link" data-scroll-target="#hermann-morgain-표기볍"><span class="header-section-number">7.3</span> Hermann-Morgain 표기볍</a></li>
+  <li><a href="#sec-Group_crystall_system_and_symmetry_operations" id="toc-sec-Group_crystall_system_and_symmetry_operations" class="nav-link" data-scroll-target="#sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">7.4</span> 결정계와 대칭</a>
   <ul class="collapse">
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
@@ -358,9 +358,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_symmetry_group.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/group/group_introduction.html">군과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/group/group_symmetry_group.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></h1>
 </div>
 
 
@@ -389,16 +389,16 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="결정-대칭-연산" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="결정-대칭-연산"><span class="header-section-number">6.1</span> 결정 대칭 연산</h2>
+<section id="결정-대칭-연산" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="결정-대칭-연산"><span class="header-section-number">7.1</span> 결정 대칭 연산</h2>
 <p>결정은 unit cell 을 결정하는 primitive vector <span class="math inline">\(\boldsymbol{a}_1,\,\boldsymbol{a}_2,\,\boldsymbol{a}_3\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{T}=n_1\boldsymbol{a}_1+ n_2 \boldsymbol{a}_2 + n_3 \boldsymbol{a}_3,\qquad n_1,\,n_2,\,n_3\in \mathbb{Z}
 \]</span></p>
 <p>만큼 translation 시키는 연산 <span class="math inline">\(T_{n_1,n_2,n_3}\)</span> 에 대해 불변이다. 특정한 회전 역시 결정에 대해 불변인 연산 일 수 있다. 이렇게 어떤 주어진 결정 구조에 대해 불변인 연산을 그 결정에 대한 <strong>공간군 (space group of crystal)</strong> 이라고 한다. 그리고 공간군중에서 translation 을 <span class="math inline">\(\boldsymbol{0}\)</span> 으로 놓았을때의 연산을 그 결정에 대한 <strong>결정학적 점군(point symmetry of crystal)</strong> 라고 한다. 모두 32개의 점군과 230 개의 공간군이 존재한다는 것은 잘 알려져 있다(<span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span>, pp.&nbsp;51 의 참고 문헌) 결정이 아닌 분자에 대해 생각하자면 여기에는 무한히 많은 점군이 있을 수 있지만 우리가 실제 대면하는 분자의 대부분은 결정학적 점군에 포함된다.</p>
 <p><br></p>
-<section id="결정학적-점군-구성" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="결정학적-점군-구성"><span class="header-section-number">6.1.1</span> 결정학적 점군 구성</h3>
+<section id="결정학적-점군-구성" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="결정학적-점군-구성"><span class="header-section-number">7.1.1</span> 결정학적 점군 구성</h3>
 <p>주어진 결정에 대한 점군을 구성하는 것은 보통 다음의 순서로 한다.</p>
 <p> (<span class="math inline">\(1\)</span>) 원점을 지나는 축에 대한 회전 대칭(rotational symmetry)을 파악한다</p>
 <p> (<span class="math inline">\(2\)</span>) 원점을 포함하는 평면에 대한 거울상 대칭(reflection symmetry)을 파악한다.</p>
@@ -409,7 +409,7 @@ window.Quarto = {
 <p>모든 점군을 파악했다면 이제 Caylay table, 즉 group multiplication table 을 파악해야 한다. 여기에 대해 몇가지 사실이 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_properties_of_covering_operations_in_crystal" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.1 (연속 연산 규칙)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>명제 7.1 (연속 연산 규칙)</strong></span> <br></p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(R_{\boldsymbol{n}_2}(\theta_2) R_{\boldsymbol{n}_1}(\theta_1)= R_{\boldsymbol{n}_3}(\theta_3)\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\sigma_{\boldsymbol{n}_2}\sigma_{\boldsymbol{n}_1}= R_{\boldsymbol{n}_3}(\theta_3)\)</span>. <span class="math inline">\(\boldsymbol{n}_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 과 <span class="math inline">\(\boldsymbol{n}_2\)</span> 에 의해 결정되는 원점을 지나는 평면에 공통되는 직선의 방향이며 <span class="math inline">\(\theta_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 과 <span class="math inline">\(\boldsymbol{n}_2\)</span> 가 이루는 각의 두배이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\sigma_{\boldsymbol{n}_2}R_{\boldsymbol{n}_1}(\theta_1) = \sigma_{\boldsymbol{n}_3}\)</span>, <span class="math inline">\(\boldsymbol{n}_3\)</span> 는 <span class="math inline">\(\boldsymbol{n}_1\)</span> 벡터를 포함하는 평면으로 <span class="math inline">\(\boldsymbol{n}_2\)</span> 와 <span class="math inline">\(\theta_2/2\)</span> 만큼의 각을 가진다.</p>
@@ -419,7 +419,7 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_commutating_properties_of_covering_operations_in_crystal" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.2 (서로 commute 한 연산)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>명제 7.2 (서로 commute 한 연산)</strong></span> <br></p>
 <p> (<span class="math inline">\(1\)</span>) 같은 축에 대한 두 회전 연산,</p>
 <p> (<span class="math inline">\(2\)</span>) 서로 수직인 방향으로의 두 반사 연산,</p>
 <p> (<span class="math inline">\(3\)</span>) 서로 수직인 축에 대한 <span class="math inline">\(\pi\)</span> 회전,</p>
@@ -429,8 +429,8 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="schoenflies-표기법" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="schoenflies-표기법"><span class="header-section-number">6.1.2</span> Schoenflies 표기법</h3>
+<section id="schoenflies-표기법" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="schoenflies-표기법"><span class="header-section-number">7.1.2</span> Schoenflies 표기법</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -438,7 +438,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-Group_character_of_class" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.1 (Point group 에 대한 Schoenflies 표기법)</strong></span> 각 변환에 대해 대칭이 있을 때 아래와 같이 표기한다. 우선 <strong>주축 (principal axis)</strong> 을 정한다. 주축은 회전에 대해 대칭성이 가장 회전축이다.</p>
+<p><span class="theorem-title"><strong>정의 7.1 (Point group 에 대한 Schoenflies 표기법)</strong></span> 각 변환에 대해 대칭이 있을 때 아래와 같이 표기한다. 우선 <strong>주축 (principal axis)</strong> 을 정한다. 주축은 회전에 대해 대칭성이 가장 회전축이다.</p>
 <ul>
 <li><p><span class="math inline">\(E\)</span> : 항등 연산.</p></li>
 <li><p><span class="math inline">\(C_n\)</span> : <span class="math inline">\(2\pi/n\)</span> 회전 대칭.</p></li>
@@ -456,7 +456,7 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_interrelations_of_symmetry_elements" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.3 (대칭축과 면의 성질)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>명제 7.3 (대칭축과 면의 성질)</strong></span> <br></p>
 <p><strong>1a</strong> : 두 거울상 대칭면의 교점은 대칭축이며, 두 대칭면 사이의 각이 <span class="math inline">\(\pi/n\)</span> 일 때 <span class="math inline">\(n\)</span>-회 대칭이다.</p>
 <p><strong>1b</strong> : 거울상 대칭면이 <span class="math inline">\(n\)</span>-회 대칭축을 포함한다면 <span class="math inline">\(\pi/n\)</span> 의 각마다 다른 거울상 대울상 대칭면이 존재한다.</p>
 <p><strong>2a</strong> : 두개의 2-회 대칭축이 <span class="math inline">\(\pi/n\)</span> 의 각도를 가진다면 이 두 축에 대해 수직인 직선은 <span class="math inline">\(n\)</span>-회 대칭축이다.</p>
@@ -467,12 +467,12 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="결정학적-점군" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="결정학적-점군"><span class="header-section-number">6.2</span> 결정학적 점군</h2>
+<section id="결정학적-점군" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="결정학적-점군"><span class="header-section-number">7.2</span> 결정학적 점군</h2>
 <p>주축이 하나만 존재하는 경우를 <strong>단순 회전군(simple rotation group)</strong>, 여러개인 경우를 <strong>고대칭군 (group of the higher symmetry)</strong>라고 한다.(<span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span> 에서 사용하지만 다른곳에선 사용하지 않는 것 같다.) 주축이 없는 경우, 즉 대칭이 전혀 없는 경우는 <span class="math inline">\(C_\infty\)</span> 군이라고 표기한다.</p>
 <p><br></p>
-<section id="단순-회전군" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="단순-회전군"><span class="header-section-number">6.2.1</span> 단순 회전군</h3>
+<section id="단순-회전군" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="단순-회전군"><span class="header-section-number">7.2.1</span> 단순 회전군</h3>
 <p>단순 회전군을 도식화 하는데 <strong>평사 투영(streographic prjection)</strong> 방법이 많이 쓰이며 단순회전군에 대한 streographic projection 은 아래 그림과 같다.</p>
 <div id="fig-Group_streographic_projection_of_simple_point" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -480,7 +480,7 @@ window.Quarto = {
 <img src="figures/streographic_projections_simple_point_groups.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_streographic_projection_of_simple_point-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;6.1: 간단한 점군의 stereographic projections
+그림&nbsp;7.1: 간단한 점군의 stereographic projections
 </figcaption>
 </figure>
 </div>
@@ -498,7 +498,7 @@ window.Quarto = {
 <div id="tbl-Group_simple_rotational_group" class="info striped bordered quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_simple_rotational_group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.1: 단순회전군
+표&nbsp;7.1: 단순회전군
 </figcaption>
 <div aria-describedby="tbl-Group_simple_rotational_group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-info table-striped table-bordered caption-top table">
@@ -515,7 +515,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: center;"><span class="math inline">\(C_n\)</span></td>
-<td style="text-align: left;">주축에 대해 <span class="math inline">\(n\)</span> 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 <span class="math inline">\(C_1,\,C_2,\,C_3,\,C_4,\,C_6\)</span> 뿐이다. (<a href="#exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>)</td>
+<td style="text-align: left;">주축에 대해 <span class="math inline">\(n\)</span> 회 대칭만 존재하는 경우이다. 순환군으로 아벨군이다. 결정에서 가능한 것은 <span class="math inline">\(C_1,\,C_2,\,C_3,\,C_4,\,C_6\)</span> 뿐이다. (<a href="#exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="quarto-xref">연습문제&nbsp;<span>7.1</span></a>)</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span class="math inline">\(C_{nv}\)</span></td>
@@ -548,21 +548,21 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="고대칭군" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="고대칭군"><span class="header-section-number">6.2.2</span> 고대칭군</h3>
+<section id="고대칭군" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="고대칭군"><span class="header-section-number">7.2.2</span> 고대칭군</h3>
 <div id="fig-Group_tetrahedron_in_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_tetrahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/tetrahedron_in_cube.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_tetrahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;6.2: 정육면체 내부의 정사면체
+그림&nbsp;7.2: 정육면체 내부의 정사면체
 </figcaption>
 </figure>
 </div>
 <section id="t" class="level4">
 <h4 class="anchored" data-anchor-id="t"><span class="math inline">\(T\)</span></h4>
-<p>위의 <a href="#fig-Group_tetrahedron_in_cube" class="quarto-xref">그림&nbsp;<span>6.2</span></a> 와 같이 정육면체 내의 정사면체 <span class="math inline">\(abcd\)</span> 를 생각하자. 정육면체의 각 면은 <span class="math inline">\(x,\,y,\,z\)</span> 축 중 하나와 수직하며, 정육면체의 중심이 좌표계의 원점이라고 하자.</p>
+<p>위의 <a href="#fig-Group_tetrahedron_in_cube" class="quarto-xref">그림&nbsp;<span>7.2</span></a> 와 같이 정육면체 내의 정사면체 <span class="math inline">\(abcd\)</span> 를 생각하자. 정육면체의 각 면은 <span class="math inline">\(x,\,y,\,z\)</span> 축 중 하나와 수직하며, 정육면체의 중심이 좌표계의 원점이라고 하자.</p>
 <p>정사면체의 대칭 연산은 총 12개로 아래와 같다.</p>
 <ul>
 <li><span class="math inline">\(E\)</span> : 항등연산</li>
@@ -570,7 +570,7 @@ window.Quarto = {
 </li>
 <li><span class="math inline">\(8C_3\)</span> : 정육면체의 4개의 대각선에 대한 <span class="math inline">\(2\pi/3\)</span> 및 <span class="math inline">\(4\pi/3\)</span> 회전, 즉 8개의 <span class="math inline">\(C_3\)</span> 대칭</li>
 </ul>
-<p>각 연산에 대해 정사면체 <span class="math inline">\(abcd\)</span> 가 어떻게 변화하는지는 아래 <a href="#tbl-Group_T_elements" class="quarto-xref">표&nbsp;<span>6.2</span></a> 에 정리하였다. 이 테이블에서 <span class="math inline">\(C_{2x}\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 <span class="math inline">\(\pi\)</span> 회전에 대해 원래의 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 가 어느 위치로 변하는지를 순서대로 나열한 것이다. <span class="math inline">\(C_{3a}\)</span> 는 <span class="math inline">\(a\)</span> 에서 정사면체의 맞은편 면을 보았을 때의 시계방향으로 <span class="math inline">\(2\pi/3\)</span> 만큼 시계방향으로 회전시켰을때의 변화이며, <span class="math inline">\(C_{3a2}\)</span> 는 같은 방향에서 <span class="math inline">\(4\pi2\)</span> 만큼 시계방향으로 회전시켰을 때의 변화이다.</p>
+<p>각 연산에 대해 정사면체 <span class="math inline">\(abcd\)</span> 가 어떻게 변화하는지는 아래 <a href="#tbl-Group_T_elements" class="quarto-xref">표&nbsp;<span>7.2</span></a> 에 정리하였다. 이 테이블에서 <span class="math inline">\(C_{2x}\)</span> 는 <span class="math inline">\(x\)</span> 축에 대한 <span class="math inline">\(\pi\)</span> 회전에 대해 원래의 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 가 어느 위치로 변하는지를 순서대로 나열한 것이다. <span class="math inline">\(C_{3a}\)</span> 는 <span class="math inline">\(a\)</span> 에서 정사면체의 맞은편 면을 보았을 때의 시계방향으로 <span class="math inline">\(2\pi/3\)</span> 만큼 시계방향으로 회전시켰을때의 변화이며, <span class="math inline">\(C_{3a2}\)</span> 는 같은 방향에서 <span class="math inline">\(4\pi2\)</span> 만큼 시계방향으로 회전시켰을 때의 변화이다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|c } 
 \hline  
 $T$ & result \\ 
@@ -592,7 +592,7 @@ $C_{3d2}$ & $cabd$\\
 <div id="tbl-Group_T_elements" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.2: <span class="math inline">\(T\)</span> 의 성분
+표&nbsp;7.2: <span class="math inline">\(T\)</span> 의 성분
 </figcaption>
 <div aria-describedby="tbl-Group_T_elements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/T_elements.png" class="img-fluid figure-img" width="100">
@@ -621,7 +621,7 @@ $C3d2$ & $C_{3d2}$ & $C_{3a2}$ & $C_{3b2}$ & $C_{3c2}$ &  $C_{2z}$ &  $C_{3b}$ &
 <div id="tbl-Group_T_caylay_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.3: <span class="math inline">\(T\)</span> 의 Caylay table
+표&nbsp;7.3: <span class="math inline">\(T\)</span> 의 Caylay table
 </figcaption>
 <div aria-describedby="tbl-Group_T_caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/T_caylay_table.png" class="img-fluid figure-img" width="600">
@@ -660,7 +660,7 @@ E &amp;= \{E\},\\[0.3em]
 <img src="figures/octahedron_in_cube.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;6.3: Octahedron
+그림&nbsp;7.3: Octahedron
 </figcaption>
 </figure>
 </div>
@@ -684,8 +684,8 @@ E &amp;= \{E\},\\[0.3em]
 </section>
 </section>
 </section>
-<section id="hermann-morgain-표기볍" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="hermann-morgain-표기볍"><span class="header-section-number">6.3</span> Hermann-Morgain 표기볍</h2>
+<section id="hermann-morgain-표기볍" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="hermann-morgain-표기볍"><span class="header-section-number">7.3</span> Hermann-Morgain 표기볍</h2>
 <p>우리는 앞서 Schoenflies 표기법(이하 SC 표기법)으로 점군과 공간군에 대해 알아보았다. Schoenflies 표기법은 단일 분자의 대칭을 다루는 데 많이 사용되며 결정학에서는 Hermann-Morgain 표기법(이하 HM 표기법)을 훨씬 더 많이 사용하여 국제 X-선 결정 테이블 에서도 이 표기법을 사용한다. 우선 두 표기법을 비교하면 아래와 같다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ lcc} 
 \hline  
@@ -703,7 +703,7 @@ $n$-회 대칭축을 포함하는 위와 동등하지 않은 수직 반사면 & 
 <div id="tbl-Group_shoenflies_and_hermiann_mauguin_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_shoenflies_and_hermiann_mauguin_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.4: Schoenflies 표기법과 Hermann-Mauguin 표기법 비교
+표&nbsp;7.4: Schoenflies 표기법과 Hermann-Mauguin 표기법 비교
 </figcaption>
 <div aria-describedby="tbl-Group_shoenflies_and_hermiann_mauguin_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/shoenflies_and_hermann_mauguin_1.png" class="img-fluid figure-img" width="600">
@@ -716,12 +716,12 @@ $n$-회 대칭축을 포함하는 위와 동등하지 않은 수직 반사면 & 
 <li></li>
 </ul>
 </section>
-<section id="sec-Group_crystall_system_and_symmetry_operations" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">6.4</span> 결정계와 대칭</h2>
+<section id="sec-Group_crystall_system_and_symmetry_operations" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="sec-Group_crystall_system_and_symmetry_operations"><span class="header-section-number">7.4</span> 결정계와 대칭</h2>
 <div id="tbl-Group_crystall_system" class="striped bordered quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_crystall_system-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;6.5: 결정계에 따른 점군의 분류
+표&nbsp;7.5: 결정계에 따른 점군의 분류
 </figcaption>
 <div aria-describedby="tbl-Group_crystall_system-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-striped table-bordered caption-top table">
@@ -803,7 +803,7 @@ $n$-회 대칭축을 포함하는 위와 동등하지 않은 수직 반사면 & 
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Group_possible_Cn_symmetry_in_crystalline_solid" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.1</strong></span> 결정학적 점군에서 가능한 <span class="math inline">\(C_n\)</span> 군은 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 뿐임을 보이자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.1</strong></span> 결정학적 점군에서 가능한 <span class="math inline">\(C_n\)</span> 군은 <span class="math inline">\(n=1,\,2,\,3,\,4,\,6\)</span> 뿐임을 보이자.</p>
 </div>
 </div>
 <p><br></p>
@@ -1234,13 +1234,13 @@ Tinkham, M. 2012. <em>Group Theory and Quantum Mechanics</em>. Dover Books on Ch
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/group/group_representation1.html" class="pagination-link" aria-label="군과 표현">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span>
+      <a href="../../src/group/group_representation.html" class="pagination-link" aria-label="군과 표현">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/group/group_quantum1_schroedinger_equation_group.html" class="pagination-link" aria-label="군과 양자역학 I- 대칭과 슈뢰딩거 방정식군">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

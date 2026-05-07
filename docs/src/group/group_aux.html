@@ -207,32 +207,32 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_representation1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">군과 표현</span></span></a>
+  <a href="../../src/group/group_Lie1_SO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">\(SO(N)\)</span> 을 중심으로</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">군과 표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_symmetry_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum1_schroedinger_equation_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/group/group_Lie1_SO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">\(SO(N)\)</span> 을 중심으로</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -360,7 +360,7 @@ window.Quarto = {
 <p><br></p>
 <section id="sec-GroupAux-the_second_orthogonality_theorem_for_characters" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="sec-GroupAux-the_second_orthogonality_theorem_for_characters"><span class="header-section-number">11.1</span> Character 의 제 2 직교 정리</h2>
-<p>유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않은 기약표현의 개수를 <span class="math inline">\(N_R\)</span> 이라고 하고 Conjugacy class 개수를 <span class="math inline">\(N_C\)</span> 라고 하자. 우리는 앞서 <a href="group_representation1.html#eq-Group_inequality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>5.20</span></a> 를 통해 <span class="math inline">\(N_R\le N_C\)</span> 임을 보였다. 실제로는 <span class="math inline">\(N_R=N_C\)</span> 이며, 따라서 character table 은 정사각형이다. 이것을 증명하는 것은 다소 길고 다양한 개념들이 등장한다. 일단 아래의 character 의 제 2 직교 정리를 증명하고자 한다.</p>
+<p>유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않은 기약표현의 개수를 <span class="math inline">\(N_R\)</span> 이라고 하고 Conjugacy class 개수를 <span class="math inline">\(N_C\)</span> 라고 하자. 우리는 앞서 <a href="group_representation.html#eq-Group_inequality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>6.20</span></a> 를 통해 <span class="math inline">\(N_R\le N_C\)</span> 임을 보였다. 실제로는 <span class="math inline">\(N_R=N_C\)</span> 이며, 따라서 character table 은 정사각형이다. 이것을 증명하는 것은 다소 길고 다양한 개념들이 등장한다. 일단 아래의 character 의 제 2 직교 정리를 증명하고자 한다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-GroupAux_second_orthogonality_of_character" class="theorem">
 <p><span class="theorem-title"><strong>정리 11.1 (Character 의 제 2 직교 정리)</strong></span> 군 <span class="math inline">\(G\)</span> 의 기약 표현 <span class="math inline">\(D^{(i)}\)</span> 과 conjugacy class 의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 를 생각하자. <span class="math inline">\(K_i,\,K_j\)</span> 가 conjugacy class of <span class="math inline">\(G\)</span> 이고 <span class="math inline">\(\chi^{(k)}\)</span> 가 <span class="math inline">\(D^{(k)}\)</span> 에서의 character 일 때 다음이 성립한다.</p>
@@ -485,7 +485,7 @@ K_2 \ne \overline{K_1} \implies \Gamma(K_1,\, K_2; E) = 0 . \\
 <p><span class="math display">\[
 D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal{D}(K)
 \]</span></p>
-<p>이며, <a href="group_representation1.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 에 따라 <span class="math inline">\(\mathcal{D}\)</span> 는 항등행렬의 스칼라배이다. 곱해지는 스칼라값은 <span class="math inline">\(K\)</span> 에 따라 다를 수 있으므로</p>
+<p>이며, <a href="group_representation.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>6.2</span></a> 에 따라 <span class="math inline">\(\mathcal{D}\)</span> 는 항등행렬의 스칼라배이다. 곱해지는 스칼라값은 <span class="math inline">\(K\)</span> 에 따라 다를 수 있으므로</p>
 <p><span class="math display">\[
 \mathcal{D}(K) = c_K I
 \]</span></p>
@@ -515,7 +515,7 @@ D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal
 <p><span class="math display">\[
 \chi^{(\text{reg})}(K) = \sum_{i} d_i \chi^{(i)}(K) = \sum_i \chi^{(i)}(E) \chi^{(i)}(K)
 \]</span></p>
-<p>이므로 (<a href="group_representation1.html#exr-Group_regular_expression_1" class="quarto-xref">연습문제&nbsp;<span>5.7</span></a> )</p>
+<p>이므로 (<a href="group_representation.html#exr-Group_regular_expression_1" class="quarto-xref">연습문제&nbsp;<span>6.7</span></a> )</p>
 <p><span class="math display">\[
 \sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \sum_{i}\Gamma (K_1,\, K_2; E) \left(\chi^{(i)}(E)\right)^2 = \Gamma (K_1,\, K_2; E) |G|
 \]</span></p>
@@ -523,7 +523,7 @@ D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal
 <p><span class="math display">\[
 \sum_i\chi^{(i)}(K_1)\chi^{(i)}(K_2) = \Gamma (K_1,\, K_2; E) |G|\delta_{K_1, \overline{K_2}}
 \]</span></p>
-<p>이다. 또한 <a href="group_representation1.html#prp-Group_basic_properties_of_character" class="quarto-xref">명제&nbsp;<span>5.7</span></a> 로부터 <span class="math inline">\(\chi^{(i)}(K_1)=(\chi^{(i)}(\overline{K_1}))^\ast\)</span>, 즉 <span class="math inline">\(\chi^{(i)}(\overline{K_1}) = (\chi^{(i)}(K_1))^\ast\)</span> 임을 안다. 따라서</p>
+<p>이다. 또한 <a href="group_representation.html#prp-Group_basic_properties_of_character" class="quarto-xref">명제&nbsp;<span>6.7</span></a> 로부터 <span class="math inline">\(\chi^{(i)}(K_1)=(\chi^{(i)}(\overline{K_1}))^\ast\)</span>, 즉 <span class="math inline">\(\chi^{(i)}(\overline{K_1}) = (\chi^{(i)}(K_1))^\ast\)</span> 임을 안다. 따라서</p>
 <p><span class="math display">\[
 \sum_i \left(\chi^{(i)}(K_1)\right)^\ast \chi^{(i)}(K_2)= \Gamma (\overline{K_1},K_2;E)|G| \delta_{K_1,K_2}
 \]</span></p>
@@ -544,7 +544,7 @@ D(x^{-1})\mathcal{D}(K)D(x) = \dfrac{1}{|K|} \sum_{g\in K} D(x^{-1}gx)= \mathcal
 <p><span class="math display">\[
 |Z_{K_j} \rangle =\sqrt{\dfrac{|K_j|}{|G|}}\begin{bmatrix} \chi^{(1)}(K_j) \\ \vdots \\ \chi^{(N_R)}(K_j)\end{bmatrix}
 \]</span></p>
-<p>을 생각하자. <a href="#eq-thm_GroupAux_second_orthogonality_of_character" class="quarto-xref">식&nbsp;<span>11.1</span></a> 에 의해 <span class="math inline">\(\langle Z_{K_i}| Z_{K_j}\rangle = \delta_{ij}\)</span> 이므로 <span class="math inline">\(|Z_{K_1}\rangle, \ldots,\, |Z_{K_{N_R}}\rangle\)</span> 은 서로 직교하는 벡터이며, 따라서 <span class="math inline">\(N_C \le N_R\)</span> 이다. 우리는 이미 <a href="group_representation1.html#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>5.6</span></a> 로부터 <span class="math inline">\(N_R\le N_C\)</span> 임을 보았다. 따라서 <span class="math inline">\(N_C=N_R\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>을 생각하자. <a href="#eq-thm_GroupAux_second_orthogonality_of_character" class="quarto-xref">식&nbsp;<span>11.1</span></a> 에 의해 <span class="math inline">\(\langle Z_{K_i}| Z_{K_j}\rangle = \delta_{ij}\)</span> 이므로 <span class="math inline">\(|Z_{K_1}\rangle, \ldots,\, |Z_{K_{N_R}}\rangle\)</span> 은 서로 직교하는 벡터이며, 따라서 <span class="math inline">\(N_C \le N_R\)</span> 이다. 우리는 이미 <a href="group_representation.html#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>6.6</span></a> 로부터 <span class="math inline">\(N_R\le N_C\)</span> 임을 보았다. 따라서 <span class="math inline">\(N_C=N_R\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 

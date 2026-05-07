@@ -34,10 +34,10 @@ $$ {#eq-Group_2d_rotation_matrix}
 
 ### 미소 회전 {#sec-Group_infinitesimal_rotation}
 
-$|\theta| \ll 1$ 일 때 회전 행렬 $R(\theta)$ 는 다음과 같이 근사된다.
+미소각 $\theta$ 만큼의의 회전을 표현하는 행렬 $R(\theta)$ 는 다음과 같이 근사된다.
 
 $$
-R(\theta) \approx I +  A
+R(\theta) \approx I +  A.
 $$
 
 여기서 $I$ 는 항등행렬이며 $A$ 가 미소 회전(infinitesimal rotation)에 의한 변화를 기술하는 행렬이 된다. $A$ 에서는 $\theta$ 에 대한 2차항 이상의 항은 무시한다. $R$ 은 $SO(n)$ 연산자이므로 $R^T R=I$ 이어야 한다. $R=I+ A$ 에 대해 $R^T = I+A^T$ 이며, $\theta^2$ 이상을 무시하면
@@ -46,7 +46,14 @@ $$
 R^T R \approx I+ (A^T + A) + A^TA  \approx I+ (A^T+A)
 $$
 
-이다. $R^T R=I$ 조건에 의해 $A^T=-A$ 이어야 하며 이런 형태의 행렬을 **반대칭 행렬 (skew-symmetric matrix)** 이라고 한다. 이제 2차원의 경우를 보자. $\R^{2\times 2}$ 의 반대칭행렬은
+이다. $R^T R=I$ 조건에 의해 $A^T=-A$ 이어야 하며 이런 형태의 행렬을 **반대칭 행렬 (skew-symmetric matrix)** 이라고 한다. 또한 $R\approx I+A$ 에 대해
+
+$$
+R^{-1} = I-A
+$$
+
+
+이어야 함을 알 수 있다. 이제 2차원의 경우를 보자. $\R^{2\times 2}$ 의 반대칭행렬은
 
 $$
 \mathcal{J} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
@@ -168,9 +175,11 @@ $$ {#eq-Group_3d_rotation_using_angular_momentum_operator}
 
 우선 수학적 개념과 식을 소개한다.
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **교환연산자**
+
 ::: {#def-Group_commutator}
-#### 교환연산자
 
 정사각 행렬 $A,\,B$ 에 대해 
 
@@ -187,7 +196,7 @@ $$ {#eq-Group_commutator}
 
 아래 명제는 많은 교재에 나와 있으므로 증명은 생략한다.
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-Group_properties_of_J_and_commutator}
 
@@ -244,24 +253,56 @@ $$
 
 **3**. 항등원에 가까운, 즉 각각의 연속매개변수가 $0$ 에 가까운 두 성분을 생각한다. 즉 $g_1\approx I+A,\, g_2\approx I+B$. 그렇다면 $g_1g_2g_1^{-1}\approx I+B+[A,\,B]$ 이며 $[A,\,B]$ 로부터 항등원 근처의 군의 특성을 알 수 있다.
 
-**4**. **2** 에서와 같이 $B=i\sum_b \theta'_b T_b$ 로 놓고 $[A,\,B]$ 를 $\{T_c\}$ 의 선형결합으로 표현한다. 그렇다면 $[T_a,\,T_b] = if_{abc}T_c$ 의 관계를 얻게 되는데 이 때의 $f_{abc}$ 를 이 군의 **구조상수 (structure constant)** 라고 한다.
+**4**. **2** 에서와 같이 $B=i\sum_b \theta'_b T_b$ 로 놓고 $[A,\,B]$ 를 $\{T_c\}$ 의 선형결합으로 표현한다. 그렇다면 
+
+$$
+[T_a,\,T_b] = if_{abc}T_c
+$$ {#eq-Group_structure_constant_for_lie_algebra}
+
+의 관계를 얻게 되는데 이 때의 $f_{abc}$ 를 이 군의 **구조상수 (structure constant)** 라고 한다.
 
 
 생성자들의 교환 관계, 특히 구조상수가 리 대수(Lie algebra) 를 결정하며, 이 리 대수가 리 군(Lie group) 을 결정한다. 아직까지는 리 군과 리 대수 모두 모호하고 불확실하지만 이제 곧 익숙해질 것이다.
 
 </br>
 
-### 고차원 공간에서의 회전 {#sec-Group-rotations_in_higher_dimensional_space}
+### 리 군과 리 대수 {#sec-Group_lie_group_and_lie_algebra}
 
-$N\times N$ 행렬 $J_{(mn)}$ 을 다음과 같이 정의한다. (수학에서는 $J_{(mn)} = -i\mathcal{J}_{(mn)}$ 이 되도록 하는 $\mathcal{J}_{(mn)}$ 을 더 선호하긴 한다.)
+리 군과 리 대수는 수학적으로 다소 다른 구조이다. 군에서는 두 성분을 곱하여다른 요소를 얻는다. 대수(물론 군이 연속이라고 가정하면)에서는 두 성분에 대한 교환 연산자를 계산하여 대수 원소를 얻는다.
+
+이 둘을 구분하는데 앞서 다룬 회전은 좋은 예이다. 그 대수의 성분 $\mathcal{J}$ 는 실수 반대칭 행렬(혹은 에르미트 행렬이며)이며 곱셈에 대해 닫혀 있지 않지만 교환연산자에 대해서는 닫혀 있다. 
+
+리 대수는 다음과 같은 세가지 방식으로 설명될 수 있다.
+
+**1.** 리 대수는 $\{\mathcal{J}_i\}$ 에 의해 생성되는 벡터공간이다. 그러나 회전군에서는 회전의 선형결합은 아무 의미가 없다.
+
+**2.** 리 대수는 선형 벡터 공간 $V$ 과 아래의 성질을 만족하는 사상 $f : V \otimes V \to V$ 이 갖춰져 있는 구조로 이해 할 수 있다.
+$$
+f(A, B)= −f(B, A).
+$$
+
+
+**3.** 역사적으로, 리군과 리대수 사이의 관계는 베이커-캠벨-하우스도르프 공식(Baker-Campbell-Housdorff formula) 에 의해 암시되었다. 
 
 $$
-(J_{(mn)})_{jk} := -i(\delta_{mj}\delta_{nk} - \delta_{mk}\delta_{nj}) = -i\mathcal{J}_{(mn)}
+e^Ae^B=e^C,\qquad \text{where }C=A+B+\dfrac{1}{2}[A, B] + \dfrac{1}{12} ([A, [A, B]] +[B, [B, A]])+ \cdots .
+$$
+
+</br>
+
+### 고차원 공간에서의 회전 {#sec-Group-rotations_in_higher_dimensional_space}
+
+반대칭 $N\times N$ 행렬 $\mathcal{J}_{(mn)}$ 을 $m$ 행 $n$ 열은 $+1$, $n$ 행 $m$ 열은 $-1$, 나머지는 $0$ 인 행렬로 정의한다. 그리고 $J_{(mn)}=-\mathcal{J}_{(mn)}$ 으로 정의한다. 그렇다면 $J_{mn}$ 행렬의 $i$ 행 $j$ 열 값 $(J_{(mn)})^{ij}$ 혹은 $J_{mn}^{ij}$ 는 다음과 같다.
+
+
+
+$$
+(J_{(mn)})^{jk} := -i(\delta^{mj}\delta^{nk} - \delta^{mk}\delta^{nj}) = -i\mathcal{J}_{(mn)}
 $$ {#eq-Group_generators_for_SON}
 
 행렬 $J_{(mn)}$ 은 아래와 같은 성질을 가진다.
 
-&emsp; ($1$) $J_{(mn)}$ 은 반대칭 에르미트 행렬이며,
+&emsp; ($1$) $J_{(mn)}$ 은 반대칭 에르미트 행렬로 $J_{(mn)} = -J_{(nm)}$ 이며,
 
 &emsp; ($2$) $J_{(mm)} = 0$, 
 
@@ -273,9 +314,9 @@ $$
 A = i \sum_{m>n} \theta_{(mn)}J_{(mn)}
 $$
 
-라 놓을 수 있다. 즉 $\{J_{(mn)}: N\ge m>n \ge 1 \}$ 은 $SO(N)$ 의 generator 이다.
+라 놓을 수 있다. 즉 $\{J_{(mn)}: 1\le n < m \le N \}$ 은 $SO(N)$ 의 generator 이다.
 
-그런데 여기서 한가지 짚고 넘어야 할 것이 있다. 예를 들어 3차원에서 우리는 $x,\,y,\,z$ 축에 대한 회전에는 익숙한데 회전에 대한 생성자는 $J_{(12)},\, J_{(23)},\, J_{(31)}$ 이다. 3차원이야 그렇다고 하더라도 8차원에서는 어떠한가? 그런데 우리가 유의해야 할 것은 고차원에서의 회전은 한 축에 대한 회전이 아니라 한 2차원 평면에 대한 회전이다. 예를 들어 8차원에서 $3$ 번째 축에 대한 회전은 nonsense 이며 예를 들어 $3-7$ 평면에 대한 회전이 의미있는 것이다. 따라서 3차원에서의 $J_{(12)}$ 는 $z=x_3$ 축에 대한 회전이 된다. 
+그런데 여기서 한가지 짚고 넘어야 할 것이 있다. 예를 들어 3차원에서 우리는 $x,\,y,\,z$ 축에 대한 회전에는 익숙한데 이 회전에 대한 생성자는 각각 $J_{(23)},\, J_{(31)},\, J_{(12)}$ 이다. 3차원이야 그렇다고 하더라도 8차원에서는 어떠한가? 그런데 우리가 유의해야 할 것은 고차원에서의 회전은 한 축에 대한 회전이 아니라 한 2차원 평면에 대한 회전이다. 예를 들어 8차원에서 $3$ 번째 축에 대한 회전은 nonsense 이며 예를 들어 $3-7$ 평면에 대한 회전이 의미있는 것이다. 따라서 3차원에서의 $J_{(12)}$ 는 $z=x_3$ 축에 대한 회전이 된다. 
 
 </br>
 
@@ -308,6 +349,64 @@ A_{ij} &= \sum_{k}(J_{(mn)})_{ik}(J_{(pq)})_{kj}-(J_{(pq)})_{ik}(J_{(mn)})_{kj} 
 &= i\left[\delta_{mp}J_{(nq)} - \delta_{np}J_{(mq)} - \delta_{mq}J_{(np)} - \delta_{np}J_{(mp)}\right]_{ij}
 \end{aligned}
 $$
+
+:::
+
+$J_{(mn)}$ 을 인덱스 2개를 사용하지 않고 인덱스 하나만을 사용할 수 있다. $N$ 차원 회전에 대해 $N(N-1)/2$ 만큼의 인덱스가 필요한데, 예를 들어 $4$ 차원 회전의 경우
+
+$$
+(12)\leftrightarrow 1,\quad (13)\leftrightarrow 2,\quad (14)\leftrightarrow 3,\quad (23)\leftrightarrow 4,\quad (24)\leftrightarrow 5,\quad (34) \leftrightarrow 6
+$$
+
+으로 표현한다. 이 경우 @eq-Group_commutation_relation_for_SON 는 @eq-Group_structure_constant_for_lie_algebra 와 같이 $[T_a,\,T_b]=if_{abc}T_c$ 로 쓸 수 있다.
+
+</br>
+
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_zee_1_3_1}
+
+#### Zee 1.3.1
+
+3차원 유클리드 공간에서의 벡터 $\bf{p}=(p^1,\,p^2,\,p^3),\, \bf{q}=(q^1,\,q^2,\,q^3)$ 에 대해 $(p^2q^3,\, p^3q^1,\, p^1q^2)$ 는 벡터가 아님을 보여라. 반대로
+
+$$
+(p^2q^3-p^3q^2,\, p^3q^1-p^1q^3,\, p^1q^2-p^2q^1)
+$$
+
+은 벡터임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Group_zee_1_3_2}
+
+#### Zee 1.3.2
+
+$A=\theta_x \mathcal{J}_x + \theta_y \mathcal{J}_y + \theta_z \mathcal{J}_z$ 일 때 $R\approx I+A$ 에 대해 $\det R=1$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$$
+\det (I+A) = \det \left(\begin{bmatrix} 1 &\theta_z \mathcal{J}_z & -\theta_y \mathcal{J}_y \\ - \theta_z \mathcal{J}_z & 1 & \theta_x \mathcal{J}_x \\ \theta_y \mathcal{J}_y & - \theta_x\mathcal{J}_x & 1 \end{bmatrix}\right) = 1+ \theta_x^2 \mathcal{J}_x^2 + \theta_y^2 \mathcal{J}_y^2 + \theta_z^2 \mathcal{J}_z^2 
+$$
+
+이므로 $\theta_i^2$ 항을 무시하면 $\det (R)=1$.
 
 :::
 
@@ -461,12 +560,6 @@ $$
 $$
 \tr (\tilde{S}) = \sum_i \tilde{S}^{ii}= 0
 $$
-
-
-
-
-
-
 
 
 @prp-Group_dimension_of_subspace_of_rank2_tensor 로부터 $\R^n$ 에서 정의된 2차 텐서 $T$ 는 $\R^{N^2}$ 벡터로 아래와 같이 표현 할 수 있다는 것을 안다. 
