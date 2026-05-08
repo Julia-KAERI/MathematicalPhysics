@@ -636,7 +636,7 @@ $$
 
 </br>
 
-[직합표현과 직곱표현](group_representation1.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대한 direct product group $G_a \times G_b$ 가 존재한다고 하자. 그리고 $G_a$ 에 대한 표현 $\Gamma^{(a)}$ 과 $G_b$ 에 대한 표현 $\Gamma^{(b)}$ 에 대해 $D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}$ 를 $D^{(\Gamma^{(a)})}$ 와 $D^{(\Gamma^{(b)})}$ 의 직곱표현으로 정의하자. 즉, $x\in G_a,\, y\in G_b$ 에 대해
+[직합표현과 직곱표현](group_representation.qmd#sec-Group_direct_sum_representation_and_direct_product_representation) 을 참고하라. 군 $G$ 의 두 부분군 $G_a,\,G_b$ 에 대한 direct product group $G_a \times G_b$ 가 존재한다고 하자. 그리고 $G_a$ 에 대한 표현 $\Gamma^{(a)}$ 과 $G_b$ 에 대한 표현 $\Gamma^{(b)}$ 에 대해 $D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})}$ 를 $D^{(\Gamma^{(a)})}$ 와 $D^{(\Gamma^{(b)})}$ 의 직곱표현으로 정의하자. 즉, $x\in G_a,\, y\in G_b$ 에 대해
 
 $$
 D^{(\Gamma^{(a)}\otimes \Gamma^{(b)})} (xy):= D^{(\Gamma^{(a)})}(x)\otimes D^{(\Gamma^{(b)})}(y)

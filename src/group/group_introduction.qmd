@@ -410,9 +410,7 @@ see @exr-Arfken_17_1_3 $\square$
 
 </div>
 
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_viergrouppe}
 
@@ -442,6 +440,40 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 
 </div></br>
 
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_lorentz_group}
+#### 로런츠 군
+
+특수상대성이론에서 $x$ 축 방향으로 속도 $v$ 로 상대적으로 움직이는 두 관찰자 각각의 시공간 좌표계는 로런츠 변환으로 연관되어 있다.
+
+$$
+\begin{aligned}
+ct' &= \cosh \varphi ct + \sinh \varphi x, \\[0.3em]
+x' &= \sinh \varphi ct + \cosh \varphi x, \\[0.3em]
+y' &= y, \\[0.3em]
+z' &= z.
+\end{aligned}
+$$ {#eq-Group_lorentz_boost}
+
+여기서 $\varphi$ 를 부스트 각 이라고 하며 $\tanh \varphi = v/c$ 이다. (즉 $\cosh \varphi = 1/\sqrt{1-v^2/c^2}$, $\sinh \varphi = (v/c)\sqrt{1-v^2/c^2}$ 이다.) 변화가 없는 $y,\,z$ 를 무시하면 로런츠 변환은 다음과 같다.
+
+$$
+\begin{bmatrix} c't \\ x'\end{bmatrix} = \begin{bmatrix} \cosh \varphi & \sinh \varphi \\ \sinh\varphi & \cosh \varphi \end{bmatrix}.
+$$ {#eq-Group_lorentz_transform}
+
+두번째 관찰자가 첫번째 관찰자에 대해 부스트각 $\varphi_1$ 으로, 세번째 관찰자가 두번째 관찰자에 대해 부스트각 $\varphi_2$ 로 움직인다면(그리고 모두 다 $x$ 방향이라고 가정한다면) 첫번째 관찰자와 세번째 관찰자의 로런츠 변환은 $\varphi_1,\, \varphi_2$ 에 의해 아래와 같이 정해지며 군을 이룬다. 
+
+$$
+\begin{bmatrix} \cosh \varphi_2 & \sinh \varphi_2 \\ \sinh\varphi_2 & \cosh \varphi_2 \end{bmatrix}\begin{bmatrix} \cosh \varphi_1 & \sinh \varphi_1 \\ \sinh\varphi_1 & \cosh \varphi_1  \end{bmatrix} = \begin{bmatrix} \cosh (\varphi_1+\varphi_2) & \sinh  (\varphi_1+\varphi_2) \\ \sinh (\varphi_1+\varphi_2) & \cosh  (\varphi_1+\varphi_2) \end{bmatrix}
+$$
+
+
+
+:::
+
+</div>
 
 ## 동형사상과 Conjugacy Class
 
@@ -1091,12 +1123,14 @@ $$
 
 :::
 
+
+
 </div></br>
 
 
 ## 연습문제 {.unnumbered}
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Zee_1_2_2}
 #### Zee 1.2.2

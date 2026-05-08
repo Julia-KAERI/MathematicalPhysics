@@ -202,7 +202,7 @@ $$
 p(x) = \sum_{i=-1}^\infty p_ix^i,\qquad q(x) = \sum_{j=-2}^\infty q_j x^j.
 $$ {#eq-DE-ODE_series_form_of_coefficients_of_2nd_ode}
 
-Fuch 정리 (@thm-DE-ODE_fuchs_theorem) 에 의해 프로베니우스 해를 보장받기 위해서 $p(x)$ 와 $q(x)$ 의 첫번째 항이 위의 식과 같이 정해졌다. 이제 
+Fuch 정리 (@thm-DE_ODE_fuchs_theorem) 에 의해 프로베니우스 해를 보장받기 위해서 $p(x)$ 와 $q(x)$ 의 첫번째 항이 위의 식과 같이 정해졌다. 이제 
 
 $$
 y = \sum_{k=0}^\infty a_k x^{s+k}

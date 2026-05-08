@@ -851,7 +851,7 @@ $$
 
 </br>
 
-## 프로베니우스 방법을 이용한 급수해
+## 프로베니우스 방법을 이용한 급수해 {#sec-DE_ODE_Frobenius}
 
 ### 프로베니우스 방법 {#sec-DE_ODE_power_series_soluiton}
 
@@ -1041,7 +1041,7 @@ $${#eq-DE_ODE_singularity_2}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-fuchs}
+::: {#thm-DE_ODE_fuchs_theorem}
 
 #### Fuch 의 정리
 

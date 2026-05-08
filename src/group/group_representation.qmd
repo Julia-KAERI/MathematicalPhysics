@@ -187,8 +187,6 @@ $$
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 $K=[k]$ 라고 하자. 즉 $x\in K$ 는 어떤 $g\in G$ 에 대해 $x=gkg^{-1}$ 이다. $\tr (AB)= \tr (BA)$ 임을 이용한다.  
@@ -202,11 +200,12 @@ $$
 
 우리는 위의 @prp-Group_character_of_class 로부터 어떤 행렬 표현에서의 클래스 원소의 trace 는 클래스의 특징이 될 수 있다는 것을 알 수 있었다. 따라서 아래의 정의가 가능하다.
 
-</br>
+::: {.callout-note icon="false"}
 
-::: {.callout-note appearance="simple" icon="false"}
+#### **Character**
+
 ::: {#def-Group_character_of_class}
-#### Character
+
 
 군 $G$ 에 주어진 행렬표현 $D^{(r)}$ 에 대해 $g\in G$ 일 때 $\text{tr}(D^{(r)}(g))$ 를 $g$ 에 대한 표현 $r$ 에서의 **character** 라고 하고 $\chi^{(r)}(g)$ 라고 표기한다. 클래스 $K$ 에 대한 행렬의 trace 를 이 클래스의 **character** 라고 하고 $\chi^{(r)}(K)$ 라고 표기한다.
 
@@ -219,14 +218,14 @@ $$
 
 ::: {#exm-Group_character_of_identity}
 
-$E=\{i_G\}$ 는 자체로 conjugacy class 이다. $d\times d$ 행렬 표현 $D$ 에 대한 character $\chi$ 에 대해 $\chi(i_G)= \chi(E)=d$ 이다.
+$E=\{i_G\}$ 는 자체로 동치류이다. $d\times d$ 행렬 표현 $D$ 에 대한 character $\chi$ 에 대해 $\chi(i_G)= \chi(E)=d$ 이다.
 
 :::
 </div>
 </br>
 
 
-#### **동등한 표현** {#sec-Group_equivalent_representation}
+### 동등한 표현 {#sec-Group_equivalent_representation}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -246,8 +245,6 @@ $$
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 $D'\in \text{Hom}(G,\, GL_n(\F))$ 임을 보이면 된다. 
@@ -264,11 +261,11 @@ $$
 
 선형대수에서 행렬 $M$ 을 어떤 가역행렬 $S$ 에 대해 $SMS^{-1}$ 로 변환시키는 것을 **닮음 변환(similarity transform)** 이라고 하며 동일한 선형사상을 다른 기저에서 표현하는 것이라고 볼 수 있다. 마찬가지로 어떤 표현에 대한 닮음 변환은 두 변환이 본질적으로 같다는 의미이다. 따라서 두 표현에 동등하다는 이름을 붙일 수 있다.
 
-</br>
+::: {.callout-note icon="false"}
 
-::: {.callout-note appearance="simple" icon="false"}
+#### **동등한 표현**
+
 ::: {#def-Group_equivalent_representation}
-#### 동등한 표현
 
 @thm-Group_equivalent_representation 에서의 $D$ 와 $D'$ 의 관계가 성립한다면 이 두 표현은 **동등하다(be equivalent)** 라고 한다.
 
@@ -285,7 +282,7 @@ $$
 군 $G$ 의 두 표현이 동등하면 두 표현에 의한 클래스의 character 는 같다. 즉, 두 표현에 의한 클래스의 character 가 다르면 두 표현은 동등하지 않다.
 
 :::
-</div> </br>
+</div> 
 
 ::: {.proof}
 trivial
@@ -296,18 +293,29 @@ trivial
 
 ### 기약 표현과 유니터리 표현 {#sec-Group-irreducible_representation_and_unitary_representation}
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_irreducible_representation}
-#### 기약 표현
+::: {.callout-note icon="false"}
 
-군의 전체 성분에 대한 행렬 표현 각각이 어떤 유니터리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 군은 **reducible** 하다고 한다. reducible 하지 않은 표현을 **기약표현 (irreducible representation)** 이라고 한다.
+#### **기약표현/분해가능 표현**
+
+::: {#def-Group_irreducible_representation}
+
+
+군의 전체 성분에 대한 행렬 표현 각각이 어떤 유니터리 변환에 의해 더 작은 크기의 같은 형태의 블록 대각행렬로 분해된다면 이 표현을 **분해가능 표현(decomposable representation)** 하다고 한다. 분해 가능 하지 않은 표현을 **분해불가능 표현 (indecompossable representation)** 이라고 한다. 블록 대각행렬이 아닌 블록 상삼각행렬로 분해된다면 이 표현을 **가약표현(reducible representation)** 이라고 한다. 가약 표현이 아닌 행렬을 **기약표현(irreducible representation)** 이라고 한다.
+
 
 :::
+:::
+
+::: {.callout-warning icon="false"}
+
+#### 용어의 혼동
+즉 분해가능 $\implies$ 가약표현이며, 기약표현 $\implies$ 분해불가능 표현이며 역은 일반적으로 성립하지 않는다. 그러나 물리학에서 다루는 리군이나 유한군에서는 기약표현은 분해불가능 표현임이 증명되어 있다([Maschke 정리](https://ko.wikipedia.org/wiki/마슈케의_정리)). 그리고 대부분의 물리학 교재에서는 분해가능 표현이란 말 대신 기약 표현이라는 용어를 사용하므로 여기서도 기약표현이라는 용어를 사용하도록 한다.
+
 :::
 
 </br>
 
-아래 명제는 기약 표현의 정의상 자명하다.
+아래 명제는 기약표현의 정의상 자명하다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -320,16 +328,16 @@ trivial
 </div></br>
 
 
-군 $G$ 의 어떤 표현 $D^{(r)}\in \text{Hom}(G,\, GL_n(\F))$ 를 생각하자. 어떤 유니터리 변환에 의해 군의 모든 성분에 대한 행렬 표현이 동시에 같은 형태, 즉 같은 크기의 부분행렬들로 분해된다면 이 행렬표현은 reducible 하다. 
+군 $G$ 의 어떤 표현 $D^{(r)}\in \text{Hom}(G,\, GL_n(\F))$ 를 생각하자. 어떤 유니터리 변환에 의해 군의 모든 성분에 대한 행렬 표현이 동시에 같은 형태, 즉 같은 크기의 부분행렬들로 분해된다면 이 행렬표현은 분해가능하다. 
 
-이 블록 대각 행렬이 각각 $n_1 \times n_1, \ldots,\, n_m \times n_m$ 형태의 정사각 행렬이라고 하자. 그리고 $D^{(r_i)}(g)$ 가 $U^{(r)} (g)$ 의 $i$ 번째 블록대각행렬 즉 $n_i \times n_i$ 행렬을 취한다고 하자. 
+이 블록 대각 행렬이 각각 $n_1 \times n_1, \ldots,\, n_m \times n_m$ 형태의 정사각 행렬이라고 하자. 그리고 $D^{(r,i)}(g)$ 가 $D^{(r)} (g)$ 의 $i$ 번째 블록대각행렬 즉 $n_i \times n_i$ 행렬을 취한다고 하자. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-Group_equivalent_representation}
 
-위의 $D^{(r_i)}$ 역시 $G$ 의 표현이다.  
+위의 $D^{(r,i)}$ 역시 $G$ 의 표현이다.  
 
 :::
 
@@ -339,7 +347,7 @@ trivial
 
 ::: {.proof}
 
-$D^{(r_i)}(g_1)D^{(r_i)}(g_2) = D^{(r_i)}(g_1g_2)$ 이다.  $\square$
+$D^{(r,i)}(g_1)D^{(r,i)}(g_2) = D^{(r,i)}(g_1g_2)$ 이다.  $\square$
 
 :::
 
@@ -349,7 +357,7 @@ $D^{(r_i)}(g_1)D^{(r_i)}(g_2) = D^{(r_i)}(g_1g_2)$ 이다.  $\square$
 이 때 행렬의 direct sum $\oplus$ 를 이용하면 모든 $g\in G$ 에 대해
 
 $$
-D^{(r)}(g) = D^{(r_1)}(g) \oplus \cdots \oplus U^{(r_n)}(g) = \bigoplus_{i=1}^m D^{(r_i)}(g)
+D^{(r)}(g) = D^{(r,1)}(g) \oplus \cdots \oplus D^{(r,n)}(g) = \bigoplus_{i=1}^m D^{(r,i)}(g)
 $$ {#eq-Group-direct_sum_of_representation}
 
 임을 알 수 있다. 
@@ -358,7 +366,7 @@ $$ {#eq-Group-direct_sum_of_representation}
 
 #### **부분군과 표현**
 
-군의 표현에서 중요한 것은 군에 대한 어떤 표현이 irreducible 인지 확인한 후 reducible 이면 분해하여 irreducible representation 을 찾는 것이다. 여기서 한가지 짚고 넘어가야 할 것은 $H\le G$ 이고 $D$ 가 $G$ 에 대한 기약표현이라고 하더라도 $H$ 에 대한 기약표현인지는 확인해야 한다. 즉 $H$ 에 대한 reducible representation 일 수 있다.
+군의 표현에서 중요한 것은 군에 대한 어떤 표현이 기약표현 인지 확인한 후 기약표현이 아니면 분해하여 기약표현을 찾는 것이다. 여기서 한가지 짚고 넘어가야 할 것은 $H\le G$ 이고 $D$ 가 $G$ 에 대한 기약표현이라고 하더라도 $H$ 에 대한 기약표현인지는 확인해야 한다. 즉 $H$ 에 대한 기약표현이 아닐 수 있다.
 
 </br>
 
@@ -371,6 +379,7 @@ $$ {#eq-Group-direct_sum_of_representation}
 
 ::: {#thm-Group_unitary_representation_theorem}
 #### 유니터리 표현 정리
+
 유한군에 대한 표현은 어떤 유니터리 표현과 동등하다.
 
 :::
@@ -380,13 +389,13 @@ $$ {#eq-Group-direct_sum_of_representation}
 
 ::: {.proof}
 
-@thm-Group_rearrangement_theorem 생각하자. $G$ 의 표현 $D$ 에 대해 다음이 성립한다는 것을 알 수 있다.
+@thm-Group_rearrangement_theorem 를 생각하자. $G$ 의 표현 $D$ 에 대해 다음이 성립한다는 것을 알 수 있다.
 
 $$
 \sum_{g\in G}D(g) = \sum_{g\in G} D(g'g) = \sum_{g\in G}D(gg').
 $$ {#eq-Group_unitary_theorem_0}
 
-이제 $D$ 가 $G$ 에 대한 unitary 표현이 아닌 표현이라고 하자. 이 때 
+이제 $D$ 가 $G$ 에 대한 유니터리 표현이 아닌 표현이라고 하자. 이 때 
 
 $$
 H:=\sum_{g\in G} (D(g))^\dagger D(g)
@@ -411,12 +420,12 @@ $$
 
 $$
 \begin{aligned}
-B_{jj} &= \sum_{g\in G} \left( V^\dagger D(g)V\right)^\dagger_{jk} \left(V^\dagger D(g)V\right)_{kj} \\[0.3em]
-&= \sum_{g\in G} \left( V^\dagger D(g)V\right)_{kj} ^\ast \left(V^\dagger D(g)V\right)_{kj}  \ge 0\\[0.3em]
+B_{jj} &= \sum_{g\in G} \sum_k \left( V^\dagger D(g)V\right)^\dagger_{jk} \left(V^\dagger D(g)V\right)_{kj} \\[0.3em]
+&= \sum_{g\in G} \sum_k \left( V^\dagger D(g)V\right)_{kj} ^\ast \left(V^\dagger D(g)V\right)_{kj}  \ge 0\\[0.3em]
 \end{aligned}
 $$
 
-이므로 $B$ 는 대각성분이 음수가 아닌 대각행렬이다. $M=\sqrt{B}$ 를 정의 할 수 있으며 $M$ 역시 대각성분이 음수가 아닌 대각행렬이다. $M$ 은 가역행렬이므로 $U:G \to GL_n(\F)$ 를 아래와 같이 정의한다.
+이므로 $B$ 는 대각성분이 음수가 아닌 대각행렬이다. 어떤 $j$ 에 대해 $B_{jj}=0$ 이면 이 $j$ 에 대해 모든 $g\in G$ 에서의 $V^\dagger D(g)V$ 의 $j$ 번째 열이 $0$ 이며 따라서 $D(g)\notin GL_n$ 인데 그렇다면 $D$ 는 표현이 아니다. 따라서 $B_{jj}>0$. 대각행렬 $M=\sqrt{B}$ 을 정할 수 있으며 $M$ 양의 대각행렬이다. $M$ 은 가역행렬이므로 $U:G \to GL_n(\F)$ 를 아래와 같이 정의한다.
 
 $$
 U(g): = MV^\dagger D(g)VM^{-1}.
@@ -466,8 +475,7 @@ $$ {#eq-Group-direct_product_of_representation}
 
 와 같은 표현을 생각 할 수 있다. 이 때 $D^{(p)}$ 를 **직곱 표현(direct product representation)** 이라고 하며 $n_1n_2 \times n_1n_2$ 행렬이다. 
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exm-Group_direct_product_of_matrix}
 
 #### 행렬의 직곱
@@ -500,7 +508,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -527,7 +535,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -659,13 +667,12 @@ I = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix},\qquad A=\left[\begin{array}{rr}
 $$
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
 trivial
 :::
-
 
 </br>
 
@@ -677,7 +684,7 @@ trivial
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -691,8 +698,7 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_17_2_4}
 #### Arfken 17.2.4
@@ -703,14 +709,13 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 trivial
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_17_2_5}
 #### Arfken 17.2.5
@@ -719,16 +724,14 @@ $n$ 개의 성분을 가진 순환군 $C_n$ 은 $\{\exp(2\pi is/n): s=1,\ldots,\
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
 tiviial
 :::
 
-
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Arfken_17_2_6}
 #### Arfken 17.2.6
@@ -739,7 +742,7 @@ tiviial
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -783,8 +786,6 @@ $D$ 가 군 $G$ 의 기약표현이고 $H$ 가 에르미트 행렬일 때 모든
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 $D$ 와 동등한 유니터리 표현 $U$ 에 대해 우선 생각하자(@thm-Group_unitary_representation_theorem). $U$ 역시 당연히 기약 표현이다(@prp-Group_equivalent_representation_conserves_reduciblity). $U(g)H=HU(g)$ 이며 $H$ 는 어떤 유니터리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 $X$ 라고 하고 $H=V^{-1}XV$ 이라고 하자. 
@@ -797,19 +798,19 @@ U(g)H-HU(g) = 0 &\iff U(g)V^{-1}XV - V^{-1}XVU(g) = 0 \\
 \end{aligned}
 $$
 
-이제 $U'(g) = VU(g)V^{-1}$ 이라고 하자. 
+이제 $\tilde{U}(g) = VU(g)V^{-1}$ 이라고 하자. 
 
 $$
-0=(U'(g)X-XU'(g))_{ij} = \sum_k U'(g)_{ik}X_{kj} - X_{ik}U'(g)_{kj} = U'(g)_{ij}X_{jj} - X_{ii}U'(g)_{ij}
+0=(\tilde{U}(g)X-X\tilde{U}(g))_{ij} = \sum_k \tilde{U}(g)_{ik}X_{kj} - X_{ik}\tilde{U}(g)_{kj} = \tilde{U}(g)_{ij}X_{jj} - X_{ii}\tilde{U}(g)_{ij}
 $$
 
-이므로 
+이므로 각각의 $i,\,j$ 에 대해 
 
 $$
-U'(g)_{ij}(X_{ii}-X_{jj}) = 0
+\tilde{U}(g)_{ij}(X_{ii}-X_{jj}) = 0
 $$
 
-이어야 한다. 이로부터 $X_{ii} \ne X_{jj}$ 이면 $U'(g)_{ij}=0$ 이며 따라서 $U'(g)$ 는 reducible 한데 이는 $U$ 가 기약표현이라는 것에 모순이다. 따라서 $X$ 는 항등행렬의 스칼라곱이며, $H=V^{-1}XV$ 이므로 $H$ 도 항등행렬의 스칼라곱이다. 
+이어야 한다. 이로부터 $X_{ii} \ne X_{jj}$ 이면 $\tilde{U}(g)_{ij}=\tilde{U}(g)_{ji}=0$ 이며 따라서 $\tilde{U}(g)$ 가약표현이 되는데 이는 $U$ 가 기약표현이라는 것에 모순이다. 따라서 $X$ 는 항등행렬의 스칼라곱이며, $H=V^{-1}XV$ 이므로 $H$ 도 항등행렬의 스칼라곱이다. 
 
 이제 유니터리 표현이 아닌 $D$ 에 대해 생각하자. $D$ 는 어떤 닮음 변환에 대해 유니터리 표현이 되므로 $D(g)=SU(g)S^{-1}$ 이라고 하자. 
 
@@ -837,8 +838,6 @@ $D$ 가 군 $G$ 에 대한 기약표현이고 어떤 행렬 $A$ 가 모든 $g\in
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 우선 $D$ 와 동등한 유니터리 표현 $U$ 에 대해 증명한다. $U(g)A = AU(g)$ 이며 양 변에 에르미트 conjugate 를 취하면 $A^\dagger U^\dagger(g) = U^\dagger (g) A^\dagger$ 이다. 이 식의 앞과 뒤에 각각 $U(g)$ 를 곱하면 
@@ -864,8 +863,6 @@ $$
 
 ### 위대한 직교 정리 {#sec-Group_great_orthogonal_theorem}
 
-</br>
-
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-Group_for_GOT_1}
@@ -881,7 +878,6 @@ $$ {#eq-lem_Group_for_GOT_1}
 :::
 
 </div>
-</br>
 
 ::: {.proof}
 

@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>4&nbsp; 군의 기본적인 성질 – 수리물리학</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -27,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,14 +54,15 @@ div.csl-indent {
 <link href="../../src/tensor/tensor02.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +92,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -381,7 +380,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-<p>%</p>
+%
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -686,7 +685,7 @@ $F$ &  $F$ & $C$ & $A$ & $B$ & $E$ & $D$ \\
 <p>평면상의 원은 원의 중심에 대한 임의의 각 회전에 대해 대칭이다. 이 연산은 반시계 방향 회전각을 나타내는 변수 <span class="math inline">\(\varphi \in [0,\, 2\pi)\)</span> 에 대해 <span class="math inline">\(R(\varphi)\)</span> 로 표현 할 수 있으므로 차수가 1인 연속군이다. 또한 <span class="math inline">\(R(\varphi)\)</span> 에 대한 역변환은 <span class="math inline">\(R(2\pi - \varphi)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_viergrouppe" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.8 (Vierergrouppe)</strong></span> <br></p>
@@ -718,6 +717,27 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 </div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_lorentz_group" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.9 (로런츠 군)</strong></span> 특수상대성이론에서 <span class="math inline">\(x\)</span> 축 방향으로 속도 <span class="math inline">\(v\)</span> 로 상대적으로 움직이는 두 관찰자 각각의 시공간 좌표계는 로런츠 변환으로 연관되어 있다.</p>
+<p><span id="eq-Group_lorentz_boost"><span class="math display">\[
+\begin{aligned}
+ct' &amp;= \cosh \varphi ct + \sinh \varphi x, \\[0.3em]
+x' &amp;= \sinh \varphi ct + \cosh \varphi x, \\[0.3em]
+y' &amp;= y, \\[0.3em]
+z' &amp;= z.
+\end{aligned}
+\tag{4.1}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\varphi\)</span> 를 부스트 각 이라고 하며 <span class="math inline">\(\tanh \varphi = v/c\)</span> 이다. (즉 <span class="math inline">\(\cosh \varphi = 1/\sqrt{1-v^2/c^2}\)</span>, <span class="math inline">\(\sinh \varphi = (v/c)\sqrt{1-v^2/c^2}\)</span> 이다.) 변화가 없는 <span class="math inline">\(y,\,z\)</span> 를 무시하면 로런츠 변환은 다음과 같다.</p>
+<p><span id="eq-Group_lorentz_transform"><span class="math display">\[
+\begin{bmatrix} c't \\ x'\end{bmatrix} = \begin{bmatrix} \cosh \varphi &amp; \sinh \varphi \\ \sinh\varphi &amp; \cosh \varphi \end{bmatrix}.
+\tag{4.2}\]</span></span></p>
+<p>두번째 관찰자가 첫번째 관찰자에 대해 부스트각 <span class="math inline">\(\varphi_1\)</span> 으로, 세번째 관찰자가 두번째 관찰자에 대해 부스트각 <span class="math inline">\(\varphi_2\)</span> 로 움직인다면(그리고 모두 다 <span class="math inline">\(x\)</span> 방향이라고 가정한다면) 첫번째 관찰자와 세번째 관찰자의 로런츠 변환은 <span class="math inline">\(\varphi_1,\, \varphi_2\)</span> 에 의해 아래와 같이 정해지며 군을 이룬다.</p>
+<p><span class="math display">\[
+\begin{bmatrix} \cosh \varphi_2 &amp; \sinh \varphi_2 \\ \sinh\varphi_2 &amp; \cosh \varphi_2 \end{bmatrix}\begin{bmatrix} \cosh \varphi_1 &amp; \sinh \varphi_1 \\ \sinh\varphi_1 &amp; \cosh \varphi_1  \end{bmatrix} = \begin{bmatrix} \cosh (\varphi_1+\varphi_2) &amp; \sinh  (\varphi_1+\varphi_2) \\ \sinh (\varphi_1+\varphi_2) &amp; \cosh  (\varphi_1+\varphi_2) \end{bmatrix}
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="동형사상과-conjugacy-class" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="동형사상과-conjugacy-class"><span class="header-section-number">4.4</span> 동형사상과 Conjugacy Class</h2>
@@ -745,7 +765,7 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_C4" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.9 (<span class="math inline">\(C_4\)</span> 군의 동형사상과 준동형사상.)</strong></span> <br></p>
+<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(C_4\)</span> 군의 동형사상과 준동형사상.)</strong></span> <br></p>
 <p>정사각형의 중심에 대한 <span class="math inline">\(0^\circ\)</span>, <span class="math inline">\(90^\circ\)</span>, <span class="math inline">\(180^\circ\)</span>, <span class="math inline">\(270^\circ\)</span> 회전은 군을 이루며 각각 <span class="math inline">\(I,\,C_4,\,C_2,\,C_4'\)</span> 라고 한다. 즉 <span class="math inline">\(G_1=\{I,\,C_4,\,C_2,\,C_4'\}\)</span> 이라고 하자. 또한 <span class="math inline">\(G_2=\{1,\, i,\, -1,\, -i\}\)</span> 는 곱에 대한 군을 이룬다. 이 두 군에 대한 함수 <span class="math inline">\(\phi : G \to G'\)</span> 를</p>
 <p><span class="math display">\[
 \phi(I)=1,\quad \phi(C_4)=i,\quad \phi(C_2)=-1,\quad \phi(C_4')=-i
@@ -761,14 +781,14 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_nth_roots_of_unit_and_Zn" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.10 (<span class="math inline">\(Z_n\)</span> 과 <span class="math inline">\(\mathbb{Z}_n\)</span>)</strong></span> <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 는 <span class="math inline">\(Z_n\)</span> 을 <span class="math inline">\(z^n=1\)</span> 의 모든 복소해의 집합으로 정의하며 이는 곱셈 연산에 대해 군이다. 예를 들어 <span class="math inline">\(Z_3 = \{1,\,\omega,\,\omega^2\}\)</span>.</p>
+<p><span class="theorem-title"><strong>예제 4.11 (<span class="math inline">\(Z_n\)</span> 과 <span class="math inline">\(\mathbb{Z}_n\)</span>)</strong></span> <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 는 <span class="math inline">\(Z_n\)</span> 을 <span class="math inline">\(z^n=1\)</span> 의 모든 복소해의 집합으로 정의하며 이는 곱셈 연산에 대해 군이다. 예를 들어 <span class="math inline">\(Z_3 = \{1,\,\omega,\,\omega^2\}\)</span>.</p>
 <p><span class="math inline">\(\mathbb{Z}_n=\{0, 1, 2, \ldots, n-1\}\)</span> 은 <span class="math inline">\(n\)</span> 을 법(mod)으로 하는 덧셈에 대해 닫혀 있는 군이다. <span class="math inline">\(\phi : Z_n \to \mathbb{Z}_n\)</span> 을 <span class="math inline">\(\phi(\omega^k) = k\)</span> 로 정의하면 <span class="math inline">\(\phi\)</span> 는 동형사상이며 따라서 <span class="math inline">\(Z_n \approx \mathbb{Z}_n\)</span> 이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_SO2_and_U1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.11 (<span class="math inline">\(SO(2)\)</span> 와 <span class="math inline">\(U(1)\)</span>)</strong></span> <span class="math inline">\(SO(2)\)</span> 는 2차원 평면에서의 회전 연산의 집합으로 이루어진 군이며 <span class="math inline">\(U(1) = \{e^{i\theta} : \theta\in \mathbb{R}\}\)</span> 이다. 반식</p>
+<p><span class="theorem-title"><strong>예제 4.12 (<span class="math inline">\(SO(2)\)</span> 와 <span class="math inline">\(U(1)\)</span>)</strong></span> <span class="math inline">\(SO(2)\)</span> 는 2차원 평면에서의 회전 연산의 집합으로 이루어진 군이며 <span class="math inline">\(U(1) = \{e^{i\theta} : \theta\in \mathbb{R}\}\)</span> 이다. 반식</p>
 </div>
 </div>
 <p><br></p>
@@ -789,7 +809,7 @@ $ab$ & $ab$ & $a$ & $b$ & $e$ \\
 \ker(\phi) &amp;:= \{g\in G : \phi (g) = 1_{G'}\},\\[0.3em]
 \operatorname{im}(\phi) &amp;:= \{\phi(g) : g\in G\}.
 \end{aligned}
-\tag{4.1}\]</span></span></p>
+\tag{4.3}\]</span></span></p>
 <p>즉 <span class="math inline">\(\ker (\phi) = \phi^{-1}(\{1_{G'}\})\)</span> 이다.</p>
 </div>
 </div>
@@ -846,7 +866,7 @@ aX &amp;:= \{ag: g\in G\}, \\[0.3em]
 Xa&amp; := \{ga: g\in G\},\\[0.3em]
 XY &amp;:= \{xy : x\in X,\, y\in Y\}
 \end{aligned}
-\tag{4.2}\]</span></span></p>
+\tag{4.4}\]</span></span></p>
 <p>군의 정의에 의해 <span class="math inline">\(aX\subset G,\, XY \subset G\)</span> 라는 것을 알 수 있다.</p>
 </div>
 </div>
@@ -934,7 +954,7 @@ XY &amp;:= \{xy : x\in X,\, y\in Y\}
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_conjugacy_class_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.12 (<span class="math inline">\(D_3\)</span> 군의 켤레류)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 의 Caylay table 을 이용하여 <span class="math inline">\(D_3\)</span> 의 켤레류를 구해보자. 우선 <span class="math inline">\(\{E\}\)</span> 는 켤레류이다. <span class="math inline">\(A,\,B,\,C\)</span> 는 각각 스스로의 역원이며 <span class="math inline">\(D,\,F\)</span> 는 서로간의 역원이다. <span class="math inline">\(ABA^{-1}=ABA=C\)</span> 이므로 <span class="math inline">\(B\sim C\)</span> 이다. <span class="math inline">\(BAB^{-1}=A\)</span> 이므로 <span class="math inline">\(A\sim C\)</span> 이다. 이것을 반복해보면 <span class="math inline">\(\{A,\,B,\,C\}\)</span> 가 켤레류 임을 알 수 있다. 또한 <span class="math inline">\(AFA^{-1}=D\)</span> 이므로 <span class="math inline">\(F\sim D\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(D_3\)</span> 군에는 아래와 같은 <span class="math inline">\(3\)</span> 개의 켤레류가 존재한다.</p>
+<p><span class="theorem-title"><strong>예제 4.13 (<span class="math inline">\(D_3\)</span> 군의 켤레류)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 의 Caylay table 을 이용하여 <span class="math inline">\(D_3\)</span> 의 켤레류를 구해보자. 우선 <span class="math inline">\(\{E\}\)</span> 는 켤레류이다. <span class="math inline">\(A,\,B,\,C\)</span> 는 각각 스스로의 역원이며 <span class="math inline">\(D,\,F\)</span> 는 서로간의 역원이다. <span class="math inline">\(ABA^{-1}=ABA=C\)</span> 이므로 <span class="math inline">\(B\sim C\)</span> 이다. <span class="math inline">\(BAB^{-1}=A\)</span> 이므로 <span class="math inline">\(A\sim C\)</span> 이다. 이것을 반복해보면 <span class="math inline">\(\{A,\,B,\,C\}\)</span> 가 켤레류 임을 알 수 있다. 또한 <span class="math inline">\(AFA^{-1}=D\)</span> 이므로 <span class="math inline">\(F\sim D\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(D_3\)</span> 군에는 아래와 같은 <span class="math inline">\(3\)</span> 개의 켤레류가 존재한다.</p>
 <p><span class="math display">\[
 \{E\},\qquad \{A,\,B,\,C\},\qquad \{D,\,F\}.
 \]</span></p>
@@ -999,24 +1019,24 @@ XY &amp;:= \{xy : x\in X,\, y\in Y\}
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_invariant_subgroup_alternating_group" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.13 (교대군)</strong></span> 교대군 <span class="math inline">\(A_n\)</span> 은 짝수개의 호환의 곱으로 표현되며 따라서 교대군 <span class="math inline">\(S_n\)</span> 의 불변 부분군이다.</p>
+<p><span class="theorem-title"><strong>예제 4.14 (교대군)</strong></span> 교대군 <span class="math inline">\(A_n\)</span> 은 짝수개의 호환의 곱으로 표현되며 따라서 교대군 <span class="math inline">\(S_n\)</span> 의 불변 부분군이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_invariant_subgroup_product_of_invariant_subgroups" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.14 (불변부분군의 곱군)</strong></span> <span class="math inline">\(E\trianglelefteq G,\, F\trianglelefteq H\)</span> 일 때 <span class="math inline">\(E\otimes F \trianglelefteq G \otimes H\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>예제 4.15 (불변부분군의 곱군)</strong></span> <span class="math inline">\(E\trianglelefteq G,\, F\trianglelefteq H\)</span> 일 때 <span class="math inline">\(E\otimes F \trianglelefteq G \otimes H\)</span> 이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.15 (Viergrouppe 와 <span class="math inline">\(A_4\)</span>)</strong></span> 교대군 <span class="math inline">\(A_4\)</span> 는 다음과 같다.</p>
+<p><span class="theorem-title"><strong>예제 4.16 (Viergrouppe 와 <span class="math inline">\(A_4\)</span>)</strong></span> 교대군 <span class="math inline">\(A_4\)</span> 는 다음과 같다.</p>
 <p><span id="eq-Group_A4"><span class="math display">\[
 A_4 = \left\{\begin{array}{l} I,\,(123),\, (124),\, (132),\, (134), (142),\, (143),\, (234),\, (243)\\[0.3em]
 (12)(34),\, (13)(24),\, (14)(23)
 \end{array}\right \}
-\tag{4.3}\]</span></span></p>
+\tag{4.5}\]</span></span></p>
 <p>여기서</p>
 <p><span class="math display">\[
 \{I,\,(12)(34),\, (13)(24),\, (14)(23)\}
@@ -1027,7 +1047,7 @@ A_4 = \left\{\begin{array}{l} I,\,(123),\, (124),\, (132),\, (134), (142),\, (14
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_invariant_subgroup_product_derived_subgroup" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.16 (유도 부분군/교환자 부분군)</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(A=\{a^{-1}b^{-1}ab : a,\,b\in G\}\)</span> 에 의한 생성 부분군 <span class="math inline">\(\langle A \rangle\)</span> 을 <span class="math inline">\(G\)</span> 에 대한 <strong>유도 부분군 (derived subgroup)</strong> 혹은 <strong>교환자 부분군 (commutator subgroup)</strong> 이라고 한다. <a href="#prp-Group_generated_subgroup_is_subgroup" class="quarto-xref">명제&nbsp;<span>4.3</span></a> 에 의해 <span class="math inline">\(\langle A \rangle \le G\)</span> 이다. 이제 <span class="math inline">\(\langle A \rangle \trianglelefteq G\)</span> 임을 보이자. 정해진 <span class="math inline">\(a,\,b\in G\)</span> 와 임의의 <span class="math inline">\(g\in G\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>예제 4.17 (유도 부분군/교환자 부분군)</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(A=\{a^{-1}b^{-1}ab : a,\,b\in G\}\)</span> 에 의한 생성 부분군 <span class="math inline">\(\langle A \rangle\)</span> 을 <span class="math inline">\(G\)</span> 에 대한 <strong>유도 부분군 (derived subgroup)</strong> 혹은 <strong>교환자 부분군 (commutator subgroup)</strong> 이라고 한다. <a href="#prp-Group_generated_subgroup_is_subgroup" class="quarto-xref">명제&nbsp;<span>4.3</span></a> 에 의해 <span class="math inline">\(\langle A \rangle \le G\)</span> 이다. 이제 <span class="math inline">\(\langle A \rangle \trianglelefteq G\)</span> 임을 보이자. 정해진 <span class="math inline">\(a,\,b\in G\)</span> 와 임의의 <span class="math inline">\(g\in G\)</span> 에 대해</p>
 <p><span class="math display">\[
 g^{-1}(a^{-1}b^{-1}ab)g = (g^{-1}a^{-1}g) (g^{-1}b^{-1} g) (g^{-1}a g) (g^{-1}b g)
 \]</span></p>
@@ -1108,7 +1128,7 @@ g^{-1}(a_1^{\epsilon_1}\cdots a_n^{\epsilon_n})g^{-1} = (g^{-1}a_1g)^{\epsilon_1
 <h3 data-number="4.4.4" class="anchored" data-anchor-id="sec-Group_example_of_groups"><span class="header-section-number">4.4.4</span> 여러가지 군</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_dihedral_group_DN" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.17 (정이면체군 <span class="math inline">\(D_n\)</span>)</strong></span> 정이면체군 <span class="math inline">\(D_n\)</span> 은 정 <span class="math inline">\(n\)</span>-각형의 대칭군이다. <span class="math inline">\(2\pi/n\)</span> 만큼의 회전 <span class="math inline">\(R\)</span> 과 반사 <span class="math inline">\(r\)</span> 에 의해 생성된다. 반사는 <span class="math inline">\(n\)</span> 이 홀수일때는 한 꼭지점과 이 꼭지점과 마주보는 모서리의 중심을 지나는 직선에 대한 반사이며 <span class="math inline">\(n\)</span> 이 짝수일때는 마주모는 꼭지점을 잇는 직선에 대한 반사와 마주보는 모서리 각각의 중앙을 잇는 직선에 대한 반사이다. <span class="math inline">\(0^\circ\)</span> 회전을 포함하여 <span class="math inline">\(n\)</span> 개의 회전과 <span class="math inline">\(n\)</span> 개의 반사가 존재한다. 이 군의 항등원을 <span class="math inline">\(I\)</span> 라고 하면 <span class="math inline">\(R^n = r^2 = I\)</span> 이다. <span class="math inline">\(D_n\)</span> 에서 <span class="math inline">\(rRr=R\)</span>, 즉 <span class="math inline">\(Rr= rR^{-1}\)</span> 이며 따라서 아래와 같이 <span class="math inline">\(2n\)</span> 개의 성분을 가진다.</p>
+<p><span class="theorem-title"><strong>예제 4.18 (정이면체군 <span class="math inline">\(D_n\)</span>)</strong></span> 정이면체군 <span class="math inline">\(D_n\)</span> 은 정 <span class="math inline">\(n\)</span>-각형의 대칭군이다. <span class="math inline">\(2\pi/n\)</span> 만큼의 회전 <span class="math inline">\(R\)</span> 과 반사 <span class="math inline">\(r\)</span> 에 의해 생성된다. 반사는 <span class="math inline">\(n\)</span> 이 홀수일때는 한 꼭지점과 이 꼭지점과 마주보는 모서리의 중심을 지나는 직선에 대한 반사이며 <span class="math inline">\(n\)</span> 이 짝수일때는 마주모는 꼭지점을 잇는 직선에 대한 반사와 마주보는 모서리 각각의 중앙을 잇는 직선에 대한 반사이다. <span class="math inline">\(0^\circ\)</span> 회전을 포함하여 <span class="math inline">\(n\)</span> 개의 회전과 <span class="math inline">\(n\)</span> 개의 반사가 존재한다. 이 군의 항등원을 <span class="math inline">\(I\)</span> 라고 하면 <span class="math inline">\(R^n = r^2 = I\)</span> 이다. <span class="math inline">\(D_n\)</span> 에서 <span class="math inline">\(rRr=R\)</span>, 즉 <span class="math inline">\(Rr= rR^{-1}\)</span> 이며 따라서 아래와 같이 <span class="math inline">\(2n\)</span> 개의 성분을 가진다.</p>
 <p><span class="math display">\[
 D_n = \{I,\,R,\ldots,\,R^{n-1},\, r,\,Rr,\ldots,\,R^{n-1}r\}
 \]</span></p>
@@ -1117,7 +1137,7 @@ D_n = \{I,\,R,\ldots,\,R^{n-1},\, r,\,Rr,\ldots,\,R^{n-1}r\}
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_example_quartenionic_group" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.18 (사원수군 <span class="math inline">\(\mathcal{Q}\)</span>)</strong></span> 해밀토는 2차원에서의 복소평면을 일반화하여 다음과 같은 규칙을 갖는 사원수 규칙을 만들었다.</p>
+<p><span class="theorem-title"><strong>예제 4.19 (사원수군 <span class="math inline">\(\mathcal{Q}\)</span>)</strong></span> 해밀토는 2차원에서의 복소평면을 일반화하여 다음과 같은 규칙을 갖는 사원수 규칙을 만들었다.</p>
 <p><span class="math display">\[
 i^2=j^2=k^2=-1,\qquad ij=-ji = k,\, jk=-kj = i,\, ki=-ik = j.
 \]</span></p>
@@ -1131,7 +1151,7 @@ i^2=j^2=k^2=-1,\qquad ij=-ji = k,\, jk=-kj = i,\, ki=-ik = j.
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_exmple_coexter_group" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.19 (콕서터 군)</strong></span> <span class="math inline">\(A=\{a_1,\ldots,\,a_k\}\)</span> 에 대해 <span class="math inline">\(a_i^2=1\)</span> 이며 <span class="math inline">\((a_ia_j)^{n_{ij}}=1\)</span> 인 <span class="math inline">\(n_{ij}\ge 2\)</span> 가 항상 존재한다고 하자. 이 때 <span class="math inline">\(A\)</span> 에 의해 생성되는 군을 콕서터 군이라고 한다. 콕서터 군에서 <span class="math inline">\(n_{ij}=n_{ji}\)</span> 임을 보이자. 우선 <span class="math inline">\((ab)^n=1\)</span> 일 때</p>
+<p><span class="theorem-title"><strong>예제 4.20 (콕서터 군)</strong></span> <span class="math inline">\(A=\{a_1,\ldots,\,a_k\}\)</span> 에 대해 <span class="math inline">\(a_i^2=1\)</span> 이며 <span class="math inline">\((a_ia_j)^{n_{ij}}=1\)</span> 인 <span class="math inline">\(n_{ij}\ge 2\)</span> 가 항상 존재한다고 하자. 이 때 <span class="math inline">\(A\)</span> 에 의해 생성되는 군을 콕서터 군이라고 한다. 콕서터 군에서 <span class="math inline">\(n_{ij}=n_{ji}\)</span> 임을 보이자. 우선 <span class="math inline">\((ab)^n=1\)</span> 일 때</p>
 <p><span class="math display">\[
 1 = b^2 = b(ab)^nb = baba\cdots ba = (ba)^nb^2=(ba)^n
 \]</span></p>
@@ -1152,12 +1172,12 @@ K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g
 <p>이다. 이것은 <span class="math inline">\(K_iK_j\)</span> 가 conjugate class 일 경우 뿐만 아니라 conjugatcy class 의 합집합 일 때도 성립하며, 실제로 그러하다. <span class="math inline">\(K_i,\,K_j\)</span> 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.</p>
 <p><span id="eq-Group_class_multiplication_rule"><span class="math display">\[
 K_iK_j = \sum_k c_{ijk}K_k
-\tag{4.4}\]</span></span></p>
+\tag{4.6}\]</span></span></p>
 <p>위 식은 <span class="math inline">\(K_iK_j\)</span> 를 계산 했을 때 <span class="math inline">\(K_k\)</span> 가 몇번 등장하는지를 표기하는 식이며 <span class="math inline">\(2K_1+3K_2\)</span> 라면 <span class="math inline">\(K_1\)</span> 이 <span class="math inline">\(2\)</span> 번 <span class="math inline">\(K_3\)</span> 가 <span class="math inline">\(3\)</span> 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_conjugacy_class_multipliciation_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.20 (<span class="math inline">\(D_3\)</span> 군의 클래스 곱)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 과 <a href="#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.12</span></a> 을 이용하여보자.</p>
+<p><span class="theorem-title"><strong>예제 4.21 (<span class="math inline">\(D_3\)</span> 군의 클래스 곱)</strong></span> <a href="#exm-Group_d3_multiplication_table" class="quarto-xref">예제&nbsp;<span>4.6</span></a> 과 <a href="#exm-Group_conjugacy_class_of_D3" class="quarto-xref">예제&nbsp;<span>4.13</span></a> 을 이용하여보자.</p>
 <p><span class="math display">\[
 K_1\{E\},\qquad K_2=\{A,\,B,\,C\},\qquad K_3=\{D,\,F\}
 \]</span></p>
@@ -1173,11 +1193,15 @@ K_2K_2 = 3K_1+3K_3
 </section>
 <section id="연습문제" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<blockquote class="blockquote">
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+</div>
+</blockquote>
 <div id="exr-Zee_1_2_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.1 (Zee 1.2.2)</strong></span> <span class="math inline">\(n\ge 3\)</span> 에 대해 <span class="math inline">\(A_n\)</span> 은 3-cycle 에 의해 생성됨을 보여라. 즉 <span class="math inline">\(A_n\)</span> 의 모든 성분은 3-cycle 의 곱으로 표현된다.</p>
 </div>
-</div>
+</section></main></div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(a,\,b,\,c,\,d\)</span> 는 모두 다르다고 하자. <span class="math inline">\((a\,b)(a\,c) = (a\,c\,b)\)</span> 이며 <span class="math inline">\((a\,b)(c\,d)=(a\,b\,c)(b\,c\,d)\)</span> 이다. 즉 모든 두 호환의 곱은 3-cycle 의 곱으로 표현된다. 교대군은 짝수개의 호한의 곱이므로 3-cycle 의 곱으로 표현된다.</p>
 </div>
@@ -1188,7 +1212,7 @@ K_2K_2 = 3K_1+3K_3
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(S_n\)</span> 은 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지를 순서대로 한번씩 배치한는 방법이므로 <span class="math inline">\(|S_n|=n!\)</span> 이다. <span class="math inline">\(A_n\triangleleft S_n\)</span> 이다(<a href="#exm-Group_example_invariant_subgroup_alternating_group" class="quarto-xref">예제&nbsp;<span>4.13</span></a>). <a href="#exm-Group_permutation_group" class="quarto-xref">예제&nbsp;<span>4.1</span></a> 의 <span class="math inline">\(\text{sgn} : S_n \to \{\pm 1\}\)</span> 함수는 준동형 사상이며 <span class="math inline">\(\ker(\text{sgn})= A_n\)</span> 임을 쉽게 보일 수 있다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(S_n\)</span> 은 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지를 순서대로 한번씩 배치한는 방법이므로 <span class="math inline">\(|S_n|=n!\)</span> 이다. <span class="math inline">\(A_n\triangleleft S_n\)</span> 이다(<a href="#exm-Group_example_invariant_subgroup_alternating_group" class="quarto-xref">예제&nbsp;<span>4.14</span></a>). <a href="#exm-Group_permutation_group" class="quarto-xref">예제&nbsp;<span>4.1</span></a> 의 <span class="math inline">\(\text{sgn} : S_n \to \{\pm 1\}\)</span> 함수는 준동형 사상이며 <span class="math inline">\(\ker(\text{sgn})= A_n\)</span> 임을 쉽게 보일 수 있다.</p>
 <p><span class="math inline">\(S_n\)</span> 은 홀치환과 짝치환으로 분할된다. 홀치환을 <span class="math inline">\(X_n\)</span> 라고 하자. 임의의 고정된 호횐 <span class="math inline">\(\sigma \in S_n\)</span> 에 대해 <span class="math inline">\(\phi: A_n \to X_n\)</span> 을 <span class="math inline">\(\phi (x)= \sigma x\)</span> 로 정의하자. <span class="math inline">\(\sigma x_1 = \sigma x_2 \implies x_1 = x_2\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 단사이다. 임의의 <span class="math inline">\(y\in X_n\)</span> 에 대해 <span class="math inline">\(\sigma y\in A_n\)</span> 이며 <span class="math inline">\(\sigma^2 y = y\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 전사이다. 다라서 <span class="math inline">\(|A_n| = |X_n|\)</span> 이며 <span class="math inline">\(|S_n| = |A_n|+|X_n|=2|A_n|\)</span> 이다.</p>
 </div>
 <br>
@@ -1241,7 +1265,7 @@ A_4 = \left\{\begin{array}{l} I,\\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Group_Zee_1_1_16" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.7 (Zee 1.1.16)</strong></span> 콕서터 군(<a href="#exm-Group_exmple_coexter_group" class="quarto-xref">예제&nbsp;<span>4.19</span></a>) 에서 <span class="math inline">\(n_{ij}=2\)</span> 이며 <span class="math inline">\(a_ia_j=a_ja_i\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.7 (Zee 1.1.16)</strong></span> 콕서터 군(<a href="#exm-Group_exmple_coexter_group" class="quarto-xref">예제&nbsp;<span>4.20</span></a>) 에서 <span class="math inline">\(n_{ij}=2\)</span> 이며 <span class="math inline">\(a_ia_j=a_ja_i\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1275,7 +1299,7 @@ A_4 = \left\{\begin{array}{l} I,\\
 l_1 = \overline{12},\quad l_2 = \overline{13},\quad l_3=\overline{14},\quad l_4 = \overline{23},\quad l_5=\overline{24},\quad l_6 = \overline{34}
 \]</span></p>
 <p>라고 하자. 4면를 회전시키는 것은 변을 치환하게 되므로 <span class="math inline">\(\sigma\in A_4\)</span> 와 <span class="math inline">\(\tau \in S_6\)</span> 사이에 관계를 갖게 된다. 이것을 <span class="math inline">\(\rho : A_4 \to S_6\)</span> 라고 하자.</p>
-<p><span class="math inline">\(A_4\)</span> 는 <a href="#eq-Group_A4" class="quarto-xref">식&nbsp;<span>4.3</span></a> 이며 <span class="math inline">\(\rho (I)\)</span> 를 제외한 연산 결과는 다음과 같다.</p>
+<p><span class="math inline">\(A_4\)</span> 는 <a href="#eq-Group_A4" class="quarto-xref">식&nbsp;<span>4.5</span></a> 이며 <span class="math inline">\(\rho (I)\)</span> 를 제외한 연산 결과는 다음과 같다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \rho ((123)) &amp;= (142)(356), \\[0.3em]
@@ -1292,12 +1316,12 @@ l_1 = \overline{12},\quad l_2 = \overline{13},\quad l_3=\overline{14},\quad l_4 
 \end{aligned}
 \]</span></p>
 <p>실제로 <span class="math inline">\(\rho\)</span> 가 하는 것은 <span class="math inline">\(A_4\)</span> 를 정사면체에 작용하는 것이고 변은 변환된 꼭지점에 대해 정해진다. 즉 군의 작용으로 <span class="math inline">\(\rho \in \text{Hom}(A_4,\, S_6)\)</span> 이며 <span class="math inline">\(\ker \rho = \{I\}\)</span> 이므로 단사이다.</p>
-<p>여담으로 <a href="#exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4" class="quarto-xref">예제&nbsp;<span>4.15</span></a> 에서 언급했듯이 <span class="math inline">\(A_4\)</span> 는 Viergrouppe 와 동형인 정규부분군을 가진다.</p>
+<p>여담으로 <a href="#exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4" class="quarto-xref">예제&nbsp;<span>4.16</span></a> 에서 언급했듯이 <span class="math inline">\(A_4\)</span> 는 Viergrouppe 와 동형인 정규부분군을 가진다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Zee_1_2_19" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.9 (Zee 1.2.19)</strong></span> <span class="math inline">\(A_n\)</span> 이 <span class="math inline">\(S_n\)</span> 의 유도 부분군(<a href="#exm-Group_example_invariant_subgroup_product_derived_subgroup" class="quarto-xref">예제&nbsp;<span>4.16</span></a>) 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.9 (Zee 1.2.19)</strong></span> <span class="math inline">\(A_n\)</span> 이 <span class="math inline">\(S_n\)</span> 의 유도 부분군(<a href="#exm-Group_example_invariant_subgroup_product_derived_subgroup" class="quarto-xref">예제&nbsp;<span>4.17</span></a>) 임을 보여라.</p>
 </div>
 </div>
 <div class="proof">
@@ -1368,7 +1392,7 @@ B(x) = \dfrac{1}{1-1/(1-x)}= \dfrac{x-1}{x},\quad AB(x) =BA(x) = I(x)
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_1_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.15 (Arfken 17.1.7)</strong></span> &nbsp;</p>
-<div id="fig-Group-hexagon" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-Group-hexagon" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-hexagon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/hexagons.png" class="img-fluid figure-img" width="200">
@@ -1393,7 +1417,7 @@ B(x) = \dfrac{1}{1-1/(1-x)}= \dfrac{x-1}{x},\quad AB(x) =BA(x) = I(x)
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_1" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.16 (Tinkham 2.1)</strong></span> 정사각형에 대한 대칭연산을 나타내는 대칭군 <span class="math inline">\(D_4\)</span> 를 생각하자. 이 군은 9개의 원소로 이루어져 있다.</p>
-<div id="fig-Group-D4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-Group-D4" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group-D4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/d4r.png" class="img-fluid figure-img" width="250">
@@ -1418,7 +1442,7 @@ B(x) = \dfrac{1}{1-1/(1-x)}= \dfrac{x-1}{x},\quad AB(x) =BA(x) = I(x)
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>)</p>
-<div id="tbl-Group_D4_Caylay_table" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-Group_D4_Caylay_table" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D4_Caylay_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 표&nbsp;4.3: <span class="math inline">\(D_4\)</span> Caylay table
@@ -1485,7 +1509,7 @@ xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_2_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.20 (Tinkham 2.8)</strong></span> <a href="#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.4</span></a> 에서 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 보여라. 즉 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.20 (Tinkham 2.8)</strong></span> <a href="#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(c_{ijk}=c_{jik}\)</span> 임을 보여라. 즉 <span class="math inline">\(K_iK_j=K_jK_i\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1500,14 +1524,14 @@ xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>
 </div>
-</section>
 
-</main> <!-- /main -->
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1920,7 +1944,7 @@ Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell.
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 
