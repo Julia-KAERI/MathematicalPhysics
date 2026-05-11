@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>7&nbsp; 군의 지표 – 수리물리학</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -54,15 +56,14 @@ div.csl-indent {
 <link href="../../src/group/group_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,7 +93,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -377,7 +378,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-%
+<p>%</p>
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -463,7 +464,7 @@ $D^{(3)}$ & $2$ & $0$ & $-1$ \\
 \overline{K}_k = \sum_{x\in K_k} D^{(i)}(x)
 \]</span></p>
 <p>라고 하자. 그렇다면 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\overline{g}\overline{K}_k = \overline{K}_k \overline{g}\)</span> 이며 슈어 보조정리(<a href="group_representation.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>6.2</span></a>) 에 따라 <span class="math inline">\(\overline{K}_k\)</span> 는 항등행렬의 스칼라배이다. <span class="math inline">\(\overline{K}_k = \eta_k I_{d_i}\)</span> 라고 놓자.</p>
-<p>이제 <a href="group_introduction.html#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.6</span></a> 를 생각하자. <span class="math inline">\(K_jK_k = \sum_{l}c_{jkl}K_k\)</span> 이므로</p>
+<p>이제 <a href="group_introduction.html#eq-Group_class_multiplication_rule" class="quarto-xref">식&nbsp;<span>4.6</span></a> 를 생각하자. <span class="math inline">\(K_jK_k = \sum_{l}c_{jkl}K_l\)</span> 이므로</p>
 <p><span id="eq-prp_Group_class_multiplication_and_character_1"><span class="math display">\[
 \eta_j \eta_l = \sum_l c_{jkl}\eta_l
 \tag{7.2}\]</span></span></p>
@@ -473,11 +474,11 @@ $D^{(3)}$ & $2$ & $0$ & $-1$ \\
 \]</span></p>
 <p>이며</p>
 <p><span class="math display">\[
-\operatorname{tr}(\overline{K}_k) = \sum_{x\in K_i}\operatorname{tr}(D(x)) = |K_k| \chi^{(i)} (K_i)
+\operatorname{tr}(\overline{K}_k) = \sum_{x\in K_i}\operatorname{tr}(D^{(i)}(x)) = |K_k| \chi^{(i)} (K_i)
 \]</span></p>
 <p>이다. 따라서</p>
 <p><span class="math display">\[
-\eta_k = \dfrac{|K_k| \chi^{(i)}(K_i)}{d}
+\eta_k = \dfrac{|K_k| \chi^{(i)}(K_i)}{d_i}
 \]</span></p>
 <p>이다. 이 식을 <a href="#eq-prp_Group_class_multiplication_and_character_1" class="quarto-xref">식&nbsp;<span>7.2</span></a> 에 대입하면 <a href="#eq-prp_Group_class_multiplication_and_character" class="quarto-xref">식&nbsp;<span>7.1</span></a> 를 얻는다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -485,7 +486,7 @@ $D^{(3)}$ & $2$ & $0$ & $-1$ \\
 </section>
 <section id="sec-Group-character_table_construction_rules" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="sec-Group-character_table_construction_rules"><span class="header-section-number">7.1.2</span> 지표 테이블 구성 규칙</h3>
-<p><a href="group_quantum2_irrep_of_point_group.html#exm-Group_character_table_of_D3" class="quarto-xref">예제&nbsp;<span>9.3</span></a> 의 경우 원소가 6개이고 켤레류가 3개 이므로 비교적 쉽게 지표 테이블을 구했다. 그러나 일반적으로는 쉽지 않으며 우리가 지금까지 알아본 것들을 이용하여 구해야 한다. 이제 여기에 중요한 것을 요약하고자 한다.</p>
+<p><a href="group_quantum2_irrep_of_point_group.html#exm-Group_character_table_of_D3" class="quarto-xref">예제&nbsp;<span>10.3</span></a> 의 경우 원소가 6개이고 켤레류가 3개 이므로 비교적 쉽게 지표 테이블을 구했다. 그러나 일반적으로는 쉽지 않으며 우리가 지금까지 알아본 것들을 이용하여 구해야 한다. 이제 여기에 중요한 것을 요약하고자 한다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <p>유한군 <span class="math inline">\(G\)</span> 의 모든 동등하지 않은 기약표현 <span class="math inline">\(D^{(1)},\ldots,\,D^{(N_R)}\)</span> 와 켤레류의 집합 <span class="math inline">\(\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}\)</span> 를 생각하자. 기약표현 <span class="math inline">\(D^{(i)}\)</span> 에 대한 지표를 <span class="math inline">\(\chi^{(i)}\)</span> 라고 하고, <span class="math inline">\(D^{(i)}\)</span> 의 차원을 <span class="math inline">\(d_i\)</span> 라고 하자. <span class="math inline">\(D^{(i)}\)</span> 와 동등한 유니터리 표현을 <span class="math inline">\(U^{(i)}\)</span> 라고 하자. 이 때 다음이 성립한다.</p>
 <section id="r1-표현의-차원과-군의-크기" class="level4">
@@ -662,6 +663,11 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 </center>
 <p><br></p>
 </section>
+<section id="순환군" class="level4">
+<h4 class="anchored" data-anchor-id="순환군"><strong>순환군</strong></h4>
+<p>순환군은 모든 성분 각각이 켤레류이므로 <span class="math inline">\(N_C=|G|\)</span> 이다. <span class="math inline">\(N_C=N_R\)</span> 이며 <strong>(R1)</strong> 에 의해 순환군의 모든 기약표현은 1차원 표현뿐이다.</p>
+<p><br></p>
+</section>
 </section>
 <section id="기약표현" class="level3" data-number="7.1.4">
 <h3 data-number="7.1.4" class="anchored" data-anchor-id="기약표현"><span class="header-section-number">7.1.4</span> 기약표현</h3>
@@ -671,7 +677,7 @@ D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{b
 \]</span></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>

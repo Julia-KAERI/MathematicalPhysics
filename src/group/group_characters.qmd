@@ -102,7 +102,7 @@ $$
 
 라고 하자. 그렇다면 모든 $g\in G$ 에 대해 $\overline{g}\overline{K}_k = \overline{K}_k \overline{g}$ 이며 슈어 보조정리(@lem-Group_schur_lemma) 에 따라 $\overline{K}_k$ 는 항등행렬의 스칼라배이다. $\overline{K}_k = \eta_k I_{d_i}$ 라고 놓자.
 
-이제 @eq-Group_class_multiplication_rule 를 생각하자. $K_jK_k = \sum_{l}c_{jkl}K_k$ 이므로
+이제 @eq-Group_class_multiplication_rule 를 생각하자. $K_jK_k = \sum_{l}c_{jkl}K_l$ 이므로
 
 $$
 \eta_j \eta_l = \sum_l c_{jkl}\eta_l
@@ -117,13 +117,13 @@ $$
 이며
 
 $$
-\tr(\overline{K}_k) = \sum_{x\in K_i}\tr(D(x)) = |K_k| \chi^{(i)} (K_i)
+\tr(\overline{K}_k) = \sum_{x\in K_i}\tr(D^{(i)}(x)) = |K_k| \chi^{(i)} (K_i)
 $$
 
 이다. 따라서
 
 $$
-\eta_k = \dfrac{|K_k| \chi^{(i)}(K_i)}{d}
+\eta_k = \dfrac{|K_k| \chi^{(i)}(K_i)}{d_i}
 $$
 
 이다. 이 식을 @eq-prp_Group_class_multiplication_and_character_1 에 대입하면 @eq-prp_Group_class_multiplication_and_character 를 얻는다. $\square$
@@ -300,6 +300,13 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 <center>
 ![$S_3$ character table](figures/character_table_S3_2.png){#tbl-Group_character_table_S3 width=150}
 </center>
+
+</br>
+
+#### **순환군**
+
+순환군은 모든 성분 각각이 켤레류이므로 $N_C=|G|$ 이다. $N_C=N_R$ 이며 **(R1)** 에 의해 순환군의 모든 기약표현은 1차원 표현뿐이다.
+
 
 </br>
 

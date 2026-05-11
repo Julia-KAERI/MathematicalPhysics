@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; 상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리 – 수리물리학</title>
+<title>14&nbsp; 상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리 – 수리물리학</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/differential_equation/ode1.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -112,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode2.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode2.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -219,32 +221,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_characters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">군의 지표</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/group/group_symmetry_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">점군과 공간군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum1_schroedinger_equation_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군과 양자역학 I- 대칭과 슈뢰딩거 방정식군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_quantum2_irrep_of_point_group.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군과 양자역학 II- 결정장 이론과 기약표현</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_continuous_tensor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">연속군과 텐서</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_aux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -261,19 +269,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/ode1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/ode2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -290,19 +298,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,24 +325,24 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#알고-있는-해로부터-해를-더-구하는-법" id="toc-알고-있는-해로부터-해를-더-구하는-법" class="nav-link active" data-scroll-target="#알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">13.1</span> 알고 있는 해로부터 해를 더 구하는 법</a>
+  <li><a href="#알고-있는-해로부터-해를-더-구하는-법" id="toc-알고-있는-해로부터-해를-더-구하는-법" class="nav-link active" data-scroll-target="#알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">14.1</span> 알고 있는 해로부터 해를 더 구하는 법</a>
   <ul class="collapse">
-  <li><a href="#sec-DE_ODE_wronskian" id="toc-sec-DE_ODE_wronskian" class="nav-link" data-scroll-target="#sec-DE_ODE_wronskian"><span class="header-section-number">13.1.1</span> Wronskian</a></li>
-  <li><a href="#sec-DE_ODE_another_solutions_using_wronskian" id="toc-sec-DE_ODE_another_solutions_using_wronskian" class="nav-link" data-scroll-target="#sec-DE_ODE_another_solutions_using_wronskian"><span class="header-section-number">13.1.2</span> 선형 독립인 다른 해</a></li>
-  <li><a href="#두번째-해의-급수-형태" id="toc-두번째-해의-급수-형태" class="nav-link" data-scroll-target="#두번째-해의-급수-형태"><span class="header-section-number">13.1.3</span> 두번째 해의 급수 형태</a></li>
+  <li><a href="#sec-DE_ODE_wronskian" id="toc-sec-DE_ODE_wronskian" class="nav-link" data-scroll-target="#sec-DE_ODE_wronskian"><span class="header-section-number">14.1.1</span> Wronskian</a></li>
+  <li><a href="#sec-DE_ODE_another_solutions_using_wronskian" id="toc-sec-DE_ODE_another_solutions_using_wronskian" class="nav-link" data-scroll-target="#sec-DE_ODE_another_solutions_using_wronskian"><span class="header-section-number">14.1.2</span> 선형 독립인 다른 해</a></li>
+  <li><a href="#두번째-해의-급수-형태" id="toc-두번째-해의-급수-형태" class="nav-link" data-scroll-target="#두번째-해의-급수-형태"><span class="header-section-number">14.1.3</span> 두번째 해의 급수 형태</a></li>
   </ul></li>
-  <li><a href="#스튀름-리우빌-정리" id="toc-스튀름-리우빌-정리" class="nav-link" data-scroll-target="#스튀름-리우빌-정리"><span class="header-section-number">13.2</span> 스튀름-리우빌 정리</a>
+  <li><a href="#스튀름-리우빌-정리" id="toc-스튀름-리우빌-정리" class="nav-link" data-scroll-target="#스튀름-리우빌-정리"><span class="header-section-number">14.2</span> 스튀름-리우빌 정리</a>
   <ul class="collapse">
-  <li><a href="#sec-DE_ODE_sturm_liouville_theory" id="toc-sec-DE_ODE_sturm_liouville_theory" class="nav-link" data-scroll-target="#sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">13.2.1</span> Sturm-Liouville theory</a></li>
-  <li><a href="#sec-DE_ODE_stum_liouville_hermitian" id="toc-sec-DE_ODE_stum_liouville_hermitian" class="nav-link" data-scroll-target="#sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">13.2.2</span> 에르미트 연산자</a></li>
-  <li><a href="#sec-DE_ODE_hermitianization_of_ode" id="toc-sec-DE_ODE_hermitianization_of_ode" class="nav-link" data-scroll-target="#sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">13.2.3</span> 미분방정식을 에르미트 연산자 형태로 변경하기</a></li>
+  <li><a href="#sec-DE_ODE_sturm_liouville_theory" id="toc-sec-DE_ODE_sturm_liouville_theory" class="nav-link" data-scroll-target="#sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">14.2.1</span> Sturm-Liouville theory</a></li>
+  <li><a href="#sec-DE_ODE_stum_liouville_hermitian" id="toc-sec-DE_ODE_stum_liouville_hermitian" class="nav-link" data-scroll-target="#sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">14.2.2</span> 에르미트 연산자</a></li>
+  <li><a href="#sec-DE_ODE_hermitianization_of_ode" id="toc-sec-DE_ODE_hermitianization_of_ode" class="nav-link" data-scroll-target="#sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">14.2.3</span> 미분방정식을 에르미트 연산자 형태로 변경하기</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#직교하는-다항식" id="toc-직교하는-다항식" class="nav-link" data-scroll-target="#직교하는-다항식"><span class="header-section-number">13.3</span> 직교하는 다항식</a>
+  <li><a href="#직교하는-다항식" id="toc-직교하는-다항식" class="nav-link" data-scroll-target="#직교하는-다항식"><span class="header-section-number">14.3</span> 직교하는 다항식</a>
   <ul class="collapse">
-  <li><a href="#sec-ODE_DE_rodriguess_formula" id="toc-sec-ODE_DE_rodriguess_formula" class="nav-link" data-scroll-target="#sec-ODE_DE_rodriguess_formula"><span class="header-section-number">13.3.1</span> 로드리게스 공식</a></li>
-  <li><a href="#schlaefli-적분" id="toc-schlaefli-적분" class="nav-link" data-scroll-target="#schlaefli-적분"><span class="header-section-number">13.3.2</span> Schlaefli 적분</a></li>
-  <li><a href="#생성-함수" id="toc-생성-함수" class="nav-link" data-scroll-target="#생성-함수"><span class="header-section-number">13.3.3</span> 생성 함수</a></li>
+  <li><a href="#sec-ODE_DE_rodriguess_formula" id="toc-sec-ODE_DE_rodriguess_formula" class="nav-link" data-scroll-target="#sec-ODE_DE_rodriguess_formula"><span class="header-section-number">14.3.1</span> 로드리게스 공식</a></li>
+  <li><a href="#schlaefli-적분" id="toc-schlaefli-적분" class="nav-link" data-scroll-target="#schlaefli-적분"><span class="header-section-number">14.3.2</span> Schlaefli 적분</a></li>
+  <li><a href="#생성-함수" id="toc-생성-함수" class="nav-link" data-scroll-target="#생성-함수"><span class="header-section-number">14.3.3</span> 생성 함수</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -342,9 +350,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode2.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/differential_equation/ode1.html">미분방정식</a></li><li class="breadcrumb-item"><a href="../../src/differential_equation/ode2.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></h1>
 </div>
 
 
@@ -363,7 +371,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-%
+<p>%</p>
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -373,11 +381,11 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="알고-있는-해로부터-해를-더-구하는-법" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">13.1</span> 알고 있는 해로부터 해를 더 구하는 법</h2>
+<section id="알고-있는-해로부터-해를-더-구하는-법" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="알고-있는-해로부터-해를-더-구하는-법"><span class="header-section-number">14.1</span> 알고 있는 해로부터 해를 더 구하는 법</h2>
 <p><br></p>
-<section id="sec-DE_ODE_wronskian" class="level3" data-number="13.1.1">
-<h3 data-number="13.1.1" class="anchored" data-anchor-id="sec-DE_ODE_wronskian"><span class="header-section-number">13.1.1</span> Wronskian</h3>
+<section id="sec-DE_ODE_wronskian" class="level3" data-number="14.1.1">
+<h3 data-number="14.1.1" class="anchored" data-anchor-id="sec-DE_ODE_wronskian"><span class="header-section-number">14.1.1</span> Wronskian</h3>
 <p>구간 <span class="math inline">\(I\)</span> 에서 <span class="math inline">\(n-1\)</span> 번 미분 가능한함수의 집합은 벡터공간을 이루며 따라서 함수에 대한 선형 독립을 정의 할 수 있다. 또한 이 벡터공간에 적절한 내적을 정하여 내적벡터공간으로 구성하면 함수 사이의 직교성(orthogonality) 도 생각 할 수 있다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -386,7 +394,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-DE_ODE_wronskian" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 13.1 (Wronskian)</strong></span> 어떤 구간 <span class="math inline">\(I\)</span> 에서 정의된 <span class="math inline">\(n-1\)</span> 번 미분 가능한 함수 <span class="math inline">\(\varphi_1,\ldots,\,\varphi_n\)</span> 에 대해 다음 과 같이 정의된 행렬식을 <strong>Wronskian</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.1 (Wronskian)</strong></span> 어떤 구간 <span class="math inline">\(I\)</span> 에서 정의된 <span class="math inline">\(n-1\)</span> 번 미분 가능한 함수 <span class="math inline">\(\varphi_1,\ldots,\,\varphi_n\)</span> 에 대해 다음 과 같이 정의된 행렬식을 <strong>Wronskian</strong> 이라고 한다.</p>
 <p><span class="math display">\[
 W[\varphi_1,\ldots,\,\varphi_n] = W[\{\varphi_i\}]:= \det \left(\begin{bmatrix} \varphi_1 &amp; \varphi_2 &amp; \cdots &amp;\varphi_n \\ \varphi'_1 &amp; \varphi'_2 &amp; \cdots &amp; \varphi'_n \\ \vdots  &amp; &amp; &amp;\vdots \\ \varphi^{(n-1)}_1 &amp; \varphi^{(n-1)}_2 &amp; \cdots &amp; \varphi^{(n-1)}_n\end{bmatrix}\right)
 \]</span></p>
@@ -397,7 +405,7 @@ W[\varphi_1,\ldots,\,\varphi_n] = W[\{\varphi_i\}]:= \det \left(\begin{bmatrix} 
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-DE_ODE_wronskian_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 13.1</strong></span> <a href="#def-DE_ODE_wronskian" class="quarto-xref">정의&nbsp;<span>13.1</span></a> 의 Wronskian 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 14.1</strong></span> <a href="#def-DE_ODE_wronskian" class="quarto-xref">정의&nbsp;<span>14.1</span></a> 의 Wronskian 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(W[\{\varphi_i\}]\ne 0\)</span> 이면 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형독립이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(W[\{\varphi_i\}] = 0\)</span> 이면 <span class="math inline">\(\{\varphi_i\}\)</span> 는 선형종속이다.</p>
 </div>
@@ -420,7 +428,7 @@ a_1\varphi_1^{(k)} + \cdots + a_n \varphi_n^{(k)} = 0
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-DE_ODE_dependency_sho" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.1</strong></span> <a href="ode1.html#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span> 12.5.2</span></a> 에서 우리는 <span class="math inline">\(y'' + \omega^2 y = 0\)</span> 의 해 <span class="math inline">\(\sin \omega x,\,\cos\omega x\)</span> 를 구했다. 여기서</p>
+<p><span class="theorem-title"><strong>예제 14.1</strong></span> <a href="ode1.html#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span> 13.5.2</span></a> 에서 우리는 <span class="math inline">\(y'' + \omega^2 y = 0\)</span> 의 해 <span class="math inline">\(\sin \omega x,\,\cos\omega x\)</span> 를 구했다. 여기서</p>
 <p><span class="math display">\[
 W[\sin \omega x,\, \cos\omega x] = \det \left(\begin{bmatrix} \cos \omega x &amp; \sin \omega x \\ - \sin \omega x &amp; \cos \omega x\end{bmatrix}\right) = 1
 \]</span></p>
@@ -430,26 +438,26 @@ W[\sin \omega x,\, \cos\omega x] = \det \left(\begin{bmatrix} \cos \omega x &amp
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-DE_ODE_number_of_solution_of_second_order_linear_ode" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.1</strong></span> 2계 LHODE 는 최대 두개의 독립적인 해를 가질 수 있다. 즉 세개 이상의 독립적인 해는 존재할 수 없다.</p>
+<p><span class="theorem-title"><strong>정리 14.1</strong></span> 2계 LHODE 는 최대 두개의 독립적인 해를 가질 수 있다. 즉 세개 이상의 독립적인 해는 존재할 수 없다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>2계 LHODE</p>
 <p><span id="eq-DE_ODE_thm_nsos_1"><span class="math display">\[
 y'' + p(x) y' + q(x) y = 0
-\tag{13.1}\]</span></span></p>
+\tag{14.1}\]</span></span></p>
 <p>를 생각하자. <span class="math inline">\(y_1,\,y_2,\,y_3\)</span> 가 이 방정식의 해라고 하자. 그리고 <span class="math inline">\(W_{ij} = W[y_i, y_j]\)</span> 라고 하면 <span class="math inline">\(W_{ij}=  y_i y'_j - y'_i y_j\)</span> 이다. 그렇다면</p>
 <p><span id="eq-DE_ODE_thm_nsos_2"><span class="math display">\[
 W'_{ij} = \dfrac{dW_{ij}}{dx} = y'_i y'_j + y_i y''_j - y''_iy_j - y'_i y'_j = y_i y''_j - y''_i y_j
-\tag{13.2}\]</span></span></p>
-<p>이다. <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>13.1</span></a> 로 부터,</p>
+\tag{14.2}\]</span></span></p>
+<p>이다. <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>14.1</span></a> 로 부터,</p>
 <p><span class="math display">\[
 \dfrac{y''_i}{y_i} + p(x) \dfrac{y'_i}{y_i} = -q(x) = \dfrac{y''_j}{y_j} + p(x) \dfrac{y_j'}{y_j}
 \]</span></p>
 <p>이며 여기에 <span class="math inline">\(y_i y_j\)</span> 를 곱하면</p>
 <p><span id="eq-DE_ODE_differential_of_wronskian"><span class="math display">\[
 W'_{ij} = -p(x) W_{ij}
-\tag{13.3}\]</span></span></p>
+\tag{14.3}\]</span></span></p>
 <p>를 얻는다. 이제</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -461,9 +469,9 @@ W(y_1, y_2, y_3) &amp;= \det\left(\begin{bmatrix} y_1 &amp; y_2 &amp; y_3 \\ y'_
 </div>
 <p><br></p>
 </section>
-<section id="sec-DE_ODE_another_solutions_using_wronskian" class="level3" data-number="13.1.2">
-<h3 data-number="13.1.2" class="anchored" data-anchor-id="sec-DE_ODE_another_solutions_using_wronskian"><span class="header-section-number">13.1.2</span> 선형 독립인 다른 해</h3>
-<p>이제 <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>13.1</span></a> 의 꼴의 미분방정식의 한 해를 알고 있다고 하자. Frobenius 방법으로든, 직관으로 파악했든 하나의 해를 알았다면 이제 두번째 해, 즉 첫번째 해에 대해 선형독립인 나머지 해를 찾을 수 있음을 보이고자 한다. 두 해의 Wronskian <span class="math inline">\(W[y_1,\,y_2] = W\)</span> 은 <span class="math inline">\(x\)</span> 에 대한 함수이다. <a href="#eq-DE_ODE_differential_of_wronskian" class="quarto-xref">식&nbsp;<span>13.3</span></a> 로부터,</p>
+<section id="sec-DE_ODE_another_solutions_using_wronskian" class="level3" data-number="14.1.2">
+<h3 data-number="14.1.2" class="anchored" data-anchor-id="sec-DE_ODE_another_solutions_using_wronskian"><span class="header-section-number">14.1.2</span> 선형 독립인 다른 해</h3>
+<p>이제 <a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>14.1</span></a> 의 꼴의 미분방정식의 한 해를 알고 있다고 하자. Frobenius 방법으로든, 직관으로 파악했든 하나의 해를 알았다면 이제 두번째 해, 즉 첫번째 해에 대해 선형독립인 나머지 해를 찾을 수 있음을 보이고자 한다. 두 해의 Wronskian <span class="math inline">\(W[y_1,\,y_2] = W\)</span> 은 <span class="math inline">\(x\)</span> 에 대한 함수이다. <a href="#eq-DE_ODE_differential_of_wronskian" class="quarto-xref">식&nbsp;<span>14.3</span></a> 로부터,</p>
 <p><span class="math display">\[
 \dfrac{d}{dx}W(x) = -p(x) W(x) \implies W(x) = W(a) e^{-\int_{a}^x p(t)\,dt}
 \]</span></p>
@@ -481,15 +489,15 @@ y_2(x) &amp;= y_1(x) \int_b^x \dfrac{W(x')}{[y_1(x')]^2} \, dx' - \dfrac{y_2(b)}
 <p>이다. 여기서 <span class="math inline">\(a,\,b\)</span> 는 임의의 상수이다. 그런데 우리는 <span class="math inline">\(y_1\)</span> 과 선형독립인 <span class="math inline">\(y_2\)</span> 를 찾는 것이므로 뒤의 <span class="math inline">\(y_2(b)y_1(x)/y_2(b)\)</span> 는 없어도 무관하다. 따라서,</p>
 <p><span id="eq-DE_ODE_second_linearly_independent_solution_using_wronskian_0"><span class="math display">\[
 y_2(x) = y_1(x) W(a) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]^2}\, dx'
-\tag{13.4}\]</span></span></p>
+\tag{14.4}\]</span></span></p>
 <p>만 생각해도 된다. 그런데 <span class="math inline">\(W(a)\)</span> 는 <span class="math inline">\(x=a\)</span> 에서의 Wronskian 이며 상수이고, 제차 미분방정식의 해는 임의의 상수곱을 하더라도 해이므로 <span class="math inline">\(W(a)=1\)</span> 로 놓을 수 있다. 따라서 두번째 해는 아래와 같다.</p>
 <p><span id="eq-DE_ODE_second_linearly_independent_solution_using_wronskian"><span class="math display">\[
 y_2(x) = y_1(x) \int_b^x \dfrac{\exp \left(-\int_a^{x'} p(t)\, dt\right)}{[y_1(x')]^2}\, dx'.
-\tag{13.5}\]</span></span></p>
+\tag{14.5}\]</span></span></p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-DE_ODE-anothor_solution_of_2nd_lhode" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.2 (단순조화진동자(SHO) 의 경우)</strong></span> 우리는 <span class="math inline">\(y'' + \omega^2 y=0\)</span> 의 한 해가 <span class="math inline">\(\cos \omega x\)</span> 임을 안다. <span class="math inline">\(p(x) = 0\)</span> 이므로 <span class="math inline">\(W(x) = W_0 = \text{const.}\)</span> 이다. 따라서,</p>
+<p><span class="theorem-title"><strong>예제 14.2 (단순조화진동자(SHO) 의 경우)</strong></span> 우리는 <span class="math inline">\(y'' + \omega^2 y=0\)</span> 의 한 해가 <span class="math inline">\(\cos \omega x\)</span> 임을 안다. <span class="math inline">\(p(x) = 0\)</span> 이므로 <span class="math inline">\(W(x) = W_0 = \text{const.}\)</span> 이다. 따라서,</p>
 <p><span class="math display">\[
 y_2 (x) = \cos(\omega x) W_0 \int_{0}^x \dfrac{1}{\cos ^2 \omega x'}\, dx' = \dfrac{W_0}{\omega} \cos (\omega x) \tan (\omega x) = \dfrac{W_0}{\omega} \sin (\omega x)
 \]</span></p>
@@ -497,13 +505,13 @@ y_2 (x) = \cos(\omega x) W_0 \int_{0}^x \dfrac{1}{\cos ^2 \omega x'}\, dx' = \df
 </div>
 <p><br></p>
 </section>
-<section id="두번째-해의-급수-형태" class="level3" data-number="13.1.3">
-<h3 data-number="13.1.3" class="anchored" data-anchor-id="두번째-해의-급수-형태"><span class="header-section-number">13.1.3</span> 두번째 해의 급수 형태</h3>
-<p><a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>13.1</span></a> 의 <span class="math inline">\(p(x),\, q(x)\)</span> 가 아래와 같은 급수 형태라고 하자.</p>
+<section id="두번째-해의-급수-형태" class="level3" data-number="14.1.3">
+<h3 data-number="14.1.3" class="anchored" data-anchor-id="두번째-해의-급수-형태"><span class="header-section-number">14.1.3</span> 두번째 해의 급수 형태</h3>
+<p><a href="#eq-DE_ODE_thm_nsos_1" class="quarto-xref">식&nbsp;<span>14.1</span></a> 의 <span class="math inline">\(p(x),\, q(x)\)</span> 가 아래와 같은 급수 형태라고 하자.</p>
 <p><span id="eq-DE-ODE_series_form_of_coefficients_of_2nd_ode"><span class="math display">\[
 p(x) = \sum_{i=-1}^\infty p_ix^i,\qquad q(x) = \sum_{j=-2}^\infty q_j x^j.
-\tag{13.6}\]</span></span></p>
-<p>Fuch 정리 (<a href="ode1.html#thm-DE_ODE_fuchs_theorem" class="quarto-xref">정리&nbsp;<span>12.2</span></a>) 에 의해 프로베니우스 해를 보장받기 위해서 <span class="math inline">\(p(x)\)</span> 와 <span class="math inline">\(q(x)\)</span> 의 첫번째 항이 위의 식과 같이 정해졌다. 이제</p>
+\tag{14.6}\]</span></span></p>
+<p>Fuch 정리 (<a href="ode1.html#thm-DE_ODE_fuchs_theorem" class="quarto-xref">정리&nbsp;<span>13.2</span></a>) 에 의해 프로베니우스 해를 보장받기 위해서 <span class="math inline">\(p(x)\)</span> 와 <span class="math inline">\(q(x)\)</span> 의 첫번째 항이 위의 식과 같이 정해졌다. 이제</p>
 <p><span class="math display">\[
 y = \sum_{k=0}^\infty a_k x^{s+k}
 \]</span></p>
@@ -522,7 +530,7 @@ y'' + (p_{-1} x^{-1} + p_0 + p_1 x + \cdots) y'  + (q_{-2} x^{-2} _+ q_{-1} x^{-
 <p><span class="math display">\[
 s^2 + (p_{-1}-1)s+ q_{-2}=0.
 \]</span></p>
-<p>이 결정방정식의 두 근을 <span class="math inline">\(n\ge 0\)</span> 에 대해 <span class="math inline">\(\alpha,\, \alpha-n\)</span> 이라고 하자. <span class="math inline">\(n\)</span> 이 양의 정수라면 <a href="ode1.html#sec-DE_ODE_Frobenius" class="quarto-xref"><span> 12.5</span></a> 의 방법을 사용 할 수 있다. 이로부터</p>
+<p>이 결정방정식의 두 근을 <span class="math inline">\(n\ge 0\)</span> 에 대해 <span class="math inline">\(\alpha,\, \alpha-n\)</span> 이라고 하자. <span class="math inline">\(n\)</span> 이 양의 정수라면 <a href="ode1.html#sec-DE_ODE_Frobenius" class="quarto-xref"><span> 13.5</span></a> 의 방법을 사용 할 수 있다. 이로부터</p>
 <p><span class="math display">\[
 p_{-1} = n-2\alpha +1
 \]</span></p>
@@ -530,7 +538,7 @@ p_{-1} = n-2\alpha +1
 <p><span class="math display">\[
 y_1 = x^{\alpha} \sum_{k=0}^\infty a_k x^{k}.
 \]</span></p>
-<p>이제 <a href="#eq-DE_ODE_second_linearly_independent_solution_using_wronskian" class="quarto-xref">식&nbsp;<span>13.5</span></a> 를 이용하여 두번째 해 <span class="math inline">\(y_2\)</span> 를 구하면</p>
+<p>이제 <a href="#eq-DE_ODE_second_linearly_independent_solution_using_wronskian" class="quarto-xref">식&nbsp;<span>14.5</span></a> 를 이용하여 두번째 해 <span class="math inline">\(y_2\)</span> 를 구하면</p>
 <p><span class="math display">\[
 y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i x_1^i \,dx_1\right)}{x_2^{2\alpha}\left(\sum_{k=0}^\infty a_k x^k_2\right)^2}\right] \,dx_2
 \]</span></p>
@@ -538,10 +546,10 @@ y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i
 <p><br></p>
 </section>
 </section>
-<section id="스튀름-리우빌-정리" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="스튀름-리우빌-정리"><span class="header-section-number">13.2</span> 스튀름-리우빌 정리</h2>
-<section id="sec-DE_ODE_sturm_liouville_theory" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">13.2.1</span> Sturm-Liouville theory</h3>
+<section id="스튀름-리우빌-정리" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="스튀름-리우빌-정리"><span class="header-section-number">14.2</span> 스튀름-리우빌 정리</h2>
+<section id="sec-DE_ODE_sturm_liouville_theory" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="sec-DE_ODE_sturm_liouville_theory"><span class="header-section-number">14.2.1</span> Sturm-Liouville theory</h3>
 <p>2계 LHODE 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대해 아래와 같은 형태의 미분방정식은 고유값 문제로 바꾸게 된다.</p>
 <p><span class="math display">\[
 \mathcal{L}\psi (x) = \lambda \psi (x).
@@ -549,13 +557,13 @@ y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i
 <p>이 경우 <span class="math inline">\(\mathcal{L}\)</span> 은</p>
 <p><span id="eq-DE_ODE_2nd_lhode"><span class="math display">\[
 \mathcal{L}\psi (x) = \left[p_0 (x) \dfrac{d}{dx^2} + p_1(x) \dfrac{d}{dx} + p_2(x)\right]\psi(x)
-\tag{13.7}\]</span></span></p>
+\tag{14.7}\]</span></span></p>
 <p>꼴로 주어진다. 특정한 물리적 상황에 대한 미분방정식은, 그 해가 가저야 할 조건이 주어지며 많은 경우 그 해, 혹은 그 해의 도함수가 가져야할 경계조건으로 주어진다. 어떤 이계 미분 방정식이 <span class="math inline">\(x=a,\,b\)</span> 에서 <span class="math inline">\(f(a)=f(b) =0\)</span> 이거나 <span class="math inline">\(f'(a) = f'(b)=0\)</span> 이어야 한다면, 이 조건을 만족하는 미분가능한 함수의 집합 <span class="math inline">\(X\)</span> 는 힐베르트 공간을 이룬다. 즉 우리는 미분방정식을 벡터공간의 입장에서 다룰 수 있다. 만약 적절한 내적(inner product) 이 주어진 상황에서 <span class="math inline">\(\mathcal{L}\)</span> 연산자가 hermitian 이라면 고유값은 항상 실수이며, 전체 벡터공간을 고유벡터의 선형결합으로 표현 할 수 있다.</p>
 <p><br></p>
 </section>
-<section id="sec-DE_ODE_stum_liouville_hermitian" class="level3" data-number="13.2.2">
-<h3 data-number="13.2.2" class="anchored" data-anchor-id="sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">13.2.2</span> 에르미트 연산자</h3>
-<p><a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>13.7</span></a> 형태로 주어진 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에서 <span class="math inline">\(p'_0 (x) = p_1(x)\)</span> 일 경우를 생각하자. 그렇다면,</p>
+<section id="sec-DE_ODE_stum_liouville_hermitian" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="sec-DE_ODE_stum_liouville_hermitian"><span class="header-section-number">14.2.2</span> 에르미트 연산자</h3>
+<p><a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>14.7</span></a> 형태로 주어진 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에서 <span class="math inline">\(p'_0 (x) = p_1(x)\)</span> 일 경우를 생각하자. 그렇다면,</p>
 <p><span class="math display">\[
 \mathcal{L} \psi (x) = \left[\dfrac{d}{dx} \left(p_0(x) \dfrac{d}{dx}\right) + p_2(x)\right]\psi (x) = [p_0(x) \psi'(x)]' + p_2(x) \psi(x)
 \]</span></p>
@@ -577,9 +585,9 @@ y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i
 <p>이제 디리클레 경계조건, 혹은 노이만 경계 조건을 만족하는 <span class="math inline">\(C^2\)</span> 함수의 집합을 <span class="math inline">\(X\)</span> 라고 하면 <span class="math inline">\(X\)</span> 는 벡터공간며 여기에 내적 <span class="math inline">\(\langle u,\,v\rangle = \displaystyle \int_a^b v^\ast(x)u(x)\,dx\)</span> 이 정의되어 있다면 <span class="math inline">\(X\)</span> 는 내적 벡터 공간이 된다. <span class="math inline">\(\mathcal{L}\)</span> 연산자는 에르미트 연산자이므로 <span class="math inline">\(\mathcal{L}\)</span> 의 고유함수로 <span class="math inline">\(X\)</span> 의 기저를 구성 할 수 있다. <span class="math inline">\(\varphi_i,\, \varphi_j\)</span> 가 각각 <span class="math inline">\(\lambda_i,\, \lambda_j\)</span> 를 고유값으로 갖는 고유함수이며 <span class="math inline">\(\lambda_i\neq \lambda_j\)</span> 라면 당연히 <span class="math inline">\(\langle \varphi_i,\,\varphi_j \rangle = 0\)</span> 이다.</p>
 <p><br></p>
 </section>
-<section id="sec-DE_ODE_hermitianization_of_ode" class="level3" data-number="13.2.3">
-<h3 data-number="13.2.3" class="anchored" data-anchor-id="sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">13.2.3</span> 미분방정식을 에르미트 연산자 형태로 변경하기</h3>
-<p>위에서 설명했듯이 미분연산자가 에르미트연산자라면 매우 좋은 성질을 갖게 된다. 만약 자체로는 에르미트 연산자가 아니지만 약간 변형하여 에르미트 연산자로 만들 수 있다면? <a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>13.7</span></a> 형태의 미분방정식이 에르미트 연산자가 될 조건은 아래의 두가지 이다.</p>
+<section id="sec-DE_ODE_hermitianization_of_ode" class="level3" data-number="14.2.3">
+<h3 data-number="14.2.3" class="anchored" data-anchor-id="sec-DE_ODE_hermitianization_of_ode"><span class="header-section-number">14.2.3</span> 미분방정식을 에르미트 연산자 형태로 변경하기</h3>
+<p>위에서 설명했듯이 미분연산자가 에르미트연산자라면 매우 좋은 성질을 갖게 된다. 만약 자체로는 에르미트 연산자가 아니지만 약간 변형하여 에르미트 연산자로 만들 수 있다면? <a href="#eq-DE_ODE_2nd_lhode" class="quarto-xref">식&nbsp;<span>14.7</span></a> 형태의 미분방정식이 에르미트 연산자가 될 조건은 아래의 두가지 이다.</p>
 <p> (1) <span class="math inline">\(p_0'(x) = p_1(x)\)</span>,</p>
 <p> (2) 경계조건 <span class="math inline">\({\large \left[ \right.}v^\ast p_0 u'  - (v^\ast)'p_0 u {\large \left.\right]}_a^b =  0\)</span> .</p>
 <p>만약 어떤 함수 <span class="math inline">\(w(x)\)</span> 를 곱하여,</p>
@@ -589,11 +597,11 @@ y_2 = y_1 \int^x \left[\dfrac{\exp \left(- \int_{a}^{x_2} \sum_{i=-1}^\infty p_i
 <p>일 때 <span class="math inline">\(\mathcal{L}'\)</span> 이 에르미트 연산자가 되려면 <span class="math inline">\((wp_0)' =wp_1\)</span> 이 되어야 한다. <span class="math inline">\((wp_0)' = (wp_0)\dfrac{p_1}{p_0}\)</span> 이므로,</p>
 <p><span id="eq-DE_ODE_weighting_1"><span class="math display">\[
 w(x)p_0(x) = w(a)p_0(a) \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-\tag{13.8}\]</span></span></p>
+\tag{14.8}\]</span></span></p>
 <p>이이다. <span class="math inline">\(w(a)p_0(a)\)</span> 는 상수로 미분방정식에 영항을 끼치지 않으므로 편의상 <span class="math inline">\(1\)</span> 로 놓자. 실제로는 계산하기 편하도록 어떤 0 이 아닌 상수를 곱하여도 상관 없다. 그렇다면 다음을 얻는다.</p>
 <p><span id="eq-DE_ODE_weighting_2"><span class="math display">\[
 w(x) = \dfrac{1}{p_0(x)} \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
-\tag{13.9}\]</span></span></p>
+\tag{14.9}\]</span></span></p>
 <p>로 놓을 수 있다. 이제 <span class="math display">\[
 \overline{p}_0 = \exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right),\qquad \overline{p}_1 = \dfrac{p_1(x)}{p_0(x)}\exp \left(\int^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
 \]</span> 에 대해</p>
@@ -607,16 +615,16 @@ w(x) = \dfrac{1}{p_0(x)} \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
 &amp;=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b (\mathcal{L}'v(x))^\ast u(x)\, dx \\
 &amp;=  {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b + \int_a^b w(x)(\mathcal{L}v(x))^\ast u(x)\, dx.
 \end{aligned}
-\tag{13.10}\]</span></span></p>
+\tag{14.10}\]</span></span></p>
 <p>이제 경계조건</p>
 <p><span id="eq-DE_ODE_boundary_condition_for_weighted_inner_product"><span class="math display">\[
 {\large \left[ \right.} v^\ast \overline{p}_0 u' - (v^\ast)' \overline{p}_0 u {\large \left. \right]}_a^b = 0
-\tag{13.11}\]</span></span></p>
+\tag{14.11}\]</span></span></p>
 <p>을 만족할 때 내적을</p>
 <p><span id="eq-odd_innerproduct_with_weight"><span class="math display">\[
 \langle u(x),\, v(x)\rangle = \int_a^b v^\ast (x) u(x) w(x)\, dx
-\tag{13.12}\]</span></span></p>
-<p>로 정의하자. 이 때 <span class="math inline">\(w(x)\)</span> 를 <strong>무게 함수(weight function)</strong> 이라고 한다. 그렇다면 <a href="#eq-DE_ODE_boundary_condition_for_weighted_inner_product" class="quarto-xref">식&nbsp;<span>13.11</span></a> 의 경계조건을 만족할 때 <a href="#eq-DE_ODE_hermitian_condition_1" class="quarto-xref">식&nbsp;<span>13.10</span></a> 은</p>
+\tag{14.12}\]</span></span></p>
+<p>로 정의하자. 이 때 <span class="math inline">\(w(x)\)</span> 를 <strong>무게 함수(weight function)</strong> 이라고 한다. 그렇다면 <a href="#eq-DE_ODE_boundary_condition_for_weighted_inner_product" class="quarto-xref">식&nbsp;<span>14.11</span></a> 의 경계조건을 만족할 때 <a href="#eq-DE_ODE_hermitian_condition_1" class="quarto-xref">식&nbsp;<span>14.10</span></a> 은</p>
 <p><span class="math display">\[
 \langle \mathcal{L}u(x),\, v(x)\rangle =  \langle u,\, \mathcal{L}v(x)\rangle
 \]</span></p>
@@ -624,21 +632,21 @@ w(x) = \dfrac{1}{p_0(x)} \exp \left(\int_a^x \dfrac{p_1(t)}{p_0(t)}\, dt\right)
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-DE_ODE_legendre_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.3 (르장드르 함수 (Legendre function))</strong></span> 르장드르 미분연산자</p>
+<p><span class="theorem-title"><strong>예제 14.3 (르장드르 함수 (Legendre function))</strong></span> 르장드르 미분연산자</p>
 <p><span class="math display">\[
 \mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -2x\dfrac{d}{dx}
 \]</span></p>
-<p>에 대해 <span class="math inline">\(\mathcal{L}P_l(x) = -l(l+1)P_l(x)\)</span> 를 푸는 것이 <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 르장드르 미분방정식의 해이다. 자연수 <span class="math inline">\(l\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(l\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는 <span class="math inline">\(w(x)=1\)</span> 이다.</p>
+<p>에 대해 <span class="math inline">\(\mathcal{L}P_l(x) = -l(l+1)P_l(x)\)</span> 를 푸는 것이 <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 르장드르 미분방정식의 해이다. 자연수 <span class="math inline">\(l\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(l\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는 <span class="math inline">\(w(x)=1\)</span> 이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-DE_ODE_chevyshev_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.4 (체비쇼프 함수 (Chevishev function))</strong></span> 체비쇼프 미분연산자</p>
+<p><span class="theorem-title"><strong>예제 14.4 (체비쇼프 함수 (Chevishev function))</strong></span> 체비쇼프 미분연산자</p>
 <p><span class="math display">\[
 \mathcal{L} = (1-x^2) \dfrac{d^2}{dx^2} -x\dfrac{d}{dx}
 \]</span></p>
-<p>에 대해 <span class="math inline">\(\mathcal{L}T_n(x) = -n^2T_n(x)\)</span> 를 푸는 것이 <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 체비쇼프 미분방정식의 해이다. 자연수 <span class="math inline">\(n\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(n\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는</p>
+<p>에 대해 <span class="math inline">\(\mathcal{L}T_n(x) = -n^2T_n(x)\)</span> 를 푸는 것이 <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 체비쇼프 미분방정식의 해이다. 자연수 <span class="math inline">\(n\)</span> 에 대한 미분방정식의 해는 <span class="math inline">\(n\)</span> 차 다항식임이 알려저 있다. <span class="math inline">\(\dfrac{d}{dx}(1-x^2)=-2x\)</span> 이므로 무게함수는</p>
 <p><span class="math display">\[
 w(x) = \dfrac{1}{1-x^2} \exp \left(\int_{a}^x \dfrac{t}{1-t^2}\, dt \right)= \dfrac{1}{\sqrt{1-x^2}}
 \]</span></p>
@@ -648,11 +656,11 @@ w(x) = \dfrac{1}{1-x^2} \exp \left(\int_{a}^x \dfrac{t}{1-t^2}\, dt \right)= \df
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-DE_ODE_laruerre_function" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.5 (라게르 함수(Laguerre function))</strong></span> 아래의 미분방정식 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대한 고유값 문제 <span class="math inline">\(\mathcal{L}\psi =\lambda \psi\)</span> 를 풀고자 한다.</p>
+<p><span class="theorem-title"><strong>예제 14.5 (라게르 함수(Laguerre function))</strong></span> 아래의 미분방정식 연산자 <span class="math inline">\(\mathcal{L}\)</span> 에 대한 고유값 문제 <span class="math inline">\(\mathcal{L}\psi =\lambda \psi\)</span> 를 풀고자 한다.</p>
 <p><span id="eq-ode-laguerre_operator"><span class="math display">\[
 \mathcal{L} = x \dfrac{d^2}{dx^2} + (1-x)\dfrac{d}{dx}.
-\tag{13.13}\]</span></span></p>
-<p>이 때 <span class="math inline">\(\psi\)</span> 는 <span class="math inline">\(0\le x &lt;\infty\)</span> 에서 nonsingular 하며, <span class="math inline">\(\psi (x\to \infty) = 0\)</span> 이라고 하자. <span class="math inline">\(p'_0\ne p_1\)</span> 이므로 무게함수 <span class="math inline">\(w(x)\)</span> 를 <a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>13.9</span></a> 으로 계산하면,</p>
+\tag{14.13}\]</span></span></p>
+<p>이 때 <span class="math inline">\(\psi\)</span> 는 <span class="math inline">\(0\le x &lt;\infty\)</span> 에서 nonsingular 하며, <span class="math inline">\(\psi (x\to \infty) = 0\)</span> 이라고 하자. <span class="math inline">\(p'_0\ne p_1\)</span> 이므로 무게함수 <span class="math inline">\(w(x)\)</span> 를 <a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>14.9</span></a> 으로 계산하면,</p>
 <p><span class="math display">\[
 w(x) = \dfrac{1}{x} \exp \left(\int^x \dfrac{1-t}{t}\,dt\right) = \dfrac{1}{x} e^{\ln x - x} = e^{-x}
 \]</span></p>
@@ -669,11 +677,11 @@ w(x) = \dfrac{1}{x} \exp \left(\int^x \dfrac{1-t}{t}\,dt\right) = \dfrac{1}{x} e
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.1 (Arfken 8.2.1)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 라게르 방정식은 무게함수 <span class="math inline">\(w(x)=e^{-x}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 14.1 (Arfken 8.2.1)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 라게르 방정식은 무게함수 <span class="math inline">\(w(x)=e^{-x}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>13.9</span></a> 로부터 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>14.9</span></a> 로부터 <span class="math display">\[
 \begin{aligned}
 w(x) = \dfrac{1}{x} \exp \left(\int_a^x \dfrac{1-x}{x} \,dx\right) = \dfrac{1}{x} e^{\ln x -x} =e^{-x}.
 \end{aligned}
@@ -682,11 +690,11 @@ w(x) = \dfrac{1}{x} \exp \left(\int_a^x \dfrac{1-x}{x} \,dx\right) = \dfrac{1}{x
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.2 (Arfken 8.2.1)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 에르미트 방정식은 무게함수 <span class="math inline">\(w(x)=e^{-x^2}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 14.2 (Arfken 8.2.1)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 에르미트 방정식은 무게함수 <span class="math inline">\(w(x)=e^{-x^2}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>13.9</span></a> 로부터 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>14.9</span></a> 로부터 <span class="math display">\[
 \begin{aligned}
 w(x) = \exp \left(\int_a^x -2x \,dx\right) = e^{-x^2}.
 \end{aligned}
@@ -695,11 +703,11 @@ w(x) = \exp \left(\int_a^x -2x \,dx\right) = e^{-x^2}.
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.3 (Arfken 8.2.3)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 체비쇼프 방정식은 무게함수 <span class="math inline">\(w(x)=(1-x^2)^{-1/2}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 14.3 (Arfken 8.2.3)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 체비쇼프 방정식은 무게함수 <span class="math inline">\(w(x)=(1-x^2)^{-1/2}\)</span> 에 대해 에르미트 형태가 됨을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>13.9</span></a> 로부터 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-DE_ODE_weighting_2" class="quarto-xref">식&nbsp;<span>14.9</span></a> 로부터 <span class="math display">\[
 \begin{aligned}
 w(x) = \dfrac{1}{1-x^2}\exp \left(\int_a^x -\dfrac{x}{1-x^2} \,dx\right) =\dfrac{e^{\frac{1}{2}\ln (1-x^2) }}{1-x^2} = \dfrac{1}{\sqrt{1-x^2}}
 \end{aligned}
@@ -708,7 +716,7 @@ w(x) = \dfrac{1}{1-x^2}\exp \left(\int_a^x -\dfrac{x}{1-x^2} \,dx\right) =\dfrac
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.4 (Arfken 8.2.4)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>12.1</span></a> 의 르장드르, 체비쇼프, 에르미트, 라게르 방정식 은 다항식 해를 가진다. 에르미트 연산자의 경계조건을 보장하는 적분 영역은 각각 아래와 같음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 14.4 (Arfken 8.2.4)</strong></span> <a href="ode1.html#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 르장드르, 체비쇼프, 에르미트, 라게르 방정식 은 다항식 해를 가진다. 에르미트 연산자의 경계조건을 보장하는 적분 영역은 각각 아래와 같음을 보여라.</p>
 <p> (<span class="math inline">\(a\)</span>) 르장드르 <span class="math inline">\([-1,\,1]\)</span>,</p>
 <p> (<span class="math inline">\(b\)</span>) 체비쇼프 <span class="math inline">\([-1,\,1]\)</span>,</p>
 <p> (<span class="math inline">\(c\)</span>) 에르미트 <span class="math inline">\((-\infty,\,\infty)\)</span>,</p>
@@ -726,7 +734,7 @@ w(x) = \dfrac{1}{1-x^2}\exp \left(\int_a^x -\dfrac{x}{1-x^2} \,dx\right) =\dfrac
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.5 (Arfken 8.2.5)</strong></span> <span class="math inline">\(u_1(x)\)</span> 와 <span class="math inline">\(u_2(x)\)</span> 가 같은 에르미트 연산자의 고유값이며 각각 서로 다른 <span class="math inline">\(\lambda_1,\,\lambda_2\)</span> 의 고유값을 가진다면 <span class="math inline">\(u_1\)</span> 과 <span class="math inline">\(u_2\)</span> 는 선형독립임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 14.5 (Arfken 8.2.5)</strong></span> <span class="math inline">\(u_1(x)\)</span> 와 <span class="math inline">\(u_2(x)\)</span> 가 같은 에르미트 연산자의 고유값이며 각각 서로 다른 <span class="math inline">\(\lambda_1,\,\lambda_2\)</span> 의 고유값을 가진다면 <span class="math inline">\(u_1\)</span> 과 <span class="math inline">\(u_2\)</span> 는 선형독립임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -735,7 +743,7 @@ w(x) = \dfrac{1}{1-x^2}\exp \left(\int_a^x -\dfrac{x}{1-x^2} \,dx\right) =\dfrac
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_8_2_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.6 (Arfken 8.2.5)</strong></span> 아래의 <span class="math inline">\(P_1,\,Q_0\)</span> 는 르장드르 미분방정식의 서로 다른 고유값을 갖는 해이다.</p>
+<p><span class="theorem-title"><strong>연습문제 14.6 (Arfken 8.2.5)</strong></span> 아래의 <span class="math inline">\(P_1,\,Q_0\)</span> 는 르장드르 미분방정식의 서로 다른 고유값을 갖는 해이다.</p>
 <p><span class="math display">\[
 P_1(x) =x,\qquad Q_0(x) = \dfrac{1}{2}\ln \left(\dfrac{1+x}{1-x}\right).
 \]</span></p>
@@ -749,37 +757,37 @@ P_1(x) =x,\qquad Q_0(x) = \dfrac{1}{2}\ln \left(\dfrac{1+x}{1-x}\right).
 \int_{x} \dfrac{x}{2}\ln \left(\dfrac{1+x}{1-x}\right)\,dx = \dfrac{x^2}{4}\ln \left(\dfrac{1+x}{1-x}\right) +\dfrac{x}{4} - \dfrac{1}{4}\ln \left(\dfrac{1+x}{1-x}\right) +C.
 \]</span></p>
 <p><span class="math inline">\(x=\pm 1\)</span> 에서 정의가 되지 않는다.</p>
-<p>(<span class="math inline">\(b\)</span>) <a href="#eq-DE_ODE_boundary_condition_for_weighted_inner_product" class="quarto-xref">식&nbsp;<span>13.11</span></a> 의 경계조건을 만족하지 않는다.</p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#eq-DE_ODE_boundary_condition_for_weighted_inner_product" class="quarto-xref">식&nbsp;<span>14.11</span></a> 의 경계조건을 만족하지 않는다.</p>
 </div>
 </section>
 </section>
-<section id="직교하는-다항식" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="직교하는-다항식"><span class="header-section-number">13.3</span> 직교하는 다항식</h2>
-<section id="sec-ODE_DE_rodriguess_formula" class="level3" data-number="13.3.1">
-<h3 data-number="13.3.1" class="anchored" data-anchor-id="sec-ODE_DE_rodriguess_formula"><span class="header-section-number">13.3.1</span> 로드리게스 공식</h3>
+<section id="직교하는-다항식" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="직교하는-다항식"><span class="header-section-number">14.3</span> 직교하는 다항식</h2>
+<section id="sec-ODE_DE_rodriguess_formula" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="sec-ODE_DE_rodriguess_formula"><span class="header-section-number">14.3.1</span> 로드리게스 공식</h3>
 <p>Sturm-Liouville 형태의 미분방정식</p>
 <p><span id="eq-DE_ODE_sturm_liourille_ode"><span class="math display">\[
 p(x) y'' + q(x)y' + \lambda y = 0
-\tag{13.14}\]</span></span></p>
+\tag{14.14}\]</span></span></p>
 <p>를 생각하자. 많은 경우 <span class="math inline">\(p(x),\, q(x)\)</span> 는 각각 2차, 1차 다항식 형태이다.</p>
 <p><span class="math display">\[
 p(x) = \alpha x^2 + \beta x + \gamma,\qquad q(x) = \mu x + \nu
 \]</span></p>
-<p>이 미분방정식의 <span class="math inline">\(n\)</span> 차 다항식 해를 <span class="math inline">\(y_n = \sum_{k=0}^n c_k x^k\)</span> 라고 이 해에 대한 <span class="math inline">\(\lambda\)</span> 를 <span class="math inline">\(\lambda_n\)</span> 이라고 하자. <span class="math inline">\(c_n\neq 0\)</span> 이다. 그렇다면 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>13.14</span></a> 는 최고차항에서</p>
+<p>이 미분방정식의 <span class="math inline">\(n\)</span> 차 다항식 해를 <span class="math inline">\(y_n = \sum_{k=0}^n c_k x^k\)</span> 라고 이 해에 대한 <span class="math inline">\(\lambda\)</span> 를 <span class="math inline">\(\lambda_n\)</span> 이라고 하자. <span class="math inline">\(c_n\neq 0\)</span> 이다. 그렇다면 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>14.14</span></a> 는 최고차항에서</p>
 <p><span id="eq-eigenvalue_of_n_order_polynomial"><span class="math display">\[
 \lambda_n = -n(n-1)\alpha - n\mu
-\tag{13.15}\]</span></span></p>
+\tag{14.15}\]</span></span></p>
 <p>을 만족해야 한다. 무게함수 <span class="math inline">\(w(x)\)</span> 를 생각하면</p>
 <p><span class="math display">\[
 \dfrac{d}{dx}[w(x)p(x)y'] + \lambda w(x)y = 0
 \]</span></p>
-<p>을 만족해야 한다. 이것을 이용하여 아래의 <a href="#thm-rodrigues_fomula" class="quarto-xref">정리&nbsp;<span>13.2</span></a> 를 증명 할 수 있다. Arfken 의 수리물리학에서 Rodriguess formular 를 찾아보면 지루한 증명을 찾아 볼 수 있으나 여기서는 생략하기로 한다.</p>
+<p>을 만족해야 한다. 이것을 이용하여 아래의 <a href="#thm-rodrigues_fomula" class="quarto-xref">정리&nbsp;<span>14.2</span></a> 를 증명 할 수 있다. Arfken 의 수리물리학에서 Rodriguess formular 를 찾아보면 지루한 증명을 찾아 볼 수 있으나 여기서는 생략하기로 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-rodrigues_fomula" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.2</strong></span> 아래와 같이 정의된 <span class="math inline">\(y_n(x)\)</span> 는 <span class="math inline">\(\lambda\)</span> 가 <a href="#eq-eigenvalue_of_n_order_polynomial" class="quarto-xref">식&nbsp;<span>13.15</span></a> 의 <span class="math inline">\(\lambda_n\)</span> 인 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>13.14</span></a> 의 해이다. <span id="eq-rodrigues_formula"><span class="math display">\[
+<p><span class="theorem-title"><strong>정리 14.2</strong></span> 아래와 같이 정의된 <span class="math inline">\(y_n(x)\)</span> 는 <span class="math inline">\(\lambda\)</span> 가 <a href="#eq-eigenvalue_of_n_order_polynomial" class="quarto-xref">식&nbsp;<span>14.15</span></a> 의 <span class="math inline">\(\lambda_n\)</span> 인 <a href="#eq-DE_ODE_sturm_liourille_ode" class="quarto-xref">식&nbsp;<span>14.14</span></a> 의 해이다. <span id="eq-rodrigues_formula"><span class="math display">\[
 y_n(x) = \dfrac{1}{w(x)} \left(\dfrac{d}{dx}\right)^n \left[w(x)p(x)^n\right].
-\tag{13.16}\]</span></span></p>
+\tag{14.16}\]</span></span></p>
 </div>
 </div>
 <!-- ::: {.proof}
@@ -820,17 +828,17 @@ $$
  -->
 <p><br></p>
 </section>
-<section id="schlaefli-적분" class="level3" data-number="13.3.2">
-<h3 data-number="13.3.2" class="anchored" data-anchor-id="schlaefli-적분"><span class="header-section-number">13.3.2</span> Schlaefli 적분</h3>
-<p><a href="#eq-rodrigues_formula" class="quarto-xref">식&nbsp;<span>13.16</span></a> 을 만족한다면 코시 적분 공식를 사용하여</p>
+<section id="schlaefli-적분" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="schlaefli-적분"><span class="header-section-number">14.3.2</span> Schlaefli 적분</h3>
+<p><a href="#eq-rodrigues_formula" class="quarto-xref">식&nbsp;<span>14.16</span></a> 을 만족한다면 코시 적분 공식를 사용하여</p>
 <p><span id="eq-DE_ODE_schlaefli_integral"><span class="math display">\[
 y_n (x) = \dfrac{1}{2}\dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-\tag{13.17}\]</span></span></p>
+\tag{14.17}\]</span></span></p>
 <p>를 얻을 수 있다. 이를 <strong>Schlaefli 적분</strong> 이라고 한다.</p>
 <p><br></p>
 </section>
-<section id="생성-함수" class="level3" data-number="13.3.3">
-<h3 data-number="13.3.3" class="anchored" data-anchor-id="생성-함수"><span class="header-section-number">13.3.3</span> 생성 함수</h3>
+<section id="생성-함수" class="level3" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="생성-함수"><span class="header-section-number">14.3.3</span> 생성 함수</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -838,7 +846,7 @@ y_n (x) = \dfrac{1}{2}\dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1
 </div>
 <div class="callout-body-container">
 <div id="def-DE_ODE_generating_function" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 13.2</strong></span> 우리가 원하는 함수의 집합 <span class="math inline">\(\{f_n(x)\}\)</span> 가 <span class="math inline">\(x\)</span> 와 보조변수 <span class="math inline">\(t\)</span> 에 대해 정의된 어떤 함수 <span class="math inline">\(g(x,\,t)\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정의 14.2</strong></span> 우리가 원하는 함수의 집합 <span class="math inline">\(\{f_n(x)\}\)</span> 가 <span class="math inline">\(x\)</span> 와 보조변수 <span class="math inline">\(t\)</span> 에 대해 정의된 어떤 함수 <span class="math inline">\(g(x,\,t)\)</span> 에 대해</p>
 <p><span class="math display">\[
 g(x,\,t) = \sum_{n} c_n f_n(x) t^n
 \]</span></p>
@@ -852,15 +860,15 @@ g(x,\,t) = \sum_{n} c_n f_n(x) t^n
 c_n f_n(x) = \dfrac{1}{2\pi i} \oint \dfrac{g(x,\,t)}{t^{n+1}}\, dt
 \]</span></p>
 <p>를 통해 얻을 수 있다. 여기서 적분 경로(contour) 는 <span class="math inline">\(0\)</span> 을 포함하며 <span class="math inline">\(0\)</span> 이외의 다른 특이점이 없어야 한다.</p>
-<p>생성함수는 <a href="#eq-DE_ODE_schlaefli_integral" class="quarto-xref">식&nbsp;<span>13.17</span></a> 을 이용하면 다음과 같이 얻을 수 있다.</p>
+<p>생성함수는 <a href="#eq-DE_ODE_schlaefli_integral" class="quarto-xref">식&nbsp;<span>14.17</span></a> 을 이용하면 다음과 같이 얻을 수 있다.</p>
 <p><span id="eq-DE_ODE_generating_function_using_Schlaefli_formula"><span class="math display">\[
 g(x,\,t) = \dfrac{1}{w(x)} \sum_{n=0}^\infty t^n \dfrac{n!}{2\pi i} \oint_C \dfrac{w(z)[p(z)]^n}{(z-x)^{n+1}} \, dz
-\tag{13.18}\]</span></span></p>
+\tag{14.18}\]</span></span></p>
 <p><br></p>
 <div id="tbl-DE_ODE_2nd_ode_generating_function" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-DE_ODE_2nd_ode_generating_function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;13.1: 중요한 2계 선형 ODE 의 생성 함수
+표&nbsp;14.1: 중요한 2계 선형 ODE 의 생성 함수
 </figcaption>
 <div aria-describedby="tbl-DE_ODE_2nd_ode_generating_function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1311,12 +1319,12 @@ g(x,\,t) = \dfrac{1}{w(x)} \sum_{n=0}^\infty t^n \dfrac{n!}{2\pi i} \oint_C \dfr
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/differential_equation/ode1.html" class="pagination-link" aria-label="상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/differential_equation/pde.html" class="pagination-link" aria-label="편미분 방정식의 이론적 배경">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
