@@ -163,7 +163,7 @@ $$
 </div>
 </br>
 
-### 켤레류 의 지표 {#sec-Group_character_of_conjugacy_class}
+### 켤레류의 지표 {#sec-Group_character_of_conjugacy_class}
 
 ::: {.callout-warning icon="false"}
 
@@ -202,12 +202,12 @@ $$
 
 ::: {.callout-note icon="false"}
 
-#### **Character**
+#### **지표**
 
 ::: {#def-Group_character_of_class}
 
 
-군 $G$ 에 주어진 행렬표현 $D^{(r)}$ 에 대해 $g\in G$ 일 때 $\text{tr}(D^{(r)}(g))$ 를 $g$ 에 대한 표현 $r$ 에서의 **character** 라고 하고 $\chi^{(r)}(g)$ 라고 표기한다. 클래스 $K$ 에 대한 행렬의 trace 를 이 클래스의 **character** 라고 하고 $\chi^{(r)}(K)$ 라고 표기한다.
+군 $G$ 에 주어진 행렬표현 $D^{(r)}$ 에 대해 $g\in G$ 일 때 $\text{tr}(D^{(r)}(g))$ 를 $g$ 에 대한 표현 $r$ 에서의 **지표 (character)** 라고 하고 $\chi^{(r)}(g)$ 라고 표기한다. 클래스 $K$ 에 대한 행렬의 trace 를 이 클래스의 **지표 (character)** 라고 하고 $\chi^{(r)}(K)$ 라고 표기한다.
 
 :::
 :::
@@ -218,7 +218,7 @@ $$
 
 ::: {#exm-Group_character_of_identity}
 
-$E=\{i_G\}$ 는 자체로 동치류이다. $d\times d$ 행렬 표현 $D$ 에 대한 character $\chi$ 에 대해 $\chi(i_G)= \chi(E)=d$ 이다.
+$E=\{i_G\}$ 는 자체로 동치류이다. $d\times d$ 행렬 표현 $D$ 에 대한 지표 $\chi$ 에 대해 $\chi(i_G)= \chi(E)=d$ 이다.
 
 :::
 </div>
@@ -279,7 +279,7 @@ $$
 
 ::: {#prp-Group_equivalent_representation_and_character}
 
-군 $G$ 의 두 표현이 동등하면 두 표현에 의한 클래스의 character 는 같다. 즉, 두 표현에 의한 클래스의 character 가 다르면 두 표현은 동등하지 않다.
+군 $G$ 의 두 표현이 동등하면 두 표현에 의한 클래스의 지표는 같다. 즉, 두 표현에 의한 클래스의 지표가 다르면 두 표현은 동등하지 않다.
 
 :::
 </div> 
@@ -531,7 +531,7 @@ $$
 
 ::: {#prp-Group_character_of_direct_product_representatin}
 
-군 $G$ 의 두 표현 $D^{(1)},\, D^{(2)}$ 에 대해 $g\in G$ 의 character 를 $\chi^{(1)}(g),\, \chi^{(2)}(g)$ 라고 하자. $D=D^{(1)}\otimes D^{(2)}$ 에 대한 $g$ 의 character $\chi(g)=\chi^{(1)}(g)\chi^{(2)}(g)$ 이다.
+군 $G$ 의 두 표현 $D^{(1)},\, D^{(2)}$ 에 대해 $g\in G$ 의 지표를 $\chi^{(1)}(g),\, \chi^{(2)}(g)$ 라고 하자. $D=D^{(1)}\otimes D^{(2)}$ 에 대한 $g$ 의 지표 $\chi(g)=\chi^{(1)}(g)\chi^{(2)}(g)$ 이다.
 
 :::
 
@@ -824,7 +824,7 @@ $$
 
 </br>
 
-위의 보조정리는 슈어 보조정리로 이어지고 결국 위대한 직교정리를 거쳐 character 에 대한 두 직교정리까지 이어진다. <u>즉 본 장에서 중요한 정리들이 기약표현에서만 성립하는 것은 위의 @lem-Group_schur_lemma_for_hermitian 때문이라고 할 수 있다.</u>
+위의 보조정리는 슈어 보조정리로 이어지고 결국 위대한 직교정리를 거쳐 지표에 대한 두 직교정리까지 이어진다. <u>즉 본 장에서 중요한 정리들이 기약표현에서만 성립하는 것은 위의 @lem-Group_schur_lemma_for_hermitian 때문이라고 할 수 있다.</u>
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -856,7 +856,6 @@ $$
 
 이므로 $[U(g),\, S^{-1}AS]=0$ 이며 따라서 $S^{-1}AS$ 는 항등행렬의 스칼라곱이고, $A$ 도 그러하다. $\square$
 
-
 :::
 
 </br>
@@ -873,7 +872,7 @@ $$
 \forall g\in G,\, MD^{(1)}(g) = D^{(2)}(g)M
 $$ {#eq-lem_Group_for_GOT_1}
 
-일 경우 ($1$) $d_1\ne d_2$ 이면 $M=0$ 이며, ($2$) $d_1=d_2$ 이면 $M=0$ 이거나 $M$ 은 가역행렬이다.
+일 경우 ($1$) $d_1\ne d_2$ 이면 $M=0$ 이며, ($2$) $d_1=d_2$ 이면 $M=0$ 이거나 $M$ 은 가역행렬이다. 즉 $M \ne 0$ 이면 $D^{(1)}$ 과 $D^{(2)}$ 는 동등하다.
 
 :::
 
@@ -909,8 +908,9 @@ MD^{(1)}(g) = D^{(2)}M &\implies MSU^{(1)}(g)S^{-1} = PU^{(2)}(g)P^{-1}M \\
 \end{aligned}
 $$
 
-이므로 $d_1\ne d_2$ 이면 $P^{-1}MS=0$ 이고 따라서 $M=0$ 이다. $d_1=d_2$ 이면 $M=0$ 이거나 $P^{-1}MS$ 가 가역행렬이므로 $M$ 도 가역행렬이다. $\square$
+이므로 $d_1\ne d_2$ 이면 $P^{-1}MS=0$ 이고 따라서 $M=0$ 이다. $d_1=d_2$ 이면 $M=0$ 이거나 $P^{-1}MS$ 가 가역행렬이므로 $M$ 도 가역행렬이다. 따라서 $D^{(1)}(g) = M^{-1}D^{(2)}(g)M$ 이므로 두 표현은 동등하다. $\square$
 :::
+
 
 </br>
 
@@ -981,7 +981,7 @@ $$
 ::: {#thm-Group_great_orthogonality_theorem}
 #### 위대한 직교 정리
 
-유한군 $G$ 에 대한 동등하지 않은 기약 표현 $D^{(i)},\ D^{(j)}$ 와 군의 성분의 개수 $|G|$, 그리고 $D^{(i)}$ 의 차원 $d_i$ 에 대해 다음이 성립한다.
+유한군 $G$ 에 대한 두 기약표현 $D^{(i)},\,D^{(j)}$ 가 동등하지 않거나 같다고 하자. 군의 성분의 개수 $|G|$, 그리고 $D^{(i)}$ 의 차원 $d$ 에 대해 다음이 성립한다.
 
 $$
 \sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
@@ -991,17 +991,9 @@ $$ {#eq-Group_GTO}
 
 </div>
 
-</br>
-
 ::: {.proof}
 
-@lem-Group_for_GOT_2 에서 보았듯이 $D^{(i)} \ne D^{(j)}$ 라면 
-
-$$
-\sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = 0
-$$ 
-
-이다. 따라서 우리는 $i=j$ 일 경우만 생각하면 된다. 이 표현을 $D$ 라고 하고 $d$ 차원이라고 하자. 임의의 $d \times d$ 행렬 $X$ 에 대해 $M$ 을 다음과 같이 정한다.
+동등하지 않은 경우는 @lem-Group_for_GOT_2 에서 보였다. 임의의 $d \times d$ 행렬 $X$ 에 대해 $M$ 을 다음과 같이 정한다.
 
 $$
 M = \sum_{g\in G} D(g) X D(g^{-1}).
@@ -1060,7 +1052,7 @@ $$
 ::: {#cor-Group_great_orthogonality_theorem_for_unitary_representation}
 #### 유니터리 표현에서의 위대한 직교 정리
 
-유한군 $G$ 에 대한 모든 동등하지 않은 기약 유니터리 행렬 표현 $U^{(1)},\ U^{(2)}, \ldots$ 와 군의 성분의 개수 $|G|$, 그리고 $U^{(i)}$ 의 차원 $d_i$ 에 대해 다음이 성립한다.
+유한군 $G$ 에 대한 모든 동등하지 않거나 같은 기약 유니터리 행렬 표현 $U^{(1)},\ U^{(2)}, \ldots$ 와 군의 성분의 개수 $|G|$, 그리고 $U^{(i)}$ 의 차원 $d_i$ 에 대해 다음이 성립한다.
 
 $$
 \sum_{g\in G} {\left[U^{(i)}(g)\right]^\ast} _{\mu \nu}U^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
@@ -1080,7 +1072,7 @@ $$
 Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} \\ \vdots \\ U^{(i)}(g_{|G|})_{\alpha\beta}\end{bmatrix}
 $$
 
-는 $\C^{|G|}$ 의 벡터이다. @eq-Group_GTO_for_unitary_representation 에 의해 $\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{nu\beta}$ 이다. 여기서 가능한 서로 직교하는 $Y_{i\alpha\beta}$ 의 갯수는 $\sum_{i}(d_i)^2$ 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 클 수 없기 때문에 아래 부등식이 성립한다.
+는 $\C^{|G|}$ 의 벡터이다. @eq-Group_GTO_for_unitary_representation 에 의해 $\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{\nu\beta}$ 이다. 여기서 가능한 서로 직교하는 $Y_{i\alpha\beta}$ 의 갯수는 $\sum_{i}(d_i)^2$ 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 클 수 없기 때문에 아래 부등식이 성립한다.
 
 $$
 \boxed{
@@ -1092,9 +1084,9 @@ $${#eq-Group_inequality_from_GTO}
 
 </br>
 
-## Character 에 대한 두 직교 정리
+## 지표에 대한 두 직교 정리 {#sec-Group_two_orthogonality_theorems_for_character}
 
-### Character 에 대한 제 1 직교정리 {#sec-Group_1st_orthogonality_theorem_of_characters}
+### 지표에 대한 제 1 직교정리 {#sec-Group_1st_orthogonality_theorem_for_characters}
 
 @prp-Group_character_of_class, @prp-Group_equivalent_representation_and_character 를 다시 확인하자. 
 
@@ -1103,9 +1095,9 @@ $${#eq-Group_inequality_from_GTO}
 
 ::: {#prp-Group_basic_properties_of_character}
 
-유한군 $G$ 의 equivalency class 의 집합 $\mathcal{K}_G$, $G$ 에 대한 표현 $D$ 와 그 character $\chi$ 에 대해 다음이 성립한다.
+유한군 $G$ 의 켤레류의 집합 $\mathcal{K}_G$, $G$ 에 대한 표현 $D$ 와 그 지표 $\chi$ 에 대해 다음이 성립한다.
 
-&emsp;($1$) $D'$ 이 $D$ 와 동등한 표현이고 $D'$ 표현에서의 character 를 $\chi'$ 이라고 할 때 $\chi(g) = \chi'(g)$, 
+&emsp;($1$) $D'$ 이 $D$ 와 동등한 표현이고 $D'$ 표현에서의 지표를 $\chi'$ 이라고 할 때 $\chi(g) = \chi'(g)$, 
 
 &emsp;($2$) $\forall g\in G,\, \chi (g^{-1}) = \chi(g)^\ast$, 
 
@@ -1116,8 +1108,6 @@ $${#eq-Group_inequality_from_GTO}
 :::
 
 </div>
-
-</br>
 
 ::: {.proof}
 
@@ -1134,7 +1124,7 @@ $${#eq-Group_inequality_from_GTO}
 
 ::: {#thm-Group_orthogonality_of_character_over_element}
 
-유한군 $G$ 의 기약표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 다음이 성립한다.
+유한군 $G$ 의 기약표현 $D^{(i)}$ 에 대한 지표 $\chi^{(i)}$ 에 대해 다음이 성립한다.
 
 $$
 \sum_{g\in G} \left(\chi^{(i)}(g)\right)^\ast\chi^{(j)}(g) = |G|\delta_{ij}
@@ -1144,11 +1134,9 @@ $$ {#eq-Group_orthogonality_of_character_over_entries}
 
 </div>
 
-</br>
-
 ::: {.proof}
 
-닮음 변환에 대해 character 는 불변이므로 유니터리 변환만 생각하면 된다. @eq-Group_GTO_for_unitary_representation 로부터,
+닮음 변환에 대해 지표가 불변이므로 유니터리 변환만 생각하면 된다. @eq-Group_GTO_for_unitary_representation 로부터,
 
 $$
 \begin{aligned}
@@ -1160,16 +1148,16 @@ $$
 
 </br>
 
-우리는 군이 conjugacy class 로 분할된다는 것을 안다. 또한 conjugacy class 에 속하는 군의 원소는 같은 character 를 가진다는 것을 안다. 이로부터 다음을 얻는다.
+우리는 군이 켤레류로 분할된다는 것을 안다. 또한 켤레류에 속하는 군의 원소는 같은 지표를 가진다는 것을 안다. 이로부터 다음을 얻는다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_first_orthogonality_of_character}
 
-#### Character 에 대한 제1 직교 정리
+#### 지표에 대한 제1 직교 정리
 
-유한군 $G$ 에 대해 $G$ 를 분할하는 conjugacy class $\mathcal{K}_G$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 character $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K_i\in \mathcal{K}_G$ 에 대해 $|K_i|$ 를 $K_i$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
+유한군 $G$ 에 대해 $G$ 를 분할하는 켤레류의 집합 $\mathcal{K}_G$ 를 생각하자. $G$ 의 표현 $D^{(i)}$ 에 대한 지표 $\chi^{(i)}$ 에 대해 $\chi^{(i)}(K_i)$ 를 정할 수 있다. $K_i\in \mathcal{K}_G$ 에 대해 $|K_i|$ 를 $K_i$ 에 속하는 $G$ 의 원소의 갯수라고 하자. 이 때 다음이 성립한다.
 
 $$
 \sum_{g\in G} (\chi^{(i)}(g))^\ast\chi^{(j)}(g) =\sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{(i)}(K_i)\right)^\ast\chi^{(j)}(K_i) = |G|\delta_{ij}
@@ -1181,7 +1169,7 @@ $$ {#eq-Group_first_orthogonality_of_character}
 
 </br>
 
-이제 재미있는 것을 해 보자. 군 $G$ 에 서로 equivalent 하지 않은 irreducible representation 의 갯수를 $N_R$ 이라고 하고 conjugacy class 의 갯수를 $N_C$ 라고 하자. $G$ 의 conjugacy calss 를 $\{K_1,\ldots,K_{N_C}\}$ 라고 하자. 그리고 $\C^{N_C}$ 에 속하는 벡터 $X_1,\ldots,\,X_{N_R}$ 을 다음과 같이 정의한다.
+이제 재미있는 것을 해 보자. 군 $G$ 에 서로 동등하지 않은 기약표현의 개수를 $N_R$ 이라고 하고 켤레류의 개수를 $N_C$ 라고 하자. $G$ 의 켤레류를 $\{K_1,\ldots,K_{N_C}\}$ 라고 하자. 그리고 $\C^{N_C}$ 에 속하는 벡터 $X_1,\ldots,\,X_{N_R}$ 을 다음과 같이 정의한다.
 
 $$
 X_i := \sum_{j=1}^{N_C} \sqrt{\dfrac{|K_j|}{|G|}} \hat{\bf{e}}_j = \begin{bmatrix} \sqrt{\dfrac{|K_1|}{|G|}} \chi^{(i)}(K_1) \\ \vdots \\ \sqrt{\dfrac{|K_{N_C}|}{|G|}} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
@@ -1191,14 +1179,14 @@ $$
 
 $$
 \boxed{
-[\text{Number of iniequvalent irreducible representation}] \le [\text{Number of class}]
+[\text{동등하지 않은 기약표현의 개수}] \le [\text{켤레류의 개수}]
 }
 $$ {#eq-Group_inequality_from_orthogonality_of_character_theorem}
 
 임을 알 수 있다. 뒤에 보겠지만 실제로 두 값은 같다. 즉
 $$
 \boxed{
-[\text{Number of iniequvalent irreducible representation}] = [\text{Number of class}]
+[\text{동등하지 않은 기약표현의 개수}] = [\text{켤레류의 개수}]
 }
 $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 
@@ -1206,9 +1194,9 @@ $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 
 </br>
 
-### Character 에 대한 제 2 직교정리 {#sec-Group_2nd_orthogonality_theorem_of_characters}
+### 지표에 대한 제 2 직교정리 {#sec-Group_2nd_orthogonality_theorem_of_characters}
 
-@Tinkham2012Group 은 @eq-Group_equality_from_orthogonality_of_character_theorem 을 증명 없이 전제하고 제 2 직교정리를 증명했다. @Zee2016Group 는 프로베니우스 대수를 도입하여 character 에 대한 제 2 직교정리를 증명하고 이로부터 @eq-Group_equality_from_orthogonality_of_character_theorem 를 증명했다. 여기서는 @Tinkham2012Group 과 같이 @eq-Group_equality_from_orthogonality_of_character_theorem 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. @Zee2016Group 의 방법은 [Character 의 제 2 직교 정리](group_aux.qmd#sec-GroupAux-the_second_orthogonality_theorem_for_characters) 에 소개한다. 
+@Tinkham2012Group 은 @eq-Group_equality_from_orthogonality_of_character_theorem 을 증명 없이 전제하고 제 2 직교정리를 증명했다. @Zee2016Group 는 프로베니우스 대수를 도입하여 지표에 대한 제 2 직교정리를 증명하고 이로부터 @eq-Group_equality_from_orthogonality_of_character_theorem 를 증명했다. 여기서는 @Tinkham2012Group 과 같이 @eq-Group_equality_from_orthogonality_of_character_theorem 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. @Zee2016Group 의 방법은 [지표에 대한 제 2 직교 정리](group_aux.qmd#sec-GroupAux-the_second_orthogonality_theorem_for_characters) 에 소개한다. 
 
 
 우선 @eq-Group_equality_from_orthogonality_of_character_theorem 을 소개한다.
@@ -1217,7 +1205,7 @@ $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 
 ::: {#thm-Group_number_of_irreducible_representation_and_classes}
 
-유한군 $G$ 에 대해 서로 동등하지 않는 기약표현의 개수와 conjugate class 의 개수는 같다.
+유한군 $G$ 에 대해 서로 동등하지 않는 기약표현의 개수와 켤레류의 개수는 같다.
 
 :::
 
@@ -1235,26 +1223,26 @@ $$ {#eq-Group_equality_from_orthogonality_of_character_theorem}
 
 :::
 
-</div> </br>
+</div> 
 
 ::: {.proof}
 
-$G$ 가 아벨리안이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 conjugace class 이다. $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
+$G$ 가 아벨군이면 $xgx^{-1}=g$ 이므로 $G$ 의 모든 원소는 자체가 동치류이다. 즉 $N_R=N_C=|G|$ 이다. @eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation 로 부터 $\sum_i (d_i)^2 = |G|$ 인데 $d_i$ 가 $|G|$ 개 있으므로 가능한 것은 모든 $d_i=1$ 뿐이다. $\square$
 
 :::
 
 </br>
 
 
-이제 @thm-Group_number_of_irreducible_representation_and_classes 를 이용하여 character 에 대한 제 2 직교 정리를 증명한다.
+이제 @thm-Group_number_of_irreducible_representation_and_classes 를 이용하여 지표에 대한 제 2 직교 정리를 증명한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Group_second_orthogonality_of_character}
 
-#### Character 에 대한 제 2 직교 정리
+#### 지표에 대한 제 2 직교 정리
 
-군 $G$ 의 기약 표현 $D^{(i)}$ 과 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. $K_i,\,K_j$ 가 conjugacy class of $G$ 이고 $\chi^{(k)}$ 가 $D^{(k)}$ 에서의 character 일 때 다음이 성립한다.
+군 $G$ 의 기약 표현 $D^{(i)}$ 과 켤레류의 집합 $\mathcal{K}_G$ 를 생각하자. $K_i,\,K_j$ 가 $G$ 의 켤레류 이고 $\chi^{(k)}$ 가 $D^{(k)}$ 에서의 지표일 때 다음이 성립한다.
 
 
 $$
@@ -1263,17 +1251,17 @@ $$ {#eq-thm_Group_second_orthogonality_of_character}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-유한군 $G$ 의 class $\mathcal{K}_G=\{K_1,\ldots,\, K_N\}$ 과 기약표현 $D^{(1)},\ldots,\, D^{(N)}$ 에 대해 $N\times N$ 행렬 $Q$ 와 $Q'$ 을 다음과 같이 정의한다.
+유한군 $G$ 의 켤레류의 집합 $\mathcal{K}_G=\{K_1,\ldots,\, K_N\}$ 과 기약표현 $D^{(1)},\ldots,\, D^{(N)}$ 에 대해 $N\times N$ 행렬 $Q$ 와 $Q'$ 을 다음과 같이 정의한다.
 
 $$
 Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\ast |K_i|}{|G|}.
 $$
 
-이 때 $QQ'$ 은 character 에 대한 제 1 직교정리(@thm-Group_first_orthogonality_of_character) 를 이용하면 항등행렬임을 보일 수 있다.
+이 때 $QQ'$ 은 지표에 대한 제 1 직교정리(@thm-Group_first_orthogonality_of_character) 를 이용하면 항등행렬임을 보일 수 있다.
 
 $$
 (QQ')_{ij} = \sum_{k=1}^N \dfrac{\chi^{(i)}(K_k) \left(\chi^{(j)}(K_k)\right)^\ast|K_k|}{|G|} = \delta_{ij}.
@@ -1292,13 +1280,13 @@ $$
 
 </br>
 
-## 정칙 표현
+## 정칙 표현 
 
 ### Reducibility 확인 {#sec-Group_irreducibility_check}
 
 유한군 $G$ 에 대한 어떤 표현을 얻었다고 하자. 이 표현이 기약표현인지 여부를 확인하는 것은 표현이 되는 행렬만 가지고 확인하는 것은 힘들다. 특히 행렬이 크고 군에 속한 원소가 많은 경우 그 원소마다의 행렬이 일관된 블럭 대각행렬을 이루는 지 확인하는 것은 쉽지 않은 일이다. 
 
-일단 reducible 표현 $D$ 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 
+일단 가약표현 $D$ 를 생각하자. 여기에는 어떤 기약 표현이 한번 이상 포함되어 있을 수도 있다. 
 
 </br>
 
@@ -1306,12 +1294,12 @@ $$
 
 ::: {#prp-Group_reducible_representation_and_multiplicity_1}
 
-유한군 $G$ 의 reducible representaion $D$ 와 $G$ 를 분할하는 conjugacy class 의 집합 $\mathcal{K}_G$ 를 생각하자. $D$ 에 포함된 서로 동등하지 않은 기약 표현 $D^{(j)},\, j=1,\,2,\ldots$ 에 대해 $D^{(j)}$ 가 $m_j$ 번 포함되었다고 하자. 그렇다면 $D$ 에 대한 character $\chi$ 는 $K_i\in \mathcal{K}_G$ 에 대해 다음과 같다. 
+유한군 $G$ 의 가약표현 $D$ 와 $G$ 를 분할하는 켤레류의 집합 $\mathcal{K}_G$ 를 생각하자. $D$ 에 포함된 서로 동등하지 않은 기약 표현 $D^{(j)},\, j=1,\,2,\ldots$ 에 대해 $D^{(j)}$ 가 $m_j$ 번 포함되었다고 하자. 그렇다면 $D$ 에 대한 지표 $\chi$ 는 $K_i\in \mathcal{K}_G$ 에 대해 다음과 같다. 
 $$
 \chi(K_i) = \sum_{j} m_j \chi^{(j)}(K_i)
 $$
 
-Conjugacy class $K_i$ 에 포함되는 $G$ 의 원소의 갯수를 $|K_i|$ 라고 하자. 이 때 다음이 성립한다.
+동치류 $K_i$ 에 포함되는 $G$ 의 원소의 갯수를 $|K_i|$ 라고 하자. 이 때 다음이 성립한다.
 $$
 \begin{aligned}
 \sum_{K_i\in \mathcal{K}_G} |K_i|\chi^\ast(K_i) \chi(K_i) = |G|\sum_{j}(m_j)^2
@@ -1319,7 +1307,6 @@ $$
 $$ {#eq-Group_reducibility_check}
 :::
 </div>
-</br>
 
 ::: {.proof}
 @eq-Group_first_orthogonality_of_character 를 이용하면 다음을 얻는다.
@@ -1336,17 +1323,13 @@ $$
 
 즉, 주어진 군 $G$ 와 표현 $D$ 에 대해,
 
-&emsp;($1$) 일단 군 $G$ 에 대한 conjugacy class 의 집합 $\mathcal{K}_G$ 를 구하고,
+&emsp;($1$) 일단 군 $G$ 에 대한 켤레류의 집합 $\mathcal{K}_G$ 를 구하고,
 
 &emsp;($2$) $\sum_{K_i\in \mathcal{K}_G} |K_i|\chi^\ast(K_i)\chi(K_i)$ 를 구하면,
 
 &emsp;($3$) 이 값은 군의 성분의 갯수에 $D$ 에 포함되는 기약 표현의 중복성 $m_j$ 의 제곱의 합과 같다.
 
-일단 $\dfrac{1}{|G|}\sum_{K_i\in \mathcal{K}_G} |K_i|\chi^\ast(K_i)\chi(K_i) =\sum_j (m_j)^2$ 가 $1$ 이면 $D$ 는 기약표현이며 $1$ 보다 크면 $D$ 는 reducible 이다. 만약 이 값이 $3$ 이라면 $D$ 는 서로 동등하지 않은 세 irreducible representatino 의 direct sum 이다.
-
-</br>
-
-이제 우리가 $D$ 에 포함되는 기약 표현 $D^{(r)}$ 을 얻었다고 하자. 다음 명제를 이용하여 $D^{(r)}$ 의 multiplicity $m_r$ 을 얻을 수 있다.
+일단 $\dfrac{1}{|G|}\sum_{K_i\in \mathcal{K}_G} |K_i|\chi^\ast(K_i)\chi(K_i) =\sum_j (m_j)^2$ 가 $1$ 이면 $D$ 는 기약표현이며 $1$ 보다 크면 $D$ 는 기약표현이 아니다. 만약 이 값이 $3$ 이라면 $D$ 는 서로 동등하지 않은 세 기약표현의 직합이다. 이제 우리가 $D$ 에 포함되는 기약 표현 $D^{(r)}$ 을 얻었다고 하자. 다음 명제를 이용하여 $D^{(r)}$ 의 multiplicity $m_r$ 을 얻을 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -1359,7 +1342,7 @@ $$
 $$ {#eq-Group_multiplicity_check_2}
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\chi(K_i) = \sum_{j} m_j \chi^{(j)}(K_i)$ 에 대해,
@@ -1392,18 +1375,21 @@ $$
 
 <br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-Group_regular_representation}
-#### 정칙 표현
+::: {.callout-note icon="false"}
 
-유한군 $G$ 에 대해 @eq-Group-regular_representation 로 정의된 $\Phi\in \text{Hom}(G,\, \R^{|G|\times |G|})$ 를 $G$ 에 대한 **정칙 표현 (regular representation)** 이라고 하고 $D^{(\text{reg})}$ 라고 표기한다. 정칙 표현에서의 character 는 $\chi^{(\text{reg})}$ 로 표기한다.
+#### **정칙표현**
+
+::: {#def-Group_regular_representation}
+
+
+유한군 $G$ 에 대해 @eq-Group-regular_representation 로 정의된 $\Phi\in \text{Hom}(G,\, \R^{|G|\times |G|})$ 를 $G$ 에 대한 **정칙표현 (regular representation)** 이라고 하고 $D^{(\text{reg})}$ 라고 표기한다. 정칙 표현에서의 지표는 $\chi^{(\text{reg})}$ 로 표기한다.
 
 :::
 :::
 
 </br>
 
-### 정칙표현의 character {#sec-Group_characters_of_regular_representation}
+### 정칙표현의 지표 {#sec-Group_characters_of_regular_representation}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -1412,12 +1398,12 @@ $$
 유한군 $G$ 에 대한 $\chi^{(\text{reg})}(g)=0$ 는 다음과 같다.
 
 $$
-\chi^{(\text{reg})}(g)=  \left\{\begin{array}{ll} |G|,\qquad & g=i_G, \\ 0. &\text{otherwise}.\end{array}\right.
+\chi^{(\text{reg})}(g)=  \left\{\begin{array}{ll} |G|,\qquad & g=i_G, \\ 0, &\text{otherwise}.\end{array}\right.
 $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1428,13 +1414,14 @@ $D^{(\text{reg})}(g)$ 는 각 행, 각 열마다 하나의 $1$ 을 제외한 모
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-Group_regular_representation_is_not_irreducible}
 
 $|G|>1$ 인 유한군 $G$ 의 정칙표현은 기약표현이 아니다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 @prp-Group_regular_representation_and_non_trivial_character 로 부터
@@ -1458,9 +1445,8 @@ $$
 군 $G$ 에 대한 정칙 표현 $D^{(\text{reg})}$ 은 $G$ 에 대한 모든 동등하지 않은 기약 표현을 포함하며 이 기약표현이 $d_r \times d_r$ 일 때 $D^{(\text{reg})}$ 에 $d_r$ 번 포함되어 있다.
 
 :::
-</div>
 
-</br>
+</div>
 
 ::: {.proof}
 
@@ -1512,7 +1498,7 @@ $D^{(\text{reg})}$ 는 $|G|\times |G|$ 행렬이며 @thm-Group_regular_represent
 
 ::: {#exr-Group_regular_expression_1}
 
-유한군 $G$ 에 대한 정칙 표현 $D^{(\text{reg})}$ 에서의 character $\chi^{(\text{reg})}$, 정칙 표현에 포함된 기약표현 $D^{(i)},\, i=1,2,\ldots$ 와 각 기약 표현에 대한 character $\chi^{(i)}$, 그리고 $E =\{i_G\}$ 에 대해 다음이 성립함을 보여라.
+유한군 $G$ 에 대한 정칙 표현 $D^{(\text{reg})}$ 에서의 지표 $\chi^{(\text{reg})}$, 정칙 표현에 포함된 기약표현 $D^{(i)},\, i=1,2,\ldots$ 와 각 기약 표현에 대한 지표 $\chi^{(i)}$, 그리고 $E =\{i_G\}$ 에 대해 다음이 성립함을 보여라.
 
 $$
 |G|=\chi^{(\text{reg})}(E) = \sum_i (\chi^{(i)}(E))^2
@@ -1522,7 +1508,6 @@ $$ {#eq-exr_Group_regular_expression_1}
 
 </div>
 
-</br>
 
 ::: {.solution}
 
@@ -1546,7 +1531,7 @@ $$ {#eq-exr_Group_regular_expression_1}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1559,14 +1544,11 @@ $$ {#eq-exr_Group_regular_expression_1}
 
 </br>
 
+## 지표 테이블
 
-</br>
+### 지표 테이블이란 {#sec-Group_character_table}
 
-## Character Table
-
-### Character Table 이란 {#sec-Group_character_table}
-
-Character talbe 은 군의 특성을 아는데 매우 중요하다. 이것을 어떻게 구성하는지 $S_3$ 군에 대한 예를 통해 알아보기로 하자. 
+지표 테이블은 군의 특성을 아는데 매우 중요하다. 이것을 어떻게 구성하는지 $S_3$ 군에 대한 예를 통해 알아보기로 하자. 
 
 </br>
 
@@ -1574,7 +1556,7 @@ Character talbe 은 군의 특성을 아는데 매우 중요하다. 이것을 �
 
 ::: {#exm-Group_character_table_of_D3}
 
-#### $S_3=D_3$ 에 대한 conugate class
+#### $S_3=D_3$ 에 대한 켤레류
 
 순열군 $S_3$ 는 $(1,\,2,\,3)$ 에 대한 순열군으로 $D_3$ 와 같다. 다 쓰기 복잡하므로 각 원소에 이름을 아래와 같이 붙인다.
 
@@ -1582,7 +1564,7 @@ $$
 S_3=\{E=i_{S_3},\, A=(12),\, B=(13),\, C=(23),\, D=(123),\, F=(132)\}
 $$
 
-군의 conjugare class 가 군을 분할한다는 것을 이용하여 $S_3$ 의 conjugacy class 를 구해보자.
+군의 켤레류가 군을 분할한다는 것을 이용하여 $S_3$ 의 켤레류를 구해보자.
 
 &emsp;($1$) 모든 $g\in S_3$ 에 대해 $gEg^{-1}=E$ 이므로 $\{E\}$ 는 conjugacy class 이다. 즉 $[E]=\{E\}$ 이다.
 
@@ -1590,7 +1572,7 @@ $$
 
 &emsp;($3$) $ADA^{-1}=F$ 이므로 $[D]=\{D,\,F\}$ 이다. 
 
-즉 $3$ 개의 $S_3$ 에 대해 conjugacy class 가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자. 또한 3개의 equivalent 하지 않은 기약표현이 존재한다. $S_3$ 에 대한 정칙표현은 $6 \times 6$ 행렬이며 3개의 기약 표현에 대해 $d_1^2+d_2^2+d_3^3 = 6$ 이어야 한다. Trivial representation(@exm-Group_trivial_representation) $A_1$ 에 대해 $d_1=1$ 이며 따라서 가능한 것은 $d_2=1,\, d_3=2$ 뿐이다(@prp-Group_regular_representation_is_not_irreducible_3). 이를 $A_2,\, E$ 라고 하자.(1차원 기약표현은 $A,\,B$, 2 차원 기약표현을 $E$, 3 차원 기약표현을 $T$ 로 표기하는 관례를 따른다.) 이 기약표현을 정리하면 아래와 같다. 
+즉 $3$ 개의 $S_3$ 에 대해 켤레류가 존재한다. 이를 각각 $\mathcal{C}_1,\, \mathcal{C}_2,\, \mathcal{C}_3$ 라고 하자. 또한 3개의 동등하지 않은 기약표현이 존재한다. $S_3$ 에 대한 정칙표현은 $6 \times 6$ 행렬이며 3개의 기약 표현에 대해 $d_1^2+d_2^2+d_3^3 = 6$ 이어야 한다. 자명한 표현(@exm-Group_trivial_representation) $A_1$ 에 대해 $d_1=1$ 이며 따라서 가능한 것은 $d_2=1,\, d_3=2$ 뿐이다(@prp-Group_regular_representation_is_not_irreducible_3). 이를 $A_2,\, E$ 라고 하자.(1차원 기약표현은 $A,\,B$, 2 차원 기약표현을 $E$, 3 차원 기약표현을 $T$ 로 표기하는 관례를 따른다.) 이 기약표현을 정리하면 아래와 같다. 
 
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|cccccc } 
 \hline  
@@ -1607,9 +1589,9 @@ $E$ & $\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ & $\begin{bmatrix} -1 & 0 \\
 
 
 
-Character table 은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 character 값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. @Zee2016Group 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.
+지표 테이블은 첫번째 행에 클래스를, 첫번째 열에 기약표현을 나열하고 안을 지표값으로 채우는 방식과, 첫번째 행에 기약표현을, 첫번재 열에 클래스를 열하는 표기법이 있다. @Zee2016Group 는 두번째 표기법을 사용하지만 여기서는 좀 더 많이 사용하는 첫번째 표기법을 사용하겠다.
 
-Charater table 의 첫번째 행은 conjugacy class 를 나열한다. Class 이름 앞에 각 class 의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 $[\;]$ 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. $D_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. character table 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 class 의 character 을 나열한다. $D_3$ 에 대한 character table 은 아래와 같다. 
+지표 테이블의 첫번째 행은 켤레류를 나열한다. 켤레류 이름 앞에 각 켤레류의 원소의 개수를 쓰는 경우도 있다. 특정한 이름을 붙일 수도 있고 각 클래스의 대표 원소에 $[\;]$ 를 붙여 표기할 수도 있다. 좀 재멋대로다. 첫번째 행 첫번째 열에 군의 기호를 쓰기도 한다. $D_3$ 의 경우 $\mathcal{C}_1,\, 3\mathcal{C}_2,\, 2\mathcal{C}_3$ 가 된다. 지표 테이블의 첫번째 열은 각각의 기약표현에 대한 정보가 들어간다. 한줄로 아래와 같이 표현할 수도 있고, 이를 분할하여 여러 정보를 넣는 경우도 있다. 역시 제멋대로다. 그리고 나머지 행과 열은 각 기약표현의 켤레류의 지표를 나열한다. $D_3$ 에 대한 지표 테이블은 아래와 같다. 
 
 <!--  \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
@@ -1628,7 +1610,7 @@ $D^{(3)}$ & $2$ & $0$ & $-1$ \\
 
 </div></br>
 
-위와 같은 character table 에는 우리가 지금껏 알아보았던 여러가지 명제들이 사용된다. 여기서 한가지를 추가하도록 하자. 
+위와 같은 지표 테이블에는 우리가 지금껏 알아보았던 여러가지 명제들이 사용된다. 여기서 한가지를 추가하도록 하자. 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -1642,12 +1624,12 @@ $${#eq-prp_Group_class_multiplication_and_character}
 
 
 :::
+
 </div>
-</br>
 
 ::: {.proof}
 
-유한군 $G$ 와 $G$ 의 conjugate class 의 집합 $\mathcal{K}_G=\{K_1,\ldots,\,\}$ 를 생각하자. $G$ 에 대한 $d_i$ 차원 기약표현 $D^{(i)}$ 와 $g\in G$ 에 대해 $\overline{g} := D^{(i)}(g)$ 라고 하자. 그리고
+유한군 $G$ 와 $G$ 의 켤레류의 집합 $\mathcal{K}_G=\{K_1,\ldots,\,\}$ 를 생각하자. $G$ 에 대한 $d_i$ 차원 기약표현 $D^{(i)}$ 와 $g\in G$ 에 대해 $\overline{g} := D^{(i)}(g)$ 라고 하자. 그리고
 
 $$
 \overline{K}_k = \sum_{x\in K_k} D^{(i)}(x)
@@ -1686,13 +1668,13 @@ $$
 </br>
 
 
-### Character Table 구성 규칙 {#sec-Group-character_table_construction_rules}
+### 지표 테이블 구성 규칙 {#sec-Group-character_table_construction_rules}
 
-@exm-Group_character_table_of_D3 의 경우 원소가 6개이고 conjugate class 가 3개 이므로 비교적 쉽게 character table 을 구했다. 그러나 일반적으로는 쉽지 않으며 우리가 지금까지 알아본 것들을 이용하여 구해야 한다. 이제 여기에 중요한 것을 요약하고자 한다.
+@exm-Group_character_table_of_D3 의 경우 원소가 6개이고 켤레류가 3개 이므로 비교적 쉽게 지표 테이블을 구했다. 그러나 일반적으로는 쉽지 않으며 우리가 지금까지 알아본 것들을 이용하여 구해야 한다. 이제 여기에 중요한 것을 요약하고자 한다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-유한군 $G$ 의 모든 동등하지 않은 기약표현 $D^{(1)},\ldots,\,D^{(N_R)}$ 와 conjugace class 의 집합 $\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}$ 를 생각하자. 기약표현 $D^{(i)}$ 에 대한 character 를 $\chi^{(i)}$ 라고 하고, $D^{(i)}$ 의 차원을 $d_i$ 라고 하자. $D^{(i)}$ 와 동등한 유니터리 표현을 $U^{(i)}$ 라고 하자. 이 때 다음이 성립한다.
+유한군 $G$ 의 모든 동등하지 않은 기약표현 $D^{(1)},\ldots,\,D^{(N_R)}$ 와 켤레류의 집합 $\mathcal{K}_G =\{K_1,\ldots,\,K_{N_C}\}$ 를 생각하자. 기약표현 $D^{(i)}$ 에 대한 지표를 $\chi^{(i)}$ 라고 하고, $D^{(i)}$ 의 차원을 $d_i$ 라고 하자. $D^{(i)}$ 와 동등한 유니터리 표현을 $U^{(i)}$ 라고 하자. 이 때 다음이 성립한다.
 
 #### **(R1) 표현의 차원과 군의 크기**
 
@@ -1700,19 +1682,19 @@ $$
 \displaystyle\sum_{i} {d_i}^2 = |G|,
 $$ {#eq-Group_c1}
 
-#### **(R2) Character 와 기약 표현의 개수**
+#### **(R2) 지표와 기약 표현의 개수**
 
 $$
 N_C=N_R
 $$ {#eq-Group_c2}
 
-#### **(R3) $\bf{E=\{i_G\}}$ 와 character**
+#### **(R3) $\bf{E=\{i_G\}}$ 와 지표**
 
 $$
 \chi^{(i)}(E)=d_i
 $${#eq-Group_c3}
 
-#### **(R4) 1차원 표현의 charcacter**
+#### **(R4) 1차원 표현의 지표**
 
 <center>
 $D^{(i)}$ 가 1차원 표현일 때 $|\chi^{(i)}(g)|^2=1$.
@@ -1731,19 +1713,19 @@ $$
 $$ {#eq-Group_c6} 
 
 
-#### **(R7) Character 에 대한 제 1 직교 정리** 
+#### **(R7) 지표에 대한 제 1 직교 정리** 
 
 $$
 \displaystyle \sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{(j)}(K_i)\right)^\ast\chi^{(k)}(K_i) = |G|\delta_{jk}
 $$ {#eq-Group_c7}
 
-#### **(R8) Character 에 대한 제 2 직교 정리** 
+#### **(R8) 지표에 대한 제 2 직교 정리** 
 
 $$
 \sum_k \left(\chi^{(k)}(K_i)\right)^\ast\chi^{(k)}(K_j) = \dfrac{|G|}{|K_i|} \delta_{K_i,\, K_j}
 $$ {#eq-Group_c8} 
 
-#### **(R9) Character 곱 규칙**
+#### **(R9) 지표 곱 규칙**
 
 $K_jK_k =\sum_{l} c_{jkl} K_l$ 에 대해 
 $$
@@ -1758,14 +1740,14 @@ $${#eq-Group_c9}
 
 </br>
 
-### 간단한 군의 Character table
+### 간단한 군의 지표 테이블
 
 여기서 $n$ 차원 기약표현을 $\Gamma_{n}$ 이라고 하자. $n$ 차원 기약표현이 여러개 있을 경우 $\Gamma_n',\, \Gamma_n'',\ldots$ 와 같이 표현하기로 하자. 
 
 
 #### **$Z_n$ 군 과 순환군**
 
-(정수에서의 $\Z/n\Z$ 와는 다르다). $\C$ 에서의 $z^n=1$ 의 해의 집합 $Z_n$ 은 곱셈 연산에 대해 군이다. $z^n=1$ 의 해는 $e^{2ki/n}$, $k=1,\ldots,\, n$ 이며 $\gcd(n,\,k_0)=1$ 인 $k_0\in \Z_+$ 에 대해 $Z_n = \langle e^{2 \pi k_0/n} \rangle$ 인 순환군이며 $g^n=1$ 인 $\langle g\rangle$ 과 동형이다. 순환군이므로 아벨군이다. $n$ 이 소수일 경우는 모든 $k=1,\ldots,\,n$ 이 $Z_n$ 을 생성시키지만 $n$ 이 소수가 아닐 경우는 그렇지 않다. $Z_4$ 에 대한 character table 은 아래와 같다.
+(정수에서의 $\Z/n\Z$ 와는 다르다). $\C$ 에서의 $z^n=1$ 의 해의 집합 $Z_n$ 은 곱셈 연산에 대해 군이다. $z^n=1$ 의 해는 $e^{2ki/n}$, $k=1,\ldots,\, n$ 이며 $\gcd(n,\,k_0)=1$ 인 $k_0\in \Z_+$ 에 대해 $Z_n = \langle e^{2 \pi k_0/n} \rangle$ 인 순환군이며 $g^n=1$ 인 $\langle g\rangle$ 과 동형이다. 순환군이므로 아벨군이다. $n$ 이 소수일 경우는 모든 $k=1,\ldots,\,n$ 이 $Z_n$ 을 생성시키지만 $n$ 이 소수가 아닐 경우는 그렇지 않다. $Z_4$ 에 대한 지표 테이블은 아래와 같다.
 
 <center>
 ![$Z_4$ character table](figures/character_table_Z4.png){#tbl-Group_character_table_Z4 width=200}
@@ -1776,7 +1758,7 @@ $${#eq-Group_c9}
 
 #### **$A_3$ 군**
 
-$e$ 를 항등원이라고 할 때 $A_3 =\{e,\, (123), (132)\}$ 이며 순환군으로 $A_3 \approx Z_3$ 이다. @eq-Group_c1 에 의하면 $c=1^2+1^2+1^2$ 이므로 3개의 1차원 기약표현이 존재하며 따라서 $3$ 개의 character 가 존재한다. $A_3$ 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다. 
+$e$ 를 항등원이라고 할 때 $A_3 =\{e,\, (123), (132)\}$ 이며 순환군으로 $A_3 \approx Z_3$ 이다. @eq-Group_c1 에 의하면 $c=1^2+1^2+1^2$ 이므로 3개의 1차원 기약표현이 존재하며 따라서 $3$ 개의 지표가 존재한다. $A_3$ 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다. 
 
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
@@ -1800,7 +1782,7 @@ $\Gamma''_1$ & $1$ & $e^{2i\pi/3}$ & $e^{i\pi/3}$ \\
 
 $S_3=\{e,\, (12), (13), (23), (123), (132)\}$ 이며 $\mathcal{C}_1=[e],\, \mathcal{C}_2=[(12)], \mathcal{C}_3=[(123)]$ 클래스를 가진다. $|S_3|=6$ 이며 3 개의 class 를 가지므로 3개의 기약표현을 가지는데 6 을 세개의 제곱수의 합으로 표현하는 방법은 $1^1+1^2+2^2$ 뿐이다. 즉 2 개의 1차원 기약표현과 1개의 2차원 기약표현을 가진다. 
 
-$\mathcal{C}_1$ 클래스에 대항하는 character 는 각 기약표현의 차원이므로 $1,\,1,\,2$ 이다. $\Gamma_1$ 은 $1$ trivial reprentation 이므로 해당 행은 모두 $1$ 이다. 여기 까지만 하면 다음과 같다. 아직 정해지지 않은 부분은 미지수 $a,\,b,\,c,\,d$ 로 채웠다.
+$\mathcal{C}_1$ 클래스에 대항하는 지표는 각 기약표현의 차원이므로 $1,\,1,\,2$ 이다. $\Gamma_1$ 은 $1$ trivial reprentation 이므로 해당 행은 모두 $1$ 이다. 여기 까지만 하면 다음과 같다. 아직 정해지지 않은 부분은 미지수 $a,\,b,\,c,\,d$ 로 채웠다.
 
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
@@ -1815,7 +1797,7 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 ![$S_3$ character table 부분 완성](figures/character_table_S3_p1.png){#tbl-Group_character_table_S3_p1 width=150}
 </center>
 
-제 1 character 직교 정리를 통해
+지표에 대한 제 1 직교 정리를 통해
 
 $$
 \begin{aligned}
@@ -1857,7 +1839,7 @@ $$
 
 ## 연습문제 {.unnumbered}
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Group_for_lem-Group_for_GOT}
 
@@ -1865,7 +1847,7 @@ $m\times n$ 행렬 $M$ 이 $MM^\dagger = cI_{m}$ 이라고 하자. $m>n$ 이면 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1883,11 +1865,11 @@ $m\le n$ 일 경우 $M=\begin{bmatrix}I_n & \bf{0}\end{bmatrix}$ 라고 놓으�
 
 ($a$) $D_4$ 에는 몇개의 동등하지 않은 기약표현이 존재하는가? 그 차원은 어떻게 되는가. @exr-tinkham_2_1 의 Cayley table 을 이용하라
 
-($b$) $D_4$ 에 대한 character table 을 구하라.
+($b$) $D_4$ 에 대한 지표 테이블을 구하라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1895,25 +1877,25 @@ $m\le n$ 일 경우 $M=\begin{bmatrix}I_n & \bf{0}\end{bmatrix}$ 라고 놓으�
 
 ($b$) 클래스를 @exr-tinkham_2_1 의 ($2$) 에 따라 $K_1,\,K_2,\,K_3,\,K_4,\,K_5$ 로 표기하는데 클래스의 원소의 개수가 중요하므로 클래스명에 윗첨자로 클래스의 원소의 개수를 표기하자. $N_R=N_C=5$ 이며 **(R1)** 을 만족하는 경우는 $d_1=d_2=d_3=d_4=1,\, d_5=2$ 뿐이다. 1차원 기약표현이 $4$ 종류 2차원 기약표현이 $1$ 종류이다. 1차원 기약표현을 $\Gamma_{11},\ldots,\Gamma_{14}$ 라고 표기하고 2차원 기약표현을 $\Gamma_2$ 라고 하자. 아래와 같은 표를 채우면 된다.
 
-![$D_4$ character table templete](figures/D4_character_table_templete.png){#fig-Group_D4_character_table_templete width=250}
+![$D_4$ 지표 테이블 templete](figures/D4_character_table_templete.png){#fig-Group_D4_character_table_templete width=250}
 
 - $K_1 = \{E\}$, 즉 항등원 뿐이므로 첫번째 행은 차원과 같다.
 - $\Gamma_1$ 은 trivial representation 으로 한다. 즉 모든 값이 $1$ 이다.
-- Character 에 대한 제 2 직교정리(@eq-Group_c8) 를 사용한다. 각각의 class 에 대해 수행하면 $\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4$, $\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0$ 이다. 여기서 $\chi^{(\Gamma_2)}(K_1=\{E\})=2$ 이다.
-- Character 에 대한 제 1 직교정리(@eq-Group_c7) 를 $i=\Gamma_{11},\, j=\Gamma_2$ 에 적용하면 $\chi^{(\Gamma_2)}(K_5)=-2$ 이다.
+- 지표에 대한 제 2 직교정리(@eq-Group_c8) 를 사용한다. 각각의 class 에 대해 수행하면 $\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4$, $\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0$ 이다. 여기서 $\chi^{(\Gamma_2)}(K_1=\{E\})=2$ 이다.
+- 지표에 대한 제 1 직교정리(@eq-Group_c7) 를 $i=\Gamma_{11},\, j=\Gamma_2$ 에 적용하면 $\chi^{(\Gamma_2)}(K_5)=-2$ 이다.
 
-![$D_4$ character table #1](figures/D4_character_table_1.png){#fig-Group_D4_character_table_1 width=250}
+![$D_4$ 지표 테이블 #1](figures/D4_character_table_1.png){#fig-Group_D4_character_table_1 width=250}
 
-- Character 에 대한 제 2 직교정리(@eq-Group_c8) 를 $K_1$ 과 $K_5$ 에 적용하자. $K_5$ 의 빈 칸을 위서부터 차례로 $a,\,b,\,c$ 라고 하면 $1+a+b+c-4=0$ 이므로 $a+b+c=3$ 이며 $a,\,b,\,c$ 가 모두 1차원 표현의 character 이므로 $|a|=|b|=|c|=1$ 이어야 한다. 이것을 만족하는 것은 $a=b=c=1$ 뿐이다. 
+- 지표에 대한 제 2 직교정리(@eq-Group_c8) 를 $K_1$ 과 $K_5$ 에 적용하자. $K_5$ 의 빈 칸을 위서부터 차례로 $a,\,b,\,c$ 라고 하면 $1+a+b+c-4=0$ 이므로 $a+b+c=3$ 이며 $a,\,b,\,c$ 가 모두 1차원 표현의 지표 이므로 $|a|=|b|=|c|=1$ 이어야 한다. 이것을 만족하는 것은 $a=b=c=1$ 뿐이다. 
 
 
-![$D_4$ character table #2](figures/D4_character_table_2.png){#fig-Group_D4_character_table_2 width=250}
+![$D_4$ 지표 테이블 #2](figures/D4_character_table_2.png){#fig-Group_D4_character_table_2 width=250}
 
 
 - 이제 미지수가 $3\times 3 = 9$ 개 남았다. 이 $3\times 3$ 행렬에 대해 아는 것은 ($i$) 모두 성분이 2개인 클래스에 대한 1차원 기약표현 뿐이므로 절대값은 모두 $1$ 이고(**R4**), ($ii$) 각 행의 합은 $-1$(**R7**), ($iii$) 각 열의 합도 $-1$(**R8**), ($iii$) 서로 다른 행벡터의 내적은 $-1$, ($iv$) 서로 다른 열벡터의 내적도 $-1$ 이란 것이다. 또한 $\Gamma_{12}...\Gamma_{14}$ 를 구별하는 어떤 것도 없다. 따라서 이 조건을 만족하는 값을 구한 후 순서에 상관 없이 넣으면 된다. 이로부터,
  
 
-![$D_4$ character table](figures/D4_character_table_3.png){#fig-Group_D4_character_table width=250}
+![$D_4$ 지표 테이블](figures/D4_character_table_3.png){#fig-Group_D4_character_table width=250}
 
 :::
 
@@ -1929,11 +1911,11 @@ Trivial representation $D^{(1)}$ 을 제외하고 $\displaystyle \sum_{g\in G}\c
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-Character 에 대한 제 1 직교정리를 이용한다. 군 $G$ 의 conjugate class 의 집합 $\mathcal{K}_G$ 를 생각하자. Trivial representatin $D^{(1)}$ 에 대해 $\chi^{(1)}(K_i)=\left(\chi^{(1)}(K_i)\right)^\ast = 1$ 이므로 
+지표에 대한 제 1 직교정리를 이용한다. 군 $G$ 의 conjugate class 의 집합 $\mathcal{K}_G$ 를 생각하자. Trivial representatin $D^{(1)}$ 에 대해 $\chi^{(1)}(K_i)=\left(\chi^{(1)}(K_i)\right)^\ast = 1$ 이므로 
 $$
 \sum_{g\in G} \chi^{(j)}(g) = \sum_{K_i \in \mathcal{K}_G} |K_i| \chi^{(j)}(K_i) = \sum_{k\in K_G} |K_i| \chi^{(1)}(K_i)\chi^{(j)}(K_i) = |G|\delta_{1i}
 $$
@@ -1961,7 +1943,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 

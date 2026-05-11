@@ -475,7 +475,7 @@ $$
 
 </div>
 
-## 동형사상과 Conjugacy Class
+## 동형사상과 켤레류
 
 ### 동형사상 {#sec-Group_homomorphism}
 
@@ -723,7 +723,7 @@ $x\in X$ 에 대해 $\{y\in X : y \sim x\}$ 를 $x$ 에 대한 **동치류(equiv
 
 ::: {#thm-Group_conjugacy_and_equivalence_class}
 
-군 $G$ 를 생각하자. $a,\,b\in G$ 가 conjugate 인 것은 동치관계이다.
+군 $G$ 를 생각하자. $a,\,b\in G$ 가 켤레인 것은 동치관계이다.
 
 :::
 
@@ -1080,7 +1080,7 @@ $$
 
 ### Class 곱 {#sec-Group_class_multiplication}
 
-$G$ 의 conjugate class 의 집합 $\mathcal{K}_G=\{K_1,\ldots,\,K_m\}$ 를 생각하자. $g\in G$ 에 대해
+$G$ 의 켤레류의 집합 $\mathcal{K}_G=\{K_1,\ldots,\,K_m\}$ 를 생각하자. $g\in G$ 에 대해
 
 $$
 gK_i g^{-1}= K_i
@@ -1092,7 +1092,7 @@ $$
 K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g 
 $$
 
-이다. 이것은 $K_iK_j$ 가 conjugate class 일 경우 뿐만 아니라 conjugatcy class 의 합집합 일 때도 성립하며, 실제로 그러하다. $K_i,\,K_j$ 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.
+이다. 이것은 $K_iK_j$ 가 켤레류일 경우 뿐만 아니라 켤레류의 합집합 일 때도 성립하며, 실제로 그러하다. $K_i,\,K_j$ 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.
 
 $$
 K_iK_j = \sum_k c_{ijk}K_k
@@ -1123,14 +1123,12 @@ $$
 
 :::
 
-
-
 </div></br>
 
 
 ## 연습문제 {.unnumbered}
 
-><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Zee_1_2_2}
 #### Zee 1.2.2
