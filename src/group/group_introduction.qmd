@@ -1086,17 +1086,28 @@ $$
 gK_i g^{-1}= K_i
 $$
 
-임은 쉽게 알 수 있다. 그렇다면 두 클래스의 곱은 어떻게 될 까?
+임은 쉽게 알 수 있다. 그렇다면 두 클래스의 곱은 어떻게 될까? $X=K_iK_j$ 라고 하면
 
 $$
-K_iK_j = \left(g^{-1}K_ig\right)\left(g^{-1}K_j g\right) = g^{-1} K_iK_j g 
+g X g^{-1} = g K_i K_jg^{-1} = gK_ig^{-1}gK_jg^{-1}= K_iK_j = X
 $$
 
-이다. 이것은 $K_iK_j$ 가 켤레류일 경우 뿐만 아니라 켤레류의 합집합 일 때도 성립하며, 실제로 그러하다. $K_i,\,K_j$ 의 곱이 두개 이상의 conjugace class 의 합집합이며, 어떤 경우 같은 원소가 여러번 등장하기도 한다. 이 때 합집합과 등장 횟수를 모두 포함하는 다음과 같은 식을 정의 할 수 있다.
+이로 $K_iK_j$ 는 켤레 작용에 대해 닫혀 있다. 즉 $K_iK_j$ 는 어떤 켤레류들의 합집합이다. 여기서 우리는 중요한 정리를 언급하고자 한다. 이 명제는 동일한 명제인 @prp-GroupAux_frobenius_algebra_3 의 증명을 참고하라.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_product_of_two_conjugacy_class}
+
+$K_i,\,K_j$ 가 유한군 $G$ 의 켤레류일 때 $K_iK_j$ 는 컬레류의 합집합이며 반복 횟수를 포함한다면 
 
 $$
 K_iK_j = \sum_k c_{ijk}K_k
 $$ {#eq-Group_class_multiplication_rule}
+
+와 같이 쓸 수 있다. 
+:::
+
+</div></br>
 
 위 식은 $K_iK_j$ 를 계산 했을 때 $K_k$ 가 몇번 등장하는지를 표기하는 식이며 $2K_1+3K_2$ 라면 $K_1$ 이 $2$ 번 $K_3$ 가 $3$ 회 등장한다는 뜻이다. 아래의 예를 보고 더 정확히 알아보자.
 

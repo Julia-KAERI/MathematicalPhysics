@@ -24,6 +24,7 @@ book:
       - src/group/group_introduction.qmd
       - src/group/group_Lie1_SO.qmd
       - src/group/group_representation.qmd
+      - src/group/group_characters.qmd
       - src/group/group_symmetry_group.qmd
       - src/group/group_quantum1_schroedinger_equation_group.qmd
       - src/group/group_quantum2_irrep_of_point_group.qmd
