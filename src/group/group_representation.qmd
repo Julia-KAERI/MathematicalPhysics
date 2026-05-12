@@ -70,7 +70,7 @@ $D$ 가 두 군 $G,\, GL_n(\F)$ 사이의 준동형사상이므로 자명하다.
 
 이제 몇가지 질문이 자연스럽게 생겨난다. (1) 모든 군은 표현 가능한가? (2) 군의 표현은 몇가지나 (최소한 trivial representation 을 제외하고라도) 가능한가? (3) 다수의 표현이 존재한다면 이것을 어떤 특징에 따라 분류 할 수 있는가? (4) 표현에 대한 어떤 일반적인 성질이 존재하는가?
 
-일부분은 이미 대답 할 수 있다. Caylay 정리 (@thm-Group-caylay_theorem) 모든 유한군은 대칭군 $S_n$ 의 어떤 부분군과 동형이라는 것을 알려준다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며(@exm-Group_representation_for_Sn), 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?
+일부분은 이미 대답 할 수 있다. Caylay 정리 (@thm-Group-caylay_theorem) 모든 유한군은 대칭군 $S_n$ 의 어떤 부분군과 동형이라는 것을 알려준다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며(@exm-Group_defining_representation_of_Sn), 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?
 
 
 </br>
@@ -136,9 +136,9 @@ $${#eq-Group_unitray_representation_of_D3_1}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-Group_representation_for_Sn}
+::: {#exm-Group_defining_representation_of_Sn}
 
-#### 대칭군 $S_X$ 의 표현
+#### 대칭군 $S_X$ 의 정의 표현
 </br>
 
 우선 대칭군 $S_n$ 은 $n \times n$ 행렬로 표현 할 수 있다. $\bf{e}_j \in \R^n$ 을 $j$ 번째 성분만 $1$ 이며 나머지 성분은 $0$ 인 열벡터(즉 단위벡터)라고 하자. $\sigma\in S_n$ 에 대해 $D(\sigma)$ 를
@@ -153,7 +153,7 @@ $$
 D(\pi)D(\sigma)\bf{e}_j = D(\pi)\bf{e}_{\sigma(j)}= \bf{e}_{(\pi\circ \sigma)(j)}
 $$
 
-이므로 $D(\pi)D(\sigma)= D(\pi \circ \sigma)$ 라고 할 수 있다. 즉 $D$ 는 $S_n$ 에 대한 표현이다. 
+이므로 $D(\pi)D(\sigma)= D(\pi \circ \sigma)$ 라고 할 수 있다. 즉 $D$ 는 $S_n$ 에 대한 표현이다. 이 표현을 $S_n$ 에 대한 **정의 표현 (defining representation)** 이라고도 한다.
 
 
 임의의 유한집합 $X$ 에 대해서는 $X=\{x_1,\ldots,\,x_n\}$ 을 $\{1,\,\ldots,\,n\}$ 으로 놓고 위를 적용하면 된다. 즉 $S_X$ 는 $|X| \times |X|$ 행렬로 표현 할 수 있다.
@@ -1357,7 +1357,7 @@ $$
 
 ### 정칙 표현 {#sec-Group-regular_representation}
 
-군에 대한 케일리 정리(@thm-Group-caylay_theorem) 는 유한군 $G$ 가 대칭군 $S_{|G|}$ 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 $S_{X}$ 는 $|X| \times |X|$ 행렬로 표현 할 수 이 있음을 안다(@exm-Group_representation_for_Sn). 즉 유한군 $G$ 는 $|G|$ 차원 표현을 가지며 이를 **정칙 표현 (regular representation)** 라고 한다.
+군에 대한 케일리 정리(@thm-Group-caylay_theorem) 는 유한군 $G$ 가 대칭군 $S_{|G|}$ 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 $S_{X}$ 는 $|X| \times |X|$ 행렬로 표현 할 수 이 있음을 안다(@exm-Group_defining_representation_of_Sn). 즉 유한군 $G$ 는 $|G|$ 차원 표현을 가지며 이를 **정칙 표현 (regular representation)** 라고 한다.
 
 $G=\{g_1,\ldots,\,g_{|G|}\}$ 에 대해 $\theta: G \to \{\bf{e}_1,\ldots,\, \bf{e}_{|G|}\}\subset \R^{|G|}$ 를 $\theta(g_i) := \bf{e}_i$ 로 정의하자. 그리고 $\Phi : G \to \R^{|G|\times |G|}$ 를
 
@@ -1616,7 +1616,7 @@ $m\le n$ 일 경우 $M=\begin{bmatrix}I_n & \bf{0}\end{bmatrix}$ 라고 놓으�
 
 #### Tinkham 3.2
 
-Trivial representation $D^{(1)}$ 을 제외하고 $\displaystyle \sum_{g\in G}\chi^{(j)}(g) = 0$ 임을 보여라. Trivial represesntation 에서 그 값은 얼마인가?
+자명한 표현(trivial representation) $D^{(1)}$ 을 제외하고 $\displaystyle \sum_{g\in G}\chi^{(j)}(g) = 0$ 임을 보여라. 자명한 표현에서 그 값은 얼마인가?
 
 :::
 

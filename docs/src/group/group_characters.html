@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>7&nbsp; 군의 지표 – 수리물리학</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -27,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,14 +54,15 @@ div.csl-indent {
 <link href="../../src/group/group_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +92,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -349,7 +348,7 @@ window.Quarto = {
   <li><a href="#sec-Group_character_table" id="toc-sec-Group_character_table" class="nav-link" data-scroll-target="#sec-Group_character_table"><span class="header-section-number">7.1.1</span> 지표 테이블이란</a></li>
   <li><a href="#sec-Group-character_table_construction_rules" id="toc-sec-Group-character_table_construction_rules" class="nav-link" data-scroll-target="#sec-Group-character_table_construction_rules"><span class="header-section-number">7.1.2</span> 지표 테이블 구성 규칙</a></li>
   <li><a href="#간단한-군의-지표-테이블" id="toc-간단한-군의-지표-테이블" class="nav-link" data-scroll-target="#간단한-군의-지표-테이블"><span class="header-section-number">7.1.3</span> 간단한 군의 지표 테이블</a></li>
-  <li><a href="#기약표현" id="toc-기약표현" class="nav-link" data-scroll-target="#기약표현"><span class="header-section-number">7.1.4</span> 기약표현</a></li>
+  <li><a href="#sec-Group_from_character_table_to_representation" id="toc-sec-Group_from_character_table_to_representation" class="nav-link" data-scroll-target="#sec-Group_from_character_table_to_representation"><span class="header-section-number">7.1.4</span> 지표 테이블에서 표현까지</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -378,7 +377,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-<p>%</p>
+%
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -519,29 +518,35 @@ N_C=N_R
 \displaystyle \sum_{g\in G} D^{(i)}(g^{-1})_{\nu \mu} D^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
 \tag{7.6}\]</span></span></p>
 </section>
+<section id="r5-1" class="level4">
+<h4 class="anchored" data-anchor-id="r5-1"><strong>(R5-1)</strong></h4>
+<p>사소한 표현 <span class="math inline">\(D^{(i)}(g)=1\)</span> 과 사소하지 않은 기약표현 <span class="math inline">\(D^{(j)}(g)\)</span> 에 대해 위대한 직교정리를 적용하면 <span id="eq-Group_c5_1"><span class="math display">\[
+\displaystyle \sum_{g\in G} D^{(j)}(g)_{\alpha\beta} = 0
+\tag{7.7}\]</span></span></p>
+</section>
 <section id="r6-유니터리-표현에-대한-위대한-직교-정리" class="level4">
 <h4 class="anchored" data-anchor-id="r6-유니터리-표현에-대한-위대한-직교-정리"><strong>(R6) 유니터리 표현에 대한 위대한 직교 정리</strong></h4>
 <p><span id="eq-Group_c6"><span class="math display">\[
 \displaystyle \sum_{g\in G} {\left[U^{(i)}(g)\right]^\dagger} _{\mu \nu}U^{(j)}(g)_{\alpha\beta} = \dfrac{|G|}{d_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\delta}.
-\tag{7.7}\]</span></span></p>
+\tag{7.8}\]</span></span></p>
 </section>
 <section id="r7-지표에-대한-제-1-직교-정리" class="level4">
 <h4 class="anchored" data-anchor-id="r7-지표에-대한-제-1-직교-정리"><strong>(R7) 지표에 대한 제 1 직교 정리</strong></h4>
 <p><span id="eq-Group_c7"><span class="math display">\[
 \displaystyle \sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{(j)}(K_i)\right)^\ast\chi^{(k)}(K_i) = |G|\delta_{jk}
-\tag{7.8}\]</span></span></p>
+\tag{7.9}\]</span></span></p>
 </section>
 <section id="r8-지표에-대한-제-2-직교-정리" class="level4">
 <h4 class="anchored" data-anchor-id="r8-지표에-대한-제-2-직교-정리"><strong>(R8) 지표에 대한 제 2 직교 정리</strong></h4>
 <p><span id="eq-Group_c8"><span class="math display">\[
 \sum_k \left(\chi^{(k)}(K_i)\right)^\ast\chi^{(k)}(K_j) = \dfrac{|G|}{|K_i|} \delta_{K_i,\, K_j}
-\tag{7.9}\]</span></span></p>
+\tag{7.10}\]</span></span></p>
 </section>
 <section id="r9-지표-곱-규칙" class="level4">
 <h4 class="anchored" data-anchor-id="r9-지표-곱-규칙"><strong>(R9) 지표 곱 규칙</strong></h4>
 <p><span class="math inline">\(K_jK_k =\sum_{l} c_{jkl} K_l\)</span> 에 대해 <span id="eq-Group_c9"><span class="math display">\[
 |K_j|\chi^{(i)}(K_j) |K_k|\chi^{(i)}(K_k) = d_i \sum_l c_{jkl} |K_l| \chi^{(i)}(K_l)
-\tag{7.10}\]</span></span></p>
+\tag{7.11}\]</span></span></p>
 </section>
 </div>
 <p><br></p>
@@ -551,9 +556,9 @@ N_C=N_R
 <section id="간단한-군의-지표-테이블" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="간단한-군의-지표-테이블"><span class="header-section-number">7.1.3</span> 간단한 군의 지표 테이블</h3>
 <p>여기서 <span class="math inline">\(n\)</span> 차원 기약표현을 <span class="math inline">\(\Gamma_{n}\)</span> 이라고 하자. <span class="math inline">\(n\)</span> 차원 기약표현이 여러개 있을 경우 <span class="math inline">\(\Gamma_n',\, \Gamma_n'',\ldots\)</span> 와 같이 표현하기로 하자.</p>
-<section id="z_n-군-과-순환군" class="level4">
-<h4 class="anchored" data-anchor-id="z_n-군-과-순환군"><strong><span class="math inline">\(Z_n\)</span> 군 과 순환군</strong></h4>
-<p>(정수에서의 <span class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> 와는 다르다). <span class="math inline">\(\mathbb{C}\)</span> 에서의 <span class="math inline">\(z^n=1\)</span> 의 해의 집합 <span class="math inline">\(Z_n\)</span> 은 곱셈 연산에 대해 군이다. <span class="math inline">\(z^n=1\)</span> 의 해는 <span class="math inline">\(e^{2ki/n}\)</span>, <span class="math inline">\(k=1,\ldots,\, n\)</span> 이며 <span class="math inline">\(\gcd(n,\,k_0)=1\)</span> 인 <span class="math inline">\(k_0\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(Z_n = \langle e^{2 \pi k_0/n} \rangle\)</span> 인 순환군이며 <span class="math inline">\(g^n=1\)</span> 인 <span class="math inline">\(\langle g\rangle\)</span> 과 동형이다. 순환군이므로 아벨군이다. <span class="math inline">\(n\)</span> 이 소수일 경우는 모든 <span class="math inline">\(k=1,\ldots,\,n\)</span> 이 <span class="math inline">\(Z_n\)</span> 을 생성시키지만 <span class="math inline">\(n\)</span> 이 소수가 아닐 경우는 그렇지 않다. <span class="math inline">\(Z_4\)</span> 에 대한 지표 테이블은 아래와 같다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_character_table_of_Zn" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.2 (<strong><span class="math inline">\(Z_n\)</span> 군 과 순환군</strong>)</strong></span> (정수에서의 <span class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> 와는 다르다). <span class="math inline">\(\mathbb{C}\)</span> 에서의 <span class="math inline">\(z^n=1\)</span> 의 해의 집합 <span class="math inline">\(Z_n\)</span> 은 곱셈 연산에 대해 군이다. <span class="math inline">\(z^n=1\)</span> 의 해는 <span class="math inline">\(e^{2ki/n}\)</span>, <span class="math inline">\(k=1,\ldots,\, n\)</span> 이며 <span class="math inline">\(\gcd(n,\,k_0)=1\)</span> 인 <span class="math inline">\(k_0\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(Z_n = \langle e^{2 \pi k_0/n} \rangle\)</span> 인 순환군이며 <span class="math inline">\(g^n=1\)</span> 인 <span class="math inline">\(\langle g\rangle\)</span> 과 동형이다. 순환군이므로 아벨군이다. <span class="math inline">\(n\)</span> 이 소수일 경우는 모든 <span class="math inline">\(k=1,\ldots,\,n\)</span> 이 <span class="math inline">\(Z_n\)</span> 을 생성시키지만 <span class="math inline">\(n\)</span> 이 소수가 아닐 경우는 그렇지 않다. <span class="math inline">\(Z_4\)</span> 에 대한 지표 테이블은 아래와 같다.</p>
 <center>
 <div id="tbl-Group_character_table_Z4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -566,11 +571,12 @@ N_C=N_R
 </figure>
 </div>
 </center>
+</div>
+</div>
 <p><br></p>
-</section>
-<section id="a_3-군" class="level4">
-<h4 class="anchored" data-anchor-id="a_3-군"><strong><span class="math inline">\(A_3\)</span> 군</strong></h4>
-<p><span class="math inline">\(e\)</span> 를 항등원이라고 할 때 <span class="math inline">\(A_3 =\{e,\, (123), (132)\}\)</span> 이며 순환군으로 <span class="math inline">\(A_3 \approx Z_3\)</span> 이다. <a href="#eq-Group_c1" class="quarto-xref">식&nbsp;<span>7.3</span></a> 에 의하면 <span class="math inline">\(c=1^2+1^2+1^2\)</span> 이므로 3개의 1차원 기약표현이 존재하며 따라서 <span class="math inline">\(3\)</span> 개의 지표가 존재한다. <span class="math inline">\(A_3\)</span> 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_character_table_of_A3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.3 (<strong><span class="math inline">\(A_3\)</span> 군</strong>)</strong></span> <span class="math inline">\(e\)</span> 를 항등원이라고 할 때 <span class="math inline">\(A_3 =\{e,\, (123), (132)\}\)</span> 이며 순환군으로 <span class="math inline">\(A_3 \approx Z_3\)</span> 이다. <a href="#eq-Group_c1" class="quarto-xref">식&nbsp;<span>7.3</span></a> 에 의하면 <span class="math inline">\(c=1^2+1^2+1^2\)</span> 이므로 3개의 1차원 기약표현이 존재하며 따라서 <span class="math inline">\(3\)</span> 개의 지표가 존재한다. <span class="math inline">\(A_3\)</span> 가 순환군이며, 따라서 아벨군이기 때문에 당연한 결과이다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
 $A_3$ & $e$ & $(123)$ & $(123)$ \\ 
@@ -592,11 +598,12 @@ $\Gamma''_1$ & $1$ & $e^{2i\pi/3}$ & $e^{i\pi/3}$ \\
 </figure>
 </div>
 </center>
+</div>
+</div>
 <p><br></p>
-</section>
-<section id="s_3-군" class="level4">
-<h4 class="anchored" data-anchor-id="s_3-군"><strong><span class="math inline">\(S_3\)</span> 군</strong></h4>
-<p><span class="math inline">\(S_3=\{e,\, (12), (13), (23), (123), (132)\}\)</span> 이며 <span class="math inline">\(\mathcal{C}_1=[e],\, \mathcal{C}_2=[(12)], \mathcal{C}_3=[(123)]\)</span> 클래스를 가진다. <span class="math inline">\(|S_3|=6\)</span> 이며 3 개의 class 를 가지므로 3개의 기약표현을 가지는데 6 을 세개의 제곱수의 합으로 표현하는 방법은 <span class="math inline">\(1^1+1^2+2^2\)</span> 뿐이다. 즉 2 개의 1차원 기약표현과 1개의 2차원 기약표현을 가진다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_character_table_of_S3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.4 (<strong><span class="math inline">\(S_3\)</span> 군</strong>)</strong></span> <span class="math inline">\(S_3=\{e,\, (12), (13), (23), (123), (132)\}\)</span> 이며 <span class="math inline">\(\mathcal{C}_1=[e],\, \mathcal{C}_2=[(12)], \mathcal{C}_3=[(123)]\)</span> 클래스를 가진다. <span class="math inline">\(|S_3|=6\)</span> 이며 3 개의 class 를 가지므로 3개의 기약표현을 가지는데 6 을 세개의 제곱수의 합으로 표현하는 방법은 <span class="math inline">\(1^1+1^2+2^2\)</span> 뿐이다. 즉 2 개의 1차원 기약표현과 1개의 2차원 기약표현을 가진다.</p>
 <p><span class="math inline">\(\mathcal{C}_1\)</span> 클래스에 대항하는 지표는 각 기약표현의 차원이므로 <span class="math inline">\(1,\,1,\,2\)</span> 이다. <span class="math inline">\(\Gamma_1\)</span> 은 <span class="math inline">\(1\)</span> trivial reprentation 이므로 해당 행은 모두 <span class="math inline">\(1\)</span> 이다. 여기 까지만 하면 다음과 같다. 아직 정해지지 않은 부분은 미지수 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 로 채웠다.</p>
 <!-- \renewcommand{\arraystretch}{1.5} \begin{tabular}{ c|ccc } 
 \hline  
@@ -661,23 +668,74 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 </figure>
 </div>
 </center>
+</div>
+</div>
+<p><br></p>
 <p><br></p>
 </section>
-<section id="순환군" class="level4">
-<h4 class="anchored" data-anchor-id="순환군"><strong>순환군</strong></h4>
-<p>순환군은 모든 성분 각각이 켤레류이므로 <span class="math inline">\(N_C=|G|\)</span> 이다. <span class="math inline">\(N_C=N_R\)</span> 이며 <strong>(R1)</strong> 에 의해 순환군의 모든 기약표현은 1차원 표현뿐이다.</p>
-<p><br></p>
-</section>
-</section>
-<section id="기약표현" class="level3" data-number="7.1.4">
-<h3 data-number="7.1.4" class="anchored" data-anchor-id="기약표현"><span class="header-section-number">7.1.4</span> 기약표현</h3>
-<p><span class="math inline">\(S_3\)</span> 에 대한 <span class="math inline">\(\Gamma_2\)</span> 를 구해보자. 일단 <span class="math inline">\(2 \times 2\)</span> 단위행렬 <span class="math inline">\(I_2\)</span> 는 <span class="math inline">\(D^{(\Gamma_2)}(\mathcal{C}_1)=I_2\)</span> 라는 것을 안다.</p>
+<section id="sec-Group_from_character_table_to_representation" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="sec-Group_from_character_table_to_representation"><span class="header-section-number">7.1.4</span> 지표 테이블에서 표현까지</h3>
+<ul>
+<li>크기가 작은 군의 경우 지표 테이블로부터 군의 표현을 얻을 수 있다.</li>
+</ul>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_getting_irreducible_representation_of_S3_from_character_table" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.5 (<span class="math inline">\(S_3\)</span> 의 유니타리 기약표현)</strong></span> <span class="math inline">\(S_3\)</span> 에 대한 <span class="math inline">\(\Gamma_2\)</span> 를 구해보자. 일단 <span class="math inline">\(2 \times 2\)</span> 단위행렬 <span class="math inline">\(I_2\)</span> 는 <span class="math inline">\(D^{(\Gamma_2)}(\mathcal{C}_1)=I_2\)</span> 라는 것을 안다. <a href="#exm-Group_character_table_of_S3" class="quarto-xref">예제&nbsp;<span>7.4</span></a> 에서 <span class="math inline">\(S_3\)</span> 에 대한 기약표현은 1차원 2개와 2차원 1개임을 안다. 1차원 기약표현 <span class="math inline">\(\Gamma_1,\,\Gamma'_1\)</span> 은 자명하므로 2차원 기약표현 <span class="math inline">\(\Gamma_2\)</span> 를 구해보자. 우선 <span class="math inline">\((123)\)</span> 과 <span class="math inline">\((132)\)</span> 를 대각화 하는 기저로 2차원 유니타리 행렬로 표현하면</p>
 <p><span class="math display">\[
 D^{(\Gamma_2)}(123)= \begin{bmatrix} \omega &amp; 0 \\ 0 &amp; \omega^\ast\end{bmatrix},\qquad D^{(\Gamma_2)}(132) = \begin{bmatrix} \omega^\ast &amp; 0 \\ 0 &amp; \omega\end{bmatrix}
 \]</span></p>
+<p>와 같다. <span class="math inline">\(\omega+\omega^\ast = -1\)</span> 이므로 지표 테이블과 일치한다.</p>
+<p>이제 <span class="math inline">\(D^{(\Gamma_2)}(12),\,D^{(\Gamma_2)}(13),\, D^{(\Gamma_2)}(23)\)</span> 을 구해보자. <span class="math inline">\(D^{(\Gamma_2)}(12) = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}\)</span> 라고 놓으면(유니타리 조건, trace 조건 만족) <span class="math inline">\((123)(12) = (13),\, (132)(12) = (23)\)</span> 으로부터 <span class="math inline">\(D^{(\Gamma_2)}(13),\, D^{(\Gamma_2)}(23)\)</span> 를 다음과 같이 구할 수 있다.</p>
+<p><span class="math display">\[
+D^{(\Gamma_2)}(12) = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0\end{bmatrix},\quad D^{(\Gamma_2)}(13) = \begin{bmatrix} 0 &amp; \omega \\ \omega^\ast &amp; 0\end{bmatrix},\quad D^{(\Gamma_2)}(23) = \begin{bmatrix} 0 &amp; \omega^\ast \\ \omega &amp; 0\end{bmatrix}
+\]</span></p>
+<p>우리는 <span class="math inline">\(S_n\)</span> 이 <span class="math inline">\(n\times n\)</span> 차원 표현을 갖는다는 것을 안다(<a href="group_representation.html#exm-Group_defining_representation_of_Sn" class="quarto-xref">예제&nbsp;<span>6.4</span></a>). 이것은 정칙 표현이 아닌데 <span class="math inline">\(S_n\)</span> 에 대한 정칙 표현은 <span class="math inline">\(n! \times n!\)</span> 차원이다. <span class="math inline">\(S_3\)</span> 의 경우 <span class="math inline">\(3\times 3\)</span> 행렬 표현은 기약표현이 될 수 없으므로(<strong>R1</strong>) <span class="math inline">\(3\times 3\)</span> 행렬표현은 기약표현이 아니다. 이 표현을 <span class="math inline">\(D^{(3)}\)</span> 라고 하면 <span class="math inline">\(\mathcal{C}_1,\, 3\mathcal{C}_2,\,2\mathcal{C}_3\)</span> 의 지표는 각각 <span class="math inline">\(3,\,1,\,0\)</span> 이다. 따라서 <span class="math inline">\(D^{(3)} = D^{(\Gamma_1)}\otimes D^{(\Gamma_2)}\)</span> 임을 알 수 있다.</p>
+</div>
+</div>
+<p>아래 명제는 쉽게 보일 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_character_of_inverse_class" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> 군 <span class="math inline">\(G\)</span> 의 동치류의 집합 <span class="math inline">\(\mathcal{K}_G\)</span> 에 대해 <span class="math inline">\(K\in \mathcal{L}\)</span> 일 때 <span class="math inline">\(\overline{K}= \{x^{-1}:x\in K\} \in \mathcal{K}_G\)</span> 이며,</p>
+<p><span class="math display">\[
+\chi(\overline{K}) = (\chi(K))^\ast
+\]</span></p>
+<p>이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_getting_irreducible_representation_of_A4" class="theorem example">
+<p><span class="theorem-title"><strong>예제 7.6 (정사면체의 불변군 <span class="math inline">\(T\)</span> 와 <span class="math inline">\(A_4\)</span>)</strong></span> 정사면체의 불변군 <span class="math inline">\(T\)</span> 와 <span class="math inline">\(A_4\)</span> 는 동형이다. <a href="group_introduction.html#exm-Group_example_invariant_subgroup_V4_is_invariant_subgroup_of_A4" class="quarto-xref">예제&nbsp;<span>4.16</span></a> 에서 <span class="math inline">\(A_4\)</span> 에는 4개의 켤레류가 존재한다는 것을 보였다. 4개의 기약 표현이 존재하며 군의 성분은 12 이므로 <span class="math inline">\(1+d_1^2+d_2^2+d_3^2=12\)</span> 를 만족하는 <span class="math inline">\(d_1,\,d_2,\,d_3\)</span> 는 <span class="math inline">\(1,\,1,\,3\)</span> 뿐이다. 즉 <span class="math inline">\(A_4\)</span> 는 3종류의 1차원 기약표현과 1종류의 3차원 기약표현이 존재한다. 지표에 관한 직교 정리들을 사용하면 아래와 같이 지표 테이블을 구할 수 있다.</p>
+<!-- \renewcommand{\arraystretch}{1.5} 
+\begin{tabular}{ c|cccc } 
+\hline  
+$S_3$ & $I$ & $3(12)(34)$ & $4(123)$ & $4(132)$ \\ 
+\hline 
+$\Gamma_1$ & $1$ & $1$ & $1$ & $1$ \\
+$\Gamma'_{1}$ & $1$ & $1$ & $\omega$ & $\omega^\ast$ \\
+$\Gamma''_{1}$ & $1$ & $1$ & $\omega^\ast$ & $\omega$ \\
+$\Gamma_{3}$ & $3$ & $-1$ & $0$ & $0$\\
+\hline
+\end{tabular} -->
+<center>
+<div id="tbl-Group_character_table_A4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_character_table_A4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;7.7: <span class="math inline">\(A_4\)</span> character table
+</figcaption>
+<div aria-describedby="tbl-Group_character_table_A4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/character_table_A4.png" class="img-fluid figure-img" width="200">
+</div>
+</figure>
+</div>
+</center>
+<p>첫번째 행과 첫번째 열은 자동적으로 정해진다. 1차원 유니타리 기약표현은 절대값이 <span class="math inline">\(1\)</span> 인 복소수임을 이용한다. 이를 이용하면 지표 테이블을 모두 구할 수 있다.</p>
+</div>
+</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>
