@@ -1226,7 +1226,7 @@ K_2K_2 = 3K_1+3K_3
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_action_of_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.15</strong></span> 주어진 군 <span class="math inline">\(G\)</span> 와 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(\pi \in \text{Hom}(G,\, \text{Sym}(S))\)</span> 를 <span class="math inline">\(G\)</span> 의 <span class="math inline">\(S\)</span> 에 대한 <strong>작용 (action)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.15</strong></span> 주어진 군 <span class="math inline">\(G\)</span> 와 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(\pi \in \text{Hom}(G,\, \text{Sym}(S))\)</span> 를 <span class="math inline">\(S\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 <strong>작용 (action)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1240,9 +1240,87 @@ K_2K_2 = 3K_1+3K_3
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_self_group_action" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.22 (자기 자신에 대한 작용)</strong></span> 정해진 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(\pi_x(g)=xg\)</span> 는 <span class="math inline">\(G\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_group_action_in_LN" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.22 (일반선형군에서의 군의 작용)</strong></span> <span class="math inline">\(A\in \text{GL}(n)\)</span> 는 <span class="math inline">\(\mathbb{R}^n\)</span> 에</p>
+<p><span class="theorem-title"><strong>예제 4.23 (일반선형군에서의 군의 작용)</strong></span> <br></p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(A\in \text{GL}(n)\)</span> 는 <span class="math inline">\(\mathbb{R}^n \mapsto \mathbb{R}^n\)</span> 전단사 함수 임이 알려져 있다. 또한 <span class="math inline">\(v\in \mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(I_n v = v\)</span> 이며 <span class="math inline">\(A,\,B\in \text{GL}(n)\)</span> 에 대해 <span class="math inline">\(A(Bv)= (AB)v\)</span> 이므로 <span class="math inline">\(A\in \text{GL}(n)\)</span> 은 <span class="math inline">\(GL(n)\)</span> 의 <span class="math inline">\(\mathbb{R}^n\)</span> 에 대한 작용이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(M\in \text{GL}(n)\)</span> 에 대해 <span class="math inline">\(\pi_M : LN(n) \to LN(n)\)</span> 을 <span class="math inline">\(\pi_M(X) = MXM^{-1}\)</span> 로 정의하면 <span class="math inline">\(\pi_M\)</span> 이 <span class="math inline">\(LN(n)\)</span> 의 <span class="math inline">\(LN(n)\)</span> 에 대한 작용임을 알 수 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>안정 부분군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_stabilizer_subgroup" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.16</strong></span> 군 <span class="math inline">\(G\)</span> 가 집합 <span class="math inline">\(S\)</span> 에 대한 작용일 때 정해진 <span class="math inline">\(s\in S\)</span> 에 대해</p>
+<p><span id="eq-Group_definition_of_stabilizer_subgroup"><span class="math display">\[
+G_s = \{g\in G : \pi_g (s)=s\}
+\tag{4.7}\]</span></span></p>
+<p>는 <span class="math inline">\(G\)</span> 의 부분군이며 이를 <span class="math inline">\(s\)</span> 에 대한 <strong>안정부분군 (stabilizer subgroup)</strong> 이라고 한다.</p>
+</div>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_stabilizer_subgroup_1" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.8</strong></span> <a href="#eq-Group_definition_of_stabilizer_subgroup" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 <span class="math inline">\(G_s\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(x,\,y\in G_s\)</span> 이면 <span class="math inline">\(xs=ys=s\)</span> 이다. <span class="math inline">\(ys=s\)</span> 에 <span class="math inline">\(y^{-1}\)</span> 을 작용하면 <span class="math inline">\(y^{-1}s=s\)</span> 이다. 따라서 <span class="math inline">\(xy^{-1}s=s\)</span> 이므로 <span class="math inline">\(G_s \le G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_stabilizer_subgroup_2" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.9</strong></span> 군 <span class="math inline">\(G\)</span> 가 <span class="math inline">\(S\)</span> 에 대한 작용이라고 하자. <span class="math inline">\(s,\,s'\in S,\, y\in G\)</span> 에 대해 <span class="math inline">\(s'=ys\)</span> 이면 <span class="math inline">\(G_{s'}=yG_sy^{-1}\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
+\begin{aligned}
+x\in G_{s'} &amp; \iff xs'=s' \iff xys = ys \iff y^{-1}xys = s \iff y^{-1}xy \in G_s \\[0.3em]
+&amp;\iff x\in yG_sy^{-1}.\qquad \square
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_stabilizer_subgroup_3" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.10</strong></span> <span class="math inline">\(\pi\)</span> 가 <span class="math inline">\(S\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이라고 할 때</p>
+<p><span class="math display">\[
+\ker \pi = \bigcap_{s\in G} G_s
+\]</span></p>
 <p>이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(x\in \ker \pi\)</span></p>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>군의 궤도</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_orbint_of_action_of_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.17</strong></span> 군 <span class="math inline">\(G\)</span> 가 집합 <span class="math inline">\(S\)</span> 에 대한 작용일 때 <span class="math inline">\(G\)</span> 의 <strong>궤도 (orbint)</strong></p>
+</div>
 </div>
 </div>
 </section>
@@ -1337,7 +1415,7 @@ A_4 = \left\{\begin{array}{l} I,\\
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_embedding_of_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.16</strong></span> 군 <span class="math inline">\(G\)</span> 에서 군 <span class="math inline">\(F\)</span> 로의 단사인 준동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,F)\)</span> 가 존재할 때 <span class="math inline">\(G\)</span> 가 <span class="math inline">\(F\)</span> 로 embedding 된다고 한다. 당연히 <span class="math inline">\(F\)</span> 에는 <span class="math inline">\(G\)</span> 와 동형인 부분군이 존재한다.</p>
+<p><span class="theorem-title"><strong>정의 4.18</strong></span> 군 <span class="math inline">\(G\)</span> 에서 군 <span class="math inline">\(F\)</span> 로의 단사인 준동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,F)\)</span> 가 존재할 때 <span class="math inline">\(G\)</span> 가 <span class="math inline">\(F\)</span> 로 embedding 된다고 한다. 당연히 <span class="math inline">\(F\)</span> 에는 <span class="math inline">\(G\)</span> 와 동형인 부분군이 존재한다.</p>
 </div>
 </div>
 </div>

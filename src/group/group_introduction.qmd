@@ -1155,7 +1155,7 @@ $$
 ::: {#def-Group_action_of_group}
 
 
-주어진 군 $G$ 와 집합 $S$ 에 대해 $\pi \in \text{Hom}(G,\, \text{Sym}(S))$ 를 $G$ 의 $S$ 에 대한 **작용 (action)** 이라고 한다.
+주어진 군 $G$ 와 집합 $S$ 에 대해 $\pi \in \text{Hom}(G,\, \text{Sym}(S))$ 를 $S$ 에 대한 $G$ 의 **작용 (action)** 이라고 한다.
 
 
 :::
@@ -1181,17 +1181,124 @@ $g\in G$ 에 대해 $\pi(g)$ 를 $\pi_g$ 로 표기하자. 이 때 다음이 성
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-Group_group_action_in_LN}
+::: {#exm-Group_self_group_action}
 
-#### 일반선형군에서의 군의 작용
+#### 자기 자신에 대한 작용
 
-$A\in \text{GL}(n)$ 는 $\R^n$ 에 
+정해진 $x\in G$ 에 대해 $\pi_x(g)=xg$ 는 $G$ 에 대한 $G$ 의 작용이다. 
 
-이다. 
 
 :::
 
 </div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_group_action_in_LN}
+
+#### 일반선형군에서의 군의 작용
+</br>
+
+($1$) $A\in \text{GL}(n)$ 는 $\R^n \mapsto \R^n$ 전단사 함수 임이 알려져 있다. 또한 $v\in \R^n$ 에 대해 $I_n v = v$ 이며 $A,\,B\in \text{GL}(n)$ 에 대해 $A(Bv)= (AB)v$ 이므로 $A\in \text{GL}(n)$ 은 $GL(n)$ 의 $\R^n$ 에 대한 작용이다. 
+
+($2$) $M\in \text{GL}(n)$ 에 대해 $\pi_M : LN(n) \to LN(n)$ 을 $\pi_M(X) = MXM^{-1}$ 로 정의하면 $\pi_M$ 이 $LN(n)$ 의 $LN(n)$ 에 대한 작용임을 알 수 있다.
+
+:::
+
+</div>
+
+::: {.callout-note icon="false"}
+
+#### **안정 부분군**
+
+::: {#def-Group_stabilizer_subgroup}
+
+군 $G$ 가 집합 $S$ 에 대한 작용일 때 정해진 $s\in S$ 에 대해 
+
+$$
+G_s = \{g\in G : \pi_g (s)=s\}
+$$ {#eq-Group_definition_of_stabilizer_subgroup}
+
+는 $G$ 의 부분군이며 이를 $s$ 에 대한 **안정부분군 (stabilizer subgroup)** 이라고 한다.
+
+
+:::
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_stabilizer_subgroup_1}
+
+@eq-Group_definition_of_stabilizer_subgroup 의 $G_s$ 는 $G$ 의 부분군이다.
+
+
+:::
+
+</div>
+
+::: {.proof}
+
+$x,\,y\in G_s$ 이면 $xs=ys=s$ 이다. $ys=s$ 에 $y^{-1}$ 을 작용하면 $y^{-1}s=s$ 이다. 따라서 $xy^{-1}s=s$ 이므로 $G_s \le G$ 이다. $\square$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_stabilizer_subgroup_2}
+
+군 $G$ 가 $S$ 에 대한 작용이라고 하자. $s,\,s'\in S,\, y\in G$ 에 대해 $s'=ys$ 이면 $G_{s'}=yG_sy^{-1}$ 이다.
+
+
+:::
+
+</div>
+
+::: {.proof}
+
+$$
+\begin{aligned}
+x\in G_{s'} & \iff xs'=s' \iff xys = ys \iff y^{-1}xys = s \iff y^{-1}xy \in G_s \\[0.3em]
+&\iff x\in yG_sy^{-1}.\qquad \square
+\end{aligned}
+$$ 
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_stabilizer_subgroup_3}
+
+$\pi$ 가 $S$ 에 대한 $G$ 의 작용이라고 할 때 
+
+$$
+\ker \pi = \bigcap_{s\in G} G_s
+$$
+
+이다.
+:::
+
+</div>
+
+::: {.proof}
+
+$x\in \ker \pi$ 
+
+:::
+
+</br>
+
+::: {.callout-note icon="false"}
+
+#### **군의 궤도**
+
+::: {#def-Group_orbint_of_action_of_group}
+
+군 $G$ 가 집합 $S$ 에 대한 작용일 때 $G$ 의 **궤도 (orbint)**
+
+
+:::
+:::
+
 
 
 ## 연습문제 {.unnumbered}
