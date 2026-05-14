@@ -1145,6 +1145,54 @@ $$
 
 </div></br>
 
+## 군의 작용 {#sec-Group_action_of_group}
+
+
+::: {.callout-note icon="false"}
+
+#### **군의 작용**
+
+::: {#def-Group_action_of_group}
+
+
+주어진 군 $G$ 와 집합 $S$ 에 대해 $\pi \in \text{Hom}(G,\, \text{Sym}(S))$ 를 $G$ 의 $S$ 에 대한 **작용 (action)** 이라고 한다.
+
+
+:::
+:::
+
+
+다음은 준동형 사상과 대칭군의 성질에 의해 쉽게 보일 수 있다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_basic_properties_of_group_action}
+
+$g\in G$ 에 대해 $\pi(g)$ 를 $\pi_g$ 로 표기하자. 이 때 다음이 성립한다.
+
+&emsp;($1$) $\pi_{1_G}$ 는 항등함수이다.
+
+&emsp;($2$) $x,\,y\in G$ 에 대해 $\pi_x\circ\pi_y = \pi_{xy}$ 이다.
+
+:::
+
+</div>
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_group_action_in_LN}
+
+#### 일반선형군에서의 군의 작용
+
+$A\in \text{GL}(n)$ 는 $\R^n$ 에 
+
+이다. 
+
+:::
+
+</div>
+
 
 ## 연습문제 {.unnumbered}
 

@@ -332,6 +332,8 @@ $\Gamma_2$ & $2$ & $0$ & $-1$ \\
 - 크기가 작은 군의 경우 지표 테이블로부터 군의 표현을 얻을 수 있다.
 
 
+#### **Examples**
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Group_getting_irreducible_representation_of_S3_from_character_table}
@@ -455,6 +457,11 @@ $$
 
 </div>
 
+#### **접시법**
+
+- @Zee2016Group 에는 *The tray method* 라고 소개되지만 실제로 불리는 이름은 아닌것 같다.
+
+$A_4$ 군은 $(12),\, (13),\, (14),\, (23),\, (24),\, (34)$ 호환들의 짝수개의 곱으로 이루어져 있다. 
 
 </br>
 
