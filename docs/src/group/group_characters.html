@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>7&nbsp; 군의 지표 – 수리물리학</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -27,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,14 +54,15 @@ div.csl-indent {
 <link href="../../src/group/group_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +92,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -351,6 +350,11 @@ window.Quarto = {
   <li><a href="#간단한-군의-지표-테이블" id="toc-간단한-군의-지표-테이블" class="nav-link" data-scroll-target="#간단한-군의-지표-테이블"><span class="header-section-number">7.1.3</span> 간단한 군의 지표 테이블</a></li>
   <li><a href="#sec-Group_from_character_table_to_representation" id="toc-sec-Group_from_character_table_to_representation" class="nav-link" data-scroll-target="#sec-Group_from_character_table_to_representation"><span class="header-section-number">7.1.4</span> 지표 테이블에서 표현까지</a></li>
   </ul></li>
+  <li><a href="#실수-유사실수-복소수-표현과-제곱근" id="toc-실수-유사실수-복소수-표현과-제곱근" class="nav-link" data-scroll-target="#실수-유사실수-복소수-표현과-제곱근"><span class="header-section-number">7.2</span> 실수, 유사실수, 복소수 표현과 제곱근</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_conjugate_represenntation" id="toc-sec-Group_conjugate_represenntation" class="nav-link" data-scroll-target="#sec-Group_conjugate_represenntation"><span class="header-section-number">7.2.1</span> 켤레 표현</a></li>
+  <li><a href="#sec-Group_real_and_pseudoreal_representation" id="toc-sec-Group_real_and_pseudoreal_representation" class="nav-link" data-scroll-target="#sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실수 표현과 의사실수표현</a></li>
+  </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
@@ -379,7 +383,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-<p>%</p>
+%
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -774,9 +778,98 @@ D^{(\Gamma_3)}(132)=\begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 1 
 <ul>
 <li><span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 에는 <em>The tray method</em> 라고 소개되지만 실제로 불리는 이름은 아닌것 같다.</li>
 </ul>
-<p><span class="math inline">\(A_4\)</span> 군은 <span class="math inline">\((12),\, (13),\, (14),\, (23),\, (24),\, (34)\)</span> 호환들의 짝수개의 곱으로 이루어져 있다.</p>
+<p><span class="math inline">\(1,\,2,\,3,\,4\)</span> 라는 번호가 붙은 4개의 공을 접시에 2개 올려 놓는다고 행각하자. 이를 <span class="math inline">\(\langle i,\,j\rangle\)</span> 로 표기하자. 가능한 경우를</p>
+<p><span class="math display">\[
+X=\{\langle 1,\,2\rangle,\, \langle 1,\,3\rangle,\, \langle 1,\,4\rangle,\, \langle 2,\,3\rangle,\, \langle 2,\,4\rangle,\, \langle 3,\,4\rangle\}
+\]</span></p>
+<p>라고 하자. 이 <span class="math inline">\(X\)</span> 에 <a href="../../src/group/group_introduction.html#sec-Group_action_of_group0">작용</a>하는 <span class="math inline">\(A_4\)</span> 를 생각 할 수 있다. 우리는 <span class="math inline">\(\sigma \in A_n\)</span> 에 대해</p>
+<p><span class="math display">\[
+\sigma(\langle i,\,j\rangle) := \langle \sigma(i),\, \sigma(j)\rangle
+\]</span></p>
+<p>라고 정의하면 이 <span class="math inline">\(\sigma\)</span> 는 <span class="math inline">\(X\)</span> 에 대한 <span class="math inline">\(A_4\)</span> 의 작용이다.</p>
+<p>즉 <span class="math inline">\(A_4\)</span> 의 <span class="math inline">\(X\)</span> 에 대한 작용을 생각 할 수 있다. 이제 <span class="math inline">\(X\)</span> 의 성분들을 순서대로 <span class="math inline">\(e_1,\ldots,\,e_6\)</span> 라고 하면 <span class="math inline">\(\sigma \in A_4\)</span> 에 대해 <span class="math inline">\(\sigma e_i \in X\)</span> 이며 이 <span class="math inline">\((e_i)\)</span> 를 기저로 하는 6차원 행렬표현을 생각할 수 있다.이 6차원 표현을 <span class="math inline">\(D\)</span> 라고 하자. 이 행렬 표현에 대한 지표를 구하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\chi(I) &amp;= 6, \\[0.3em]
+\chi((12)(34)) &amp;= 2, \\[0.3em]
+\chi((123)) &amp;=0,\\[0.3em]
+\chi(132) &amp;= 0
+\end{aligned}
+\]</span></p>
+<p>임을 알 수 있다. <span class="math inline">\((12)(34)\langle 1,\, 2\rangle =\langle 1,\,2\rangle\)</span> 이며 <span class="math inline">\(\langle 3,\,4\rangle\)</span> 에 대해서도 동일한 결과이므로 둘째 줄의 결과를 얻는다. 이제 이 표현이 어떤 기약표현의 직합인지 확인해보자. 우선 <span class="math inline">\(6&lt;d_i^2=36\)</span> 이므로 이 표현은 기약표현이 아니다. 지표에 대한 제 1 직교정리를 사용하면 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(\Gamma^1\)</span> 에 대해 적용하면</p>
+<p><span class="math display">\[
+1\cdot 1 \cdot 6 + 3 \cdot 1 \cdot 2 + 0 + 0 = 12 = |A_4$
+\]</span></p>
+<p>이므로 <span class="math inline">\(\Gamma_1\)</span> 표현을 한번 포함한다는 것을 안다. 같은 방법을 모두 적용하면 <span class="math inline">\(\Gamma_1',\, \Gamma_1'',\, \Gamma_3\)</span> 도 역시 한번씩 포함한다는 것을 안다. 즉</p>
+<p><span class="math display">\[
+D=D^{(\Gamma_1)}\oplus D^{(\Gamma_1')} \oplus D^{(\Gamma_1'')} \oplus D^{(\Gamma_3)}
+\]</span></p>
+<p>이다.</p>
 <p><br></p>
 </section>
+</section>
+</section>
+<section id="실수-유사실수-복소수-표현과-제곱근" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="실수-유사실수-복소수-표현과-제곱근"><span class="header-section-number">7.2</span> 실수, 유사실수, 복소수 표현과 제곱근</h2>
+<section id="sec-Group_conjugate_represenntation" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="sec-Group_conjugate_represenntation"><span class="header-section-number">7.2.1</span> 켤레 표현</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>켤레 표현</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_conjugate_representation" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.1</strong></span> <span class="math inline">\(D\)</span> 가 복소일반선형군 <span class="math inline">\(GL_n(\mathbb{C})\)</span> 에서의 표현일 때</p>
+<p><span class="math display">\[
+\forall g\in G,\, 1 \le i,\,j \le n,\, D^\ast(g)_{ij} = (D(g)_{ij})^\ast
+\]</span></p>
+<p>인 표현 <span class="math inline">\(D^\ast\)</span> 를 <span class="math inline">\(D\)</span> 에 대한 <strong>켤레 표현 (conjugate representation)</strong> 이라고 한다.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>다음은 켤레 표현에 대한 기본 성질이다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_properties_of_cojugate_representation" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.4</strong></span> 군 <span class="math inline">\(G\)</span> 에 대한 표현 <span class="math inline">\(D\)</span> 에 대한 켤레표현 <span class="math inline">\(D^\ast\)</span> 와 켤레 표현의 지표 <span class="math inline">\(\chi^\ast\)</span> 에 대해 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(D^\ast (g_1g_2) = D^\ast(g_1)D^\ast(g_2)\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\chi^\ast(g)=(\chi(g))^\ast\)</span>.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\chi^\ast (g) \ne \chi(g)\)</span> 인 <span class="math inline">\(g\in G\)</span> 가 존재하면 <span class="math inline">\(D^\ast\)</span> 와 <span class="math inline">\(D\)</span> 는 동등하지 않다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 자명하다. <span class="math inline">\(D^\ast = SDS^{-1}\)</span> 인 가역행렬 <span class="math inline">\(S\)</span> 가 존재하면 <span class="math inline">\(\chi(g) = \chi^\ast (g)\)</span> 이어야 한다.</p>
+</div>
+<ul>
+<li>복소표현은 고에너지 이론가들에게 유용할 수 있다. 양자장 이론에서, 입자가 어떤 표현에 해당하는 대칭군에 따라 변환하면, 그 반입자는 그 표현의 켤레 표현에 따라 변환한다.</li>
+</ul>
+<p><br></p>
+</section>
+<section id="sec-Group_real_and_pseudoreal_representation" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실수 표현과 의사실수표현</h3>
+<p>기약 유니타리 표현 <span class="math inline">\(D\)</span> 에 대해 켤레표현 <span class="math inline">\(D^\ast\)</span> 가 원래의 표현과 동등하다고 하자. 즉</p>
+<p><span class="math display">\[
+D^\ast = SDS^{-1}
+\]</span></p>
+<p>라면</p>
+<p><span class="math display">\[
+D^\dagger (g) = (D^\ast (g))^T = (S^{-1})^TD(g)^TS^T
+\]</span></p>
+<p><span class="math inline">\(D^\dagger\)</span> 가 유니타리 표현이라면 <span class="math inline">\(D^\dagger (g) = D(g^{-1})\)</span> 이므로</p>
+<p><span class="math display">\[
+D(g^{-1}) = (D^\ast (g))^T = (S^{-1})^TD(g)^TS^T
+\]</span></p>
+<p>이다. 여기서</p>
+<p><span class="math display">\[
+D(g) = (S^{-1})^TD(g^{-1})^TS^T =  (S^{-1})^T\left(SD(g^{-1})S^{-1}\right)S^T = \left((S^{-1}S^T)^{-1}\right) D(g) \left(S^{-1}S^T\right)
+\]</span></p>
+<p>이다. 모든 <span class="math inline">\(g\)</span> 에 대해 성립하며 슈어의 보조정리(<a href="group_representation.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>6.2</span></a>) 에 의해 <span class="math inline">\(S^{-1}S^T = \eta I\)</span> 이다. <span class="math inline">\(S^T=\eta S\)</span> 로부터 <span class="math inline">\(S=(S^T)^T=\eta^2S\)</span> 이므로 <span class="math inline">\(\eta= \pm 1\)</span> 이다. 즉 <span class="math inline">\(S\)</span> 는 대칭행렬이거나 반대칭 행렬이다.</p>
+<p><br></p>
 </section>
 </section>
 <section id="연습문제" class="level2 unnumbered">
@@ -791,7 +884,7 @@ D^{(\Gamma_3)}(132)=\begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 1 
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>

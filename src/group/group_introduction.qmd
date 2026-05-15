@@ -1145,8 +1145,9 @@ $$
 
 </div></br>
 
-## 군의 작용 {#sec-Group_action_of_group}
+## 군의 작용 {#sec-Group_action_of_group0}
 
+### 군의 작용 {#sec-Group_action_of_group}
 
 ::: {.callout-note icon="false"}
 
@@ -1155,25 +1156,39 @@ $$
 ::: {#def-Group_action_of_group}
 
 
-주어진 군 $G$ 와 집합 $S$ 에 대해 $\pi \in \text{Hom}(G,\, \text{Sym}(S))$ 를 $S$ 에 대한 $G$ 의 **작용 (action)** 이라고 한다.
+주어진 군 $G$ 와 집합 $S$ 에 대해 $\pi : G \times S \to S$ 가 다음을 만족할 때 $\pi$ 를 $S$ 에 대한 $G$ 의 작용이라고 하고 $g\in G,\, s\in S$ 에 대해 $\pi_g (s)$ 라고 표기한다.
 
+&emsp;($1$) 임의의 $x,\,y\in G,\, s\in S$ 에 대해 $\pi_{xy}(s) = \pi_x(\pi_y(s))$ 이다.
 
+&emsp;($2$) 임의의 $s\in S$ 에 대해 $\pi_{1_G}(s)=s$ 이다.
 :::
 :::
 
+</br>
 
-다음은 준동형 사상과 대칭군의 성질에 의해 쉽게 보일 수 있다.
+군의 작용에는 아래와 같이 동등한 정의가 존재한다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-Group_basic_properties_of_group_action}
+::: {#thm-Group_equivalent_definition_of_group_action}
 
-$g\in G$ 에 대해 $\pi(g)$ 를 $\pi_g$ 로 표기하자. 이 때 다음이 성립한다.
+$\phi\in \text{Hom}(G,\,\text{Sym}(S))$ 은 군의 작용이다. 또한 $G$ 에서 $S$ 로의 군의 작용은 $\text{Hom}(G,\,\text{Sym}(S))$ 에 속한다. 즉 $\phi\in \text{Hom}(G,\,\text{Sym}(S))$ 는 @def-Group_action_of_group 와 동등한 정의이다.
 
-&emsp;($1$) $\pi_{1_G}$ 는 항등함수이다.
+:::
 
-&emsp;($2$) $x,\,y\in G$ 에 대해 $\pi_x\circ\pi_y = \pi_{xy}$ 이다.
+</div>
 
+::: {.proof}
+
+준 동형사상의 정의에 의해 $\phi$ 는 군의 작용이다. 임의의 $g\in G$ 에 대해 $\pi_g(s_1)=\pi_g(s_2)$ 이면 $s_1=s_2$ 이므로 $\pi$ 는 단사이며 따라서 $\pi\in \text{Hom}(G,\,\text{Sym}(S))$ 이다. 즉 두 정의는 동등하다. $\square$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-Group_action_is_injective}
+
+$\pi$ 가 군 $G$ 의 $S$ 로의 작용일 때 $\pi_g : S \to S$ 는 단사이다.
 :::
 
 </div>
@@ -1185,9 +1200,11 @@ $g\in G$ 에 대해 $\pi(g)$ 를 $\pi_g$ 로 표기하자. 이 때 다음이 성
 
 #### 자기 자신에 대한 작용
 
-정해진 $x\in G$ 에 대해 $\pi_x(g)=xg$ 는 $G$ 에 대한 $G$ 의 작용이다. 
+군은 자기 자신에 작용할 수 있다.
 
+($1$) (**translation**) 정해진 $x\in G$ 에 대해 $\pi_x(g)=xg$ 는 $G$ 에 대한 $G$ 의 작용이다. 
 
+($2$) (**conjugation**) 정해진 $y\in G$ 에 대해 $\pi_y(g) = ygy^{-1}$ 은 $G$ 에 대한 $G$ 의 작용이다.
 :::
 
 </div>
@@ -1207,9 +1224,23 @@ $g\in G$ 에 대해 $\pi(g)$ 를 $\pi_g$ 로 표기하자. 이 때 다음이 성
 
 </div>
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Group_group_action_on_cosets}
+
+#### 잉여류에의 작용
+
+군 $G$ 와 $H\le G$ 에 $\pi_g (aH)=gaH$ 는 $G$ 에서 $H$ 에 대한 왼쪽 잉여류로의 작용이다.
+
+
+:::
+
+</div>
+
+### 안정부분군과 궤도 {#sec-Group_stabilizer_and_orbit}
 ::: {.callout-note icon="false"}
 
-#### **안정 부분군**
+#### **안정 부분군, 궤도, 고정점**
 
 ::: {#def-Group_stabilizer_subgroup}
 
@@ -1221,7 +1252,19 @@ $$ {#eq-Group_definition_of_stabilizer_subgroup}
 
 는 $G$ 의 부분군이며 이를 $s$ 에 대한 **안정부분군 (stabilizer subgroup)** 이라고 한다.
 
+$s\in S$ 에 대해 
 
+$$
+\text{Orb}_G(s) := \{\pi_g(s) : g\in G\}
+$$ {#eq-Group_definition_of_orbit}
+
+를 $s$ 의 **궤도 (orbit)** 이라고 한다. 또한
+
+$$
+\text{Fix}_G(\pi) = \{s\in S: \forall g\in G\, \pi_g(s) = s\}
+$$ {#eq-Grou_defintion_of_fixed_point}
+
+를 **고정점 (fixed point)*** 라고 한다.
 :::
 :::
 
@@ -1248,7 +1291,6 @@ $x,\,y\in G_s$ 이면 $xs=ys=s$ 이다. $ys=s$ 에 $y^{-1}$ 을 작용하면 $y^
 
 군 $G$ 가 $S$ 에 대한 작용이라고 하자. $s,\,s'\in S,\, y\in G$ 에 대해 $s'=ys$ 이면 $G_{s'}=yG_sy^{-1}$ 이다.
 
-
 :::
 
 </div>
@@ -1271,7 +1313,12 @@ $$
 $\pi$ 가 $S$ 에 대한 $G$ 의 작용이라고 할 때 
 
 $$
-\ker \pi = \bigcap_{s\in G} G_s
+K := \{g\in G : \forall s\in S\, \pi_g(s)=s\}
+$$
+
+라고 하면
+$$
+K = \bigcap_{s\in G} G_s
 $$
 
 이다.
@@ -1281,25 +1328,59 @@ $$
 
 ::: {.proof}
 
-$x\in \ker \pi$ 
+trivial.
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_orbit_stabilizer_theorem}
+
+#### 궤도-안정부분군 정리
+
+유한군 $G$ 가 유한집합 $S$ 에 작용하며 $s\in S$ 일 때 $|G| = |\text{Orb}_G(s)||G_s|$ 이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$G_S\le G$ 이므로 $G_s$ 에 의한 왼쪽 잉여류의 집합 $Y$ 를 정의 할 수 있다. 이제 $\Phi: Y\to \text{Orb}_G(s)$ 를 다음과 같이 정의하자.
+
+$$
+\Phi (gG_s) := \pi_g(s).
+$$
+
+위 함수가 잘 정의됨을 보이자. 즉 $gG_s = xG_s$ 이면 $x^{-1}g\in G_s$ 이므로 $\pi_{x^{-1}g}(s)=s$ 이며 따라서 $\pi_g(s) = \pi_x(s)$ 이다. 
+
+이제 이 함수가 단사임을 보이자. $\pi_g(s) = \pi_x(s)$ 이면 $x^{-1}g\in G_s$ 이며 따라서 $gG_s = xG_s$ 이다. 
+
+이제 이 함수가 전사임을 보이자. $t\in \text{Orb}_G(s)$ 이면 어떤 $g\in G$ 에 대해 $t=\pi_g(s)$ 이므로 이 $g$ 에 대해 $\Phi(gG_s) = t$ 이다. 이 함수가 전단사이므로 
+
+$$
+|\text{Orb}_G(s)| = |Y| = |G|/|G_s|. \qquad \square
+$$
 
 :::
 
 </br>
 
-::: {.callout-note icon="false"}
+우리는 @exm-Group_self_group_action 로부터 conjugation 이 군 $G$ 의 자신에 대한 작용임을 보았다. $g\in G$ 에 대한 conjugate 작용의 궤도는 $g$ 와 동등한 켤레류 이므로 다음의 결론을 얻는다.
 
-#### **군의 궤도**
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#def-Group_orbint_of_action_of_group}
+::: {#cor-Group_orbit_stabilizer_theorem}
 
-군 $G$ 가 집합 $S$ 에 대한 작용일 때 $G$ 의 **궤도 (orbint)**
-
+$K$ 가 유한군 $G$ 의 켤레류이면 $|K|{\big |} |G|$ 이다.
 
 :::
-:::
+
+</div>
 
 
+
+</br>
 
 ## 연습문제 {.unnumbered}
 

@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>4&nbsp; 군의 기본적인 성질 – 수리물리학</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -27,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,14 +54,15 @@ div.csl-indent {
 <link href="../../src/tensor/tensor02.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +92,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -359,7 +358,11 @@ window.Quarto = {
   <li><a href="#sec-Group_example_of_groups" id="toc-sec-Group_example_of_groups" class="nav-link" data-scroll-target="#sec-Group_example_of_groups"><span class="header-section-number">4.4.4</span> 여러가지 군</a></li>
   <li><a href="#sec-Group_class_multiplication" id="toc-sec-Group_class_multiplication" class="nav-link" data-scroll-target="#sec-Group_class_multiplication"><span class="header-section-number">4.4.5</span> Class 곱</a></li>
   </ul></li>
-  <li><a href="#sec-Group_action_of_group" id="toc-sec-Group_action_of_group" class="nav-link" data-scroll-target="#sec-Group_action_of_group"><span class="header-section-number">4.5</span> 군의 작용</a></li>
+  <li><a href="#sec-Group_action_of_group0" id="toc-sec-Group_action_of_group0" class="nav-link" data-scroll-target="#sec-Group_action_of_group0"><span class="header-section-number">4.5</span> 군의 작용</a>
+  <ul class="collapse">
+  <li><a href="#sec-Group_action_of_group" id="toc-sec-Group_action_of_group" class="nav-link" data-scroll-target="#sec-Group_action_of_group"><span class="header-section-number">4.5.1</span> 군의 작용</a></li>
+  <li><a href="#sec-Group_stabilizer_and_orbit" id="toc-sec-Group_stabilizer_and_orbit" class="nav-link" data-scroll-target="#sec-Group_stabilizer_and_orbit"><span class="header-section-number">4.5.2</span> 안정부분군과 궤도</a></li>
+  </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
@@ -388,7 +391,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-<p>%</p>
+%
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -1214,8 +1217,10 @@ K_2K_2 = 3K_1+3K_3
 <p><br></p>
 </section>
 </section>
-<section id="sec-Group_action_of_group" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="sec-Group_action_of_group"><span class="header-section-number">4.5</span> 군의 작용</h2>
+<section id="sec-Group_action_of_group0" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-Group_action_of_group0"><span class="header-section-number">4.5</span> 군의 작용</h2>
+<section id="sec-Group_action_of_group" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-Group_action_of_group"><span class="header-section-number">4.5.1</span> 군의 작용</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1227,22 +1232,34 @@ K_2K_2 = 3K_1+3K_3
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_action_of_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.15</strong></span> 주어진 군 <span class="math inline">\(G\)</span> 와 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(\pi \in \text{Hom}(G,\, \text{Sym}(S))\)</span> 를 <span class="math inline">\(S\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 <strong>작용 (action)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.15</strong></span> 주어진 군 <span class="math inline">\(G\)</span> 와 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(\pi : G \times S \to S\)</span> 가 다음을 만족할 때 <span class="math inline">\(\pi\)</span> 를 <span class="math inline">\(S\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이라고 하고 <span class="math inline">\(g\in G,\, s\in S\)</span> 에 대해 <span class="math inline">\(\pi_g (s)\)</span> 라고 표기한다.</p>
+<p> (<span class="math inline">\(1\)</span>) 임의의 <span class="math inline">\(x,\,y\in G,\, s\in S\)</span> 에 대해 <span class="math inline">\(\pi_{xy}(s) = \pi_x(\pi_y(s))\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 임의의 <span class="math inline">\(s\in S\)</span> 에 대해 <span class="math inline">\(\pi_{1_G}(s)=s\)</span> 이다.</p>
 </div>
 </div>
 </div>
-<p>다음은 준동형 사상과 대칭군의 성질에 의해 쉽게 보일 수 있다.</p>
+<p><br></p>
+<p>군의 작용에는 아래와 같이 동등한 정의가 존재한다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-Group_basic_properties_of_group_action" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.10</strong></span> <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\pi(g)\)</span> 를 <span class="math inline">\(\pi_g\)</span> 로 표기하자. 이 때 다음이 성립한다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\pi_{1_G}\)</span> 는 항등함수이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math inline">\(\pi_x\circ\pi_y = \pi_{xy}\)</span> 이다.</p>
+<div id="thm-Group_equivalent_definition_of_group_action" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.10</strong></span> <span class="math inline">\(\phi\in \text{Hom}(G,\,\text{Sym}(S))\)</span> 은 군의 작용이다. 또한 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(S\)</span> 로의 군의 작용은 <span class="math inline">\(\text{Hom}(G,\,\text{Sym}(S))\)</span> 에 속한다. 즉 <span class="math inline">\(\phi\in \text{Hom}(G,\,\text{Sym}(S))\)</span> 는 <a href="#def-Group_action_of_group" class="quarto-xref">정의&nbsp;<span>4.15</span></a> 와 동등한 정의이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>준 동형사상의 정의에 의해 <span class="math inline">\(\phi\)</span> 는 군의 작용이다. 임의의 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\pi_g(s_1)=\pi_g(s_2)\)</span> 이면 <span class="math inline">\(s_1=s_2\)</span> 이므로 <span class="math inline">\(\pi\)</span> 는 단사이며 따라서 <span class="math inline">\(\pi\in \text{Hom}(G,\,\text{Sym}(S))\)</span> 이다. 즉 두 정의는 동등하다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="cor-Group_action_is_injective" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 4.2</strong></span> <span class="math inline">\(\pi\)</span> 가 군 <span class="math inline">\(G\)</span> 의 <span class="math inline">\(S\)</span> 로의 작용일 때 <span class="math inline">\(\pi_g : S \to S\)</span> 는 단사이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_self_group_action" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.22 (자기 자신에 대한 작용)</strong></span> 정해진 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(\pi_x(g)=xg\)</span> 는 <span class="math inline">\(G\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이다.</p>
+<p><span class="theorem-title"><strong>예제 4.22 (자기 자신에 대한 작용)</strong></span> 군은 자기 자신에 작용할 수 있다.</p>
+<p>(<span class="math inline">\(1\)</span>) (<strong>translation</strong>) 정해진 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(\pi_x(g)=xg\)</span> 는 <span class="math inline">\(G\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이다.</p>
+<p>(<span class="math inline">\(2\)</span>) (<strong>conjugation</strong>) 정해진 <span class="math inline">\(y\in G\)</span> 에 대해 <span class="math inline">\(\pi_y(g) = ygy^{-1}\)</span> 은 <span class="math inline">\(G\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이다.</p>
 </div>
 </div>
 <br>
@@ -1253,13 +1270,22 @@ K_2K_2 = 3K_1+3K_3
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(M\in \text{GL}(n)\)</span> 에 대해 <span class="math inline">\(\pi_M : LN(n) \to LN(n)\)</span> 을 <span class="math inline">\(\pi_M(X) = MXM^{-1}\)</span> 로 정의하면 <span class="math inline">\(\pi_M\)</span> 이 <span class="math inline">\(LN(n)\)</span> 의 <span class="math inline">\(LN(n)\)</span> 에 대한 작용임을 알 수 있다.</p>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-Group_group_action_on_cosets" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.24 (잉여류에의 작용)</strong></span> 군 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(H\le G\)</span> 에 <span class="math inline">\(\pi_g (aH)=gaH\)</span> 는 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(H\)</span> 에 대한 왼쪽 잉여류로의 작용이다.</p>
+</div>
+</div>
+</section>
+<section id="sec-Group_stabilizer_and_orbit" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-Group_stabilizer_and_orbit"><span class="header-section-number">4.5.2</span> 안정부분군과 궤도</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>안정 부분군</strong>
+<span class="screen-reader-only">노트</span><strong>안정 부분군, 궤도, 고정점</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1269,6 +1295,15 @@ K_2K_2 = 3K_1+3K_3
 G_s = \{g\in G : \pi_g (s)=s\}
 \tag{4.7}\]</span></span></p>
 <p>는 <span class="math inline">\(G\)</span> 의 부분군이며 이를 <span class="math inline">\(s\)</span> 에 대한 <strong>안정부분군 (stabilizer subgroup)</strong> 이라고 한다.</p>
+<p><span class="math inline">\(s\in S\)</span> 에 대해</p>
+<p><span id="eq-Group_definition_of_orbit"><span class="math display">\[
+\text{Orb}_G(s) := \{\pi_g(s) : g\in G\}
+\tag{4.8}\]</span></span></p>
+<p>를 <span class="math inline">\(s\)</span> 의 <strong>궤도 (orbit)</strong> 이라고 한다. 또한</p>
+<p><span id="eq-Grou_defintion_of_fixed_point"><span class="math display">\[
+\text{Fix}_G(\pi) = \{s\in S: \forall g\in G\, \pi_g(s) = s\}
+\tag{4.9}\]</span></span></p>
+<p>를 <strong>고정점 (fixed point)</strong>* 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1300,30 +1335,44 @@ x\in G_{s'} &amp; \iff xs'=s' \iff xys = ys \iff y^{-1}xys = s \iff y^{-1}xy \in
 <div id="prp-Group_stabilizer_subgroup_3" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 4.10</strong></span> <span class="math inline">\(\pi\)</span> 가 <span class="math inline">\(S\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 작용이라고 할 때</p>
 <p><span class="math display">\[
-\ker \pi = \bigcap_{s\in G} G_s
+K := \{g\in G : \forall s\in S\, \pi_g(s)=s\}
+\]</span></p>
+<p>라고 하면 <span class="math display">\[
+K = \bigcap_{s\in G} G_s
 \]</span></p>
 <p>이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(x\in \ker \pi\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>trivial.</p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-Group_orbit_stabilizer_theorem" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.11 (궤도-안정부분군 정리)</strong></span> 유한군 <span class="math inline">\(G\)</span> 가 유한집합 <span class="math inline">\(S\)</span> 에 작용하며 <span class="math inline">\(s\in S\)</span> 일 때 <span class="math inline">\(|G| = |\text{Orb}_G(s)||G_s|\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G_S\le G\)</span> 이므로 <span class="math inline">\(G_s\)</span> 에 의한 왼쪽 잉여류의 집합 <span class="math inline">\(Y\)</span> 를 정의 할 수 있다. 이제 <span class="math inline">\(\Phi: Y\to \text{Orb}_G(s)\)</span> 를 다음과 같이 정의하자.</p>
+<p><span class="math display">\[
+\Phi (gG_s) := \pi_g(s).
+\]</span></p>
+<p>위 함수가 잘 정의됨을 보이자. 즉 <span class="math inline">\(gG_s = xG_s\)</span> 이면 <span class="math inline">\(x^{-1}g\in G_s\)</span> 이므로 <span class="math inline">\(\pi_{x^{-1}g}(s)=s\)</span> 이며 따라서 <span class="math inline">\(\pi_g(s) = \pi_x(s)\)</span> 이다.</p>
+<p>이제 이 함수가 단사임을 보이자. <span class="math inline">\(\pi_g(s) = \pi_x(s)\)</span> 이면 <span class="math inline">\(x^{-1}g\in G_s\)</span> 이며 따라서 <span class="math inline">\(gG_s = xG_s\)</span> 이다.</p>
+<p>이제 이 함수가 전사임을 보이자. <span class="math inline">\(t\in \text{Orb}_G(s)\)</span> 이면 어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(t=\pi_g(s)\)</span> 이므로 이 <span class="math inline">\(g\)</span> 에 대해 <span class="math inline">\(\Phi(gG_s) = t\)</span> 이다. 이 함수가 전단사이므로</p>
+<p><span class="math display">\[
+|\text{Orb}_G(s)| = |Y| = |G|/|G_s|. \qquad \square
+\]</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>군의 궤도</strong>
+<p>우리는 <a href="#exm-Group_self_group_action" class="quarto-xref">예제&nbsp;<span>4.22</span></a> 로부터 conjugation 이 군 <span class="math inline">\(G\)</span> 의 자신에 대한 작용임을 보았다. <span class="math inline">\(g\in G\)</span> 에 대한 conjugate 작용의 궤도는 <span class="math inline">\(g\)</span> 와 동등한 켤레류 이므로 다음의 결론을 얻는다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="cor-Group_orbit_stabilizer_theorem" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 4.3</strong></span> <span class="math inline">\(K\)</span> 가 유한군 <span class="math inline">\(G\)</span> 의 켤레류이면 <span class="math inline">\(|K|{\big |} |G|\)</span> 이다.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<div id="def-Group_orbint_of_action_of_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.17</strong></span> 군 <span class="math inline">\(G\)</span> 가 집합 <span class="math inline">\(S\)</span> 에 대한 작용일 때 <span class="math inline">\(G\)</span> 의 <strong>궤도 (orbint)</strong></p>
-</div>
-</div>
-</div>
+<p><br></p>
+</section>
 </section>
 <section id="연습문제" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
@@ -1416,7 +1465,7 @@ A_4 = \left\{\begin{array}{l} I,\\
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_embedding_of_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.18</strong></span> 군 <span class="math inline">\(G\)</span> 에서 군 <span class="math inline">\(F\)</span> 로의 단사인 준동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,F)\)</span> 가 존재할 때 <span class="math inline">\(G\)</span> 가 <span class="math inline">\(F\)</span> 로 embedding 된다고 한다. 당연히 <span class="math inline">\(F\)</span> 에는 <span class="math inline">\(G\)</span> 와 동형인 부분군이 존재한다.</p>
+<p><span class="theorem-title"><strong>정의 4.17</strong></span> 군 <span class="math inline">\(G\)</span> 에서 군 <span class="math inline">\(F\)</span> 로의 단사인 준동형사상 <span class="math inline">\(\phi \in \text{Hom}(G,\,F)\)</span> 가 존재할 때 <span class="math inline">\(G\)</span> 가 <span class="math inline">\(F\)</span> 로 embedding 된다고 한다. 당연히 <span class="math inline">\(F\)</span> 에는 <span class="math inline">\(G\)</span> 와 동형인 부분군이 존재한다.</p>
 </div>
 </div>
 </div>
@@ -1654,7 +1703,7 @@ xy=\phi(x^{-1})\phi(y^{-1})=\phi(x^{-1}y^{-1})=\phi((yx)^{-1})=yx
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>
