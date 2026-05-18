@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>7&nbsp; 군의 지표 – 수리물리학</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -54,15 +56,14 @@ div.csl-indent {
 <link href="../../src/group/group_representation.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2fb7a685417a1c0ddb26d3840925bed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,7 +93,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -350,10 +351,10 @@ window.Quarto = {
   <li><a href="#간단한-군의-지표-테이블" id="toc-간단한-군의-지표-테이블" class="nav-link" data-scroll-target="#간단한-군의-지표-테이블"><span class="header-section-number">7.1.3</span> 간단한 군의 지표 테이블</a></li>
   <li><a href="#sec-Group_from_character_table_to_representation" id="toc-sec-Group_from_character_table_to_representation" class="nav-link" data-scroll-target="#sec-Group_from_character_table_to_representation"><span class="header-section-number">7.1.4</span> 지표 테이블에서 표현까지</a></li>
   </ul></li>
-  <li><a href="#실수-유사실수-복소수-표현과-제곱근" id="toc-실수-유사실수-복소수-표현과-제곱근" class="nav-link" data-scroll-target="#실수-유사실수-복소수-표현과-제곱근"><span class="header-section-number">7.2</span> 실수, 유사실수, 복소수 표현과 제곱근</a>
+  <li><a href="#실표현-유사-실표현-복소-표현과-제곱근" id="toc-실표현-유사-실표현-복소-표현과-제곱근" class="nav-link" data-scroll-target="#실표현-유사-실표현-복소-표현과-제곱근"><span class="header-section-number">7.2</span> 실표현, 유사 실표현, 복소 표현과 제곱근</a>
   <ul class="collapse">
   <li><a href="#sec-Group_conjugate_represenntation" id="toc-sec-Group_conjugate_represenntation" class="nav-link" data-scroll-target="#sec-Group_conjugate_represenntation"><span class="header-section-number">7.2.1</span> 켤레 표현</a></li>
-  <li><a href="#sec-Group_real_and_pseudoreal_representation" id="toc-sec-Group_real_and_pseudoreal_representation" class="nav-link" data-scroll-target="#sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실수 표현과 의사실수표현</a></li>
+  <li><a href="#sec-Group_real_and_pseudoreal_representation" id="toc-sec-Group_real_and_pseudoreal_representation" class="nav-link" data-scroll-target="#sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실표현과 유사 실표현</a></li>
   </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
@@ -383,7 +384,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
-%
+<p>%</p>
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
@@ -809,8 +810,8 @@ D=D^{(\Gamma_1)}\oplus D^{(\Gamma_1')} \oplus D^{(\Gamma_1'')} \oplus D^{(\Gamma
 </section>
 </section>
 </section>
-<section id="실수-유사실수-복소수-표현과-제곱근" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="실수-유사실수-복소수-표현과-제곱근"><span class="header-section-number">7.2</span> 실수, 유사실수, 복소수 표현과 제곱근</h2>
+<section id="실표현-유사-실표현-복소-표현과-제곱근" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="실표현-유사-실표현-복소-표현과-제곱근"><span class="header-section-number">7.2</span> 실표현, 유사 실표현, 복소 표현과 제곱근</h2>
 <section id="sec-Group_conjugate_represenntation" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="sec-Group_conjugate_represenntation"><span class="header-section-number">7.2.1</span> 켤레 표현</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -829,6 +830,21 @@ D=D^{(\Gamma_1)}\oplus D^{(\Gamma_1')} \oplus D^{(\Gamma_1'')} \oplus D^{(\Gamma
 \forall g\in G,\, 1 \le i,\,j \le n,\, D^\ast(g)_{ij} = (D(g)_{ij})^\ast
 \]</span></p>
 <p>인 표현 <span class="math inline">\(D^\ast\)</span> 를 <span class="math inline">\(D\)</span> 에 대한 <strong>켤레 표현 (conjugate representation)</strong> 이라고 한다.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>복소 표현</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_complex_representation" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.2</strong></span> <span class="math inline">\(D\)</span> 가 켤레표현 <span class="math inline">\(D^\ast\)</span> 가 서로 동등하지 않을 때 <span class="math inline">\(D\)</span> 를 <strong>복소 표현 (complex representation)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -851,16 +867,22 @@ D=D^{(\Gamma_1)}\oplus D^{(\Gamma_1')} \oplus D^{(\Gamma_1'')} \oplus D^{(\Gamma
 <p><br></p>
 </section>
 <section id="sec-Group_real_and_pseudoreal_representation" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실수 표현과 의사실수표현</h3>
-<p>기약 유니타리 표현 <span class="math inline">\(D\)</span> 에 대해 켤레표현 <span class="math inline">\(D^\ast\)</span> 가 원래의 표현과 동등하다고 하자. 즉</p>
-<p><span class="math display">\[
-D^\ast = SDS^{-1}
-\]</span></p>
-<p>라면</p>
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-Group_real_and_pseudoreal_representation"><span class="header-section-number">7.2.2</span> 실표현과 유사 실표현</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_real_and_pseudoreal_representation" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.5</strong></span> 기약 유니타리 표현 <span class="math inline">\(D\)</span> 에 대해 켤레표현 <span class="math inline">\(D^\ast\)</span> 가 원래의 표현과 동등하다고 하자. 즉 <span class="math inline">\(D\)</span> 가 복소표현이 아니라면</p>
+<p><span id="eq-Group_real_and_pseudoreal_representation_1"><span class="math display">\[
+\forall g\in G,\quad D^\ast(g) = SD(g)S^{-1}
+\tag{7.12}\]</span></span></p>
+<p>를 만족하는 가역행렬 <span class="math inline">\(S\)</span> 는 <span class="math inline">\(S^T = \pm S\)</span> 를 만족한다. 즉 <span class="math inline">\(S\)</span> 는 대칭행렬이거나 반대칭 행렬이다. 또한 <span class="math inline">\(S\)</span> 는 유니타리가 되도록 선택 할 수 있다.</p>
+</div>
+</div>
+<div class="{proof}">
+<p><a href="#eq-Group_real_and_pseudoreal_representation_1" class="quarto-xref">식&nbsp;<span>7.12</span></a> 에 에르미트 conjugation 을 취하면</p>
 <p><span class="math display">\[
 D^\dagger (g) = (D^\ast (g))^T = (S^{-1})^TD(g)^TS^T
 \]</span></p>
-<p><span class="math inline">\(D^\dagger\)</span> 가 유니타리 표현이라면 <span class="math inline">\(D^\dagger (g) = D(g^{-1})\)</span> 이므로</p>
+<p>이다. <span class="math inline">\(D\)</span> 가 유니타리 표현이므로 <span class="math inline">\(D^\dagger (g) = D(g^{-1})\)</span> 이며</p>
 <p><span class="math display">\[
 D(g^{-1}) = (D^\ast (g))^T = (S^{-1})^TD(g)^TS^T
 \]</span></p>
@@ -869,22 +891,94 @@ D(g^{-1}) = (D^\ast (g))^T = (S^{-1})^TD(g)^TS^T
 D(g) = (S^{-1})^TD(g^{-1})^TS^T =  (S^{-1})^T\left(SD(g^{-1})S^{-1}\right)S^T = \left((S^{-1}S^T)^{-1}\right) D(g) \left(S^{-1}S^T\right)
 \]</span></p>
 <p>이다. 모든 <span class="math inline">\(g\)</span> 에 대해 성립하며 슈어의 보조정리(<a href="group_representation.html#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>6.2</span></a>) 에 의해 <span class="math inline">\(S^{-1}S^T = \eta I\)</span> 이다. <span class="math inline">\(S^T=\eta S\)</span> 로부터 <span class="math inline">\(S=(S^T)^T=\eta^2S\)</span> 이므로 <span class="math inline">\(\eta= \pm 1\)</span> 이다. 즉 <span class="math inline">\(S\)</span> 는 대칭행렬이거나 반대칭 행렬이다.</p>
+<p><a href="#eq-Group_real_and_pseudoreal_representation_1" class="quarto-xref">식&nbsp;<span>7.12</span></a> 와 <span class="math inline">\(D\)</span> 의 유니타리성으로부터 <span class="math inline">\(SD(g) =D^\ast(g)S^{-1} = \left(D^\dagger (g)\right)^T S\)</span> 이므로 <span class="math inline">\(S =\left(D(g)\right)^T SD(g)\)</span> 이다. 에르미트 켤레를 구하면 <span class="math inline">\(S^\dagger = D^\dagger (g) S^\dagger D^*(g)\)</span> 이며 이로부터</p>
+<p><span class="math display">\[
+SS^\dagger = \left[\left(D(g)\right)^T SD(g)\right] \left[D^\dagger (g) S^\dagger D^*(g)\right] =\left(D(g)\right)^T SS^\dagger D^*(g)
+\]</span></p>
+<p>이다. <span class="math inline">\(D(g)\)</span> 는 유니타리 이므로 <span class="math inline">\(D^\ast(g) SS^\dagger = SS^\dagger D^\ast (g)\)</span> 이다. 슈어 보조정리로부터 <span class="math inline">\(SS^\dagger = \alpha I\)</span> 이며 <span class="math inline">\(S'=S/\sqrt{\alpha}\)</span> 로 놓아도 성립하므로 우리는 <span class="math inline">\(S\)</span> 를 유니타리가 되도록 선택 할 수 있다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>실표현과 유사 실표현</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-Group_real_and_pseudoreal_representation" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 7.3</strong></span> 기약 유니타리 표현 <span class="math inline">\(D\)</span> 가 복소표현이 아니라고 하자. <span class="math inline">\(D^\ast=SDS^{-1}\)</span> 을 만족하는 <span class="math inline">\(S\)</span> 에 대해</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(S\)</span> 가 대칭행렬일 때 이 표현을 <strong>실표현 (real representation)</strong> 이라고 하며,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(S\)</span> 가 반대칭 행렬일 때 이 표현을 <strong>유사 실표현 (pseudoreal representation)</strong> 이라고 한다.</p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>홀수차원 반대칭 행렬의 행렬식은 0 이다(<a href="#exr-Group_zee_0_8" class="quarto-xref">연습문제&nbsp;<span>7.2</span></a>). 따라서 유사 실표현은 짝수차원 표현에 대해서만 존재한다.</p></li>
+<li><p>우리가 접하고 접할 표현중 많은 표현들은 명백히 실표현이며 <span class="math inline">\(D(g)\)</span> 가 실수 항목만을 갖는다는 의미이다. 그 경우, <span class="math inline">\(S\)</span> 는 단지 항등행렬이다.</p></li>
+</ul>
+<p><br></p>
+<p>기약 유니타리 표현 <span class="math inline">\(D\)</span> 가 실표현일 경우 <span class="math inline">\(D\)</span> 의 모든 성분이 실수임을 보일 수 있다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-Group_real_representation_is_real" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 7.1</strong></span> <span class="math inline">\(U\)</span> 가 대칭 유니타리 행렬일 때 <span class="math inline">\(W^2=U\)</span> 를 만족하는 대칭 유니타리 행렬 <span class="math inline">\(W\)</span> 가 존재한다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U\)</span> 는 유니타리 이므로 정규행렬이고 따라서 유니타리 변환에 의해 대각행렬로 변환된다. 즉 어떤 대각행렬 <span class="math inline">\(M\)</span> 과 유니타리행렬 <span class="math inline">\(P\)</span> 에 대해 <span class="math inline">\(U=PDP^\dagger\)</span> 이다. 이 때 <span class="math inline">\(M\)</span> 의 대각성분은 복소수로 표현 할 수 있다. <span class="math inline">\(M\)</span> 이 유니타리 행렬이므로 대각성분은 그 크기가 1인 복소수이다. <span class="math inline">\(i\)</span> 번째 대각성분 <span class="math inline">\(m_i = e^{i\theta_1}\)</span> 에 대해 <span class="math inline">\(M^{1/2}\)</span> 를 <span class="math inline">\(i\)</span> 번째 대각성분이 <span class="math inline">\(e^{i\theta/2}\)</span> 인 대각행렬로 정의하자. 그렇다면 <span class="math inline">\((M^{1/2})^2=M\)</span> 이다. 그리고 <span class="math inline">\(W:=PM^{1/2}P^\dagger\)</span> 라고 하자. 그렇다면 <span class="math inline">\(W^2 = U\)</span> 이며</p>
+<p><span class="math display">\[
+W^\dagger W = \left(P(M^{1/2})^\dagger P^{-1}\right)\left(PM^{1/2}P^\dagger\right) = I
+\]</span></p>
+<p>이므로 <span class="math inline">\(W\)</span> 는 유니타리 행렬이다. 이제 <span class="math inline">\(W\)</span> 가 대칭행렬임을 보이자. <span class="math inline">\(U\)</span> 의 서로 다른 고유값을 <span class="math inline">\(\lambda_1,\ldots,\lambda_k\)</span> 라고 하자. 이 때 다항식 <span class="math inline">\(q(z)\)</span> 를 다음과 같이 정의하자.</p>
+<p><span class="math display">\[
+q(z) = \sum_{i=1}^k \sqrt{\lambda_i}\prod_{j=1,\, j\ne i}^k \dfrac{z-\lambda_j}{\lambda_i-\lambda_j}
+\]</span></p>
+<p>그렇다면 <span class="math inline">\(q(\lambda_i)= \sqrt{\lambda_i}\)</span> 이며 <span class="math inline">\(U\)</span> 가 대각화 가능 하므로</p>
+<p><span class="math display">\[
+q(U)= Pq(M)P^\dagger = PM^{1/2}P^\dagger = W
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(W\)</span> 는 <span class="math inline">\(U\)</span> 의 다항식으로 표현 가능하며 일반적인 다항식 <span class="math inline">\(p(t)\)</span> 와 정사각 행렬 <span class="math inline">\(A\)</span> 에 대해 <span class="math inline">\(p(A^T)= (p(t))^T\)</span> 임을 안다. 따라서 <span class="math inline">\(W^T = (q(U))^T = q(U^T) = q(U)=W\)</span> 이다. 즉 <span class="math inline">\(W\)</span> 는 대칭행렬이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-Group_real_representation_is_real" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.6</strong></span> 군 <span class="math inline">\(G\)</span> 의 기약 유니타리 표현 <span class="math inline">\(D\)</span> 이 실표현이면 실수 성분으로만 이루어진 동등한 표현이 존재한다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^\ast (g) SD(g)S^{-1}\)</span> 의 <span class="math inline">\(S\)</span> 를 유니타리 대칭행렬이 되도록 선택한다. <a href="#lem-Group_real_representation_is_real" class="quarto-xref">보조정리&nbsp;<span>7.1</span></a> 에 따라 <span class="math inline">\(S=W^2\)</span> 인 유니타리 대칭행렬 <span class="math inline">\(W\)</span> 가 존재한다. <span class="math inline">\(D^\ast (g) = W^2D(g)W^{-2}\)</span> 이므로</p>
+<p><span class="math display">\[
+WD(g)W^{-1} = W^{-1}D^\ast (g) W = W^\ast D^\ast(g) \left(W^{-1}\right)^\ast = \left(WD(g)W^{-1}\right)^\ast
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(WD(g)W^{-1}\)</span> 은 모든 성분이 실수인 행렬이며 <span class="math inline">\(D(g)\)</span> 와 닮은 표현이다. <span class="math inline">\(\square\)</span></p>
+</div>
 <p><br></p>
 </section>
 </section>
 <section id="연습문제" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-conjugation_of_digonal_matrix" class="theorem exercise">
+<div id="exr-Group_conjugation_of_digonal_matrix" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.1</strong></span> <span class="math inline">\(D\)</span> 가 <span class="math inline">\(n\)</span> 차원 대각행렬이고 <span class="math inline">\(M\)</span> 가 <span class="math inline">\(n\)</span> 차원 가역행렬일 때 <span class="math inline">\(MDM^{-1}\)</span> 역시 대각행렬이라면 <span class="math inline">\(Me_i=e_j\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(D\)</span> 와 <span class="math inline">\(D'\)</span> 의 <span class="math inline">\(i\)</span> 번째 대각성분을 <span class="math inline">\(d_i,\,d'_i\)</span> 라고 하자. <span class="math inline">\(MDM^{-1}e_i = D'_ie_i = d'_i e_i\)</span> 이며 양 변의 앞에 <span class="math inline">\(M^{-1}\)</span> 을 곱해주면 <span class="math inline">\(D(M^{-1}e_i) = d'_i (M^{-1}e_i)\)</span> 이다. 즉 <span class="math inline">\(M^{-1}e_i\)</span> 는 <span class="math inline">\(d'_i\)</span> 의 고유값을 갖는 <span class="math inline">\(D\)</span> 의 고유벡터이며 따라서 어떤 <span class="math inline">\(j\)</span> 에 대해 <span class="math inline">\(e_j = M^{-1}e_i\)</span> 이다. <span class="math inline">\(e_i = Me_j\)</span> 이므로 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(D'\)</span> 의 대각성분은 순서를 무시했을 때 동일하다.</p>
 </div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Group_zee_0_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.2 (Zee 0.8)</strong></span> 반대칭 <span class="math inline">\(n \times n\)</span> 행렬의 행렬식이 <span class="math inline">\(n\)</span> 이 홀수이면 0 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>임의의 홀수차원 반대칭 행렬 <span class="math inline">\(A\)</span> 를 생각하자. 우리는 정사각 행렬에 대해 <span class="math inline">\(\det (A)= \det (A^T)\)</span> 임을 안다. 반대칭 행렬이므로 <span class="math inline">\(A^T = -A\)</span> 이다. 즉 <span class="math inline">\(\det (A^T) = \det (-A) = (-1)^{\text{dim}(A)}\det (A)\)</span> 이다. 따라서 <span class="math inline">\(\dim(A)\)</span> 가 홀수 이면 <span class="math inline">\(\det (A)=0\)</span> 이다.</p>
+</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Zee2016Group" class="csl-entry" role="listitem">
 Zee, A. 2016. <em>Group Theory in a Nutshell for Physicists</em>. In a Nutshell. Princeton University Press. <a href="https://books.google.co.kr/books?id=FWkujgEACAAJ">https://books.google.co.kr/books?id=FWkujgEACAAJ</a>.
 </div>
