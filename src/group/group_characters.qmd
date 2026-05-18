@@ -666,7 +666,7 @@ $$
 q(z) = \sum_{i=1}^k \sqrt{\lambda_i}\prod_{j=1,\, j\ne i}^k \dfrac{z-\lambda_j}{\lambda_i-\lambda_j}
 $$
 
-그렇다면 $q(\lambda_i)= \sqrt{\lambda_i}$ 이며 $U$ 가 대각화 가능 하므로
+그렇다면 $U$ 를 대각화하는 기저 $(e_m)$ 에 대해 $q(U)e_m = \sqrt{\lambda_m}e_m$ 이므로 $q(U) = W$ 이며 $U$ 가 대각화 가능 하므로
 
 $$
 q(U)= Pq(M)P^\dagger = PM^{1/2}P^\dagger = W
@@ -674,14 +674,11 @@ $$
 
 이다. 즉 $W$ 는 $U$ 의 다항식으로 표현 가능하며 일반적인 다항식 $p(t)$ 와 정사각 행렬 $A$ 에 대해 $p(A^T)= (p(t))^T$ 임을 안다. 따라서 $W^T = (q(U))^T = q(U^T) = q(U)=W$ 이다. 즉 $W$ 는 대칭행렬이다. $\square$
 
-
 :::
-
-
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-Group_real_representation_is_real}
+::: {#thm-Group_real_representation_is_real}
 
 군 $G$ 의 기약 유니타리 표현 $D$ 이 실표현이면 실수 성분으로만 이루어진 동등한 표현이 존재한다.
 
@@ -699,8 +696,122 @@ $$
 
 이다. 즉 $WD(g)W^{-1}$ 은 모든 성분이 실수인 행렬이며 $D(g)$ 와 닮은 표현이다. $\square$
 
+:::
+
+</br>
+
+$D$ 가 $n$ 차원 기약표현이라고 하자. $x,\,y\in \F^{n}$ 에 대해 다음이 성립한다.
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_invariant_bilinear_for_non_complex_representation}
+
+실표현 혹은 유사실표현인 $n$ 차원 유니타리 기약표현 $D$ 와 $D(g)$ 에 의해 변환되는 $x,\,y\in \F^{n}$ 을 생각하자. $y^TSx$ 는 $D$ 에 의한 변환에 대해 불변인 쌍선형 형식이다.
 
 :::
+
+</div>
+
+::: {.proof}
+
+$D$ 가 실표현 혹은 유사실표현이므로 $D^\ast = SDS^{-1}$ 를 만족하는 $S$ 가 존재한다. $x$, $y$ 는 각각 $D(g)$ 에 의해 $D(g)x,\,D(g)y$ 로 변환한다. $D^\ast(g) = SD(g)S^{-1}$ 의 양변에 역행렬을 취하면 $D^T(g) = SD^\dagger(g) S^{-1}$ 을 얻는다. 이로부터
+
+$$
+(D(g)y)^T S(D(g)x) = y^T D(g)^TSD(g)x = y^TSD^\dagger(g) S^{-1} S D(g) x = y^TSx. \quad \square 
+$$
+
+:::
+
+</br>
+
+### 프로베니우스-슈어 지표 {#sec-Group_frobenius_schur_indicator}
+
+주어진 $n$ 차원 유니타리 기약표현 $D$ 를 생각하자. 그리고 임의의 $n\times n$ 행렬 $X$ 에 대해
+
+$$
+S:= \sum_{g'\in G} D(g')^T XD(g')
+$$ {#eq-Group_frobenius_shure_indicator_1}
+
+라고 하자. 그렇다면 임의의 $g\in G$ 에 대해
+
+$$
+D(g)^TSD(g) = \sum_{g'\in G}D(g)^T D(g')^T X D(g')D(g) = \sum_{g'\in G}D(g'g)^TXD(g'g) = S
+$$
+
+이다. $D$ 가 유니타리 이므로 $D^\ast = S^TD(g)(S^T)^{-1}$ 이다. 즉 $D$ 는 실표현이거나 유사실표현이다. 따라서 다음과 같은 결론을 얻는다. 따라서 $D$ 가 복소표현이면 임의의 $X\in \F^{n\times n}$ 에 대해 @eq-Group_frobenius_shure_indicator_1 의 값은 $0$ 이어야 한다.
+
+이제 @eq-Group_frobenius_shure_indicator_1 의 각 행렬성분을 계산해 보자.
+
+$$
+\begin{aligned}
+\left[\sum_{g\in G} D(g)^T XD(g)\right]_{jk} &=\sum_{g\in G} \sum_{i,l}\left(D(g)^T\right)_{ji}X_{il}(D(g))_{lk} \\[0.3em]
+&= \sum_{g\in G} \sum_{i,l} D(g)_{ij}X_{il}D(g)_{lk}
+\end{aligned}
+$$
+
+여기서 $X$ 를 특정 $i$ 행 $l$ 성분은 1이며 나머지 성분을 $0$ 으로 놓으면
+
+$$
+\sum_{g\in G} D(g)_{ij}D(g)_{lk} = 0
+$$ {#eq-Group_frobenius_shure_indicator_2}
+
+를 얻는다. 이 값은 $i,\,j,\,k,\,l$ 가운데 어떤 것을 선택해도 성립한다. $l=j$ 로 놓고 $j$ 에 대해 합을 취해도 그 합은 $0$ 이므로
+
+$$
+0 = \sum_j \sum_{g\in G} D(g)_{ij}D(g)_{jk} = \sum_{g\in G}D(g^2) 
+$$ {#eq-Group_frobenius_shure_indicator_3}
+
+를 얻는다. 이에대한 표현의 지표를 구하면 다음과 같다.
+
+$$
+\sum_{g\in G}\chi (g^2) = 0.
+$${#eq-Group_frobenius_shure_indicator_4}
+
+이제만약 $D$ 가 복소표현이 아닌 실표현이나 유사 실표현일 경우를 생각해보자. 우리는 $\eta=\pm 1$ 에 대해 $S^T=\eta S$ 임을 안다. 이것과 @eq-Group_frobenius_shure_indicator_1 를 이용하면
+
+$$
+\sum_{g\in G} D(g)^TX^TD(g) = \eta \sum_{g\in G}D(g)^TXD(g)
+$$
+
+$X$ 의 $i$ 행 $l$ 열 성분만 $1$ 이며 나머지를 $0$ 으로 놓으면
+
+$$
+\sum_{g\in G} D(g)_{lj}D(g)_{ik} = \eta \sum_{g\in G} D(g)_{ij}D(g)_{lk}
+$$
+
+이며 여기서 $i=j$, $k=l$ 로 놓고 $i,\,k$ 에 대해 더하면
+
+$$
+\sum_{g\in G} \chi(g^2) = \eta \sum_{g\in G} \chi(g)\chi(g) 
+$$
+
+이다. $D$ 가 실표현 혹은 유사 실표현이므로 @prp-Group_properties_of_cojugate_representation 에 의해 $\chi(g)$ 는 항상 실수이다. 따라서 지표에 대한 제 1 직교정리에 의해
+
+$$
+\sum_{g\in G} \chi(g^2) = \eta \sum_{g\in G} \chi(g)\chi(g) = \eta |G|
+$$ {#eq-Group_frobenius_shure_indicator_5}
+
+이다. 이로부터 우리는 다음을 얻는다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-Group_frobenius_schur_indicator}
+
+#### 프로베니우스-슈어 지표
+
+유한군 $G$ 의 기약표현에 대한 지표 $\chi^{(r)}$ 는 다음을 만족한다.
+
+$$
+\sum_{g\in G} \chi^{(r)}(g^2) = \eta^{(r)} |G|,\qquad \text{where }\eta^{(r)} = \left\{\begin{array}{ll} 1\qquad& \text{if real}\\ -1&\text{if pseudoreal}\\ 0 &\text{if complex} \end{array}\right.
+$$
+
+
+:::
+
+</div>
+
+
 
 </br>
 
