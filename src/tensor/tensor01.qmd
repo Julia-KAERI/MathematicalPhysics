@@ -16,13 +16,13 @@ crossref:
 
 #### **공변벡터와 반변벡터** 
 
-여기서는 유한차원 벡터공간 $V$ 와 그 쌍대공간 $V^\ast$ 에 대해 생각한다. $V$ 의 기저 $(e_1,\ldots,\,e_n)$ 의 각각의 $e_j$ 에 대해 $\theta^i\in V^\ast$ 가 존재하여 $\theta^i(e_j)=\delta^i_j$ 이며, $(\theta^1,\ldots,\,\theta^n)$ 이 $V^\ast$ 의 기저가 된다는 것을 안다. 이 때 $\omega \in V^\ast$ 를 **공변벡터(covariant vector 혹은 covector)** 라고 하고 $x\in V$ 를 **반변 벡터(contravariant vector)** 라고 한다. 
+여기서는 유한차원 벡터공간 $V$ 와 그 쌍대공간 $V^\ast$ 에 대해 생각한다. $V$ 의 기저 $(e_1,\ldots,\,e_n)$ 의 각각의 $e_j$ 에 대해 $\theta^i\in V^\ast$ 가 존재하여 $\theta^i(e_j)=\delta^i_j$ 이며, $(\theta^1,\ldots,\,\theta^n)$ 이 $V^\ast$ 의 기저가 되며 이를 $(e_i)$ 기저에 대한 **쌍대 기저(dual basis)** 라고 한다. $V^\ast$ 의 원소를 **공변벡터(covariant vector 혹은 covector)** 라고 하고 $V$ 의 원소를 **반변벡터(contravariant vector)** 라고 한다. 선택된 $V$ 의 기저 $(e_i)$ 에 대해 $(\theta_i)$ 는 $V^*$ 
 
 </br>
 
 #### **벡터의 성분값과 자연쌍대**
 
-$x\in V$ 에 대해 $v=\sum_i x^ie_i$, $\omega \in V^\ast$ 에 대해 $\omega = \sum_j\omega_j \theta^j$ 라고 하자. 이같이 반변벡터의 경우 기저는 아래첨자로, 성분은 위첨자로 표기하는 것이 표준이다. 공변벡터의 경우 기저는 위첨자로 성분은 아래첨자로 표기하는 것이 표준이다. 이 때 다음이 성립한다.
+$x\in V$ 에 대해 $x=\sum_i x^ie_i$, $\omega \in V^\ast$ 에 대해 $\omega = \sum_j\omega_j \theta^j$ 라고 하자. 이같이 반변벡터의 경우 기저는 아래첨자로, 성분은 위첨자로 표기하는 것이 표준이다. 공변벡터의 경우 기저는 위첨자로 성분은 아래첨자로 표기하는 것이 표준이다. 이 때 다음이 성립한다.
 $$
 x^i = \theta^i(x),\qquad \omega_i = \omega(e_i).
 $$ {#eq-Tensor_componant_of_contravariant_and_covariant_vector}
@@ -71,13 +71,18 @@ $$
 임을 안다. 이에 반해 
 
 $$
-\delta^i_j = \theta'^i(e'_j) = {\left(R^{-1}\right)_j}^i \theta'^j(e_i) = \theta^j(e_i)
+\delta^i_j = \theta'^i(e'_j) = {\left(R^{-1}\right)_j}^k \theta'^i(e_k) 
 $$
 
-이므로
+이다. 양변에 $(R_l)^j$ 를 곱하고 $j$ 에 대해 더하면
 
 $$
-\theta^j = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i
+{R_l}^i = (R_l)^j {(R^{-1})_j}^k \theta'^i (e_k) = \delta_l^k \theta'^i(e_k) = \theta'^i(e_l)
+$$
+
+이다. 
+$$
+\theta^i = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i
 $$ {#eq-Tensor_transform_of_dual_basis}
 
 이며

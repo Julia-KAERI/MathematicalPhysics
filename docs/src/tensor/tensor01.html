@@ -393,12 +393,12 @@ window.Quarto = {
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="sec-Tensor_contravariant_covariant_einstein"><span class="header-section-number">2.1.1</span> 공변벡터, 반변벡터, 아인슈타인 표기법</h3>
 <section id="공변벡터와-반변벡터" class="level4">
 <h4 class="anchored" data-anchor-id="공변벡터와-반변벡터"><strong>공변벡터와 반변벡터</strong></h4>
-<p>여기서는 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 쌍대공간 <span class="math inline">\(V^\ast\)</span> 에 대해 생각한다. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 의 각각의 <span class="math inline">\(e_j\)</span> 에 대해 <span class="math inline">\(\theta^i\in V^\ast\)</span> 가 존재하여 <span class="math inline">\(\theta^i(e_j)=\delta^i_j\)</span> 이며, <span class="math inline">\((\theta^1,\ldots,\,\theta^n)\)</span> 이 <span class="math inline">\(V^\ast\)</span> 의 기저가 된다는 것을 안다. 이 때 <span class="math inline">\(\omega \in V^\ast\)</span> 를 <strong>공변벡터(covariant vector 혹은 covector)</strong> 라고 하고 <span class="math inline">\(x\in V\)</span> 를 <strong>반변 벡터(contravariant vector)</strong> 라고 한다.</p>
+<p>여기서는 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 쌍대공간 <span class="math inline">\(V^\ast\)</span> 에 대해 생각한다. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 의 각각의 <span class="math inline">\(e_j\)</span> 에 대해 <span class="math inline">\(\theta^i\in V^\ast\)</span> 가 존재하여 <span class="math inline">\(\theta^i(e_j)=\delta^i_j\)</span> 이며, <span class="math inline">\((\theta^1,\ldots,\,\theta^n)\)</span> 이 <span class="math inline">\(V^\ast\)</span> 의 기저가 되며 이를 <span class="math inline">\((e_i)\)</span> 기저에 대한 <strong>쌍대 기저(dual basis)</strong> 라고 한다. <span class="math inline">\(V^\ast\)</span> 의 원소를 <strong>공변벡터(covariant vector 혹은 covector)</strong> 라고 하고 <span class="math inline">\(V\)</span> 의 원소를 <strong>반변벡터(contravariant vector)</strong> 라고 한다. 선택된 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((e_i)\)</span> 에 대해 <span class="math inline">\((\theta_i)\)</span> 는 <span class="math inline">\(V^*\)</span></p>
 <p><br></p>
 </section>
 <section id="벡터의-성분값과-자연쌍대" class="level4">
 <h4 class="anchored" data-anchor-id="벡터의-성분값과-자연쌍대"><strong>벡터의 성분값과 자연쌍대</strong></h4>
-<p><span class="math inline">\(x\in V\)</span> 에 대해 <span class="math inline">\(v=\sum_i x^ie_i\)</span>, <span class="math inline">\(\omega \in V^\ast\)</span> 에 대해 <span class="math inline">\(\omega = \sum_j\omega_j \theta^j\)</span> 라고 하자. 이같이 반변벡터의 경우 기저는 아래첨자로, 성분은 위첨자로 표기하는 것이 표준이다. 공변벡터의 경우 기저는 위첨자로 성분은 아래첨자로 표기하는 것이 표준이다. 이 때 다음이 성립한다. <span id="eq-Tensor_componant_of_contravariant_and_covariant_vector"><span class="math display">\[
+<p><span class="math inline">\(x\in V\)</span> 에 대해 <span class="math inline">\(x=\sum_i x^ie_i\)</span>, <span class="math inline">\(\omega \in V^\ast\)</span> 에 대해 <span class="math inline">\(\omega = \sum_j\omega_j \theta^j\)</span> 라고 하자. 이같이 반변벡터의 경우 기저는 아래첨자로, 성분은 위첨자로 표기하는 것이 표준이다. 공변벡터의 경우 기저는 위첨자로 성분은 아래첨자로 표기하는 것이 표준이다. 이 때 다음이 성립한다. <span id="eq-Tensor_componant_of_contravariant_and_covariant_vector"><span class="math display">\[
 x^i = \theta^i(x),\qquad \omega_i = \omega(e_i).
 \tag{2.1}\]</span></span></p>
 <p><span class="math inline">\(\omega\in V^\ast,\, x\in V\)</span> 에 대해 <span class="math inline">\(\omega (x)\)</span> 를 <strong>자연 쌍대(natural pairing)</strong> 라고 한다. 이 때 다음이 성립한다.</p>
@@ -432,11 +432,14 @@ x^i = {\left(R^{-1}\right)_j}^i x'^j,\qquad x'^j = {R_i}^j x^i
 \]</span></p>
 <p>임을 안다. 이에 반해</p>
 <p><span class="math display">\[
-\delta^i_j = \theta'^i(e'_j) = {\left(R^{-1}\right)_j}^i \theta'^j(e_i) = \theta^j(e_i)
+\delta^i_j = \theta'^i(e'_j) = {\left(R^{-1}\right)_j}^k \theta'^i(e_k)
 \]</span></p>
-<p>이므로</p>
-<p><span id="eq-Tensor_transform_of_dual_basis"><span class="math display">\[
-\theta^j = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i
+<p>이다. 양변에 <span class="math inline">\((R_l)^j\)</span> 를 곱하고 <span class="math inline">\(j\)</span> 에 대해 더하면</p>
+<p><span class="math display">\[
+{R_l}^i = (R_l)^j {(R^{-1})_j}^k \theta'^i (e_k) = \delta_l^k \theta'^i(e_k) = \theta'^i(e_l)
+\]</span></p>
+<p>이다. <span id="eq-Tensor_transform_of_dual_basis"><span class="math display">\[
+\theta^i = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i
 \tag{2.5}\]</span></span></p>
 <p>이며 <span class="math display">\[
 \omega'_j = \omega(e'_j)= {\left(R^{-1}\right)_j}^i \omega(e_i)= {\left(R^{-1}\right)_j}^i  \omega_i
