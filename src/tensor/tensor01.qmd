@@ -16,11 +16,11 @@ crossref:
 
 #### **공변벡터와 반변벡터** 
 
-여기서는 유한차원 벡터공간 $V$ 와 그 쌍대공간 $V^\ast$ 에 대해 생각한다. $V$ 의 기저 $(e_1,\ldots,\,e_n)$ 의 각각의 $e_j$ 에 대해 $\theta^i\in V^\ast$ 가 존재하여 $\theta^i(e_j)=\delta^i_j$ 이며, $(\theta^1,\ldots,\,\theta^n)$ 이 $V^\ast$ 의 기저가 되며 이를 $(e_i)$ 기저에 대한 **쌍대 기저(dual basis)** 라고 한다. $V^\ast$ 의 원소를 **공변벡터(covariant vector 혹은 covector)** 라고 하고 $V$ 의 원소를 **반변벡터(contravariant vector)** 라고 한다. 선택된 $V$ 의 기저 $(e_i)$ 에 대해 $(\theta_i)$ 는 $V^*$ 
+여기서는 유한차원 벡터공간 $V$ 와 그 쌍대공간 $V^\ast$ 에 대해 생각한다. $V$ 의 기저 $(e_1,\ldots,\,e_n)$ 의 각각의 $e_j$ 에 대해 $\theta^i\in V^\ast$ 가 존재하여 $\theta^i(e_j)=\delta^i_j$ 이며, $(\theta^1,\ldots,\,\theta^n)$ 이 $V^\ast$ 의 기저가 되며 이를 $(e_i)$ 기저에 대한 **쌍대 기저(dual basis)** 라고 한다. $V^\ast$ 의 원소를 **공변벡터(covariant vector 혹은 covector)** 라고 하고 $V$ 의 원소를 **반변벡터(contravariant vector)** 라고 한다. 선택된 $V$ 의 기저 $(e_i) = (e_1,\ldots,\,e_n)$ 에 대해 $(\theta^i)=(\theta^1,\ldots,\,\theta^n)$ 는 $V^*$ 의 기저이다.
 
 </br>
 
-#### **벡터의 성분값과 자연쌍대**
+#### **기저에 대한 표현과 아인슈타인 표기법**
 
 $x\in V$ 에 대해 $x=\sum_i x^ie_i$, $\omega \in V^\ast$ 에 대해 $\omega = \sum_j\omega_j \theta^j$ 라고 하자. 이같이 반변벡터의 경우 기저는 아래첨자로, 성분은 위첨자로 표기하는 것이 표준이다. 공변벡터의 경우 기저는 위첨자로 성분은 아래첨자로 표기하는 것이 표준이다. 이 때 다음이 성립한다.
 $$
@@ -28,26 +28,32 @@ x^i = \theta^i(x),\qquad \omega_i = \omega(e_i).
 $$ {#eq-Tensor_componant_of_contravariant_and_covariant_vector}
 
 
-$\omega\in V^\ast,\, x\in V$ 에 대해 $\omega (x)$ 를 **natural pairing** 라고 한다. 이 때 다음이 성립한다. 
+$\omega\in V^\ast,\, x\in V$ 에 대해 $\omega (x)$ 는 다음과 같다$^1$.[$^1$ 이 때 $\omega (x)$ 를 *natural pairing* 이라고 한다.]{.aside} 
 
 $$
 \omega (x) =\sum_{i, j} \omega_j \theta^j(x^i e_i) = \sum_{i, j} \omega_j x^i \theta^j(e_i) = \underbrace{\sum_i \omega_ix^i \equiv \omega_i x^i}_{\text{Einstein notation}}
 $$ {#eq-Tensor_natural_pariaing}
 
 
-@eq-Tensor_natural_pariaing 에서와 같이 아래첨자와 위첨자에 같은 인덱스 기호가 붙을 경우 인덱스합을 생략하기도 한다. 즉 $\sum_i \omega_iv^i$ 를 $\omega_iv^i$ 와 같이 표기하는데 이것을 **아인슈타인 표기법 (Einsteine notation)** 이라고 한다. 
+@eq-Tensor_natural_pariaing 의 오른쪽 두 항에서 아래첨자와 위첨자에 같은 인덱스 기호가 붙을 경우 인덱스합을 생략하기도 한다. 즉 $\sum_i \omega_iv^i$ 를 $\omega_iv^i$ 와 같이 표기하는데 이것을 **아인슈타인 표기법 (Einsteine notation)** 이라고 한다. 
 
 </br>
 
-### 변환의 규칙 {#sec-Tensor_rule_of_transformation}
+### 기저의 변환 {#sec-Tensor_rule_of_transformation}
 
-기저변환 $R$ 에 의해 $V$ 에서 기저를 $(e_1,\ldots,\,e_n)$ 에서 $(e'_1,\ldots,\,e'_n)$ 으로 아래와 같이 변경한다고 하자. 
+기저변환 $R$ 에 의해 $V$ 에서 기저를 $(e_1,\ldots,\,e_n)$ 에서 $(e'_1,\ldots,\,e'_n)$ 으로 아래와 같이 변경한다고 하자. $e_i$ 는 $(e'_j)$ 의 선형결합이며 이를 다음과 같이 표기한다.
 
 $$
-e_i = {R_i}^j e'_j, \qquad \text{i. e.}\qquad e'_j = {\left(R^{-1}\right)_j}^ie_i.
+e_i = {R_i}^j e'_j, \qquad \text{i. e.}\qquad e'_j = {\left(R^{-1}\right)_j}^ke_k.
 $$ {#eq-Tensor_basis_transform}
 
-그렇다면 벡터 성분의 변화는
+이 때 
+
+$$
+{R_i}^j {(R^{-1})_j}^k = {\delta_i}^k
+$$
+
+이어야 한다. 
 
 $$
 \begin{aligned}
@@ -59,14 +65,14 @@ $$
 이므로
 
 $$
-x^i = {\left(R^{-1}\right)_j}^i x'^j,\qquad x'^j = {R_i}^j x^i
+x^i = x'^j {\left(R^{-1}\right)_j}^i ,\qquad x'^j = x^i {R_i}^j 
 $$ {#eq-Tensor_transform_of_contavariant_vector_component}
 
 이어야 한다. 즉 $v\in V$ 의 성분은 기저의 변환에 대해 반대로(contra-) 변하므로(정확히는 역행렬에 따라 변하므로) 반변벡터라는 이름이 붙었다. 또한 이로부터
 
 $$
-{R_i}^j = \dfrac{\partial (x')^j}{\partial x^i},\qquad {\left(R^{-1}\right)_i}^j= \dfrac{\partial x^i}{\partial (x')^j}
-$$
+{R_i}^j = \dfrac{\partial (x')^j}{\partial x^i},\qquad {\left(R^{-1}\right)_i}^j= \dfrac{\partial x^j}{\partial (x')^i}
+$$ {#eq-Tensor_elements_of_basis_transform }
 
 임을 안다. 이에 반해 
 
@@ -102,14 +108,14 @@ $$
 \omega_i = {R_i}^j \omega'_j, \qquad \omega'_j = {\left(R^{-1}\right)_j}^i  \omega_i.
 $${#eq-Tensor_transform_of_covariant_vector_component}
 
-즉 $\omega$ 의 성분은 기저 변환과 같은 행렬을 통해 변하므로 공변벡터 라는 이름이 붙었다. 
+즉 $\omega \in V^\ast$ 의 성분은 기저 변환과 같은 행렬을 통해 변하므로 공변벡터 라는 이름이 붙었다. 
 
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-Tensor_invairanice_of_scalar}
 
-$x\in V,\, \omega\in V^\ast$ 에서 $x^i\omega_i$ 는 좌표변환에 대해 불변이다.
+$x\in V,\, \omega\in V^\ast$ 에서 $x^i\omega_i$ 는 좌표변환에 대해 불변임을 보여라.
 
 :::
 
@@ -133,7 +139,7 @@ $x'^i\omega'_i = {R_j}^i x^j {(R^{-1})_i}^k\omega_k = (RR^{-1})_j^k x^j \omega_k
 ::: {#def-Tensor_definitino_of_tensor}
 
 
-$\F$-벡터공간 $V_1,\,V_2,\ldots,\,V_k$ 에 대해 $V_1 \times \cdots \times V_k \to \F$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 $k$ **텐서 (tensor)** 라고 한다. 즉 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
+$\F$-벡터공간 $V$ 에 대해 $V_1,\,V_2,\ldots,\,V_k$ 이 $V$ 이거나 $V$ 의 쌍대공간 $V^\ast$ 라고 하자. 이 때 $V_1 \times \cdots \times V_k \to \F$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 **텐서 (tensor)** 라고 하며 이 때 $k$ 를 텐서의 **차수(rank)** 라고 한다. 차수가 $k$ 인 텐서를 $k$-텐서 라고 한다. 즉 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
 
 $$
 T(\ldots,\,v^{(i)} + cu^{(i)},\ldots) = T(\ldots,v^{(i)},\ldots) + c T(\ldots,u^{(i)},\ldots)
@@ -144,7 +150,7 @@ $$
 
 :::
 
-많은 경우 여기에서 다루는 텐서가 정의되는 벡터공간은 정해진 벡터공간 $V$ 과 그 쌍대공간인 $V^\ast$ 이다. 
+
 
 
 #### **기저에 대한 텐서의 첨자 표기**
@@ -240,14 +246,14 @@ $$ {#eq-Tensor-transform_of_pq_tensor}
 
 ::: {#def-Tensor_symmetric_and_antisymmetric_tensor}
 
-$k$ 차 텐서 $T(V,\ldots,\,V)$ 가
+$k$ 텐서 $T\in\mathfrak{S}^k(V)$ 가 임의의 두 $v_i,\,v_j$ 에 대해
 
 $$
-T(v_1,\ldots,\,v_k) = T(v_{\sigma(1)},\ldots,\,v_{\sigma(k)})
+T(\ldots,\,v_j,\ldots,\,v_i,\ldots) = T(\ldots,\,v_i,\ldots,\,v_j,\ldots)
 $$ {#eq-Tensor_definition_of_symmetric_tensor}
 
 
-이면 $T$ 를 **대칭 텐서(symmetric tensor)** 라고 한다. 또한 임의의 두 $v_i,\,v_j$ 에 대해
+이면 $T$ 를 **대칭 텐서(symmetric tensor)** 라고 한다. 역시 $k$ 텐서 $A(V,\ldots,V)또한 임의의 두 $v_i,\,v_j$ 에 대해
 
 $$
 A(\ldots,\,v_j,\ldots,\,v_i,\ldots) = - A(\ldots,\,v_i,\ldots,\,v_j,\ldots) 
