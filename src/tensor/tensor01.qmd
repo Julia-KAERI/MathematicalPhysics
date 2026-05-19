@@ -28,7 +28,7 @@ x^i = \theta^i(x),\qquad \omega_i = \omega(e_i).
 $$ {#eq-Tensor_componant_of_contravariant_and_covariant_vector}
 
 
-$\omega\in V^\ast,\, x\in V$ 에 대해 $\omega (x)$ 를 **자연 쌍대(natural pairing)** 라고 한다. 이 때 다음이 성립한다. 
+$\omega\in V^\ast,\, x\in V$ 에 대해 $\omega (x)$ 를 **natural pairing** 라고 한다. 이 때 다음이 성립한다. 
 
 $$
 \omega (x) =\sum_{i, j} \omega_j \theta^j(x^i e_i) = \sum_{i, j} \omega_j x^i \theta^j(e_i) = \underbrace{\sum_i \omega_ix^i \equiv \omega_i x^i}_{\text{Einstein notation}}
@@ -41,7 +41,7 @@ $$ {#eq-Tensor_natural_pariaing}
 
 ### 변환의 규칙 {#sec-Tensor_rule_of_transformation}
 
-선형변환 $R$ 에 의해 $V$ 에서 기저를 $(e_1,\ldots,\,e_n)$ 에서 $(e'_1,\ldots,\,e'_n)$ 으로 아래와 같이 변경한다고 하자. 
+기저변환 $R$ 에 의해 $V$ 에서 기저를 $(e_1,\ldots,\,e_n)$ 에서 $(e'_1,\ldots,\,e'_n)$ 으로 아래와 같이 변경한다고 하자. 
 
 $$
 e_i = {R_i}^j e'_j, \qquad \text{i. e.}\qquad e'_j = {\left(R^{-1}\right)_j}^ie_i.
@@ -80,12 +80,18 @@ $$
 {R_l}^i = (R_l)^j {(R^{-1})_j}^k \theta'^i (e_k) = \delta_l^k \theta'^i(e_k) = \theta'^i(e_l)
 $$
 
-이다. 
+이다. $\theta'^i$ 는 $(\theta^j)$ 의 선형결합으로 표현되며 $\theta'^i={X^i}_j \theta^j$ 라고 하면 
+
 $$
-\theta^i = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i
+{X^i}_l = {X^i}_j \theta^j(e_l) = \theta'^i(e_l) = {R_l}^i
+$$
+
+이므로 다음을 얻는다.
+$$
+\theta^i = {\left(R^{-1}\right)_j}^i \theta'^j,\qquad \theta'^j = {R_i}^j \theta^i.
 $$ {#eq-Tensor_transform_of_dual_basis}
 
-이며
+또한
 $$
 \omega'_j = \omega(e'_j)= {\left(R^{-1}\right)_j}^i \omega(e_i)= {\left(R^{-1}\right)_j}^i  \omega_i
 $$ 
@@ -93,15 +99,15 @@ $$
 로 부터 다음을 얻는다.
 
 $$
-\omega_i = {R^i}_j \omega'_j, \qquad \omega'_j = {\left(R^{-1}\right)_j}^i  \omega_i.
+\omega_i = {R_i}^j \omega'_j, \qquad \omega'_j = {\left(R^{-1}\right)_j}^i  \omega_i.
 $${#eq-Tensor_transform_of_covariant_vector_component}
 
-즉 $\omega$ 의 성분은 기저의 변환에 대해 변환행렬에 맟추어(co-) 변하므로 공변벡터 라는 이름이 붙었다. 
+즉 $\omega$ 의 성분은 기저 변환과 같은 행렬을 통해 변하므로 공변벡터 라는 이름이 붙었다. 
 
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#prp-Tensor_invairanice_of_scalar}
+::: {#exm-Tensor_invairanice_of_scalar}
 
 $x\in V,\, \omega\in V^\ast$ 에서 $x^i\omega_i$ 는 좌표변환에 대해 불변이다.
 
@@ -109,42 +115,59 @@ $x\in V,\, \omega\in V^\ast$ 에서 $x^i\omega_i$ 는 좌표변환에 대해 불
 
 </div>
 
-::: {.proof}
-$x'^i\omega'_i = {\left(R^{-1}\right)_j}^i x^j({R_i}^k)\omega_k = x^j\omega_j. \qquad \square$
+::: {.solution}
+$x'^i\omega'_i = {R_j}^i x^j {(R^{-1})_i}^k\omega_k = (RR^{-1})_j^k x^j \omega_k = \delta_j^k x_j \omega_k = x^j\omega_j$
 :::
 
 
 </br>
 
-### 텐서
+### 텐서 {#sec-Tensor_tensor}
 
-#### **텐서와 변환규칙**
+#### **텐서**
 
-$\F$-벡터공간 $V_1,\,V_2,\ldots,\,V_k$ 에 대해 $V_1 \times \cdots \times V_k \mapsto \R$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 $k$-차 **텐서 (tensor)** 라고 한다. 즉 $v^{(i)},\,u^{(i)} \in V_i$ 와 $c\in \F$ 에 대해 
+::: {.callout-note icon="false"}
+
+#### **텐서**
+
+::: {#def-Tensor_definitino_of_tensor}
+
+
+$\F$-벡터공간 $V_1,\,V_2,\ldots,\,V_k$ 에 대해 $V_1 \times \cdots \times V_k \to \F$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 $k$ **텐서 (tensor)** 라고 한다. 즉 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
 
 $$
 T(\ldots,\,v^{(i)} + cu^{(i)},\ldots) = T(\ldots,v^{(i)},\ldots) + c T(\ldots,u^{(i)},\ldots)
 $$
 
-이어야 한다. 여기에서 다루는 텐서가 정의되는 벡터공간은 일반적으로 정해진 벡터공간 $V$ 에 대해 $V$ 이거나 그 쌍대공간인 $V^\ast$ 이다. $V$ 에 대해 정해진 기저 $(e_i)$ 를 생각하자. $T$ 가 $V\times V$ 에서 정의된 텐서라면, 즉 2차 텐서라고 하고 
+이어야 한다. 
+:::
+
+:::
+
+많은 경우 여기에서 다루는 텐서가 정의되는 벡터공간은 정해진 벡터공간 $V$ 과 그 쌍대공간인 $V^\ast$ 이다. 
+
+
+#### **기저에 대한 텐서의 첨자 표기**
+
+우선 2 텐서에 대해 다룬다. $T$ 가 $V\times V$ 에서 정의된 2-텐서라고 하자. 그리고 $V$ 의 기저 $(e_i)$ 를 생각하자. 
 
 $$
 T_{ij} := T(e_i,\,e_j)
 $$
 
-라고 하면
+라고 하자. 기저 $(e_i)$ 에 대해 $u=\sum u^i e_i,\, v = \sum v^i e_i$ 라고 하면
 
 $$
 T(u,\,v) = \sum_{i, j} u^iv^jT(e_i,\,e_j) \equiv T_{ij} u^iv^j
 $$
 
-이다. 반대로 $S$ 가 $V^\ast \times V^\ast$ 에서 정의된 2차 텐서일 때
+이다. 즉 기저에 대한 텐서 값과 벡터의 성분을 알면 텐서값을 계산 할 수 있다. 반대로 $S$ 가 $V^\ast \times V^\ast$ 에서 정의된 2 텐서일 때 $V^\ast$ 의 기저 $(\theta^i)$ 에 대해
 
 $$
 S^{ij} := S(\theta^i,\,\theta^j)
 $$
 
-라고 정의하면
+라고 정의하고 $\omega,\, \eta \in V^\ast$ 를 $\omega = \sum_i \omega_i \theta^i,\, \eta = \sum_i \eta_i \theta^i$ 라고 하면 
 $$
 S(\omega,\, \eta) = \sum \omega_i \eta_j S(\theta^i,\, \theta^j) \equiv  S^{ij}\omega_i \eta_j
 $$
@@ -160,18 +183,121 @@ $$
 A(v,\,\omega) = \sum_{i,j} v^i\omega_j A(e_i,\,\theta^j) \equiv {A_i}^j v^i\omega_j
 $$
 
-이다. 또한 이것을 확장하여 임의의 $k$ 차 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다.
+이다. 또한 이것을 확장하여 $V$ 와 $V^\ast$ 의 곱에서 정의된 임의의 $k$ 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다. 즉
+
+$$
+{{T^{i_1 i_2}}_{i_3 i_4}}{}^{i_5} 
+$$
+
+는 $V^\ast \times V^\ast \times V \times V \times V^\ast\to \F$ 텐서이다. 
+
+#### **텐서와 기저의 변환**
+
+기저 $(e_i)$ 에서 $(e'_j)$ 로의 변환 $R$ 이 $e_i = {R_i}^j e'_j$ 일 때 2차 텐서의 변환은 다음과 같다.
+
 $$
 \begin{aligned}
 T'_{ij} &:= T(e'_i,\,e'_j) = T\left({\left(R^{-1}\right)_i}^k e_k,\, {\left(R^{-1}\right)_j}^l  e_l \right) = {\left(R^{-1}\right)_i}^k {\left(R^{-1}\right)_j}^l T_{kl} , \\[0.3em]
-S'^{ij} &:= S(\theta'^i,\, \theta'^j) = S\left({R_i}^k\theta_k, {R_j}^l\theta_l\right) = {R_i}^k{R_j}^l\theta_l S^{kl}, \\[0.3em]
+S'^{ij} &:= S(\theta'^i,\, \theta'^j) = S\left({R_k}^i\theta_i, {R_l}^j\theta^l\right) = {R_k}^i{R_l}^j  S^{kl}, \\[0.3em]
 {{A'}_i}^j &= A(e'_i,\,\theta'^j) ={\left(R^{-1}\right)_i}^k {R_l}^j {A_k}^l.
 \end{aligned}
-$$ {#eq-CFT-transform_of_rank_2_tensor}
+$$ {#eq-Tensor-transform_of_rank_2_tensor}
 
-이 식을 보면 알 수 있듯이 이것은 2차 이상의 텐서에 대해서도 그대로 적용된다. 텐서의 공변 성분은 공변벡터의 변환을 따르고 반변 성분은 반번 벡터의 변환을 따른다.
+이 식을 보면 알 수 있듯이 이것은 2차 이상의 텐서에 대해서도 그대로 적용된다. 텐서의 공변성분은 공변벡터의 변환을 따르고 반변성분은 반변벡터의 변환을 따른다.
 
 </br>
+
+::: {.callout-note icon="false"}
+
+#### **$(p,q)$ 텐서 **
+
+::: {#def-Tensor_pq_tensor}
+
+벡터공간 $V$ 에 대해
+
+$$
+\underbrace{V^\ast \times \cdots \times V^\ast}_{p-\text{times}} \times \underbrace{V \times \cdots \times V}_{q-\text{times}} \to \F
+$$
+
+인 텐서를 **$(p,q)$ 텐서** 라고 한다.
+
+:::
+
+:::
+
+$(p,\,q)$ 텐서의 변환규칙은 아래와 같다.
+
+$$
+{T^{i_1,\ldots,\,i_p}}_{j_1,\ldots,\,j_q} = {R_{l_1}}^{k_1}\cdots {R_{l_p}}^{i_p} {(R^{-1})_{j_1}}^{l_1}\cdots {(R^{-1})_{j_q}}^{l_q}{T'^{k_1,\ldots,\,k_p}}_{l_1,\ldots,\,l_q}
+$$ {#eq-Tensor-transform_of_pq_tensor}
+
+
+</br>
+
+::: {.callout-note icon="false"}
+
+#### **대칭 텐서와 교대텐서**
+
+::: {#def-Tensor_symmetric_and_antisymmetric_tensor}
+
+$k$ 차 텐서 $T(V,\ldots,\,V)$ 가
+
+$$
+T(v_1,\ldots,\,v_k) = T(v_{\sigma(1)},\ldots,\,v_{\sigma(k)})
+$$ {#eq-Tensor_definition_of_symmetric_tensor}
+
+
+이면 $T$ 를 **대칭 텐서(symmetric tensor)** 라고 한다. 또한 임의의 두 $v_i,\,v_j$ 에 대해
+
+$$
+A(\ldots,\,v_j,\ldots,\,v_i,\ldots) = - A(\ldots,\,v_i,\ldots,\,v_j,\ldots) 
+$${#eq-Tensor_definition_of_alternating_tensor}
+
+인 텐서 $A$ 를 **교대 텐서 (alternatig tensor)** 혹은 **반대칭 텐서 (antisymmetric tensor)** 라고 한다.
+
+
+:::
+
+:::
+
+
+2차 텐서의 경우 대칭 텐서는 다음을 만족한다.
+
+$$
+T^{ij} = T^{ji},\quad T_{ij} = T_{ji}.
+$$
+
+2차 교대 텐서의 경우는 다음을 만족한다.
+
+$$
+A^{ij} = - A^{ji},\qquad A_{ij} = - A_{ji}.
+$$
+
+
+또한 텐서는 다음과 같이 대칭 텐서와 반대칭 텐서의 합으로 나타 낼 수 있다.
+
+$$
+A^{kl} = \dfrac{A^{kl} + A^{lk}}{2} + \dfrac{A^{kl}- A^{kl}}{2}.
+$$
+
+2차 혼합 대칭 텐서의 경우 ${A^i}_j = {A^j}_i$ 일 때 $A^i_j$ 와 같이 쓰기도 한다. 
+
+
+</br>
+
+#### **등방 텐서**
+
+좌표 변환에 대해서도 그 성분이 변하지 않는 **등방 텐서(isotropic tensor)** 라고 한다. 정의에 의해 $\delta^i_j = \theta^i(e_j)$ 이며, Chain rule 을 이용하면
+
+$$
+\delta^i_j = \theta^i(e_j) = \dfrac{\partial x^i}{\partial x'^k}\theta'^k\left(\dfrac{\partial x'^l}{\partial x^i} e'_l\right) = \dfrac{\partial x^i}{\partial x'^k}\dfrac{\partial x'^l}{\partial x^i}\theta'^k\left( e'_l\right) = \delta'^k_l
+$$
+
+이다. 즉 좌표 변환에 대해 텐서 값이 변하지 않는 크로네커 델타는 등방 텐서이다.
+
+
+</br>
+
 
 #### **계량 텐서**
 
@@ -227,45 +353,7 @@ $$ {#eq-Tensor_metric_tensor_and_its_variations}
 
 </br>
 
-#### **랭크 2 텐서의 대칭성**
 
-행렬과 같은 방법으로 대칭 텐서와 반대칭 텐서를 정의한다. 즉
-
-$$
-A^{kl} = A^{lk}
-$$
-
-이면 **대칭 텐서(symmetric tensor)** 라고 하고,
-
-$$
-A^{kl} = - A^{lk}
-$$
-
-이면 **반대칭 텐서(antisymmetric tensor)** 라고 한다.
-
-또한 텐서는 다음과 같이 대칭 텐서와 반대칭 텐서의 합으로 나타 낼 수 있다.
-
-$$
-A^{kl} = \dfrac{A^{kl} + A^{lk}}{2} + \dfrac{A^{kl}- A^{kl}}{2}.
-$$
-
-혼합 대칭 텐서의 경우 ${A^i}_j = {A^j}_i$ 일 때 $A^i_j$ 와 같이 쓰기도 한다. 
-
-
-</br>
-
-#### **등방 텐서**
-
-좌표 변환에 대해서도 그 성분이 변하지 않는 **등방 텐서(isotropic tensor)** 라고 한다. 정의에 의해 $\delta^i_j = \theta^i(e_j)$ 이며, Chain rule 을 이용하면
-
-$$
-\delta^i_j = \theta^i(e_j) = \dfrac{\partial x^i}{\partial x'^k}\theta'^k\left(\dfrac{\partial x'^l}{\partial x^i} e'_l\right) = \dfrac{\partial x^i}{\partial x'^k}\dfrac{\partial x'^l}{\partial x^i}\theta'^k\left( e'_l\right) = \delta'^k_l
-$$
-
-이다. 즉 좌표 변환에 대해 텐서 값이 변하지 않는 크로네커 델타는 등방 텐서이다.
-
-
-</br>
 
 ### 텐서 연산
 
