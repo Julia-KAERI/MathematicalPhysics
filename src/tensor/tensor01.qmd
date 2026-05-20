@@ -139,18 +139,15 @@ $x'^i\omega'_i = {R_j}^i x^j {(R^{-1})_i}^k\omega_k = (RR^{-1})_j^k x^j \omega_k
 ::: {#def-Tensor_definitino_of_tensor}
 
 
-$\F$-벡터공간 $V$ 에 대해 $V_1,\,V_2,\ldots,\,V_k$ 이 $V$ 이거나 $V$ 의 쌍대공간 $V^\ast$ 라고 하자. 이 때 $V_1 \times \cdots \times V_k \to \F$ 함수이며 각각의 벡터공간에 대해 다중선형인 함수를 **텐서 (tensor)** 라고 하며 이 때 $k$ 를 텐서의 **차수(rank)** 라고 한다. 차수가 $k$ 인 텐서를 $k$-텐서 라고 한다. 즉 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
+$\F$-벡터공간 $V$ 에 대해 $V_1,\,V_2,\ldots,\,V_k$ 이 $V$ 이거나 $V$ 의 쌍대공간 $V^\ast$ 라고 하자. 이 때 $T:V_1 \times \cdots \times V_k \to \F$ 가 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
 
 $$
 T(\ldots,\,v^{(i)} + cu^{(i)},\ldots) = T(\ldots,v^{(i)},\ldots) + c T(\ldots,u^{(i)},\ldots)
 $$
 
-이어야 한다. 
+일 때 $T$ 를 **텐서 (Tensor)** 라고 하며 $k$ 를 $T$ 의 **차수(rank)** 라고 한다. 차수가 $k$ 인 텐서를 $k$-텐서 혹은 $k$차 텐서 라고 한다.
 :::
-
 :::
-
-
 
 
 #### **기저에 대한 텐서의 첨자 표기**
@@ -189,7 +186,7 @@ $$
 A(v,\,\omega) = \sum_{i,j} v^i\omega_j A(e_i,\,\theta^j) \equiv {A_i}^j v^i\omega_j
 $$
 
-이다. 또한 이것을 확장하여 $V$ 와 $V^\ast$ 의 곱에서 정의된 임의의 $k$ 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다. 즉
+이다. 텐서 성분을 첨자로 표기할 때 위첨자와 아래첨자로 구분하는 것은 아인슈타인 표기법으로 합을 직관적으로 표현하기 위해서이다. 또한 이것을 확장하여 $V$ 와 $V^\ast$ 의 곱에서 정의된 임의의 $k$ 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다. 즉
 
 $$
 {{T^{i_1 i_2}}_{i_3 i_4}}{}^{i_5} 
@@ -246,14 +243,14 @@ $$ {#eq-Tensor-transform_of_pq_tensor}
 
 ::: {#def-Tensor_symmetric_and_antisymmetric_tensor}
 
-$k$ 텐서 $T\in\mathfrak{S}^k(V)$ 가 임의의 두 $v_i,\,v_j$ 에 대해
+$k$ 텐서 $T$ 가 임의의 두 $v_i,\,v_j$ 에 대해
 
 $$
 T(\ldots,\,v_j,\ldots,\,v_i,\ldots) = T(\ldots,\,v_i,\ldots,\,v_j,\ldots)
 $$ {#eq-Tensor_definition_of_symmetric_tensor}
 
 
-이면 $T$ 를 **대칭 텐서(symmetric tensor)** 라고 한다. 역시 $k$ 텐서 $A(V,\ldots,V)또한 임의의 두 $v_i,\,v_j$ 에 대해
+이면 $T$ 를 **대칭 텐서(symmetric tensor)** 라고 한다. 역시 $k$ 텐서 $A(V,\ldots,V)$ 또한 임의의 두 $v_i,\,v_j$ 에 대해
 
 $$
 A(\ldots,\,v_j,\ldots,\,v_i,\ldots) = - A(\ldots,\,v_i,\ldots,\,v_j,\ldots) 
@@ -267,7 +264,7 @@ $${#eq-Tensor_definition_of_alternating_tensor}
 :::
 
 
-2차 텐서의 경우 대칭 텐서는 다음을 만족한다.
+2-텐서의 경우 대칭 텐서는 다음을 만족한다.
 
 $$
 T^{ij} = T^{ji},\quad T_{ij} = T_{ji}.
@@ -280,7 +277,7 @@ A^{ij} = - A^{ji},\qquad A_{ij} = - A_{ji}.
 $$
 
 
-또한 텐서는 다음과 같이 대칭 텐서와 반대칭 텐서의 합으로 나타 낼 수 있다.
+또한 2차 텐서는 다음과 같이 대칭 텐서와 반대칭 텐서의 합으로 나타 낼 수 있다.
 
 $$
 A^{kl} = \dfrac{A^{kl} + A^{lk}}{2} + \dfrac{A^{kl}- A^{kl}}{2}.
@@ -291,18 +288,50 @@ $$
 
 </br>
 
-#### **등방 텐서**
+::: {.callout-note icon="false"}
 
-좌표 변환에 대해서도 그 성분이 변하지 않는 **등방 텐서(isotropic tensor)** 라고 한다. 정의에 의해 $\delta^i_j = \theta^i(e_j)$ 이며, Chain rule 을 이용하면
+#### **등방텐서**
+::: {#def-Tensor_isotropic_tensor}
+
+좌표 변환에 대해서도 그 성분이 변하지 않는 **등방텐서(isotropic tensor)** 라고 한다. 
+
+:::
+:::
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-Tensor_kronecker_delta_isotropic_tensor}
+
+#### 크로네커 델타
+
+$\delta : V^\ast \times V \to \R$ 을 $\delta (\omega,\,v):= \omega (v)$ 로 정의하면 $\delta$ 는 $(1,1)$ 텐서이다. $V$ 의 기저 $(e_i)$ 와 그 쌍대기저 $(\theta^j)$ 에 대해
 
 $$
-\delta^i_j = \theta^i(e_j) = \dfrac{\partial x^i}{\partial x'^k}\theta'^k\left(\dfrac{\partial x'^l}{\partial x^i} e'_l\right) = \dfrac{\partial x^i}{\partial x'^k}\dfrac{\partial x'^l}{\partial x^i}\theta'^k\left( e'_l\right) = \delta'^k_l
+{\delta^{i}}_j = \delta (\theta^i,\,e_j) = \left\{\begin{array}{ll} 1,\qquad&\text{if } i=j, \\ 0 &i \ne j\end{array}\right.
 $$
 
-이다. 즉 좌표 변환에 대해 텐서 값이 변하지 않는 크로네커 델타는 등방 텐서이다.
+이다. 또한 ${\delta^i}_j = {\delta^j}_i$ 임을 보일 수 있다. 이 경우 $\delta^i_j$ 로 표기할 수 있다. 
 
+$R$ 에 의한 기저변환에 대해
 
-</br>
+$$
+\begin{aligned}
+\delta (\theta^i,\,e_j) &= \delta\left({(R^{-1})_k}^i \theta'^k,\, {R^l}_j e'_l\right) = {(R^{-1})_k}^i{R^l}_j \delta (\theta'^k,\, e'_l) =  {(R^{-1})_k}^i{R^k}_j
+\end{aligned}
+$$
+
+인데 $k=l$ 이면 이 값이 $\delta^i_j$ 이며 $k\ne l$ 이면 이 값이 $0$ 이므로
+
+$$
+\delta (\theta^i,\,e_j) = \delta (\theta'^k,\,e'_l)
+$$
+
+임을 알 수 있다. 
+
+:::
+
+</div></br>
 
 
 #### **계량 텐서**
@@ -358,7 +387,6 @@ $$ {#eq-Tensor_metric_tensor_and_its_variations}
 이다.
 
 </br>
-
 
 
 ### 텐서 연산
