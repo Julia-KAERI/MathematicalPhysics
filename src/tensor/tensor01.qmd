@@ -130,41 +130,126 @@ $x'^i\omega'_i = {R_j}^i x^j {(R^{-1})_i}^k\omega_k = (RR^{-1})_j^k x^j \omega_k
 
 ### 텐서 {#sec-Tensor_tensor}
 
-#### **텐서**
+#### **텐서-수학적 접근**
 
 ::: {.callout-note icon="false"}
 
-#### **텐서**
+#### **텐서의 수학적 정의**
 
 ::: {#def-Tensor_definitino_of_tensor}
 
 
-$\F$-벡터공간 $V$ 에 대해 $V_1,\,V_2,\ldots,\,V_k$ 이 $V$ 이거나 $V$ 의 쌍대공간 $V^\ast$ 라고 하자. 이 때 $T:V_1 \times \cdots \times V_k \to \F$ 가 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
+$\F$-벡터공간 $V_1,\,V_2,\ldots,\,V_k$ 에 대해 다중선형사상 $T: V_1 \times \cdots \times V_k \to \F$ 을 **텐서 (tensor)** 라고 한다. 즉 각각의 $i\in \{1,\ldots,\,k\}$ 와 $v^{(i)},\,u^{(i)} \in V_i$, $c\in \F$ 에 대해 
 
 $$
 T(\ldots,\,v^{(i)} + cu^{(i)},\ldots) = T(\ldots,v^{(i)},\ldots) + c T(\ldots,u^{(i)},\ldots)
 $$
 
-일 때 $T$ 를 **텐서 (Tensor)** 라고 하며 $k$ 를 $T$ 의 **차수(rank)** 라고 한다. 차수가 $k$ 인 텐서를 $k$-텐서 혹은 $k$차 텐서 라고 한다.
+이어야 한다. 이 때 $k$ 를 $T$ 의 **차수(rank)** 라고 하고, 차수가 $k$ 인 텐서를 $k$-텐서 혹은 $k$차 텐서 라고 한다.
 :::
 :::
 
+</br>
 
-#### **기저에 대한 텐서의 첨자 표기**
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-우선 2 텐서에 대해 다룬다. $T$ 가 $V\times V$ 에서 정의된 2-텐서라고 하자. 그리고 $V$ 의 기저 $(e_i)$ 를 생각하자. 
+::: {#exm-Tensor_dual_map_is_rank_1_tensor}
+
+#### 쌍대사상과 이중쌍대사상
+
+</br>
+
+($1$) $\F$-벡터공간 $V$ 의 쌍대사상 $\chi \in V^\ast$ 는 1차 텐서이다. 
+
+($2$) 유한차원 벡터공간 $V$ 의 쌍대 공간 $V^\ast$ 에 대한 쌍대공간 $V^{\ast\ast}$ 을 생각 할 수 있다. $V$ 의 기저 $(e_i)$ 에 대한 쌍대기저 $(\theta^j)$ 를 생각 할 수 있다. 주어진 $v\in V$ 에 대해 $\psi_v \in V^{\ast\ast}$ 를 다음과 같이 정의하자.
+
+$$
+\psi_v (\theta) = \theta (v).
+$$
+
+이 때 이 함수는 다음과 같은 성질을 가진다.
+
+&emsp;($1$) 선형성 : $\psi_{c_1v_1 + c_2v_2} = c_1 \psi_1 + c_2 \psi_2$,
+
+&emsp;($2$) 전단사성 : 유한차원 (유한차원 벡터공간이므로 자명하다.)
+
+즉 $\Psi \in \mathcal{L}(V,\,V^{\ast\ast})$ 를 $\Psi(v) = \psi_v$ 로 정의하면 $\Psi$ 는 **기저의 선택과 무관한** 동형사상이다. 이 점에서 $V$ 에서 $V^\ast$ 로의 동형성과는 다르다. 그리고 이 때문에 $\psi_v$ 를 그냥 $v$ 로 쓰기도 한다. 즉 $e_i(\theta^j)$ 가 의미를 갖게 되며
+
+$$
+e_i(\theta^j) = \theta^j(e_i)
+$$
+
+이다. 따라서 $e_i$ 는 벡터공간의 기저일 뿐만 아니라 $V^\ast \to \F$ 에 대한 선형사상으로 간주될 수 있으며 흔히 그렇게 사용한다.
+
+:::
+
+</div></br>
+
+
+같은 정의역에서 정의된 두 텐서의 합과 스칼라곱을 다음과 같이 정의 할 수 있다.
+
+::: {.callout-note icon="false"}
+
+#### **텐서의 합과 스칼라곱**
+
+::: {#def-Tensor_sum_and_scala_product_of_tensor}
+
+같은 정의역에서 정의된 $k$ 차 텐서 $S,\,T$ 와 상수 $c\in \F$ 에 대해 텐서의 합과 스칼라곱 역시 $k$ 텐서이며 다음과 같이 정의된다.
+
+$$
+\begin{aligned}
+(S+T) (v_1,\ldots,\,v_n) &:= S(v_1,\ldots,\,v_n) + T(v_1,\ldots,\,v_n), \\[0.3em]
+(cT)(v_1,\ldots,\,v_n) &:= c(T(v_1,\ldots,\,v_n)). 
+\end{aligned}
+$$
+
+:::
+:::
+
+</br>
+
+두개의 텐서를 합성하여 하나의 텐서를 정의 할 수 있다.
+
+::: {.callout-note icon="false"}
+
+#### **텐서곱**
+
+::: {#def-Tensor_tensor_product}
+
+
+텐서 $T(V_1,\ldots,\,V_m),\, S(V_{m+1},\ldots,\, V_{m+n})$ 에 대해 $T$ 외 $S$ 의 **텐서곱 (tensor product)** $T\otimes S : V_1 \times \cdots \times V_{m+n} \to \F$ 는 다음과 같이 정의된다.
+
+$$
+(T\otimes S) (v_1,\ldots,\,v_{m+n}) = T(v_1,\ldots,\,v_m) S(v_{m+1},\ldots,\,v_{m+n}).
+$$ {#eq-Tensor_tensor_product}
+
+:::
+
+:::
+
+$V$ 에서 정의된 텐서 $T,\,S$ 에 대해 $T\otimes S$ 역시 텐서임은 자명하다. $T$ 와 $S$ 의 차수가 각각 $k_T,\,k_S$ 일 때 $T\otimes S$ 의 차수는 $k_T+k_S$ 이다. 예를 들어 $R=T\otimes S$ 라고 하자. 기저 $(e_i)$ 와 $(\theta^j)$ 에 대해 $T$ 와 $S$ 의 표현이 ${T^{i_1i_2}}_{i_3}$, ${{S^{i_4}}_{i_5}}{}^{i_6}$ 이라면 $R$ 의 표현은 ${R^{i_1i_2}}_{i_3}{{{}^{i_4}}_{i_5}}{}^{i_6}$ 임은 자명하다. 
+
+
+유한차원 벡터공간 $V$ 에 대해 $V$ 의 기저 $(e_i)$ 와 그 쌍대공간 $V^\ast$ 에 대한 쌍대 기저 $(\theta^i)$ 를 생각 할 수 있다. 
+
+
+#### **텐서-물리학에서의 사용**
+
+물리학에서는 좌표 변환에 대해 텐서를 주로 사용한다. 따라서 여러종류의 벡터공간을 다루는 것이 아니라 한 벡터공간에서의 기저의 선택과 변환이 중요하며, 다루는 벡터공간은 정해진 특정 벡터공간 $V$ 와 쌍대공간 $V^\ast$ 이다. 즉 $V_1 \times \cdots \times V_k$ 에서 정의된 텐서일 때 $V_1,\ldots,\,V_k$ 는 $V$ 이거나 $V^\ast$ 이다. 
+
+우선 2 텐서에 대해 생각해보자. $V$ 의 기저 $(e_i)$ 를 생각하자. $T$ 가 $V\times V$ 에서 정의된 2-텐서 일 때
 
 $$
 T_{ij} := T(e_i,\,e_j)
 $$
 
-라고 하자. 기저 $(e_i)$ 에 대해 $u=\sum u^i e_i,\, v = \sum v^i e_i$ 라고 하면
+라고 정의한다. $u=\sum u^i e_i$, $v = \sum v^i e_i$ 라고 하면
 
 $$
 T(u,\,v) = \sum_{i, j} u^iv^jT(e_i,\,e_j) \equiv T_{ij} u^iv^j
 $$
 
-이다. 즉 기저에 대한 텐서 값과 벡터의 성분을 알면 텐서값을 계산 할 수 있다. 반대로 $S$ 가 $V^\ast \times V^\ast$ 에서 정의된 2 텐서일 때 $V^\ast$ 의 기저 $(\theta^i)$ 에 대해
+이다. 여기서 $V\times V$ 에서 정의된 텐서의 성분을 아래첨자로 표기하는 것이 아인슈타인 표기법에 비추어 자연스럽다는 것을 알게 된다. 그리고 기저에 대한 텐서 값과 벡터의 성분을 알면 텐서값을 계산 할 수 있다는 것을 알 수 있다. 이제 $S$ 가 $V^\ast \times V^\ast$ 에서 정의된 2 텐서일 때 $(e_i)$ 에 대한 쌍대기저 $(\theta^i)$ 에 대해
 
 $$
 S^{ij} := S(\theta^i,\,\theta^j)
@@ -175,7 +260,7 @@ $$
 S(\omega,\, \eta) = \sum \omega_i \eta_j S(\theta^i,\, \theta^j) \equiv  S^{ij}\omega_i \eta_j
 $$
 
-이다. $V \times V^\ast$ 에서 정의된 텐서 $A$ 를 생각하자. 
+이다. 역시 아인슈타인 표기법상 $V^\ast \times V^\ast$ 에서 정의된 텐서의 성분을 모두 위첨자를 쓰는것이 자연스럽다. $V \times V^\ast$ 에서 정의된 텐서 $A$ 를 생각하자. 
 
 $$
 {A_i}^j = A(e_i,\,\theta^j)
@@ -186,13 +271,18 @@ $$
 A(v,\,\omega) = \sum_{i,j} v^i\omega_j A(e_i,\,\theta^j) \equiv {A_i}^j v^i\omega_j
 $$
 
-이다. 텐서 성분을 첨자로 표기할 때 위첨자와 아래첨자로 구분하는 것은 아인슈타인 표기법으로 합을 직관적으로 표현하기 위해서이다. 또한 이것을 확장하여 $V$ 와 $V^\ast$ 의 곱에서 정의된 임의의 $k$ 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다. 즉
+이다. 또한 이것을 확장하여 $V$ 와 $V^\ast$ 의 데카르트곱에서 정의된 $k$ 텐서에 대해서도 텐서의 위첨자-아래첨자 표기법을 사용 할 수 있다. 즉
 
 $$
 {{T^{i_1 i_2}}_{i_3 i_4}}{}^{i_5} 
 $$
 
 는 $V^\ast \times V^\ast \times V \times V \times V^\ast\to \F$ 텐서이다. 
+
+**물리학에서는 보통 텐서를 이런 의미로 사용하며 여기서도 앞으로는 특별한 언급이 없는 한 텐서를 이 방식으로 사용한다.**
+
+
+
 
 #### **텐서와 기저의 변환**
 
@@ -207,6 +297,10 @@ S'^{ij} &:= S(\theta'^i,\, \theta'^j) = S\left({R_k}^i\theta_i, {R_l}^j\theta^l\
 $$ {#eq-Tensor-transform_of_rank_2_tensor}
 
 이 식을 보면 알 수 있듯이 이것은 2차 이상의 텐서에 대해서도 그대로 적용된다. 텐서의 공변성분은 공변벡터의 변환을 따르고 반변성분은 반변벡터의 변환을 따른다.
+
+</br>
+
+#### **텐서곱, ($p,\,q$) 텐서, 대칭텐서와 교대텐서**
 
 </br>
 
@@ -308,24 +402,17 @@ $$
 $\delta : V^\ast \times V \to \R$ 을 $\delta (\omega,\,v):= \omega (v)$ 로 정의하면 $\delta$ 는 $(1,1)$ 텐서이다. $V$ 의 기저 $(e_i)$ 와 그 쌍대기저 $(\theta^j)$ 에 대해
 
 $$
-{\delta^{i}}_j = \delta (\theta^i,\,e_j) = \left\{\begin{array}{ll} 1,\qquad&\text{if } i=j, \\ 0 &i \ne j\end{array}\right.
+{\delta^{i}}_j = \delta (\theta^i,\,e_j) = \left\{\begin{array}{ll} 1,\qquad&\text{if } i=j, \\ 0, &\text{if }i \ne j.\end{array}\right.
 $$
 
-이다. 또한 ${\delta^i}_j = {\delta^j}_i$ 임을 보일 수 있다. 이 경우 $\delta^i_j$ 로 표기할 수 있다. 
+또한 ${\delta^i}_j = {\delta^j}_i$ 임을 보일 수 있다. 이 경우 $\delta^i_j$ 로 표기할 수 있다. 
 
 $R$ 에 의한 기저변환에 대해
 
 $$
-\begin{aligned}
-\delta (\theta^i,\,e_j) &= \delta\left({(R^{-1})_k}^i \theta'^k,\, {R^l}_j e'_l\right) = {(R^{-1})_k}^i{R^l}_j \delta (\theta'^k,\, e'_l) =  {(R^{-1})_k}^i{R^k}_j
-\end{aligned}
+\delta'^i_j = \delta(\theta'^i,\,e'_j) = \delta ({R_k}^i \theta^k,\, {(R^{-1})_j}^l e_l) = {(R^{-1})_j}^l{R_k}^i\delta (\theta^k,\,e_l) = {(R^{-1})_j}^k{R_k}^i = \delta^i_j
 $$
 
-인데 $k=l$ 이면 이 값이 $\delta^i_j$ 이며 $k\ne l$ 이면 이 값이 $0$ 이므로
-
-$$
-\delta (\theta^i,\,e_j) = \delta (\theta'^k,\,e'_l)
-$$
 
 임을 알 수 있다. 
 
@@ -340,12 +427,12 @@ $\F$-벡터공간 $V$ 에 대해, 정확히는 다양체 $M$ 의 탄젠트 공�
 
 &emsp;($1$) **대칭성** : $g(u,\,v) = g (v,\,u)$, 
 
-&emsp;($2$) **비축퇴성** : $\forall u\in V,\, g(v,\,u)=0 \iff v=0$
+&emsp;($2$) **비축퇴성** : $\left(\forall u\in V,\, g(v,\,u)=0 \right)\iff v=0$
 
-계량텐서는 내적벡터공간의 내적과 같이 벡터공간에 부여되는 구조이다. 이 때 계량텐서가 $0$ 이 아닌 모든 $u,\,v\in V$ 에 대해 $g(u,\,v) > 0$ 이면 이 텐서를 **리만 계량(Riemann metric)** 이라고 하고 아래와 같이 주어졌을 때 **로런츠 계량(Lorentz metric)** 이라고 한다. 텐서의 인덱스 규칙에 따라 $g_{ij} = g(e_i,\,e_j)$ 라고 하자. 로런츠 계량은 아래와 같이 주어진다.
+계량 텐서는 내적벡터공간의 내적과 같이 벡터공간에 부여되는 구조이다. 이 때 계량 텐서가 $0$ 이 아닌 모든 $v\in V$ 에 대해 $g(v,\,v) > 0$ 이면 이 텐서를 **리만 계량(Riemann metric)** 이라고 하고 아래와 같이 주어졌을 때 **로런츠 계량(Lorentz metric)** 이라고 한다. 텐서의 인덱스 규칙에 따라 $g_{ij} = g(e_i,\,e_j)$ 라고 하자. 로런츠 계량은 아래와 같이 주어진다.
 
 $$
-g_{ij} = \left[\,\begin{array}{rrrr} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 &-1\end{array}\,\right].
+\left[g_{ij}\right] = \left[\,\begin{array}{rrrr} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 &-1\end{array}\,\right].
 $$ {#eq-Tensor_lorentz_metric}
 
 계량의 정의에 의해 아래의 대칭성이 성립한다는 것을 알 수 있다.
@@ -365,18 +452,38 @@ $g$ 가 쌍선형 사상이므로 $\flat$ 은 선형사상이며 $g$ 의 비축�
 
 이 때, $v=v^ie_i,\, u=u^je_j$ 에 대해 
 $$
-\flat (v^ie_i)(u^ie_i) = g(v^ie_i,\, u^je_j) = \sum_{i,j}v^iu^jg(e_i,\,e_j) = g_{ij}v^iu^j
+\flat (v^ie_i)(u^j e_j) = g(v^ie_i,\, u^je_j) = \sum_{i,j}v^iu^jg(e_i,\,e_j) = g_{ij}v^iu^j
 $$
 
-이므로 $v_j = g_{ij}v^i$ 로 놓으면 $g(v,\,u) = v_ju^j$ 이다. 
-
-$\flat$ 이 가역사상이므로 $\flat$ 의 역사상이 존재한다. 이를 $\sharp$ 라고 하자. 그렇다면 $v^j = (g_{ij})^{-1}v_i$ 이며 $(g_{ij})^{-1}$ 은 아래 인덱스를 위 인덱스로 바꾸저 주는 역할을 하므로 $g^{ji}$ 와 같이 쓸 수 있다. 즉
+이므로 
 
 $$
-g^{ij} = (g_{ji})^{-1}
+\boxed{v_j := g_{ij}v^i = g_{ji}v^i} 
+$$ {#eq-Tensor_metric_from_contravariant_to_covariant}
+
+로 놓으면 $g(v,\,u) = v_ju^j$ 이다. 
+
+$\flat$ 이 가역사상이므로 $\flat$ 의 역사상이 존재한다. 이를 $\sharp$ 라고 하자. 그렇다면 $v^j = (g_{ij})^{-1}v_i$ 이며 $(g_{ij})^{-1}$ 은 아래 인덱스를 위 인덱스로 바꿔 주는 역할을 하므로 $g^{ji}$ 와 같이 쓸 수 있다. 계량 텐서의 대칭성까지 고려하면
+
+$$
+g^{ij} := (g_{ji})^{-1} = (g_{ij})^{-1}
 $$
 
-이다. 이제 $v_i = {g_i}^j v_j = {g_i}^j g_{jk}v^k$ 이며 $v_i = g_{ik}v^k$ 이므로 ${g_i}^j = g_{ik}(g_{jk})^{-1}= g_{ik}g^{kj}$ 임을 알 수 있다. 같은 방식으로 ${g^i}_j = g^{ik}g_{kj}$ 임을 안다. 이를 정리하면 정해진 계랑 $g_{ij}$ 에 대해
+이다. 이로부터
+
+$$
+\boxed{v^j = g^{ij}v_i = g^{ji}v_i}
+$$ {#eq-Tensor_metric_from_covariant_to_contravariant}
+
+을 얻는다. $[g_{ij}]$ 가 대칭이므로 $\left[g^{ij}\right]=\left[g_{ij}\right]^{-1}$ 역시 대칭임을 알 수 있다. 
+
+이제 $v_i = g_{ij}v^j = {g_i}^j v_j$ 가 되도록 ${g_i}^j$ 를 정의해 보자. ${g_i}^j v_j = {g_i}^j g_{jk}v^k$
+
+$$
+
+$$
+
+이제 $v_i = {g_i}^j v_j = {g_i}^j g_{jk}v^k$ 이며 $v_i = g_{ik}v^k$ 이므로 ${g_i}^j = g_{ik}(g_{jk})^{-1}= g_{ik}g^{kj}$ 임을 알 수 있다. 같은 방식으로 ${g^i}_j = g^{ik}g_{kj}$ 임을 안다. 이를 정리하면 정해진 계랑 $g_{ij}$ 에 대해
 
 $$
 \boxed{
@@ -591,7 +698,22 @@ $$
 </div>
 
 ::: {.solution}
-.. to be done..
+
+${A^i}_j$ 가 3차원 공간에서의 등방 텐서라고 하자. @exm-Tensor_kronecker_delta_isotropic_tensor 에서와 같이
+
+$$
+{A'^i}_j = {(R^{-1})_j}^l{R_k}^i  A^k_l
+$$
+
+이며 등방텐서라면 우변이 ${A^i}_j$ 와 같아야 한다. $z$ 축에 대한 180 도 회전을 생각하면
+
+$$
+{A'^1}_3 = - {A^1}_3,\qquad {A'^2}_3 = - {A^2}_3 
+$$
+
+이다. 등방텐서임을 고려하면 ${A^1}_3 = {A^2}_3=0$ 이다. $x,\,y$ 축에 대한 회전을 고려하면 $i\ne j$ 에 대해 ${A^i}_j = {A'^i}_j = 0$ 이다. 이제 $z$ 축에 대한 90 도 회전을 고려하면 ${A'^1}_1 = {A^2}_2$ 이며 등방성을 고려하면  ${A'^1}_1 = {A^2}_2 = {A^1}_1$ 이다. 역시 $x,\,y$ 축에 대한 90 도 회전을 고려하면 ${A'^i}_i =  
+
+dl
 
 
 :::
