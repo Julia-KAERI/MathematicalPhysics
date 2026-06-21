@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,7 +60,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -449,7 +449,7 @@ window.Quarto = {
 <p>즉 모든 군에 대해 최소한 하나의 표현은 존재한다.</p>
 <p><br></p>
 <p>이제 몇가지 질문이 자연스럽게 생겨난다. (1) 모든 군은 표현 가능한가? (2) 군의 표현은 몇가지나 (최소한 trivial representation 을 제외하고라도) 가능한가? (3) 다수의 표현이 존재한다면 이것을 어떤 특징에 따라 분류 할 수 있는가? (4) 표현에 대한 어떤 일반적인 성질이 존재하는가?</p>
-<p>일부분은 이미 대답 할 수 있다. Caylay 정리 (<a href="#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group-caylay_theorem</span></a>) 모든 유한군은 대칭군 <span class="math inline">\(S_n\)</span> 의 어떤 부분군과 동형이라는 것을 알려준다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며(<a href="#exm-Group_defining_representation_of_Sn" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-Group_defining_representation_of_Sn</span></a>), 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?</p>
+<p>일부분은 이미 대답 할 수 있다. Caylay 정리 (<a href="group_introduction.html#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span>4.3</span></a>) 모든 유한군은 대칭군 <span class="math inline">\(S_n\)</span> 의 어떤 부분군과 동형이라는 것을 알려준다. 그리고 대칭군은 항상 행렬로 표현 할 수 있으며(<a href="#exm-Group_defining_representation_of_Sn" class="quarto-xref">예제&nbsp;<span>6.4</span></a>), 따라서 유한군은 행렬로 표현 가능하다는 것을 알 수 있다. 연속군은? 우리는 이미 회전을 행렬로 다루었다. 또한 유명한 로런츠군도 있다. 덧셈 연산에 대해 실수도 군이다. 이것도 행렬로 나타 낼 수 있을까?</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_matrix_representation_of_Rplus" class="theorem example">
@@ -466,7 +466,7 @@ D(u):= \begin{bmatrix} 1 &amp; 0 \\ u &amp; 1 \end{bmatrix}
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitray_representation_of_D3" class="theorem example">
 <p><span class="theorem-title"><strong>예제 6.3 (<span class="math inline">\(D_3\)</span> 에 대한 유니터리 표현)</strong></span> <br></p>
-<p><a href="#fig-Group_d3_2" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-Group_d3_2</span></a> 에서 보인 <span class="math inline">\(D_3\)</span> 군에 대한 유니터리 표현은 다음과 같다.</p>
+<p><a href="group_introduction.html#fig-Group_d3_2" class="quarto-xref">그림&nbsp;<span>4.2</span></a> 에서 보인 <span class="math inline">\(D_3\)</span> 군에 대한 유니터리 표현은 다음과 같다.</p>
 <p><span id="eq-Group_unitray_representation_of_D3_1"><span class="math display">\[
 \begin{aligned}
 U(I)&amp;= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix},  &amp;
@@ -522,7 +522,7 @@ D(\pi)D(\sigma)\boldsymbol{e}_j = D(\pi)\boldsymbol{e}_{\sigma(j)}= \boldsymbol{
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>우리는 군의 표현이 여러 종류가 가능하다는 것을 안다. 따라서 그 표현을 구분하기 위해 <span class="math inline">\(D^{(r)}(g)\)</span> 와 같이 표기하기로 한다. <span class="math inline">\(r\)</span> 이 여러 표현을 구분하는 인덱스이다.</p></li>
-<li><p><a href="#def-Group_conjugacy_class" class="quarto-xref">정의&nbsp;<span class="quarto-unresolved-ref">def-Group_conjugacy_class</span></a> 에서 우리는 켤레류(conjugacy class) 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 켤레류를 의미한다.</p></li>
+<li><p><a href="group_introduction.html#def-Group_conjugacy_class" class="quarto-xref">정의&nbsp;<span>4.10</span></a> 에서 우리는 켤레류(conjugacy class) 에 대해 정의하였다. 앞으로 특별한 언급이 없는 한 class 는 켤레류를 의미한다.</p></li>
 </ul>
 </div>
 </div>
@@ -539,7 +539,7 @@ D(\pi)D(\sigma)\boldsymbol{e}_j = D(\pi)\boldsymbol{e}_{\sigma(j)}= \boldsymbol{
 \]</span></p>
 </div>
 <p><br></p>
-<p>우리는 위의 <a href="#prp-Group_character_of_class" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_character_of_class</span></a> 로부터 어떤 행렬 표현에서의 클래스 원소의 trace 는 클래스의 특징이 될 수 있다는 것을 알 수 있었다. 따라서 아래의 정의가 가능하다.</p>
+<p>우리는 위의 <a href="#prp-Group_character_of_class" class="quarto-xref">명제&nbsp;<span>6.2</span></a> 로부터 어떤 행렬 표현에서의 클래스 원소의 trace 는 클래스의 특징이 될 수 있다는 것을 알 수 있었다. 따라서 아래의 정의가 가능하다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -594,7 +594,7 @@ D'(g_1g_2) = VD(g_1)D(g_2)V^{-1} = (VD(g_1)V^{-1}) (VD(g_2)V^{-1}) =D'(g_1)D'(g_
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_equivalent_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.3</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_equivalent_representation</span></a> 에서의 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(D'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 6.3</strong></span> <a href="#thm-Group_equivalent_representation" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에서의 <span class="math inline">\(D\)</span> 와 <span class="math inline">\(D'\)</span> 의 관계가 성립한다면 이 두 표현은 <strong>동등하다(be equivalent)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -682,7 +682,7 @@ D^{(r)}(g) = D^{(r,1)}(g) \oplus \cdots \oplus D^{(r,n)}(g) = \bigoplus_{i=1}^m 
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-Group_rearrangement_theorem" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_rearrangement_theorem</span></a> 를 생각하자. <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D\)</span> 에 대해 다음이 성립한다는 것을 알 수 있다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="group_introduction.html#thm-Group_rearrangement_theorem" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 를 생각하자. <span class="math inline">\(G\)</span> 의 표현 <span class="math inline">\(D\)</span> 에 대해 다음이 성립한다는 것을 알 수 있다.</p>
 <p><span id="eq-Group_unitary_theorem_0"><span class="math display">\[
 \sum_{g\in G}D(g) = \sum_{g\in G} D(g'g) = \sum_{g\in G}D(gg').
 \tag{6.3}\]</span></span></p>
@@ -697,7 +697,7 @@ D(g')^\dagger HD(g') &amp;= \sum_{g\in G} D(g')^\dagger (D(g))^\dagger D(g) D(g'
 &amp;=\sum_{g\in G} (D(g)D(g'))^\dagger D(g)D(g')= \sum_{g\in G} D(gg')^\dagger D(gg') = H
 \end{aligned}
 \]</span></p>
-<p>이다. 또한 <a href="#eq-Group_unitary_theorem_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_unitary_theorem_1</span></a> 으로부터 <span class="math inline">\(H\)</span> 가 에르미트 행렬임을 안다. 따라서 어떤 유니터리 행렬 <span class="math inline">\(V\)</span> 를 이용한 닮음변환에 의해 대각 성분이 실수인 대각행렬이 된다. 이 대각행렬을 <span class="math inline">\(B=V^\dagger HV\)</span> 라고 하자.</p>
+<p>이다. 또한 <a href="#eq-Group_unitary_theorem_1" class="quarto-xref">식&nbsp;<span>6.4</span></a> 으로부터 <span class="math inline">\(H\)</span> 가 에르미트 행렬임을 안다. 따라서 어떤 유니터리 행렬 <span class="math inline">\(V\)</span> 를 이용한 닮음변환에 의해 대각 성분이 실수인 대각행렬이 된다. 이 대각행렬을 <span class="math inline">\(B=V^\dagger HV\)</span> 라고 하자.</p>
 <p><span class="math display">\[
 B=V^\dagger HV = \sum_{g\in G} V^\dagger D(g)^\dagger D(g) V = \sum_{g\in G} \left( V^\dagger D(g)V\right)^\dagger \left(V^\dagger D(g)V\right)
 \]</span></p>
@@ -728,7 +728,7 @@ U(g)^\dagger U(g) &amp;= M^{-1}V^\dagger D(g)^\dagger VM^2 V^\dagger D(g)VM^{-1}
 <p>이다. 즉 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(D\)</span> 와 동등한 유니터리 표현이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>유한군에 대해서 중요한 것을 증명했다. 당연한 질문 연속군에 대해서는? 예를 들어 <span class="math inline">\(SO(n)\)</span> 은 자체로서 유니터리 표현이다. 그렇다면 로렌츠 군이나 <a href="#exm-Group_matrix_representation_of_Rplus" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-Group_matrix_representation_of_Rplus</span></a> 에서 보인 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 <span class="math inline">\(2\times 2\)</span> 표현은 어떠한가? 나중에 보이겠지만 유니터리 표현이 존재하는 것은 연속 매개변수의 컴팩트성과 관련이 있다. 결론적으로 로렌츠 군이나 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 표현에 대한 유니터리 표현은 존재하지 않는다.</p>
+<p>유한군에 대해서 중요한 것을 증명했다. 당연한 질문 연속군에 대해서는? 예를 들어 <span class="math inline">\(SO(n)\)</span> 은 자체로서 유니터리 표현이다. 그렇다면 로렌츠 군이나 <a href="#exm-Group_matrix_representation_of_Rplus" class="quarto-xref">예제&nbsp;<span>6.2</span></a> 에서 보인 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 <span class="math inline">\(2\times 2\)</span> 표현은 어떠한가? 나중에 보이겠지만 유니터리 표현이 존재하는 것은 연속 매개변수의 컴팩트성과 관련이 있다. 결론적으로 로렌츠 군이나 <span class="math inline">\(\mathbb{R}^+\)</span> 에 대한 표현에 대한 유니터리 표현은 존재하지 않는다.</p>
 <p><br></p>
 </section>
 </section>
@@ -764,14 +764,14 @@ A_{m1}B_{n1} &amp; A_{m1}B_{n2} &amp; \cdots &amp; A_{mm}B_{n(n-1)} &amp; A_{mm}
 <p>우리는 아직 이 직곱 표현이 군에 대한 표현이라는 것을 보이지 않았다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_direct_product_representatin_is_a_group_representation" class="theorem">
-<p><span class="theorem-title"><strong>정리 6.3</strong></span> <a href="#eq-Group-direct_product_of_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group-direct_product_of_representation</span></a> 에서와 같이 정의된 직곱표현은 군의 표현이다.</p>
+<p><span class="theorem-title"><strong>정리 6.3</strong></span> <a href="#eq-Group-direct_product_of_representation" class="quarto-xref">식&nbsp;<span>6.6</span></a> 에서와 같이 정의된 직곱표현은 군의 표현이다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>아래 식을 보이면 된다. <span class="math display">\[
 D^{(p)}(g)D^{(p)}(g') =  D^{(p)}(gg') = \left(D^{(1)}(g) D^{(1)}(g')\right)\otimes \left(D^{(2)}(g) D^{(2)}(g')\right)
 \]</span></p>
-<p>여기에 대한 증명은 연습문제 (<a href="#exr-Group_proof_of_direct_product_mutiplication" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-Group_proof_of_direct_product_mutiplication</span></a>) 로 넘긴다. <span class="math inline">\(\square\)</span></p>
+<p>여기에 대한 증명은 연습문제 (<a href="#exr-Group_proof_of_direct_product_mutiplication" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 로 넘긴다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>우리는 이후 이 직곱표현이 기약 표현의 직합표현으로 변환될 수 있음을 보일 것이다.</p>
@@ -823,11 +823,11 @@ U'(C_2''') &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -\frac{1}{2} &amp
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_unitray_representation_of_D3_2" class="theorem example">
 <p><span class="theorem-title"><strong>예제 6.8 (연속군에 대한 표현)</strong></span> <br></p>
-<p><a href="#exm-Group_rotation_of_plane_circle" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-Group_rotation_of_plane_circle</span></a> 에서 차수가 1인 연속군을 보였다. 이 연속군은</p>
+<p><a href="group_introduction.html#exm-Group_rotation_of_plane_circle" class="quarto-xref">예제&nbsp;<span>4.7</span></a> 에서 차수가 1인 연속군을 보였다. 이 연속군은</p>
 <p><span class="math display">\[
 U(\varphi) = \begin{bmatrix} \cos \varphi &amp; \sin \varphi \\ - \sin \varphi &amp; \cos \varphi \end{bmatrix}
 \]</span></p>
-<p>로 표현 할 수 있다. 이 군은 아벨군이므로 <a href="#cor-Group_irrep_of_abelian_is_1d" class="quarto-xref">따름정리&nbsp;<span class="quarto-unresolved-ref">cor-Group_irrep_of_abelian_is_1d</span></a> 에 따라 위의 표현은 reducible 하다. 유니터리 행렬 <span class="math inline">\(V\)</span></p>
+<p>로 표현 할 수 있다. 이 군은 아벨군이므로 <a href="#cor-Group_irrep_of_abelian_is_1d" class="quarto-xref">따름정리&nbsp;<span>6.2</span></a> 에 따라 위의 표현은 reducible 하다. 유니터리 행렬 <span class="math inline">\(V\)</span></p>
 <p><span class="math display">\[
 V= \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 &amp; -i \\ 1 &amp; i\end{bmatrix}
 \]</span></p>
@@ -866,7 +866,7 @@ U'(\varphi ) = \begin{bmatrix} e^{i\varphi} &amp; 0 \\ 0 &amp; e^{-i\varphi}\end
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.2 (Arfken 17.2.2)</strong></span> 아래의 행렬 <span class="math inline">\(I,\,A,\, B\)</span> 는 <a href="#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-Group_viergrouppe</span></a> 의 표현임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.2 (Arfken 17.2.2)</strong></span> 아래의 행렬 <span class="math inline">\(I,\,A,\, B\)</span> 는 <a href="group_introduction.html#exm-Group_viergrouppe" class="quarto-xref">예제&nbsp;<span>4.8</span></a> 의 표현임을 보여라.</p>
 <p><span class="math display">\[
 I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\qquad A=\left[\begin{array}{rr} -1 &amp; 0 \\ 0 &amp; -1\end{array}\right], \qquad B=\begin{bmatrix} 0 &amp; 1 \\1 &amp; 0 \end{bmatrix}
 \]</span></p>
@@ -878,7 +878,7 @@ I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\qquad A=\left[\begin{ar
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.3 (Arfken 17.2.3)</strong></span> <a href="#exr-Arfken_17_2_2" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-Arfken_17_2_2</span></a> 의 viergrouppe 표현은 reducible 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.3 (Arfken 17.2.3)</strong></span> <a href="#exr-Arfken_17_2_2" class="quarto-xref">연습문제&nbsp;<span>6.2</span></a> 의 viergrouppe 표현은 reducible 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -892,7 +892,7 @@ VIV^{-1}= I,\, VAV^{-1}=A,\, VBV^{-1} = \left[\begin{array}{rr} 1 &amp; 0 \\ 0 &
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Arfken_17_2_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 6.4 (Arfken 17.2.4)</strong></span> <br> (<span class="math inline">\(a\)</span>) 어떤 군에 대한 행렬표현을 얻었다면 이 행렬들에 대한 행렬식으로 1차원 표현을 구성 할 수 있다는 것을 보여라.</p>
-<p>(<span class="math inline">\(b\)</span>) <a href="#eq-Group_unitray_representation_of_D3_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_unitray_representation_of_D3_1</span></a> 과 행렬식을 이용하여 <span class="math inline">\(D_3\)</span> 의 1차원 표현을 구하라</p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#eq-Group_unitray_representation_of_D3_1" class="quarto-xref">식&nbsp;<span>6.1</span></a> 과 행렬식을 이용하여 <span class="math inline">\(D_3\)</span> 의 1차원 표현을 구하라</p>
 </div>
 </div>
 <div class="proof solution">
@@ -954,7 +954,7 @@ C_4 =\left[\begin{array}{rr} 0 &amp; 1 \\ -1 &amp; 0 \end{array}\right]
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 와 동등한 유니터리 표현 <span class="math inline">\(U\)</span> 에 대해 우선 생각하자(<a href="#thm-Group_unitary_representation_theorem" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_unitary_representation_theorem</span></a>). <span class="math inline">\(U\)</span> 역시 당연히 기약 표현이다(<a href="#prp-Group_equivalent_representation_conserves_reduciblity" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_equivalent_representation_conserves_reduciblity</span></a>). <span class="math inline">\(U(g)H=HU(g)\)</span> 이며 <span class="math inline">\(H\)</span> 는 어떤 유니터리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 <span class="math inline">\(X\)</span> 라고 하고 <span class="math inline">\(H=V^{-1}XV\)</span> 이라고 하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D\)</span> 와 동등한 유니터리 표현 <span class="math inline">\(U\)</span> 에 대해 우선 생각하자(<a href="#thm-Group_unitary_representation_theorem" class="quarto-xref">정리&nbsp;<span>6.2</span></a>). <span class="math inline">\(U\)</span> 역시 당연히 기약 표현이다(<a href="#prp-Group_equivalent_representation_conserves_reduciblity" class="quarto-xref">명제&nbsp;<span>6.4</span></a>). <span class="math inline">\(U(g)H=HU(g)\)</span> 이며 <span class="math inline">\(H\)</span> 는 어떤 유니터리 변환을 통해 대각성분이 모두 실수인 대각행렬이 된다. 이 대각행렬을 <span class="math inline">\(X\)</span> 라고 하고 <span class="math inline">\(H=V^{-1}XV\)</span> 이라고 하자.</p>
 <p><span class="math display">\[
 \begin{aligned}
 U(g)H-HU(g) = 0 &amp;\iff U(g)V^{-1}XV - V^{-1}XVU(g) = 0 \\
@@ -978,7 +978,7 @@ U(g)H-HU(g) = 0 &amp;\iff U(g)V^{-1}XV - V^{-1}XVU(g) = 0 \\
 <p>이므로 <span class="math inline">\([U(g),\, S^{-1}HS]=0\)</span> 이며 따라서 <span class="math inline">\(S^{-1}HS\)</span> 는 항등행렬의 스칼라곱이고 <span class="math inline">\(H\)</span> 역시 그러하다. 즉 유니터리 표현이 아닌 일반적인 기약표현에 대해서도 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>위의 보조정리는 슈어 보조정리로 이어지고 결국 위대한 직교정리를 거쳐 지표에 대한 두 직교정리까지 이어진다. <u>즉 본 장에서 중요한 정리들이 기약표현에서만 성립하는 것은 위의 <a href="#lem-Group_schur_lemma_for_hermitian" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_schur_lemma_for_hermitian</span></a> 때문이라고 할 수 있다.</u></p>
+<p>위의 보조정리는 슈어 보조정리로 이어지고 결국 위대한 직교정리를 거쳐 지표에 대한 두 직교정리까지 이어진다. <u>즉 본 장에서 중요한 정리들이 기약표현에서만 성립하는 것은 위의 <a href="#lem-Group_schur_lemma_for_hermitian" class="quarto-xref">보조정리&nbsp;<span>6.1</span></a> 때문이라고 할 수 있다.</u></p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-Group_schur_lemma" class="theorem lemma">
@@ -990,7 +990,7 @@ U(g)H-HU(g) = 0 &amp;\iff U(g)V^{-1}XV - V^{-1}XVU(g) = 0 \\
 <p><span class="math display">\[
 U(g)A^\dagger = A^\dagger U(g)
 \]</span></p>
-<p>를 얻는다. 즉 <span class="math inline">\(U(g)\)</span> 가 <span class="math inline">\(A\)</span> 와 commute 하면 <span class="math inline">\(A^\dagger\)</span> 와도 commute 하다. 이제 <span class="math inline">\(H_1 = (A+A^\dagger)\)</span>, <span class="math inline">\(H_2 = i(A-A^\dagger)\)</span> 라고 하면 <span class="math inline">\(H_1,\, H_2\)</span> 는 에르미트 행렬이며 <span class="math inline">\(H_1 D(g)=D(g)H_1\)</span>, <span class="math inline">\(H_2D(g) = D(g)H_2\)</span> 이다. <a href="#lem-Group_schur_lemma_for_hermitian" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_schur_lemma_for_hermitian</span></a> 에 의해 <span class="math inline">\(H_1,\,H_2\)</span> 는 항등행렬의 스칼라곱이며 <span class="math inline">\(A=\frac{1}{2}(H_1-iH_2)\)</span> 도 그러하다.</p>
+<p>를 얻는다. 즉 <span class="math inline">\(U(g)\)</span> 가 <span class="math inline">\(A\)</span> 와 commute 하면 <span class="math inline">\(A^\dagger\)</span> 와도 commute 하다. 이제 <span class="math inline">\(H_1 = (A+A^\dagger)\)</span>, <span class="math inline">\(H_2 = i(A-A^\dagger)\)</span> 라고 하면 <span class="math inline">\(H_1,\, H_2\)</span> 는 에르미트 행렬이며 <span class="math inline">\(H_1 D(g)=D(g)H_1\)</span>, <span class="math inline">\(H_2D(g) = D(g)H_2\)</span> 이다. <a href="#lem-Group_schur_lemma_for_hermitian" class="quarto-xref">보조정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(H_1,\,H_2\)</span> 는 항등행렬의 스칼라곱이며 <span class="math inline">\(A=\frac{1}{2}(H_1-iH_2)\)</span> 도 그러하다.</p>
 <p><span class="math inline">\(U\)</span> 는 <span class="math inline">\(D\)</span> 와 동등한 표현이므로 <span class="math inline">\(D(g)=SU(g)S^{-1}\)</span> 인 가역행렬 <span class="math inline">\(S\)</span> 가 존재한다.</p>
 <p><span class="math display">\[
 0 = D(g)A - AD(g) = S[U(g),\, S^{-1}AS]S^{-1}
@@ -1014,15 +1014,15 @@ U(g)A^\dagger = A^\dagger U(g)
 <p><span class="proof-title"><em>(증명)</em>. </span>일반성을 잃지 않고 <span class="math inline">\(d_1\le d_2\)</span> 라고 할 수 있다. 그리고 우선 기약 유니터리 표현 <span class="math inline">\(U^{(1)},\, U^{(2)}\)</span> 에 대해 생각하자. 즉 <span id="eq-lem_Group_for_GOT_2"><span class="math display">\[
 \forall g\in G,\, MU^{(1)}(g) = U^{(2)}(g)M
 \tag{6.10}\]</span></span></p>
-<p>일 때 <a href="#eq-lem_Group_for_GOT_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-lem_Group_for_GOT_2</span></a> 에 hermitian conjugate 를 취하면</p>
+<p>일 때 <a href="#eq-lem_Group_for_GOT_2" class="quarto-xref">식&nbsp;<span>6.10</span></a> 에 hermitian conjugate 를 취하면</p>
 <p><span id="eq-lem_Group_for_GOT_3"><span class="math display">\[
 \forall g\in G,\, U^{(1)}(g^{-1})M^\dagger = M^\dagger U^{(2)}(g^{-1})
 \tag{6.11}\]</span></span></p>
-<p>이다. <a href="#eq-lem_Group_for_GOT_3" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-lem_Group_for_GOT_3</span></a> 의 양변의 앞에 <span class="math inline">\(M\)</span> 을 곱하고 <span class="math inline">\(g^{-1}\)</span> 에 대해 <a href="#eq-lem_Group_for_GOT_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-lem_Group_for_GOT_2</span></a> 를 사용하면</p>
+<p>이다. <a href="#eq-lem_Group_for_GOT_3" class="quarto-xref">식&nbsp;<span>6.11</span></a> 의 양변의 앞에 <span class="math inline">\(M\)</span> 을 곱하고 <span class="math inline">\(g^{-1}\)</span> 에 대해 <a href="#eq-lem_Group_for_GOT_2" class="quarto-xref">식&nbsp;<span>6.10</span></a> 를 사용하면</p>
 <p><span class="math display">\[
 \forall g\in G,\, U^{(2)}(g^{-1}) M M^\dagger = MM^\dagger U^{(2)} (g^{-1})
 \]</span></p>
-<p>이며, 슈어 보조정리(<a href="#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_schur_lemma</span></a>) 에 의해 <span class="math inline">\(MM^\dagger =cI\)</span> 이다. <span class="math inline">\(d_1 &lt; d_2\)</span> 이면 <span class="math inline">\(MM^\dagger =cI\)</span> 인 것은 <span class="math inline">\(c=0\)</span> 뿐이다(<a href="#exr-Group_for_lem-Group_for_GOT" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-Group_for_lem-Group_for_GOT</span></a>). <span class="math inline">\(d_1=d_2\)</span> 이고 <span class="math inline">\(c\ne 0\)</span> 이면 <span class="math inline">\(\det(MM^\dagger)=|\det(M)|^2 = c\)</span> 이므로 <span class="math inline">\(\det(M)\ne 0\)</span> 이다. 즉 <span class="math inline">\(M\)</span> 은 가역행렬이다.</p>
+<p>이며, 슈어 보조정리(<a href="#lem-Group_schur_lemma" class="quarto-xref">보조정리&nbsp;<span>6.2</span></a>) 에 의해 <span class="math inline">\(MM^\dagger =cI\)</span> 이다. <span class="math inline">\(d_1 &lt; d_2\)</span> 이면 <span class="math inline">\(MM^\dagger =cI\)</span> 인 것은 <span class="math inline">\(c=0\)</span> 뿐이다(<a href="#exr-Group_for_lem-Group_for_GOT" class="quarto-xref">연습문제&nbsp;<span>6.9</span></a>). <span class="math inline">\(d_1=d_2\)</span> 이고 <span class="math inline">\(c\ne 0\)</span> 이면 <span class="math inline">\(\det(MM^\dagger)=|\det(M)|^2 = c\)</span> 이므로 <span class="math inline">\(\det(M)\ne 0\)</span> 이다. 즉 <span class="math inline">\(M\)</span> 은 가역행렬이다.</p>
 <p>이제 일반적인 표현에 대해 생각하자. 유니터리 표현 <span class="math inline">\(U^{(1)},\, U^{(2)}\)</span> 에 대해 <span class="math inline">\(D^{(1)}(g)=SU^{(1)}(g)S^{-1}\)</span>, <span class="math inline">\(D^{(2)}(g) = PU^{(2)}(g)P^{-1}\)</span> 이라고 하자.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1053,7 +1053,7 @@ MD^{(1)}(g) = D^{(2)}M &amp;\implies MSU^{(1)}(g)S^{-1} = PU^{(2)}(g)P^{-1}M \\
 <p><span class="math display">\[
 M = \sum_{g\in G} D^{(2)}(g) X D^{(1)}(g^{-1})
 \]</span></p>
-<p>라고 할 때 <span class="math inline">\(M\)</span> 이 <a href="#eq-lem_Group_for_GOT_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-lem_Group_for_GOT_1</span></a> 을 만족한다는 것을 보이자. 임의의 <span class="math inline">\(a\in G\)</span> 에 대해</p>
+<p>라고 할 때 <span class="math inline">\(M\)</span> 이 <a href="#eq-lem_Group_for_GOT_1" class="quarto-xref">식&nbsp;<span>6.9</span></a> 을 만족한다는 것을 보이자. 임의의 <span class="math inline">\(a\in G\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
 D^{(2)}(a)M &amp;= \sum_{g\in G} D^{(2)}(a) D^{(2)}(g) X D^{(1)}(g^{-1}) \\[0.3em]
@@ -1062,7 +1062,7 @@ D^{(2)}(a)M &amp;= \sum_{g\in G} D^{(2)}(a) D^{(2)}(g) X D^{(1)}(g^{-1}) \\[0.3e
 &amp;= \sum_{g\in G} D^{(2)}(g) X D^{(1)}((g)^{-1})D^{(1)}(a) = MD^{(1)}(a)\\[0.3em]
 \end{aligned}
 \]</span></p>
-<p>이며 <a href="#lem-Group_for_GOT_1" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_for_GOT_1</span></a> 에 따라 두 표현이 동등하지 않을 경우 <span class="math inline">\(M=0\)</span> 이다. 즉</p>
+<p>이며 <a href="#lem-Group_for_GOT_1" class="quarto-xref">보조정리&nbsp;<span>6.3</span></a> 에 따라 두 표현이 동등하지 않을 경우 <span class="math inline">\(M=0\)</span> 이다. 즉</p>
 <p><span class="math display">\[
 M_{\alpha\mu} = 0 = \sum_{\chi,\, \lambda}\sum_{g\in G} D^{(2)}(g)_{\alpha \chi} X_{\chi \lambda}D^{(1)}(g^{-1})_{\lambda\mu}.
 \]</span></p>
@@ -1082,11 +1082,11 @@ M_{\alpha\mu} = 0 = \sum_{\chi,\, \lambda}\sum_{g\in G} D^{(2)}(g)_{\alpha \chi}
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>동등하지 않은 경우는 <a href="#lem-Group_for_GOT_2" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_for_GOT_2</span></a> 에서 보였다. 임의의 <span class="math inline">\(d \times d\)</span> 행렬 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(M\)</span> 을 다음과 같이 정한다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>동등하지 않은 경우는 <a href="#lem-Group_for_GOT_2" class="quarto-xref">보조정리&nbsp;<span>6.4</span></a> 에서 보였다. 임의의 <span class="math inline">\(d \times d\)</span> 행렬 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(M\)</span> 을 다음과 같이 정한다.</p>
 <p><span class="math display">\[
 M = \sum_{g\in G} D(g) X D(g^{-1}).
 \]</span></p>
-<p><a href="#lem-Group_for_GOT_2" class="quarto-xref">보조정리&nbsp;<span class="quarto-unresolved-ref">lem-Group_for_GOT_2</span></a> 의 증명 과정에서 보았듯이 임의의 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(D(x)M=MD(x)\)</span> 이며 따라서 <span class="math inline">\(M=cI\)</span> 이다. 이로부터</p>
+<p><a href="#lem-Group_for_GOT_2" class="quarto-xref">보조정리&nbsp;<span>6.4</span></a> 의 증명 과정에서 보았듯이 임의의 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(D(x)M=MD(x)\)</span> 이며 따라서 <span class="math inline">\(M=cI\)</span> 이다. 이로부터</p>
 <p><span id="eq-thm-Group_great_orthogonality_theorem_1"><span class="math display">\[
 \sum_{\chi, \lambda} \sum_{g\in G} D(g)_{\alpha \lambda}X_{\lambda \chi}D(g^{-1})_{\chi \mu}= c\delta_{\alpha \mu}
 \tag{6.14}\]</span></span></p>
@@ -1094,7 +1094,7 @@ M = \sum_{g\in G} D(g) X D(g^{-1}).
 <p><span id="eq-thm-Group_great_orthogonality_theorem_2"><span class="math display">\[
 \sum_{g\in G} D(g)_{\alpha \beta} D(g^{-1})_{\nu \mu} = c_{\beta\nu} \delta_{\alpha\mu}
 \tag{6.15}\]</span></span></p>
-<p>이다. <a href="#eq-thm-Group_great_orthogonality_theorem_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-thm-Group_great_orthogonality_theorem_1</span></a> 에서 <span class="math inline">\(c\)</span> 는 특정 <span class="math inline">\(X\)</span> 의 선택에 의해 결정되는 값이며 이때문에 <a href="#eq-thm-Group_great_orthogonality_theorem_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-thm-Group_great_orthogonality_theorem_2</span></a> 에 <span class="math inline">\(c_{\beta\mu}\)</span> 라는 인덱스가 붙었다.</p>
+<p>이다. <a href="#eq-thm-Group_great_orthogonality_theorem_1" class="quarto-xref">식&nbsp;<span>6.14</span></a> 에서 <span class="math inline">\(c\)</span> 는 특정 <span class="math inline">\(X\)</span> 의 선택에 의해 결정되는 값이며 이때문에 <a href="#eq-thm-Group_great_orthogonality_theorem_2" class="quarto-xref">식&nbsp;<span>6.15</span></a> 에 <span class="math inline">\(c_{\beta\mu}\)</span> 라는 인덱스가 붙었다.</p>
 <p><span class="math inline">\(\alpha=\mu\)</span> 조건에서 <span class="math inline">\(\mu\)</span> 에 대해 더하면</p>
 <p><span class="math display">\[
 \sum_\mu\sum_{g\in G} D(g)_{\mu \beta} D(g^{-1})_{\nu \mu} = c_{\beta\nu}d
@@ -1107,11 +1107,11 @@ M = \sum_{g\in G} D(g) X D(g^{-1}).
 <p><span class="math display">\[
 |G|\delta_{\nu\beta} = c_{\nu\beta}d
 \]</span></p>
-<p>이다. 따라서 <a href="#eq-thm-Group_great_orthogonality_theorem_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-thm-Group_great_orthogonality_theorem_2</span></a> 는</p>
+<p>이다. 따라서 <a href="#eq-thm-Group_great_orthogonality_theorem_2" class="quarto-xref">식&nbsp;<span>6.15</span></a> 는</p>
 <p><span class="math display">\[
 \sum_{g\in G} D(g)_{\alpha \beta} D(g^{-1})_{\nu \mu} = \dfrac{|G|}{d}\delta_{\mu\alpha}\delta_{\nu\beta}
 \]</span></p>
-<p>이고 <a href="#eq-Group_GTO" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_GTO</span></a> 를 얻는다. <span class="math inline">\(\square\)</span></p>
+<p>이고 <a href="#eq-Group_GTO" class="quarto-xref">식&nbsp;<span>6.13</span></a> 를 얻는다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이제 서로 동등하지 않은 유니터리 기약 표현 <span class="math inline">\(U^{(i)}\)</span> 에 대해 생각해 보자. <span class="math inline">\(U(g^{-1})=U^{-1}(g) = [U(g)]^\dagger\)</span> 이므로 다음이 성립한다.</p>
@@ -1131,13 +1131,13 @@ M = \sum_{g\in G} D(g) X D(g^{-1}).
 <p><span class="math display">\[
 Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha\beta} \\ \vdots \\ U^{(i)}(g_{|G|})_{\alpha\beta}\end{bmatrix}
 \]</span></p>
-<p>는 <span class="math inline">\(\mathbb{C}^{|G|}\)</span> 의 벡터이다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_GTO_for_unitary_representation</span></a> 에 의해 <span class="math inline">\(\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{\nu\beta}\)</span> 이다. 여기서 가능한 서로 직교하는 <span class="math inline">\(Y_{i\alpha\beta}\)</span> 의 갯수는 <span class="math inline">\(\sum_{i}(d_i)^2\)</span> 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 클 수 없기 때문에 아래 부등식이 성립한다.</p>
+<p>는 <span class="math inline">\(\mathbb{C}^{|G|}\)</span> 의 벡터이다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span>6.16</span></a> 에 의해 <span class="math inline">\(\langle Y_{i\mu\nu}|Y_{j\alpha\beta}\rangle = \delta_{ij}\delta_{\mu\alpha}\delta_{\nu\beta}\)</span> 이다. 여기서 가능한 서로 직교하는 <span class="math inline">\(Y_{i\alpha\beta}\)</span> 의 갯수는 <span class="math inline">\(\sum_{i}(d_i)^2\)</span> 이며, 벡터공간에서 직교하는 벡터의 갯수는 벡터의 차원보다 클 수 없기 때문에 아래 부등식이 성립한다.</p>
 <p><span id="eq-Group_inequality_from_GTO"><span class="math display">\[
 \boxed{
   \sum_i (d_i)^2 \le |G|.
 }
 \tag{6.17}\]</span></span></p>
-<p>실제로는 등호가 성립하며 이것은 뒤에(<a href="#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_regular_representation_is_not_irreducible_3</span></a>) 보일것이다.</p>
+<p>실제로는 등호가 성립하며 이것은 뒤에(<a href="#prp-Group_regular_representation_is_not_irreducible_3" class="quarto-xref">명제&nbsp;<span>6.12</span></a>) 보일것이다.</p>
 <p><br></p>
 </section>
 </section>
@@ -1146,7 +1146,7 @@ Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha
 <h2 data-number="6.3" class="anchored" data-anchor-id="sec-Group_two_orthogonality_theorems_for_character"><span class="header-section-number">6.3</span> 지표에 대한 두 직교 정리</h2>
 <section id="sec-Group_1st_orthogonality_theorem_for_characters" class="level3" data-number="6.3.1">
 <h3 data-number="6.3.1" class="anchored" data-anchor-id="sec-Group_1st_orthogonality_theorem_for_characters"><span class="header-section-number">6.3.1</span> 지표에 대한 제 1 직교정리</h3>
-<p><a href="#prp-Group_character_of_class" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_character_of_class</span></a>, <a href="#prp-Group_equivalent_representation_and_character" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_equivalent_representation_and_character</span></a> 를 다시 확인하자.</p>
+<p><a href="#prp-Group_character_of_class" class="quarto-xref">명제&nbsp;<span>6.2</span></a>, <a href="#prp-Group_equivalent_representation_and_character" class="quarto-xref">명제&nbsp;<span>6.3</span></a> 를 다시 확인하자.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_basic_properties_of_character" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.7</strong></span> 유한군 <span class="math inline">\(G\)</span> 의 켤레류의 집합 <span class="math inline">\(\mathcal{K}_G\)</span>, <span class="math inline">\(G\)</span> 에 대한 표현 <span class="math inline">\(D\)</span> 와 그 지표 <span class="math inline">\(\chi\)</span> 에 대해 다음이 성립한다.</p>
@@ -1158,7 +1158,7 @@ Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 어떤 가역행렬 <span class="math inline">\(P\)</span> 에 대해 <span class="math inline">\(D'(g) = P^{-1}D(g)P\)</span> 이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <a href="#thm-Group_unitary_representation_theorem" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_unitary_representation_theorem</span></a> 과 (<span class="math inline">\(1\)</span>).</p>
+<p>(<span class="math inline">\(2\)</span>) <a href="#thm-Group_unitary_representation_theorem" class="quarto-xref">정리&nbsp;<span>6.2</span></a> 과 (<span class="math inline">\(1\)</span>).</p>
 <p>(<span class="math inline">\(3\)</span>), (<span class="math inline">\(4\)</span>) 는 trivial. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
@@ -1171,7 +1171,7 @@ Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>닮음 변환에 대해 지표가 불변이므로 유니터리 변환만 생각하면 된다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_GTO_for_unitary_representation</span></a> 로부터,</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>닮음 변환에 대해 지표가 불변이므로 유니터리 변환만 생각하면 된다. <a href="#eq-Group_GTO_for_unitary_representation" class="quarto-xref">식&nbsp;<span>6.16</span></a> 로부터,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{g\in G} \left(\chi^{(i)}(g)\right)^\ast\chi^{(j)}(g) &amp;= \sum_{g\in G} \sum_{\mu,\, \alpha}{\left[U^{(i)}(g)\right]^\dagger} _{\mu \mu}U^{(j)}(g)_{\alpha\alpha} = \sum_{\mu} \dfrac{|G|}{d_i}\delta_{ij}  = |G|\delta_{ij}.\qquad\square
@@ -1194,7 +1194,7 @@ Y_{i\alpha\beta} := \sqrt{\dfrac{d_i}{|G|}}\begin{bmatrix} U^{(i)} (g_1)_{\alpha
 <p><span class="math display">\[
 X_i := \sum_{j=1}^{N_C} \sqrt{\dfrac{|K_j|}{|G|}} \hat{\boldsymbol{e}}_j = \begin{bmatrix} \sqrt{\dfrac{|K_1|}{|G|}} \chi^{(i)}(K_1) \\ \vdots \\ \sqrt{\dfrac{|K_{N_C}|}{|G|}} \chi^{(i)}(K_{N_C})\end{bmatrix} ,\qquad i=1,\ldots,\,N_R
 \]</span></p>
-<p>복소 벡터 공간의 내적의 정의와 <a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_first_orthogonality_of_character</span></a> 의해 <span class="math inline">\(\langle X_j|X_i\rangle = \delta_{ij}\)</span> 이다. 즉 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 은 서로 직교하는 단위벡터이다. 그런데 우리는 <span class="math inline">\(\mathbb{C}^{N_C}\)</span> 에서 서로 직교하는 벡터의 갯수는 <span class="math inline">\(N_C\)</span> 보다 작거나 같아야 한다는 것을 안다. 즉</p>
+<p>복소 벡터 공간의 내적의 정의와 <a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>6.6</span></a> 의해 <span class="math inline">\(\langle X_j|X_i\rangle = \delta_{ij}\)</span> 이다. 즉 <span class="math inline">\(X_1,\ldots,\,X_{N_R}\)</span> 은 서로 직교하는 단위벡터이다. 그런데 우리는 <span class="math inline">\(\mathbb{C}^{N_C}\)</span> 에서 서로 직교하는 벡터의 갯수는 <span class="math inline">\(N_C\)</span> 보다 작거나 같아야 한다는 것을 안다. 즉</p>
 <p><span id="eq-Group_inequality_from_orthogonality_of_character_theorem"><span class="math display">\[
 \boxed{
 [\text{동등하지 않은 기약표현의 개수}] \le [\text{켤레류의 개수}]
@@ -1210,8 +1210,8 @@ X_i := \sum_{j=1}^{N_C} \sqrt{\dfrac{|K_j|}{|G|}} \hat{\boldsymbol{e}}_j = \begi
 </section>
 <section id="sec-Group_2nd_orthogonality_theorem_of_characters" class="level3" data-number="6.3.2">
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="sec-Group_2nd_orthogonality_theorem_of_characters"><span class="header-section-number">6.3.2</span> 지표에 대한 제 2 직교정리</h3>
-<p><span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span> 은 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_equality_from_orthogonality_of_character_theorem</span></a> 을 증명 없이 전제하고 제 2 직교정리를 증명했다. <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 는 프로베니우스 대수를 도입하여 지표에 대한 제 2 직교정리를 증명하고 이로부터 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_equality_from_orthogonality_of_character_theorem</span></a> 를 증명했다. 여기서는 <span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span> 과 같이 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_equality_from_orthogonality_of_character_theorem</span></a> 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 의 방법은 <a href="../../src/group/group_aux.html#sec-GroupAux-the_second_orthogonality_theorem_for_characters">지표에 대한 제 2 직교 정리</a> 에 소개한다.</p>
-<p>우선 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_equality_from_orthogonality_of_character_theorem</span></a> 을 소개한다.</p>
+<p><span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span> 은 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>6.21</span></a> 을 증명 없이 전제하고 제 2 직교정리를 증명했다. <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 는 프로베니우스 대수를 도입하여 지표에 대한 제 2 직교정리를 증명하고 이로부터 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>6.21</span></a> 를 증명했다. 여기서는 <span class="citation" data-cites="Tinkham2012Group">Tinkham (<a href="#ref-Tinkham2012Group" role="doc-biblioref">2012</a>)</span> 과 같이 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>6.21</span></a> 를 전제하고 character 에 대한 제 2 직교정리를 증명하겠다. <span class="citation" data-cites="Zee2016Group">Zee (<a href="#ref-Zee2016Group" role="doc-biblioref">2016</a>)</span> 의 방법은 <a href="../../src/group/group_aux.html#sec-GroupAux-the_second_orthogonality_theorem_for_characters">지표에 대한 제 2 직교 정리</a> 에 소개한다.</p>
+<p>우선 <a href="#eq-Group_equality_from_orthogonality_of_character_theorem" class="quarto-xref">식&nbsp;<span>6.21</span></a> 을 소개한다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_number_of_irreducible_representation_and_classes" class="theorem">
 <p><span class="theorem-title"><strong>정리 6.7</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 서로 동등하지 않는 기약표현의 개수와 켤레류의 개수는 같다.</p>
@@ -1226,10 +1226,10 @@ X_i := \sum_{j=1}^{N_C} \sqrt{\dfrac{|K_j|}{|G|}} \hat{\boldsymbol{e}}_j = \begi
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(xgx^{-1}=g\)</span> 이므로 <span class="math inline">\(G\)</span> 의 모든 원소는 자체가 동치류이다. 즉 <span class="math inline">\(N_R=N_C=|G|\)</span> 이다. <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation</span></a> 로 부터 <span class="math inline">\(\sum_i (d_i)^2 = |G|\)</span> 인데 <span class="math inline">\(d_i\)</span> 가 <span class="math inline">\(|G|\)</span> 개 있으므로 가능한 것은 모든 <span class="math inline">\(d_i=1\)</span> 뿐이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(xgx^{-1}=g\)</span> 이므로 <span class="math inline">\(G\)</span> 의 모든 원소는 자체가 동치류이다. 즉 <span class="math inline">\(N_R=N_C=|G|\)</span> 이다. <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span>6.27</span></a> 로 부터 <span class="math inline">\(\sum_i (d_i)^2 = |G|\)</span> 인데 <span class="math inline">\(d_i\)</span> 가 <span class="math inline">\(|G|\)</span> 개 있으므로 가능한 것은 모든 <span class="math inline">\(d_i=1\)</span> 뿐이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이제 <a href="#thm-Group_number_of_irreducible_representation_and_classes" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_number_of_irreducible_representation_and_classes</span></a> 를 이용하여 지표에 대한 제 2 직교 정리를 증명한다.</p>
+<p>이제 <a href="#thm-Group_number_of_irreducible_representation_and_classes" class="quarto-xref">정리&nbsp;<span>6.7</span></a> 를 이용하여 지표에 대한 제 2 직교 정리를 증명한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Group_second_orthogonality_of_character" class="theorem">
@@ -1244,7 +1244,7 @@ X_i := \sum_{j=1}^{N_C} \sqrt{\dfrac{|K_j|}{|G|}} \hat{\boldsymbol{e}}_j = \begi
 <p><span class="math display">\[
 Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\ast |K_i|}{|G|}.
 \]</span></p>
-<p>이 때 <span class="math inline">\(QQ'\)</span> 은 지표에 대한 제 1 직교정리(<a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_first_orthogonality_of_character</span></a>) 를 이용하면 항등행렬임을 보일 수 있다.</p>
+<p>이 때 <span class="math inline">\(QQ'\)</span> 은 지표에 대한 제 1 직교정리(<a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>6.6</span></a>) 를 이용하면 항등행렬임을 보일 수 있다.</p>
 <p><span class="math display">\[
 (QQ')_{ij} = \sum_{k=1}^N \dfrac{\chi^{(i)}(K_k) \left(\chi^{(j)}(K_k)\right)^\ast|K_k|}{|G|} = \delta_{ij}.
 \]</span></p>
@@ -1252,7 +1252,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 <p><span class="math display">\[
 \delta_{ij}=(Q'Q)_{ij}= \sum_{k=1}^N \dfrac{\left(\chi^{(k)}(K_i)\right)^\ast|K_i| \chi^{(k)}(K_j)}{|G|}
 \]</span></p>
-<p>이며 이는 <a href="#eq-thm_Group_second_orthogonality_of_character" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-thm_Group_second_orthogonality_of_character</span></a> 을 의미한다. <span class="math inline">\(\square\)</span></p>
+<p>이며 이는 <a href="#eq-thm_Group_second_orthogonality_of_character" class="quarto-xref">식&nbsp;<span>6.22</span></a> 을 의미한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
@@ -1277,7 +1277,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-Group_first_orthogonality_of_character" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_first_orthogonality_of_character</span></a> 를 이용하면 다음을 얻는다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-Group_first_orthogonality_of_character" class="quarto-xref">식&nbsp;<span>6.19</span></a> 를 이용하면 다음을 얻는다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{K_i\in \mathcal{K}_G} |K_i| \chi^\ast(K_i) \chi(K_i) &amp;= \sum_{K_i\in \mathcal{K}_G} |K_i| \sum_{j,\,k} m_jm_k \left(\chi^{(j)}(K_i)\right)^\ast \chi^{(k)}(K_i) = |G|\sum_{j}(m_j)^2 &amp; \square
@@ -1292,7 +1292,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 <p>일단 <span class="math inline">\(\dfrac{1}{|G|}\sum_{K_i\in \mathcal{K}_G} |K_i|\chi^\ast(K_i)\chi(K_i) =\sum_j (m_j)^2\)</span> 가 <span class="math inline">\(1\)</span> 이면 <span class="math inline">\(D\)</span> 는 기약표현이며 <span class="math inline">\(1\)</span> 보다 크면 <span class="math inline">\(D\)</span> 는 기약표현이 아니다. 만약 이 값이 <span class="math inline">\(3\)</span> 이라면 <span class="math inline">\(D\)</span> 는 서로 동등하지 않은 세 기약표현의 직합이다. 이제 우리가 <span class="math inline">\(D\)</span> 에 포함되는 기약 표현 <span class="math inline">\(D^{(r)}\)</span> 을 얻었다고 하자. 다음 명제를 이용하여 <span class="math inline">\(D^{(r)}\)</span> 의 multiplicity <span class="math inline">\(m_r\)</span> 을 얻을 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_reducible_representation_and_multiplicity_2" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.9</strong></span> <a href="#prp-Group_reducible_representation_and_multiplicity_1" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_reducible_representation_and_multiplicity_1</span></a> 과 같은 조건에서 <span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(D\)</span> 에 포함되는 기약표현이라고 하고 <span class="math inline">\(m_r\)</span> 번 포함되었다고 하자. 이 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 6.9</strong></span> <a href="#prp-Group_reducible_representation_and_multiplicity_1" class="quarto-xref">명제&nbsp;<span>6.8</span></a> 과 같은 조건에서 <span class="math inline">\(D^{(r)}\)</span> 이 <span class="math inline">\(D\)</span> 에 포함되는 기약표현이라고 하고 <span class="math inline">\(m_r\)</span> 번 포함되었다고 하자. 이 때 다음이 성립한다.</p>
 <p><span id="eq-Group_multiplicity_check_2"><span class="math display">\[
 \sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{(r)}(K_i)\right)^\ast \chi(K_i) = |G|m_r
 \tag{6.24}\]</span></span></p>
@@ -1308,7 +1308,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </section>
 <section id="sec-Group-regular_representation" class="level3" data-number="6.4.2">
 <h3 data-number="6.4.2" class="anchored" data-anchor-id="sec-Group-regular_representation"><span class="header-section-number">6.4.2</span> 정칙 표현</h3>
-<p>군에 대한 케일리 정리(<a href="#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group-caylay_theorem</span></a>) 는 유한군 <span class="math inline">\(G\)</span> 가 대칭군 <span class="math inline">\(S_{|G|}\)</span> 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 <span class="math inline">\(S_{X}\)</span> 는 <span class="math inline">\(|X| \times |X|\)</span> 행렬로 표현 할 수 이 있음을 안다(<a href="#exm-Group_defining_representation_of_Sn" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-Group_defining_representation_of_Sn</span></a>). 즉 유한군 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(|G|\)</span> 차원 표현을 가지며 이를 <strong>정칙 표현 (regular representation)</strong> 라고 한다.</p>
+<p>군에 대한 케일리 정리(<a href="group_introduction.html#thm-Group-caylay_theorem" class="quarto-xref">정리&nbsp;<span>4.3</span></a>) 는 유한군 <span class="math inline">\(G\)</span> 가 대칭군 <span class="math inline">\(S_{|G|}\)</span> 의 어떤 부분군과 동형이라는 것을 말한다. 그리고 대칭군 <span class="math inline">\(S_{X}\)</span> 는 <span class="math inline">\(|X| \times |X|\)</span> 행렬로 표현 할 수 이 있음을 안다(<a href="#exm-Group_defining_representation_of_Sn" class="quarto-xref">예제&nbsp;<span>6.4</span></a>). 즉 유한군 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(|G|\)</span> 차원 표현을 가지며 이를 <strong>정칙 표현 (regular representation)</strong> 라고 한다.</p>
 <p><span class="math inline">\(G=\{g_1,\ldots,\,g_{|G|}\}\)</span> 에 대해 <span class="math inline">\(\theta: G \to \{\boldsymbol{e}_1,\ldots,\, \boldsymbol{e}_{|G|}\}\subset \mathbb{R}^{|G|}\)</span> 를 <span class="math inline">\(\theta(g_i) := \boldsymbol{e}_i\)</span> 로 정의하자. 그리고 <span class="math inline">\(\Phi : G \to \mathbb{R}^{|G|\times |G|}\)</span> 를</p>
 <p><span id="eq-Group-regular_representation"><span class="math display">\[
 \Phi(g) := \begin{bmatrix} \left(\theta(g^{-1}g_1)\right)^T \\ \vdots \\ \left(\theta(g^{-1} g_{|G|})\right)^T \end{bmatrix}
@@ -1330,7 +1330,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 <div class="callout-body-container callout-body">
 <div id="def-Group_regular_representation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.5</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <a href="#eq-Group-regular_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group-regular_representation</span></a> 로 정의된 <span class="math inline">\(\Phi\in \text{Hom}(G,\, \mathbb{R}^{|G|\times |G|})\)</span> 를 <span class="math inline">\(G\)</span> 에 대한 <strong>정칙표현 (regular representation)</strong> 이라고 하고 <span class="math inline">\(D^{(\text{reg})}\)</span> 라고 표기한다. 정칙 표현에서의 지표는 <span class="math inline">\(\chi^{(\text{reg})}\)</span> 로 표기한다.</p>
+<p><span class="theorem-title"><strong>정의 6.5</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <a href="#eq-Group-regular_representation" class="quarto-xref">식&nbsp;<span>6.25</span></a> 로 정의된 <span class="math inline">\(\Phi\in \text{Hom}(G,\, \mathbb{R}^{|G|\times |G|})\)</span> 를 <span class="math inline">\(G\)</span> 에 대한 <strong>정칙표현 (regular representation)</strong> 이라고 하고 <span class="math inline">\(D^{(\text{reg})}\)</span> 라고 표기한다. 정칙 표현에서의 지표는 <span class="math inline">\(\chi^{(\text{reg})}\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
@@ -1356,11 +1356,11 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-Group_regular_representation_and_non_trivial_character" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_regular_representation_and_non_trivial_character</span></a> 로 부터</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-Group_regular_representation_and_non_trivial_character" class="quarto-xref">명제&nbsp;<span>6.10</span></a> 로 부터</p>
 <p><span class="math display">\[
 \sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{\text{(reg)}}(K_i)\right)^\ast\chi^{(\text{reg})}(K_i) = \left(\chi^{\text{(reg)}}(i_G)\right)^\ast\chi^{(\text{reg})}(i_G) =|G|^2
 \]</span></p>
-<p>이다. <a href="#eq-Group_reducibility_check" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_reducibility_check</span></a> 로부터 <span class="math inline">\(|G|^2 = |G|\sum (m_r)^2\)</span> 이다. 즉 <span class="math inline">\(\sum(m_r)^2=|G| \ne 1\)</span> 이므로 정칙표현은 기약표현이 아니다. <span class="math inline">\(\square\)</span></p>
+<p>이다. <a href="#eq-Group_reducibility_check" class="quarto-xref">식&nbsp;<span>6.23</span></a> 로부터 <span class="math inline">\(|G|^2 = |G|\sum (m_r)^2\)</span> 이다. 즉 <span class="math inline">\(\sum(m_r)^2=|G| \ne 1\)</span> 이므로 정칙표현은 기약표현이 아니다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>정칙 표현은 기약표현이 아니다. 따라서 어떤 기약표현을 복수개 포함하거나, 복수개의 기약표현을 포함한다. 그렇다면 정칙 표현에 포함된, 혹은 포함되지 않은 기약표현을 알아볼 차례이다. 답은? (좀 무시무시하다.)</p>
@@ -1378,7 +1378,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 <p>을 생각하자. <span class="math inline">\(\chi^{(\text{reg})}(K)\)</span> 는 <span class="math inline">\(K_i=E:=\{i_G\}\)</span> 를 제외하면 <span class="math inline">\(0\)</span> 이며 따라서, <span class="math display">\[
 \sum_{K_i\in \mathcal{K}_G} |K_i| \left(\chi^{(r)}(K_i)\right)^\ast \chi(K_i) = \left(\chi^{(r)}(E)\right)\chi(E) = d_r |G| &gt; 0
 \]</span></p>
-<p>이다. 만약 <span class="math inline">\(D^{(r)}\)</span> 과 동등한 어떤 표현도 <span class="math inline">\(D^{(\text{reg})}\)</span> 에 포함되어 있지 않다고 하자. <a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_first_orthogonality_of_character</span></a> 로부터 <a href="#eq-prp-Group_regular_representation_is_not_irreducible_2_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-prp-Group_regular_representation_is_not_irreducible_2_1</span></a> 는 <span class="math inline">\(0\)</span> 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. <a href="#eq-Group_multiplicity_check_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_multiplicity_check_2</span></a> 로 부터 <span class="math inline">\(d_r|G|=m_r|G|\)</span> 이므로 <span class="math inline">\(d_r =m_r\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>이다. 만약 <span class="math inline">\(D^{(r)}\)</span> 과 동등한 어떤 표현도 <span class="math inline">\(D^{(\text{reg})}\)</span> 에 포함되어 있지 않다고 하자. <a href="#thm-Group_first_orthogonality_of_character" class="quarto-xref">정리&nbsp;<span>6.6</span></a> 로부터 <a href="#eq-prp-Group_regular_representation_is_not_irreducible_2_1" class="quarto-xref">식&nbsp;<span>6.26</span></a> 는 <span class="math inline">\(0\)</span> 이 되어야 한다. 이로부터 우리는 정칙 표현은 모든 기약표현을 포함한다는 것을 알 수 있다. <a href="#eq-Group_multiplicity_check_2" class="quarto-xref">식&nbsp;<span>6.24</span></a> 로 부터 <span class="math inline">\(d_r|G|=m_r|G|\)</span> 이므로 <span class="math inline">\(d_r =m_r\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이로부터 다음을 얻는다.</p>
@@ -1393,7 +1393,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 <p></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(\text{reg})}\)</span> 는 <span class="math inline">\(|G|\times |G|\)</span> 행렬이며 <a href="#thm-Group_regular_representation" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_regular_representation</span></a> 에 의해 <span class="math inline">\(D^{(\text{reg})}\)</span> 에는 모든 동등하지 않은 기약표현이 포함된다. 각각의 동등하지 않은 기약표현이 <span class="math inline">\(d_i\times d_i\)</span> 행렬로 <span class="math inline">\(d_i\)</span> 번 포함되므로 <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation</span></a> 가 성립한다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(D^{(\text{reg})}\)</span> 는 <span class="math inline">\(|G|\times |G|\)</span> 행렬이며 <a href="#thm-Group_regular_representation" class="quarto-xref">정리&nbsp;<span>6.9</span></a> 에 의해 <span class="math inline">\(D^{(\text{reg})}\)</span> 에는 모든 동등하지 않은 기약표현이 포함된다. 각각의 동등하지 않은 기약표현이 <span class="math inline">\(d_i\times d_i\)</span> 행렬로 <span class="math inline">\(d_i\)</span> 번 포함되므로 <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span>6.27</span></a> 가 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <br>
@@ -1418,7 +1418,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(gxg^{-1}=y\)</span> 일 때 <span class="math inline">\(x=y\)</span> 이다. 즉 아벨군의 모든 conjugate class 는 하나의 성분으로 이루어져 있다. 따라서 아벨군의 기약표현의 갯수와 군의 차수는 같다.</p>
-<p>(<span class="math inline">\(2\)</span>) <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation</span></a> 가 성립하는 겻은 모든 기약표현에 대해 <span class="math inline">\(d_i=1\)</span> 뿐이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <a href="#eq-Group_group_order_and_dimension_of_irreducible_representation_in_regular_representation" class="quarto-xref">식&nbsp;<span>6.27</span></a> 가 성립하는 겻은 모든 기약표현에 대해 <span class="math inline">\(d_i=1\)</span> 뿐이다.</p>
 </div>
 <p><br></p>
 </section>
@@ -1437,13 +1437,13 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_3_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.10 (Tinkham 3.1)</strong></span> (<span class="math inline">\(a\)</span>) <span class="math inline">\(D_4\)</span> 에는 몇개의 동등하지 않은 기약표현이 존재하는가? 그 차원은 어떻게 되는가. <a href="#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-tinkham_2_1</span></a> 의 Cayley table 을 이용하라</p>
+<p><span class="theorem-title"><strong>연습문제 6.10 (Tinkham 3.1)</strong></span> (<span class="math inline">\(a\)</span>) <span class="math inline">\(D_4\)</span> 에는 몇개의 동등하지 않은 기약표현이 존재하는가? 그 차원은 어떻게 되는가. <a href="group_introduction.html#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span>4.16</span></a> 의 Cayley table 을 이용하라</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(D_4\)</span> 에 대한 지표 테이블을 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-tinkham_2_1</span></a> 에서 보았듯이 class 의 갯수가 <span class="math inline">\(5\)</span> 이므로 동등하지 않은 기약표현의 개수도 5 이다.</p>
-<p>(<span class="math inline">\(b\)</span>) 클래스를 <a href="#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-tinkham_2_1</span></a> 의 (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\(K_1,\,K_2,\,K_3,\,K_4,\,K_5\)</span> 로 표기하는데 클래스의 원소의 개수가 중요하므로 클래스명에 윗첨자로 클래스의 원소의 개수를 표기하자. <span class="math inline">\(N_R=N_C=5\)</span> 이며 <strong>(R1)</strong> 을 만족하는 경우는 <span class="math inline">\(d_1=d_2=d_3=d_4=1,\, d_5=2\)</span> 뿐이다. 1차원 기약표현이 <span class="math inline">\(4\)</span> 종류 2차원 기약표현이 <span class="math inline">\(1\)</span> 종류이다. 1차원 기약표현을 <span class="math inline">\(\Gamma_{11},\ldots,\Gamma_{14}\)</span> 라고 표기하고 2차원 기약표현을 <span class="math inline">\(\Gamma_2\)</span> 라고 하자. 아래와 같은 표를 채우면 된다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="group_introduction.html#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span>4.16</span></a> 에서 보았듯이 class 의 갯수가 <span class="math inline">\(5\)</span> 이므로 동등하지 않은 기약표현의 개수도 5 이다.</p>
+<p>(<span class="math inline">\(b\)</span>) 클래스를 <a href="group_introduction.html#exr-tinkham_2_1" class="quarto-xref">연습문제&nbsp;<span>4.16</span></a> 의 (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\(K_1,\,K_2,\,K_3,\,K_4,\,K_5\)</span> 로 표기하는데 클래스의 원소의 개수가 중요하므로 클래스명에 윗첨자로 클래스의 원소의 개수를 표기하자. <span class="math inline">\(N_R=N_C=5\)</span> 이며 <strong>(R1)</strong> 을 만족하는 경우는 <span class="math inline">\(d_1=d_2=d_3=d_4=1,\, d_5=2\)</span> 뿐이다. 1차원 기약표현이 <span class="math inline">\(4\)</span> 종류 2차원 기약표현이 <span class="math inline">\(1\)</span> 종류이다. 1차원 기약표현을 <span class="math inline">\(\Gamma_{11},\ldots,\Gamma_{14}\)</span> 라고 표기하고 2차원 기약표현을 <span class="math inline">\(\Gamma_2\)</span> 라고 하자. 아래와 같은 표를 채우면 된다.</p>
 <div id="fig-Group_D4_character_table_templete" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_D4_character_table_templete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1457,8 +1457,8 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 <ul>
 <li><span class="math inline">\(K_1 = \{E\}\)</span>, 즉 항등원 뿐이므로 첫번째 행은 차원과 같다.</li>
 <li><span class="math inline">\(\Gamma_1\)</span> 은 trivial representation 으로 한다. 즉 모든 값이 <span class="math inline">\(1\)</span> 이다.</li>
-<li>지표에 대한 제 2 직교정리(<a href="#eq-Group_c8" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_c8</span></a>) 를 사용한다. 각각의 class 에 대해 수행하면 <span class="math inline">\(\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4\)</span>, <span class="math inline">\(\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0\)</span> 이다. 여기서 <span class="math inline">\(\chi^{(\Gamma_2)}(K_1=\{E\})=2\)</span> 이다.</li>
-<li>지표에 대한 제 1 직교정리(<a href="#eq-Group_c7" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_c7</span></a>) 를 <span class="math inline">\(i=\Gamma_{11},\, j=\Gamma_2\)</span> 에 적용하면 <span class="math inline">\(\chi^{(\Gamma_2)}(K_5)=-2\)</span> 이다.</li>
+<li>지표에 대한 제 2 직교정리(<a href="group_characters.html#eq-Group_c8" class="quarto-xref">식&nbsp;<span>7.10</span></a>) 를 사용한다. 각각의 class 에 대해 수행하면 <span class="math inline">\(\left|\chi^{(\Gamma_2)}(K_1)\right|^2=\left|\chi^{(\Gamma_2)}(K_5)\right|^2=4\)</span>, <span class="math inline">\(\chi^{(\Gamma_2)}(K_2)=\chi^{(\Gamma_2)}(K_3)=\chi^{(\Gamma_2)}(K_4)=0\)</span> 이다. 여기서 <span class="math inline">\(\chi^{(\Gamma_2)}(K_1=\{E\})=2\)</span> 이다.</li>
+<li>지표에 대한 제 1 직교정리(<a href="group_characters.html#eq-Group_c7" class="quarto-xref">식&nbsp;<span>7.9</span></a>) 를 <span class="math inline">\(i=\Gamma_{11},\, j=\Gamma_2\)</span> 에 적용하면 <span class="math inline">\(\chi^{(\Gamma_2)}(K_5)=-2\)</span> 이다.</li>
 </ul>
 <div id="fig-Group_D4_character_table_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1471,7 +1471,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </figure>
 </div>
 <ul>
-<li>지표에 대한 제 2 직교정리(<a href="#eq-Group_c8" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-Group_c8</span></a>) 를 <span class="math inline">\(K_1\)</span> 과 <span class="math inline">\(K_5\)</span> 에 적용하자. <span class="math inline">\(K_5\)</span> 의 빈 칸을 위서부터 차례로 <span class="math inline">\(a,\,b,\,c\)</span> 라고 하면 <span class="math inline">\(1+a+b+c-4=0\)</span> 이므로 <span class="math inline">\(a+b+c=3\)</span> 이며 <span class="math inline">\(a,\,b,\,c\)</span> 가 모두 1차원 표현의 지표 이므로 <span class="math inline">\(|a|=|b|=|c|=1\)</span> 이어야 한다. 이것을 만족하는 것은 <span class="math inline">\(a=b=c=1\)</span> 뿐이다.</li>
+<li>지표에 대한 제 2 직교정리(<a href="group_characters.html#eq-Group_c8" class="quarto-xref">식&nbsp;<span>7.10</span></a>) 를 <span class="math inline">\(K_1\)</span> 과 <span class="math inline">\(K_5\)</span> 에 적용하자. <span class="math inline">\(K_5\)</span> 의 빈 칸을 위서부터 차례로 <span class="math inline">\(a,\,b,\,c\)</span> 라고 하면 <span class="math inline">\(1+a+b+c-4=0\)</span> 이므로 <span class="math inline">\(a+b+c=3\)</span> 이며 <span class="math inline">\(a,\,b,\,c\)</span> 가 모두 1차원 표현의 지표 이므로 <span class="math inline">\(|a|=|b|=|c|=1\)</span> 이어야 한다. 이것을 만족하는 것은 <span class="math inline">\(a=b=c=1\)</span> 뿐이다.</li>
 </ul>
 <div id="fig-Group_D4_character_table_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1522,7 +1522,7 @@ Q_{ij} = \chi^{(i)}(K_j),\qquad Q'_{ij} = \dfrac{\left(\chi^{(j)}(K_i)\right)^\a
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-Group_regular_representation_and_non_trivial_character" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-Group_regular_representation_and_non_trivial_character</span></a> 과 <a href="#thm-Group_regular_representation" class="quarto-xref">정리&nbsp;<span class="quarto-unresolved-ref">thm-Group_regular_representation</span></a> 를 생각하자.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-Group_regular_representation_and_non_trivial_character" class="quarto-xref">명제&nbsp;<span>6.10</span></a> 과 <a href="#thm-Group_regular_representation" class="quarto-xref">정리&nbsp;<span>6.9</span></a> 를 생각하자.</p>
 </div>
 
 

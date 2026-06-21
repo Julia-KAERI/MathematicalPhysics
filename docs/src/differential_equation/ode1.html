@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -411,9 +411,9 @@ window.Quarto = {
 <li><p>일반적으로 미분방정식은 미분연산자 <span class="math inline">\(\mathcal{L}\)</span> 과 함수 <span class="math inline">\(F(x)\)</span> 에 대해 다음의 꼴로 주어진다. <span id="eq-diff_eq_basic"><span class="math display">\[
 \mathcal{L}(f(x)) = F(x)
 \tag{13.1}\]</span></span></p></li>
-<li><p><a href="#eq-diff_eq_basic" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-diff_eq_basic</span></a> 에서 <span class="math inline">\(\mathcal{L}\)</span> 이 선형미분연산자이고 <span class="math inline">\(F(x)\)</span> 가 미분연산자를 포함하지 않은 <span class="math inline">\(x\)</span> 의 함수 일 때 이 미분방정식을 <strong>선형미분방정식(linear differential equation)</strong>이라고 한다.</p></li>
+<li><p><a href="#eq-diff_eq_basic" class="quarto-xref">식&nbsp;<span>13.1</span></a> 에서 <span class="math inline">\(\mathcal{L}\)</span> 이 선형미분연산자이고 <span class="math inline">\(F(x)\)</span> 가 미분연산자를 포함하지 않은 <span class="math inline">\(x\)</span> 의 함수 일 때 이 미분방정식을 <strong>선형미분방정식(linear differential equation)</strong>이라고 한다.</p></li>
 <li><p>상미분방정식이 <span class="math inline">\(y=y(x)\)</span> 에 대해 주어졌다고 하자. <strong>계수 (order)</strong> 는 <span class="math inline">\(y\)</span> 의 최고차 도함수의 차수이며 <strong>차수 (degree)</strong> 는 <span class="math inline">\(y\)</span> 의 최고차 도함수의 승수이다. 예를 들어 <span class="math inline">\((y''')^4 + y^5 = F(x)\)</span> 형태의 미분방정식이라면 계수는 3 이며 차수는 4 인 3계 4차 미분방정식이 된다.</p></li>
-<li><p>미분방정식의 각각의 항이 독립변수에 대한 함수와 종속변수의 미분의 곱으로만 이루어 졌을 때 이 미분방정식을 <strong>제차 미분방정식 (homogeneous differential equation)</strong> 이라고 한다. (see <a href="#exm-DE_homogeneous_function_and_differential_equation" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-DE_homogeneous_function_and_differential_equation</span></a>)</p></li>
+<li><p>미분방정식의 각각의 항이 독립변수에 대한 함수와 종속변수의 미분의 곱으로만 이루어 졌을 때 이 미분방정식을 <strong>제차 미분방정식 (homogeneous differential equation)</strong> 이라고 한다. (see <a href="#exm-DE_homogeneous_function_and_differential_equation" class="quarto-xref">예제&nbsp;<span>13.1</span></a>)</p></li>
 </ul>
 </div>
 </div>
@@ -504,7 +504,7 @@ v= v_0 \tanh (t/\tau)
 </section>
 <section id="sec-DE_ode_exact_differential" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="sec-DE_ode_exact_differential"><span class="header-section-number">13.2.2</span> 완전 미분방정식의 경우</h3>
-<p><a href="#eq-DE_typical_1_deg_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_typical_1_deg_ode</span></a> 을 다음과 같은 형태로 쓰자.</p>
+<p><a href="#eq-DE_typical_1_deg_ode" class="quarto-xref">식&nbsp;<span>13.2</span></a> 을 다음과 같은 형태로 쓰자.</p>
 <p><span id="eq-DE_typical_1_deg_ode_2"><span class="math display">\[
 P(x,\,y)\,dx + Q(x,\,y)\,dy = 0
 \tag{13.3}\]</span></span></p>
@@ -521,7 +521,7 @@ d\Phi = \dfrac{\partial \Phi}{\partial x}\,dx + \dfrac{\partial \Phi}{\partial y
 <p><span id="eq-DE_typical_1_deg_ode_exact_form_2"><span class="math display">\[
 \dfrac{\partial P}{\partial y} = \dfrac{\partial Q}{\partial x} = \dfrac{\partial^2 \Phi}{\partial x \partial y}
 \tag{13.5}\]</span></span></p>
-<p>이다. 또한 <a href="#eq-DE_typical_1_deg_ode_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_typical_1_deg_ode_2</span></a> 의 미분방정식과 조건 <a href="#eq-DE_typical_1_deg_ode_exact_form_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_typical_1_deg_ode_exact_form_2</span></a> 이 주어졌을 때 이 미분방정식은 전미분 형태임을 보일 수 있다. <span class="math inline">\(P(x,\,y) = \dfrac{\partial \Phi}{\partial x}\)</span> 로부터</p>
+<p>이다. 또한 <a href="#eq-DE_typical_1_deg_ode_2" class="quarto-xref">식&nbsp;<span>13.3</span></a> 의 미분방정식과 조건 <a href="#eq-DE_typical_1_deg_ode_exact_form_2" class="quarto-xref">식&nbsp;<span>13.5</span></a> 이 주어졌을 때 이 미분방정식은 전미분 형태임을 보일 수 있다. <span class="math inline">\(P(x,\,y) = \dfrac{\partial \Phi}{\partial x}\)</span> 로부터</p>
 <p><span class="math display">\[
 \Phi = \int_{x_0}^x P(x',\,y)\,dx' + f(y)
 \]</span></p>
@@ -630,7 +630,7 @@ y=Cx-x^2
 <p><span id="eq-DE-ODE_genral_1dgree_LHODE_form"><span class="math display">\[
 y' + p(x)y = q(x).
 \tag{13.6}\]</span></span></p>
-<p>위 식이 전미분 형태이면 <a href="#sec-DE_ode_exact_differential" class="quarto-xref"><span class="quarto-unresolved-ref">sec-DE_ode_exact_differential</span></a> 에서 소개한 방법으로 쉽게 풀 수 있으며 여기서는 전미분 형태가 아닌 경우에만 다룬다. 여기서는 적분 인자 <span class="math inline">\(\alpha(x)\)</span> 를 도입하여 아래 식이 전미분 형태가 되도록 조작하고자 한다.</p>
+<p>위 식이 전미분 형태이면 <a href="#sec-DE_ode_exact_differential" class="quarto-xref"><span> 13.2.2</span></a> 에서 소개한 방법으로 쉽게 풀 수 있으며 여기서는 전미분 형태가 아닌 경우에만 다룬다. 여기서는 적분 인자 <span class="math inline">\(\alpha(x)\)</span> 를 도입하여 아래 식이 전미분 형태가 되도록 조작하고자 한다.</p>
 <p><span class="math display">\[
 \alpha(x)y' + \alpha (x)p(x)y = \alpha(x)q(x)
 \]</span></p>
@@ -653,7 +653,7 @@ y' + p(x)y = q(x).
 <p><span class="math display">\[
 \alpha(x) = \alpha_0\exp \left(\int_{x_0}^x p(x)\,dx\right)
 \]</span></p>
-<p>그렇다면 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor</span></a> 로부터</p>
+<p>그렇다면 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span>13.7</span></a> 로부터</p>
 <p><span class="math display">\[
 \alpha(x) y(x) = \int^x \alpha(x') q(x')\,dx' + C
 \]</span></p>
@@ -669,7 +669,7 @@ y_1 := \dfrac{1}{\alpha(x)} \int^x \alpha (x')q(x')\,dx',\qquad y_2 := \dfrac{C}
 <p><span class="math display">\[
 y_2' + py = 0
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(y_2\)</span> 는 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor</span></a> 의 <span class="math inline">\(q(x)=0\)</span> 인 제차 미분방정식의 해이다. 반면 <span class="math inline">\(y_1\)</span> 은 <span class="math inline">\(q(x)\)</span> 를 포함한 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor</span></a> 을 만족한다.</p>
+<p>이다. 즉 <span class="math inline">\(y_2\)</span> 는 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span>13.7</span></a> 의 <span class="math inline">\(q(x)=0\)</span> 인 제차 미분방정식의 해이다. 반면 <span class="math inline">\(y_1\)</span> 은 <span class="math inline">\(q(x)\)</span> 를 포함한 <a href="#eq-DE_ODE_transformed_1degree_LHODE_by_integrating_factor" class="quarto-xref">식&nbsp;<span>13.7</span></a> 을 만족한다.</p>
 <p>이것은 어찌 보면 당연한데 비 제차 미분방정식의 해는 제차 형태의 미분방정식의 해(일반해, general solution) 들의 선형결합과 비제차 미분방정식의 해(특이해, particular solution)의 합이다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-DE_ODE_summary" class="theorem">
@@ -870,7 +870,7 @@ y'(x) &amp;= \dfrac{dy}{dz} \dfrac{dz}{dx} = - \dfrac{1}{x}^2 \dfrac{dw}{dz} = -
 y'' (x) &amp;= \dfrac{dy'}{dz}\dfrac{dz}{dx} = z^4 w'' + 2z^3 w'
 \end{aligned}
 \]</span></p>
-<p>이므로 <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_simple_2nd_ode</span></a> 는 다음과 같이 변형된다.</p>
+<p>이므로 <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>13.9</span></a> 는 다음과 같이 변형된다.</p>
 <p><span id="eq-DE_ODE_modified_simplie_2nd_ode"><span class="math display">\[
 z^4w'' + \left[ 2z^3 - z^2 p(z^{-1}) \right] w' + q(z^{-1}) w = 0.
 \tag{13.10}\]</span></span></p>
@@ -880,7 +880,7 @@ z^4w'' + \left[ 2z^3 - z^2 p(z^{-1}) \right] w' + q(z^{-1}) w = 0.
 <p><span class="math display">\[
 x^2 y'' + xy' + (x^2-n^2)y = 0.
 \]</span></p>
-<p><a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_simple_2nd_ode</span></a> 와 비교하면 <span class="math inline">\(p(x) = \dfrac{1}{x},\, q(x) = 1-\dfrac{n^2}{x^2}\)</span> 이므로 <span class="math inline">\(x=0\)</span> 은 정칙 특이점이다. 이 외에는 <span class="math inline">\(x\)</span> 가 유한한 영역에서 특이점이 없다는 것은 쉽게 알 수 있다. <span class="math inline">\(z=1/x\)</span> 로 치환하여 <span class="math inline">\(x\to \infty\)</span> 에서의 미분방정식의 행동을 보자. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_modified_simplie_2nd_ode</span></a> 는 다음과 같다.</p>
+<p><a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>13.9</span></a> 와 비교하면 <span class="math inline">\(p(x) = \dfrac{1}{x},\, q(x) = 1-\dfrac{n^2}{x^2}\)</span> 이므로 <span class="math inline">\(x=0\)</span> 은 정칙 특이점이다. 이 외에는 <span class="math inline">\(x\)</span> 가 유한한 영역에서 특이점이 없다는 것은 쉽게 알 수 있다. <span class="math inline">\(z=1/x\)</span> 로 치환하여 <span class="math inline">\(x\to \infty\)</span> 에서의 미분방정식의 행동을 보자. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span>13.10</span></a> 는 다음과 같다.</p>
 <p><span class="math display">\[
 w'' + \dfrac{1}{z}w' + \dfrac{1-n^2z^2}{z^4}=0
 \]</span></p>
@@ -974,17 +974,17 @@ y'' - \dfrac{2xy}{1-x^2} y' + \dfrac{l(l+1)}{1-x^2} y = 0
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) 르장드르 방정식의 경우 <span class="math inline">\(p(x) = \dfrac{-2x}{1-x^2},\,q(x) = \dfrac{l(l+1)}{1-x^2}\)</span> 이므로 <span class="math inline">\(x=\pm 1\)</span> 에서 정칙 특이점을 가진다. 또한 <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_modified_simplie_2nd_ode</span></a> 형태는</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) 르장드르 방정식의 경우 <span class="math inline">\(p(x) = \dfrac{-2x}{1-x^2},\,q(x) = \dfrac{l(l+1)}{1-x^2}\)</span> 이므로 <span class="math inline">\(x=\pm 1\)</span> 에서 정칙 특이점을 가진다. 또한 <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span>13.10</span></a> 형태는</p>
 <p><span class="math display">\[
 w'' + \dfrac{2z}{(z^2-1)}w' + \dfrac{l(l+1)z^2}{1-z^2} w= 0
 \]</span></p>
 <p>이므로 <span class="math inline">\(z=0 (x=\infty)\)</span> 에서 정칙 특이점을 가진다. 체비셰프 방정식의 형태를 생각하면 특이점의 정칙성은 르장드르 방정식과 동일함을 알 수 있다.</p>
-<p>(<span class="math inline">\(2\)</span>) 라게르 방정식의 경우 <span class="math inline">\(p(x) = (1-x)/x,\, q(x) = a/x\)</span> 이므로 <span class="math inline">\(x=0\)</span> 에서 정칙 특이점이다. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_modified_simplie_2nd_ode</span></a> 형태는</p>
+<p>(<span class="math inline">\(2\)</span>) 라게르 방정식의 경우 <span class="math inline">\(p(x) = (1-x)/x,\, q(x) = a/x\)</span> 이므로 <span class="math inline">\(x=0\)</span> 에서 정칙 특이점이다. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span>13.10</span></a> 형태는</p>
 <p><span class="math display">\[
 w'' + \dfrac{z+1}{z^2}y' + \dfrac{a}{z^4} w=0
 \]</span></p>
 <p>이므로 <span class="math inline">\(z=0\)</span> 에서 비정칙 특이점을 가진다.</p>
-<p>(<span class="math inline">\(3\)</span>) 에르미트 방정식은 유한한 값에서 특이점을 갖지 않음을 쉽게 알 수 있다. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_modified_simplie_2nd_ode</span></a> 형태는</p>
+<p>(<span class="math inline">\(3\)</span>) 에르미트 방정식은 유한한 값에서 특이점을 갖지 않음을 쉽게 알 수 있다. <a href="#eq-DE_ODE_modified_simplie_2nd_ode" class="quarto-xref">식&nbsp;<span>13.10</span></a> 형태는</p>
 <p><span class="math display">\[
 w'' + \dfrac{2z^2+2}{z^2}y' + \dfrac{2\alpha}{z^4}w = 0
 \]</span></p>
@@ -997,7 +997,7 @@ w'' + \dfrac{2z^2+2}{z^2}y' + \dfrac{2\alpha}{z^4}w = 0
 <h2 data-number="13.5" class="anchored" data-anchor-id="sec-DE_ODE_Frobenius"><span class="header-section-number">13.5</span> 프로베니우스 방법을 이용한 급수해</h2>
 <section id="sec-DE_ODE_power_series_soluiton" class="level3" data-number="13.5.1">
 <h3 data-number="13.5.1" class="anchored" data-anchor-id="sec-DE_ODE_power_series_soluiton"><span class="header-section-number">13.5.1</span> 프로베니우스 방법</h3>
-<p><a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_simple_2nd_ode</span></a> 형태의 2계 LHODE 를 생각하자. 이 경우 <span class="math inline">\(y\)</span> 를 <span class="math inline">\(x\)</span> 의 급수로 놓고 해를 구하는 것을 Frobenius 방법이라고 한다. 즉,</p>
+<p><a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>13.9</span></a> 형태의 2계 LHODE 를 생각하자. 이 경우 <span class="math inline">\(y\)</span> 를 <span class="math inline">\(x\)</span> 의 급수로 놓고 해를 구하는 것을 Frobenius 방법이라고 한다. 즉,</p>
 <p><span id="eq-ode_expansion_about_zero"><span class="math display">\[
 y(x) = \sum_{i=0}^\infty a_i x^{s+i} ,\qquad a_0 \ne 0
 \tag{13.11}\]</span></span></p>
@@ -1038,7 +1038,7 @@ y(x) {\large \mid}_{s=1} =  \dfrac{a_0}{\omega}\sin (\omega x)
 </section>
 <section id="x_0-주위로의-멱급수-전개" class="level3" data-number="13.5.3">
 <h3 data-number="13.5.3" class="anchored" data-anchor-id="x_0-주위로의-멱급수-전개"><span class="header-section-number">13.5.3</span> <span class="math inline">\(x_0\)</span> 주위로의 멱급수 전개</h3>
-<p><a href="#eq-ode_expansion_about_zero" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ode_expansion_about_zero</span></a> 는 <span class="math inline">\(x_0=0\)</span> 근처의 전개이다. 이것을 임의의 <span class="math inline">\(x_0\)</span> 근처에서 다음과 같이 전개하여 미분방정식의 해를 구하는 것도 가능하다.</p>
+<p><a href="#eq-ode_expansion_about_zero" class="quarto-xref">식&nbsp;<span>13.11</span></a> 는 <span class="math inline">\(x_0=0\)</span> 근처의 전개이다. 이것을 임의의 <span class="math inline">\(x_0\)</span> 근처에서 다음과 같이 전개하여 미분방정식의 해를 구하는 것도 가능하다.</p>
 <p><span class="math display">\[
 y(x) = \sum_{i=0}^\infty a_i (x-x_0)^{s+i} ,\qquad a_0 \ne 0
 \]</span></p>
@@ -1060,7 +1060,7 @@ y(x) = \sum_{i=0}^\infty a_i (x-x_0)^{s+i} ,\qquad a_0 \ne 0
 y_\text{even} := y(x) + y(-x),\qquad y_\text{odd} := y(x) - y(-x)
 \]</span></p>
 <p>역시 서로 독립인 이 미분방정식의 해이다. <span class="math inline">\(y(x)\)</span> 와 <span class="math inline">\(y(-x)\)</span> 가 선형 종속이라면 <span class="math inline">\(y(-x) = \pm y(x)\)</span> 이므로 여기에 대해 생각 할 필요가 없다.</p>
-<p><a href="#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span class="quarto-unresolved-ref">tbl-2nd_DE_ODE_singularity_of_odes</span></a> 의 미분방정식을 보면 르장드르, 체비셰프, 베셀, 단순조화진동자, 그리고 에르미트 방정식의 경우는 even parity 를 가지며 라게르 방정식의 경우는 even 이나 odd parity 를 갖지 않는다.</p>
+<p><a href="#tbl-2nd_DE_ODE_singularity_of_odes" class="quarto-xref">표&nbsp;<span>13.1</span></a> 의 미분방정식을 보면 르장드르, 체비셰프, 베셀, 단순조화진동자, 그리고 에르미트 방정식의 경우는 even parity 를 가지며 라게르 방정식의 경우는 even 이나 odd parity 를 갖지 않는다.</p>
 <p><br></p>
 </section>
 <section id="sec-DE_ODE_frobenius_bessel" class="level3" data-number="13.5.5">
@@ -1155,11 +1155,11 @@ y=y_1\ln(x-a)+\sum _{n=0}^{\infty }b_{n}(x-a)^{n+r},\quad b_{0}\neq 0.
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_7_5_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.9 (Arfken 7.5.2)</strong></span> <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_simple_2nd_ode</span></a> 의 해를 <span class="math inline">\(x=x_0\)</span> 에 대한 프로베니우스 방법으로 구한다고 하자. <span class="math inline">\(x_0\)</span> 가 일반점일 경우 결정방정식은 <span class="math inline">\(s=0,\,1\)</span> 의 해를 가짐을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 13.9 (Arfken 7.5.2)</strong></span> <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>13.9</span></a> 의 해를 <span class="math inline">\(x=x_0\)</span> 에 대한 프로베니우스 방법으로 구한다고 하자. <span class="math inline">\(x_0\)</span> 가 일반점일 경우 결정방정식은 <span class="math inline">\(s=0,\,1\)</span> 의 해를 가짐을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x_0\)</span> 가 일반점이므로 <span class="math inline">\(p(x),\,q(x)\)</span> 역시 <span class="math inline">\(\sum_{j=0} b_j(x_0)^{n+j}\)</span> 형태로 표현 할 수 있다. 멱급수 형태인 <span class="math inline">\(y(x) = \sum_j a_j (x-x_0)^{j+s}\)</span> 를 <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_simple_2nd_ode</span></a> 에 적용하면 다음을 얻는다. <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x_0\)</span> 가 일반점이므로 <span class="math inline">\(p(x),\,q(x)\)</span> 역시 <span class="math inline">\(\sum_{j=0} b_j(x_0)^{n+j}\)</span> 형태로 표현 할 수 있다. 멱급수 형태인 <span class="math inline">\(y(x) = \sum_j a_j (x-x_0)^{j+s}\)</span> 를 <a href="#eq-DE_ODE_simple_2nd_ode" class="quarto-xref">식&nbsp;<span>13.9</span></a> 에 적용하면 다음을 얻는다. <span class="math display">\[
 \begin{aligned}
 0 &amp;= \sum_{j=0}a_j(j+s)(j+s-1) (x-x_0)^{j+s-2} + \sum_{j=0} a_j(j+s) p(x) (x-x_0)^{j+s-1} \\[0.3em]
 &amp;\qquad + \sum_{j=0} a_j q(x) (x-x_0)^{j+s}
@@ -1170,7 +1170,7 @@ y=y_1\ln(x-a)+\sum _{n=0}^{\infty }b_{n}(x-a)^{n+r},\quad b_{0}\neq 0.
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ODE_arfken_7_5_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 13.10 (Arfken 7.5.4)</strong></span> <a href="#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span class="quarto-unresolved-ref">sec-DE_ODE_frobenius_sho</span></a> 에서 단순조화진동자의 해를 구할 때 두번째 계수 <span class="math inline">\(a_1\)</span> 를 without irrevocably losing anything 하게 <span class="math inline">\(0\)</span> 으로 놓을 수 있는지, 아니면 무조건 <span class="math inline">\(0\)</span> 으로 놓아야 할 경우는 어떤 경우인지 확인하라.</p>
+<p><span class="theorem-title"><strong>연습문제 13.10 (Arfken 7.5.4)</strong></span> <a href="#sec-DE_ODE_frobenius_sho" class="quarto-xref"><span> 13.5.2</span></a> 에서 단순조화진동자의 해를 구할 때 두번째 계수 <span class="math inline">\(a_1\)</span> 를 without irrevocably losing anything 하게 <span class="math inline">\(0\)</span> 으로 놓을 수 있는지, 아니면 무조건 <span class="math inline">\(0\)</span> 으로 놓아야 할 경우는 어떤 경우인지 확인하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1186,7 +1186,7 @@ y=y_1\ln(x-a)+\sum _{n=0}^{\infty }b_{n}(x-a)^{n+r},\quad b_{0}\neq 0.
 <p>(<span class="math inline">\(b\)</span>) 체비셰프 방정식 : <span class="math inline">\((1-x^2) y'' -xy' + n^2y = 0\)</span></p>
 <p>르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.</p>
 <p>(<span class="math inline">\(c\)</span>) 베셀 방정식 : <span class="math inline">\(x^2y'' + xy' + (x^2-n^2)y = 0\)</span></p>
-<p><a href="#sec-DE_ODE_frobenius_bessel" class="quarto-xref"><span class="quarto-unresolved-ref">sec-DE_ODE_frobenius_bessel</span></a> 의 <a href="#eq-DE_ODE_indication_equation_for_bessel_equation" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-DE_ODE_indication_equation_for_bessel_equation</span></a> 와 그 이후를 보라. <span class="math inline">\(a_1=0\)</span> 일 수 밖에 없다.</p>
+<p><a href="#sec-DE_ODE_frobenius_bessel" class="quarto-xref"><span> 13.5.5</span></a> 의 <a href="#eq-DE_ODE_indication_equation_for_bessel_equation" class="quarto-xref">식&nbsp;<span>13.13</span></a> 와 그 이후를 보라. <span class="math inline">\(a_1=0\)</span> 일 수 밖에 없다.</p>
 <p>(<span class="math inline">\(d\)</span>) 에르미트 방정식 : <span class="math inline">\(y'' -2xy' + 2\alpha y = 0\)</span></p>
 <p>르장드르 방정식의 형태와 비교했을 때 르장드르 방정식의 경우와 같다.</p>
 </div>
