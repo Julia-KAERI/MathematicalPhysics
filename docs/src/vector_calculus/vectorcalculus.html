@@ -418,9 +418,9 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-VectorCalculus_hemlhomtz" class="theorem">
-<p><span class="theorem-title"><strong>정리 1.2 (헬름홀츠 정리)</strong></span> 벡터장 <span class="math inline">\(\boldsymbol{P}\)</span> 에 대해 <span class="math inline">\(\nabla \boldsymbol{\cdot P}\)</span> 와 <span class="math inline">\(\nabla \times \boldsymbol{P}\)</span> 가 모두 <span class="math inline">\(\|\boldsymbol{r}\|\to \infty\)</span> 극한에서 <span class="math inline">\(1/\|\boldsymbol{r}\|\)</span> 보다 빠르게 <span class="math inline">\(0\)</span> 이 된다면 어떤 스칼라장 <span class="math inline">\(\Phi\)</span> 와 벡터장 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정리 1.2 (헬름홀츠 정리)</strong></span> 벡터장 <span class="math inline">\(\boldsymbol{P}\)</span> 에 대해 <span class="math inline">\(\nabla \boldsymbol{\cdot P}\)</span> 와 <span class="math inline">\(\nabla \times \boldsymbol{P}\)</span> 가 모두 <span class="math inline">\(\|\boldsymbol{r}\|\to \infty\)</span> 극한에서 <span class="math inline">\(1/\|\boldsymbol{r}\|\)</span> 보다 빠르게 <span class="math inline">\(0\)</span> 이 된다면 어떤 스칼라장 <span class="math inline">\(\Phi\)</span> 와 벡터장 <span class="math inline">\(\boldsymbol{C}\)</span> 에 대해</p>
 <p><span class="math display">\[
-\boldsymbol{P} = -\nabla \Phi + \nabla \times \boldsymbol{A}
+\boldsymbol{P} = -\nabla \Phi + \nabla \times \boldsymbol{C}
 \]</span></p>
 <p>형태이다.</p>
 </div>
@@ -433,7 +433,7 @@ window.Quarto = {
 <p><span id="eq-VectorCalculus_hemlhomtz_2"><span class="math display">\[
 \begin{aligned}
 \Phi (\boldsymbol{r}) &amp;:= \dfrac{1}{4\pi} \int \dfrac{s(\boldsymbol{r'})}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d^3\boldsymbol{r}' ,\\[0.3em]
-\boldsymbol{A}(\boldsymbol{r}) &amp;:= \dfrac{1}{4\pi}\int \dfrac{\boldsymbol{c}(\boldsymbol{r'})}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d^3\boldsymbol{r}' ,\\[0.3em]
+\boldsymbol{C}(\boldsymbol{r}) &amp;:= \dfrac{1}{4\pi}\int \dfrac{\boldsymbol{c}(\boldsymbol{r'})}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d^3\boldsymbol{r}' ,\\[0.3em]
 \end{aligned}
 \tag{1.2}\]</span></span></p>
 <p>라고 하자. <a href="#eq-VectorCalculus_hemlhomtz_1" class="quarto-xref">식&nbsp;<span>1.1</span></a> 을 이용하면</p>
@@ -443,13 +443,13 @@ window.Quarto = {
 &amp;= \dfrac{1}{4\pi} \int s(\boldsymbol{r}') \left[-4\pi \delta(\boldsymbol{r}-\boldsymbol{r}')\right] \, d^3\boldsymbol{r}' = -s(\boldsymbol{r}).
 \end{aligned}
 \tag{1.3}\]</span></span></p>
-<p>이다. <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 비슷하게 하기 위해 다음의 항등식을 이용한다.</p>
+<p>이다. <span class="math inline">\(\boldsymbol{C}\)</span> 에 대해 비슷하게 하기 위해 다음의 항등식을 이용한다.</p>
 <p><span class="math display">\[
-\nabla \times (\nabla \times \boldsymbol{A}) = \nabla (\nabla \boldsymbol{\cdot A}) - \nabla^2 \boldsymbol{A}
+\nabla \times (\nabla \times \boldsymbol{C}) = \nabla (\nabla \boldsymbol{\cdot C}) - \nabla^2 \boldsymbol{C}
 \]</span></p>
-<p><span class="math inline">\(\nabla (f\boldsymbol{A})= \nabla f \boldsymbol{\cdot A} + f \nabla \cdot \boldsymbol{A}\)</span> 임을 이용한다. <span class="math display">\[
+<p><span class="math inline">\(\nabla (f\boldsymbol{C})= \nabla f \boldsymbol{\cdot C} + f \nabla \cdot \boldsymbol{C}\)</span> 임을 이용한다. <span class="math display">\[
 \begin{aligned}
-\nabla(\nabla \cdot \boldsymbol{A}(\boldsymbol{r})) &amp;= \dfrac{1}{4\pi}\nabla\left[\int \nabla \boldsymbol{\cdot}\left(\dfrac{\boldsymbol{c}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right)\right]\,d^3\boldsymbol{r}' \\[0.3em]
+\nabla(\nabla \cdot \boldsymbol{C}(\boldsymbol{r})) &amp;= \dfrac{1}{4\pi}\nabla\left[\int \nabla \boldsymbol{\cdot}\left(\dfrac{\boldsymbol{c}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right)\right]\,d^3\boldsymbol{r}' \\[0.3em]
 &amp;= \dfrac{1}{4\pi}\nabla \int \left[\boldsymbol{c}(\boldsymbol{r}') \cdot \nabla\left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}
 '\|}\right)\right] \, d^3\boldsymbol{r}'\\[0.3em]
 &amp;=\dfrac{1}{4\pi}\nabla \int \left[\boldsymbol{c}(\boldsymbol{r}') \cdot \left(-\nabla'\left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}
@@ -457,14 +457,32 @@ window.Quarto = {
 &amp;= \dfrac{1}{4\pi} \left[ -\int \nabla' \left(\dfrac{\boldsymbol{c}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right) \, d^3\boldsymbol{r}' + \int \dfrac{\nabla \boldsymbol{\cdot c}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \, d^3\boldsymbol{r}' \right]
 \end{aligned}
 \]</span></p>
-<p>여기서 첫번째 적분은 <span class="math inline">\(\oint_S \boldsymbol{c}/\|\boldsymbol{r}-\boldsymbol{r}'\| \cdot \boldsymbol{n}\, da\)</span> 이며 경계 조건에 의해 <span class="math inline">\(\boldsymbol{0}\)</span> 이 된다. 또한 <span class="math inline">\(\boldsymbol{c}= \nabla \times \boldsymbol{P}\)</span> 이므로 <span class="math inline">\(\nabla \boldsymbol{\cdot \boldsymbol{c}} = \nabla \boldsymbol{\cdot}(\nabla \times \boldsymbol{P})=\boldsymbol{0}\)</span> 이다. 즉 <span class="math inline">\(\nabla(\nabla \cdot \boldsymbol{A}(\boldsymbol{r})) = \boldsymbol{0}\)</span> 이다.</p>
-<p>이제 <span class="math inline">\(\nabla^2\boldsymbol{A}\)</span> 를 구해보자. <a href="#eq-VectorCalculus_hemlhomtz_1" class="quarto-xref">식&nbsp;<span>1.1</span></a> 을 이용하면</p>
+<p>여기서 첫번째 적분은 <span class="math inline">\(\oint_S \boldsymbol{c}/\|\boldsymbol{r}-\boldsymbol{r}'\| \cdot \boldsymbol{n}\, da\)</span> 이며 경계 조건에 의해 <span class="math inline">\(\boldsymbol{0}\)</span> 이 된다. 또한 <span class="math inline">\(\boldsymbol{c}= \nabla \times \boldsymbol{P}\)</span> 이므로 <span class="math inline">\(\nabla \boldsymbol{\cdot \boldsymbol{c}} = \nabla \boldsymbol{\cdot}(\nabla \times \boldsymbol{P})=\boldsymbol{0}\)</span> 이다. 즉 <span class="math inline">\(\nabla(\nabla \cdot \boldsymbol{C}(\boldsymbol{r})) = \boldsymbol{0}\)</span> 이다.</p>
+<p>이제 <span class="math inline">\(\nabla^2\boldsymbol{C}\)</span> 를 구해보자. <a href="#eq-VectorCalculus_hemlhomtz_1" class="quarto-xref">식&nbsp;<span>1.1</span></a> 을 이용하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 \nabla^2 A_j(\boldsymbol{r}) = \dfrac{1}{4\pi} \int c_j(\boldsymbol{r}')\nabla^2 \left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right)\, d^3 = -c_j(\boldsymbol{r})
 \end{aligned}
 \]</span></p>
-<p>임을 안다. 즉 <span class="math inline">\(\nabla \times (\nabla \times \boldsymbol{A})= \boldsymbol{c}\)</span> 이다.</p>
+<p>임을 안다. 즉 <span class="math inline">\(\nabla \times (\nabla \times \boldsymbol{C})= \boldsymbol{c}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="cor-VectorCalculus_existance_of_scalar_potential_for_curl_zero_vector_field" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 1.1</strong></span> 헬름홀츠 정리의 조건을 만족하는 <span class="math inline">\(\boldsymbol{P}\)</span> 에 대해 <span class="math inline">\(\nabla \boldsymbol{\cdot P}=0\)</span> 이면 <span class="math inline">\(\boldsymbol{P}=-\nabla \Phi\)</span> 로 표현 할 수 있다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>헬름홀츠 정리에 의해 <span class="math inline">\(\boldsymbol{P}=-\nabla \Phi + \nabla \times \boldsymbol{C}\)</span> 로 표현 할 수 있다. <span class="math inline">\(\nabla \times \boldsymbol{P}=0\)</span> 이면 <span class="math inline">\(\nabla \times (\nabla \times \boldsymbol{C})=\boldsymbol{0}\)</span> 이며 헬름홀츠 정리 증명의 마지막에서 <span class="math inline">\(\boldsymbol{c}=\boldsymbol{0}\)</span> 이므로 <span class="math inline">\(\boldsymbol{C}=\boldsymbol{0}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="cor-VectorCalculus_existance_of_vector_potential_for_divergence_zero_vector_field" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 1.2</strong></span> 헬름홀츠 정리의 조건을 만족하는 <span class="math inline">\(\boldsymbol{P}\)</span> 에 대해 <span class="math inline">\(\nabla \times \boldsymbol{P}=0\)</span> 이면 <span class="math inline">\(\boldsymbol{P}=\nabla \times \boldsymbol{C}\)</span> 로 표현 할 수 있다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>헬름홀츠 정리의 증명 과정에서 <span class="math inline">\(s(\boldsymbol{r})=\nabla \boldsymbol{\cdot P}=0\)</span> 이므로 <span class="math inline">\(\Phi = 0\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
 
 
