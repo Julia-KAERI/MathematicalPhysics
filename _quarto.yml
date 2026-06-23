@@ -44,6 +44,9 @@ book:
       - src/complex/complex2.qmd
       - src/complex/complex3.qmd
 
+    - part: 특수함수
+      chapters : 
+      - src/special_functions/legendre.qmd
     # - src/figure/figure1.qmd
     # - src/figure/figure-test.qmd
 
