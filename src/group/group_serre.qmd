@@ -1,0 +1,106 @@
+---
+title: "Serre : Linear Representations of Finite Group"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+{{< include ../../latexmacros.qmd >}}
+
+> *이 장에서는 @Serre1977Linear 의 Part $\textrm{I}$ 를 정리한다.*
+
+
+## 선형 표현 {#sec-Group_Serre_1}
+
+### 정의들 {#sec-Group_Serre_1_1}
+
+#### **벡터공간과 행렬**
+
+- $\C$-벡터 공간 $V$ 에 대해 $V$ 에서 $V$ 로의 선형사상의 집합을 $\mathcal{L}(V)$, 동형사상의 집합을 $\text{GL}(V)$ 라고 한다.
+- $A\in \text{GL}(V)$ 이면 $A^{-1}\in \text{GL}(V)$ 이다.
+- $V$ 가 $n$ 개의 유한 기저 $\mathcal{B}=(e_i)$ 를 가지면 $A\in \mathcal{L}(V)$ 는 $n\times n$ 행렬로 표현된다. 이 행렬을 $[A]_\mathcal{B}$, 혹은 혼동의 여지가 없을 경우 단순히 $A$ 라고 표기한다. 행렬 $A$ 의 $i$ 행 $j$ 열 성분을 $A_{ij}$ 라고 쓴다.
+- $A(e_i) = \sum_i A_{ij}e_i$ 이다. 
+- $A\in \mathcal{L}(V)$ 가 동형사상인 것과 $\det (A)\ne 0$ 인것은 동치이다.
+- 따라서 $\text{GL}(V)$ 는 $n$ 차 정사각행렬과 동등하다.
+
+
+
+::: {.callout-note icon="false"}
+
+#### **선형 표현**
+
+::: {#def-Group_Serre_linear_representation}
+
+벡터공간 $V$ 와 유한군 $G$ 에 대해 $\rho\in \text{Hom}(G,\,GL(V))$ 를 $G$ 의 $V$ 에서의 **선형 표현 (linear representation)** 이라고 한다. $G,\,V$ 에 대한 선형 표현 $\rho$ 가 있을 때 $V$ 를 $G$ 에 대한 **표현 공간 (representation space)** 혹은 그냥 **표현 (representation)** 이라고 한다.
+
+:::
+:::
+
+다음은 쉽게 보일 수 있다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_Serre_basic_properties_of_representation}
+
+
+@def-Group_Serre_linear_representation 로부터 모든 $a,\,b\in G$ 에 대해 다음이 성립한다.
+
+$$
+\rho(ab)=\rho(a)\rho(b),\qquad \rho(1_G)= I,\qquad \rho(a^{-1}) = (\rho(a))^{-1}
+$$
+
+:::
+
+</div>
+
+</br>
+
+$V$ 가 $n$ 차원 벡터공간일 때 우리는 $n$ 차 표현을 생각한다고 한다. $\mathcal{B}=(e_i)$ 가 $V$ 의 기저이고 $a \in G$ 에 대해 $\rho(a)$ 의 이 기저에서의 행렬표현을 $[\rho(s)]_\mathcal{B}$ 라고 하면 
+
+$$
+\forall s,\,t\in G,\, [\rho(st)]_\mathcal{B} = [\rho(s)]_\mathcal{B}[\rho(t)]_\mathcal{B}
+$$
+
+이어야 한다. 
+
+::: {.callout-note icon="false"}
+
+#### **닮은 표현**
+
+::: {#def-Group_Serre_similar_representation}
+
+$\rho\in \text{Hom}(G,\,V)$, $\rho'\in \text{Hom}(G,\,V')$ 일 때 어떤 동형사상 $\tau\in \text{Iso}(V,\,V')$ 이 존재하여 각각의 $g\in G$ 에 대해
+
+$$
+\tau \circ \rho(g) = \rho'(g)\circ \tau
+$$
+
+일 때 $\rho$ 와 $\rho'$ 은 **닮았다 (be similar)** 라고 하고 $\rho \sim \rho'$ 으로 표기한다.
+
+:::
+:::
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-Group_Serre_similar_representation}
+
+$\rho,\,\rho'$ 이 @def-Group_Serre_similar_representation 와 같고 닮았다고 하자. $\rho,\,\rho'$ 의 $g\in G$ 에 대한 행렬표현을 $R_g,\,R'_g$ 라고 하면 각각의 $g\in G$ 에 대해
+
+$$
+TR_g = R'_gT
+$$
+
+를 만족하는 행렬 $T$ 가 존재한다.
+:::
+
+</div>
+
+::: {.proof}
+
+$V$ 의 기저 $\mathcal{B}$ 와 $V'$ 의 기저 $\mathcal{B}'$ 에 대해 $R_g=[\rho (g)]_\mathcal{B}$, $R'_g =[\rho(g)]_{\mathcal{B}'}$ 이다. $T=[\tau]_\mathcal{B}^{\mathcal{B}'}$ 라고 하면 
+
+$$
+[\tau \circ \rho(g)]
+$$
+:::
