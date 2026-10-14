@@ -993,11 +993,17 @@ $$
 a_{2k} = (-1)^k \dfrac{a_0 n!}{2^{2k} k! (n+k)!}.
 $$
 
-$n$ 에 대한 방정식의 해를 $J_n(x)$ 라고 하면 (이 함수를 베셀 함수라고 한다) 아래와 같다.
+이 방정식의 해는
 
 $$
-J_n(x) = a_0 2^n n! \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(n+j)!}\left(\dfrac{x}{2}\right)^{n+2j}
+y(x) = a_0 2^n n! \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(n+j)!} \left(\dfrac{x}{2}\right)^{n+2j}.
+$$ {#eq-DE_afrken_7_48}
+
+이다. 그러나 이 식보다 $a_0 = 1/(2^n n!)$ 로 놓았을 때 $n$ 에 대한 방정식의 해를 제 1종 베셀 함수 $J_n(x)$ 라고 하며,
+
 $$
+J_n(x) = \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(n+j)!}\left(\dfrac{x}{2}\right)^{n+2j}.
+$$ {#eq-DE_arfken_7_49}
 
 **(2) $s=-n < 0$ 인 경우**
 

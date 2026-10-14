@@ -1,0 +1,28 @@
+---
+title: "베셀 함수"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+--- 
+
+
+## 제 1종 베셀 함수 $J_\nu(x)$ {#sec-SF_first_kind_bessel_functions}
+
+::: {.callout-note icon="false"}
+
+#### 제 1종 베셀 함수
+
+음이 아닌 정수 $\nu$ 에 대해 아래의 베셀방정식을 만족하는 $J_\nu (x)$ 를 제 1종 베셀 함수라고 한다.
+
+$$
+x^2 J_\nu ''  + x J_\nu' + (x^2-\nu^2) J_\nu = 0.
+$$ {#eq-SF_differential_equation_for_the_first_kind_bessel_function}
+
+:::
+
+우리는 이미 @sec-DE_ODE_frobenius_bessel 에서 프로베니우스 방법을 이용하여 해 $J_\nu (x)$ 를 구했다. (@eq-DE_arfken_7_49)
+
+$$
+J_\nu(x) = \sum_{j=0}^\infty \dfrac{(-1)^j}{j!(\nu+j)!}\left(\dfrac{x}{2}\right)^{\nu+2j}.
+$$ {#eq-DE_arfken_7_49}

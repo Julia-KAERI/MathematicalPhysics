@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,10 +63,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fb9598eb1c5cfbbdb431b8fbd0b2952f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-43fbbf0c4111fdd0354245fac17a09d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,8 +95,22 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -229,7 +246,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/group/group_Lie1_SO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">\(SO(N)\)</span> 을 중심으로</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">리 군과 리 대수 : <span class="math inline">SO(N)</span> 을 중심으로</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,8 +287,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/group/group_serre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Serre : Linear Representations of Finite Group</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/group/group_aux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">보충자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,19 +311,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/ode1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 I. 기본개념과 1차, 2차 상미분 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/ode2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">상미분 방정식 II. 비제차 비선형 상미분 방정식과 스튀름-리우빌 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/differential_equation/pde.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">편미분 방정식의 이론적 배경</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,19 +340,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">복소 함수의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특이점과 유수 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/complex/complex3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">복소함수의 적분과 합</span></span></a>
   </div>
 </li>
       </ul>
@@ -345,8 +368,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/special_functions/bessel_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">베셀 함수</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/special_functions/legendre.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">르장드르 다항식과 구면조화함수</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">르장드르 다항식과 구면조화함수</span></span></a>
   </div>
 </li>
       </ul>
@@ -399,10 +428,10 @@ window.Quarto = {
 <!-- \newcommand{\hom}{\text{Hom}}
 \newcommand{\iso}{\text{Iso}}
 \newcommand{\aut}{\text{Aut}} -->
-<p><span class="math display">\[
+<p><span class="math display">
 \DeclarePairedDelimiters{\set}{\{}{\}}
 \DeclareMathOperator*{\argmax}{argmax}
-\]</span></p>
+</span></p>
 </div>
 <p><br></p>
 <p>여기서는 원자가 결정 퍼텐셜 안에 놓였을 때 원자 에너지 준위가 갈라지는 현상, 즉 결정장 갈라짐(cryatal-field splitting) 에 대해 알아본다. 결정장 갈라짐은 군 이론의 비교적 간단한 응용일 뿐만 아니라 군 이론을 고체물리학에 적용할 때 자주 사용되는 고대칭에서 저대칭으로의 전이 과정을 잘 보여주는 좋은 사례이다. 이 장에서는 또한 3차원 회전군의 기약표현에 대해서도 결정장 이론과 함께 다룬다.</p>
@@ -414,27 +443,27 @@ window.Quarto = {
 <div id="tbl-Group_D3_character_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_D3_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;10.1: <span class="math inline">\(D_3\)</span> Character table
+표&nbsp;10.1: <span class="math inline">D_3</span> Character table
 </figcaption>
 <div aria-describedby="tbl-Group_D3_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/D3_character_table.png" class="img-fluid figure-img" width="350">
 </div>
 </figure>
 </div>
-<p><span class="math inline">\(D_3\)</span> 에 대한 표현을 다시 보고 표준적인 character table 작성법을 다시 정리해보자.</p>
+<p><span class="math inline">D_3</span> 에 대한 표현을 다시 보고 표준적인 character table 작성법을 다시 정리해보자.</p>
 <ul>
-<li>1차원 기약표현의 레이블은 <span class="math inline">\(A,\,B\)</span> 를 사용한다. 주축 회전에 대한 character 가 <span class="math inline">\(+1\)</span> 일 경우는 <span class="math inline">\(A\)</span>, <span class="math inline">\(-1\)</span> 일 경우는 <span class="math inline">\(B\)</span> 를 사용한다. 2차원 기약표현의 레이블은 <span class="math inline">\(E\)</span>, 3차원 기약표현의 레이블은 <span class="math inline">\(T\)</span> 를 사용한다. <span class="math inline">\(A\)</span> 타입 기약표현이 여러개 있을 경우 <span class="math inline">\(A_1\)</span> 은 trivial representation 이다. 단 하나 있을 경우는 <span class="math inline">\(A\)</span> 가 trivial representation 이다.</li>
-<li>동일한 차원의 기약표현이 여러개일 경우 <span class="math inline">\(1,\,2\)</span> 와 같은 아래첨자 인덱스가 붙는다. 혹은 <span class="math inline">\({}',\, {}''\)</span> 와 같은 기호로 구분하기도 한다. 반전대칭이 존재할경우 대칭의 even/odd 에 따라 <span class="math inline">\(g,\,u\)</span> 아래첨자가 붙는다. (<em>gerade</em>, <em>ungreade</em>)</li>
-<li>다른 열에는 각 기약표현이 어떻게 변환하는지를 보이기 위해 좌표, 좌표의 2차식, <span class="math inline">\(R_x,\,R_y,\,R_z\)</span> 와 좌표축에 대한 회전을 넣는다. <a href="../../src/group/group_quantum1_schroedinger_equation_group.html#sec-Group_character_table_and_basis_function_D3_case">Character Table 과 기저 함수 - <span class="math inline">\(D_3\)</span> 의 경우</a> 를 참고하라.</li>
+<li>1차원 기약표현의 레이블은 <span class="math inline">A,\,B</span> 를 사용한다. 주축 회전에 대한 character 가 <span class="math inline">+1</span> 일 경우는 <span class="math inline">A</span>, <span class="math inline">-1</span> 일 경우는 <span class="math inline">B</span> 를 사용한다. 2차원 기약표현의 레이블은 <span class="math inline">E</span>, 3차원 기약표현의 레이블은 <span class="math inline">T</span> 를 사용한다. <span class="math inline">A</span> 타입 기약표현이 여러개 있을 경우 <span class="math inline">A_1</span> 은 trivial representation 이다. 단 하나 있을 경우는 <span class="math inline">A</span> 가 trivial representation 이다.</li>
+<li>동일한 차원의 기약표현이 여러개일 경우 <span class="math inline">1,\,2</span> 와 같은 아래첨자 인덱스가 붙는다. 혹은 <span class="math inline">{}',\, {}''</span> 와 같은 기호로 구분하기도 한다. 반전대칭이 존재할경우 대칭의 even/odd 에 따라 <span class="math inline">g,\,u</span> 아래첨자가 붙는다. (<em>gerade</em>, <em>ungreade</em>)</li>
+<li>다른 열에는 각 기약표현이 어떻게 변환하는지를 보이기 위해 좌표, 좌표의 2차식, <span class="math inline">R_x,\,R_y,\,R_z</span> 와 좌표축에 대한 회전을 넣는다. <a href="../../src/group/group_quantum1_schroedinger_equation_group.html#sec-Group_character_table_and_basis_function_D3_case">Character Table 과 기저 함수 - <span class="math inline">D_3</span> 의 경우</a> 를 참고하라.</li>
 </ul>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_character_table_of_C2v" class="theorem example">
-<p><span class="theorem-title"><strong>예제 10.1 (<span class="math inline">\(C_{2v}\)</span> Character table)</strong></span> <span class="math inline">\(C_{2v}\)</span> 는 4개의 원소로 구성된 군이며 <span class="math inline">\(\sigma_v,\, \sigma'_{v}\)</span> 는 각각 <span class="math inline">\(xz\)</span>, <span class="math inline">\(yz\)</span> 평면에 대한 거울상 반사이다. 각각이 아벨군이므로 1차원 기약표현만이 존재한다. 주축을 <span class="math inline">\(z\)</span> 축으로 삼으며 character 에 대한 직교정리를 사용하여 정리하면 아래 표와 같다. 여기서는 앞의 규칙 대로 <span class="math inline">\(A\)</span> 형 기약표현 2개와 <span class="math inline">\(B\)</span> 형 기약표현 2개만 존재하며 각각 아래와 같이 레이블울 붙였다. 아직 좌표에 대한 대칭은 정해지지 않았다.</p>
+<p><span class="theorem-title"><strong>예제 10.1 (<span class="math inline">C_{2v}</span> Character table)</strong></span> <span class="math inline">C_{2v}</span> 는 4개의 원소로 구성된 군이며 <span class="math inline">\sigma_v,\, \sigma'_{v}</span> 는 각각 <span class="math inline">xz</span>, <span class="math inline">yz</span> 평면에 대한 거울상 반사이다. 각각이 아벨군이므로 1차원 기약표현만이 존재한다. 주축을 <span class="math inline">z</span> 축으로 삼으며 character 에 대한 직교정리를 사용하여 정리하면 아래 표와 같다. 여기서는 앞의 규칙 대로 <span class="math inline">A</span> 형 기약표현 2개와 <span class="math inline">B</span> 형 기약표현 2개만 존재하며 각각 아래와 같이 레이블울 붙였다. 아직 좌표에 대한 대칭은 정해지지 않았다.</p>
 <div id="tbl-Group_C2v_character_table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Group_C2v_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-표&nbsp;10.2: <span class="math inline">\(C_{2v}\)</span> Character table
+표&nbsp;10.2: <span class="math inline">C_{2v}</span> Character table
 </figcaption>
 <div aria-describedby="tbl-Group_C2v_character_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/C2v_character_table.png" class="img-fluid figure-img" width="300">
@@ -442,13 +471,13 @@ window.Quarto = {
 </figure>
 </div>
 <p>좌표에 대한 변환은 다음과 같다.</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \hat{E}\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} x \\ y \\ z\end{bmatrix}, \quad \hat{C}_2\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} -x \\ -y \\ z\end{bmatrix},\quad \hat{\sigma}_v\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} x \\ -y \\ z\end{bmatrix}, \quad \hat{\sigma}'_v\begin{bmatrix} x \\ y \\ z\end{bmatrix} = \begin{bmatrix} -x \\ y \\ z\end{bmatrix}
-\]</span></p>
+</span></p>
 <ul>
-<li><span class="math inline">\(x\)</span> 는 <span class="math inline">\(B_1\)</span>, <span class="math inline">\(y\)</span> 는 <span class="math inline">\(B_2\)</span>, <span class="math inline">\(z\)</span> 는 <span class="math inline">\(A_1\)</span> 과 같은 형태로 변환한다는 것을 안다. 따라서 <span class="math inline">\(xy\)</span> 는 <span class="math inline">\(A_2\)</span>, <span class="math inline">\(xz\)</span> 는 <span class="math inline">\(B_1\)</span>, <span class="math inline">\(yz\)</span> 는 <span class="math inline">\(B_2\)</span> 와 같이 변환한다.</li>
-<li><span class="math inline">\(x^2,\,y^2,\,z^2\)</span> 은 모두 <span class="math inline">\(A_1\)</span> 과 같이 변환한다.</li>
-<li><span class="math inline">\(R_z = xp_y-yp_x\)</span> 는 <span class="math inline">\(A_2\)</span> 와 같이 변화한다. <span class="math inline">\(R_x,\,R_y\)</span> 에 대해서도 각각 <span class="math inline">\(B_2,\,B_1\)</span> 과 같이 변환된다는 것을 확인 할 수 있다.</li>
+<li><span class="math inline">x</span> 는 <span class="math inline">B_1</span>, <span class="math inline">y</span> 는 <span class="math inline">B_2</span>, <span class="math inline">z</span> 는 <span class="math inline">A_1</span> 과 같은 형태로 변환한다는 것을 안다. 따라서 <span class="math inline">xy</span> 는 <span class="math inline">A_2</span>, <span class="math inline">xz</span> 는 <span class="math inline">B_1</span>, <span class="math inline">yz</span> 는 <span class="math inline">B_2</span> 와 같이 변환한다.</li>
+<li><span class="math inline">x^2,\,y^2,\,z^2</span> 은 모두 <span class="math inline">A_1</span> 과 같이 변환한다.</li>
+<li><span class="math inline">R_z = xp_y-yp_x</span> 는 <span class="math inline">A_2</span> 와 같이 변화한다. <span class="math inline">R_x,\,R_y</span> 에 대해서도 각각 <span class="math inline">B_2,\,B_1</span> 과 같이 변환된다는 것을 확인 할 수 있다.</li>
 </ul>
 </div>
 </div>
@@ -460,31 +489,31 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_same_class_of_same_rotation_around_any_axis_id_3d_rotation_Group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 10.1</strong></span> 3차원에서의 회전군에 대해 정해진 각 <span class="math inline">\(\alpha\)</span> 만큼 회전시키는 모든 연산은 같은 클래스에 속한다.</p>
+<p><span class="theorem-title"><strong>명제 10.1</strong></span> 3차원에서의 회전군에 대해 정해진 각 <span class="math inline">\alpha</span> 만큼 회전시키는 모든 연산은 같은 클래스에 속한다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><em>Accept without proof</em></p>
 </div>
-<p>따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic functions) <span class="math inline">\(Y_l^m( \theta,\, \varphi)\)</span> 는 르장드르 연관 함수(associated Legendre function) <span class="math inline">\(P_l^m\)</span> 과 음이 아닌 정수 <span class="math inline">\(l\)</span> 그리고 <span class="math inline">\(|m|\le l\)</span> 인 정수 <span class="math inline">\(m\)</span> 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 <span class="citation" data-cites="Arfken2013Mathematical">Arfken et al. (<a href="#ref-Arfken2013Mathematical" role="doc-biblioref">2013</a>)</span> 을 참고하라.)</p>
-<p><span id="eq-Group_definition_of_spherical_harmomics"><span class="math display">\[
+<p>따라서 3차원 회전군에는 무한개의 기약표현이 존재한다. 여기서 사용할 구면조화 함수(Spherical harmonic functions) <span class="math inline">Y_l^m( \theta,\, \varphi)</span> 는 르장드르 연관 함수(associated Legendre function) <span class="math inline">P_l^m</span> 과 음이 아닌 정수 <span class="math inline">l</span> 그리고 <span class="math inline">|m|\le l</span> 인 정수 <span class="math inline">m</span> 에 대해 아래와 같이 정의된다. (구면조화함수에 대해 자세한 것은 <span class="citation" data-cites="Arfken2013Mathematical">Arfken et al. (<a href="#ref-Arfken2013Mathematical" role="doc-biblioref">2013</a>)</span> 을 참고하라.)</p>
+<p><span id="eq-Group_definition_of_spherical_harmomics"><span class="math display">
 Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}.
-\tag{10.1}\]</span></span></p>
-<p>즉 정해진 <span class="math inline">\(l\)</span> 값에 대해 <span class="math inline">\(m\)</span> 값은 <span class="math inline">\(2l+1\)</span> 가지가 될 수 있다. 또한 다음의 성질을 갖는다는 것이 잘 알려져 있다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\displaystyle \hat{L}^2 Y_{l}^m (\theta,\, \varphi) = l(l+1)\hbar^2 Y_l^m (\theta,\, \varphi)\)</span>,</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle \hat{L}_z Y_l^m = m\hbar Y_l^m\)</span>,</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\displaystyle \int Y_l^m (Y_{l'}^{m'})^\ast \, d\Omega = \delta_{ll'}\delta_{mm'}\)</span>.</p>
+\tag{10.1}</span></span></p>
+<p>즉 정해진 <span class="math inline">l</span> 값에 대해 <span class="math inline">m</span> 값은 <span class="math inline">2l+1</span> 가지가 될 수 있다. 또한 다음의 성질을 갖는다는 것이 잘 알려져 있다.</p>
+<p> (<span class="math inline">1</span>) <span class="math inline">\displaystyle \hat{L}^2 Y_{l}^m (\theta,\, \varphi) = l(l+1)\hbar^2 Y_l^m (\theta,\, \varphi)</span>,</p>
+<p> (<span class="math inline">2</span>) <span class="math inline">\displaystyle \hat{L}_z Y_l^m = m\hbar Y_l^m</span>,</p>
+<p> (<span class="math inline">3</span>) <span class="math inline">\displaystyle \int Y_l^m (Y_{l'}^{m'})^\ast \, d\Omega = \delta_{ll'}\delta_{mm'}</span>.</p>
 <p><br></p>
 <p>구면조화함수와 3차원 회전군에 대해 아래 명제도 증명 없이 사용하기로 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-Group_spherical_harmonics_are_basis_of_3d_rotation_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 10.2</strong></span> 구면조화함수에서 <span class="math inline">\(\theta,\, \varphi\)</span> 를 정하는 기준이 되는 축(이를 polar axis 라고 하며 보통 <span class="math inline">\(z\)</span> 축으로 정한다.) 을 회전연산 <span class="math inline">\(R\)</span> 을 통해 바꾸어 <span class="math inline">\(\theta',\, \varphi'\)</span> 이 되었다고 하자. 이 때 다음이 성랍한다.</p>
-<p><span id="eq-Group_represestation_of_3d_rotation_by_spherical_harmonic_functions"><span class="math display">\[
+<p><span class="theorem-title"><strong>명제 10.2</strong></span> 구면조화함수에서 <span class="math inline">\theta,\, \varphi</span> 를 정하는 기준이 되는 축(이를 polar axis 라고 하며 보통 <span class="math inline">z</span> 축으로 정한다.) 을 회전연산 <span class="math inline">R</span> 을 통해 바꾸어 <span class="math inline">\theta',\, \varphi'</span> 이 되었다고 하자. 이 때 다음이 성랍한다.</p>
+<p><span id="eq-Group_represestation_of_3d_rotation_by_spherical_harmonic_functions"><span class="math display">
 \hat{R}Y_l^m (\theta',\, \varphi') = \sum_{m'} D^{(l)} (R)_{m'm} Y_{l}^m (\theta,\, \varphi).
-\tag{10.2}\]</span></span></p>
-<p>여기서 <span class="math inline">\(D^{(l)}(R)\)</span> 은 회전 연산 <span class="math inline">\(R\)</span> 에 대한 <span class="math inline">\((2l+1)\)</span> 차원 기약표현이다. 즉 <span class="math inline">\(2l+1\)</span> 개의 함수 <span class="math inline">\(\{Y_l^m\}\)</span> 은 3차원 회전군의 <span class="math inline">\(2l+1\)</span> 차원 표현의 기저가 된다.</p>
+\tag{10.2}</span></span></p>
+<p>여기서 <span class="math inline">D^{(l)}(R)</span> 은 회전 연산 <span class="math inline">R</span> 에 대한 <span class="math inline">(2l+1)</span> 차원 기약표현이다. 즉 <span class="math inline">2l+1</span> 개의 함수 <span class="math inline">\{Y_l^m\}</span> 은 3차원 회전군의 <span class="math inline">2l+1</span> 차원 표현의 기저가 된다.</p>
 </div>
 </div>
 <p><br></p>
@@ -494,32 +523,32 @@ Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} 
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_character_of_rotation_group_in_3d" class="theorem example">
-<p><span class="theorem-title"><strong>예제 10.2 (3차원 회전변환의 character)</strong></span> <span class="math inline">\(z\)</span> 축으로 <span class="math inline">\(-\alpha\)</span> 만큼의 회전 변환을 <span class="math inline">\(R_\alpha\)</span> 라고 하자. 그렇다면</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 10.2 (3차원 회전변환의 character)</strong></span> <span class="math inline">z</span> 축으로 <span class="math inline">-\alpha</span> 만큼의 회전 변환을 <span class="math inline">R_\alpha</span> 라고 하자. 그렇다면</p>
+<p><span class="math display">
 \hat{R}_\alpha Y_l^m(\theta,\, \varphi) = Y_l^m(\theta,\, \varphi - \alpha) = e^{-im\alpha} Y_{l}^m (\theta,\, \varphi)
-\]</span></p>
+</span></p>
 <p>이며 이에대한 표현은 대각행렬로</p>
-<p><span id="eq-Group_representation_of_rotation_group_in_3d"><span class="math display">\[
+<p><span id="eq-Group_representation_of_rotation_group_in_3d"><span class="math display">
 D^{(l)}(R_\alpha) = \begin{bmatrix} e^{-il\alpha} &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; e^{-(l-1)\alpha} &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp; e^{il\alpha}\end{bmatrix}
-\tag{10.3}\]</span></span></p>
+\tag{10.3}</span></span></p>
 <p>이며, character 는</p>
-<p><span id="eq-Group_character_of_3d_rotation_by_alpha"><span class="math display">\[
+<p><span id="eq-Group_character_of_3d_rotation_by_alpha"><span class="math display">
 \chi^{(l)}(R_\alpha) = e^{-il\alpha}(1+e^{i\alpha} + \cdots + e^{2il\alpha}) = \dfrac{\sin (l+\frac{1}{2})\alpha}{\sin (\alpha/2)}
-\tag{10.4}\]</span></span></p>
-<p>이다. 앞서 언급했듯이 임의의 각 <span class="math inline">\(\alpha\)</span> 만큼의 모든 회전은 같은 클래스에 속하기 때문에 이 클래스의 character 는 <a href="#eq-Group_character_of_3d_rotation_by_alpha" class="quarto-xref">식&nbsp;<span>10.4</span></a> 와 같다.</p>
+\tag{10.4}</span></span></p>
+<p>이다. 앞서 언급했듯이 임의의 각 <span class="math inline">\alpha</span> 만큼의 모든 회전은 같은 클래스에 속하기 때문에 이 클래스의 character 는 <a href="#eq-Group_character_of_3d_rotation_by_alpha" class="quarto-xref">식&nbsp;<span>10.4</span></a> 와 같다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-Group_character_table_of_D3" class="theorem example">
-<p><span class="theorem-title"><strong>예제 10.3 (inversion 의 character)</strong></span> 이제 반전 <span class="math inline">\(i\)</span> 에 대한 charcter 를 알아보자. 구면조화함수의 성질에 의해</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 10.3 (inversion 의 character)</strong></span> 이제 반전 <span class="math inline">i</span> 에 대한 charcter 를 알아보자. 구면조화함수의 성질에 의해</p>
+<p><span class="math display">
 \hat{i}Y_l^m(\theta,\, \varphi) = Y_l^m(\pi -\theta,\, \varphi+\pi) = (-1)^l Y_l^m(\theta,\, \varphi)
-\]</span></p>
-<p>이다. 따라서, <span class="math inline">\(D^{l}(i)\)</span> 도 대각행렬이며</p>
-<p><span id="eq-Group_character_of_3d_inversion"><span class="math display">\[
+</span></p>
+<p>이다. 따라서, <span class="math inline">D^{l}(i)</span> 도 대각행렬이며</p>
+<p><span id="eq-Group_character_of_3d_inversion"><span class="math display">
 \chi^{(l)}(i) = \sum_{m=-l}^l (-1)^l = (-1)^l(2l+1)
-\tag{10.5}\]</span></span></p>
+\tag{10.5}</span></span></p>
 <p>이다.</p>
 </div>
 </div>
@@ -535,37 +564,37 @@ D^{(l)}(R_\alpha) = \begin{bmatrix} e^{-il\alpha} &amp; 0 &amp; \cdots &amp; 0 \
 <p><span class="proof-title"><em>(증명)</em>. </span><em>Accept without proof</em></p>
 </div>
 <p><br></p>
-<p>3차원 회전에 대한 홀수차원 기약표현은 구면조화함수를 기저로 하는 그것이다. 만약 각운동량이 반정수(음이 아닌 정수 <span class="math inline">\(s\)</span> 에 대해 <span class="math inline">\((2s+1)/2\)</span>) 라면 짝수차원의 기약표현이 존재한다. 여기에 대해서는 다음에 다루기로 하자.</p>
+<p>3차원 회전에 대한 홀수차원 기약표현은 구면조화함수를 기저로 하는 그것이다. 만약 각운동량이 반정수(음이 아닌 정수 <span class="math inline">s</span> 에 대해 <span class="math inline">(2s+1)/2</span>) 라면 짝수차원의 기약표현이 존재한다. 여기에 대해서는 다음에 다루기로 하자.</p>
 <p><br></p>
 </section>
 </section>
 <section id="원자-에너지의-결정장-갈라짐" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="원자-에너지의-결정장-갈라짐"><span class="header-section-number">10.2</span> 원자 에너지의 결정장 갈라짐</h2>
-<p>결정 내의 원자나 이온은 자유 상태일 때와는 다르게 등방적이지 않은 포텐셜의 영향을 받게 된다. 자유상태의 입자나 이온은 모든 3차원 회전군과 반전에 대해 대칭이지만 이 비등방 포텐셜의 영향으로 원래 군에 대한 유한 부분군에 대해서만 대칭이다. 이 때 3차원 회전군에서는 기약표현이었던 것이 이 유한 부분군의 표현에서는 이 기약성(irreducibility) 가 깨져버리며, 따라서 degeneracy 가 축소된다. 즉 에너지 레벨이 갈라지게 되며 이것을 <strong>결정장 갈라짐(Crystall field splitting)</strong> 이라고 한다. 순전히 결정장에 의한 에너지 갈라짐을 <strong>zero-field splitting</strong> 이라고 하며 외부 자기장 등을 가했을 때는 대칭이 더 깨지게 된다. 결정장 갈라짐의 크기는 관련된 이온과 결정장의 특성에 따라 <span class="math inline">\(1\, \mu\text{eV}\)</span> 에서 <span class="math inline">\(6\, \text{eV}\)</span> 정도로 그 크기 차이가 매우 크다. 고체에서 이 에너지 영역의 기여는 궤도-스핀</p>
-<p> (<span class="math inline">\(1\)</span>) 희</p>
+<p>결정 내의 원자나 이온은 자유 상태일 때와는 다르게 등방적이지 않은 포텐셜의 영향을 받게 된다. 자유상태의 입자나 이온은 모든 3차원 회전군과 반전에 대해 대칭이지만 이 비등방 포텐셜의 영향으로 원래 군에 대한 유한 부분군에 대해서만 대칭이다. 이 때 3차원 회전군에서는 기약표현이었던 것이 이 유한 부분군의 표현에서는 이 기약성(irreducibility) 가 깨져버리며, 따라서 degeneracy 가 축소된다. 즉 에너지 레벨이 갈라지게 되며 이것을 <strong>결정장 갈라짐(Crystall field splitting)</strong> 이라고 한다. 순전히 결정장에 의한 에너지 갈라짐을 <strong>zero-field splitting</strong> 이라고 하며 외부 자기장 등을 가했을 때는 대칭이 더 깨지게 된다. 결정장 갈라짐의 크기는 관련된 이온과 결정장의 특성에 따라 <span class="math inline">1\, \mu\text{eV}</span> 에서 <span class="math inline">6\, \text{eV}</span> 정도로 그 크기 차이가 매우 크다. 고체에서 이 에너지 영역의 기여는 궤도-스핀</p>
+<p> (<span class="math inline">1</span>) 희</p>
 <div id="fig-Group_regular_octahedron_in_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Group_regular_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/octahedron_in_cube_2.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Group_regular_octahedron_in_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;10.1: 정사각형 내부에 그려진 정팔면체와 <span class="math inline">\(O\)</span> 군의 대칭 연산
+그림&nbsp;10.1: 정사각형 내부에 그려진 정팔면체와 <span class="math inline">O</span> 군의 대칭 연산
 </figcaption>
 </figure>
 </div>
-<p>위의 그림과 같이 정육면체 내의 정팔면체의 각 꼭지점에 전하 <span class="math inline">\(q\)</span> 를 띄는 같은 이온들이 위치한다고 하자. <span class="math inline">\(\mathcal{O}\)</span> 에서 한 꼭지점까지의 거리가 <span class="math inline">\(a\)</span> 일 때 중앙 <span class="math inline">\(\mathcal{O}\)</span> 근처의 <span class="math inline">\(\boldsymbol{r} = (x,\,y,\,z)\)</span> 에서 느끼는 전기포텐셜 <span class="math inline">\(V_C(\boldsymbol{r})\)</span> 은 <span class="math inline">\(r/a \ll 1\)</span> 조건에서 아래와 같이 근사된다.(<a href="#exr-electric_potential_by_neareast_ions_in-octaheron" class="quarto-xref">연습문제&nbsp;<span>10.1</span></a>)</p>
-<p><span id="eq-Group_potential_around_origin_by_octahedron_nearest_neighbor"><span class="math display">\[
+<p>위의 그림과 같이 정육면체 내의 정팔면체의 각 꼭지점에 전하 <span class="math inline">q</span> 를 띄는 같은 이온들이 위치한다고 하자. <span class="math inline">\mathcal{O}</span> 에서 한 꼭지점까지의 거리가 <span class="math inline">a</span> 일 때 중앙 <span class="math inline">\mathcal{O}</span> 근처의 <span class="math inline">\boldsymbol{r} = (x,\,y,\,z)</span> 에서 느끼는 전기포텐셜 <span class="math inline">V_C(\boldsymbol{r})</span> 은 <span class="math inline">r/a \ll 1</span> 조건에서 아래와 같이 근사된다.(<a href="#exr-electric_potential_by_neareast_ions_in-octaheron" class="quarto-xref">연습문제&nbsp;<span>10.1</span></a>)</p>
+<p><span id="eq-Group_potential_around_origin_by_octahedron_nearest_neighbor"><span class="math display">
 V_C(\boldsymbol{r})=\dfrac{35}{16 \pi \epsilon_0}\dfrac{q}{a^5}\left(x^4+y^4+z^4-\dfrac{3}{5}r^4\right).
-\tag{10.6}\]</span></span></p>
-<p>위 식은 <span class="math inline">\(O\)</span> 의 모든 대칭 연산에 대해 불변이며 <strong>cubic-field term</strong> 이라고 불린다. 우리는 원점 <span class="math inline">\(\mathcal{O}\)</span> 근처의 전기장에 관심이 있고, 전기 포텐셜은 이 영역 바깥의 전하에 대한 포텐셜이므로 라플라스 방정식을 만족해야 한다. 3차원 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi (\boldsymbol{r})\)</span> 의 해는 <span class="math inline">\(r^l Y_l^m (\theta,\, \varphi)\)</span> 의 선형결합이라는 것이 알려져 있다. 예를 들어 <span class="math inline">\(z\)</span> 축에 대한 회전 대칭이 존재한다면 전기 포텐셜 <span class="math inline">\(V_a\)</span> 의 상수항을 제외한 가장 낮은 차수의 항은</p>
-<p><span class="math display">\[
+\tag{10.6}</span></span></p>
+<p>위 식은 <span class="math inline">O</span> 의 모든 대칭 연산에 대해 불변이며 <strong>cubic-field term</strong> 이라고 불린다. 우리는 원점 <span class="math inline">\mathcal{O}</span> 근처의 전기장에 관심이 있고, 전기 포텐셜은 이 영역 바깥의 전하에 대한 포텐셜이므로 라플라스 방정식을 만족해야 한다. 3차원 라플라스 방정식 <span class="math inline">\nabla^2 \phi (\boldsymbol{r})</span> 의 해는 <span class="math inline">r^l Y_l^m (\theta,\, \varphi)</span> 의 선형결합이라는 것이 알려져 있다. 예를 들어 <span class="math inline">z</span> 축에 대한 회전 대칭이 존재한다면 전기 포텐셜 <span class="math inline">V_a</span> 의 상수항을 제외한 가장 낮은 차수의 항은</p>
+<p><span class="math display">
 V_a \sim r^2 Y_2^0 (\theta) \sim 3z^2 - r^2
-\]</span></p>
-<p>이다. 사방정계(orthorhombic) 대칭만을 가지고 있다면 전기포텐셜 <span class="math inline">\(V_r\)</span> 의 가장 낮은 차수의 항은</p>
-<p><span class="math display">\[
+</span></p>
+<p>이다. 사방정계(orthorhombic) 대칭만을 가지고 있다면 전기포텐셜 <span class="math inline">V_r</span> 의 가장 낮은 차수의 항은</p>
+<p><span class="math display">
 V_r \sim (ax^2+by^2) - (a+b)z^2
-\]</span></p>
-<p>이다(<a href="#exr-tinkham_4_2" class="quarto-xref">연습문제&nbsp;<span>10.2</span></a>). 이 때 <span class="math inline">\(V_r\)</span> 은 <span class="math inline">\(Y_2^0\)</span> 와 <span class="math inline">\((Y_2^2 + Y_2^{-2}) \sim (x^2-y^2)\)</span> 의 선형결합으로 둘 다 <span class="math inline">\(D_2\)</span> 대칭에 대해 불변이다.</p>
+</span></p>
+<p>이다(<a href="#exr-tinkham_4_2" class="quarto-xref">연습문제&nbsp;<span>10.2</span></a>). 이 때 <span class="math inline">V_r</span> 은 <span class="math inline">Y_2^0</span> 와 <span class="math inline">(Y_2^2 + Y_2^{-2}) \sim (x^2-y^2)</span> 의 선형결합으로 둘 다 <span class="math inline">D_2</span> 대칭에 대해 불변이다.</p>
 <p>위의 방법으로 결정장의 크기를 추정하는 것은 실제 값에 대한 대략적인 추정이지만 엄밀한 것과는 거리가 멀다. 실제로는 전자 파동함수의 겹침, 구형이 아닌 전하 분포, 그리고 exchange 상호작용에 의한 효과로 인해 꽤 차이가 난다. 물론 위의 효과들은 대칭에 영향을 주지 않는다.</p>
 <p><br></p>
 </section>
@@ -579,13 +608,13 @@ V_r \sim (ax^2+by^2) - (a+b)z^2
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(1/\sqrt{1-x},\, 1/\sqrt{1+x}\)</span> 의 테일러 전개는 다음과 같다. <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">1/\sqrt{1-x},\, 1/\sqrt{1+x}</span> 의 테일러 전개는 다음과 같다. <span class="math display">
 \begin{aligned}
 \dfrac{1}{\sqrt{1-x}} &amp;= 1 + \dfrac{1}{2}x + \dfrac{3}{8}x^2 + \dfrac{5}{16}x^3 + \dfrac{35}{128}x^4 + \cdots \\[0.3em]
 \dfrac{1}{\sqrt{1+x}} &amp;= 1 - \dfrac{1}{2}x + \dfrac{3}{4}x^2 - \dfrac{5}{16}x^3 + \dfrac{35}{128}x^4 + \cdots
 \end{aligned}
-\]</span> <span class="math inline">\(r/a \ll 1\)</span> 조건에서 테일러 전개하면</p>
-<p><span class="math display">\[
+</span> <span class="math inline">r/a \ll 1</span> 조건에서 테일러 전개하면</p>
+<p><span class="math display">
 \begin{aligned}
 \dfrac{1}{\sqrt{(x-a)^2+y^2+z^2}} &amp;=  \dfrac{1}{\sqrt{a^2 -2ax + r^2}} = \dfrac{1}{a} \dfrac{1}{\sqrt{1-(2x/a - r^2/a^2)}} \\[0.3em]
 &amp;= \dfrac{1}{a} \left[1 + \dfrac{1}{2}\left(\dfrac{2x}{a} - \dfrac{r^2}{a^2}\right) + \dfrac{3}{8}\left(\dfrac{2x}{a} - \dfrac{r^2}{a^2}\right)^2 \right . \\[0.3em]
@@ -593,51 +622,51 @@ V_r \sim (ax^2+by^2) - (a+b)z^2
 &amp;=\dfrac{1}{a} \left[1 + \dfrac{x}{a} + \dfrac{3x^2-r^2}{2a^2} + \dfrac{5x^3-3xr^2}{2a^3} + \dfrac{3r^4-30x^2r^2 + 35x^4}{8a^4} + \cdots \right] \\[0.3em]
 \dfrac{1}{\sqrt{(x+a)^2+y^2+z^2}} &amp;= \dfrac{1}{a}\left[1 - \dfrac{x}{a} + \dfrac{3x^2-r^2}{2a^2} - \dfrac{5x^3-3xr^2}{2a^3} + \dfrac{3r^4-30x^2r^2 + 35x^4}{8a^4} + \cdots\right]
 \end{aligned}
-\]</span></p>
-<p>이것을 <span class="math inline">\((0,\,\pm a,\, 0),\, (0,\,0,\, \pm a)\)</span> 에도 계산하고 더하면</p>
-<p><span class="math display">\[
+</span></p>
+<p>이것을 <span class="math inline">(0,\,\pm a,\, 0),\, (0,\,0,\, \pm a)</span> 에도 계산하고 더하면</p>
+<p><span class="math display">
 V_C(\boldsymbol{r}) = \dfrac{q}{4\pi\epsilon_0 a}\left[6 + \dfrac{35}{4a^4}\left(x^4+y^4+z^4-\dfrac{3}{5}r^4\right) + \cdots \right]
-\]</span></p>
+</span></p>
 <p>이다. 여기서 물리적으로 의미 없는 상수항을 빼고 나면 <a href="#eq-Group_potential_around_origin_by_octahedron_nearest_neighbor" class="quarto-xref">식&nbsp;<span>10.6</span></a> 이다.</p>
 </div>
 <br><br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-tinkham_4_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.2 (Tinkham 4.2)</strong></span> (<span class="math inline">\(a\)</span>) Orthorhombic 격자는 <span class="math inline">\(a\ne b \ne c,\, \alpha =\beta= \gamma = \pi/2\)</span> 이다(<a href="group_symmetry_group.html#tbl-Group_crystall_system" class="quarto-xref">표&nbsp;<span>8.5</span></a>). Orthorhombic 에서의 8면체 에 대한 전기 포텐셜 <span class="math inline">\(V_O\)</span> 를 4차항 까지 구하라.</p>
-<p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 의 결과는 상수항, 2개의 homogeneous 한 2차 다항식 항, 3개의 homogeneous 한 4차 다항식항으로 이루어졌으며 각각이 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi= 0\)</span> 을 만족함을 보이고, <span class="math inline">\(D_{2h}\)</span> 군의 대칭 연산에 대해 불변임을 보여라. 각각의 계수를 <span class="math inline">\(a,\,b,\,c\)</span> 로 표현하여라.</p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(a=b\ne c\)</span> 인 경우(tetragonal field) 와 <span class="math inline">\(a=b=c\)</span> 인 경우(cubic field) 에 대해서도 고려하라.</p>
+<p><span class="theorem-title"><strong>연습문제 10.2 (Tinkham 4.2)</strong></span> (<span class="math inline">a</span>) Orthorhombic 격자는 <span class="math inline">a\ne b \ne c,\, \alpha =\beta= \gamma = \pi/2</span> 이다(<a href="group_symmetry_group.html#tbl-Group_crystall_system" class="quarto-xref">표&nbsp;<span>8.5</span></a>). Orthorhombic 에서의 8면체 에 대한 전기 포텐셜 <span class="math inline">V_O</span> 를 4차항 까지 구하라.</p>
+<p>(<span class="math inline">b</span>) (<span class="math inline">a</span>) 의 결과는 상수항, 2개의 homogeneous 한 2차 다항식 항, 3개의 homogeneous 한 4차 다항식항으로 이루어졌으며 각각이 라플라스 방정식 <span class="math inline">\nabla^2 \phi= 0</span> 을 만족함을 보이고, <span class="math inline">D_{2h}</span> 군의 대칭 연산에 대해 불변임을 보여라. 각각의 계수를 <span class="math inline">a,\,b,\,c</span> 로 표현하여라.</p>
+<p>(<span class="math inline">c</span>) <span class="math inline">a=b\ne c</span> 인 경우(tetragonal field) 와 <span class="math inline">a=b=c</span> 인 경우(cubic field) 에 대해서도 고려하라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exr-electric_potential_by_neareast_ions_in-octaheron" class="quarto-xref">연습문제&nbsp;<span>10.1</span></a> 의 답을 이용하자. <span class="math inline">\(a_1=a,\,a_2=b,\,a_3=c,\, x_1=x,\, x_2=y,\,x_3=z\)</span> 라고 놓으면, <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <a href="#exr-electric_potential_by_neareast_ions_in-octaheron" class="quarto-xref">연습문제&nbsp;<span>10.1</span></a> 의 답을 이용하자. <span class="math inline">a_1=a,\,a_2=b,\,a_3=c,\, x_1=x,\, x_2=y,\,x_3=z</span> 라고 놓으면, <span class="math display">
 \begin{aligned}
 V_O(\boldsymbol{r}) &amp;= \dfrac{q}{4\pi\epsilon_0} \left[ \dfrac{6}{a} + \left( \sum_{i=1}^3 \dfrac{3x_i^2-r^2}{a_i^3}  + \dfrac{3r^4-30x_i^2r^2 + 35x_i^4}{8a_i^4}  \right)+\cdots\right]
 \end{aligned}\tag{1}
-\]</span></p>
-<p>(<span class="math inline">\(b\)</span>) 식 (<span class="math inline">\(1\)</span>) 을 보면 상수항, 2개의 homogeneous 한 2차 다항식 항, 3개의 homogeneous 한 4차 다항식항으로 이루어졌다는 것을 알 수 있다. 이것을 각각 풀어 보면 아래와같다.</p>
-<p><span class="math display">\[
+</span></p>
+<p>(<span class="math inline">b</span>) 식 (<span class="math inline">1</span>) 을 보면 상수항, 2개의 homogeneous 한 2차 다항식 항, 3개의 homogeneous 한 4차 다항식항으로 이루어졌다는 것을 알 수 있다. 이것을 각각 풀어 보면 아래와같다.</p>
+<p><span class="math display">
 \begin{aligned}
 V_O(\boldsymbol{r}) &amp;= \dfrac{q}{4\pi\epsilon_0}\left[ \dfrac{6}{a}  \right.\\
 &amp;+ \left.\left(\dfrac{2}{a^3}-\dfrac{1}{b^3}-\dfrac{1}{c^3}\right)x^2 + \left(-\dfrac{1}{a^3}+\dfrac{2}{b^3}-\dfrac{1}{c^3}\right)y^2 + \left(-\dfrac{1}{a^3}-\dfrac{1}{b^3}+\dfrac{2}{c^3}\right)z^2\right] \\[0.3em]
 &amp;+ (\text{linear combination of } x^2y^2,\, x^2z^2,\, y^2z^2,\, x^4,\, y^4,\,z^4)
 \end{aligned}
-\]</span></p>
+</span></p>
 <p>2차 다항식에 대해 라플라스 방정식이 성립하며 삼차 다항식의 경우</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{aligned}
 &amp;\nabla^2 \left(\sum_{i=1}^3 \dfrac{3r^4-30x_i^2r^2 + 35x_i^4}{8a_i^4}  \right) \\
 &amp;= \nabla^2 \dfrac{1}{8a^2}(8x^4+3y^4+3z^4 -24x^2y^2 -24 x^2z^2 + 6 y^2z^2) \\
 &amp;\qquad + \nabla^2 \dfrac{1}{8b^2}(3x^4+8y^4+3z^4 -24x^2y^2 -24 y^2z^2 + 6 x^2z^2) \\
 &amp;\qquad + \nabla^2 \dfrac{1}{8c^2}(3x^4+3y^4+8z^4  + 6x^2y^2 -24 y^2z^2 -24 x^2z^2) \\
 \end{aligned}
-\]</span></p>
-<p>이다. 우선 첫번째의 <span class="math inline">\(\nabla^2(\cdots)\)</span> 를 계산하면</p>
-<p><span class="math display">\[
+</span></p>
+<p>이다. 우선 첫번째의 <span class="math inline">\nabla^2(\cdots)</span> 를 계산하면</p>
+<p><span class="math display">
 = 96x^2 +36 y^2 + 36 z^2 - 48y^2 - 48 x^2 - 48 x^2 - 48 z^2 + 12 z^2 + 12 y^2 = 0
-\]</span></p>
-<p>이며 마찬가지로 두번째, 새변째의 <span class="math inline">\(\nabla^2(\cdots) = 0\)</span> 이다. 즉 라플라스 방정식이 <span class="math inline">\(0\)</span> 이다.</p>
-<p>(<span class="math inline">\(3\)</span>) 시간이 철철 나면..</p>
+</span></p>
+<p>이며 마찬가지로 두번째, 새변째의 <span class="math inline">\nabla^2(\cdots) = 0</span> 이다. 즉 라플라스 방정식이 <span class="math inline">0</span> 이다.</p>
+<p>(<span class="math inline">3</span>) 시간이 철철 나면..</p>
 </div>
 
 
